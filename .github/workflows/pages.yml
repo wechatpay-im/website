@@ -36,7 +36,7 @@ jobs:
         run: |
           npm run build
           touch .vitepress/dist/.nojekyll
-          echo 'wechatpay.im' > .vitepress/dist/CNAME
+          cp CNAME .vitepress/dist/
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
