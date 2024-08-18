@@ -7,10 +7,10 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "vitepress": "^1.3.2"
+    "vitepress": "^1.3.3"
   },
   "devDependencies": {
-    "@shikijs/vitepress-twoslash": "^1.12.1",
-    "@types/node": "^22.2.0"
+    "@shikijs/vitepress-twoslash": "^1.14.1",
+    "@types/node": "^22.4.0"
   }
 }
