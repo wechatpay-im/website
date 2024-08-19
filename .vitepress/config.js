@@ -70,7 +70,7 @@ export default defineConfig({
       },
       {
         text: '文档',
-        link: '',
+        link: '/openapi/',
       },
       {
         text: 'SDK',

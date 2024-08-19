@@ -1,0 +1,44 @@
+:root {
+  --vp-font-family-base: inherit;
+  --vp-font-family-mono: inherit;
+}
+
+@media (min-width: 768px) {
+  .Layout .VPHome {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 639px) {
+  .actions {
+    justify-content: space-around;
+  }
+
+  .VPButton.brand {
+    width: calc(100vw - 48px);
+  }
+}
+
+.VPHomeHero:not(.has-image) .main .text,
+.VPHomeHero:not(.has-image) .main .tagline {
+  max-width: inherit;
+}
+
+.vp-doc table.im-table {
+  display: table;
+  width: 100%;
+}
+
+.vp-doc._openapi_ table {
+  margin: 0;
+}
+
+.im-table thead th,
+.im-table tbody tr td[rowspan]:first-child {
+  cursor: default;
+  white-space: nowrap;
+}
+
+.im-table tbody tr td[rowspan] {
+  background-color: var(--vp-c-bg-soft);
+}
