@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -7,11 +6,6 @@ export default defineConfig({
   description: 'WeChat Pay Community Edition',
   lastUpdated: true,
   cleanUrls: true,
-  markdown: {
-    codeTransformers: [
-      transformerTwoslash()
-    ],
-  },
   srcExclude: ['**/README.md'],
   sitemap: {
     hostname: 'https://wechatpay.im',
@@ -84,6 +78,41 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/openapi/': openapiSidebar(),
     },
   },
 })
+
+/**
+ * @param {string[]}
+ */
+function transArrayItem([text, link]) { return { text, link }; }
+
+function openapiSidebar() {
+  return [
+    {
+      text: 'APIv2',
+      collapsed: false,
+      items: [
+        {
+          text: '沙箱环境',
+          collapsed: true,
+          items: [
+            ['获取沙箱密钥', '/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey'],
+            ['沙箱付款码支付', '/openapi/v2/xdc/apiv2sandbox/pay/micropay'],
+            ['沙箱订单查询', '/openapi/v2/xdc/apiv2sandbox/pay/orderquery'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+    {
+      text: 'APIv3',
+      collapsed: false,
+      items: [
+        transArrayItem(
+          ['获取平台证书列表', '/openapi/v3/certificates'],
+        ),
+      ]
+    },
+  ];
+}
