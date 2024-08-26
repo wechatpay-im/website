@@ -7,7 +7,7 @@ description: 获取商户当前可用的平台证书列表。微信支付提供�
 
 {{ $frontmatter.description }}
 
-| 参数 | 类型 | 描述
+| 参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
 | query | array | 可选查询参数
 | algorithm_type {data-indent=1} | string |平台证书算法类型<br/>`SM2`\|`RSA`\|`ALL`枚举值之一，默认为`RSA`
@@ -65,7 +65,7 @@ $instance['v3/certificates']->get([
 ```
 :::
 
-| 字段 | 类型 | 描述
+| 字段 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
 | data | array[] | 平台证书列表
 | serial_no {data-indent=1} | string | 证书序列号

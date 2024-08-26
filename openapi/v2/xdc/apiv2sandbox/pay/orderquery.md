@@ -7,7 +7,7 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 {{ $frontmatter.description }} [支付成功用例](https://pay.weixin.qq.com/wiki/doc/api/download/sandbox-micropay-SUCCESS.docx)根据测试用例金额的不同返回不同的响应报文，[支付异常用例](https://pay.weixin.qq.com/wiki/doc/api/download/sandbox-micropay-ERROR.docx)的识别将通过 Http Header 中添加异常头 `Wechatpay-Negative-Test: {用例名}` 识别。沙箱系统将通过识别用例名返回对应的异常信息。
 
-| 参数 | 类型 | 描述
+| 参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
 | xml | array | 请求声明的`XML`数据结构
 | appid {data-indent=1} | string | 公众账号ID
@@ -114,7 +114,7 @@ $instance['v2/xdc/apiv2sandbox/pay/orderquery']->post([
 ```
 :::
 
-| 字段 | 类型 | 描述
+| 字段 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
 return_code | string | 返回状态码 `SUCCESS` \| `FAIL`
 return_msg | string | 返回信息

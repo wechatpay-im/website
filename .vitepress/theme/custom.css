@@ -39,6 +39,14 @@
   background-color: var(--vp-c-bg-soft);
 }
 
+th.type {
+  width: 80px;
+}
+
+th.desc {
+  width: 50%;
+}
+
 [data-indent="1"] {
   --data-indent: 1;
 }
@@ -47,6 +55,39 @@
   --data-indent: 2;
 }
 
+[data-indent="3"] {
+  --data-indent: 3;
+}
+
+[data-indent="4"] {
+  --data-indent: 4;
+}
+
+[data-indent="5"] {
+  --data-indent: 5;
+}
+
+[data-indent="6"] {
+  --data-indent: 6;
+}
+
+[data-indent="7"] {
+  --data-indent: 7;
+}
+
+[data-indent="8"] {
+  --data-indent: 8;
+}
+
+[data-indent="9"] {
+  --data-indent: 9;
+}
+
+[data-indent="10"] {
+  --data-indent: 10;
+}
+
 td[data-indent] {
   text-indent: calc(var(--data-indent) * .85em);
+  white-space: nowrap;
 }
