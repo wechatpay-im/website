@@ -90,4 +90,5 @@ th.desc {
 td[data-indent] {
   text-indent: calc(var(--data-indent) * .85em);
   white-space: nowrap;
+  font-family: var(--vp-font-family-mono);
 }
