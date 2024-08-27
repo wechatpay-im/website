@@ -4,6 +4,16 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  #request th:nth-of-type(2),
+  #request tbody td:nth-of-type(2),
+  #response th:nth-of-type(2),
+  #response tbody td:nth-of-type(2) {
+    display: none;
+  }
+}
+
 @media (max-width: 639px) {
   .actions {
     justify-content: space-around;
@@ -37,6 +47,11 @@
 
 .im-table tbody tr td[rowspan] {
   background-color: var(--vp-c-bg-soft);
+}
+
+.im-table tbody tr td:nth-of-type(1),
+.im-table tbody tr td:nth-of-type(2) {
+  font-family: var(--vp-font-family-mono);
 }
 
 th.type {
@@ -90,5 +105,4 @@ th.desc {
 td[data-indent] {
   text-indent: calc(var(--data-indent) * .85em);
   white-space: nowrap;
-  font-family: var(--vp-font-family-mono);
 }
