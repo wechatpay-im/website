@@ -1,27 +1,38 @@
 import { defineConfig } from 'vitepress'
 
+const baseUri = 'https://wechatpay.im'
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'wechatpay.im',
   description: 'WeChat Pay Community Edition',
   lastUpdated: true,
   cleanUrls: true,
+  metaChunk: true,
   srcExclude: ['**/README.md'],
   sitemap: {
-    hostname: 'https://wechatpay.im',
+    hostname: baseUri,
+    xslUrl: '/sitemap.xsl',
   },
   head: [
-    ['meta', { name: 'theme-color', content: '#00c250' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#4F5B93' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'zh-CN' }],
-    ['meta', { property: 'og:title', content: 'WeChat Pay Community Edition' }],
     ['meta', { property: 'og:site_name', content: 'wechatpay.im' }],
-    ['meta', { property: 'og:url', content: 'https://wechatpay.im/' }],
   ],
-  transformPageData(pageData) {
-    const href = `https://wechatpay.im/${pageData.relativePath}`.replace(/(?:index)?\.md$/, '')
-    pageData.frontmatter.head ??= []
-    pageData.frontmatter.head?.push([ 'link', { rel: 'canonical', href, }])
+  transformHead(ctx) {
+    const href = `${baseUri}/${ctx.pageData.relativePath}`.replace(/(?:index)?\.md$/, '')
+    return [
+      ['link', { rel: 'canonical', href }],
+      ['meta', { property: 'og:url', content: href }],
+      ['meta', { property: 'og:title', content: ctx.title }],
+      ['meta', { property: 'og:description', content: ctx.description }],
+      ['meta', { property: 'og:image', content: `${baseUri}/android-chrome-512x512.png` }],
+    ]
   },
   themeConfig: {
     returnToTopLabel: '回到顶部',
