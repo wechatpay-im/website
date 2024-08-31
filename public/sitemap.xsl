@@ -28,6 +28,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <title>站点地图 | <xsl:value-of select="$hostname" /></title>
         <style type="text/css">
           :root {--vp-c-bg: #fff;--vp-c-text-1: rgba(60, 60, 67);--vp-c-green-soft: rgba(16, 185, 129, .14);--vp-c-brand-1: #3451b2;--vp-c-brand-2: #3a5ccc;--vp-c-bg-soft: #f6f6f7;}

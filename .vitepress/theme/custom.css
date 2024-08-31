@@ -54,6 +54,11 @@
   font-family: var(--vp-font-family-mono);
 }
 
+#request tbody tr:hover,
+#response tbody tr:hover {
+  background-color: var(--vp-c-green-soft);
+}
+
 th.type {
   width: 80px;
 }

@@ -7,7 +7,7 @@ description: 仿真系统与生产环境完全独立，包括存储层。商户�
 
 {{ $frontmatter.description }}
 
-| 参数 | 类型 {.type} | 描述 {.desc}
+| 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
 | xml | array | 请求声明的`XML`数据结构
 | mch_id {data-indent=1} | string | 商户号
@@ -66,7 +66,7 @@ $instance['v2/xdc/apiv2getsignkey/sign/getsignkey']->post([
 ```
 :::
 
-| 字段 | 类型 {.type} | 描述 {.desc}
+| 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
 | return_code | string | 返回状态码 `SUCCESS` \| `FAIL`
 | return_msg | string | 返回信息
