@@ -9,9 +9,8 @@ description: 仿真系统与生产环境完全独立，包括存储层。商户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| xml | array | 请求声明的`XML`数据结构
+| xml | array | 声明请求的`XML`数据结构
 | mch_id {data-indent=1} | string | 商户号
-| nonce_str {data-indent=1} | string | 随机字符串
 
 {.im-table #request}
 
@@ -22,7 +21,11 @@ $instance->v2->xdc->apiv2getsignkey->sign->getsignkey->postAsync([
   'xml' => [
     'mch_id' => '1900000109',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [异步声明式]
@@ -30,7 +33,11 @@ $instance->chain('v2/xdc/apiv2getsignkey/sign/getsignkey')->postAsync([
   'xml' => [
     'mch_id' => '1900000109',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [异步属性式]
@@ -38,31 +45,38 @@ $instance['v2/xdc/apiv2getsignkey/sign/getsignkey']->postAsync([
   'xml' => [
     'mch_id' => '1900000109',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [同步纯链式]
-$instance->v2->xdc->apiv2getsignkey->sign->getsignkey->post([
+$response = $instance->v2->xdc->apiv2getsignkey->sign->getsignkey->post([
   'xml' => [
     'mch_id' => '1900000109',
   ],
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步声明式]
-$instance->chain('v2/xdc/apiv2getsignkey/sign/getsignkey')->post([
+$response = $instance->chain('v2/xdc/apiv2getsignkey/sign/getsignkey')->post([
   'xml' => [
     'mch_id' => '1900000109',
   ],
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步属性式]
-$instance['v2/xdc/apiv2getsignkey/sign/getsignkey']->post([
+$response = $instance['v2/xdc/apiv2getsignkey/sign/getsignkey']->post([
   'xml' => [
     'mch_id' => '1900000109',
   ],
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 :::
 

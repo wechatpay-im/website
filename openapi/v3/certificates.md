@@ -9,8 +9,8 @@ description: 获取商户当前可用的平台证书列表。微信支付提供�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| query | array | 可选查询参数
-| algorithm_type {data-indent=1} | string |平台证书算法类型<br/>`SM2`\|`RSA`\|`ALL`枚举值之一，默认为`RSA`
+| query | array | 声明请求的查询参数(可选)
+| algorithm_type {data-indent=1} | string |平台证书算法类型<br/>`SM2`\|`RSA`\|`ALL`枚举值之一<br/>默认为`RSA`
 
 {.im-table #request}
 
@@ -19,49 +19,64 @@ description: 获取商户当前可用的平台证书列表。微信支付提供�
 ```php [异步纯链式]
 $instance->v3->certificates->getAsync([
   'query' => [
-    'algorithm_type' => 'SM2 | RSA | ALL',
+    'algorithm_type' => 'RSA',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(json_decode((string)$response->getBody(), true));
+})
+->wait();
 ```
 
 ```php [异步声明式]
 $instance->chain('v3/certificates')->getAsync([
   'query' => [
-    'algorithm_type' => 'SM2 | RSA | ALL',
+    'algorithm_type' => 'RSA',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(json_decode((string)$response->getBody(), true));
+})
+->wait();
 ```
 
 ```php [异步属性式]
 $instance['v3/certificates']->getAsync([
   'query' => [
-    'algorithm_type' => 'SM2 | RSA | ALL',
+    'algorithm_type' => 'RSA',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(json_decode((string)$response->getBody(), true));
+})
+->wait();
 ```
 
 ```php [同步纯链式]
-$instance->v3->certificates->get([
+$response = $instance->v3->certificates->get([
   'query' => [
-    'algorithm_type' => 'SM2 | RSA | ALL',
+    'algorithm_type' => 'RSA',
   ],
 ]);
+print_r(json_decode((string)$response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$instance->chain('v3/certificates')->get([
+$response = $instance->chain('v3/certificates')->get([
   'query' => [
-    'algorithm_type' => 'SM2 | RSA | ALL',
+    'algorithm_type' => 'RSA',
   ],
 ]);
+print_r(json_decode((string)$response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$instance['v3/certificates']->get([
+$response = $instance['v3/certificates']->get([
   'query' => [
-    'algorithm_type' => 'SM2 | RSA | ALL',
+    'algorithm_type' => 'RSA',
   ],
 ]);
+print_r(json_decode((string)$response->getBody(), true));
 ```
 :::
 

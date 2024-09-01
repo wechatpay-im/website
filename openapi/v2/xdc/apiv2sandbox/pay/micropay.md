@@ -9,13 +9,12 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| xml | array | 请求声明的`XML`数据结构
+| xml | array | 声明请求的`XML`数据结构
 | appid {data-indent=1} | string | 公众账号ID
 | mch_id {data-indent=1} | string | 商户号
 | body {data-indent=1} | string | 商品描述
 | out_trade_no {data-indent=1} | string | 商户订单号
-| nonce_str {data-indent=1} | string | 随机字符串
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256`枚举值之一<br/>默认值 `MD5`
 | attach {data-indent=1} | string | 附加数据
 | total_fee {data-indent=1} | integer | 订单金额
 | fee_type {data-indent=1} | string | 货币类型
@@ -40,7 +39,6 @@ $instance->v2->xdc->apiv2sandbox->pay->micropay->postAsync([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '{"cost_price":1,"receipt_id":"wx123","goods_detail":[{"goods_id":"商品编码","wxpay_goods_id":"1001","goods_name":"iPhone6s 16G","quantity":1,"price":1},{"goods_id":"商品编码","wxpay_goods_id":"1002","goods_name":"iPhone6s 32G","quantity":1,"price":1}]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'total_fee' => '888',
@@ -52,12 +50,15 @@ $instance->v2->xdc->apiv2sandbox->pay->micropay->postAsync([
     'time_expire' => '20091227091010',
     'receipt' => 'Y',
     'auth_code' => '120061098828009406',
-    'scene_info' => '{"store_info" : {"id": "SZTX001","name": "腾大餐厅","area_code": "440305","address": "科技园中一路腾讯大厦" }}',
   ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [异步声明式]
@@ -73,7 +74,6 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->postAsync([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '{"cost_price":1,"receipt_id":"wx123","goods_detail":[{"goods_id":"商品编码","wxpay_goods_id":"1001","goods_name":"iPhone6s 16G","quantity":1,"price":1},{"goods_id":"商品编码","wxpay_goods_id":"1002","goods_name":"iPhone6s 32G","quantity":1,"price":1}]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'total_fee' => '888',
@@ -85,12 +85,15 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->postAsync([
     'time_expire' => '20091227091010',
     'receipt' => 'Y',
     'auth_code' => '120061098828009406',
-    'scene_info' => '{"store_info" : {"id": "SZTX001","name": "腾大餐厅","area_code": "440305","address": "科技园中一路腾讯大厦" }}',
   ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [异步属性式]
@@ -106,7 +109,6 @@ $instance['v2/xdc/apiv2sandbox/pay/micropay']->postAsync([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '{"cost_price":1,"receipt_id":"wx123","goods_detail":[{"goods_id":"商品编码","wxpay_goods_id":"1001","goods_name":"iPhone6s 16G","quantity":1,"price":1},{"goods_id":"商品编码","wxpay_goods_id":"1002","goods_name":"iPhone6s 32G","quantity":1,"price":1}]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'total_fee' => '888',
@@ -118,16 +120,19 @@ $instance['v2/xdc/apiv2sandbox/pay/micropay']->postAsync([
     'time_expire' => '20091227091010',
     'receipt' => 'Y',
     'auth_code' => '120061098828009406',
-    'scene_info' => '{"store_info" : {"id": "SZTX001","name": "腾大餐厅","area_code": "440305","address": "科技园中一路腾讯大厦" }}',
   ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [同步纯链式]
-$instance->v2->xdc->apiv2sandbox->pay->micropay->post([
+$response = $instance->v2->xdc->apiv2sandbox->pay->micropay->post([
   'xml' => [
     'version' => '1.0',
     'profit_sharing' => 'N',
@@ -139,7 +144,6 @@ $instance->v2->xdc->apiv2sandbox->pay->micropay->post([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '{"cost_price":1,"receipt_id":"wx123","goods_detail":[{"goods_id":"商品编码","wxpay_goods_id":"1001","goods_name":"iPhone6s 16G","quantity":1,"price":1},{"goods_id":"商品编码","wxpay_goods_id":"1002","goods_name":"iPhone6s 32G","quantity":1,"price":1}]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'total_fee' => '888',
@@ -151,16 +155,16 @@ $instance->v2->xdc->apiv2sandbox->pay->micropay->post([
     'time_expire' => '20091227091010',
     'receipt' => 'Y',
     'auth_code' => '120061098828009406',
-    'scene_info' => '{"store_info" : {"id": "SZTX001","name": "腾大餐厅","area_code": "440305","address": "科技园中一路腾讯大厦" }}',
   ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步声明式]
-$instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->post([
+$response = $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->post([
   'xml' => [
     'version' => '1.0',
     'profit_sharing' => 'N',
@@ -172,7 +176,6 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->post([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '{"cost_price":1,"receipt_id":"wx123","goods_detail":[{"goods_id":"商品编码","wxpay_goods_id":"1001","goods_name":"iPhone6s 16G","quantity":1,"price":1},{"goods_id":"商品编码","wxpay_goods_id":"1002","goods_name":"iPhone6s 32G","quantity":1,"price":1}]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'total_fee' => '888',
@@ -184,16 +187,16 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->post([
     'time_expire' => '20091227091010',
     'receipt' => 'Y',
     'auth_code' => '120061098828009406',
-    'scene_info' => '{"store_info" : {"id": "SZTX001","name": "腾大餐厅","area_code": "440305","address": "科技园中一路腾讯大厦" }}',
   ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步属性式]
-$instance['v2/xdc/apiv2sandbox/pay/micropay']->post([
+$response = $instance['v2/xdc/apiv2sandbox/pay/micropay']->post([
   'xml' => [
     'version' => '1.0',
     'profit_sharing' => 'N',
@@ -205,7 +208,6 @@ $instance['v2/xdc/apiv2sandbox/pay/micropay']->post([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '{"cost_price":1,"receipt_id":"wx123","goods_detail":[{"goods_id":"商品编码","wxpay_goods_id":"1001","goods_name":"iPhone6s 16G","quantity":1,"price":1},{"goods_id":"商品编码","wxpay_goods_id":"1002","goods_name":"iPhone6s 32G","quantity":1,"price":1}]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'total_fee' => '888',
@@ -217,12 +219,12 @@ $instance['v2/xdc/apiv2sandbox/pay/micropay']->post([
     'time_expire' => '20091227091010',
     'receipt' => 'Y',
     'auth_code' => '120061098828009406',
-    'scene_info' => '{"store_info" : {"id": "SZTX001","name": "腾大餐厅","area_code": "440305","address": "科技园中一路腾讯大厦" }}',
   ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 :::
 

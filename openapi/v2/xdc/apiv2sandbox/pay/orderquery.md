@@ -9,12 +9,11 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| xml | array | 请求声明的`XML`数据结构
+| xml | array | 声明请求的`XML`数据结构
 | appid {data-indent=1} | string | 公众账号ID
 | mch_id {data-indent=1} | string | 商户号
 | out_trade_no {data-indent=1} | string | 商户订单号
-| nonce_str {data-indent=1} | string | 随机字符串
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256`枚举值之一<br/>默认值 `MD5`
 | headers | array | 请求头
 | Wechatpay-Negative-Test {data-indent=1} | string | 声明所请求的用例名称
 | timeout | float | 请求超时时间
@@ -35,7 +34,11 @@ $instance->v2->xdc->apiv2sandbox->pay->orderquery->postAsync([
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
   'timeout' => 0.4,
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [异步声明式]
@@ -50,7 +53,11 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->postAsync([
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
   'timeout' => 0.4,
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [异步属性式]
@@ -65,11 +72,15 @@ $instance['v2/xdc/apiv2sandbox/pay/orderquery']->postAsync([
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
   'timeout' => 0.4,
-])->wait();
+])
+->then(static function($response) {
+  print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
+})
+->wait();
 ```
 
 ```php [同步纯链式]
-$instance->v2->xdc->apiv2sandbox->pay->orderquery->post([
+$response = $instance->v2->xdc->apiv2sandbox->pay->orderquery->post([
   'xml' => [
     'appid' => 'wxd678efh567hg6787',
     'mch_id' => '1230000109',
@@ -81,10 +92,11 @@ $instance->v2->xdc->apiv2sandbox->pay->orderquery->post([
   ],
   'timeout' => 0.4,
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步声明式]
-$instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->post([
+$response = $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->post([
   'xml' => [
     'appid' => 'wxd678efh567hg6787',
     'mch_id' => '1230000109',
@@ -96,10 +108,11 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->post([
   ],
   'timeout' => 0.4,
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步属性式]
-$instance['v2/xdc/apiv2sandbox/pay/orderquery']->post([
+$response = $instance['v2/xdc/apiv2sandbox/pay/orderquery']->post([
   'xml' => [
     'appid' => 'wxd678efh567hg6787',
     'mch_id' => '1230000109',
@@ -111,6 +124,7 @@ $instance['v2/xdc/apiv2sandbox/pay/orderquery']->post([
   ],
   'timeout' => 0.4,
 ]);
+print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 :::
 
