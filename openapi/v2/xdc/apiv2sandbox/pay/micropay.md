@@ -55,7 +55,7 @@ $instance->v2->xdc->apiv2sandbox->pay->micropay->postAsync([
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -90,7 +90,7 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->postAsync([
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -125,7 +125,7 @@ $instance['v2/xdc/apiv2sandbox/pay/micropay']->postAsync([
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();

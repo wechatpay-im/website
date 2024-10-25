@@ -35,7 +35,7 @@ $instance->v2->xdc->apiv2sandbox->pay->orderquery->postAsync([
   ],
   'timeout' => 0.4,
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -54,7 +54,7 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->postAsync([
   ],
   'timeout' => 0.4,
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -73,7 +73,7 @@ $instance['v2/xdc/apiv2sandbox/pay/orderquery']->postAsync([
   ],
   'timeout' => 0.4,
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -130,18 +130,18 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-return_code | string | 返回状态码 `SUCCESS` \| `FAIL`
-return_msg | string | 返回信息
-result_code | string | 业务结果 `SUCCESS` \| `FAIL`
-err_code | string | 错误代码
-err_code_des | string | 错误代码描述
-trade_type | string | 交易类型 `MICROPAY`
-trade_state | string | 交易状态
-out_trade_no | string | 商户订单号
-transaction_id | string | 微信支付订单号
-total_fee | string | 标价金额
-cash_fee | string | 现金支付金额
-coupon_fee | string | 代金券金额
+| return_code | string | 返回状态码 `SUCCESS` \| `FAIL`
+| return_msg | string | 返回信息
+| result_code | string | 业务结果 `SUCCESS` \| `FAIL`
+| err_code | string | 错误代码
+| err_code_des | string | 错误代码描述
+| trade_type | string | 交易类型 `MICROPAY`
+| trade_state | string | 交易状态
+| out_trade_no | string | 商户订单号
+| transaction_id | string | 微信支付订单号
+| total_fee | string | 标价金额
+| cash_fee | string | 现金支付金额
+| coupon_fee | string | 代金券金额
 
 {.im-table #response}
 

@@ -22,7 +22,7 @@ $instance->v3->certificates->getAsync([
     'algorithm_type' => 'RSA',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string)$response->getBody(), true));
 })
 ->wait();
@@ -34,7 +34,7 @@ $instance->chain('v3/certificates')->getAsync([
     'algorithm_type' => 'RSA',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string)$response->getBody(), true));
 })
 ->wait();
@@ -46,7 +46,7 @@ $instance['v3/certificates']->getAsync([
     'algorithm_type' => 'RSA',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string)$response->getBody(), true));
 })
 ->wait();

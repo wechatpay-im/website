@@ -22,7 +22,7 @@ $instance->v2->xdc->apiv2getsignkey->sign->getsignkey->postAsync([
     'mch_id' => '1900000109',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -34,7 +34,7 @@ $instance->chain('v2/xdc/apiv2getsignkey/sign/getsignkey')->postAsync([
     'mch_id' => '1900000109',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
@@ -46,7 +46,7 @@ $instance['v2/xdc/apiv2getsignkey/sign/getsignkey']->postAsync([
     'mch_id' => '1900000109',
   ],
 ])
-->then(static function($response) {
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 })
 ->wait();
