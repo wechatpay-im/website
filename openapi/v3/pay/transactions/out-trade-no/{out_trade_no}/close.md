@@ -15,8 +15,8 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 
 {.im-table #request}
 
-
 ::: code-group
+
 ```php [异步纯链式]
 $instance->v3->pay->transactions->outTradeNo->_out_trade_no_->close->postAsync([
   'out_trade_no' => '',
@@ -25,7 +25,7 @@ $instance->v3->pay->transactions->outTradeNo->_out_trade_no_->close->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(response->getStatusCode() === 204);
+  print_r($response->getStatusCode() === 204);
 })
 ->wait();
 ```
@@ -38,7 +38,7 @@ $instance->chain('v3/pay/transactions/out-trade-no/{out_trade_no}/close')->postA
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(response->getStatusCode() === 204);
+  print_r($response->getStatusCode() === 204);
 })
 ->wait();
 ```
@@ -51,7 +51,7 @@ $instance['v3/pay/transactions/out-trade-no/{out_trade_no}/close']->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(response->getStatusCode() === 204);
+  print_r($response->getStatusCode() === 204);
 })
 ->wait();
 ```
@@ -63,7 +63,7 @@ $response = $instance->v3->pay->transactions->outTradeNo->_out_trade_no_->close-
     'mchid' => '1230000109',
   ],
 ]);
-print_r(response->getStatusCode() === 204);
+print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步声明式]
@@ -73,7 +73,7 @@ $response = $instance->chain('v3/pay/transactions/out-trade-no/{out_trade_no}/cl
     'mchid' => '1230000109',
   ],
 ]);
-print_r(response->getStatusCode() === 204);
+print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步属性式]
@@ -83,7 +83,7 @@ $response = $instance['v3/pay/transactions/out-trade-no/{out_trade_no}/close']->
     'mchid' => '1230000109',
   ],
 ]);
-print_r(response->getStatusCode() === 204);
+print_r($response->getStatusCode() === 204);
 ```
 
 :::

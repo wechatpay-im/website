@@ -49,8 +49,8 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 
 {.im-table #request}
 
-
 ::: code-group
+
 ```php [异步纯链式]
 $instance->v3->pay->transactions->jsapiWithContract->postAsync([
   'json' => [

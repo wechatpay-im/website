@@ -18,8 +18,8 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 
 {.im-table #request}
 
-
 ::: code-group
+
 ```php [异步纯链式]
 $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->reverse->postAsync([
   'out_trade_no' => '1217752501201407033233368018',

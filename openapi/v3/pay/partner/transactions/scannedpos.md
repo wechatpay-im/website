@@ -47,8 +47,8 @@ description: 合作伙伴系统先调用该接口在微信支付服务后台生�
 
 {.im-table #request}
 
-
 ::: code-group
+
 ```php [异步纯链式]
 $instance->v3->pay->partner->transactions->scannedpos->postAsync([
   'json' => [

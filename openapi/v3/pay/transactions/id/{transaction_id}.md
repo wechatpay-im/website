@@ -15,8 +15,8 @@ description: 商户可以通过查询订单接口主动查询订单状态，完�
 
 {.im-table #request}
 
-
 ::: code-group
+
 ```php [异步纯链式]
 $instance->v3->pay->transactions->id->_transaction_id_->getAsync([
   'transaction_id' => '',
