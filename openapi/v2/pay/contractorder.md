@@ -1,6 +1,6 @@
 ---
 title: 支付中签约
-description: 
+description: 通过此接口在支付的同时完成扣费服务的签约
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -253,7 +253,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | trade_type | string | 交易类型
 | code_url | string | 二维码链接
 | plan_id | integer | 模板id
-
+| request_serial | string | 请求序列号
 | contract_code | string | 签约协议号
 | contract_display_account | string | 用户账户展示名称
 | mweb_url | string | 支付跳转链接
@@ -261,4 +261,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/pap.php?chapter=18_13&index=5)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_5.shtml)
