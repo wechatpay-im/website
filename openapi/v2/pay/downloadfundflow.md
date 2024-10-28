@@ -23,6 +23,9 @@ description: 商户可以通过该接口下载自2017年6月1日起 的历史资
 ::: code-group
 
 ```php [异步纯链式]
+$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
+$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
+
 $instance->v2->pay->downloadfundflow->postAsync([
   'xml' => [
     'appid' => 'wx8888888888888888',
@@ -35,12 +38,20 @@ $instance->v2->pay->downloadfundflow->postAsync([
   'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  $tmp = $response->getBody();
+  $tmp->tell() && $tmp->rewind();
+  $firstFiveBytes = $tmp->read(5);
+  if ('<xml>' === $firstFiveBytes) {
+    print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  }
 })
 ->wait();
 ```
 
 ```php [异步声明式]
+$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
+$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
+
 $instance->chain('v2/pay/downloadfundflow')->postAsync([
   'xml' => [
     'appid' => 'wx8888888888888888',
@@ -53,12 +64,20 @@ $instance->chain('v2/pay/downloadfundflow')->postAsync([
   'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  $tmp = $response->getBody();
+  $tmp->tell() && $tmp->rewind();
+  $firstFiveBytes = $tmp->read(5);
+  if ('<xml>' === $firstFiveBytes) {
+    print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  }
 })
 ->wait();
 ```
 
 ```php [异步属性式]
+$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
+$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
+
 $instance['v2/pay/downloadfundflow']->postAsync([
   'xml' => [
     'appid' => 'wx8888888888888888',
@@ -71,12 +90,20 @@ $instance['v2/pay/downloadfundflow']->postAsync([
   'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  $tmp = $response->getBody();
+  $tmp->tell() && $tmp->rewind();
+  $firstFiveBytes = $tmp->read(5);
+  if ('<xml>' === $firstFiveBytes) {
+    print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  }
 })
 ->wait();
 ```
 
 ```php [同步纯链式]
+$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
+$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
+
 $response = $instance->v2->pay->downloadfundflow->post([
   'xml' => [
     'appid' => 'wx8888888888888888',
@@ -88,10 +115,19 @@ $response = $instance->v2->pay->downloadfundflow->post([
   ],
   'security' => true,
 ]);
-print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+
+$tmp = $response->getBody();
+$tmp->tell() && $tmp->rewind();
+$firstFiveBytes = $tmp->read(5);
+if ('<xml>' === $firstFiveBytes) {
+  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+}
 ```
 
 ```php [同步声明式]
+$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
+$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
+
 $response = $instance->chain('v2/pay/downloadfundflow')->post([
   'xml' => [
     'appid' => 'wx8888888888888888',
@@ -103,10 +139,19 @@ $response = $instance->chain('v2/pay/downloadfundflow')->post([
   ],
   'security' => true,
 ]);
-print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+
+$tmp = $response->getBody();
+$tmp->tell() && $tmp->rewind();
+$firstFiveBytes = $tmp->read(5);
+if ('<xml>' === $firstFiveBytes) {
+  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+}
 ```
 
 ```php [同步属性式]
+$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
+$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
+
 $response = $instance['v2/pay/downloadfundflow']->post([
   'xml' => [
     'appid' => 'wx8888888888888888',
@@ -118,12 +163,18 @@ $response = $instance['v2/pay/downloadfundflow']->post([
   ],
   'security' => true,
 ]);
-print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+
+$tmp = $response->getBody();
+$tmp->tell() && $tmp->rewind();
+$firstFiveBytes = $tmp->read(5);
+if ('<xml>' === $firstFiveBytes) {
+  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+}
 ```
 
 :::
 
-| 返回字典 | 类型 {.type} | 描述 {.desc}
+| 异常字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | return_code | string | 返回状态码
 | return_msg | string | 返回信息

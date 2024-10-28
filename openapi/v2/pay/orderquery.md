@@ -1,6 +1,6 @@
 ---
 title: 查询订单
-description: 
+description: 该接口提供所有微信支付订单的查询，商户可以通过查询订单接口主动查询订单状态，完成下一步的业务逻辑。
 ---
 
 # {{ $frontmatter.title }} {#post}

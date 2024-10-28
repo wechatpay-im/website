@@ -1,6 +1,6 @@
 ---
 title: 提交付款码支付
-description: 
+description: 收银员使用扫码设备读取微信用户付款码以后，二维码或条码信息会传送至商户收银台，由商户收银台或者商户后台调用该接口发起支付。
 ---
 
 # {{ $frontmatter.title }} {#post}
