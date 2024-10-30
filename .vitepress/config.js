@@ -142,6 +142,16 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '刷脸支付',
+          collapsed: true,
+          items: [
+            ['人脸识别获取调用凭证', '/openapi/v2/face/get_wxpayface_authinfo'],
+            ['提交刷脸支付', '/openapi/v2/pay/facepay'],
+            ['查询订单', '/openapi/v2/pay/facepayquery'],
+            ['撤销订单', '/openapi/v2/secapi/pay/facepayreverse'],
+          ].map(transArrayItem),
+        },
+        {
           text: '分账',
           collapsed: true,
           items: [
@@ -189,6 +199,16 @@ function openapiSidebar() {
             ['获取加密公钥', '/openapi/v2/risk/getpublickey'],
             ['发起付款', '/openapi/v2/mmpaysptrans/pay_bank'],
             ['查询付款', '/openapi/v2/mmpaymkttransfers/query_bank'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '企业微信',
+          collapsed: true,
+          items: [
+            ['向员工付款', '/openapi/v2/mmpaymkttransfers/promotion/paywwsptrans2pocket'],
+            ['查询付款记录', '/openapi/v2/mmpaymkttransfers/promotion/querywwsptrans2pocket'],
+            ['发放企业红包', '/openapi/v2/mmpaymkttransfers/sendworkwxredpack'],
+            ['查询红包记录', '/openapi/v2/mmpaymkttransfers/queryworkwxredpack'],
           ].map(transArrayItem),
         },
         {

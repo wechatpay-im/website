@@ -1,6 +1,6 @@
 ---
 title: 查询付款记录
-description: 
+description: 用于商户的企业微信企业付款操作进行结果查询，返回付款操作详细结果。查询企业微信企业付款API只支持查询30天内的订单，30天之前的订单请登录商户平台查询。
 ---
 
 # {{ $frontmatter.title }} {#post}

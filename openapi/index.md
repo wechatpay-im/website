@@ -23,6 +23,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) {colspan=2}
 | [合单查单](/openapi/v2/pay/querycombinedorder) {colspan=2}
 | [合单关单](/openapi/v2/pay/closecombinedorder) {colspan=2}
+| 刷脸支付v2{rowspan=4} | [人脸识别获取调用凭证](/openapi/v2/face/get_wxpayface_authinfo) {colspan=2}
+| [提交刷脸支付](/openapi/v2/pay/facepay) {colspan=2}
+| [查询订单](/openapi/v2/pay/facepayquery) {colspan=2}
+| [撤销订单](/openapi/v2/secapi/pay/facepayreverse) {colspan=2}
 | 分账v2{rowspan=10} | | [查询最大分账比例](/openapi/v2/pay/profitsharingmerchantratioquery)
 | [添加分账接收方](/openapi/v2/pay/profitsharingaddreceiver) {colspan=2}
 | [删除分账接收方](/openapi/v2/pay/profitsharingremovereceiver) {colspan=2}
@@ -44,6 +48,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
 | [发起付款](/openapi/v2/mmpaysptrans/pay_bank)
 | [查询付款](/openapi/v2/mmpaymkttransfers/query_bank)
+| 企业微信v2{rowspan=4} | [向员工付款](/openapi/v2/mmpaymkttransfers/promotion/paywwsptrans2pocket)
+| [查询付款记录](/openapi/v2/mmpaymkttransfers/promotion/querywwsptrans2pocket)
+| [发放企业红包](/openapi/v2/mmpaymkttransfers/sendworkwxredpack)
+| [查询红包记录](/openapi/v2/mmpaymkttransfers/queryworkwxredpack)
 | 微信车主服务v2{rowspan=4} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)

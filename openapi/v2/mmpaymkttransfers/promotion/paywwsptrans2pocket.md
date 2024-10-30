@@ -1,6 +1,6 @@
 ---
 title: 向员工付款
-description: 
+description: 给同一个实名用户付款，单笔单日限额200/200元；一个商户同一日付款总额限额10W；不支持给非实名用户打款；单笔最小金额默认为1元。
 ---
 
 # {{ $frontmatter.title }} {#post}
