@@ -9,7 +9,7 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authorization_code | string | undefined
+| authorization_code | string | 授权协议号
 | json | object | 声明请求的`JSON`数据结构
 | service_id {data-indent=1} | string | 服务ID
 | channel_id {data-indent=1} | string | 渠道商商户号
@@ -22,7 +22,7 @@ description:
 
 ```php [异步纯链式]
 $instance->v3->payscore->acquiringbank->permissions->authorizationCode->_authorization_code_->terminate->postAsync([
-  'authorization_code' => '',
+  'authorization_code' => '1275342195190894594',
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
@@ -38,7 +38,7 @@ $instance->v3->payscore->acquiringbank->permissions->authorizationCode->_authori
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/acquiringbank/permissions/authorization-code/{authorization_code}/terminate')->postAsync([
-  'authorization_code' => '',
+  'authorization_code' => '1275342195190894594',
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
@@ -54,7 +54,7 @@ $instance->chain('v3/payscore/acquiringbank/permissions/authorization-code/{auth
 
 ```php [异步属性式]
 $instance['v3/payscore/acquiringbank/permissions/authorization-code/{authorization_code}/terminate']->postAsync([
-  'authorization_code' => '',
+  'authorization_code' => '1275342195190894594',
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
@@ -70,7 +70,7 @@ $instance['v3/payscore/acquiringbank/permissions/authorization-code/{authorizati
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->acquiringbank->permissions->authorizationCode->_authorization_code_->terminate->post([
-  'authorization_code' => '',
+  'authorization_code' => '1275342195190894594',
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
@@ -83,7 +83,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/acquiringbank/permissions/authorization-code/{authorization_code}/terminate')->post([
-  'authorization_code' => '',
+  'authorization_code' => '1275342195190894594',
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
@@ -96,7 +96,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/acquiringbank/permissions/authorization-code/{authorization_code}/terminate']->post([
-  'authorization_code' => '',
+  'authorization_code' => '1275342195190894594',
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',

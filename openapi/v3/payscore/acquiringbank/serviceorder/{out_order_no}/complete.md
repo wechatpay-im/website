@@ -9,7 +9,7 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | undefined
+| out_order_no | string | 商户服务订单号
 | json | object | 声明请求的`JSON`数据结构
 | service_id {data-indent=1} | string | 服务ID
 | channel_id {data-indent=1} | string | 渠道商商户号
@@ -43,7 +43,7 @@ description:
 
 ```php [异步纯链式]
 $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
@@ -84,7 +84,7 @@ $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete')->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
@@ -125,7 +125,7 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete
 
 ```php [异步属性式]
 $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
@@ -166,7 +166,7 @@ $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->pos
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->post([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
@@ -204,7 +204,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete')->post([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
@@ -242,7 +242,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->post([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
