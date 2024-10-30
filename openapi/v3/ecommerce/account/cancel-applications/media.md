@@ -15,7 +15,14 @@ description: 电商平台服务商调用注销申请接口时，需要先调用�
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v3->ecommerce->account->cancelApplications->media->postAsync([])
+$media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
+
+$instance->v3->ecommerce->account->cancelApplications->media->postAsync([
+  'body' => $media->getStream(),
+  'headers' => [
+    'Content-Type' => $media->getContentType(),
+  ],
+])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
 })
@@ -23,7 +30,14 @@ $instance->v3->ecommerce->account->cancelApplications->media->postAsync([])
 ```
 
 ```php [异步声明式]
-$instance->chain('v3/ecommerce/account/cancel-applications/media')->postAsync([])
+$media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
+
+$instance->chain('v3/ecommerce/account/cancel-applications/media')->postAsync([
+  'body' => $media->getStream(),
+  'headers' => [
+    'Content-Type' => $media->getContentType(),
+  ],
+])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
 })
@@ -31,7 +45,14 @@ $instance->chain('v3/ecommerce/account/cancel-applications/media')->postAsync([]
 ```
 
 ```php [异步属性式]
-$instance['v3/ecommerce/account/cancel-applications/media']->postAsync([])
+$media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
+
+$instance['v3/ecommerce/account/cancel-applications/media']->postAsync([
+  'body' => $media->getStream(),
+  'headers' => [
+    'Content-Type' => $media->getContentType(),
+  ],
+])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
 })
@@ -39,17 +60,38 @@ $instance['v3/ecommerce/account/cancel-applications/media']->postAsync([])
 ```
 
 ```php [同步纯链式]
-$response = $instance->v3->ecommerce->account->cancelApplications->media->post([]);
+$media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
+
+$response = $instance->v3->ecommerce->account->cancelApplications->media->post([
+  'body' => $media->getStream(),
+  'headers' => [
+    'Content-Type' => $media->getContentType(),
+  ],
+]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v3/ecommerce/account/cancel-applications/media')->post([]);
+$media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
+
+$response = $instance->chain('v3/ecommerce/account/cancel-applications/media')->post([
+  'body' => $media->getStream(),
+  'headers' => [
+    'Content-Type' => $media->getContentType(),
+  ],
+]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$response = $instance['v3/ecommerce/account/cancel-applications/media']->post([]);
+$media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
+
+$response = $instance['v3/ecommerce/account/cancel-applications/media']->post([
+  'body' => $media->getStream(),
+  'headers' => [
+    'Content-Type' => $media->getContentType(),
+  ],
+]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
