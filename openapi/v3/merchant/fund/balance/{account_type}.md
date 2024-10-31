@@ -9,7 +9,7 @@ description: 商户通过此接口可以查询本商户号的账号余额情况�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| account_type | string | 资金账户类型
+| account_type | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #request}
 

@@ -13,7 +13,7 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 | bill_date {data-indent=1} | string | 账单日期
 | account_type {data-indent=1} | string | 资金账户类型
 | tar_type {data-indent=1} | string | 压缩类型
-| algorithm {data-indent=1} | string | 加密算法
+| algorithm {data-indent=1} | string | 加密算法<br/>`AEAD_AES_256_GCM` \| `SM4_GCM` 枚举值之一
 
 {.im-table #request}
 

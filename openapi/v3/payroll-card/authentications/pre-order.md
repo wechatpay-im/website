@@ -17,7 +17,7 @@ description: 服务商在拉起微工卡前端服务给用户做微工卡核身�
 | authenticate_number {data-indent=1} | string | 商家核身单号
 | project_name {data-indent=1} | string | 项目名称
 | employer_name {data-indent=1} | string | 单位名称
-| authenticate_type {data-indent=1} | string | 核身类型
+| authenticate_type {data-indent=1} | string | 核身类型<br/>`SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
 
 {.im-table #request}
 

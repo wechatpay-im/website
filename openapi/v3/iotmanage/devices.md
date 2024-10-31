@@ -101,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | app_scene_code {data-indent=1} | string | 
 | app_scene {data-indent=1} | string | 
 | operating_system {data-indent=1} | string | 
-| activation_status {data-indent=1} | string | 
+| activation_status {data-indent=1} | string | `ACTIVATED` \| `INACTIVATED` 枚举值之一
 | activation_time {data-indent=1} | string | 
 | mchid {data-indent=1} | string | 
 | merchant_shortname {data-indent=1} | string | 

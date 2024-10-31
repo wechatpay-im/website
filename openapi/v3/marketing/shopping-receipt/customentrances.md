@@ -10,7 +10,7 @@ description: 接口介绍：该接口为电子小票自定义入口创建接口�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json | object | 声明请求的`JSON`数据结构
-| custom_entrance_type {data-indent=1} | string | 自定义入口种类
+| custom_entrance_type {data-indent=1} | string | 自定义入口种类<br/>`MERCHANT_ACTIVITY` \| `MERCHANT_MINI_PROGRAM` 枚举值之一
 | subtitle {data-indent=1} | string | 副标题，辅助描述商家活动或商家小程序信息
 | goods_thumbnail_url {data-indent=1} | string | 展示商品信息，当自定义入口种类为商家活动时，该字段必填，种类为商家小程序该字段不填
 | start_time {data-indent=1} | string | 自定义入口的开始时间
@@ -159,7 +159,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| custom_entrance_type | string | 自定义入口种类
+| custom_entrance_type | string | 自定义入口种类<br/>`MERCHANT_ACTIVITY` \| `MERCHANT_MINI_PROGRAM` 枚举值之一
 | subtitle | string | 副标题，辅助描述商家活动或商家小程序信息
 | goods_thumbnail_url | string | 展示商品信息，当自定义入口种类为商家活动时，该字段必填，种类为商家小程序该字段不填
 | custom_entrance_state | string | 设置自定义入口的状态，ONLINE-在线对用户展示，OFFLINE-下线对用户不展示 可选取值

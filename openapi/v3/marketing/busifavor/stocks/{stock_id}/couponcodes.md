@@ -117,7 +117,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | stock_id | string | 批次号
 | query | object | 声明请求的查询参数
-| status {data-indent=1} | string | 券code状态
+| status {data-indent=1} | string | 券code状态<br/>`SENDED` \| `USED` \| `EXPIRED` \| `DELETED` \| `DEACTIVATED` 枚举值之一
 | appid {data-indent=1} | string | 公众账号ID
 | offset {data-indent=1} | number | 分页页码
 | limit {data-indent=1} | number | 分页大小

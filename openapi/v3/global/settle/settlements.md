@@ -12,7 +12,7 @@ description: 商户在交易完结之后，可按结算日期查询已结算资�
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
 | query | object | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
-| settle_state {data-indent=1} | string | 结算状态
+| settle_state {data-indent=1} | string | 结算状态<br/>`SETTLED` \| `UNSETTLE` 枚举值之一
 | settle_start_date {data-indent=1} | string | 结算开始日期
 | settle_end_date {data-indent=1} | string | 结算结束日期
 | limit {data-indent=1} | integer | 最大记录条数

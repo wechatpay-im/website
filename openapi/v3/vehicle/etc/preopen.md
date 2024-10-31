@@ -23,7 +23,7 @@ description: 该接口用于在开通ETC自动扣费前上传一些必要的信�
 | credential_type {data-indent=2} | string | 证件类型
 | bank_card_no {data-indent=1} | string | 用户开通ETC时绑定的银行卡
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -47,7 +47,7 @@ $instance->v3->vehicle->etc->preopen->postAsync([
     'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,7 +74,7 @@ $instance->chain('v3/vehicle/etc/preopen')->postAsync([
     'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -101,7 +101,7 @@ $instance['v3/vehicle/etc/preopen']->postAsync([
     'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -128,7 +128,7 @@ $response = $instance->v3->vehicle->etc->preopen->post([
     'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -152,7 +152,7 @@ $response = $instance->chain('v3/vehicle/etc/preopen')->post([
     'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -176,7 +176,7 @@ $response = $instance['v3/vehicle/etc/preopen']->post([
     'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -20,7 +20,7 @@ description: 商户可通过此接口申请创建商家转账订单。
 | transfer_remark {data-indent=1} | string | 转账备注
 | notify_url {data-indent=1} | string | 商户回调地址
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -40,7 +40,7 @@ $instance->v3->ecommerce->mchTransfer->transferBills->postAsync([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,7 +63,7 @@ $instance->chain('v3/ecommerce/mch-transfer/transfer-bills')->postAsync([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,7 +86,7 @@ $instance['v3/ecommerce/mch-transfer/transfer-bills']->postAsync([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -109,7 +109,7 @@ $response = $instance->v3->ecommerce->mchTransfer->transferBills->post([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -129,7 +129,7 @@ $response = $instance->chain('v3/ecommerce/mch-transfer/transfer-bills')->post([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -149,7 +149,7 @@ $response = $instance['v3/ecommerce/mch-transfer/transfer-bills']->post([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -69,7 +69,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | create_time | string | 创建时间
 | update_time | string | 更新时间
 | remain_quantity | integer | 剩余库存
-| status | string | 会员卡状态
+| status | string | 会员卡状态<br/>`NOT_APPROVE` \| `APPROVE_FAIL` \| `APPROVED` \| `DELETED` 枚举值之一
 | brand | object | 品牌信息
 | brand_id {data-indent=1} | string | 品牌id
 | display_name {data-indent=1} | string | 品牌展示名称
@@ -79,14 +79,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | background_picture_url | string | 会员卡背景图
 | description | string | 使用须知
 | service_phone | string | 服务电话
-| code_type | string | 会员码型
+| code_type | string | 会员码型<br/>`BAR_CODE` \| `QRCODE` \| `BAR_CODE_AND_QRCODE` \| `NONE_CODE` 枚举值之一
 | total_quantity | integer | 会员卡总库存
 | date_information | object | 有效期
-| type {data-indent=1} | string | 有效期类型
+| type {data-indent=1} | string | 有效期类型<br/>`FIX_TIME_RANGE` \| `FIX_TERM` \| `PERMANENT` 枚举值之一
 | available_begin_time {data-indent=1} | string | 有效期开始时间
 | available_end_time {data-indent=1} | string | 有效期结束时间
 | available_day_after_receive {data-indent=1} | integer | 生效后N天内有效
-| code_mode | string | 会员卡code分配类型
+| code_mode | string | 会员卡code分配类型<br/>`SYSTEM_ALLOCATE` \| `MERCHANT_DEPOSIT` \| `REAL_TIME` 枚举值之一
 | need_display_level | boolean | 是否展示会员等级
 | init_level | string | 会员初始等级
 | out_request_no | string | 商户请求单号
@@ -96,9 +96,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | balance_path {data-indent=1} | string | 储值小程序path
 | balance_url {data-indent=1} | string | 储值url
 | user_information_form | object | 开卡信息
-| common_field_list {data-indent=1} | string[] | 平台提供的通用开卡信息字段
+| common_field_list {data-indent=1} | string[] | 平台提供的通用开卡信息字段<br/>`USER_FORM_FLAG_MOBILE` \| `USER_FORM_FLAG_SEX` \| `USER_FORM_FLAG_NAME` \| `USER_FORM_FLAG_BIRTHDAY` \| `USER_FORM_FLAG_ADDRESS` \| `USER_FORM_FLAG_EMAIL` \| `USER_FORM_FLAG_CITY` 枚举值之一
 | custom_field_list {data-indent=1} | object[] | 商户自定义的开卡信息字段
-| type {data-indent=2} | string | 商户自定义的开卡信息字段类型
+| type {data-indent=2} | string | 商户自定义的开卡信息字段类型<br/>`TEXT` \| `SELECT` \| `RADIO` \| `CHECK_BOX` 枚举值之一
 | name {data-indent=2} | string | 字段名称
 | values {data-indent=2} | string[] | 
 | additional_statement | object | 商户补充声明
@@ -127,7 +127,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | service_phone {data-indent=1} | string | 服务电话
 | total_quantity {data-indent=1} | integer | 会员卡总库存
 | date_information {data-indent=1} | object | 有效期
-| type {data-indent=2} | string | 有效期类型
+| type {data-indent=2} | string | 有效期类型<br/>`FIX_TIME_RANGE` \| `FIX_TERM` \| `PERMANENT` 枚举值之一
 | available_end_time {data-indent=2} | string | 有效期结束时间
 | available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
 | wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
@@ -140,9 +140,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | balance_url {data-indent=2} | string | 储值url
 | user_information_form {data-indent=1} | object | 开卡信息
 | can_modify_after_activate {data-indent=2} | boolean | 是否允许修改
-| common_field_list {data-indent=2} | string[] | 平台提供的通用开卡信息字段
+| common_field_list {data-indent=2} | string[] | 平台提供的通用开卡信息字段<br/>`USER_FORM_FLAG_MOBILE` \| `USER_FORM_FLAG_SEX` \| `USER_FORM_FLAG_NAME` \| `USER_FORM_FLAG_BIRTHDAY` \| `USER_FORM_FLAG_ADDRESS` \| `USER_FORM_FLAG_EMAIL` \| `USER_FORM_FLAG_CITY` 枚举值之一
 | custom_field_list {data-indent=2} | object[] | 商户自定义的开卡信息字段
-| type {data-indent=3} | string | 商户自定义的开卡信息字段类型
+| type {data-indent=3} | string | 商户自定义的开卡信息字段类型<br/>`TEXT` \| `SELECT` \| `RADIO` \| `CHECK_BOX` 枚举值之一
 | name {data-indent=3} | string | 字段名称
 | values {data-indent=3} | string[] | 
 | additional_statement {data-indent=1} | object | 商户补充声明

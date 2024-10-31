@@ -15,7 +15,7 @@ description: 通过此接口可查询多个批次的信息，包括批次的配�
 | stock_creator_mchid {data-indent=1} | string | 创建批次的商户号
 | create_start_time {data-indent=1} | string | 起始时间
 | create_end_time {data-indent=1} | string | 终止时间
-| status {data-indent=1} | string | 批次状态
+| status {data-indent=1} | string | 批次状态<br/>`unactivated` \| `audit` \| `running` \| `stoped` \| `paused` 枚举值之一
 
 {.im-table #request}
 

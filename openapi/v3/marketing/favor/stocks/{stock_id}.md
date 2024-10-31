@@ -101,10 +101,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | natural_person_limit {data-indent=1} | boolean | 是否开启自然人限制
 | prevent_api_abuse {data-indent=1} | boolean | api发券防刷
 | no_cash | boolean | 是否无资金流
-| stock_type | string | 批次类型
+| stock_type | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
 | stock_id | string | 批次号
 | stock_creator_mchid | string | 创建批次的商户号
-| status | string | 批次状态
+| status | string | 批次状态<br/>`unactivated` \| `audit` \| `running` \| `stoped` \| `paused` 枚举值之一
 | description | string | 使用说明
 | create_time | string | 创建时间
 | start_time | string | 激活批次的时间
@@ -114,7 +114,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | single_price_max {data-indent=1} | integer | 可用优惠的商品最高单价
 | cut_to_price {data-indent=1} | integer | 减至后的优惠单价
 | distributed_coupons | integer | 已发券数量
-| business_type | string | 业务类型
+| business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
 | available_region_list | object[] | 消费金可用地域
 | type {data-indent=1} | string | 类型
 | province {data-indent=1} | string | 省

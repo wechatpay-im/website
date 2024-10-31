@@ -16,7 +16,7 @@ description:
 | end_time {data-indent=1} | string | 结束时间
 | page_index {data-indent=1} | string | 页码
 | page_size {data-indent=1} | string | 每页返回的数量
-| violation_records_format {data-indent=1} | string | 违规记录数据格式
+| violation_records_format {data-indent=1} | string | 违规记录数据格式<br/>`csv` \| `json` 枚举值之一
 | security | boolean | 声明加载商户API证书<br/>固定值`true`
 
 {.im-table #request}

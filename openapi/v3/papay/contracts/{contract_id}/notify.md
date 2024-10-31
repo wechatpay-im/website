@@ -14,8 +14,8 @@ description: 如：若需要在3号扣费，则需要在1号将通知下发给�
 | mchid {data-indent=1} | string | 直连商户号
 | appid {data-indent=1} | string | 公众号ID
 | deduct_duration {data-indent=1} | object | 扣费持续时间
-| count {data-indent=2} | integer | 扣费持续时间数
-| unit {data-indent=2} | string | 单位
+| count {data-indent=2} | integer | 扣费持续时间数<br/>`1` \| `2` \| `3` 枚举值之一
+| unit {data-indent=2} | string | 单位<br/>`DAY` 枚举值
 | estimated_amount {data-indent=1} | object | 预计扣费金额信息
 | amount {data-indent=2} | number | 预计扣费金额
 | currency {data-indent=2} | string | 预计扣费货币类型

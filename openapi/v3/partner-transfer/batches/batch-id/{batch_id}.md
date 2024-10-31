@@ -14,7 +14,7 @@ description: 服务商可以通过该接口查询转账批次单以及指定状�
 | need_query_detail {data-indent=1} | boolean | 是否查询转账明细单
 | offset {data-indent=1} | integer | 请求资源起始位置
 | limit {data-indent=1} | integer | 最大资源条数
-| detail_status {data-indent=1} | string | 明细状态
+| detail_status {data-indent=1} | string | 明细状态<br/>`ALL` \| `SUCCESS` \| `FAIL` 枚举值之一
 
 {.im-table #request}
 
@@ -135,8 +135,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_detail_no {data-indent=1} | string | 商家明细单号
 | detail_status {data-indent=1} | string | 明细状态
 | sp_appid | string | 服务商的appid
-| transfer_purpose | string | 批量转账用途
-| transfer_scene | string | 转账场景
+| transfer_purpose | string | 批量转账用途<br/>`GOODSPAYMENT` \| `COMMISSION` \| `REFUND` \| `REIMBURSEMENT` \| `FREIGHT` \| `OTHERS` 枚举值之一
+| transfer_scene | string | 转账场景<br/>`ORDINARY_TRANSFER` \| `PAYROLL_CARD_TRANSFER` 枚举值之一
 
 {.im-table #response}
 

@@ -161,7 +161,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | transaction_id | string | 微信订单号
 | out_order_no | string | 商户分账单号
 | order_id | string | 微信分账单号
-| status | string | 分账单状态
+| status | string | 分账单状态<br/>`FINISHED` \| `PROCESSING` 枚举值之一
 | receivers | string | +分账接收方列表
 
 {.im-table #response}

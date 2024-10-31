@@ -23,7 +23,7 @@ description: 微信订单支付成功后，服务商代特约商户发起分账�
 | description {data-indent=2} | string | 分账描述
 | unfreeze_unsplit {data-indent=1} | boolean | 是否解冻剩余未分资金
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -47,7 +47,7 @@ $instance->v3->profitsharing->orders->postAsync([
     'unfreeze_unsplit' => true,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,7 +74,7 @@ $instance->chain('v3/profitsharing/orders')->postAsync([
     'unfreeze_unsplit' => true,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -101,7 +101,7 @@ $instance['v3/profitsharing/orders']->postAsync([
     'unfreeze_unsplit' => true,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -128,7 +128,7 @@ $response = $instance->v3->profitsharing->orders->post([
     'unfreeze_unsplit' => true,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -152,7 +152,7 @@ $response = $instance->chain('v3/profitsharing/orders')->post([
     'unfreeze_unsplit' => true,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -176,7 +176,7 @@ $response = $instance['v3/profitsharing/orders']->post([
     'unfreeze_unsplit' => true,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

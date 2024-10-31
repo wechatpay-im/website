@@ -22,7 +22,7 @@ description:
 | sub_mch_id {data-indent=1} | string | 子商户号(服务商模式)
 | now {data-indent=1} | integer | 取当前时间，10位unix时间戳。
 | version {data-indent=1} | string | 
-| sign_type {data-indent=1} | string | 
+| sign_type {data-indent=1} | string | `MD5` \| `HMAC-SHA256` 枚举值之一
 
 {.im-table #request}
 

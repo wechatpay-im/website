@@ -11,7 +11,7 @@ description: 商户可以调用此接口获取对账单文件的下载链接，�
 | --- | --- | ---
 | query | object | 声明请求的查询参数
 | bill_date {data-indent=1} | string | 账单日期
-| tar_type {data-indent=1} | string | 压缩类型
+| tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
 | encryption_algorithm {data-indent=1} | string | 加密算法
 | service_id {data-indent=1} | string | 服务ID
 

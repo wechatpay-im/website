@@ -93,7 +93,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | collection_id | string | 
 | use_id | string | 
 | organization_id | string | 
-| collection_state | string | 
+| collection_state | string | `COLLECTION_REQUIRED` \| `PHOTO_UPLOADED` \| `COMPLETE` 枚举值之一
 | register_photo_upload_time | string | 
 | confirm_time | string | 
 

@@ -14,7 +14,7 @@ description: 电商平台通过该接口可将其平台的收入进行提现
 | amount {data-indent=1} | integer | 提现金额
 | remark {data-indent=1} | string | 备注
 | bank_memo {data-indent=1} | string | 银行附言
-| account_type {data-indent=1} | string | 资金账户类型
+| account_type {data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #request}
 

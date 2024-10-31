@@ -79,8 +79,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | sub_mchid | string | 特约商户号
 | verification_id | string | 核实单号
-| state | string | 核实单状态
-| fail_reason | string | 失败原因
+| state | string | 核实单状态<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
+| fail_reason | string | 失败原因<br/>`MATERIALS_ABNORMAL` \| `PROCESS_TIMEOUT` 枚举值之一
 | create_time | string | 创建时间
 | finish_time | string | 完成时间
 

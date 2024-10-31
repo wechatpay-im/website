@@ -81,7 +81,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid | string | 
 | sub_appid | string | 
 | brand_id | string | 
-| donate_source | string | 
+| donate_source | string | `MINIPROGRAM_PAY` \| `ENTRUST_PAY` 枚举值之一
 | merchant_order | string | 
 | institution_name | string | 
 | business_id | string | 

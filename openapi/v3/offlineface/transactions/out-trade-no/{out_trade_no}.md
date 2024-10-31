@@ -113,12 +113,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_openid {data-indent=1} | string | 
 | amount | object | 
 | total {data-indent=1} | integer | 
-| currency {data-indent=1} | string | 
+| currency {data-indent=1} | string | `CNY` 枚举值
 | promotion_detail | object[] | 
 | scene_info | object | 
 | device_ip {data-indent=1} | string | 
 | bank_type | string | 
-| trade_type | string | 
+| trade_type | string | `NATIVE` \| `JSAPI` \| `APP` \| `MWEB` \| `AUTH` 枚举值之一
 | trade_state | string | 
 | trade_state_description | string | 
 | debt_state | string | 

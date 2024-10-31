@@ -15,7 +15,7 @@ description: 商家批次单号查单接口。商户可以通过该接口查询�
 | need_query_detail {data-indent=1} | boolean | 是否查询转账明细单
 | offset {data-indent=1} | number | 请求资源起始位置
 | limit {data-indent=1} | number | 最大资源条数
-| detail_state {data-indent=1} | string | 明细状态
+| detail_state {data-indent=1} | string | 明细状态<br/>`ALL` \| `WAIT_PAY` \| `SUCCESS` \| `FAIL` \| `BANK_REFUND` 枚举值之一
 
 {.im-table #request}
 

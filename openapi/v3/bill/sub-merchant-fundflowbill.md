@@ -12,9 +12,9 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 | query | object | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
 | bill_date {data-indent=1} | string | 账单日期
-| tar_type {data-indent=1} | string | 压缩类型
-| algorithm {data-indent=1} | string | 加密算法
-| account_type {data-indent=1} | string | 资金账户类型
+| tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
+| algorithm {data-indent=1} | string | 加密算法<br/>`AEAD_AES_256_GCM` \| `SM4_GCM` 枚举值之一
+| account_type {data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` \| `DEPOSIT` 枚举值之一
 
 {.im-table #request}
 

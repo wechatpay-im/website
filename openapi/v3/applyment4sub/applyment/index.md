@@ -12,9 +12,9 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | json | object | 声明请求的`JSON`数据结构
 | business_code {data-indent=1} | string | 
 | contact_info {data-indent=1} | object | 
-| contact_type {data-indent=2} | string | 超级管理员类型
+| contact_type {data-indent=2} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
 | contact_name {data-indent=2} | string | 超级管理员姓名
-| contact_id_doc_type {data-indent=2} | string | 
+| contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | contact_id_number {data-indent=2} | string | 超级管理员身份证件号码
 | contact_id_doc_copy {data-indent=2} | string | 超级管理员证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 超级管理员证件反面照片
@@ -25,7 +25,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | mobile_phone {data-indent=2} | string | 联系手机
 | contact_email {data-indent=2} | string | 联系邮箱
 | subject_info {data-indent=1} | object | 
-| subject_type {data-indent=2} | string | 主体类型
+| subject_type {data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
 | business_license_info {data-indent=2} | object | 
 | license_copy {data-indent=3} | string | 营业执照照片
 | license_number {data-indent=3} | string | 注册号/统一社会信用代码
@@ -36,7 +36,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | period_end {data-indent=3} | string | 有效期限结束日期
 | certificate_info {data-indent=2} | object | 
 | cert_copy {data-indent=3} | string | 登记证书照片
-| cert_type {data-indent=3} | string | 登记证书类型
+| cert_type {data-indent=3} | string | 登记证书类型<br/>`CERTIFICATE_TYPE_2388` \| `CERTIFICATE_TYPE_2389` \| `CERTIFICATE_TYPE_2390` \| `CERTIFICATE_TYPE_2391` \| `CERTIFICATE_TYPE_2392` \| `CERTIFICATE_TYPE_2393` \| `CERTIFICATE_TYPE_2394` \| `CERTIFICATE_TYPE_2395` \| `CERTIFICATE_TYPE_2396` \| `CERTIFICATE_TYPE_2399` \| `CERTIFICATE_TYPE_2400` \| `CERTIFICATE_TYPE_2520` \| `CERTIFICATE_TYPE_2521` \| `CERTIFICATE_TYPE_2522` 枚举值之一
 | cert_number {data-indent=3} | string | 证书号
 | merchant_name {data-indent=3} | string | 商户名称
 | company_address {data-indent=3} | string | 注册地址
@@ -50,11 +50,11 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | org_period_end {data-indent=3} | string | 组织机构代码证有效期结束日期
 | certificate_letter_copy {data-indent=2} | string | 单位证明函照片
 | finance_institution_info {data-indent=2} | object | 
-| finance_type {data-indent=3} | string | 金融机构类型
+| finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
 | finance_license_pics {data-indent=3} | string[] | 
 | identity_info {data-indent=2} | object | 
-| id_holder_type {data-indent=3} | string | 超级管理员类型
-| id_doc_type {data-indent=3} | string | 
+| id_holder_type {data-indent=3} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
+| id_doc_type {data-indent=3} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | authorize_letter_copy {data-indent=3} | string | 法定代表人说明函
 | id_card_info {data-indent=3} | object | 
 | id_card_copy {data-indent=4} | string | 身份证人像面照片
@@ -74,7 +74,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | doc_period_end {data-indent=4} | string | 证件有效期结束时间
 | owner {data-indent=3} | boolean | 经营者/法人是否为受益人
 | ubo_info_list {data-indent=2} | object[] | 
-| ubo_id_doc_type {data-indent=3} | string | 
+| ubo_id_doc_type {data-indent=3} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | ubo_id_doc_copy {data-indent=3} | string | 身份证人像面照片
 | ubo_id_doc_copy_back {data-indent=3} | string | 身份证国徽面照片
 | ubo_id_doc_name {data-indent=3} | string | 受益人姓名
@@ -86,7 +86,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | merchant_shortname {data-indent=2} | string | 商户简称
 | service_phone {data-indent=2} | string | 客服电话
 | sales_info {data-indent=2} | object | 
-| sales_scenes_type {data-indent=3} | string[] | 经营场景类型
+| sales_scenes_type {data-indent=3} | string[] | 经营场景类型<br/>`SALES_SCENES_STORE` \| `SALES_SCENES_MP` \| `SALES_SCENES_MINI_PROGRAM` \| `SALES_SCENES_WEB` \| `SALES_SCENES_APP` \| `SALES_SCENES_WEWORK` 枚举值之一
 | biz_store_info {data-indent=3} | object | 
 | biz_store_name {data-indent=4} | string | 
 | biz_address_code {data-indent=4} | string | 
@@ -121,7 +121,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | activities_rate {data-indent=2} | string | 
 | activities_additions {data-indent=2} | string[] | 
 | bank_account_info {data-indent=1} | object | 
-| bank_account_type {data-indent=2} | string | 账户类型
+| bank_account_type {data-indent=2} | string | 账户类型<br/>`BANK_ACCOUNT_TYPE_CORPORATE` \| `BANK_ACCOUNT_TYPE_PERSONAL` 枚举值之一
 | account_name {data-indent=2} | string | 开户名称
 | account_bank {data-indent=2} | string | 开户银行
 | bank_address_code {data-indent=2} | string | 开户银行省市编码
@@ -134,7 +134,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | business_addition_pics {data-indent=2} | string[] | 
 | business_addition_msg {data-indent=2} | string | 
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -289,7 +289,7 @@ $instance->v3->applyment4sub->applyment->_empty_->postAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -447,7 +447,7 @@ $instance->chain('v3/applyment4sub/applyment/{empty}')->postAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -605,7 +605,7 @@ $instance['v3/applyment4sub/applyment/{empty}']->postAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -763,7 +763,7 @@ $response = $instance->v3->applyment4sub->applyment->_empty_->post([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -918,7 +918,7 @@ $response = $instance->chain('v3/applyment4sub/applyment/{empty}')->post([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1073,7 +1073,7 @@ $response = $instance['v3/applyment4sub/applyment/{empty}']->post([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -13,7 +13,7 @@ description: 该接口仅支持停车场景，商户首先请求查询车牌服�
 | appid {data-indent=1} | string | 应用ID
 | sub_mchid {data-indent=1} | string | 子商户号
 | plate_number {data-indent=1} | string | 车牌号
-| plate_color {data-indent=1} | string | 车牌颜色
+| plate_color {data-indent=1} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
 | openid {data-indent=1} | string | 用户标识
 
 {.im-table #request}

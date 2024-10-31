@@ -33,7 +33,7 @@ description:
 | start_location {data-indent=2} | string | 
 | end_location {data-indent=2} | string | 
 | risk_fund {data-indent=1} | object | 订单风险金
-| name {data-indent=2} | string | 风险金名称
+| name {data-indent=2} | string | 风险金名称<br/>`DEPOSIT` \| `ADVANCE` \| `CASH_DEPOSIT` \| `ESTIMATE_ORDER_COST` 枚举值之一
 | amount {data-indent=2} | integer | 风险金额
 | description {data-indent=2} | string | 风险说明
 | attach {data-indent=1} | string | 商户数据包
@@ -44,7 +44,7 @@ description:
 | shopping_info {data-indent=1} | object | 
 | real_merchant_appid {data-indent=2} | string | 实际购物商家公众号ID
 | jump_link {data-indent=2} | object | 
-| jump_link_type {data-indent=3} | string | 跳转链接类型
+| jump_link_type {data-indent=3} | string | 跳转链接类型<br/>`JUMP_LINK_MINI_PROGRAM` 枚举值
 | appid {data-indent=3} | string | 小程序跳转AppID
 | path {data-indent=3} | string | 小程序跳转path
 | goods {data-indent=2} | object[] | 

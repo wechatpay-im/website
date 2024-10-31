@@ -113,7 +113,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-indent=1} | string | 
 | sub_appid {data-indent=1} | string | 
 | brand_id {data-indent=1} | string | 
-| donate_source {data-indent=1} | string | 
+| donate_source {data-indent=1} | string | `MINIPROGRAM_PAY` \| `ENTRUST_PAY` 枚举值之一
 | merchant_order {data-indent=1} | string | 
 | institution_name {data-indent=1} | string | 
 | business_id {data-indent=1} | string | 

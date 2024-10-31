@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | authenticate_source | string | 核身渠道标识
 | project_name | string | 项目名称
 | employer_name | string | 单位名称
-| authenticate_state | string | 核身状态
+| authenticate_state | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
 | authenticate_time | string | 核身时间
 | authenticate_number | string | 商家核身单号
 | authenticate_failed_reason | string | 核身失败原因

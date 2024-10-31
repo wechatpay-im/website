@@ -11,8 +11,8 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 | --- | --- | ---
 | xml | object | 声明请求的`XML`数据结构
 | version {data-indent=1} | string | 接口版本号
-| profit_sharing {data-indent=1} | string | 是否指定服务商分账;Y-是，需要分账;N-否，不分账;字母要求大写，不传默认不分账
-| deposit {data-indent=1} | string | 是否押金支付
+| profit_sharing {data-indent=1} | string | 是否指定服务商分账;Y-是，需要分账;N-否，不分账;字母要求大写，不传默认不分账<br/>`N` \| `Y` 枚举值之一
+| deposit {data-indent=1} | string | 是否押金支付<br/>`Y` \| `N` 枚举值之一
 | appid {data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | mch_id {data-indent=1} | string | 商户号

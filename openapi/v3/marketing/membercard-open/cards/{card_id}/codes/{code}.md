@@ -81,10 +81,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | head_image_url | string | 微信头像url
 | background_picture_url | string | 会员卡背景图
 | balance | integer | 用户储值余额
-| user_card_status | string | 用户会员卡状态
+| user_card_status | string | 用户会员卡状态<br/>`NOT_ACTIVATE` \| `EFFECTIVE` \| `EXPIRE` \| `UNAVAILABLE` \| `DELETE` 枚举值之一
 | user_information | object | 用户开卡时填写的个人信息
 | common_field_list {data-indent=1} | object[] | 平台提供的通用开卡信息字段
-| name {data-indent=2} | string | 平台提供的通用开卡信息字段
+| name {data-indent=2} | string | 平台提供的通用开卡信息字段<br/>`USER_FORM_FLAG_MOBILE` \| `USER_FORM_FLAG_SEX` \| `USER_FORM_FLAG_NAME` \| `USER_FORM_FLAG_BIRTHDAY` \| `USER_FORM_FLAG_ADDRESS` \| `USER_FORM_FLAG_EMAIL` \| `USER_FORM_FLAG_CITY` 枚举值之一
 | value {data-indent=2} | string | 用户开卡时填写的个人信息
 | custom_field_list {data-indent=1} | object[] | 商户自定义的开卡信息字段
 | name {data-indent=2} | string | 字段名称

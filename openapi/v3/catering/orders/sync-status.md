@@ -22,7 +22,7 @@ description: 当点餐订单状态发生变化时，都上传全量的订单明�
 | total_amount {data-indent=1} | integer | 总价，单位为分
 | discount_amount {data-indent=1} | integer | 优惠金额，单位为分
 | user_amount {data-indent=1} | integer | 实际支付金额，单位为分
-| status {data-indent=1} | string | 订单状态，取值如下：CREATE_DEAL—用户下单；PAY_SUCCESS—支付完成，结账成功；
+| status {data-indent=1} | string | 订单状态，取值如下：CREATE_DEAL—用户下单；PAY_SUCCESS—支付完成，结账成功；<br/>`CREATE_DEAL` \| `PAY_SUCCESS` 枚举值之一
 | action_time {data-indent=1} | string | 状态发生变化的时间，格式为rfc3339格式，如2018-06-08T10:34:56+08:00 代表北京时间2018年06月08日10时34分56秒
 | pay_time {data-indent=1} | string | 支付时间，格式为rfc3339格式，如2018-06-08T10:34:56+08:00 代表北京时间2018年06月08日10时34分56秒（status为PAY_SUCCESS时必填）
 | transaction_id {data-indent=1} | string | 支付订单号（status为PAY_SUCCESS时必填）
@@ -34,7 +34,7 @@ description: 当点餐订单状态发生变化时，都上传全量的订单明�
 | out_dish_no {data-indent=2} | string | 商户菜品ID
 | name {data-indent=2} | string | 菜品名称
 | price {data-indent=2} | integer | 菜品单价，单位为分
-| unit {data-indent=2} | string | 菜品单位，BY_SHARE-按份 BY_WEIGHT-按重量
+| unit {data-indent=2} | string | 菜品单位，BY_SHARE-按份 BY_WEIGHT-按重量<br/>`BY_SHARE` \| `BY_WEIGHT` 枚举值之一
 | count {data-indent=2} | number | 菜品数量，保留小数点后2位有效数字
 | discount {data-indent=2} | integer | 菜品折扣，百分值，8折填80
 | type {data-indent=2} | string | 菜品分类，如等。详见参数规定《菜品类型列表》

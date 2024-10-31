@@ -136,11 +136,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-indent=1} | string | 商户号
 | sub_mchid {data-indent=1} | string | 子商户号
 | openid {data-indent=1} | string | 用户标识
-| authenticate_scene {data-indent=1} | string | 核身渠道
+| authenticate_scene {data-indent=1} | string | 核身渠道<br/>`FROM_MINI_APP` \| `FROM_HARDWARE` 枚举值之一
 | authenticate_source {data-indent=1} | string | 核身渠道标识
 | project_name {data-indent=1} | string | 项目名称
 | employer_name {data-indent=1} | string | 单位名称
-| authenticate_state {data-indent=1} | string | 核身状态
+| authenticate_state {data-indent=1} | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
 | authenticate_time {data-indent=1} | string | 核身时间
 | authenticate_number {data-indent=1} | string | 商家核身单号
 | total_count | integer | 总记录条数

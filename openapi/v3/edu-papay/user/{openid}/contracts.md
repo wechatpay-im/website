@@ -16,7 +16,7 @@ description: 商户通过用户标识+签约模板号来查询用户签约信息
 | sub_appid {data-indent=1} | string | 子商户APPID
 | sub_openid {data-indent=1} | string | 子商户APPID下的用户标识
 | plan_id {data-indent=1} | string | 签约模板号
-| contract_status {data-indent=1} | string | 签约状态
+| contract_status {data-indent=1} | string | 签约状态<br/>`ADD` \| `DELETE` 枚举值之一
 | offset {data-indent=1} | integer | 分页页码
 | limit {data-indent=1} | integer | 分页大小
 

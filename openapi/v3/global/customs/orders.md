@@ -186,7 +186,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | query | object | 声明请求的查询参数
 | appid {data-indent=1} | string | 机构APPID
 | mchid {data-indent=1} | string | 商户号
-| order_type {data-indent=1} | string | 订单类型
+| order_type {data-indent=1} | string | 订单类型<br/>`out_trade_no` \| `transaction_id` \| `sub_order_no` \| `sub_order_id` 枚举值之一
 | order_no {data-indent=1} | string | 订单号
 | customs {data-indent=1} | string | 海关
 | offset {data-indent=1} | integer | 偏移量

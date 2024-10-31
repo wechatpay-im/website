@@ -26,7 +26,7 @@ description: 商户可以通过该接口同时向多个用户微信零钱进行�
 | transfer_scene_id {data-indent=1} | string | 转账场景ID
 | notify_url {data-indent=1} | string | 通知地址
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -53,7 +53,7 @@ $instance->v3->transfer->batches->postAsync([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -83,7 +83,7 @@ $instance->chain('v3/transfer/batches')->postAsync([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -113,7 +113,7 @@ $instance['v3/transfer/batches']->postAsync([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -143,7 +143,7 @@ $response = $instance->v3->transfer->batches->post([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -170,7 +170,7 @@ $response = $instance->chain('v3/transfer/batches')->post([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -197,7 +197,7 @@ $response = $instance['v3/transfer/batches']->post([
     'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -210,7 +210,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_batch_no | string | 商家批次单号
 | batch_id | string | 微信批次单号
 | create_time | string | 批次创建时间
-| batch_status | string | 批次状态
+| batch_status | string | 批次状态<br/>`ACCEPTED` \| `PROCESSING` \| `FINISHED` \| `CLOSED` 枚举值之一
 
 {.im-table #response}
 

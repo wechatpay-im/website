@@ -13,7 +13,7 @@ description: 微信商家转账批次单号查单接口。商户可以通过该�
 | query | object | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 二级商户号
 | need_query_detail {data-indent=1} | boolean | 是否查询转账明细单
-| detail_state {data-indent=1} | string | 明细状态
+| detail_state {data-indent=1} | string | 明细状态<br/>`ALL` \| `WAIT_PAY` \| `SUCCESS` \| `FAIL` 枚举值之一
 | offset {data-indent=1} | number | 请求资源起始位置
 | limit {data-indent=1} | number | 最大资源条数
 

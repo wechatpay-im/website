@@ -71,8 +71,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | activity_id | string | 
-| activity_type | string | 活动类型
-| activity_status | string | 活动状态
+| activity_type | string | 活动类型<br/>`FULL_SEND_ACT_TYPE` \| `STEP_SEND_ACT_TYPE` \| `SPECIFIC_SEND_ACT_TYPE` 枚举值之一
+| activity_status | string | 活动状态<br/>`CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
 | creator_merchant_id | string | 
 | belong_merchant_id | string | 
 | pause_time | string | 
@@ -83,7 +83,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | activity_name {data-indent=1} | string | 
 | activity_second_title {data-indent=1} | string | 
 | merchant_logo_url {data-indent=1} | string | 
-| background_color {data-indent=1} | string | 背景颜色
+| background_color {data-indent=1} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
 | begin_time {data-indent=1} | string | 
 | end_time {data-indent=1} | string | 
 | available_periods {data-indent=1} | object | 可用时间段
@@ -94,31 +94,31 @@ print_r(json_decode((string) $response->getBody(), true));
 | begin_day_time {data-indent=3} | string | 每日可用开始时间
 | end_day_time {data-indent=3} | string | 每日可用结束时间
 | out_request_no {data-indent=1} | string | 商户请求单号
-| delivery_purpose {data-indent=1} | string | 投放目的
+| delivery_purpose {data-indent=1} | string | 投放目的<br/>`OFF_LINE_PAY` \| `JUMP_MINI_APP` 枚举值之一
 | mini_programs_appid {data-indent=1} | string | 
 | mini_programs_path {data-indent=1} | string | 
 | advanced_setting | object | 
-| delivery_user_category {data-indent=1} | string | 奖品类型
+| delivery_user_category {data-indent=1} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_member_appid {data-indent=1} | string | 
 | payment_mode {data-indent=1} | object | 
-| payment_scene_list {data-indent=2} | string[] | 
+| payment_scene_list {data-indent=2} | string[] | APP_SCENE` 枚举值
 | payment_method_information {data-indent=2} | object | 
 | payment_method {data-indent=3} | string | 
 | bank_abbreviation {data-indent=3} | string | 
 | goods_tags {data-indent=1} | string[] | 
 | award_send_rule | object | 
 | full_send_rule {data-indent=1} | object | 
-| award_type {data-indent=2} | string | 奖品类型
-| merchant_option {data-indent=2} | string | 发券商户号选项
+| award_type {data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
+| merchant_option {data-indent=2} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一
 | transaction_amount_minimum {data-indent=2} | integer | 
-| send_content {data-indent=2} | string | 发放内容
+| send_content {data-indent=2} | string | 发放内容<br/>`SINGLE_COUPON` \| `GIFT_PACKAGE` 枚举值之一
 | award_list {data-indent=2} | object[] | 
 | stock_id {data-indent=3} | string | 
 | original_image_url {data-indent=3} | string | 
 | thumbnail_url {data-indent=3} | string | 
 | step_send_rule {data-indent=1} | object | 
-| award_type {data-indent=2} | string | 奖品类型
-| merchant_option {data-indent=2} | string | 发券商户号选项
+| award_type {data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
+| merchant_option {data-indent=2} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一
 
 {.im-table #response}
 

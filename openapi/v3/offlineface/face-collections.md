@@ -101,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | collection_id {data-indent=1} | string | 
 | use_id {data-indent=1} | string | 
 | organization_id {data-indent=1} | string | 
-| collection_state {data-indent=1} | string | 
+| collection_state {data-indent=1} | string | `COLLECTION_REQUIRED` \| `PHOTO_UPLOADED` \| `COMPLETE` 枚举值之一
 | register_photo_upload_time {data-indent=1} | string | 
 | confirm_time {data-indent=1} | string | 
 

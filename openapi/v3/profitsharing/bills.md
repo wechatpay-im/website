@@ -12,7 +12,7 @@ description: 微信支付按天提供分账账单文件，商户可以通过该�
 | query | object | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 二级商户号
 | bill_date {data-indent=1} | string | 账单日期
-| tar_type {data-indent=1} | string | 压缩类型
+| tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
 
 {.im-table #request}
 

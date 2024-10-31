@@ -136,13 +136,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | query | object | 声明请求的查询参数
 | appid {data-indent=1} | string | 公众账号ID
 | stock_id {data-indent=1} | string | 批次号
-| status {data-indent=1} | string | 代金券状态
+| status {data-indent=1} | string | 代金券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
 | creator_mchid {data-indent=1} | string | 创建批次的商户号
 | sender_mchid {data-indent=1} | string | 批次发放商户号
 | available_mchid {data-indent=1} | string | 可用商户号
 | offset {data-indent=1} | integer | 分页页码
 | limit {data-indent=1} | integer | 分页大小
-| business_type {data-indent=1} | string | 业务类型
+| business_type {data-indent=1} | string | 业务类型<br/>`MULTIUSE` 枚举值
 
 {.im-table #request}
 

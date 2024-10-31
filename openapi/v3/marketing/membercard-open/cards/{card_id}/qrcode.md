@@ -11,7 +11,7 @@ description: 商户创建会员卡后，可以调用此api创建二维码，用�
 | --- | --- | ---
 | card_id | string | 会员卡id
 | json | object | 声明请求的`JSON`数据结构
-| activate_type {data-indent=1} | string | 会员卡激活类型
+| activate_type {data-indent=1} | string | 会员卡激活类型<br/>`AUTO_ACTIVATE` \| `JUMP_ACTIVATE` 枚举值之一
 | activate_url {data-indent=1} | string | 跳转激活的url
 | activate_appid {data-indent=1} | string | 跳转激活的appid
 | activate_path {data-indent=1} | string | 跳转激活的path

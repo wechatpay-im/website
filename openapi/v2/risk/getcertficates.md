@@ -11,7 +11,7 @@ description: 调用获取平台证书V2接口之前，请前往微信支付商�
 | --- | --- | ---
 | xml | object | 声明请求的`XML`数据结构
 | mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 

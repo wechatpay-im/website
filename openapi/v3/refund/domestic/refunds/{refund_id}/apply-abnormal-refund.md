@@ -13,12 +13,12 @@ description: 提交退款申请后，查询退款确认状态为退款异常，�
 | json | object | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
 | out_refund_no {data-indent=1} | string | 商户退款单号
-| type {data-indent=1} | string | 异常退款处理方式
-| bank_type {data-indent=1} | string | 开户银行
+| type {data-indent=1} | string | 异常退款处理方式<br/>`USER_BANK_CARD` \| `MERCHANT_BANK_CARD` 枚举值之一
+| bank_type {data-indent=1} | string | 开户银行<br/>`CMB_DEBIT` \| `COMM_DEBIT` \| `ABC_DEBIT` \| `CCB_DEBIT` \| `ICBC_DEBIT` \| `BOC_DEBIT` \| `PAB_DEBIT` \| `SPDB_DEBIT` \| `CITIC_DEBIT` \| `CEB_DEBIT` \| `CMBC_DEBIT` \| `CIB_DEBIT` \| `GDB_DEBIT` \| `PSBC_DEBIT` \| `NBCB_DEBIT` 枚举值之一
 | bank_account {data-indent=1} | string | 收款银行卡号
 | real_name {data-indent=1} | string | 收款用户姓名
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -36,7 +36,7 @@ $instance->v3->refund->domestic->refunds->_refund_id_->applyAbnormalRefund->post
     'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,7 +57,7 @@ $instance->chain('v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund')
     'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,7 +78,7 @@ $instance['v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund']->postA
     'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -99,7 +99,7 @@ $response = $instance->v3->refund->domestic->refunds->_refund_id_->applyAbnormal
     'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -117,7 +117,7 @@ $response = $instance->chain('v3/refund/domestic/refunds/{refund_id}/apply-abnor
     'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -135,7 +135,7 @@ $response = $instance['v3/refund/domestic/refunds/{refund_id}/apply-abnormal-ref
     'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

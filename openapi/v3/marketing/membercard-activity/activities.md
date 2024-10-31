@@ -7,7 +7,7 @@
 | json | object | 声明请求的`JSON`数据结构
 | card_id {data-indent=1} | string | 会员卡ID
 | activity_name {data-indent=1} | string | 活动名称
-| activity_type {data-indent=1} | string | 活动类型
+| activity_type {data-indent=1} | string | 活动类型<br/>`NON_MEMBER_AFTERPAY` \| `MEMBER_AFTERPAY` \| `NON_MEMBER_MINIPROGRAM` \| `MEMBER_MINIPROGRAM` 枚举值之一
 | begin_time {data-indent=1} | string | 活动开始时间
 | end_time {data-indent=1} | string | 活动结束时间
 | award_send_period {data-indent=1} | object | 发放时间段
@@ -511,9 +511,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | query | object | 声明请求的查询参数
 | limit {data-indent=1} | integer | 最大资源条数
 | offset {data-indent=1} | integer | 请求资源起始位置
-| activity_type {data-indent=1} | string | 活动类型
+| activity_type {data-indent=1} | string | 活动类型<br/>`NON_MEMBER_AFTERPAY` \| `MEMBER_AFTERPAY` \| `NON_MEMBER_MINIPROGRAM` \| `MEMBER_MINIPROGRAM` 枚举值之一
 | card_id {data-indent=1} | string | 会员卡ID
-| activity_status {data-indent=1} | string | 活动的当前状态
+| activity_status {data-indent=1} | string | 活动的当前状态<br/>`CREATED` \| `ONGOING` \| `TERMINATED` \| `OVER_TIME` 枚举值之一
 
 {.im-table #request}
 

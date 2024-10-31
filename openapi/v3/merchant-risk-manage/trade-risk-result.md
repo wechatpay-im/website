@@ -15,8 +15,8 @@ description:
 | channel_id {data-indent=1} | string | 微信支付分配的渠道商唯一标识
 | sub_mchid {data-indent=1} | string | 上报订单风险数据的商户号信息
 | out_trade_no {data-indent=1} | string | 商户系统内部订单号，只能是数字、大小写字母_-*且在同一个商户号下唯一
-| risk_type {data-indent=1} | string | 风险类型
-| punish_type {data-indent=1} | string | 处置手段
+| risk_type {data-indent=1} | string | 风险类型<br/>`OTHER_RISK` \| `INDUCE_PAYMENT` \| `FRAUD` \| `GAMBLING` \| `CYBERSEX` 枚举值之一
+| punish_type {data-indent=1} | string | 处置手段<br/>`OTHER_PUNISH` \| `DISABLE_PAYMENT` \| `SUSPEND_SETTLEMENT` \| `DISABLE_WITHDRAW` \| `REMOVE_MERCHANTS` \| `ADD_MERCHANTS_BLACKLIST` \| `REFUND` \| `FREEZING_FUND_BY_TRANSACTION` \| `FREEZING_FUND_BY_MERCHANTS` \| `BLOCKED_USER` 枚举值之一
 | additional_punish_type {data-indent=1} | string | 处置手段补充
 | complaints_information {data-indent=1} | string | 投诉信息
 

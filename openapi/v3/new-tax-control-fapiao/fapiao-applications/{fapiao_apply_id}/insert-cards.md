@@ -59,7 +59,7 @@ description: 商户自行开具电子发票后，可调用本接口将电子发�
 | discount {data-indent=3} | boolean | 是否折扣行
 | remark {data-indent=2} | string | 备注信息
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -123,7 +123,7 @@ $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_apply_id_->inser
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -190,7 +190,7 @@ $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -257,7 +257,7 @@ $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/inser
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -324,7 +324,7 @@ $response = $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_appl
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 202);
@@ -388,7 +388,7 @@ $response = $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fap
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 202);
@@ -452,7 +452,7 @@ $response = $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_app
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 202);

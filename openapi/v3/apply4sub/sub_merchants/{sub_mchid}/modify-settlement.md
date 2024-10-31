@@ -20,7 +20,7 @@ description: 修改结算帐号API
 | account_number {data-indent=1} | string | 银行账号
 | account_name {data-indent=1} | string | 开户名称
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -40,7 +40,7 @@ $instance->v3->apply4sub->sub_merchants->_sub_mchid_->modifySettlement->postAsyn
     'account_name' => 'ciphertext',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,7 +63,7 @@ $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement')->po
     'account_name' => 'ciphertext',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,7 +86,7 @@ $instance['v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement']->postAsync
     'account_name' => 'ciphertext',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -109,7 +109,7 @@ $response = $instance->v3->apply4sub->sub_merchants->_sub_mchid_->modifySettleme
     'account_name' => 'ciphertext',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -129,7 +129,7 @@ $response = $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/modify-sett
     'account_name' => 'ciphertext',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -149,7 +149,7 @@ $response = $instance['v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement'
     'account_name' => 'ciphertext',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

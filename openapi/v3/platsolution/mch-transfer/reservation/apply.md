@@ -30,7 +30,7 @@ description: 商户可调用接口预先指定转账的单次计划，预创建�
 | withdrawal_no {data-indent=3} | string | 取现单号
 | claim_no {data-indent=3} | string | 理赔单号
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -62,7 +62,7 @@ $instance->v3->platsolution->mchTransfer->reservation->apply->postAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -97,7 +97,7 @@ $instance->chain('v3/platsolution/mch-transfer/reservation/apply')->postAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -132,7 +132,7 @@ $instance['v3/platsolution/mch-transfer/reservation/apply']->postAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -167,7 +167,7 @@ $response = $instance->v3->platsolution->mchTransfer->reservation->apply->post([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -199,7 +199,7 @@ $response = $instance->chain('v3/platsolution/mch-transfer/reservation/apply')->
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -231,7 +231,7 @@ $response = $instance['v3/platsolution/mch-transfer/reservation/apply']->post([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -245,7 +245,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_reservation_no | string | 商户预约单号
 | reservation_id | string | 微信转账预约单号
 | accept_time | string | 预约记录受理时间
-| state | string | 预约记录状态
+| state | string | 预约记录状态<br/>`ACCEPTED` \| `CONFIRMED` \| `CLOSED` 枚举值之一
 | package_info | string | 跳转微信支付用户确认预约页的package信息
 
 {.im-table #response}

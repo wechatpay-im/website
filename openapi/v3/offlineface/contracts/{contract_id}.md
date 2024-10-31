@@ -95,11 +95,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | organization_id | string | 
 | use_id | string | 
 | openid | string | 
-| contract_state | string | 
+| contract_state | string | `NOT_CONTRACTED` \| `TERMINATED` \| `CONTRACTED` 枚举值之一
 | contract_signed_time | string | 
 | contract_terminated_time | string | 
-| contract_mode | string | 
-| contract_bank_card_from | string | 
+| contract_mode | string | `LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
+| contract_bank_card_from | string | `MERCHANT_LIMITED_BANK_CARD` \| `USER_SELECT_FREE` 枚举值之一
 
 {.im-table #response}
 

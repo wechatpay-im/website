@@ -16,19 +16,19 @@ description: 一键绑卡不是支持所有银行卡，上线前请先测试是�
 | identification_name {data-indent=2} | string | 
 | organization_id {data-indent=2} | string | 
 | identification {data-indent=2} | object | 
-| identification_type {data-indent=3} | string | 
+| identification_type {data-indent=3} | string | `IDCARD` 枚举值
 | identification_number {data-indent=3} | string | 
 | phone {data-indent=2} | string | 
 | limit_bank_card {data-indent=1} | object | 
 | bank_card_number {data-indent=2} | string | 
 | identification_name {data-indent=2} | string | 
 | identification {data-indent=2} | object | 
-| identification_type {data-indent=3} | string | 
+| identification_type {data-indent=3} | string | `IDCARD` 枚举值
 | identification_number {data-indent=3} | string | 
 | valid_thru {data-indent=2} | string | 
 | bank_type {data-indent=2} | string | 
 | phone {data-indent=2} | string | 
-| contract_mode {data-indent=1} | string | 
+| contract_mode {data-indent=1} | string | `LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
 
 {.im-table #request}
 

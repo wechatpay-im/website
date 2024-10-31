@@ -98,11 +98,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | create_time | string | 
 | out_trade_no | string | 
 | transaction_id | string | 
-| trade_state | string | 
+| trade_state | string | `SUCCESS` \| `ACCEPTED` \| `PAY_FAIL` \| `REFUND` 枚举值之一
 | trade_state_description | string | 
 | success_time | string | 
 | bank_type | string | 
-| user_repay_state | string | 
+| user_repay_state | string | `NOT_REPAY` \| `REPAID` \| `ALL_REFUND` 枚举值之一
 | repay_transaction_id | string | 
 | repay_time | string | 
 | attach | string | 
@@ -121,8 +121,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | promotion_detail | object[] | 
 | coupon_id {data-indent=1} | string | 
 | name {data-indent=1} | string | 
-| scope {data-indent=1} | string | 
-| type {data-indent=1} | string | 
+| scope {data-indent=1} | string | `GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | `CASH` \| `NOCASH` 枚举值之一
 | stock_id {data-indent=1} | string | 
 | amount {data-indent=1} | integer | 
 | wechatpay_contribute {data-indent=1} | integer | 

@@ -101,10 +101,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | stock_id | string | 批次号
 | coupon_id | string | 代金券id
 | coupon_name | string | 代金券名称
-| status | string | 代金券状态
+| status | string | 代金券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
 | description | string | 使用说明
 | create_time | string | 领券时间
-| coupon_type | string | 券类型
+| coupon_type | string | 券类型<br/>`NORMAL` \| `CUT_TO` 枚举值之一
 | start_time | string | 激活批次的时间
 | stop_time | string | 终止批次的时间
 | singleitem | boolean | 是否单品优惠
@@ -126,7 +126,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | price {data-indent=2} | integer | 
 | discount_amount {data-indent=2} | integer | 
 | available_balance | number | 剩余金额
-| business_type | string | 业务类型
+| business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
 
 {.im-table #response}
 

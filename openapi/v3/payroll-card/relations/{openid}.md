@@ -107,7 +107,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | openid | string | 用户标识
 | mchid | string | 商户号
 | sub_mchid | string | 子商户号
-| authorize_state | string | 授权状态
+| authorize_state | string | 授权状态<br/>`UNAUTHORIZED` \| `AUTHORIZED` \| `DEAUTHORIZED` 枚举值之一
 | authorize_time | string | 授权时间
 | deauthorize_time | string | 取消授权时间
 

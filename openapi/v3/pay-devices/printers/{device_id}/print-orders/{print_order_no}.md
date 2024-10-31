@@ -80,7 +80,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | print_order_no | string | 打印单号
 | template_id | string | 模板ID
 | notify_url | string | 回调通知地址
-| print_state | string | 打印状态
+| print_state | string | 打印状态<br/>`PRINT_STATE_WAIT` \| `PRINT_STATE_SUCCESS` \| `PRINT_STATE_FAIL` \| `PRINT_STATE_CACHED` 枚举值之一
 | print_state_description | string | 打印状态描述
 | variable_list | object[] | 变量列表
 | key {data-indent=1} | string | 

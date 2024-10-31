@@ -150,7 +150,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | principal_id_number | string | 负责人证件编号
 | settlement_bank_number | string | 子商户结算银行账户
 | channel_id | string | 渠道编号
-| h5_authorization_state | string | H5支付权限状态
+| h5_authorization_state | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
 | h5_audit_reject_detail | string | H5驳回详情
 | sub_mch_status | string | 子商户状态
 | application_status | string | 子商户入驻状态

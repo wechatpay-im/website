@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | legal_validation_url | string | 法人验证链接
 | out_request_no | string | 业务申请编号
 | applyment_id | number | 微信支付申请单号
-| sign_state | string | 签约状态
+| sign_state | string | 签约状态<br/>`UNSIGNED` \| `SIGNED` \| `NOT_SIGNABLE` 枚举值之一
 
 {.im-table #response}
 

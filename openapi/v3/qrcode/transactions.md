@@ -16,7 +16,7 @@ description:
 | description {data-indent=1} | string | 商户自定义字段，用于交易账单中对扣费服务的描述。
 | attach {data-indent=1} | string | 附加数据，在查询API和支付通知中原样返回
 | out_trade_no {data-indent=1} | string | 商户系统内部订单号
-| trade_scene {data-indent=1} | string | 交易场景值，现在支持公交和地铁的场景值
+| trade_scene {data-indent=1} | string | 交易场景值，现在支持公交和地铁的场景值<br/>`BUS` \| `METRO` 枚举值之一
 | goods_tag {data-indent=1} | string | 代金券或立减优惠功能的参数
 | contract_id {data-indent=1} | string | 签约成功后，微信返回代扣签约ID
 | notify_url {data-indent=1} | string | 接受扣款结果异步回调通知的URL
@@ -256,11 +256,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | create_time | string | 
 | out_trade_no | string | 
 | transaction_id | string | 
-| trade_state | string | 
+| trade_state | string | `SUCCESS` \| `ACCEPTED` \| `PAY_FAIL` \| `REFUND` 枚举值之一
 | trade_state_description | string | 
 | success_time | string | 
 | bank_type | string | 
-| user_repay_state | string | 
+| user_repay_state | string | `NOT_REPAY` \| `REPAID` \| `ALL_REFUND` 枚举值之一
 | repay_transaction_id | string | 
 | repay_time | string | 
 | attach | string | 
@@ -279,8 +279,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | promotion_detail | object[] | 
 | coupon_id {data-indent=1} | string | 
 | name {data-indent=1} | string | 
-| scope {data-indent=1} | string | 
-| type {data-indent=1} | string | 
+| scope {data-indent=1} | string | `GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | `CASH` \| `NOCASH` 枚举值之一
 | stock_id {data-indent=1} | string | 
 | amount {data-indent=1} | integer | 
 | wechatpay_contribute {data-indent=1} | integer | 

@@ -41,7 +41,7 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 | tax_prefer_mark {data-indent=3} | string | 税收优惠政策标识
 | discount {data-indent=3} | boolean | 是否折扣行
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -85,7 +85,7 @@ $instance->v3->newTaxControlFapiao->fapiaoApplications->postAsync([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -132,7 +132,7 @@ $instance->chain('v3/new-tax-control-fapiao/fapiao-applications')->postAsync([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -179,7 +179,7 @@ $instance['v3/new-tax-control-fapiao/fapiao-applications']->postAsync([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -226,7 +226,7 @@ $response = $instance->v3->newTaxControlFapiao->fapiaoApplications->post([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 202);
@@ -270,7 +270,7 @@ $response = $instance->chain('v3/new-tax-control-fapiao/fapiao-applications')->p
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 202);
@@ -314,7 +314,7 @@ $response = $instance['v3/new-tax-control-fapiao/fapiao-applications']->post([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 202);

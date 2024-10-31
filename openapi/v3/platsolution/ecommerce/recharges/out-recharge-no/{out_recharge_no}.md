@@ -94,10 +94,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid | string | 二级商户号
 | recharge_id | string | 微信支付充值单号
 | out_recharge_no | string | 商户充值单号
-| recharge_channel | string | 充值渠道
-| account_type | string | 充值入账账户
-| recharge_state | string | 充值状态
-| recharge_scene | string | 充值场景
+| recharge_channel | string | 充值渠道<br/>`BANK_TRANSFER` \| `QR_RECHARGE` 枚举值之一
+| account_type | string | 充值入账账户<br/>`DEPOSIT` \| `BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| recharge_state | string | 充值状态<br/>`SUCCESS` \| `RECHARGING` \| `CLOSED` 枚举值之一
+| recharge_scene | string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_BANK_TRANSFER` \| `NORMAL_BANK_TRANSFER` 枚举值之一
 | recharge_state_desc | string | 充值状态描述
 | recharge_amount | object | 充值金额
 | amount {data-indent=1} | number | 总金额
@@ -111,7 +111,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_card_tail {data-indent=1} | string | 银行卡号后四位
 | qr_recharge_info | object | 扫码充值的付款信息
 | openid {data-indent=1} | string | 用户OpenID
-| employee_type {data-indent=1} | string | 员工类型
+| employee_type {data-indent=1} | string | 员工类型<br/>`ADMIN` \| `STAFF` 枚举值之一
 | accept_time | string | 受理充值时间
 | success_time | string | 充值成功时间
 | close_time | string | 关闭充值时间

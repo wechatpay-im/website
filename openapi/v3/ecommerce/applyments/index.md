@@ -11,10 +11,10 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | --- | --- | ---
 | json | object | 声明请求的`JSON`数据结构
 | out_request_no {data-indent=1} | string | 业务申请编号
-| organization_type {data-indent=1} | string | 主体类型
+| organization_type {data-indent=1} | string | 主体类型<br/>`2401` \| `2500` \| `4` \| `2` \| `3` \| `2502` \| `1708` 枚举值之一
 | finance_institution {data-indent=1} | boolean | 是否金融机构
 | business_license_info {data-indent=1} | object | 营业执照/登记证书信息
-| cert_type {data-indent=2} | string | 登记证书类型
+| cert_type {data-indent=2} | string | 登记证书类型<br/>`CERTIFICATE_TYPE_2388` \| `CERTIFICATE_TYPE_2389` \| `CERTIFICATE_TYPE_2390` \| `CERTIFICATE_TYPE_2391` \| `CERTIFICATE_TYPE_2392` \| `CERTIFICATE_TYPE_2393` \| `CERTIFICATE_TYPE_2394` \| `CERTIFICATE_TYPE_2395` \| `CERTIFICATE_TYPE_2396` \| `CERTIFICATE_TYPE_2399` \| `CERTIFICATE_TYPE_2400` \| `CERTIFICATE_TYPE_2520` \| `CERTIFICATE_TYPE_2521` \| `CERTIFICATE_TYPE_2522` 枚举值之一
 | business_license_copy {data-indent=2} | string | 证件扫描件
 | business_license_number {data-indent=2} | string | 证件注册号
 | merchant_name {data-indent=2} | string | 商户名称
@@ -22,10 +22,10 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | company_address {data-indent=2} | string | 注册地址
 | business_time {data-indent=2} | string | 营业期限
 | finance_institution_info {data-indent=1} | object | 
-| finance_type {data-indent=2} | string | 金融机构类型
+| finance_type {data-indent=2} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
 | finance_license_pics {data-indent=2} | string[] | 
-| id_holder_type {data-indent=1} | string | 超级管理员类型
-| id_doc_type {data-indent=1} | string | 
+| id_holder_type {data-indent=1} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
+| id_doc_type {data-indent=1} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | authorize_letter_copy {data-indent=1} | string | 法定代表人说明函
 | id_card_info {data-indent=1} | object | 经营者/法人身份证信息
 | id_card_copy {data-indent=2} | string | 身份证人像面照片
@@ -43,7 +43,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | doc_period_end {data-indent=2} | string | 证件有效期结束时间
 | owner {data-indent=1} | boolean | 经营者/法人是否为受益人
 | ubo_info_list {data-indent=1} | object[] | 
-| ubo_id_doc_type {data-indent=2} | string | 
+| ubo_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | ubo_id_doc_copy {data-indent=2} | string | 证件正面照片
 | ubo_id_doc_copy_back {data-indent=2} | string | 证件反面照片
 | ubo_id_doc_name {data-indent=2} | string | 受益人姓名
@@ -52,7 +52,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | ubo_period_begin {data-indent=2} | string | 证件有效期开始时间
 | ubo_period_end {data-indent=2} | string | 证件有效期结束时间
 | account_info {data-indent=1} | object | 结算银行账户
-| bank_account_type {data-indent=2} | string | 账户类型
+| bank_account_type {data-indent=2} | string | 账户类型<br/>`74` \| `75` 枚举值之一
 | account_bank {data-indent=2} | string | 开户银行
 | account_name {data-indent=2} | string | 开户名称
 | bank_address_code {data-indent=2} | string | 开户银行省市编码
@@ -60,9 +60,9 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | bank_name {data-indent=2} | string | 开户银行全称 （含支行]
 | account_number {data-indent=2} | string | 银行帐号
 | contact_info {data-indent=1} | object | 超级管理员信息
-| contact_type {data-indent=2} | string | 超级管理员类型
+| contact_type {data-indent=2} | string | 超级管理员类型<br/>`65` \| `66` 枚举值之一
 | contact_name {data-indent=2} | string | 超级管理员姓名
-| contact_id_doc_type {data-indent=2} | string | 
+| contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | contact_id_card_number {data-indent=2} | string | 超级管理员身份证件号码
 | contact_id_doc_copy {data-indent=2} | string | 超级管理员证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 超级管理员证件反面照片
@@ -83,7 +83,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | business_addition_pics {data-indent=1} | string[] | 补充材料
 | business_addition_desc {data-indent=1} | string[] | 补充说明
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -175,7 +175,7 @@ $instance->v3->ecommerce->applyments->_empty_->postAsync([
     'business_addition_desc' => ['MediaId'],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -270,7 +270,7 @@ $instance->chain('v3/ecommerce/applyments/{empty}')->postAsync([
     'business_addition_desc' => ['MediaId'],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -365,7 +365,7 @@ $instance['v3/ecommerce/applyments/{empty}']->postAsync([
     'business_addition_desc' => ['MediaId'],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -460,7 +460,7 @@ $response = $instance->v3->ecommerce->applyments->_empty_->post([
     'business_addition_desc' => ['MediaId'],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -552,7 +552,7 @@ $response = $instance->chain('v3/ecommerce/applyments/{empty}')->post([
     'business_addition_desc' => ['MediaId'],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -644,7 +644,7 @@ $response = $instance['v3/ecommerce/applyments/{empty}']->post([
     'business_addition_desc' => ['MediaId'],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

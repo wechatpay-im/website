@@ -99,7 +99,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | data | object[] | 投诉协商历史
 | complaint_media_list {data-indent=1} | object | 
-| media_type {data-indent=2} | string | 媒体文件业务类型
+| media_type {data-indent=2} | string | 媒体文件业务类型<br/>`USER_COMPLAINT_IMAGE` \| `OPERATION_IMAGE` 枚举值之一
 | media_url {data-indent=2} | string[] | 媒体文件请求url
 | log_id {data-indent=1} | string | 操作流水号
 | operator {data-indent=1} | string | 操作人

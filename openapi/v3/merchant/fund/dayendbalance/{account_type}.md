@@ -9,7 +9,7 @@ description: 通过此接口可以查询本商户号指定日期当天24点的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| account_type | string | 资金账户类型
+| account_type | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | query | object | 声明请求的查询参数
 | bill_date {data-indent=1} | string | 日期
 

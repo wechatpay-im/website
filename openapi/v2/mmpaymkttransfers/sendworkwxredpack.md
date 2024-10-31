@@ -21,7 +21,7 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 | wishing {data-indent=1} | string | 红包祝福语
 | act_name {data-indent=1} | string | 活动名称
 | remark {data-indent=1} | string | 备注
-| scene_id {data-indent=1} | string | 场景id
+| scene_id {data-indent=1} | string | 场景id<br/>`PRODUCT_1` \| `PRODUCT_2` \| `PRODUCT_3` \| `PRODUCT_4` \| `PRODUCT_5` \| `PRODUCT_6` \| `PRODUCT_7` \| `PRODUCT_8` 枚举值之一
 | workwx_sign {data-indent=1} | string | 活动信息
 | security | boolean | 声明加载商户API证书<br/>固定值`true`
 

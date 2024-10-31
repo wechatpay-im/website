@@ -23,7 +23,7 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 | info_type {data-indent=2} | string | 信息类型
 | info_content {data-indent=2} | string | 信息内容
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -47,7 +47,7 @@ $instance->v3->fundApp->mchTransfer->transferBills->postAsync([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,7 +74,7 @@ $instance->chain('v3/fund-app/mch-transfer/transfer-bills')->postAsync([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -101,7 +101,7 @@ $instance['v3/fund-app/mch-transfer/transfer-bills']->postAsync([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -128,7 +128,7 @@ $response = $instance->v3->fundApp->mchTransfer->transferBills->post([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -152,7 +152,7 @@ $response = $instance->chain('v3/fund-app/mch-transfer/transfer-bills')->post([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -176,7 +176,7 @@ $response = $instance['v3/fund-app/mch-transfer/transfer-bills']->post([
     ],],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -12,7 +12,7 @@ description: 调用获取RSA公钥API获取RSA公钥，用于加密付款到银�
 | base_uri | string | 声明接入点<br/>固定值`https://fraud.mch.weixin.qq.com/`
 | xml | object | 声明请求的`XML`数据结构
 | mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | security | boolean | 声明加载商户API证书<br/>固定值`true`
 
 {.im-table #request}

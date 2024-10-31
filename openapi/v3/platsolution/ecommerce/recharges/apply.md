@@ -12,8 +12,8 @@ description: 商户系统须通过调用此接口获取充值链接，随后发�
 | json | object | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 二级商户号
 | out_recharge_no {data-indent=1} | string | 商户充值单号
-| recharge_scene {data-indent=1} | string | 充值场景
-| account_type {data-indent=1} | string | 充值入账账户
+| recharge_scene {data-indent=1} | string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_BANK_TRANSFER` \| `NORMAL_BANK_TRANSFER` 枚举值之一
+| account_type {data-indent=1} | string | 充值入账账户<br/>`DEPOSIT` \| `BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | recharge_amount {data-indent=1} | object | 充值金额
 | amount {data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型

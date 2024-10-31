@@ -5,7 +5,7 @@
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json | object | 声明请求的`JSON`数据结构
-| accept_type {data-indent=1} | string | 受理类型
+| accept_type {data-indent=1} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
 | out_batch_no {data-indent=1} | string | 商家转账批次单号
 | out_detail_no {data-indent=1} | string | 商家转账明细单号
 
@@ -112,7 +112,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | query | object | 声明请求的查询参数
-| accept_type {data-indent=1} | string | 受理类型
+| accept_type {data-indent=1} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
 | out_batch_no {data-indent=1} | string | 商家转账批次单号
 | out_detail_no {data-indent=1} | string | 商家转账明细单号
 

@@ -18,7 +18,7 @@ description: 如商户有存量注册会员未领取会员卡，可导入最近�
 | encrypted_phone_number {data-indent=1} | string | 加密手机号
 | outer_str {data-indent=1} | string | 自定义场景值
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -37,7 +37,7 @@ $instance->v3->marketing->membercardOpen->phonenumberMember->import->postAsync([
     'outer_str' => 'my_card_CARD',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,7 +59,7 @@ $instance->chain('v3/marketing/membercard-open/phonenumber-member/import')->post
     'outer_str' => 'my_card_CARD',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,7 +81,7 @@ $instance['v3/marketing/membercard-open/phonenumber-member/import']->postAsync([
     'outer_str' => 'my_card_CARD',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -103,7 +103,7 @@ $response = $instance->v3->marketing->membercardOpen->phonenumberMember->import-
     'outer_str' => 'my_card_CARD',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -122,7 +122,7 @@ $response = $instance->chain('v3/marketing/membercard-open/phonenumber-member/im
     'outer_str' => 'my_card_CARD',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -141,7 +141,7 @@ $response = $instance['v3/marketing/membercard-open/phonenumber-member/import']-
     'outer_str' => 'my_card_CARD',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

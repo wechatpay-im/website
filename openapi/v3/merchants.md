@@ -40,7 +40,7 @@
 | number {data-indent=2} | string | 负责人证件号
 | headers | object | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 由商户侧生成的唯一key，用来标识多次重试是否为同一请求
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -89,7 +89,7 @@ $instance->v3->merchants->postAsync([
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -141,7 +141,7 @@ $instance->chain('v3/merchants')->postAsync([
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -193,7 +193,7 @@ $instance['v3/merchants']->postAsync([
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -245,7 +245,7 @@ $response = $instance->v3->merchants->post([
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -294,7 +294,7 @@ $response = $instance->chain('v3/merchants')->post([
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -343,7 +343,7 @@ $response = $instance['v3/merchants']->post([
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -403,7 +403,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | name {data-indent=2} | string | 负责人姓名
 | number {data-indent=2} | string | 负责人证件号
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -452,7 +452,7 @@ $instance->v3->merchants->putAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -504,7 +504,7 @@ $instance->chain('v3/merchants')->putAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -556,7 +556,7 @@ $instance['v3/merchants']->putAsync([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -608,7 +608,7 @@ $response = $instance->v3->merchants->put([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -657,7 +657,7 @@ $response = $instance->chain('v3/merchants')->put([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -706,7 +706,7 @@ $response = $instance['v3/merchants']->put([
     ],
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

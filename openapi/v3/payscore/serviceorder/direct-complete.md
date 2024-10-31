@@ -320,8 +320,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | service_introduction | string | 服务信息
 | mchid | string | 商户号
 | order_id | string | 微信支付服务订单号
-| state | string | 服务订单状态
-| state_description | string | 订单状态说明
+| state | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description | string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
 | attach | string | 商户数据包
 | notify_url | string | 商户回调地址
 | total_amount | integer | 总金额

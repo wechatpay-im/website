@@ -12,7 +12,7 @@ description: 电商服务商按日查询并下载提现状态为异常的提现�
 | query | object | 声明请求的查询参数
 | bill_type {data-indent=1} | string | 账单类型
 | bill_date {data-indent=1} | string | 账单日期
-| tar_type {data-indent=1} | string | 压缩类型
+| tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
 
 {.im-table #request}
 

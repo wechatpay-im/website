@@ -30,7 +30,7 @@
 | userid {data-indent=1} | string | 
 | address {data-indent=1} | string | 
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -67,7 +67,7 @@ $instance->v3->payscore->payafterOrders->postAsync([
     'address' => '',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -107,7 +107,7 @@ $instance->chain('v3/payscore/payafter-orders')->postAsync([
     'address' => '',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -147,7 +147,7 @@ $instance['v3/payscore/payafter-orders']->postAsync([
     'address' => '',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -187,7 +187,7 @@ $response = $instance->v3->payscore->payafterOrders->post([
     'address' => '',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -224,7 +224,7 @@ $response = $instance->chain('v3/payscore/payafter-orders')->post([
     'address' => '',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -261,7 +261,7 @@ $response = $instance['v3/payscore/payafter-orders']->post([
     'address' => '',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -391,7 +391,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid | string | 
 | out_order_no | string | 商户服务订单号
 | service_id | string | 服务ID
-| state | string | 
+| state | string | `CREATED` \| `USER_ACCEPTED` \| `FINISHED` \| `USER_PAID` \| `REVOKED` \| `EXPIRED` 枚举值之一
 | finish_type | integer | 
 | service_start_time | string | 
 | service_end_time | string | 

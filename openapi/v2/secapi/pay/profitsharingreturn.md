@@ -187,8 +187,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | return_account | string | 回退方账号
 | return_amount | integer | 回退金额
 | description | string | 回退描述
-| result | string | 回退结果
-| fail_reason | string | 失败原因
+| result | string | 回退结果<br/>`SUCCESS` \| `PROCESSING` \| `FAILED` 枚举值之一
+| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` 枚举值之一
 | finish_time | string | 完成时间
 
 {.im-table #response}

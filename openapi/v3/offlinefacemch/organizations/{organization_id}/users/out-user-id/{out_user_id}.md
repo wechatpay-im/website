@@ -76,13 +76,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_user_id | string | 
 | organization_id | string | 
 | user_name | string | 
-| user_type | string | 
+| user_type | string | `STUDENT` \| `STUFF` 枚举值之一
 | student_info | object | 
 | class_name {data-indent=1} | string | 
 | staff_info | object | 
 | occupation {data-indent=1} | string | 
-| status | string | 
-| contract_state | string | 
+| status | string | `NORMAL` \| `DISABLED` 枚举值之一
+| contract_state | string | `NOT_CONTRACTED` \| `TERMINATED` \| `CONTRACTED` 枚举值之一
 | face_image_ok | boolean | 
 | contract_id | string | 
 
@@ -100,12 +100,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_user_id | string | 
 | json | object | 声明请求的`JSON`数据结构
 | user_name {data-indent=1} | string | 
-| user_type {data-indent=1} | string | 
+| user_type {data-indent=1} | string | `STUDENT` \| `STUFF` 枚举值之一
 | student_info {data-indent=1} | object | 
 | class_name {data-indent=2} | string | 
 | staff_info {data-indent=1} | object | 
 | occupation {data-indent=2} | string | 
-| status {data-indent=1} | string | 状态
+| status {data-indent=1} | string | 状态<br/>`NORMAL` \| `DISABLED` 枚举值之一
 | phone {data-indent=1} | string | 手机号
 
 {.im-table #request}

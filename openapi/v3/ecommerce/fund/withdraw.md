@@ -15,7 +15,7 @@ description: 电商平台通过余额提现API帮助二级商户发起账户余�
 | amount {data-indent=1} | integer | 提现金额
 | remark {data-indent=1} | string | 提现备注
 | bank_memo {data-indent=1} | string | 银行附言
-| account_type {data-indent=1} | string | 出款账户类型
+| account_type {data-indent=1} | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #request}
 
@@ -121,7 +121,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid | string | 特约商户号
 | withdraw_id | string | 微信支付提现单号
 | out_request_no | string | 商户提现单号
-| account_type | string | 出款账户类型
+| account_type | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #response}
 

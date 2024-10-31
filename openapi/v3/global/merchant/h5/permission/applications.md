@@ -15,13 +15,13 @@ description: 商户可以通过调用此接口为子商户申请H5支付权限�
 | sub_mchid {data-indent=1} | string | 子商户号
 | domains {data-indent=1} | string[] | 
 | company_register_cert {data-indent=1} | string | 公司注册资质证书
-| transaction_limit_type {data-indent=1} | string | 限额类型
+| transaction_limit_type {data-indent=1} | string | 限额类型<br/>`UN_LAUNCHED_WEBSITE_LIMIT` \| `NORMAL_LIMIT` \| `NO_LIMIT` 枚举值之一
 | website_business_page_pics {data-indent=1} | string[] | 
 | website_homepage_pics {data-indent=1} | string[] | 
-| website_state {data-indent=1} | string | 子商户经营网址状态
+| website_state {data-indent=1} | string | 子商户经营网址状态<br/>`HAS_LAUNCHED` \| `UN_LAUNCHED` 枚举值之一
 | website_url {data-indent=1} | string | 子商户H5经营网址
 | notify_url {data-indent=1} | string | 商户提供的审核结果回调接口
-| applyment_type {data-indent=1} | string | 申请单类型
+| applyment_type {data-indent=1} | string | 申请单类型<br/>`APPLY_FOR_PAYMENT_AUTHORITY` \| `APPLY_FOR_RELIEVE_LIMITED` 枚举值之一
 
 {.im-table #request}
 
@@ -163,7 +163,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid | string | 子商户号
 | domains | string[] | H5支付域名
 | business_description | string | 公司介绍和业务描述
-| transaction_limit_type | string | 限额类型
+| transaction_limit_type | string | 限额类型<br/>`UN_LAUNCHED_WEBSITE_LIMIT` \| `NORMAL_LIMIT` \| `NO_LIMIT` 枚举值之一
 | company_register_cert | string | 公司注册资质证书
 | website_business_page_pics | string[] | 
 | website_homepage_pics | string[] | 

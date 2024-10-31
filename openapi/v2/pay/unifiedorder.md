@@ -11,7 +11,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | --- | --- | ---
 | xml | object | 声明请求的`XML`数据结构
 | version {data-indent=1} | string | 接口版本号
-| profit_sharing {data-indent=1} | string | 是否指定服务商分账;Y-是，需要分账;N-否，不分账;字母要求大写，不传默认不分账
+| profit_sharing {data-indent=1} | string | 是否指定服务商分账;Y-是，需要分账;N-否，不分账;字母要求大写，不传默认不分账<br/>`N` \| `Y` 枚举值之一
 | appid {data-indent=1} | string | 公众账号ID
 | mch_id {data-indent=1} | string | 商户号
 | device_info {data-indent=1} | string | 设备号
@@ -247,7 +247,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code | string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| trade_type | string | 交易类型
+| trade_type | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
 | prepay_id | string | 预支付交易会话标识
 | code_url | string | 二维码链接
 | mweb_url | string | 支付跳转链接，**mweb_url为拉起微信支付收银台的中间页面，可通过访问该url来拉起微信客户端，完成支付,mweb_url的有效期为5分钟。**

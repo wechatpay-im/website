@@ -20,12 +20,12 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 | amount {data-indent=1} | object | 订单金额
 | refund {data-indent=2} | integer | 退款金额
 | from {data-indent=2} | object[] | 退款出资账户及金额
-| account {data-indent=3} | string | 出资账户类型
+| account {data-indent=3} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
 | amount {data-indent=3} | number | 出资金额
 | total {data-indent=2} | integer | 原订单金额
 | currency {data-indent=2} | string | 退款币种
 | notify_url {data-indent=1} | string | 退款结果回调url
-| refund_account {data-indent=1} | string | 退款出资商户
+| refund_account {data-indent=1} | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
 | funds_account {data-indent=1} | string | 资金账户
 
 {.im-table #request}

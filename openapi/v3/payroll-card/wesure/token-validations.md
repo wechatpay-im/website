@@ -15,9 +15,9 @@ description: 校验按商户拉起核身时预下单的token值对应的微工�
 | token {data-indent=1} | string | token值
 | user_name {data-indent=1} | string | 用户姓名
 | id_card_number {data-indent=1} | string | 用户身份证号
-| authenticate_type {data-indent=1} | string | 核身类型
+| authenticate_type {data-indent=1} | string | 核身类型<br/>`NORMAL` \| `SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -34,7 +34,7 @@ $instance->v3->payrollCard->wesure->tokenValidations->postAsync([
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,7 +54,7 @@ $instance->chain('v3/payroll-card/wesure/token-validations')->postAsync([
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,7 +74,7 @@ $instance['v3/payroll-card/wesure/token-validations']->postAsync([
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -94,7 +94,7 @@ $response = $instance->v3->payrollCard->wesure->tokenValidations->post([
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,7 +111,7 @@ $response = $instance->chain('v3/payroll-card/wesure/token-validations')->post([
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -128,7 +128,7 @@ $response = $instance['v3/payroll-card/wesure/token-validations']->post([
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -17,7 +17,7 @@ description:
 | sub_mchid {data-indent=1} | string | 
 | amount {data-indent=1} | object | 
 | total {data-indent=2} | integer | 
-| currency {data-indent=2} | string | 
+| currency {data-indent=2} | string | `CNY` 枚举值
 | scene_info {data-indent=1} | object | 
 | device_ip {data-indent=2} | string | 
 | goods_tag {data-indent=1} | string | 
@@ -27,8 +27,8 @@ description:
 | profit_sharing {data-indent=2} | boolean | 
 | out_trade_no {data-indent=1} | string | 
 | business {data-indent=1} | object | 
-| business_product_id {data-indent=2} | integer | 
-| business_scene_id {data-indent=2} | integer | 
+| business_product_id {data-indent=2} | integer | `2` \| `11` 枚举值之一
+| business_scene_id {data-indent=2} | integer | `3` \| `4` \| `5` \| `6` \| `124` \| `125` \| `126` 枚举值之一
 
 {.im-table #request}
 
@@ -242,12 +242,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_openid {data-indent=1} | string | 
 | amount | object | 
 | total {data-indent=1} | integer | 
-| currency {data-indent=1} | string | 
+| currency {data-indent=1} | string | `CNY` 枚举值
 | promotion_detail | object[] | 
 | scene_info | object | 
 | device_ip {data-indent=1} | string | 
 | bank_type | string | 
-| trade_type | string | 
+| trade_type | string | `NATIVE` \| `JSAPI` \| `APP` \| `MWEB` \| `AUTH` 枚举值之一
 | trade_state | string | 
 | trade_state_description | string | 
 | debt_state | string | 

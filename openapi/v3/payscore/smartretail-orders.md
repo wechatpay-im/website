@@ -343,7 +343,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid | string | 
 | out_order_no | string | 商户服务订单号
 | service_id | string | 服务ID
-| state | string | 
+| state | string | `CREATED` \| `USER_ACCEPTED` \| `FINISHED` \| `USER_PAID` \| `REVOKED` \| `EXPIRED` 枚举值之一
 | finish_type | integer | 
 | service_start_time | string | 
 | service_end_time | string | 

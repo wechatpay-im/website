@@ -26,7 +26,7 @@ description: 商户请求扣费受理接口，会完成订单受理。微信支�
 | parking_info {data-indent=1} | object | 停车场景信息
 | parking_id {data-indent=2} | string | 停车入场id
 | plate_number {data-indent=2} | string | 车牌号
-| plate_color {data-indent=2} | string | 车牌颜色
+| plate_color {data-indent=2} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
 | start_time {data-indent=2} | string | 入场时间
 | end_time {data-indent=2} | string | 出场时间
 | parking_name {data-indent=2} | string | 停车场名称

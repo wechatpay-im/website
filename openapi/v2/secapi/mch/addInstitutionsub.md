@@ -40,7 +40,7 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | contact_phone {data-indent=1} | string | 联系人电话
 | contact_email {data-indent=1} | string | 联系人邮箱
 | settlement_bank_number {data-indent=1} | string | 子商户结算银行账户
-| apply_h5_payment {data-indent=1} | string | 是否申请H5支付权限
+| apply_h5_payment {data-indent=1} | string | 是否申请H5支付权限<br/>`YES` \| `NO` 枚举值之一
 | h5_website_url {data-indent=1} | string | H5经营网址
 | h5_domains {data-indent=1} | string | H5支付域名
 | nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
@@ -330,7 +330,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sign | string | 签名
 | verification_status | string | 验证状态
 | description | string | 验证状态描述
-| h5_authorization_state | string | H5支付权限状态
+| h5_authorization_state | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
 
 {.im-table #response}
 

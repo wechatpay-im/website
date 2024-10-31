@@ -12,7 +12,7 @@ description: 商户系统须通过调用此接口获取银行转账账号，随�
 | json | object | 声明请求的`JSON`数据结构
 | out_recharge_no {data-indent=1} | string | 商户充值单号
 | recharge_scene {data-indent=1} | string | 充值场景
-| account_type {data-indent=1} | string | 充值入账账户
+| account_type {data-indent=1} | string | 充值入账账户<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | recharge_amount {data-indent=1} | object | 充值金额
 | amount {data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型

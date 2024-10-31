@@ -44,7 +44,7 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 | extra_fields2 {data-indent=1} | string | 扩展字段2，json格式
 | extra_fields3 {data-indent=1} | string | 扩展字段3，json格式
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -90,7 +90,7 @@ $instance->v3->merchantRiskManage->reportTradeUnionInformation->postAsync([
     'extra_fields3' => '{"key1":"value1"}',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -139,7 +139,7 @@ $instance->chain('v3/merchant-risk-manage/report-trade-union-information')->post
     'extra_fields3' => '{"key1":"value1"}',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -188,7 +188,7 @@ $instance['v3/merchant-risk-manage/report-trade-union-information']->postAsync([
     'extra_fields3' => '{"key1":"value1"}',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -237,7 +237,7 @@ $response = $instance->v3->merchantRiskManage->reportTradeUnionInformation->post
     'extra_fields3' => '{"key1":"value1"}',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -283,7 +283,7 @@ $response = $instance->chain('v3/merchant-risk-manage/report-trade-union-informa
     'extra_fields3' => '{"key1":"value1"}',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -329,7 +329,7 @@ $response = $instance['v3/merchant-risk-manage/report-trade-union-information']-
     'extra_fields3' => '{"key1":"value1"}',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

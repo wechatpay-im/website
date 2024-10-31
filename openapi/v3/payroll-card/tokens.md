@@ -16,9 +16,9 @@ description: 生成授权token信息
 | sub_mchid {data-indent=1} | string | 子商户号
 | user_name {data-indent=1} | string | 用户实名
 | id_card_number {data-indent=1} | string | 用户证件号
-| employment_type {data-indent=1} | string | 用工类型
+| employment_type {data-indent=1} | string | 用工类型<br/>`LONG_TERM_EMPLOYMENT` \| `SHORT_TERM_EMPLOYMENT` \| `COOPERATION_EMPLOYMENT` 枚举值之一
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -36,7 +36,7 @@ $instance->v3->payrollCard->tokens->postAsync([
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,7 +57,7 @@ $instance->chain('v3/payroll-card/tokens')->postAsync([
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,7 +78,7 @@ $instance['v3/payroll-card/tokens']->postAsync([
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -99,7 +99,7 @@ $response = $instance->v3->payrollCard->tokens->post([
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -117,7 +117,7 @@ $response = $instance->chain('v3/payroll-card/tokens')->post([
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -135,7 +135,7 @@ $response = $instance['v3/payroll-card/tokens']->post([
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

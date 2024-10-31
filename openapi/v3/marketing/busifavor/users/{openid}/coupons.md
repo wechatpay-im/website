@@ -13,7 +13,7 @@ description: 服务商自定义筛选条件（如创建商户号、归属商户�
 | query | object | 声明请求的查询参数
 | appid {data-indent=1} | string | 公众账号ID
 | stock_id {data-indent=1} | string | 批次号
-| coupon_state {data-indent=1} | string | 券状态
+| coupon_state {data-indent=1} | string | 券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
 | creator_merchant {data-indent=1} | string | 创建批次的商户号
 | belong_merchant {data-indent=1} | string | 批次归属商户号
 | sender_merchant {data-indent=1} | string | 批次发放商户号

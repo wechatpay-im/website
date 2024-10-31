@@ -19,7 +19,7 @@ description:
 | nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
 | security | boolean | 声明加载商户API证书<br/>固定值`true`
 | query | object | 声明请求的查询参数
-| action {data-indent=1} | string | 
+| action {data-indent=1} | string | `add` \| `query` 枚举值之一
 
 {.im-table #request}
 

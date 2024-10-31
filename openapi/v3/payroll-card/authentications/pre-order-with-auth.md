@@ -19,10 +19,10 @@ description: 本接口适用于用户需同步完成服务开通、授权及身�
 | employer_name {data-indent=1} | string | 用工单位名称
 | user_name {data-indent=1} | string | 用户实名
 | id_card_number {data-indent=1} | string | 用户证件号
-| employment_type {data-indent=1} | string | 用工类型
-| authenticate_type {data-indent=1} | string | 核身类型
+| employment_type {data-indent=1} | string | 用工类型<br/>`LONG_TERM_EMPLOYMENT` \| `SHORT_TERM_EMPLOYMENT` \| `COOPERATION_EMPLOYMENT` 枚举值之一
+| authenticate_type {data-indent=1} | string | 核身类型<br/>`SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -44,7 +44,7 @@ $instance->v3->payrollCard->authentications->preOrderWithAuth->postAsync([
     'authenticate_type' => 'SIGN_IN',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,7 +69,7 @@ $instance->chain('v3/payroll-card/authentications/pre-order-with-auth')->postAsy
     'authenticate_type' => 'SIGN_IN',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -94,7 +94,7 @@ $instance['v3/payroll-card/authentications/pre-order-with-auth']->postAsync([
     'authenticate_type' => 'SIGN_IN',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -119,7 +119,7 @@ $response = $instance->v3->payrollCard->authentications->preOrderWithAuth->post(
     'authenticate_type' => 'SIGN_IN',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -141,7 +141,7 @@ $response = $instance->chain('v3/payroll-card/authentications/pre-order-with-aut
     'authenticate_type' => 'SIGN_IN',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -163,7 +163,7 @@ $response = $instance['v3/payroll-card/authentications/pre-order-with-auth']->po
     'authenticate_type' => 'SIGN_IN',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

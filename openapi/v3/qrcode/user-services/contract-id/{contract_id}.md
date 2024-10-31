@@ -105,7 +105,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | contract_id | string | 签约成功后，微信返回代扣签约ID
-| user_service_state | string | 
+| user_service_state | string | `NORMAL` \| `BLOCKED` 枚举值之一
 | block_reason | string | 
 
 {.im-table #response}

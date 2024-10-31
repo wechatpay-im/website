@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | sub_mchid | string | 二级商户号
 | sp_mchid | string | 电商平台商户号
-| status | string | 提现单状态
+| status | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
 | withdraw_id | string | 微信支付提现单号
 | out_request_no | string | 商户提现单号
 | amount | integer | 提现金额
@@ -101,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | reason | string | 失败原因
 | remark | string | 提现备注
 | bank_memo | string | 银行备注
-| account_type | string | 出款账户类型
+| account_type | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | account_number | string | 入账银行账号后四位
 | account_bank | string | 入账银行
 | bank_name | string | 入账银行全称（含支行）

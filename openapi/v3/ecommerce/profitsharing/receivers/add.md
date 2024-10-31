@@ -17,7 +17,7 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 | encrypted_name {data-indent=1} | string | 接收方名称的密文
 | relation_type {data-indent=1} | string | 与分账方的关系类型
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -34,7 +34,7 @@ $instance->v3->ecommerce->profitsharing->receivers->add->postAsync([
     'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,7 +54,7 @@ $instance->chain('v3/ecommerce/profitsharing/receivers/add')->postAsync([
     'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,7 +74,7 @@ $instance['v3/ecommerce/profitsharing/receivers/add']->postAsync([
     'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -94,7 +94,7 @@ $response = $instance->v3->ecommerce->profitsharing->receivers->add->post([
     'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,7 +111,7 @@ $response = $instance->chain('v3/ecommerce/profitsharing/receivers/add')->post([
     'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -128,7 +128,7 @@ $response = $instance['v3/ecommerce/profitsharing/receivers/add']->post([
     'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

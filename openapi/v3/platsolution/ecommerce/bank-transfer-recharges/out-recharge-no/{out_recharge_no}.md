@@ -73,9 +73,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid | string | 充值商户号
 | recharge_id | string | 微信支付充值单号
 | out_recharge_no | string | 商户充值单号
-| account_type | string | 充值入账账户
-| recharge_state | string | 充值状态
-| recharge_scene | string | 充值场景
+| account_type | string | 充值入账账户<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| recharge_state | string | 充值状态<br/>`SUCCESS` \| `RECHARGING` \| `CLOSED` 枚举值之一
+| recharge_scene | string | 充值场景<br/>`ECOMMERCE_BANK_TRANSFER` 枚举值
 | recharge_state_desc | string | 充值状态描述
 | recharge_amount | object | 充值金额
 | amount {data-indent=1} | number | 总金额

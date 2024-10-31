@@ -13,7 +13,7 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 | json | object | 声明请求的`JSON`数据结构
 | appid {data-indent=1} | string | 公众账号ID
 | service_id {data-indent=1} | string | 服务ID
-| type {data-indent=1} | string | 场景类型
+| type {data-indent=1} | string | 场景类型<br/>`Order_Paid` 枚举值
 | detail {data-indent=1} | object | 
 | paid_time {data-indent=2} | string | 
 

@@ -11,7 +11,7 @@ description: 用于服务商/服务商使用此接口为特约商户开通或关
 | --- | --- | ---
 | json | object | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户ID
-| operation_type {data-indent=1} | string | 操作类型
+| operation_type {data-indent=1} | string | 操作类型<br/>`OPEN` \| `CLOSE` 枚举值之一
 
 {.im-table #request}
 

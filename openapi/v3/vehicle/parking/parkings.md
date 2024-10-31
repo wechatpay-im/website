@@ -13,13 +13,13 @@ description: 车辆入场以后，商户调用该接口，创建停车入场信�
 | sub_mchid {data-indent=1} | string | 子商户号
 | out_parking_no {data-indent=1} | string | 商户入场id
 | plate_number {data-indent=1} | string | 车牌号
-| plate_color {data-indent=1} | string | 车牌颜色
+| plate_color {data-indent=1} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
 | notify_url {data-indent=1} | string | 回调通知url
 | start_time {data-indent=1} | string | 入场时间
 | parking_name {data-indent=1} | string | 停车场名称
 | free_duration {data-indent=1} | integer | 免费时长
 | headers | object | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -38,7 +38,7 @@ $instance->v3->vehicle->parking->parkings->postAsync([
     'free_duration' => 3600,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,7 +60,7 @@ $instance->chain('v3/vehicle/parking/parkings')->postAsync([
     'free_duration' => 3600,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -82,7 +82,7 @@ $instance['v3/vehicle/parking/parkings']->postAsync([
     'free_duration' => 3600,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -104,7 +104,7 @@ $response = $instance->v3->vehicle->parking->parkings->post([
     'free_duration' => 3600,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -123,7 +123,7 @@ $response = $instance->chain('v3/vehicle/parking/parkings')->post([
     'free_duration' => 3600,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -142,7 +142,7 @@ $response = $instance['v3/vehicle/parking/parkings']->post([
     'free_duration' => 3600,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
