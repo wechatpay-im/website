@@ -32,7 +32,7 @@ description: 商户可以创建满额送活动，用户支付后送全场券，�
 | delivery_user_category {data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_member_appid {data-indent=2} | string | 
 | payment_mode {data-indent=2} | object | 
-| payment_scene_list {data-indent=3} | string[] | APP_SCENE` 枚举值
+| payment_scene_list {data-indent=3} | string[] | `APP_SCENE` 枚举值
 | payment_method_information {data-indent=3} | object | 
 | payment_method {data-indent=4} | string | 
 | bank_abbreviation {data-indent=4} | string | 

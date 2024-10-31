@@ -101,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | delivery_user_category {data-indent=1} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_member_appid {data-indent=1} | string | 
 | payment_mode {data-indent=1} | object | 
-| payment_scene_list {data-indent=2} | string[] | APP_SCENE` 枚举值
+| payment_scene_list {data-indent=2} | string[] | `APP_SCENE` 枚举值
 | payment_method_information {data-indent=2} | object | 
 | payment_method {data-indent=3} | string | 
 | bank_abbreviation {data-indent=3} | string | 
