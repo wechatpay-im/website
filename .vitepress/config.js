@@ -76,6 +76,7 @@ export default defineConfig({
       {
         text: '文档',
         link: '/openapi/',
+        activeMatch: '^/openapi/',
       },
       {
         text: 'SDK',
@@ -259,6 +260,48 @@ function openapiSidebar() {
                 ['创建速住订单', '/openapi/v2/wxv/createhotelbill'],
                 ['查询速住订单', '/openapi/v2/wxv/queryhotelbill'],
                 ['完结速住订单', '/openapi/v2/wxv/finishhotelbill'],
+              ].map(transArrayItem),
+            },
+          ],
+        },
+        {
+          text: '跨境/全球',
+          collapsed: true,
+          items: [
+            {
+              text: '进件',
+              collapsed: true,
+              items: [
+                ['进件子商户', '/openapi/v2/secapi/mch/addInstitutionsub'],
+                ['查询子商户', '/openapi/v2/secapi/mch/queryInstitutionsub'],
+                ['修改子商户', '/openapi/v2/secapi/mch/modifyInstitutionsub'],
+                ['上传图片', '/openapi/v2/secapi/mch/uploadmedia'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '支付',
+              collapsed: true,
+              items: [
+                ['付款码支付', '/openapi/v2/pay/micropay#global'],
+                ['撤销订单', '/openapi/v2/secapi/pay/reverse#global'],
+                ['统一下单', '/openapi/v2/pay/unifiedorder#global'],
+                ['查询订单', '/openapi/v2/pay/orderquery#global'],
+                ['关闭订单', '/openapi/v2/pay/closeorder#global'],
+                ['申请退款', '/openapi/v2/secapi/pay/refund#global'],
+                ['查询退款', '/openapi/v2/pay/refundquery#global'],
+              ].map(transArrayItem),
+            },
+            ...[
+              ['查询结算资金', '/openapi/v2/pay/settlementquery'],
+              ['查询汇率', '/openapi/v2/pay/queryexchagerate'],
+            ].map(transArrayItem),
+            {
+              text: '清关报关',
+              collapsed: true,
+              items: [
+                ['提交订单附加信息', '/openapi/v2/cgi-bin/mch/customs/customdeclareorder'],
+                ['查询订单附加信息', '/openapi/v2/cgi-bin/mch/customs/customdeclarequery'],
+                ['重推订单附加信息', '/openapi/v2/cgi-bin/mch/newcustoms/customdeclareredeclare'],
               ].map(transArrayItem),
             },
           ],
@@ -1201,6 +1244,78 @@ function openapiSidebar() {
                 ['增加用户记录', '/openapi/v3/discount-card/cards/{out_card_code}/add-user-records'],
               ].map(transArrayItem),
             },
+          ],
+        },
+        {
+          text: '跨境/全球',
+          collapsed: true,
+          items: [
+            {
+              text: '进件(融合钱包)',
+              collapsed: true,
+              items: [
+                ['进件子商户', '/openapi/v3/global/merchants'],
+                ['查询子商户', '/openapi/v3/global/merchants/{sub_mchid}#get'],
+                ['修改子商户', '/openapi/v3/global/merchants/{sub_mchid}#patch'],
+                ['上传图片', '/openapi/v3/merchant/media/upload#global'],
+              ].map(transArrayItem),
+            },
+            {
+              text: 'H5支付权限',
+              collapsed: true,
+              items: [
+                ['查询子商户权限状态', '/openapi/v3/global/merchant/h5/permission/{sub_mchid}'],
+                ['创建权限申请单', '/openapi/v3/global/merchant/h5/permission/applications'],
+                ['查询权限申请单详情', '/openapi/v3/global/merchant/h5/permission/applications/{applyment_id}'],
+                ['创建域名修改申请单', '/openapi/v3/global/merchant/h5/permission/domain/applications'],
+                ['查询域名修改申请单', '/openapi/v3/global/merchant/h5/permission/domain/applications/{applyment_id}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '基础支付',
+              collapsed: true,
+              items: [
+                ['付款码支付', '/openapi/v3/global/micropay/transactions/pay'],
+                ['撤销订单(商户单号)', '/openapi/v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse'],
+                ['撤销订单(平台单号)', '/openapi/v3/global/micropay/transactions/id/{transaction_id}/reverse'],
+                ['JSAPI下单', '/openapi/v3/global/transactions/jsapi'],
+                ['APP下单', '/openapi/v3/global/transactions/app'],
+                ['NATIVE下单', '/openapi/v3/global/transactions/native'],
+                ['H5下单', '/openapi/v3/global/transactions/mweb'],
+                ['查询订单(商户单号)', '/openapi/v3/global/transactions/out-trade-no/{out_trade_no}'],
+                ['查询订单(平台单号)', '/openapi/v3/global/transactions/id/{transaction_id}'],
+                ['关闭订单(商户单号)', '/openapi/v3/global/transactions/out-trade-no/{out_trade_no}/close'],
+                ['关闭订单(平台单号)', '/openapi/v3/global/transactions/id/{transaction_id}/close'],
+                ['申请退款', '/openapi/v3/global/refunds#post'],
+                ['查询所有退款', '/openapi/v3/global/refunds#get'],
+                ['查询单笔退款(商户单号)', '/openapi/v3/global/refunds/out-refund-no/{out_refund_no}'],
+                ['查询单笔退款(平台单号)', '/openapi/v3/global/refunds/id/{refund_id}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '账单',
+              collapsed: true,
+              items: [
+                ['下载交易账单文件', '/openapi/v3/global/statements'],
+                ['查询结算资金明细', '/openapi/v3/global/settle/settlements'],
+              ].map(transArrayItem),
+            },
+            ...[
+            ].map(transArrayItem),
+            {
+              text: '清关报关',
+              collapsed: true,
+              items: [
+                ['提交报关申请', '/openapi/v3/global/customs/orders#post'],
+                ['查询报关信息', '/openapi/v3/global/customs/orders#get'],
+                ['修改报关信息', '/openapi/v3/global/customs/orders#patch'],
+                ['重推报关信息', '/openapi/v3/global/customs/redeclare'],
+                ['身份信息校验', '/openapi/v3/global/customs/verify-certificate'],
+              ].map(transArrayItem),
+            },
+            transArrayItem(
+              ['获取平台证书列表', '/openapi/v3/global/certificates'],
+            ),
           ],
         },
         transArrayItem(
