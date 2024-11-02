@@ -54,6 +54,13 @@
   font-family: var(--vp-font-family-mono);
 }
 
+.im-table .im-table-line {
+  content: "\200b";
+  font-size: 0;
+  padding: 1px;
+  background-color: var(--vp-c-divider);
+}
+
 #request tbody tr:hover,
 #response tbody tr:hover {
   background-color: var(--vp-c-green-soft);
