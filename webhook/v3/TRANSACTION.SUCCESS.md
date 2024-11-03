@@ -72,6 +72,11 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 | sub_openid {data-indent=4} | string | 用户在子商户的标识
 | amount {data-indent=3} | object | 订单金额信息，详细说明见下文
 | currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
+| payer_total {data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
+| payer_currency {data-indent=4} | string | 用户支付币种
+| exchange_rate {data-indent=4} | object | 汇率信息
+| type {data-indent=5} | string | 汇率类型
+| rate {data-indent=5} | integer | 汇率值
 | promotion_detail {data-indent=3} | object[] | 优惠功能信息，详细说明见下文
 | coupon_id {data-indent=4} | string | 券或者立减优惠ID
 | name {data-indent=4} | string | 优惠名称。
@@ -94,6 +99,8 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 1. 保险商户委托代扣成功通知(**trade_type**)为"**PAP**" {#INSURANCE_ENTRUST}
 
 1. 分账动帐通知(**original_type**)为"**profitsharing**" {#PROFITSHARING}
+
+1. 跨境/全球会返回**exchange_rate**字典 {#GLOBAL}
 
 ::: code-group
 
@@ -185,3 +192,4 @@ function webhookProcessor(\Psr\Http\Message\RequestInterface $request,
 - [服务商停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
 - [保险商户委托代扣成功通过](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/deduct-result-notify.html) 
 - [合单支付成功通知](https://pay.weixin.qq.com/docs/partner/apis/combine-payment/orders/payment-notice.html)
+- [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter3_2_11.shtml)

@@ -1617,6 +1617,17 @@ function webhookSidebar() {
             ['二级商户申诉通知', '/webhook/v3/VIOLATION.APPEAL'],
           ].map(transArrayItem),
         },
+        {
+          text: '跨境/全球',
+          collapsed: true,
+          items: [
+            ['H5支付权限申请事件回调通知', '/webhook/v3/APPLYMENT_STATE.APPROVED'],
+            ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#GLOBAL'],
+            ['退款成功通知', '/webhook/v3/REFUND.SUCCESS#GLOBAL'],
+            ['委托代扣签约成功通知', '/webhook/v3/PAPAY.SIGN'],
+            ['委托代扣解约成功通知', '/webhook/v3/PAPAY.TERMINATE'],
+          ].map(transArrayItem),
+        },
       ],
     },
   ];

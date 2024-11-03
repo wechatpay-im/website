@@ -82,5 +82,10 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | JSON {rowspan=3} | | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
 | | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)
+| JSON {rowspan=5} | [跨境/全球-H5支付权限申请事件回调通知](/webhook/v3/APPLYMENT_STATE.APPROVED) {colspan=2}
+| [跨境/全球-支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#GLOBAL) {colspan=2}
+| [跨境/全球-退款成功通知](/webhook/v3/REFUND.SUCCESS#GLOBAL) {colspan=2}
+| [跨境/全球-委托代扣签约成功通知](/webhook/v3/PAPAY.SIGN) {colspan=2}
+| [跨境/全球-委托代扣解约成功通知](/webhook/v3/PAPAY.TERMINATE) {colspan=2}
 
 {.im-table}
