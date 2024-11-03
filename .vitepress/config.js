@@ -74,9 +74,14 @@ export default defineConfig({
         link: '',
       },
       {
-        text: '文档',
+        text: '开放接口',
         link: '/openapi/',
         activeMatch: '^/openapi/',
+      },
+      {
+        text: '回调通知',
+        link: '/webhook/',
+        activeMatch: '^/webhook/'
       },
       {
         text: 'SDK',
@@ -91,6 +96,7 @@ export default defineConfig({
     ],
     sidebar: {
       '/openapi/': openapiSidebar(),
+      '/webhook/': webhookSidebar(),
     },
   },
 })
@@ -1392,6 +1398,226 @@ function openapiSidebar() {
           ['获取平台证书列表', '/openapi/v3/certificates'],
         ),
       ]
+    },
+  ];
+}
+
+function webhookSidebar() {
+  return [
+    {
+      text: 'XML格式报文',
+      items: [
+        ['普通支付通知', '/webhook/v2/transaction-success'],
+        ['合单支付通知', '/webhook/v2/combined-transactions-success'],
+        ['退款结果通知', '/webhook/v2/refund-processed'],
+        ['车牌状态变更通知', '/webhook/v2/vehicle-state-changed-for-parking'],
+      ].map(transArrayItem).concat({
+        text: '免压租借/速住',
+        collapsed: true,
+        items: [
+          ['确认成功通知', '/webhook/v2/CHECK.SUCCESS'],
+          ['确认失败通知', '/webhook/v2/CHECK.FAIL'],
+          ['支付成功通知', '/webhook/v2/TRANSACTION.SUCCESS'],
+          ['支付失败通知', '/webhook/v2/TRANSACTION.FAIL'],
+        ].map(transArrayItem),
+      }),
+    },
+    {
+      text: 'JSON格式报文',
+      items: [
+        {
+          text: '支付',
+          collapsed: true,
+          items: [
+            ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#BASIC'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '退款',
+          collapsed: true,
+          items: [
+            ['退款成功通知', '/webhook/v3/REFUND.SUCCESS'],
+            ['退款异常通知', '/webhook/v3/REFUND.ABNORMAL'],
+            ['退款关闭通知', '/webhook/v3/REFUND.CLOSED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '分账动账',
+          collapsed: true,
+          items: [
+            ['分账动账成功变动通知', '/webhook/v3/PROFITSHARING.SUCCESS'],
+            ['分账动账成功回退通知', '/webhook/v3/PROFITSHARING.RETURN'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '转账',
+          collapsed: true,
+          items: [
+            ['转账批次完成通知', '/webhook/v3/MCHTRANSFER.BATCH.FINISHED'],
+            ['转账批次关闭通知', '/webhook/v3/MCHTRANSFER.BATCH.CLOSED'],
+            ['转账单据终态通知', '/webhook/v3/MCHTRANSFER.BILL.FINISHED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '平台收付通',
+          collapsed: true,
+          items: [
+            {
+              text: '合单代扣',
+              collapsed: true,
+              items: [
+                ['签约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.SIGN'],
+                ['解约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.TERMINATE'],
+              ].map(transArrayItem),
+            }, {
+              text: '商家充值',
+              collapsed: true,
+              items: [
+                ['充值成功通知', '/webhook/v3/RECHARGE.SUCCESS'],
+                ['关闭充值通知', '/webhook/v3/RECHARGE.CLOSED'],
+                ['充值资金退回通知', '/webhook/v3/RECHARGE.FUND_RETURNED'],
+              ].map(transArrayItem),
+            }
+          ],
+        },
+        {
+          text: '会员卡',
+          collapsed: true,
+          items: [
+            ['领卡事件通知', '/webhook/v3/MEMBERCARD.ACCEPT_CARD'],
+            ['激活事件通知', '/webhook/v3/MEMBERCARD.ACTIVATE_CARD'],
+            ['用户管理会员卡事件通知', '/webhook/v3/MEMBERCARD.USERCARD_MANAGE'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '智慧商圈',
+          collapsed: true,
+          items: [
+            ['会员积分服务授权结果通知', '/webhook/v3/MALL_AUTH.ACTIVATE_CARD'],
+            ['会员支付结果通知', '/webhook/v3/MALL_TRANSACTION.SUCCESS'],
+            ['会员退款成功通知', '/webhook/v3/MALL_REFUND.SUCCESS'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '优惠券',
+          collapsed: true,
+          items: [
+            ['核销事件回调通知', '/webhook/v3/COUPON.USE'],
+            ['领券事件回调通知', '/webhook/v3/COUPON.SEND'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '电子发票',
+          collapsed: true,
+          items: [
+            ['用户发票抬头填写完成通知', '/webhook/v3/FAPIAO.USER_APPLIED'],
+            ['发票卡券作废通知', '/webhook/v3/FAPIAO.CARD_DISCARDED'],
+            ['发票插入用户卡包成功通知', '/webhook/v3/FAPIAO.CARD_INSERTED'],
+            ['发票开具成功通知', '/webhook/v3/FAPIAO.ISSUED'],
+            ['发票冲红成功通知', '/webhook/v3/FAPIAO.REVERSED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '投诉',
+          collapsed: true,
+          items: [
+            ['产生新投诉通知', '/webhook/v3/COMPLAINT.CREATE'],
+            ['投诉状态变化通知', '/webhook/v3/COMPLAINT.STATE_CHANGE'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '委托代扣',
+          collapsed: true,
+          items: [
+            ['签约成功通知', '/webhook/v3/ENTRUST.SIGN'],
+            ['解约成功通知', '/webhook/v3/ENTRUST.TERMINATE'],
+            ['解约挽留信息通知', '/webhook/v3/ENTRUST.TERMINATE_RETENTION'],
+          ].map(transArrayItem).concat({
+            text: '保险商户委托代扣',
+            collapsed: true,
+            items: [
+              ['签约成功通知', '/webhook/v3/INSURANCE_ENTRUST.SIGN'],
+              ['解约成功通知', '/webhook/v3/INSURANCE_ENTRUST.TERMINATE'],
+              ['续期完成通知', '/webhook/v3/INSURANCE_ENTRUST.RENEW'],
+              ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#INSURANCE_ENTRUST'],
+              ['支付失败通知', '/webhook/v3/TRANSACTION.FAIL#INSURANCE_ENTRUST'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '校园轻松付',
+            collapsed: true,
+            items: [
+              ['用户签约成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY'],
+              ['用户解约成功通知', '/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY'],
+              ['用户订单支付成功通知', '/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS'],
+              ['用户订单支付失败通知', '/webhook/v3/TRANSACTION.INDUSTRY_FAILED'],
+              ['用户欠款状态变化通知', '/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '教育续费通',
+            collapsed: true,
+            items: [
+              ['签约成功通知', '/webhook/v3/ENTRUST.SIGNING'],
+              ['解约成功通知', '/webhook/v3/ENTRUST.RELEASE'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '停车服务',
+            collapsed: true,
+            items: [
+              ['停车入场状态变更通知', '/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE'],
+              ['订单支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#PARKING'],
+              ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL#PARKING'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#PARKING'],
+            ].map(transArrayItem),
+          }).concat({
+            text: 'ETC授权',
+            collapsed: true,
+            items: [
+              ['签约状态变化通知', '/webhook/v3/VEHICLE.USER_STATE_CHANGE'],
+            ].map(transArrayItem),
+          }),
+        },
+        {
+          text: '微信支付分',
+          collapsed: true,
+          items: [
+            ['用户授权成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE'],
+            ['用户解除授权通知', '/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE'],
+            ['用户确认成功通知', '/webhook/v3/PAYSCORE.USER_CONFIRM'],
+            ['用户支付成功通知', '/webhook/v3/PAYSCORE.USER_PAID'],
+            ['账户绑定结果通知', '/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT']
+          ].map(transArrayItem).concat({
+            text: '签约计划',
+            collapsed: true,
+            items: [
+              ['用户签约计划成功通知', '/webhook/v3/PAYSCORE.USER_SIGN_PLAN'],
+              ['用户取消已签约的计划通知', '/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN'],
+            ].map(transArrayItem),
+          }).concat([
+            ['智慧零售/先享后付订单确认', '/webhook/v3/PAYSCORE.USER_ACCEPTED'],
+            ['从业机构-商户预下单通知', '/webhook/v3/PAYSCORE.MCH_PREPAY'],
+          ].map(transArrayItem)).concat({
+            text: '微信先享卡',
+            collapsed: true,
+            items: [
+              ['用户领卡通知(预受理领卡)', '/webhook/v3/DISCOUNT_CARD.USER_ACCEPTED'],
+              ['用户领卡通知(模板配置)', '/webhook/v3/DISCOUNT_CARD.GET_CARD'],
+              ['守约状态变化通知', '/webhook/v3/DISCOUNT_CARD.AGREEMENT_ENDED'],
+              ['扣费状态变化通知', '/webhook/v3/DISCOUNT_CARD.USER_PAID'],
+              ['用户结算通知', '/webhook/v3/DISCOUNT_CARD.SETTLEMENT'],
+            ].map(transArrayItem),
+          }),
+        },
+        {
+          text: '违规',
+          collapsed: true,
+          items: [
+            ['处罚二级商户通知', '/webhook/v3/VIOLATION.PUNISH'],
+            ['拦截二级商户通知', '/webhook/v3/VIOLATION.INTERCEPT'],
+            ['二级商户申诉通知', '/webhook/v3/VIOLATION.APPEAL'],
+          ].map(transArrayItem),
+        },
+      ],
     },
   ];
 }
