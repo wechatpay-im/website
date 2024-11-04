@@ -38,7 +38,7 @@ description: 商家转账单据到终态后 （转账完成、转账失败和已
 | {colspan=3 .im-table-line}
 | out_bill_no {data-indent=3} | string | 商户单号
 | transfer_bill_no {data-indent=3} | string | 商家转账订单号
-| state {data-indent=3} | string | 单据状态
+| state {data-indent=3} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
 | mchid {data-indent=3} | string | 商户号
 | transfer_amount {data-indent=3} | number | 转账金额
 | openid {data-indent=3} | string | 收款用户OpenID
@@ -47,14 +47,14 @@ description: 商家转账单据到终态后 （转账完成、转账失败和已
 | update_time {data-indent=3} | string | 批次更新时间
 | out_batch_no {data-indent=3} | string | 商家批次单号
 | batch_id {data-indent=3} | string | 微信批次单号
-| batch_status {data-indent=3} | string | 批次状态
+| batch_status {data-indent=3} | string | 批次状态<br/>`WAIT_PAY` \| `ACCEPTED` \| `PROCESSING` \| `FINISHED` \| `CLOSED` 枚举值之一
 | total_num {data-indent=3} | number | 批次总笔数
 | total_amount {data-indent=3} | number | 批次总金额
 | success_amount {data-indent=3} | number | 转账成功金额
 | success_num {data-indent=3} | number | 转账成功笔数
 | fail_amount {data-indent=3} | number | 转账失败金额
 | fail_num {data-indent=3} | number | 转账失败笔数
-| close_reason {data-indent=3} | string | 批次关闭原因
+| close_reason {data-indent=3} | string | 批次关闭原因<br/>`CLOSED` \| `OVERDUE_CLOSE` \| `TRANSFER_SCENE_INVALID` 枚举值之一
 
 {.im-table #request}
 
