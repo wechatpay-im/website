@@ -40,7 +40,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | out_contract_code {data-indent=3} | string | 商户侧的签约协议号，商户侧需保证唯一性。只能是数字、大小写字母的组合
 | appid {data-indent=3} | string | 商户在微信申请的公众号或移动应用AppID
 | openid {data-indent=3} | string | 商户AppID下的用户唯一标识
-| contract_termination_mode {data-indent=4} | string | 协议解约方式<br/>`USER` \| `MERCHANT` \| `PLATFORM` 枚举值之一
+| contract_termination_mode {data-indent=3} | string | 协议解约方式<br/>`USER` \| `MERCHANT` \| `PLATFORM` 枚举值之一
 | contract_id {data-indent=3} | string | 委托代扣协议的主键，唯一定义此资源的标识
 | plan_id {data-indent=3} | number | 委托代扣协议模板ID
 | operate_time {data-indent=3} | string | 操作时间

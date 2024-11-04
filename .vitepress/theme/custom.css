@@ -35,6 +35,7 @@
   --data-indent: 0;
 }
 
+.vp-doc._webhook_ table,
 .vp-doc._openapi_ table {
   margin: 0;
 }

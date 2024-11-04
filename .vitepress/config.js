@@ -34,6 +34,10 @@ export default defineConfig({
       ['meta', { property: 'og:image', content: `${baseUri}/android-chrome-512x512.png` }],
     ]
   },
+  markdown: {
+    codeCopyButtonTitle: '复制',
+    lineNumbers: true,
+  },
   themeConfig: {
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
@@ -59,7 +63,7 @@ export default defineConfig({
       linkText: '返回首页',
     },
     lastUpdated: {
-      text: '最后更新于',
+      text: '更新于',
       formatOptions: {
         dateStyle: 'medium',
         timeStyle: 'short',
