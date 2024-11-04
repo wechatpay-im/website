@@ -118,7 +118,7 @@ function webhookProcessor(\Psr\Http\Message\RequestInterface $request,
 // ...
 $json = \json_encode([
   'code' => 'SUCCESS',
-  'message' => 'OK',
+  'message' => 'OK'
 ]);
 ```
 

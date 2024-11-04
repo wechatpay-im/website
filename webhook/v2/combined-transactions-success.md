@@ -56,7 +56,8 @@ description: 合单支付的支付结果将只通知给合单支付发起方（�
 ::: code-group
 
 ```php [处理程序]
-function webhookProcessor(\Psr\Http\Message\RequestInterface $request, string $apiv2Key): array {
+function webhookProcessor(\Psr\Http\Message\RequestInterface $request,
+  string $apiv2Key): array {
   if (\strlen($apiv2Key) !== 32) {
     throw new \WeChatPay\Exception\InvalidArgumentException('API密钥为32字节，长度不对');
   }
@@ -87,7 +88,7 @@ function webhookProcessor(\Psr\Http\Message\RequestInterface $request, string $a
 // ...
 $xml = \WeChatPay\Transformer::toXml([
   'return_code' => 'SUCCESS',
-  'return_msg' => 'OK',
+  'return_msg' => 'OK'
 ]);
 ```
 
