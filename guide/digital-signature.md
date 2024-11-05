@@ -233,7 +233,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($collection);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_3_1.shtml)
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/offer-coupons-by-mini-program/mini-program-coupons.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/offer-coupons-by-mini-program/mini-program-coupons.html)
 
 > [!TIP] 通过Url跳转，由商户H5重定向至指定微信支付H5页面
 > ```php
@@ -256,9 +256,9 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > $actionUrl = 'https://action.weixin.qq.com/busifavor/getcouponinfo';
 > $redirectUrl = (string) (new Uri($actionUrl))
 >  ->withQuery(Query::build($collection))
->  ->withFragment('wechat_redirect');
+>  ->withFragment('wechat_pay&wechat_redirect');
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_4_1.shtml)
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_4_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/offer-coupons-by-h5/h5-coupon.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/offer-coupons-by-h5/h5-coupon.html)
 
 #### 微信支付分 {#symmetric.frontend.payscore}
 
@@ -293,7 +293,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml)
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-order.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-details.html)
 
 > [!TIP] JSAPI 唤起微信支付分小程序订单详情场景
 > ```php
@@ -323,7 +323,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml)
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order-new.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/jsapi-open-details.html)
 
 > [!TIP] 微信小程序 唤起微信支付分小程序订单详情场景
 > ```php
@@ -353,7 +353,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_25.shtml)
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_25.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/applets-order.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/miniprogram-open-details.html)
 
 ## 非对称算法 {#asymmetric}
 

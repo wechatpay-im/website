@@ -12,7 +12,7 @@ aside: true
 
 在试用微信支付`APIv3`初始阶段，获取微信支付平台证书一直是件即简单又麻烦的过程，`PHP`环境也鲜有一键获取的解决方案。本包在[1.0](https://github.com/wechatpay-apiv3/wechatpay-php/releases/tag/v1.0.0)版本的时候即提供了与Java版参数语义一致的下载方案(并且原生支持应答验签功能)，使用`composer`命令，像安装依赖包一样下载平台证书文件。
 
-::: details $ composer CertificateDownloader.php --help
+::: details $ composer CertificateDownloader.php -- --help
 ```ansi:no-line-numbers
 Usage: 微信支付平台证书下载工具 [-hV]
                     -f=<privateKeyFilePath> -k=<apiv3Key> -m=<merchantId>

@@ -32,6 +32,7 @@ composer exec CertificateDownloader.php -- \
 
 提供正确的`APIv3密钥`、`商户号`、`商户API证书序列号`、`商户API私钥文件地址`，执行后，屏幕输出样例：
 
+::: details debug HTTP message
 ```ansi:no-line-numbers
 * Host api.mch.weixin.qq.com:443 was resolved.
 * IPv6: (none)
@@ -80,6 +81,9 @@ Authorization: WECHATPAY2-SHA256-RSA2048 mchid="",serial_no="",timestamp="",nonc
 < Wechatpay-Signature-Type: WECHATPAY2-SHA256-RSA2048
 <
 * Connection #0 to host api.mch.weixin.qq.com left intact
+```
+:::
+```ansi:no-line-numbers
 Certificate #0 {
     Serial Number: [1;32m7132D72A03E93CDDF8C03BBD1F37EEDF********[0m
     Not Before: 2023-12-07T15:12:49+08:00

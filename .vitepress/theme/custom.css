@@ -29,6 +29,7 @@
   max-width: inherit;
 }
 
+._guide_getting-started div.language->button.copy,
 ._guide_ div.language->button.copy {
   display: none;
 }
