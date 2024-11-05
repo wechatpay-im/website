@@ -29,6 +29,10 @@
   max-width: inherit;
 }
 
+._guide_ div.language->button.copy {
+  display: none;
+}
+
 .vp-doc table.im-table {
   display: table;
   width: 100%;

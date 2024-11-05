@@ -219,19 +219,19 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'stock_id' => '456',
 >   'out_request_no' => 'R456'
 > ]];
-> $flatParams = ['send_coupon_merchant' => $sendCouponMerchant];
+> $collection = ['send_coupon_merchant' => $sendCouponMerchant];
 >
 > foreach ($sendCouponParams as $index => $coupon) {
 >    foreach ($coupon as $key => $value) {
->      $flatParams[$key . $index] = $value;
+>      $collection[$key . $index] = $value;
 >    }
 > }
 >
 > // 签名方法为固定值
 > $signType = Hash::ALGO_HMAC_SHA256;
-> $flatParams['sign'] = Hash::sign($signType, $flatParams, $key); // [!code hl]
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
 >
-> echo \json_encode($flatParams);
+> echo \json_encode($collection);
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_3_1.shtml)
 
@@ -243,7 +243,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > // 签名方法为固定值
 > $signType = Hash::ALGO_HMAC_SHA256;
-> $query = [
+> $collection = [
 >   'stock_id' => $stockId,
 >   'out_request_no' => $outRequestNo,
 >   'send_coupon_merchant' => $sendCouponMerchant,
@@ -251,11 +251,11 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'coupon_code' => $couponCode
 > ];
 >
-> $query['sign'] = Hash::sign($signType, $query, $key); // [!code hl]
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
 >
 > $actionUrl = 'https://action.weixin.qq.com/busifavor/getcouponinfo';
 > $redirectUrl = (string) (new Uri($actionUrl))
->  ->withQuery(Query::build($query))
+>  ->withQuery(Query::build($collection))
 >  ->withFragment('wechat_redirect');
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_4_1.shtml)
@@ -273,7 +273,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > // 签名方法为固定值
 > $signType = Hash::ALGO_HMAC_SHA256;
-> $input = [
+> $collection = [
 >   'mch_id' => $mchId,
 >   'service_id' => $serviceId,
 >   'out_order_no' => \urlencode($outOrderNo),
@@ -281,11 +281,11 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'nonce_str' => $nonceStr,
 >   'sign_type' => $signType
 > ];
-> $input['sign'] = Hash::sign($signType, $input, $key); // [!code hl]
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
 >
 > $data = [
 >   'businessType' => 'wxpayScoreDetail',
->   'query' => Query::build($input),
+>   'query' => Query::build($collection),
 >   'extInfo' => [
 >     'miniProgramType' => 0
 >   ]
@@ -306,7 +306,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > // 签名方法为固定值
 > $signType = Hash::ALGO_HMAC_SHA256;
-> $input = [
+> $collection = [
 >   'mch_id' => $mchId,
 >   'service_id' => $serviceId,
 >   'out_order_no' => \urlencode($outOrderNo),
@@ -314,11 +314,11 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'nonce_str' => $nonceStr,
 >   'sign_type' => $signType
 > ];
-> $input['sign'] = Hash::sign($signType, $input, $key); // [!code hl]
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
 >
 > $data = [
 >   'businessType' => 'wxpayScoreDetail',
->   'queryString' => Query::build($input)
+>   'queryString' => Query::build($collection)
 > ];
 >
 > echo \json_encode($data);
@@ -336,7 +336,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > // 签名方法为固定值
 > $signType = Hash::ALGO_HMAC_SHA256;
-> $input = [
+> $collection = [
 >   'mch_id' => $mchId,
 >   'service_id' => $serviceId,
 >   'out_order_no' => $outOrderNo,
@@ -344,11 +344,11 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'nonce_str' => $nonceStr,
 >   'sign_type' => $signType
 > ];
-> $input['sign'] = Hash::sign($signType, $input, $key); // [!code hl]
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
 >
 > $data = [
 >   'businessType' => 'wxpayScoreDetail',
->   'extraData' => $input
+>   'extraData' => $collection
 > ];
 >
 > echo \json_encode($data);

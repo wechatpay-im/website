@@ -75,7 +75,8 @@ export default defineConfig({
     nav: [
       {
         text: '指南',
-        link: '',
+        link: '/guide/',
+        activeMatch: '^/guide/(?!digital)'
       },
       {
         text: '开放接口',
@@ -99,6 +100,7 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/': guideSidebar(),
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
     },
@@ -109,6 +111,29 @@ export default defineConfig({
  * @param {string[]}
  */
 function transArrayItem([text, link]) { return { text, link }; }
+
+function guideSidebar() {
+  return [
+    {
+      text: '指南',
+      link: '/guide/',
+      items: [
+        ['快速开始', '/guide/getting-started'],
+        ['数据签名', '/guide/digital-signature'],
+      ].map(transArrayItem),
+    },
+    {
+      text: '开放接口概览',
+      link: '/openapi/',
+      items: [],
+    },
+    {
+      text: '回调通知概览',
+      link: '/webhook/',
+      items: [],
+    },
+  ];
+}
 
 function openapiSidebar() {
   return [
