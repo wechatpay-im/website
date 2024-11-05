@@ -79,6 +79,11 @@ export default defineConfig({
         activeMatch: '^/guide/(?!digital)'
       },
       {
+        text: '数据签名',
+        link: '/guide/digital-signature',
+        activeMatch: '^/guide/digital-signature'
+      },
+      {
         text: '开放接口',
         link: '/openapi/',
         activeMatch: '^/openapi/',
