@@ -7,4 +7,5 @@ hero:
   actions:
     - theme: brand
       text: 指南
+      link: /guide/
 ---
