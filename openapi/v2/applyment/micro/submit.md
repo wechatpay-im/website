@@ -1,6 +1,6 @@
 ---
 title: 申请入驻
-description: 
+description: 使用申请入驻接口提交你的小微商户资料，申请后一般5分钟左右可以查询到具体的申请结果。
 ---
 
 # {{ $frontmatter.title }} {#post}

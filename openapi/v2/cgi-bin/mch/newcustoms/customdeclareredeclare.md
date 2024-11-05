@@ -1,6 +1,6 @@
 ---
 title: 订单附加信息重推接口
-description: 
+description: 重点注意：请求接口前请先在以下页面提交您的海关信息，所有你需要报关的海关信息都需要提交，且信息真实有效。
 ---
 
 # {{ $frontmatter.title }} {#post}

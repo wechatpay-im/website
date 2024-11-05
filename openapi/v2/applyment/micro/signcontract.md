@@ -1,6 +1,6 @@
 ---
 title: 签约报备
-description: 
+description: 若查询申请状态为待签约，接口会一并返回签约二维码，服务商需引导商户使用本人微信扫码完成协议签署。
 ---
 
 # {{ $frontmatter.title }} {#post}

@@ -29,8 +29,7 @@ description:
 | account_name {data-indent=1} | string | 开户名称
 | account_bank {data-indent=1} | string | 开户银行
 | bank_address_code {data-indent=1} | string | 开户银行省市编码
-| bank_name {data-indent=1} | string | 开户银行全称 
-				  （含支行）
+| bank_name {data-indent=1} | string | 开户银行全称(含支行)17家直连银行无需填写，其他银行请务必填写
 | account_number {data-indent=1} | string | 银行卡号
 | merchant_shortname {data-indent=1} | string | 商户简称
 | business {data-indent=1} | string | 费率结算规则ID
