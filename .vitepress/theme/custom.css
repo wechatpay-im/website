@@ -34,6 +34,16 @@
   display: none;
 }
 
+.custom-block.danger.im-deprecated {
+  display: flex;
+  align-items: center;
+}
+
+.custom-block.danger.im-deprecated .custom-block-title {
+  font-size: calc(var(--vp-custom-block-font-size, 14px) * 1.3);
+  letter-spacing: .25em;
+}
+
 .vp-doc table.im-table {
   display: table;
   width: 100%;

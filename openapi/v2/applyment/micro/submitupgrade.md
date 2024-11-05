@@ -1,11 +1,16 @@
 ---
 title: 提交升级申请单
-description: 
+description: 使用“提交升级申请单”接口为小微商户发起升级流程，根据商户实际情况可升级为个体户、企业、其他组织。
 ---
 
 # {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }}
+
+::: danger :no_entry_sign: {.im-deprecated}
+
+本接口服务已于 `2023.05.23` (北京时间)下线，文档仅做留存参考。
+:::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---

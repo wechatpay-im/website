@@ -7,6 +7,11 @@ description: 商户上传反馈处理结果的接口。 包括商户反馈类型
 
 {{ $frontmatter.description }}
 
+::: danger :no_entry_sign: {.im-deprecated}
+
+本接口服务已于 `2021.01.08` (北京时间)下线，文档仅做留存参考。
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json | object | 声明请求的`JSON`数据结构
