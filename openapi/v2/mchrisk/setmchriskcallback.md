@@ -1,6 +1,6 @@
 ---
 title: 设置风险通知回调链接
-description: 
+description: 设置通知回调链接，当支付风险能力平台有事件通知时，通过该链接通知银行或者渠道服务商。
 ---
 
 # {{ $frontmatter.title }} {#post}

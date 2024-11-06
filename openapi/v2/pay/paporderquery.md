@@ -1,6 +1,6 @@
 ---
 title: 查询订单
-description: 
+description: 该接口仅提供微信代扣订单的查询，商户可以通过该接口主动查询微信代扣订单状态，完成下一步的业务逻辑。
 ---
 
 # {{ $frontmatter.title }} {#post}

@@ -1,6 +1,6 @@
 ---
 title: 查询申请状态
-description: 
+description: 使用申请入驻接口提交小微商户资料后，一般5分钟左右可以通过该查询接口查询具体的申请结果。
 ---
 
 # {{ $frontmatter.title }} {#post}

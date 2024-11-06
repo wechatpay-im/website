@@ -1,6 +1,6 @@
 ---
 title: 公众号纯签约
-description: 
+description: 商户可以通过请求此接口唤起微信委托代扣的页面。
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -60,4 +60,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/pap.php?chapter=18_1&index=1)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_1.shtml)

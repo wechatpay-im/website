@@ -1,6 +1,6 @@
 ---
 title: 查询签约关系
-description: 
+description: 查询签约关系接口提供单笔签约关系查询。注意：查询签约关系可通过下面两种方式查询：方式一：使用微信返回的委托代扣协议contract_id进行查询。方式二：plan_id+contract_code模式：传入模板id和签约协议号进行查询。两种查询方式返回结果相同。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -147,4 +147,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/pap.php?chapter=18_2&index=7)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_7.shtml)

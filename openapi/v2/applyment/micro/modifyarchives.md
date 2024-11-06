@@ -1,6 +1,6 @@
 ---
 title: 修改结算银行卡
-description: 
+description: 通过此接口可以修改小微商户的入驻资料，例如银行卡号、入驻人姓名等。
 ---
 
 # {{ $frontmatter.title }} {#post}

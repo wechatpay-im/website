@@ -1,6 +1,6 @@
 ---
 title: 渠道商查询商户审核信息
-description: 
+description: 用于渠道商查询其下属关联机构进件的商户的审核信息。
 ---
 
 # {{ $frontmatter.title }} {#post}
