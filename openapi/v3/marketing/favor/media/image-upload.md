@@ -9,6 +9,12 @@ description: 通过本接口上传图片后可获得图片url地址。图片url�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 媒体图⽚只⽀持JPG、BMP、PNG格式，⽂件⼤⼩不能超过2M。
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`sha256`、`filename`
+| {colspan=3 .im-table-line}
+| sha256 {data-indent=2} | string | 图片文件的`sha256`摘要
+| filename {data-indent=2} | string | 商户上传的媒体图片的名称，商户自定义，必须以JPG、BMP、PNG为后缀
 
 {.im-table #request}
 
@@ -103,4 +109,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/chapter3_1.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_0_1.shtml)

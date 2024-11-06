@@ -9,6 +9,14 @@ description: 服务商调用插卡接口前，需调用本接口上传出租车�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 出租车电子发票文件。文件支持PDF、JPG、BMP、PNG格式，文件大小不能超过5M
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示
+| {colspan=3 .im-table-line}
+| company_mchid {data-indent=2} | string | 出租车经营主体商户号
+| region_id {data-indent=2} | number | 行政区划代码
+| digest {data-indent=2} | string | 文件的`SM3`摘要
+| digest_algorithm {data-indent=2} | string | 文件摘要算法 `DIGEST_ALGORITHM_SM3`枚举值
 
 {.im-table #request}
 

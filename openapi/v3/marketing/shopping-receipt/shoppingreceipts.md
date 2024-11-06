@@ -11,6 +11,19 @@ description: 商户将支付成功回传的参数填入指定字段，可以给�
 | --- | --- | ---
 | headers | object | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 微信支付平台公钥证书序列号
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 图片文件，电子小票图片只支持PNG、JPG格式，文件大小不能超过200KB。
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示
+| {colspan=3 .im-table-line}
+| transaction_id {data-indent=2} | string | 微信支付订单的交易单号，上传的电子小票会关联到该订单
+| transaction_mchid {data-indent=2} | string | 微信支付订单的下单商户号
+| transaction_sub_mchid {data-indent=2} | string | 微信支付订单的下单子商户号
+| out_trade_no {data-indent=2} | string | 微信支付订单的商户订单号
+| openid {data-indent=2} | string | 微信支付订单中OpenID
+| sha256 {data-indent=2} | string | 图片文件的`sha256`摘要
+| merchant_contact_information {data-indent=2} | object | 用户与商家的联系渠道
+| consultation_phone_number {data-indent=3} | string | 品牌售后部门的咨询电话。
+| upload_time {data-indent=2} | string | 上传时间，用于标识请求的先后顺序
 
 {.im-table #request}
 
@@ -28,7 +41,7 @@ $meta = [
   'sha256'                       => $digest,
   'upload_time'                  => '2022-05-07T15:39:35.000+08:00',
   'merchant_contact_information' => [
-    'consultation_phone_number' => 'pVd1HJ6v/69bDnuC4EL5Kz4jBHLiCa8MRtelw/wDa4SzfeespQO/0kjiwfqdfg==',//平台证书加密
+    'consultation_phone_number' => 'pVd1v/69bDnuC4lw/wDaespQO/0kjiwfqdfg==',//平台证书加密
   ],
 ];
 $media->setMeta(\json_encode($meta));

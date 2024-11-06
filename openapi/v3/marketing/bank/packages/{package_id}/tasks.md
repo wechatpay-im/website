@@ -5,6 +5,13 @@
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | package_id | string | 号码包id
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 快捷交易协议号文件
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示
+| {colspan=3 .im-table-line}
+| bank_type {data-indent=2} | string | 银行类型
+| filename {data-indent=2} | string | 文件名
+| sha256 {data-indent=2} | string | 文件的`sha256`摘要
 
 {.im-table #request}
 

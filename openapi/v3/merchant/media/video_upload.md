@@ -1,6 +1,6 @@
 ---
 title: 视频上传
-description: 部分微信支付业务指定商户需要使用图片上传 部分微信支付业务指定商户需要使用视频上传 API来上报视频信息，从而获得必传参数的值：视频MediaID 。
+description: 部分微信支付业务指定商户使用视频上传API来上报视频信息，从而获得必传参数的值：视频MediaID 。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -9,6 +9,12 @@ description: 部分微信支付业务指定商户需要使用图片上传 部分
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 媒体视频只支持avi、wmv、mpeg、mp4、mov、mkv、flv、f4v、m4v、rmvb格式，文件大小不能超过5M。
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`sha256`、`filename`
+| {colspan=3 .im-table-line}
+| sha256 {data-indent=2} | string | 视频文件的`sha256`摘要
+| filename {data-indent=2} | string | 文件名称，商户上传的媒体视频的名称，商户自定义，必须以avi、wmv、mpeg、mp4、mov、mkv、flv、f4v、m4v、rmvb为后缀。
 
 {.im-table #request}
 

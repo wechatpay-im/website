@@ -9,6 +9,14 @@ description: 调用【将电子发票插入微信用户卡包】接口之前，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 电子发票文件二进制数据流，只支持`PDF`和`OFD`格式，文件大小不能超过2M。
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示
+| {colspan=3 .im-table-line}
+| sub_mchid {data-indent=2} | string | 微信支付分配的子商户号，服务商模式下必传
+| file_type {data-indent=2} | string | 发票文件的类型
+| digest_algorithm {data-indent=2} | string | 文件摘要算法 `SM3`枚举值
+| digest {data-indent=2} | string | 文件的`SM3`摘要
 
 {.im-table #request}
 
