@@ -9,6 +9,12 @@ description: 部分微信支付业务指定商户需要使用图片上传 API来
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| body | object | `multipart/form-data` 数据结构
+| file {data-indent=1} | object | 媒体图⽚只⽀持JPG、BMP、PNG格式，⽂件⼤⼩不能超过2M。
+| meta {data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`sha256`、`filename`
+| {colspan=3 .im-table-line}
+| sha256 {data-indent=2} | string | 图片文件的`sha256`摘要
+| filename {data-indent=2} | string | 商户上传的媒体图片的名称，商户自定义，必须以JPG、BMP、PNG为后缀
 
 {.im-table #request}
 
