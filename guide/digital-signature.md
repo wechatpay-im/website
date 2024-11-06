@@ -262,7 +262,39 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 
 #### 微信支付分 {#symmetric.frontend.payscore}
 
-> [!TIP] APP 唤起微信支付分小程序订单详情场景
+> [!TIP] APP 拉起微信支付分小程序确认订单(wxpayScoreUse)场景
+> ```php
+> use WeChatPay\Formatter;
+> use WeChatPay\Crypto\Hash;
+> use GuzzleHttp\Psr7\Query;
+>
+> $nonceStr = Formatter::nonce();
+> $timeStamp = (string) Formatter::timestamp();
+>
+> // 签名方法为固定值
+> $signType = Hash::ALGO_HMAC_SHA256;
+> $collection = [
+>   'mch_id' => $mchId,
+>   'package' => $package,
+>   'timestamp' => $timeStamp,
+>   'nonce_str' => $nonceStr,
+>   'sign_type' => $signType
+> ];
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
+>
+> $data = [
+>   'businessType' => 'wxpayScoreUse',
+>   'query' => Query::build($collection),
+>   'extInfo' => [
+>     'miniProgramType' => 0
+>   ]
+> ];
+>
+> echo \json_encode($data);
+> ```
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_11.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-confirm.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-confirm.html)
+
+> [!TIP] APP 唤起微信支付分小程序订单详情(wxpayScoreDetail)场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -276,7 +308,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > $collection = [
 >   'mch_id' => $mchId,
 >   'service_id' => $serviceId,
->   'out_order_no' => \urlencode($outOrderNo),
+>   'out_order_no' => $outOrderNo,
 >   'timestamp' => $timeStamp,
 >   'nonce_str' => $nonceStr,
 >   'sign_type' => $signType
@@ -295,7 +327,36 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-order.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-details.html)
 
-> [!TIP] JSAPI 唤起微信支付分小程序订单详情场景
+> [!TIP] JSAPI 拉起微信支付分小程序确认订单(wxpayScoreUse)场景
+> ```php
+> use WeChatPay\Formatter;
+> use WeChatPay\Crypto\Hash;
+> use GuzzleHttp\Psr7\Query;
+>
+> $nonceStr = Formatter::nonce();
+> $timeStamp = (string) Formatter::timestamp();
+>
+> // 签名方法为固定值
+> $signType = Hash::ALGO_HMAC_SHA256;
+> $collection = [
+>   'mch_id' => $mchId,
+>   'package' => $serviceId,
+>   'timestamp' => $timeStamp,
+>   'nonce_str' => $nonceStr,
+>   'sign_type' => $signType
+> ];
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
+>
+> $data = [
+>   'businessType' => 'wxpayScoreUse',
+>   'queryString' => Query::build($collection)
+> ];
+>
+> echo \json_encode($data);
+> ```
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_12.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-confirm.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-confirm-new.html)
+
+> [!TIP] JSAPI 唤起微信支付分小程序订单详情(wxpayScoreDetail)场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -309,7 +370,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > $collection = [
 >   'mch_id' => $mchId,
 >   'service_id' => $serviceId,
->   'out_order_no' => \urlencode($outOrderNo),
+>   'out_order_no' => $outOrderNo,
 >   'timestamp' => $timeStamp,
 >   'nonce_str' => $nonceStr,
 >   'sign_type' => $signType
@@ -325,11 +386,38 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order-new.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/jsapi-open-details.html)
 
-> [!TIP] 微信小程序 唤起微信支付分小程序订单详情场景
+> [!TIP] 微信小程序 拉起微信支付分小程序确认订单(wxpayScoreUse)场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
-> use GuzzleHttp\Psr7\Query;
+>
+> $nonceStr = Formatter::nonce();
+> $timeStamp = (string) Formatter::timestamp();
+>
+> // 签名方法为固定值
+> $signType = Hash::ALGO_HMAC_SHA256;
+> $collection = [
+>   'mch_id' => $mchId,
+>   'package' => $serviceId,
+>   'timestamp' => $timeStamp,
+>   'nonce_str' => $nonceStr,
+>   'sign_type' => $signType
+> ];
+> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
+>
+> $data = [
+>   'businessType' => 'wxpayScoreUse',
+>   'extraData' => $collection
+> ];
+>
+> echo \json_encode($data);
+> ```
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_13.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/applets-confirm.html)
+
+> [!TIP] 微信小程序 唤起微信支付分小程序订单详情(wxpayScoreDetail)场景
+> ```php
+> use WeChatPay\Formatter;
+> use WeChatPay\Crypto\Hash;
 >
 > $nonceStr = Formatter::nonce();
 > $timeStamp = (string) Formatter::timestamp();
@@ -389,6 +477,9 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 
 > [!TIP] 返回值数据验签，用本开发包如下：
 > ```php
+> use WeChatPay\Formatter;
+> use WeChatPay\Crypto\Rsa;
+>
 > /** @var string 请求返回的头'wechatpay-serial'值 */
 > $serial;
 > /** @var string 请求返回的头'wechatpay-timestamp'值 */
