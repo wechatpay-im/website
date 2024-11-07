@@ -1,6 +1,6 @@
 ---
 title: 创建速住订单
-description: 
+description: 创建订单后如果超过一小时用户没有进行确认订单操作
 ---
 
 # {{ $frontmatter.title }} {#post}

@@ -1,6 +1,6 @@
 ---
 title: 撤销租借订单
-description: 
+description: 订单创建后，调用完结租借订单接口前。调用完结租借订单接口后不可调用该接口。
 ---
 
 # {{ $frontmatter.title }} {#post}

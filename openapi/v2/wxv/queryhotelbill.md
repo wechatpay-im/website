@@ -1,6 +1,6 @@
 ---
 title: 查询速住订单
-description: 
+description: 前置条件：商户下单待受理后。
 ---
 
 # {{ $frontmatter.title }} {#post}

@@ -1,6 +1,6 @@
 ---
 title: 修改租借订单
-description: 
+description: 前置条件：商户完结订单后，用户支付成功前。用户支付成功后不可使用该接口。
 ---
 
 # {{ $frontmatter.title }} {#post}

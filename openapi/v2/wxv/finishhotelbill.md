@@ -1,6 +1,6 @@
 ---
 title: 完结速住订单
-description: 
+description: 前置条件：用户确认使用业务后。
 ---
 
 # {{ $frontmatter.title }} {#post}

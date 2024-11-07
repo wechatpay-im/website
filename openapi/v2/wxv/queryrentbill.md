@@ -1,6 +1,6 @@
 ---
 title: 查询租借订单
-description: 
+description: 前置条件：商户下单待受理后。
 ---
 
 # {{ $frontmatter.title }} {#post}
