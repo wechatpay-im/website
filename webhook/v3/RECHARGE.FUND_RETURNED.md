@@ -45,6 +45,7 @@ description: 微信支付通过该接口将充值资金退回的结果通知给�
 | bank_card_tail {data-indent=4} | string | 银行卡尾号
 | bank_account_name {data-indent=4} | string | 银行账户名称
 | amount {data-indent=4} | number | 充值金额
+| currency {data-indent=4} | string | 充值币种
 | memo {data-indent=4} | string | 银行附言
 | return_time {data-indent=4} | string | 退回时间
 | return_reason {data-indent=4} | string | 退回原因
