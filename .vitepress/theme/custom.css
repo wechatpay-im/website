@@ -26,7 +26,7 @@
 
 .im-home {
   --im-gradint-p1: #ecd8ff;
-  --im-gradint-p2: #ffd3eb;
+  --im-gradint-p2: #e8fca7;
   --im-gradint-p3: #dafbe1;
   --im-gradint-p4: #ffd8b5;
   background: linear-gradient(-40deg, var(--im-gradint-p1), var(--im-gradint-p2), var(--im-gradint-p3), var(--im-gradint-p4));
@@ -41,12 +41,12 @@
 .im-home .box {
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  transition: box-shadow .38s;
+  transition: box-shadow .5s;
 }
 
 .im-home .box:hover {
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.3);
-  transition: box-shadow .38s;
+  transition: box-shadow .5s;
 }
 
 .dark .im-home {
