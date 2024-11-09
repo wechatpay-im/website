@@ -95,7 +95,8 @@ export default defineConfig({
       },
       {
         text: 'SDK',
-        link: '',
+        link: '/devkit/',
+        activeMatch: '^/devkit/'
       },
     ],
     socialLinks: [
@@ -108,6 +109,7 @@ export default defineConfig({
       '/guide/': guideSidebar(),
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
+      '/devkit/': divkitSidebar(),
     },
   },
 })
@@ -1665,4 +1667,27 @@ function webhookSidebar() {
       ],
     },
   ];
+}
+
+function divkitSidebar() {
+  return [
+    {
+      text: '核心代码包',
+      link: '#core',
+      collapsed: false,
+      items: [],
+    },
+    {
+      text: '静态分析及测试',
+      link: '#tests',
+      collapsed: false,
+      items: [],
+    },
+    {
+      text: 'IDE代码提示包',
+      link: '#ext',
+      collapsed: false,
+      items: [],
+    },
+  ]
 }

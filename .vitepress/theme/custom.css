@@ -44,6 +44,26 @@
   letter-spacing: .25em;
 }
 
+.custom-block.info.im-badges {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-block.info.im-badges .custom-block-title {
+  display: none;
+}
+
+.custom-block.info.im-badges p:not(.custom-block-title) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-block.info.im-badges p:not(.custom-block-title) img {
+  margin: 0 .25em .25em 0;
+}
+
 .vp-doc table.im-table {
   display: table;
   width: 100%;
