@@ -1,5 +1,6 @@
 ---
 layout: home
+pageClass: im-home
 title: 微信支付社区版
 hero:
   text: 微信支付社区版

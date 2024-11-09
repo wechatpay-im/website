@@ -24,6 +24,39 @@
   }
 }
 
+.im-home {
+  --im-gradint-p1: #ecd8ff;
+  --im-gradint-p2: #ffd3eb;
+  --im-gradint-p3: #dafbe1;
+  --im-gradint-p4: #ffd8b5;
+  background: linear-gradient(-40deg, var(--im-gradint-p1), var(--im-gradint-p2), var(--im-gradint-p3), var(--im-gradint-p4));
+  background-size: 150% 150%;
+  animation: gradient 15s ease infinite;
+  --vp-c-bg: transparent;
+  --vp-c-gutter: transparent;
+}
+
+.dark .im-home {
+  --im-gradint-p1: #8356dc;
+  --im-gradint-p3: #5908a6;
+  --im-gradint-p2: #044f1e;
+  --im-gradint-p4: #49bcb7;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .VPHomeHero:not(.has-image) .main .text,
 .VPHomeHero:not(.has-image) .main .tagline {
   max-width: inherit;
