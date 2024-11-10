@@ -3,7 +3,7 @@ layout: home
 pageClass: im-home
 title: 微信支付社区版
 hero:
-  text: 微信支付社区版
+  name: 微信支付社区版
   tagline: WeChat Pay Community Edition
   actions:
     - theme: brand
