@@ -53,6 +53,12 @@
   transition: box-shadow .5s;
 }
 
+.im-home .VPContent.is-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .dark .im-home {
   --im-gradient-p1: #8356dc;
   --im-gradient-p3: #5908a6;
