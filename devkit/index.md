@@ -25,9 +25,14 @@ aside: true
 
 统一的客户端`client`构造器，任意深度的函数`链式`集成，函数链即对应OpenAPI的接入路径，像自然语言一样处理OpenAPI调用。客户端同时也提供了异步(`Async`)调用方式，对于某些需要连续调用API的场景，将多个操作通过 `then()` `链式`串联起来会是一种优雅的实现方式。例如 [以函数链的形式流式下载交易帐单](https://developers.weixin.qq.com/community/pay/article/doc/000ec4521086b85fb81d6472a51013)。
 
+### 数据算法类 {#algo}
+
+提供了`数据摘要算法`、`对称加解密算法`及`非对称加解密算法`的静态封装，无状态化的方法调用，简洁方便。
+
 ### 辅助类 {#utils}
 
-提供了`数据格式化`、`数据格式转换`、便捷的`二进制数据包裹类`的封装，衍生地以独立包的形式提供`XML`格式转换包，按需集成使用。
+提供了`数据格式化`、`数据格式转换`、便捷的`二进制数据包裹类`的封装。
+衍生地以独立包的形式提供`XML`格式转换包，按需集成使用。
 
 独立包源码见[这里](https://github.com/TheNorthMemory/xml)，发行包见[这里](https://packagist.org/packages/thenorthmemory/xml)。
 
@@ -39,10 +44,6 @@ aside: true
 ![](https://img.shields.io/packagist/php-v/thenorthmemory/xml)
 ![](https://img.shields.io/packagist/l/thenorthmemory/xml)
 :::
-
-### 数据算法类 {#algo}
-
-提供了`数据摘要算法`、`对称加解密算法`及`非对称加解密算法`的静态封装，无状态化的方法调用，简洁方便。
 
 ## 静态分析及测试 {#tests}
 

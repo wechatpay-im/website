@@ -262,7 +262,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 
 #### 微信支付分 {#symmetric.frontend.payscore}
 
-> [!TIP] APP 拉起微信支付分小程序确认订单(wxpayScoreUse)场景
+> [!TIP] APP 唤起微信支付分小程序确认订单场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -294,7 +294,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_11.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-confirm.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-confirm.html)
 
-> [!TIP] APP 唤起微信支付分小程序订单详情(wxpayScoreDetail)场景
+> [!TIP] APP 唤起微信支付分小程序订单详情场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -327,7 +327,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-order.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-details.html)
 
-> [!TIP] JSAPI 拉起微信支付分小程序确认订单(wxpayScoreUse)场景
+> [!TIP] JSAPI 唤起微信支付分小程序确认订单场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -356,7 +356,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_12.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-confirm.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-confirm-new.html)
 
-> [!TIP] JSAPI 唤起微信支付分小程序订单详情(wxpayScoreDetail)场景
+> [!TIP] JSAPI 唤起微信支付分小程序订单详情场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -386,7 +386,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order-new.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/jsapi-open-details.html)
 
-> [!TIP] 微信小程序 拉起微信支付分小程序确认订单(wxpayScoreUse)场景
+> [!TIP] 微信小程序 唤起微信支付分小程序确认订单场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
@@ -414,7 +414,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_13.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/applets-confirm.html)
 
-> [!TIP] 微信小程序 唤起微信支付分小程序订单详情(wxpayScoreDetail)场景
+> [!TIP] 微信小程序 唤起微信支付分小程序订单详情场景
 > ```php
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
