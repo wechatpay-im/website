@@ -26,7 +26,6 @@ export default defineConfig({
     ...(process?.argv?.[2] === 'dev' ? [] : [
       ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-FG432QMP0K' }],
       ['script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-FG432QMP0K');`],
-      ['script', { async: 'async', src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1257082504735308', crossorigin: 'anonymous' }],
     ]),
   ],
   transformHead(ctx) {
