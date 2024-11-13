@@ -39,6 +39,7 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 | real_name {data-indent=2} | string | 自然人姓名
 | id_card_number {data-indent=2} | string | 自然人身份证号码
 | identity_type {data-indent=2} | string | 实名验证类型
+| combined_deduct_period_count {data-indent=1} | number | 合并扣费期数
 | headers | object | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 微信支付平台证书序列号
 
@@ -82,6 +83,7 @@ $instance->v3->papay->insuranceSign->contracts->preEntrustSign->jsapi->postAsync
       'id_card_number' => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
       'identity_type' => 'ID_CARD',
     ],
+    'combined_deduct_period_count' => 1,
   ],
   'headers' => [
     'Wechatpay-Serial' => '',
@@ -129,6 +131,7 @@ $instance->chain('v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi')->po
       'id_card_number' => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
       'identity_type' => 'ID_CARD',
     ],
+    'combined_deduct_period_count' => 1,
   ],
   'headers' => [
     'Wechatpay-Serial' => '',
@@ -176,6 +179,7 @@ $instance['v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi']->postAsync
       'id_card_number' => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
       'identity_type' => 'ID_CARD',
     ],
+    'combined_deduct_period_count' => 1,
   ],
   'headers' => [
     'Wechatpay-Serial' => '',
@@ -223,6 +227,7 @@ $response = $instance->v3->papay->insuranceSign->contracts->preEntrustSign->jsap
       'id_card_number' => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
       'identity_type' => 'ID_CARD',
     ],
+    'combined_deduct_period_count' => 1,
   ],
   'headers' => [
     'Wechatpay-Serial' => '',
@@ -267,6 +272,7 @@ $response = $instance->chain('v3/papay/insurance-sign/contracts/pre-entrust-sign
       'id_card_number' => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
       'identity_type' => 'ID_CARD',
     ],
+    'combined_deduct_period_count' => 1,
   ],
   'headers' => [
     'Wechatpay-Serial' => '',
@@ -311,6 +317,7 @@ $response = $instance['v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi'
       'id_card_number' => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
       'identity_type' => 'ID_CARD',
     ],
+    'combined_deduct_period_count' => 1,
   ],
   'headers' => [
     'Wechatpay-Serial' => '',
