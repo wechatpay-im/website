@@ -102,6 +102,10 @@ export default defineConfig({
         link: '/devkit/',
         activeMatch: '^/devkit/'
       },
+      {
+        text: 'EasyWeChat',
+        link: 'https://easywechat.com/',
+      },
     ],
     socialLinks: [
       {
