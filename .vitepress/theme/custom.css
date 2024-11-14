@@ -33,6 +33,9 @@
   --im-gradient-p2: #e8fca7;
   --im-gradient-p3: #dafbe1;
   --im-gradient-p4: #ffd8b5;
+  --im-feature-shadow: rgba(0, 0, 0, 0.1);
+  --im-feature-shadow-hover: rgba(0, 0, 0, 0.3);
+  --vp-c-bg-soft: rgba(255, 255, 245, .6);
   background: linear-gradient(-40deg, var(--im-gradient-p1), var(--im-gradient-p2), var(--im-gradient-p3), var(--im-gradient-p4));
   background-size: 120% 120%;
   --vp-c-bg: transparent;
@@ -43,13 +46,12 @@
 }
 
 .im-home .VPFeature {
-  box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.1);
-  transition: box-shadow .5s;
+  box-shadow: 0 0.1em 1em 0 var(--im-feature-shadow);
+  transition: box-shadow .5s, border-color .25s, background-color .25s;
 }
 
 .im-home .VPFeature:hover {
-  box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.3);
-  transition: box-shadow .5s;
+  box-shadow: 0 0.1em 1em 0 var(--im-feature-shadow-hover);
 }
 
 .im-home .VPContent.is-home {
@@ -63,6 +65,9 @@
   --im-gradient-p3: #5908a6;
   --im-gradient-p2: #044f1e;
   --im-gradient-p4: #49bcb7;
+  --im-feature-shadow: rgba(97, 236, 238, 0.2);
+  --im-feature-shadow-hover: rgba(97, 236, 238, 0.8);
+  --vp-c-bg-soft: rgba(11, 11, 11, .35);
 }
 
 .VPHomeHero .container {

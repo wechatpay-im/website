@@ -54,7 +54,7 @@ export default defineConfig({
       label: '页面导航',
     },
     footer: {
-      message: 'Published on the GitHub',
+      message: 'Published on the GitHub by TheNorthMemory',
     },
     docFooter: {
       prev: '上一页',
@@ -105,6 +105,10 @@ export default defineConfig({
       {
         text: 'EasyWeChat',
         link: 'https://easywechat.com/',
+      },
+      {
+        text: 'NodeJS版',
+        link: 'https://wechatpay.js.org/',
       },
     ],
     socialLinks: [
