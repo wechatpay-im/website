@@ -42,13 +42,12 @@
   --vp-home-hero-image-filter: blur(44px);
 }
 
-.im-home .box {
+.im-home .VPFeature {
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   transition: box-shadow .5s;
 }
 
-.im-home .box:hover {
+.im-home .VPFeature:hover {
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.3);
   transition: box-shadow .5s;
 }
