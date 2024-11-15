@@ -1,6 +1,10 @@
 ---
 title: 数据签名
 description: 微信支付目前现行两大类数据签名方法，对称算法基于MD5及HMAC-SHA256数据摘要算法，非对称算法基于RSA-OAEP(模数2048)算法。
+head:
+  - - meta
+    - name: keywords
+      content: PHP开发, 微信数据交换, External/InApp Data Exchange, Symmertric, Asymmertric, WeChat Scenes
 aside: true
 ---
 

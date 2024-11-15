@@ -1,5 +1,10 @@
 ---
 title: 快速开始
+description: 使用composer安装wechatpay/wechatpay包之后，兼容微信支付平台公钥及/或微信支付平台证书模式，支持包含XML模式的数据通信协议，一个闭环示例链式调用OpenAPI接口。
+head:
+  - - meta
+    - name: keywords
+      content: PHP开发, RSA Public Key/X509 Certificate, Chainable OpenAPI client, WeChatPay Transactions samples
 aside: true
 ---
 

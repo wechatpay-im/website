@@ -1,6 +1,10 @@
 ---
 title: 开放接口概览
 description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的OpenAPI接口地址。
+head:
+  - - meta
+    - name: keywords
+      content: 微信支付, OpenAPI路径地址, 接口文档, WeChatPay merchant partner OpenAPI entry path
 ---
 
 | 业务标签 | 直连商户模式 | 合作伙伴模式

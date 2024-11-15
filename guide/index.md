@@ -1,6 +1,10 @@
 ---
 title: 指南
 description: 此开发包承载了三部分内容，1、CLI：用符合官方开发规范的方式，获取微信支付平台证书，支持以命令行的方式，与服务端接口交互；2、CLIENT：通过链接相对路径(pathname)，用HTTP METHOD作为驱动执行函数，发起HTTP请求；3、SERVER：提供简单易用的方法，支持应用级快速集成。
+head:
+  - - meta
+    - name: keywords
+      content: 微信支付, PHP SDK指南, WeChatPay CertificateDownloader, Chainable OpenAPI client, Atomic Webhook functions
 aside: true
 ---
 

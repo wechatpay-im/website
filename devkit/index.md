@@ -1,6 +1,10 @@
 ---
 title: Software Development Kit
 description: 统一的OpenAPI客户端，提供APIv2及APIv3的一致地客户端实现，内置的composer命令，像安装依赖包一样下载微信支付平台证书文件。
+head:
+  - - meta
+    - name: keywords
+      content: 数据摘要, 对称加解密, 非对称加解密, WeChatPay PHP, XML Transformer, OpenAPI package for IDE
 aside: true
 ---
 
