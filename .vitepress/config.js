@@ -116,6 +116,11 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/wechatpay-im',
       },
+      {
+        icon: 'tencentqq',
+        ariaLabel: 'QQ群12974227',
+        link: 'https://qm.qq.com/q/Q175Gz0H0A',
+      },
     ],
     sidebar: {
       '/guide/': guideSidebar(),

@@ -9,7 +9,7 @@ head:
       content: 微信支付, 全功能社区版, 平台证书下载器, WeChat Pay Community, PHP SDK, APIv2, APIv3, AesGcm, RSA-OAEP, All-in-One
 hero:
   name: 微信支付社区版
-  tagline: WeChat Pay Community Edition
+  tagline: WeChat Pay PHP Community Edition
   actions:
     - theme: brand
       text: 指南
