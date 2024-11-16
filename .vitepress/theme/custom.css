@@ -48,6 +48,7 @@
 .im-home .VPFeature {
   box-shadow: 0 0.1em 1em 0 var(--im-feature-shadow);
   transition: box-shadow .5s, border-color .25s, background-color .25s;
+  font-family: var(--vp-font-family-mono);
 }
 
 .im-home .VPFeature:hover {

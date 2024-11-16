@@ -15,7 +15,7 @@ hero:
       text: 指南
       link: /guide/
   image:
-      src: /pay.png
+      src: /pay.webp
       alt: wechatpay
 features:
   - title: 简洁
