@@ -35,6 +35,7 @@ description: 从用户进入开通车主服务的停车场（用户入场通知�
 ::: code-group
 
 ```php [处理程序]
+// 使用Psr标准规范，示例如何处理(取值、转换、验签)「回调通知」事件，WebServer不同，用法略有差异，供参考实现。
 function webhookProcessor(\Psr\Http\Message\RequestInterface $request,
   string $apiv2Key): array {
   if (\strlen($apiv2Key) !== 32) {

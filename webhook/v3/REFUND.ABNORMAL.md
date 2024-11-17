@@ -59,6 +59,7 @@ description: 款异常，退款到银行发现用户的卡作废或者冻结了�
 ::: code-group
 
 ```php [处理程序]
+// 使用Psr标准规范，示例如何处理(取值、验签、解密)「回调通知」事件，WebServer不同，用法略有差异，供参考实现。
 function webhookProcessor(\Psr\Http\Message\RequestInterface $request,
   array $platformPublicKeyMap, string $apiv3Key): array {
   if (!\count($platformPublicKeyMap)) {
