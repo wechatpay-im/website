@@ -51,7 +51,9 @@ aside: true
 
 ## 静态分析及测试 {#tests}
 
-所有开放源码均托管在`GitHub`，并由 `GitHub Actions` 提供 `CI` 支持，交叉分析及测试覆盖 `Windows`、`Linux`、`MacOS` 三大操作系统，`PHP7.1`、`PHP7.2`、`PHP7.3`、`PHP7.4`、`PHP8.0`、`PHP8.1`、`PHP8.2`、`PHP8.3`及`PHP8.4`共计 `3x9=27` 种运行时环境。
+分别在`Windows`、`Linux`、`MacOS` 三大操作系统上，覆盖`PHP7.1`、`PHP7.2`、`PHP7.3`、`PHP7.4`、`PHP8.0`、`PHP8.1`、`PHP8.2`、`PHP8.3`及`PHP8.4`共计 `3x9=27` 种运行时环境。
+
+所有开放源码均托管在`GitHub`上，并由 `GitHub Actions` 提供 `CI` 支持。
 
 `腾讯蓝盾`额外地为社区贡献提供了内部`coverity`扫描。
 
