@@ -19,13 +19,16 @@
     justify-content: space-around;
   }
 
+  .actions .action:has(>.VPButton.brand) {
+    flex-grow: 1;
+  }
+
   .VPButton.brand {
-    width: calc(100vw - 48px);
+    width: 100%;
   }
 
   .im-home .VPHome {
-    margin-bottom: 20px;
-    max-width: 100%;
+    margin-bottom: 0px;
   }
 }
 
