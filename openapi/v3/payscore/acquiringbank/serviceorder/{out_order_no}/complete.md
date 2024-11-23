@@ -1,6 +1,6 @@
 ---
 title: 从业机构完结微信支付分订单
-description: "前置条件：服务订单状态为“进行中”且订单状态说明需为[USER_CONFIRM : 用户确认]"
+description: 前置条件：服务订单状态为“进行中”且订单状态说明需为"用户确认(USER_CONFIRM)"
 ---
 
 # {{ $frontmatter.title }} {#post}

@@ -1,6 +1,6 @@
 ---
 title: 从业机构修改微信支付分订单金额
-description: "前置条件：服务订单状态为“进行中”且订单状态说明需为[MCH_COMPLETE : 商户完结]"
+description: 前置条件：服务订单状态为“进行中”且订单状态说明需为"商户完结(MCH_COMPLETE)"
 ---
 
 # {{ $frontmatter.title }} {#post}
