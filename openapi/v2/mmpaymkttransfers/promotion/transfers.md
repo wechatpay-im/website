@@ -9,21 +9,21 @@ description: 目前支持向指定微信用户的openid付款。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_appid {data-indent=1} | string | 商户账号appid
-| mchid {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_appid {data-required data-indent=1} | string | 商户账号appid
+| mchid {data-required data-indent=1} | string | 商户号
 | device_info {data-indent=1} | string | 设备号
-| partner_trade_no {data-indent=1} | string | 商户订单号
-| openid {data-indent=1} | string | 用户openid
-| check_name {data-indent=1} | string | 校验用户姓名选项
+| partner_trade_no {data-required data-indent=1} | string | 商户订单号
+| openid {data-required data-indent=1} | string | 用户openid
+| check_name {data-required data-indent=1} | string | 校验用户姓名选项
 | re_user_name {data-indent=1} | string | 收款用户姓名
-| amount {data-indent=1} | integer | 金额
-| desc {data-indent=1} | string | 企业付款备注
-| spbill_create_ip {data-indent=1} | string | Ip地址
+| amount {data-required data-indent=1} | integer | 金额
+| desc {data-required data-indent=1} | string | 企业付款备注
+| spbill_create_ip {data-required data-indent=1} | string | Ip地址
 | scene {data-indent=1} | string | 付款场景，BRAND_REDPACKET：品牌红包，其他值或不传则默认为普通付款到零钱
 | brand_id {data-indent=1} | integer | 品牌ID，品牌在微信支付的唯一标识。仅在付款场景为品牌红包时必填。
 | finder_template_id {data-indent=1} | string | 消息模板ID，品牌在微信支付的唯一标识。仅在付款场景为品牌红包时必填。
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -174,18 +174,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
 | mch_appid | string | 商户appid
 | mchid | string | 商户号
 | device_info | string | 设备号
 | nonce_str | string | 随机字符串
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| partner_trade_no | string | 商户订单号
-| payment_no | string | 微信付款单号
-| payment_time | string | 付款成功时间
+| partner_trade_no {data-required}| string | 商户订单号
+| payment_no {data-required}| string | 微信付款单号
+| payment_time {data-required}| string | 付款成功时间
 
 {.im-table #response}
 

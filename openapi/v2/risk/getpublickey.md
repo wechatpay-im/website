@@ -9,11 +9,11 @@ description: 调用获取RSA公钥API获取RSA公钥，用于加密付款到银�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点<br/>固定值`https://fraud.mch.weixin.qq.com/`
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| base_uri {data-required} | string | 声明接入点<br/>固定值`https://fraud.mch.weixin.qq.com/`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -104,11 +104,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 错误码描述
 | error_code | string | 错误码
 | error_code_des | string | 错误代码描述
-| result_code | string | 返回状态码
+| result_code {data-required}| string | 返回状态码
 | mch_id | string | 商户号
 | pub_key | string | RSA公钥
 

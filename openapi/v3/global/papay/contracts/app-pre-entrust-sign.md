@@ -10,7 +10,7 @@ description: 用户在商户的APP中发起签约，跳转到微信客户端签�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-indent=1} | string | 机构APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sp_appid {data-indent=1} | string | 机构appid
@@ -167,7 +167,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| session_id | string | 委托代扣签约会话id
+| session_id {data-required}| string | 委托代扣签约会话id
 
 {.im-table #response}
 

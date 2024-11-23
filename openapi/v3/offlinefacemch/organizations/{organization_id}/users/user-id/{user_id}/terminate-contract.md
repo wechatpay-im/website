@@ -9,8 +9,8 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| organization_id | string | 
-| use_id | string | 
+| organization_id {data-required} | string | 机构ID
+| use_id {data-required} | string | 刷脸用户ID
 
 {.im-table #request}
 

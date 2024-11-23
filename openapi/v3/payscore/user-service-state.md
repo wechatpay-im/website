@@ -9,10 +9,10 @@ description: 用户申请使用服务时，商户可通过此接口查询用户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 公众账号ID
-| service_id {data-indent=1} | string | 服务ID
-| openid {data-indent=1} | string | 用户标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 公众账号ID
+| service_id {data-required data-indent=1} | string | 服务ID
+| openid {data-required data-indent=1} | string | 用户标识
 
 {.im-table #request}
 
@@ -97,9 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 公众账号ID
-| service_id | string | 服务ID
+| appid {data-required}| string | 公众账号ID
+| service_id {data-required}| string | 服务ID
 | openid | string | 用户标识
+| use_service_state {data-required}| string | 用户授权服务情况<br/>`UNAVAILABLE` \| `AVAILABLE` 枚举值之一
 
 {.im-table #response}
 

@@ -9,22 +9,22 @@ description: 通过此接口商家可设置是否在用户的会员卡详情页�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| json | object | 声明请求的`JSON`数据结构
-| show_bonus {data-indent=1} | boolean | 是否展示会员积分
-| show_favor {data-indent=1} | boolean | 是否展示会员优惠
-| bonus {data-indent=1} | object | 会员积分
-| init_bonus {data-indent=2} | integer | 会员初始积分值
-| bonus_value_word {data-indent=2} | string | 积分值文案
+| card_id {data-required} | string | 会员卡id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| show_bonus {data-required data-indent=1} | boolean | 是否展示会员积分
+| show_favor {data-required data-indent=1} | boolean | 是否展示会员优惠
+| bonus {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员积分
+| init_bonus {data-required data-indent=2} | integer | 会员初始积分值
+| bonus_value_word {data-required data-indent=2} | string | 积分值文案
 | bonus_cost_title {data-indent=2} | string | 积分价值项标题
-| bonus_cost_word {data-indent=2} | string | 积分价值项文案
+| bonus_cost_word {data-required data-indent=2} | string | 积分价值项文案
 | bonus_jump_word {data-indent=2} | string | 积分跳转文案
 | bonus_jump_appid {data-indent=2} | string | 积分跳转appid
 | bonus_jump_path {data-indent=2} | string | 积分跳转path
 | bonus_support_appid {data-indent=2} | string | 自助积分跳转appid
 | bonus_support_path {data-indent=2} | string | 自助积分跳转path
-| favor {data-indent=1} | object | 会员优惠
-| show_coupon {data-indent=2} | boolean | 是否展示优惠券
+| favor {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员优惠
+| show_coupon {data-required data-indent=2} | boolean | 是否展示优惠券
 | member_price_word {data-indent=2} | string | 会员专享价文案
 | member_price_appid {data-indent=2} | string | 会员专享价跳转appid
 | member_price_path {data-indent=2} | string | 会员专享价跳转path

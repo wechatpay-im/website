@@ -9,11 +9,11 @@ description: 商户在引导用户跳转先享卡领卡前，需要请求先享�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_card_code {data-indent=1} | string | 商户领卡号
-| card_template_id {data-indent=1} | string | 卡模板ID
-| appid {data-indent=1} | string | 公众账号ID
-| notify_url {data-indent=1} | string | 通知商户URL
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_card_code {data-required data-indent=1} | string | 商户领卡号
+| card_template_id {data-required data-indent=1} | string | 卡模板ID
+| appid {data-required data-indent=1} | string | 公众账号ID
+| notify_url {data-required data-indent=1} | string | 通知商户URL
 
 {.im-table #request}
 
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| prepare_card_token | string | 预领卡请求token
+| prepare_card_token {data-required}| string | 预领卡请求token
 
 {.im-table #response}
 

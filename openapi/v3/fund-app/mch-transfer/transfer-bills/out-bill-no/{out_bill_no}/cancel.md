@@ -9,7 +9,7 @@ description: 商户通过转账接口发起付款后，在用户确认收款之�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_bill_no | string | 商户单号
+| out_bill_no {data-required} | string | 商户单号
 
 {.im-table #request}
 
@@ -70,10 +70,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_bill_no | string | 商户单号
-| transfer_bill_no | string | 微信转账单号
-| state | string | 单据状态
-| update_time | string | 最后一次单据状态变更时间
+| out_bill_no {data-required}| string | 商户单号
+| transfer_bill_no {data-required}| string | 微信转账单号
+| state {data-required}| string | 单据状态
+| update_time {data-required}| string | 最后一次单据状态变更时间
 
 {.im-table #response}
 

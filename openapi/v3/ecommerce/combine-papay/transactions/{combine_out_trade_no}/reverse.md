@@ -9,13 +9,13 @@ description: 商户可以通过该接口发起免密的合单撤销
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| combine_out_trade_no | string | 合单商户订单号
-| json | object | 声明请求的`JSON`数据结构
-| combine_appid {data-indent=1} | string | 合单商户APPID
-| sub_orders {data-indent=1} | object[] | 子单信息
-| mchid {data-indent=2} | string | 子单商户号
-| out_trade_no {data-indent=2} | string | 子单商户订单号
-| sub_mchid {data-indent=2} | string | 二级商户号
+| combine_out_trade_no {data-required} | string | 合单商户订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| combine_appid {data-required data-indent=1} | string | 合单商户APPID
+| sub_orders {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| mchid {data-required data-indent=2} | string | 子单商户号
+| out_trade_no {data-required data-indent=2} | string | 子单商户订单号
+| sub_mchid {data-required data-indent=2} | string | 二级商户号
 | sub_appid {data-indent=2} | string | 二级商户appid
 
 {.im-table #request}

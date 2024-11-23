@@ -9,15 +9,15 @@ description: 生成授权token信息
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| openid {data-indent=1} | string | 用户标识
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| openid {data-required data-indent=1} | string | 用户标识
 | appid {data-indent=1} | string | 应用ID
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
-| user_name {data-indent=1} | string | 用户实名
-| id_card_number {data-indent=1} | string | 用户证件号
-| employment_type {data-indent=1} | string | 用工类型<br/>`LONG_TERM_EMPLOYMENT` \| `SHORT_TERM_EMPLOYMENT` \| `COOPERATION_EMPLOYMENT` 枚举值之一
-| headers | object | 声明请求的头参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| user_name {data-required data-indent=1} | string | 用户实名
+| id_card_number {data-required data-indent=1} | string | 用户证件号
+| employment_type {data-required data-indent=1} | string | 用工类型<br/>`LONG_TERM_EMPLOYMENT` \| `SHORT_TERM_EMPLOYMENT` \| `COOPERATION_EMPLOYMENT` 枚举值之一
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -145,11 +145,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户标识
-| mchid | string | 服务商商户号
-| sub_mchid | string | 子商户号
-| token | string | 授权token
-| expires_in | integer | token有效时间
+| openid {data-required}| string | 用户标识
+| mchid {data-required}| string | 服务商商户号
+| sub_mchid {data-required}| string | 子商户号
+| token {data-required}| string | 授权token
+| expires_in {data-required}| integer | token有效时间
 
 {.im-table #response}
 

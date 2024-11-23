@@ -9,15 +9,15 @@ description: 服务商在拉起微工卡前端服务给用户做微工卡核身�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| openid {data-indent=1} | string | 用户标识
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| openid {data-required data-indent=1} | string | 用户标识
 | appid {data-indent=1} | string | 应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| authenticate_number {data-indent=1} | string | 商家核身单号
-| project_name {data-indent=1} | string | 项目名称
-| employer_name {data-indent=1} | string | 单位名称
-| authenticate_type {data-indent=1} | string | 核身类型<br/>`SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
+| authenticate_number {data-required data-indent=1} | string | 商家核身单号
+| project_name {data-required data-indent=1} | string | 项目名称
+| employer_name {data-required data-indent=1} | string | 单位名称
+| authenticate_type {data-required data-indent=1} | string | 核身类型<br/>`SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
 
 {.im-table #request}
 
@@ -132,12 +132,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authenticate_number | string | 商家核身单号
-| openid | string | 用户标识
-| mchid | string | 商户号
-| sub_mchid | string | 子商户号
-| token | string | token值
-| expires_in | integer | token有效时间
+| authenticate_number {data-required}| string | 商家核身单号
+| openid {data-required}| string | 用户标识
+| mchid {data-required}| string | 商户号
+| sub_mchid {data-required}| string | 子商户号
+| token {data-required}| string | token值
+| expires_in {data-required}| integer | token有效时间
 
 {.im-table #response}
 

@@ -9,8 +9,8 @@ description: 商户创建活动后，可以通过该接口查询支付有礼的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 活动id
-| query | object | 声明请求的查询参数
+| activity_id {data-required} | string | 活动id
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | offset {data-indent=1} | integer | 
 | limit {data-indent=1} | integer | 
 
@@ -101,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | limit | integer | 
 | total_count | integer | 
 | activity_id | string | 
-| data | object[] | 
+| data | object[] {data-tooltip="对应PHP的array"} | 
 | mchid {data-indent=1} | string | 
 | merchant_name {data-indent=1} | string | 
 | create_time {data-indent=1} | string | 

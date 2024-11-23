@@ -9,8 +9,8 @@ description: 商户调用【开具电子发票】接口或【冲红电子发票�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| fapiao_apply_id | string | 发票申请单号
-| query | object | 声明请求的查询参数
+| fapiao_apply_id {data-required} | string | 发票申请单号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
 | fapiao_id {data-indent=1} | string | 商户发票单号
 
@@ -97,41 +97,41 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count | integer | 发票数量
-| fapiao_information | object[] | 发票信息
-| fapiao_id {data-indent=1} | string | 商户发票单号
-| status {data-indent=1} | string | 发票状态
-| blue_fapiao {data-indent=1} | object | 蓝字发票信息
-| fapiao_code {data-indent=2} | string | 发票代码
-| fapiao_number {data-indent=2} | string | 发票号码
-| check_code {data-indent=2} | string | 校验码
-| password {data-indent=2} | string | 密码
-| fapiao_time {data-indent=2} | string | 开票时间
-| red_fapiao {data-indent=1} | object | 红字发票信息
-| fapiao_code {data-indent=2} | string | 发票代码
-| fapiao_number {data-indent=2} | string | 发票号码
-| check_code {data-indent=2} | string | 校验码
-| password {data-indent=2} | string | 密码
-| fapiao_time {data-indent=2} | string | 开票时间
-| card_information {data-indent=1} | object | 电子发票插卡信息
-| card_appid {data-indent=2} | string | 插卡公众号AppID
-| card_openid {data-indent=2} | string | 用户在插卡公众号下的OpenID
+| total_count {data-required}| integer | 发票数量
+| fapiao_information {data-required}| object[] {data-tooltip="对应PHP的array"} | 发票信息
+| fapiao_id {data-required data-indent=1} | string | 商户发票单号
+| status {data-required data-indent=1} | string | 发票状态
+| blue_fapiao {data-indent=1} | object {data-tooltip="对应PHP的array"} | 蓝字发票信息
+| fapiao_code {data-required data-indent=2} | string | 发票代码
+| fapiao_number {data-required data-indent=2} | string | 发票号码
+| check_code {data-required data-indent=2} | string | 校验码
+| password {data-required data-indent=2} | string | 密码
+| fapiao_time {data-required data-indent=2} | string | 开票时间
+| red_fapiao {data-indent=1} | object {data-tooltip="对应PHP的array"} | 红字发票信息
+| fapiao_code {data-required data-indent=2} | string | 发票代码
+| fapiao_number {data-required data-indent=2} | string | 发票号码
+| check_code {data-required data-indent=2} | string | 校验码
+| password {data-required data-indent=2} | string | 密码
+| fapiao_time {data-required data-indent=2} | string | 开票时间
+| card_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 电子发票插卡信息
+| card_appid {data-required data-indent=2} | string | 插卡公众号AppID
+| card_openid {data-required data-indent=2} | string | 用户在插卡公众号下的OpenID
 | card_id {data-indent=2} | string | 电子发票卡券模板ID
 | card_code {data-indent=2} | string | 电子发票在卡包中的编码
-| card_status {data-indent=2} | string | 发票卡券状态
-| total_amount {data-indent=1} | integer | 总价税合计
-| tax_amount {data-indent=1} | integer | 总税额
-| amount {data-indent=1} | integer | 总金额
-| seller_information {data-indent=1} | object | 销售方信息
-| name {data-indent=2} | string | 名称
-| taxpayer_id {data-indent=2} | string | 纳税人识别号
-| address {data-indent=2} | string | 地址
+| card_status {data-required data-indent=2} | string | 发票卡券状态
+| total_amount {data-required data-indent=1} | integer | 总价税合计
+| tax_amount {data-required data-indent=1} | integer | 总税额
+| amount {data-required data-indent=1} | integer | 总金额
+| seller_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 销售方信息
+| name {data-required data-indent=2} | string | 名称
+| taxpayer_id {data-required data-indent=2} | string | 纳税人识别号
+| address {data-required data-indent=2} | string | 地址
 | telephone {data-indent=2} | string | 电话
 | bank_name {data-indent=2} | string | 开户银行
 | bank_account {data-indent=2} | string | 银行账号
-| buyer_information {data-indent=1} | object | 购买方信息
-| type {data-indent=2} | string | 购买方类型
-| name {data-indent=2} | string | 名称
+| buyer_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 购买方信息
+| type {data-required data-indent=2} | string | 购买方类型
+| name {data-required data-indent=2} | string | 名称
 | taxpayer_id {data-indent=2} | string | 纳税人识别号
 | address {data-indent=2} | string | 地址
 | telephone {data-indent=2} | string | 电话
@@ -139,23 +139,23 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_account {data-indent=2} | string | 银行账号
 | phone {data-indent=2} | string | 手机号
 | email {data-indent=2} | string | 邮箱地址
-| extra_information {data-indent=1} | object | 附加信息
+| extra_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 附加信息
 | payee {data-indent=2} | string | 收款人
 | reviewer {data-indent=2} | string | 复核人
-| drawer {data-indent=2} | string | 开票人
-| items {data-indent=1} | object[] | 发票行信息
-| tax_code {data-indent=2} | string | 货物或应税劳务、服务编码
-| goods_name {data-indent=2} | string | 货物或应税劳务、服务名称
+| drawer {data-required data-indent=2} | string | 开票人
+| items {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 发票行信息
+| tax_code {data-required data-indent=2} | string | 货物或应税劳务、服务编码
+| goods_name {data-required data-indent=2} | string | 货物或应税劳务、服务名称
 | specification {data-indent=2} | string | 规格型号
 | unit {data-indent=2} | string | 单位
-| quantity {data-indent=2} | integer | 数量
-| unit_price {data-indent=2} | integer | 单价
-| amount {data-indent=2} | integer | 单行金额
-| tax_amount {data-indent=2} | integer | 单行税额
-| total_amount {data-indent=2} | integer | 单行金额合计
-| tax_rate {data-indent=2} | integer | 税率
-| tax_prefer_mark {data-indent=2} | string | 税收优惠政策标识
-| discount {data-indent=2} | boolean | 是否折扣行
+| quantity {data-required data-indent=2} | integer | 数量
+| unit_price {data-required data-indent=2} | integer | 单价
+| amount {data-required data-indent=2} | integer | 单行金额
+| tax_amount {data-required data-indent=2} | integer | 单行税额
+| total_amount {data-required data-indent=2} | integer | 单行金额合计
+| tax_rate {data-required data-indent=2} | integer | 税率
+| tax_prefer_mark {data-required data-indent=2} | string | 税收优惠政策标识
+| discount {data-required data-indent=2} | boolean | 是否折扣行
 | remark {data-indent=1} | string | 备注信息
 
 {.im-table #response}

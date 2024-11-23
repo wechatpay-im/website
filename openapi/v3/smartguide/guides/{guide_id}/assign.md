@@ -9,10 +9,10 @@ description: 用于服务商/商户开发者在顾客下单后为顾客分配服
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| guide_id | string | 服务人员ID
-| json | object | 声明请求的`JSON`数据结构
+| guide_id {data-required} | string | 服务人员ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户ID
-| out_trade_no {data-indent=1} | string | 商户订单号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 
 {.im-table #request}
 

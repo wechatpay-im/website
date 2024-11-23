@@ -9,9 +9,9 @@ description: 提交退款申请后，通过调用该接口查询退款状态。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 二级商户号
+| refund_id {data-required} | string | 微信退款单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -90,30 +90,30 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| out_refund_no | string | 商户退款单号
-| transaction_id | string | 微信订单号
-| out_trade_no | string | 商户订单号
+| refund_id {data-required}| string | 微信退款单号
+| out_refund_no {data-required}| string | 商户退款单号
+| transaction_id {data-required}| string | 微信订单号
+| out_trade_no {data-required}| string | 商户订单号
 | channel | string | 退款渠道
 | user_received_account | string | 退款入账账户
 | success_time | string | 退款成功时间
-| create_time | string | 退款创建时间
-| status | string | 退款状态
-| amount | object | 退款金额信息
-| refund {data-indent=1} | integer | 退款金额
-| from {data-indent=1} | object[] | 退款出资账户及金额
-| account {data-indent=2} | string | 出资账户类型
-| amount {data-indent=2} | number | 出资金额
-| payer_refund {data-indent=1} | integer | 用户退款金额
+| create_time {data-required}| string | 退款创建时间
+| status {data-required}| string | 退款状态
+| amount {data-required}| object {data-tooltip="对应PHP的array"} | 退款金额信息
+| refund {data-required data-indent=1} | integer | 退款金额
+| from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
+| account {data-required data-indent=2} | string | 出资账户类型
+| amount {data-required data-indent=2} | number | 出资金额
+| payer_refund {data-required data-indent=1} | integer | 用户退款金额
 | discount_refund {data-indent=1} | integer | 优惠退款金额
 | currency {data-indent=1} | string | 退款币种
 | advance {data-indent=1} | number | 垫付金额
-| promotion_detail | object[] | 营销详情
-| promotion_id {data-indent=1} | string | 券ID
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
-| amount {data-indent=1} | integer | 优惠券面额
-| refund_amount {data-indent=1} | integer | 优惠退款金额
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 营销详情
+| promotion_id {data-required data-indent=1} | string | 券ID
+| scope {data-required data-indent=1} | string | 优惠范围
+| type {data-required data-indent=1} | string | 优惠类型
+| amount {data-required data-indent=1} | integer | 优惠券面额
+| refund_amount {data-required data-indent=1} | integer | 优惠退款金额
 | refund_account | string | 退款出资商户
 | funds_account | string | 资金账户
 

@@ -9,23 +9,23 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 应用ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 应用ID
 | openid {data-indent=1} | string | 用户在直连商户应用下的用户标示
-| plan_id {data-indent=1} | number | 委托代扣模板ID
-| out_contract_code {data-indent=1} | string | 商户签约协议号
-| insured_display_name {data-indent=1} | string | 被保人的展示名称
-| contract_notify_url {data-indent=1} | string | 签约结果通知地址
-| policy_start_date {data-indent=1} | string | 保险保单的开始日期
-| policy_end_date {data-indent=1} | string | 保险保单的结束日期
-| policy_periods {data-indent=1} | object[] | 保单的扣费周期列表
-| policy_period_id {data-indent=2} | number | 保险扣费周期编号
-| estimated_deduct_date {data-indent=2} | string | 预计扣费的日期
-| estimated_deduct_amount {data-indent=2} | object | 预计扣费金额
-| total {data-indent=3} | number | 金额
+| plan_id {data-required data-indent=1} | number | 委托代扣模板ID
+| out_contract_code {data-required data-indent=1} | string | 商户签约协议号
+| insured_display_name {data-required data-indent=1} | string | 被保人的展示名称
+| contract_notify_url {data-required data-indent=1} | string | 签约结果通知地址
+| policy_start_date {data-required data-indent=1} | string | 保险保单的开始日期
+| policy_end_date {data-required data-indent=1} | string | 保险保单的结束日期
+| policy_periods {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 保单的扣费周期列表
+| policy_period_id {data-required data-indent=2} | number | 保险扣费周期编号
+| estimated_deduct_date {data-required data-indent=2} | string | 预计扣费的日期
+| estimated_deduct_amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 预计扣费金额
+| total {data-required data-indent=3} | number | 金额
 | currency {data-indent=3} | string | 货币类型
-| amount {data-indent=1} | object | 扣费金额信息
-| total {data-indent=2} | number | 金额
+| amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 扣费金额信息
+| total {data-required data-indent=2} | number | 金额
 | currency {data-indent=2} | string | 货币类型
 | out_trade_no {data-indent=1} | string | 商户订单号
 | description {data-indent=1} | string | 商品描述
@@ -35,12 +35,12 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 | attach {data-indent=1} | string | 附加数据
 | can_auto_insure {data-indent=1} | boolean | 是否自动续保
 | can_auto_reinsure {data-indent=1} | boolean | 是否自动重新投保
-| real_identity {data-indent=1} | object | 用户实名信息
-| real_name {data-indent=2} | string | 自然人姓名
-| id_card_number {data-indent=2} | string | 自然人身份证号码
+| real_identity {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户实名信息
+| real_name {data-required data-indent=2} | string | 自然人姓名
+| id_card_number {data-required data-indent=2} | string | 自然人身份证号码
 | identity_type {data-indent=2} | string | 实名验证类型
 | combined_deduct_period_count {data-indent=1} | number | 合并扣费期数
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 微信支付平台证书序列号
 
 {.im-table #request}
@@ -330,7 +330,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| redirect_url | string | 跳转签约并支付流程的URL
+| redirect_url {data-required}| string | 跳转签约并支付流程的URL
 
 {.im-table #response}
 

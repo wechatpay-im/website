@@ -10,48 +10,48 @@ description: 通过本接口提交微信支付H5支付订单
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
-| mchid {data-indent=1} | string | 商户号
-| appid {data-indent=1} | string | APPID
-| sub_mchid {data-indent=1} | string | 子商户号
-| sp_mchid {data-indent=1} | string | 机构商户号
-| sp_appid {data-indent=1} | string | 机构APPID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| mchid {data-required data-indent=1} | string | 商户号
+| appid {data-required data-indent=1} | string | APPID
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| sp_mchid {data-required data-indent=1} | string | 机构商户号
+| sp_appid {data-required data-indent=1} | string | 机构APPID
 | sub_appid {data-indent=1} | string | 子商户APPID
-| description {data-indent=1} | string | 商品描述
+| description {data-required data-indent=1} | string | 商品描述
 | attach {data-indent=1} | string | 商户数据
-| notify_url {data-indent=1} | string | 通知地址
-| out_trade_no {data-indent=1} | string | 商户订单号
+| notify_url {data-required data-indent=1} | string | 通知地址
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | goods_tag {data-indent=1} | string | 商品标记
-| trade_type {data-indent=1} | string | 交易类型
+| trade_type {data-required data-indent=1} | string | 交易类型
 | limit_pay {data-indent=1} | string | 指定支付方式
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
-| merchant_category_code {data-indent=1} | string | MCC码
-| payer {data-indent=1} | object | 支付者
+| merchant_category_code {data-required data-indent=1} | string | MCC码
+| payer {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=2} | string | 用户标识
 | sp_openid {data-indent=2} | string | 用户标识（机构）
 | sub_openid {data-indent=2} | string | 用户标识（特约商户）
-| amount {data-indent=1} | object | 订单金额
-| total {data-indent=2} | integer | 总金额
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-required data-indent=2} | integer | 总金额
 | currency {data-indent=2} | string | 货币类型
-| scene_info {data-indent=1} | object | 场景信息
+| scene_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
 | device_id {data-indent=2} | string | 商户端设备号
 | device_ip {data-indent=2} | string | 商户端设备IP
-| payer_client_ip {data-indent=2} | string | 用户终端IP
+| payer_client_ip {data-required data-indent=2} | string | 用户终端IP
 | operator_id {data-indent=2} | string | 操作员ID
-| store_info {data-indent=2} | object | 商户门店信息
+| store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 商户门店信息
 | id {data-indent=3} | string | 编号
-| name {data-indent=3} | string | 名称
-| address {data-indent=3} | string | 详细地址
-| detail {data-indent=1} | object[] | 优惠功能
+| name {data-required data-indent=3} | string | 名称
+| address {data-required data-indent=3} | string | 详细地址
+| detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | integer | 订单原价
 | receipt_id {data-indent=2} | string | 商品小票ID
-| goods_detail {data-indent=2} | object[] | 单品列表
-| goods_id {data-indent=3} | string | 商品编码
+| goods_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-required data-indent=3} | string | 商品编码
 | wxpay_goods_id {data-indent=3} | string | 微信侧商品编码
 | goods_name {data-indent=3} | string | 商品名称
-| quantity {data-indent=3} | integer | 商品数量
-| price {data-indent=3} | integer | 商品单价
+| quantity {data-required data-indent=3} | integer | 商品数量
+| price {data-required data-indent=3} | integer | 商品单价
 
 {.im-table #request}
 
@@ -406,7 +406,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mweb_url | string | 支付跳转链接
+| mweb_url {data-required}| string | 支付跳转链接
 
 {.im-table #response}
 

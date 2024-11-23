@@ -9,7 +9,7 @@ description: 查询转账电子回单接口，商户通过该接口可以查询�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 商家批次单号
+| out_batch_no {data-required} | string | 商家批次单号
 
 {.im-table #request}
 
@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 商家批次单号
-| signature_no | string | 电子回单申请单号
+| out_batch_no {data-required}| string | 商家批次单号
+| signature_no {data-required}| string | 电子回单申请单号
 | signature_status | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值

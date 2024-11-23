@@ -9,12 +9,12 @@ description: 商户通过调用本接口向用户发放消费卡，用户领到�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 消费卡ID
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 消费卡归属appid
-| openid {data-indent=1} | string | 用户openid
-| out_request_no {data-indent=1} | string | 商户单据号
-| send_time {data-indent=1} | string | 请求发卡时间
+| card_id {data-required} | string | 消费卡ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 消费卡归属appid
+| openid {data-required data-indent=1} | string | 用户openid
+| out_request_no {data-required data-indent=1} | string | 商户单据号
+| send_time {data-required data-indent=1} | string | 请求发卡时间
 
 {.im-table #request}
 
@@ -111,7 +111,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_code | string | 消费卡code
+| card_code {data-required}| string | 消费卡code
 
 {.im-table #response}
 

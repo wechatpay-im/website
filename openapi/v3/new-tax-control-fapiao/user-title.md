@@ -9,10 +9,10 @@ description: 商户调用本接口，检查用户是否已完成抬头填写，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
-| scene {data-indent=1} | string | 开票场景
-| fapiao_apply_id {data-indent=1} | string | 发票申请单号
+| scene {data-required data-indent=1} | string | 开票场景
+| fapiao_apply_id {data-required data-indent=1} | string | 发票申请单号
 
 {.im-table #request}
 
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type | string | 购买方类型
-| name | string | 名称
+| type {data-required}| string | 购买方类型
+| name {data-required}| string | 名称
 | taxpayer_id | string | 纳税人识别号
 | address | string | 地址
 | telephone | string | 电话

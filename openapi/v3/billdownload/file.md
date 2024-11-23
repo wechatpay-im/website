@@ -9,9 +9,9 @@ description: 下载账单API为通用接口，交易/资金账单都可以通过
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| token {data-indent=1} | string | 
-| tartype {data-indent=1} | string | 
+| query {data-required} | object | 声明请求的查询参数
+| token {data-required data-indent=1} | string | 前序接口返回的`URL.query.token`
+| tartype {data-indent=1} | string | 前序接口返回的`URL.query.tartype`
 
 {.im-table #request}
 
@@ -24,8 +24,8 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v3->billdownload->file->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => '',
-    'tartype' => '',
+    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'tartype' => 'GZIP',
   ],
 ])
 ->wait();
@@ -38,8 +38,8 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v3/billdownload/file')->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => '',
-    'tartype' => '',
+    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'tartype' => 'GZIP',
   ],
 ])
 ->wait();
@@ -52,8 +52,8 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v3/billdownload/file']->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => '',
-    'tartype' => '',
+    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'tartype' => 'GZIP',
   ],
 ])
 ->wait();
@@ -66,8 +66,8 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v3->billdownload->file->get([
   'sink' => $stream,
   'query' => [
-    'token' => '',
-    'tartype' => '',
+    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'tartype' => 'GZIP',
   ],
 ]);
 ```
@@ -79,8 +79,8 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v3/billdownload/file')->get([
   'sink' => $stream,
   'query' => [
-    'token' => '',
-    'tartype' => '',
+    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'tartype' => 'GZIP',
   ],
 ]);
 ```
@@ -92,8 +92,8 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v3/billdownload/file']->get([
   'sink' => $stream,
   'query' => [
-    'token' => '',
-    'tartype' => '',
+    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'tartype' => 'GZIP',
   ],
 ]);
 ```

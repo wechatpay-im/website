@@ -9,23 +9,23 @@ description: 发起商家转账接口。商户可以通过该接口同时向多�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| sp_appid {data-indent=1} | string | 服务商AppID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| sp_appid {data-required data-indent=1} | string | 服务商AppID
 | sub_appid {data-indent=1} | string | 二级商户AppID
-| out_batch_no {data-indent=1} | string | 商家批次单号
-| batch_name {data-indent=1} | string | 批次名称
-| batch_remark {data-indent=1} | string | 批次备注
-| total_amount {data-indent=1} | number | 转账总金额
-| total_num {data-indent=1} | number | 转账总笔数
-| transfer_scene_id {data-indent=1} | string | 转账场景ID
-| transfer_detail_list {data-indent=1} | object[] | 转账明细列表
-| out_detail_no {data-indent=2} | string | 商家明细单号
-| transfer_amount {data-indent=2} | number | 转账金额
-| transfer_remark {data-indent=2} | string | 转账备注
-| reservation_id {data-indent=2} | string | 微信转账预约单号
-| openid {data-indent=2} | string | 收款用户OpenID
-| notify_url {data-indent=1} | string | 商户回调地址
+| out_batch_no {data-required data-indent=1} | string | 商家批次单号
+| batch_name {data-required data-indent=1} | string | 批次名称
+| batch_remark {data-required data-indent=1} | string | 批次备注
+| total_amount {data-required data-indent=1} | number | 转账总金额
+| total_num {data-required data-indent=1} | number | 转账总笔数
+| transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
+| transfer_detail_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账明细列表
+| out_detail_no {data-required data-indent=2} | string | 商家明细单号
+| transfer_amount {data-required data-indent=2} | number | 转账金额
+| transfer_remark {data-required data-indent=2} | string | 转账备注
+| reservation_id {data-required data-indent=2} | string | 微信转账预约单号
+| openid {data-required data-indent=2} | string | 收款用户OpenID
+| notify_url {data-required data-indent=1} | string | 商户回调地址
 
 {.im-table #request}
 
@@ -194,9 +194,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 商家批次单号
-| batch_id | string | 商家转账批次单号
-| create_time | string | 批次创建时间
+| out_batch_no {data-required}| string | 商家批次单号
+| batch_id {data-required}| string | 商家转账批次单号
+| create_time {data-required}| string | 批次创建时间
 | batch_state | string | 批次状态
 
 {.im-table #response}

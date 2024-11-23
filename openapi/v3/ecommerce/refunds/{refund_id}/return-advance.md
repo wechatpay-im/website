@@ -4,9 +4,9 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
+| refund_id {data-required} | string | 微信退款单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -85,14 +85,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| advance_return_id | string | 微信回补单号
-| return_amount | integer | 垫付回补金额
-| payer_mchid | string | 出款方商户号
-| payer_account | string | 出款方账户
-| payee_mchid | string | 入账方商户号
-| payee_account | string | 入账方账户
-| result | string | 垫付回补结果
+| refund_id {data-required}| string | 微信退款单号
+| advance_return_id {data-required}| string | 微信回补单号
+| return_amount {data-required}| integer | 垫付回补金额
+| payer_mchid {data-required}| string | 出款方商户号
+| payer_account {data-required}| string | 出款方账户
+| payee_mchid {data-required}| string | 入账方商户号
+| payee_account {data-required}| string | 入账方账户
+| result {data-required}| string | 垫付回补结果
 | success_time | string | 垫付回补完成时间
 
 {.im-table #response}
@@ -105,9 +105,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 二级商户号
+| refund_id {data-required} | string | 微信退款单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -186,14 +186,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| advance_return_id | string | 微信回补单号
-| return_amount | integer | 垫付回补金额
-| payer_mchid | string | 出款方商户号
-| payer_account | string | 出款方账户
-| payee_mchid | string | 入账方商户号
-| payee_account | string | 入账方账户
-| result | string | 垫付回补结果
+| refund_id {data-required}| string | 微信退款单号
+| advance_return_id {data-required}| string | 微信回补单号
+| return_amount {data-required}| integer | 垫付回补金额
+| payer_mchid {data-required}| string | 出款方商户号
+| payer_account {data-required}| string | 出款方账户
+| payee_mchid {data-required}| string | 入账方商户号
+| payee_account {data-required}| string | 入账方账户
+| result {data-required}| string | 垫付回补结果
 | success_time | string | 垫付回补完成时间
 
 {.im-table #response}

@@ -9,41 +9,41 @@ description: 用于机构子商户创建成功后，接口提供子商户信息�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| modifyinstitutionsub | string | 固定值`modifyInstitutionsub`
-| xml | object | 声明请求的`XML`数据结构
-| app_id {data-indent=1} | string | 机构appid
-| mch_id {data-indent=1} | string | 机构商户号
-| sub_mch_id {data-indent=1} | string | 子商户号
-| merchant_name {data-indent=1} | string | 子商户全称
+| modifyinstitutionsub {data-required} | string | 固定值`modifyInstitutionsub`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| app_id {data-required data-indent=1} | string | 机构appid
+| mch_id {data-required data-indent=1} | string | 机构商户号
+| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| merchant_name {data-required data-indent=1} | string | 子商户全称
 | channel_id {data-indent=1} | string | 渠道编号
-| merchant_shortname {data-indent=1} | string | 子商户简称
-| merchant_country_code {data-indent=1} | string | 注册国家或区域
-| merchant_type {data-indent=1} | string | 商户类型
-| mcc {data-indent=1} | string | MCC码
-| registration_certificate_number {data-indent=1} | string | 公司注册文件编号
-| registration_certificate_date {data-indent=1} | string | 公司注册文件过期时间
+| merchant_shortname {data-required data-indent=1} | string | 子商户简称
+| merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
+| merchant_type {data-required data-indent=1} | string | 商户类型
+| mcc {data-required data-indent=1} | string | MCC码
+| registration_certificate_number {data-required data-indent=1} | string | 公司注册文件编号
+| registration_certificate_date {data-required data-indent=1} | string | 公司注册文件过期时间
 | registration_certificate_copy {data-indent=1} | string | 公司注册文件照片
-| business_type {data-indent=1} | string | 业务类型
-| app_download {data-indent=1} | string | APP下载链接
-| business_website {data-indent=1} | string | 业务网站
-| office_account {data-indent=1} | string | 公众号
-| mini_program {data-indent=1} | string | 小程序
-| store_address {data-indent=1} | string | 门店地址
+| business_type {data-required data-indent=1} | string | 业务类型
+| app_download {data-required data-indent=1} | string | APP下载链接
+| business_website {data-required data-indent=1} | string | 业务网站
+| office_account {data-required data-indent=1} | string | 公众号
+| mini_program {data-required data-indent=1} | string | 小程序
+| store_address {data-required data-indent=1} | string | 门店地址
 | store_photos {data-indent=1} | string | 门店照片
 | director_name {data-indent=1} | string | 董事姓名
 | director_id_number {data-indent=1} | string | 董事证件号码
 | principal_name {data-indent=1} | string | 负责人姓名
 | principal_id_number {data-indent=1} | string | 负责人证件号
-| office_phone {data-indent=1} | string | 公司电话
-| contact_name {data-indent=1} | string | 联系人姓名
-| contact_phone {data-indent=1} | string | 联系人电话
-| contact_email {data-indent=1} | string | 联系人邮箱
+| office_phone {data-required data-indent=1} | string | 公司电话
+| contact_name {data-required data-indent=1} | string | 联系人姓名
+| contact_phone {data-required data-indent=1} | string | 联系人电话
+| contact_email {data-required data-indent=1} | string | 联系人邮箱
 | settlement_bank_number {data-indent=1} | string | 子商户结算银行账户
 | apply_h5_payment {data-indent=1} | string | 是否申请H5支付权限<br/>`YES` \| `NO` 枚举值之一
 | h5_website_url {data-indent=1} | string | H5经营网址
 | h5_domains {data-indent=1} | string | H5支付域名
-| nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -314,13 +314,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务返回码
+| result_code {data-required}| string | 业务返回码
 | err_code | string | 错误编码
 | err_code_des | string | 错误描述
-| sub_mch_id | string | 子商户号
-| sign | string | 签名
+| sub_mch_id {data-required}| string | 子商户号
+| sign {data-required}| string | 签名
 | verification_status | string | 验证状态
 | h5_authorization_state | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
 

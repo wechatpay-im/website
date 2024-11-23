@@ -9,16 +9,16 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| version {data-indent=1} | string | 接口版本号
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| sub_mch_id {data-indent=1} | string | 小微商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| version {data-required data-indent=1} | string | 接口版本号
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| sub_mch_id {data-required data-indent=1} | string | 小微商户号
 | mobile_phone {data-indent=1} | string | 手机号
 | email {data-indent=1} | string | 邮箱
 | merchant_name {data-indent=1} | string | 商户简称
-| cert_sn {data-indent=1} | string | 加密的平台证书序列号
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| cert_sn {data-required data-indent=1} | string | 加密的平台证书序列号
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -139,15 +139,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| mch_id | string | 商户号
-| sub_mch_id | string | 小微商户号
+| mch_id {data-required}| string | 商户号
+| sub_mch_id {data-required}| string | 小微商户号
 
 {.im-table #response}
 

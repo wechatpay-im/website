@@ -9,15 +9,15 @@ description: 该接口主要为商户提供营销资源的授权能力，可授�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| partner {data-indent=1} | object | 
-| type {data-indent=2} | string | 
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| partner {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| type {data-required data-indent=2} | string | 
 | appid {data-indent=2} | string | 
 | merchant_id {data-indent=2} | string | 
-| authorized_data {data-indent=1} | object | 
-| business_type {data-indent=2} | string | 
+| authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| business_type {data-required data-indent=2} | string | 
 | stock_id {data-indent=2} | string | 
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 业务请求幂等值
 
 {.im-table #request}
@@ -157,16 +157,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| partner | object | 
-| type {data-indent=1} | string | 
+| partner {data-required}| object {data-tooltip="对应PHP的array"} | 
+| type {data-required data-indent=1} | string | 
 | appid {data-indent=1} | string | 
 | merchant_id {data-indent=1} | string | 
-| authorized_data | object | 
-| business_type {data-indent=1} | string | 
+| authorized_data {data-required}| object {data-tooltip="对应PHP的array"} | 
+| business_type {data-required data-indent=1} | string | 
 | stock_id {data-indent=1} | string | 
-| build_time | string | 
-| create_time | string | 
-| update_time | string | 
+| state {data-required}| string | 合作状态<br/>`ESTABLISHED` \| `TERMINATED` 枚举值之一
+| build_time {data-required}| string | 
+| create_time {data-required}| string | 
+| update_time {data-required}| string | 
 
 {.im-table #response}
 

@@ -9,27 +9,27 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| sub_mchid {data-indent=1} | string | 子商户号
-| post_payments {data-indent=1} | object[] | 后付费项目
-| name {data-indent=2} | string | 付费名称
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| post_payments {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费项目
+| name {data-required data-indent=2} | string | 付费名称
 | description {data-indent=2} | string | 付费说明
 | amount {data-indent=2} | integer | 付费金额
 | count {data-indent=2} | integer | 付费数量
-| post_discounts {data-indent=1} | object[] | 后付费商户优惠
-| name {data-indent=2} | string | 优惠名称
-| description {data-indent=2} | string | 优惠说明
-| amount {data-indent=2} | integer | 优惠金额
+| post_discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费商户优惠
+| name {data-required data-indent=2} | string | 优惠名称
+| description {data-required data-indent=2} | string | 优惠说明
+| amount {data-required data-indent=2} | integer | 优惠金额
 | count {data-indent=2} | integer | 优惠数量
-| total_amount {data-indent=1} | integer | 总金额
-| time_range {data-indent=1} | object | 实际服务时间
+| total_amount {data-required data-indent=1} | integer | 总金额
+| time_range {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际服务时间
 | start_time {data-indent=2} | string | 服务开始时间
 | start_time_remark {data-indent=2} | string | 服务开始时间备注
 | end_time {data-indent=2} | string | 服务结束时间
 | end_time_remark {data-indent=2} | string | 服务结束时间备注
-| location {data-indent=1} | object | 实际服务位置
+| location {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际服务位置
 | start_location {data-indent=2} | string | 服务开始地点
 | end_location {data-indent=2} | string | 服务结束地点
 | profit_sharing {data-indent=1} | boolean | 微信支付服务分账标记

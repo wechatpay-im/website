@@ -9,7 +9,7 @@ description: 可调用此接口查询订单剩余待分金额
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id | string | 微信订单号
+| transaction_id {data-required} | string | 微信订单号
 
 {.im-table #request}
 
@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id | string | 微信订单号
-| unsplit_amount | integer | 订单剩余待分金额
+| transaction_id {data-required}| string | 微信订单号
+| unsplit_amount {data-required}| integer | 订单剩余待分金额
 
 {.im-table #response}
 

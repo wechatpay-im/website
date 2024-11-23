@@ -4,8 +4,8 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| code | string | 会员卡code
+| card_id {data-required} | string | 会员卡id
+| code {data-required} | string | 会员卡code
 
 {.im-table #request}
 
@@ -82,11 +82,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | background_picture_url | string | 会员卡背景图
 | balance | integer | 用户储值余额
 | user_card_status | string | 用户会员卡状态<br/>`NOT_ACTIVATE` \| `EFFECTIVE` \| `EXPIRE` \| `UNAVAILABLE` \| `DELETE` 枚举值之一
-| user_information | object | 用户开卡时填写的个人信息
-| common_field_list {data-indent=1} | object[] | 平台提供的通用开卡信息字段
+| user_information | object {data-tooltip="对应PHP的array"} | 用户开卡时填写的个人信息
+| common_field_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 平台提供的通用开卡信息字段
 | name {data-indent=2} | string | 平台提供的通用开卡信息字段<br/>`USER_FORM_FLAG_MOBILE` \| `USER_FORM_FLAG_SEX` \| `USER_FORM_FLAG_NAME` \| `USER_FORM_FLAG_BIRTHDAY` \| `USER_FORM_FLAG_ADDRESS` \| `USER_FORM_FLAG_EMAIL` \| `USER_FORM_FLAG_CITY` 枚举值之一
 | value {data-indent=2} | string | 用户开卡时填写的个人信息
-| custom_field_list {data-indent=1} | object[] | 商户自定义的开卡信息字段
+| custom_field_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商户自定义的开卡信息字段
 | name {data-indent=2} | string | 字段名称
 | value {data-indent=2} | string | 字段值
 | value_list {data-indent=2} | string[] | 
@@ -102,17 +102,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| code | string | 会员卡code
-| json | object | 声明请求的`JSON`数据结构
+| card_id {data-required} | string | 会员卡id
+| code {data-required} | string | 会员卡code
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | membership_number {data-indent=1} | string | 会员卡编号
 | background_picture_url {data-indent=1} | string | 会员卡背景图
 | level {data-indent=1} | string | 用户等级
 | out_request_no {data-indent=1} | string | 商户请求单号
-| balance_information {data-indent=1} | object | 用户储值变更信息
-| before_balance {data-indent=2} | integer | 更新前用户储值余额
-| balance {data-indent=2} | integer | 更新后用户储值余额
-| add_balance {data-indent=2} | integer | 本次余额变动值
+| balance_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户储值变更信息
+| before_balance {data-required data-indent=2} | integer | 更新前用户储值余额
+| balance {data-required data-indent=2} | integer | 更新后用户储值余额
+| add_balance {data-required data-indent=2} | integer | 本次余额变动值
 | balance_remark {data-indent=2} | string | 储值消耗记录
 
 {.im-table #request}

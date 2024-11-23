@@ -9,7 +9,7 @@ description: 下载图片API为通用接口，消费者投诉相关图片都可�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| media_id | string | 媒体文件ID
+| media_id {data-required} | string | 媒体文件ID
 
 {.im-table #request}
 

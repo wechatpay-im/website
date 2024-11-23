@@ -9,11 +9,11 @@ description: 通过openid， 商户解除用户授权关系
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户标识
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| appid {data-indent=1} | string | 公众号id
-| reason {data-indent=1} | string | 撤销原因
+| openid {data-required} | string | 用户标识
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| appid {data-required data-indent=1} | string | 公众号id
+| reason {data-required data-indent=1} | string | 撤销原因
 
 {.im-table #request}
 

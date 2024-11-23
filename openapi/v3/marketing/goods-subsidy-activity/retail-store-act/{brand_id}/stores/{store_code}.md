@@ -9,8 +9,8 @@ description: 该接口为服务商或商户给零售小店活动查询门店详�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
-| store_code | string | 门店编码
+| brand_id {data-required} | string | 品牌ID
+| store_code {data-required} | string | 门店编码
 
 {.im-table #request}
 

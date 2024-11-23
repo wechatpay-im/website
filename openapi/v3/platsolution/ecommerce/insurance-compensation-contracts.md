@@ -9,14 +9,14 @@ description: 平台服务商可通过该接口为保险公司开通保险理赔�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_apply_no {data-indent=1} | string | 商户申请单号
-| sub_mchid {data-indent=1} | string | 二级商户号
-| agreement_list {data-indent=1} | object[] | 签约协议列表
-| agreement_code {data-indent=2} | string | 协议编号
-| agreement_version {data-indent=2} | string | 协议版本号
-| sign_organization {data-indent=2} | string | 签约主体
-| sign_time {data-indent=2} | string | 签约时间
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_apply_no {data-required data-indent=1} | string | 商户申请单号
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| agreement_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 签约协议列表
+| agreement_code {data-required data-indent=2} | string | 协议编号
+| agreement_version {data-required data-indent=2} | string | 协议版本号
+| sign_organization {data-required data-indent=2} | string | 签约主体
+| sign_time {data-required data-indent=2} | string | 签约时间
 
 {.im-table #request}
 
@@ -131,8 +131,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| opened | boolean | 是否开通成功
+| sub_mchid {data-required}| string | 二级商户号
+| opened {data-required}| boolean | 是否开通成功
 | success_time | string | 成功时间
 
 {.im-table #response}

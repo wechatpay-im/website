@@ -9,9 +9,9 @@ description: 微信支付批次单号查单接口。转账处理后延迟一段�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| batch_id | string | 微信支付批次单号
-| query | object | 声明请求的查询参数
-| need_query_detail {data-indent=1} | boolean | 是否查询转账明细单
+| batch_id {data-required} | string | 微信支付批次单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| need_query_detail {data-required data-indent=1} | boolean | 是否查询转账明细单
 | offset {data-indent=1} | integer | 请求资源起始位置
 | limit {data-indent=1} | integer | 最大资源条数
 | detail_state {data-indent=1} | string | 明细状态
@@ -111,33 +111,33 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| bank_sp_mchid | string | 银行服务商号
-| platform_mchid | string | 服务平台商户号
-| specialized_payment_mchid | string | 付款企业商户号
-| sponsor_mchid | string | 实际出资商户号
-| user_authorized_mchid | string | 用户授权商户号
-| user_authorized_appid | string | 用户授权appid
-| out_batch_no | string | 银行批次单号
-| batch_id | string | 微信支付批次单号
-| transfer_scene | string | 转账场景
-| batch_name | string | 批次名称
-| batch_remark | string | 批次备注
+| bank_sp_mchid {data-required}| string | 银行服务商号
+| platform_mchid {data-required}| string | 服务平台商户号
+| specialized_payment_mchid {data-required}| string | 付款企业商户号
+| sponsor_mchid {data-required}| string | 实际出资商户号
+| user_authorized_mchid {data-required}| string | 用户授权商户号
+| user_authorized_appid {data-required}| string | 用户授权appid
+| out_batch_no {data-required}| string | 银行批次单号
+| batch_id {data-required}| string | 微信支付批次单号
+| transfer_scene {data-required}| string | 转账场景
+| batch_name {data-required}| string | 批次名称
+| batch_remark {data-required}| string | 批次备注
 | attach_remark | string | 附加信息
-| transfer_purpose | string | 批量转账用途
-| batch_state | string | 批次状态
+| transfer_purpose {data-required}| string | 批量转账用途
+| batch_state {data-required}| string | 批次状态
 | close_reason | string | 批次关闭原因
-| total_amount | integer | 转账总金额
-| total_count | integer | 转账总笔数
+| total_amount {data-required}| integer | 转账总金额
+| total_count {data-required}| integer | 转账总笔数
 | create_time | string | 批次创建时间
 | update_time | string | 批次更新时间
 | success_amount | integer | 转账成功金额
 | success_count | integer | 转账成功笔数
 | fail_amount | integer | 转账失败金额
 | fail_count | integer | 转账失败笔数
-| transfer_detail_list | object[] | 转账明细单列表
-| detail_id {data-indent=1} | string | 微信支付明细单号
-| out_detail_no {data-indent=1} | string | 银行明细单号
-| detail_state {data-indent=1} | string | 明细状态
+| transfer_detail_list {data-required}| object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
+| detail_id {data-required data-indent=1} | string | 微信支付明细单号
+| out_detail_no {data-required data-indent=1} | string | 银行明细单号
+| detail_state {data-required data-indent=1} | string | 明细状态
 | fail_reason {data-indent=1} | string | 明细失败原因
 
 {.im-table #response}

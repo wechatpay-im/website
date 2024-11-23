@@ -9,9 +9,9 @@ description: 通过此接口可查询批次信息，包括批次的配置信息�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
-| query | object | 声明请求的查询参数
-| stock_creator_mchid {data-indent=1} | string | 创建批次的商户号
+| stock_id {data-required} | string | 批次号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| stock_creator_mchid {data-required data-indent=1} | string | 创建批次的商户号
 
 {.im-table #request}
 
@@ -90,32 +90,32 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_name | string | 批次名称
-| available_begin_time | string | 开始时间
-| available_end_time | string | 结束时间
-| stock_use_rule | object | 发放规则
-| max_coupons {data-indent=1} | integer | 发放总上限
-| max_amount {data-indent=1} | integer | 总预算
+| stock_name {data-required}| string | 批次名称
+| available_begin_time {data-required}| string | 开始时间
+| available_end_time {data-required}| string | 结束时间
+| stock_use_rule {data-required}| object {data-tooltip="对应PHP的array"} | 发放规则
+| max_coupons {data-required data-indent=1} | integer | 发放总上限
+| max_amount {data-required data-indent=1} | integer | 总预算
 | max_amount_by_day {data-indent=1} | integer | 单天发放上限金额
-| max_coupons_per_user {data-indent=1} | integer | 单个用户可领个数
-| natural_person_limit {data-indent=1} | boolean | 是否开启自然人限制
-| prevent_api_abuse {data-indent=1} | boolean | api发券防刷
-| no_cash | boolean | 是否无资金流
-| stock_type | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
+| max_coupons_per_user {data-required data-indent=1} | integer | 单个用户可领个数
+| natural_person_limit {data-required data-indent=1} | boolean | 是否开启自然人限制
+| prevent_api_abuse {data-required data-indent=1} | boolean | api发券防刷
+| no_cash {data-required}| boolean | 是否无资金流
+| stock_type {data-required}| string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
 | stock_id | string | 批次号
 | stock_creator_mchid | string | 创建批次的商户号
 | status | string | 批次状态<br/>`unactivated` \| `audit` \| `running` \| `stoped` \| `paused` 枚举值之一
-| description | string | 使用说明
+| description {data-required}| string | 使用说明
 | create_time | string | 创建时间
 | start_time | string | 激活批次的时间
 | stop_time | string | 终止批次的时间
 | singleitem | boolean | 是否单品优惠
-| cut_to_message | object | 减至批次特定信息
+| cut_to_message | object {data-tooltip="对应PHP的array"} | 减至批次特定信息
 | single_price_max {data-indent=1} | integer | 可用优惠的商品最高单价
 | cut_to_price {data-indent=1} | integer | 减至后的优惠单价
 | distributed_coupons | integer | 已发券数量
 | business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
-| available_region_list | object[] | 消费金可用地域
+| available_region_list | object[] {data-tooltip="对应PHP的array"} | 消费金可用地域
 | type {data-indent=1} | string | 类型
 | province {data-indent=1} | string | 省
 | city {data-indent=1} | string | 市

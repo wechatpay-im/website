@@ -9,10 +9,10 @@ description: 商户在开具发票成功后，调用本接口获取电子发票�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| fapiao_apply_id | string | 发票申请单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号
-| fapiao_id {data-indent=1} | string | 商户发票单号
+| fapiao_apply_id {data-required} | string | 发票申请单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| fapiao_id {data-required data-indent=1} | string | 商户发票单号
 
 {.im-table #request}
 
@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| fapiao_download_info_list | object[] | 发票列表
+| fapiao_download_info_list | object[] {data-tooltip="对应PHP的array"} | 发票列表
 | fapiao_id {data-indent=1} | string | 商户发票单号
 | download_url {data-indent=1} | string | 发票文件下载地址
 | status {data-indent=1} | string | 发票状态

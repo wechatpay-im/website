@@ -10,8 +10,8 @@ description: 商户与用户的签约关系有误或者商户主动要求与用�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| contract_id | string | 委托代扣协议ID
-| json | object | 声明请求的`JSON`数据结构
+| contract_id {data-required} | string | 委托代扣协议ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-indent=1} | string | 机构APPID
 | sp_appid {data-indent=1} | string | 机构appid
 | sub_mchid {data-indent=1} | string | 子商户号

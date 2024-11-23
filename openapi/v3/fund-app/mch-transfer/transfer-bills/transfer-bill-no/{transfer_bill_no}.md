@@ -9,7 +9,7 @@ description: 商家转账用户确认模式下，根据微信转账单号查询�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transfer_bill_no | string | 微信转账单号
+| transfer_bill_no {data-required} | string | 微信转账单号
 
 {.im-table #request}
 
@@ -70,18 +70,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mch_id | string | 商户号
-| out_bill_no | string | 商户单号
-| transfer_bill_no | string | 商家转账订单号
-| appid | string | 商户AppID
-| state | string | 单据状态
-| transfer_amount | number | 转账金额
-| transfer_remark | string | 转账备注
+| mch_id {data-required}| string | 商户号
+| out_bill_no {data-required}| string | 商户单号
+| transfer_bill_no {data-required}| string | 商家转账订单号
+| appid {data-required}| string | 商户AppID
+| state {data-required}| string | 单据状态
+| transfer_amount {data-required}| number | 转账金额
+| transfer_remark {data-required}| string | 转账备注
 | fail_reason | string | 失败原因
 | openid | string | 收款用户OpenID
 | user_name | string | 收款用户姓名
-| create_time | string | 单据创建时间
-| update_time | string | 最后一次状态变更时间
+| create_time {data-required}| string | 单据创建时间
+| update_time {data-required}| string | 最后一次状态变更时间
 
 {.im-table #response}
 

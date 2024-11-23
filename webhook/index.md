@@ -63,6 +63,7 @@ head:
 | | [校园轻松付用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY)
 | JSON {rowspan=2} | [教育续费通签约成功通知](/webhook/v3/ENTRUST.SIGNING) {colspan=2}
 | [教育续费通解约成功通知](/webhook/v3/ENTRUST.RELEASE) {colspan=2}
+| JSON {rowspan=1} | [刷脸支付-用户签约状态变更回调通知](/webhook/v3/FACEPAY.USER_STATE_CHANGE) {colspan=2}
 | JSON {rowspan=4} | [停车入场状态变更通知](/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE) {colspan=2}
 | [停车服务订单支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#PARKING) {colspan=2}
 | [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL#PARKING) {colspan=2}

@@ -9,12 +9,12 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-indent=1} | string | 公众账号ID
 | service_id {data-indent=1} | string | 服务ID
 | type {data-indent=1} | string | 场景类型<br/>`Order_Paid` 枚举值
-| detail {data-indent=1} | object | 
+| detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | paid_time {data-indent=2} | string | 
 
 {.im-table #request}
@@ -124,10 +124,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 公众账号ID
-| mchid | string | 商户号
-| out_order_no | string | 商户服务订单号
-| order_id | string | 微信支付服务订单号
+| appid {data-required}| string | 公众账号ID
+| mchid {data-required}| string | 商户号
+| out_order_no {data-required}| string | 商户服务订单号
+| order_id {data-required}| string | 微信支付服务订单号
 
 {.im-table #response}
 

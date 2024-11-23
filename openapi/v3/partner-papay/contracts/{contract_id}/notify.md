@@ -9,17 +9,17 @@ description: 商户进行委托代扣扣费前需要在可通知时间段内调�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 委托代扣协议id
-| json | object | 声明请求的`JSON`数据结构
-| sp_mchid {data-indent=1} | string | 服务商商户号
-| sp_appid {data-indent=1} | string | 服务商应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
+| contract_id {data-required} | string | 委托代扣协议id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_mchid {data-required data-indent=1} | string | 服务商商户号
+| sp_appid {data-required data-indent=1} | string | 服务商应用ID
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户应用D
-| deduct_duration {data-indent=1} | object | 扣费持续时间
-| count {data-indent=2} | number | 扣费持续时间数
+| deduct_duration {data-indent=1} | object {data-tooltip="对应PHP的array"} | 扣费持续时间
+| count {data-required data-indent=2} | number | 扣费持续时间数
 | unit {data-indent=2} | string | 单位
-| estimated_amount {data-indent=1} | object | 预计扣费金额信息
-| amount {data-indent=2} | number | 预计扣费金额
+| estimated_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 预计扣费金额信息
+| amount {data-required data-indent=2} | number | 预计扣费金额
 | currency {data-indent=2} | string | 预计扣费货币类型
 
 {.im-table #request}

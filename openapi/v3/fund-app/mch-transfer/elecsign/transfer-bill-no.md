@@ -9,8 +9,8 @@ description: 商户可以 指定微信转账单号通过该接口申请 **商家
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| transfer_bill_no {data-indent=1} | string | 微信转账单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| transfer_bill_no {data-required data-indent=1} | string | 微信转账单号
 
 {.im-table #request}
 
@@ -83,8 +83,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| state | string | 申请单状态
-| create_time | string | 申请单创建时间
+| state {data-required}| string | 申请单状态
+| create_time {data-required}| string | 申请单创建时间
 
 {.im-table #response}
 

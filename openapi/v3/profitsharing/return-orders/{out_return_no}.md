@@ -9,10 +9,10 @@ description: 商户需要核实回退结果，可调用此接口查询回退结�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_return_no | string | 商户回退单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号
-| out_order_no {data-indent=1} | string | 商户分账单号
+| out_return_no {data-required} | string | 商户回退单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| out_order_no {data-required data-indent=1} | string | 商户分账单号
 
 {.im-table #request}
 
@@ -98,17 +98,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| order_id | string | 微信分账单号
-| out_order_no | string | 商户分账单号
-| out_return_no | string | 商户回退单号
-| return_id | string | 微信回退单号
-| return_mchid | string | 回退商户号
-| amount | integer | 回退金额
-| description | string | 回退描述
-| result | string | 回退结果
+| order_id {data-required}| string | 微信分账单号
+| out_order_no {data-required}| string | 商户分账单号
+| out_return_no {data-required}| string | 商户回退单号
+| return_id {data-required}| string | 微信回退单号
+| return_mchid {data-required}| string | 回退商户号
+| amount {data-required}| integer | 回退金额
+| description {data-required}| string | 回退描述
+| result {data-required}| string | 回退结果
 | fail_reason | string | 失败原因
-| create_time | string | 创建时间
-| finish_time | string | 完成时间
+| create_time {data-required}| string | 创建时间
+| finish_time {data-required}| string | 完成时间
 
 {.im-table #response}
 

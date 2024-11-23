@@ -9,26 +9,28 @@ description: 一键绑卡不是支持所有银行卡，上线前请先测试是�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| business_name {data-indent=1} | string | 
-| facepay_user {data-indent=1} | object | 
-| out_user_id {data-indent=2} | string | 
-| identification_name {data-indent=2} | string | 
-| organization_id {data-indent=2} | string | 
-| identification {data-indent=2} | object | 
-| identification_type {data-indent=3} | string | `IDCARD` 枚举值
-| identification_number {data-indent=3} | string | 
-| phone {data-indent=2} | string | 
-| limit_bank_card {data-indent=1} | object | 
-| bank_card_number {data-indent=2} | string | 
-| identification_name {data-indent=2} | string | 
-| identification {data-indent=2} | object | 
-| identification_type {data-indent=3} | string | `IDCARD` 枚举值
-| identification_number {data-indent=3} | string | 
-| valid_thru {data-indent=2} | string | 
-| bank_type {data-indent=2} | string | 
-| phone {data-indent=2} | string | 
-| contract_mode {data-indent=1} | string | `LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| business_name {data-required data-indent=1} | string | 业务类型
+| facepay_user {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 刷脸用户信息
+| out_user_id {data-required data-indent=2} | string | 商户用户ID
+| identification_name {data-indent=2} | string | 刷脸用户名
+| organization_id {data-required data-indent=2} | string | 机构ID
+| identification {data-indent=2} | object {data-tooltip="对应PHP的array"} | 证件信息
+| identification_type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
+| identification_number {data-required data-indent=3} | string | 证件ID
+| phone {data-indent=2} | string | 手机号码
+| limit_bank_card {data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约指定银行卡
+| bank_card_number {data-indent=2} | string | 银行卡号
+| identification_name {data-indent=2} | string | 开卡人姓名
+| identification {data-indent=2} | object {data-tooltip="对应PHP的array"} | 开卡人证件
+| identification_type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
+| identification_number {data-required data-indent=3} | string | 证件ID
+| valid_thru {data-indent=2} | string | 银行卡有效期
+| bank_type {data-indent=2} | string | 银行类型
+| phone {data-indent=2} | string | 开卡预留手机号
+| contract_mode {data-indent=1} | string | 签约模式<br/>`LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -60,6 +62,9 @@ $instance->v3->offlineface->contracts->presign->postAsync([
       'phone' => '',
     ],
     'contract_mode' => 'LIMIT_BANK_CARD',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,6 +100,9 @@ $instance->chain('v3/offlineface/contracts/presign')->postAsync([
     ],
     'contract_mode' => 'LIMIT_BANK_CARD',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -128,6 +136,9 @@ $instance['v3/offlineface/contracts/presign']->postAsync([
       'phone' => '',
     ],
     'contract_mode' => 'LIMIT_BANK_CARD',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -163,6 +174,9 @@ $response = $instance->v3->offlineface->contracts->presign->post([
     ],
     'contract_mode' => 'LIMIT_BANK_CARD',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -193,6 +207,9 @@ $response = $instance->chain('v3/offlineface/contracts/presign')->post([
       'phone' => '',
     ],
     'contract_mode' => 'LIMIT_BANK_CARD',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -225,6 +242,9 @@ $response = $instance['v3/offlineface/contracts/presign']->post([
     ],
     'contract_mode' => 'LIMIT_BANK_CARD',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -233,7 +253,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| presign_token | string | 
+| presign_token {data-required}| string | 会话ID
 
 {.im-table #response}
 

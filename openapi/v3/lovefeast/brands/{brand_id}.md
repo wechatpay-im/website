@@ -9,7 +9,7 @@ description: 商户根据品牌ID查询爱心餐品牌的捐赠与供餐信息�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
+| brand_id {data-required} | string | 品牌ID
 
 {.im-table #request}
 
@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| donate_count | number | 捐赠数量
-| consume_count | number | 供餐数量
+| donate_count {data-required}| number | 捐赠数量
+| consume_count {data-required}| number | 供餐数量
 
 {.im-table #response}
 

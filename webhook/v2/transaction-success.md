@@ -16,30 +16,30 @@ description: 当收到通知进行处理时，首先检查对应业务数据的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers | object | 通知的头参数
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Content-Type {data-indent=1} | string | `text/xml`
-| body | object | 通知的`XML`数据结构
-| appid {data-indent=1} | string |
-| attach {data-indent=1} | string |
-| bank_type {data-indent=1} | string |
-| fee_type {data-indent=1} | string |
-| is_subscribe {data-indent=1} | string |
-| mch_id {data-indent=1} | string | 商户号
-| nonce_str {data-indent=1} | string |
-| openid {data-indent=1} | string |
-| out_trade_no {data-indent=1} | string |
-| result_code {data-indent=1} | string |
-| return_code {data-indent=1} | string |
-| sign {data-indent=1} | string |
-| time_end {data-indent=1} | string |
-| total_fee {data-indent=1} | string |
-| coupon_fee {data-indent=1} | string |
-| coupon_count {data-indent=1} | string |
-| coupon_type {data-indent=1} | string |
-| coupon_id {data-indent=1} | string |
-| trade_type {data-indent=1} | string |
-| transaction_id {data-indent=1} | string |
+| headers {data-required} | object | 通知的头参数
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Content-Type {data-required data-indent=1} | string | `text/xml`
+| body {data-required} | object | 通知的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众平台APPID
+| attach {data-indent=1} | string | 商家数据包
+| bank_type {data-required data-indent=1} | string | 付款银行
+| fee_type {data-indent=1} | string | 货币种类
+| is_subscribe {data-required data-indent=1} | string | 是否关注公众账号
+| mch_id {data-required data-indent=1} | string | 商户号
+| nonce_str {data-required data-indent=1} | string | 随机字符串
+| openid {data-required data-indent=1} | string | 用户标识
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| result_code {data-required data-indent=1} | string | 业务结果
+| return_code {data-required data-indent=1} | string | 返回状态码
+| sign {data-required data-indent=1} | string | 签名
+| time_end {data-indent=1} | string | 支付完成时间
+| total_fee {data-required data-indent=1} | string | 标价金额
+| coupon_fee {data-indent=1} | string | 总代金券金额
+| coupon_count {data-indent=1} | string | 代金券使用数量
+| coupon_type_$n {data-indent=1} | string | 代金券类型
+| coupon_id_$n {data-indent=1} | string | 代金券ID
+| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
+| transaction_id {data-required data-indent=1} | string | 微信支付订单号
 
 {.im-table #request}
 

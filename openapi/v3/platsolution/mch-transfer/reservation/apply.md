@@ -9,27 +9,27 @@ description: 商户可调用接口预先指定转账的单次计划，预创建�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| sp_appid {data-indent=1} | string | 服务商AppID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| sp_appid {data-required data-indent=1} | string | 服务商AppID
 | sub_appid {data-indent=1} | string | 二级商户AppID
-| out_reservation_no {data-indent=1} | string | 商户预约单号
-| transfer_scene_id {data-indent=1} | string | 转账场景ID
-| estimated_date {data-indent=1} | string | 预计最晚转账日期
+| out_reservation_no {data-required data-indent=1} | string | 商户预约单号
+| transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
+| estimated_date {data-required data-indent=1} | string | 预计最晚转账日期
 | estimated_max_amount {data-indent=1} | number | 预计最大转账金额
 | exact_amount {data-indent=1} | number | 准确转账金额
 | openid {data-indent=1} | string | 收款用户OpenID
 | user_real_name {data-indent=1} | string | 收款用户姓名
-| reserve_remark {data-indent=1} | string | 预约备注
-| notify_url {data-indent=1} | string | 商户回调地址
-| scene_report_data {data-indent=1} | object | 场景报备信息
-| insurance_policy {data-indent=2} | object | 保险保单报备信息
-| product_registration_no {data-indent=3} | string | 保险产品备案编号
-| policy_no {data-indent=3} | string | 保险单号
-| name {data-indent=3} | string | 保险名称
+| reserve_remark {data-required data-indent=1} | string | 预约备注
+| notify_url {data-required data-indent=1} | string | 商户回调地址
+| scene_report_data {data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景报备信息
+| insurance_policy {data-indent=2} | object {data-tooltip="对应PHP的array"} | 保险保单报备信息
+| product_registration_no {data-required data-indent=3} | string | 保险产品备案编号
+| policy_no {data-required data-indent=3} | string | 保险单号
+| name {data-required data-indent=3} | string | 保险名称
 | withdrawal_no {data-indent=3} | string | 取现单号
 | claim_no {data-indent=3} | string | 理赔单号
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -241,12 +241,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| out_reservation_no | string | 商户预约单号
-| reservation_id | string | 微信转账预约单号
-| accept_time | string | 预约记录受理时间
-| state | string | 预约记录状态<br/>`ACCEPTED` \| `CONFIRMED` \| `CLOSED` 枚举值之一
-| package_info | string | 跳转微信支付用户确认预约页的package信息
+| sub_mchid {data-required}| string | 二级商户号
+| out_reservation_no {data-required}| string | 商户预约单号
+| reservation_id {data-required}| string | 微信转账预约单号
+| accept_time {data-required}| string | 预约记录受理时间
+| state {data-required}| string | 预约记录状态<br/>`ACCEPTED` \| `CONFIRMED` \| `CLOSED` 枚举值之一
+| package_info {data-required}| string | 跳转微信支付用户确认预约页的package信息
 
 {.im-table #response}
 

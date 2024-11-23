@@ -9,9 +9,9 @@ description: 商户可通过调用此接口查询订单剩余待分金额。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 商户号
-| transaction_id {data-indent=1} | string | 微信订单号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 商户号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
 | sign_type {data-indent=1} | string | 签名类型
 
 {.im-table #request}
@@ -97,10 +97,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
 | mch_id | string | 商户号
-| transaction_id | string | 微信订单号
+| transaction_id {data-required}| string | 微信订单号
 | unsplit_amount | integer | 订单剩余待分金额
 | nonce_str | string | 随机字符串
 | sign | string | 签名

@@ -9,21 +9,21 @@ description: 商户系统请求支付分系统，下发服务费用待处理消�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| post_payments {data-indent=1} | object[] | 后付费项目
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| post_payments {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=2} | string | 付费名称
 | amount {data-indent=2} | number | 付费金额
 | description {data-indent=2} | string | 付费说明
 | count {data-indent=2} | number | 付费数量
-| post_discounts {data-indent=1} | object[] | 商户优惠
+| post_discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商户优惠
 | name {data-indent=2} | string | 优惠名称
 | description {data-indent=2} | string | 优惠说明
 | amount {data-indent=2} | number | 优惠金额
 | count {data-indent=2} | number | 优惠数量
-| total_amount {data-indent=1} | number | 总金额
-| prepaid_time {data-indent=1} | string | 预计扣费时间
+| total_amount {data-required data-indent=1} | number | 总金额
+| prepaid_time {data-required data-indent=1} | string | 预计扣费时间
 
 {.im-table #request}
 

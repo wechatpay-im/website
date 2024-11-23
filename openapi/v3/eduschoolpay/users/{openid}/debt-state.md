@@ -9,7 +9,7 @@ description: 商户通过调用该接口可主动查询微信用户的欠款状�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 商户appid下的用户标识
+| openid {data-required} | string | 商户appid下的用户标识
 
 {.im-table #request}
 
@@ -70,11 +70,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 商户appid
-| openid | string | 商户appid下的用户标识
-| state | string | 用户状态
-| debt_count | integer | 当前用户欠款笔数
-| update_time | string | 用户欠款状态更新时间
+| appid {data-required}| string | 商户appid
+| openid {data-required}| string | 商户appid下的用户标识
+| state {data-required}| string | 用户状态
+| debt_count {data-required}| integer | 当前用户欠款笔数
+| update_time {data-required}| string | 用户欠款状态更新时间
 
 {.im-table #response}
 

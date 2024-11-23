@@ -9,7 +9,7 @@ description: 商户可以通过该接口发起免密的合单查询
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| combine_out_trade_no | string | 合单商户订单号
+| combine_out_trade_no {data-required} | string | 合单商户订单号
 
 {.im-table #request}
 
@@ -70,27 +70,27 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| combine_appid | string | 合单商户APPID
-| combine_mchid | string | 合单商户号
-| combine_out_trade_no | string | 合单商户订单号
-| sub_orders | object[] | 子单信息
-| mchid {data-indent=1} | string | 子单商户号
-| trade_type {data-indent=1} | string | 交易类型
-| trade_state {data-indent=1} | string | 交易状态
+| combine_appid {data-required}| string | 合单商户APPID
+| combine_mchid {data-required}| string | 合单商户号
+| combine_out_trade_no {data-required}| string | 合单商户订单号
+| sub_orders | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| mchid {data-required data-indent=1} | string | 子单商户号
+| trade_type {data-required data-indent=1} | string | 交易类型
+| trade_state {data-required data-indent=1} | string | 交易状态
 | bank_type {data-indent=1} | string | 付款银行
 | attach {data-indent=1} | string | 附加数据
 | success_time {data-indent=1} | string | 支付完成时间
-| transaction_id {data-indent=1} | string | 子单微信订单号
-| out_trade_no {data-indent=1} | string | 子单商户订单号
-| sub_mchid {data-indent=1} | string | 二级商户号
+| transaction_id {data-required data-indent=1} | string | 子单微信订单号
+| out_trade_no {data-required data-indent=1} | string | 子单商户订单号
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 | sub_appid {data-indent=1} | string | 二级商户appid
-| amount {data-indent=1} | object | 订单金额
-| total_amount {data-indent=2} | integer | 标价金额
-| currency {data-indent=2} | string | 标价币种
+| amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total_amount {data-required data-indent=2} | integer | 标价金额
+| currency {data-required data-indent=2} | string | 标价币种
 | payer_amount {data-indent=2} | integer | 现金支付金额
 | payer_currency {data-indent=2} | string | 现金支付币种
-| combine_payer_info | object | 支付者
-| openid {data-indent=1} | string | 用户标识
+| combine_payer_info | object {data-tooltip="对应PHP的array"} | 支付者
+| openid {data-required data-indent=1} | string | 用户标识
 
 {.im-table #response}
 

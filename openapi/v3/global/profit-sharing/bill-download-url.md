@@ -10,7 +10,7 @@ description: 微信支付按天提供分账账单文件，商户可以通过该�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| query | object | 声明请求的查询参数
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
 | bill_date {data-indent=1} | string | 账单日期
 
@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| download_url | string | 下载地址
+| download_url {data-required}| string | 下载地址
 
 {.im-table #response}
 

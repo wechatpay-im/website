@@ -9,13 +9,13 @@ description: 商户调此接口，若已设置支付后展示积分，且该笔�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡模板id
-| code | string | 会员卡code
-| json | object | 声明请求的`JSON`数据结构
-| out_trade_no {data-indent=1} | string | 商户订单号
-| mchid {data-indent=1} | string | 直连商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| bonus_value {data-indent=1} | integer | 会员积分值
+| card_id {data-required} | string | 会员卡模板id
+| code {data-required} | string | 会员卡code
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| mchid {data-required data-indent=1} | string | 直连商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| bonus_value {data-required data-indent=1} | integer | 会员积分值
 
 {.im-table #request}
 

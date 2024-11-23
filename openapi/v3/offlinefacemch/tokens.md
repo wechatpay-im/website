@@ -9,9 +9,9 @@ description: 指定银行卡签约，用户签约时携带的token请使用预�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | scene {data-indent=1} | string | 使用场景
-| web_init_data {data-indent=1} | object | 
+| web_init_data {data-indent=1} | object {data-tooltip="对应PHP的array"} | 小程序/h5鉴权场景初始化数据
 | out_user_id {data-indent=2} | string | 商户刷脸用户ID
 | organization_id {data-indent=2} | string | 机构ID
 
@@ -110,7 +110,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| token | string | 
+| token | string | 授权凭证
 
 {.im-table #response}
 

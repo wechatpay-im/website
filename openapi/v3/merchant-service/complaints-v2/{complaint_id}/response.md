@@ -9,17 +9,17 @@ description: 商户可通过调用此接口，提交回复内容。其中上传�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| complaint_id | string | 投诉单号
-| json | object | 声明请求的`JSON`数据结构
-| complainted_mchid {data-indent=1} | string | 被诉商户号
-| response_content {data-indent=1} | string | 回复内容
+| complaint_id {data-required} | string | 投诉单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| complainted_mchid {data-required data-indent=1} | string | 被诉商户号
+| response_content {data-required data-indent=1} | string | 回复内容
 | response_images {data-indent=1} | string[] | 回复图片
 | jump_url {data-indent=1} | string | 跳转链接
 | jump_url_text {data-indent=1} | string | 跳转链接文案
-| mini_program_jump_info {data-indent=1} | object | 跳转小程序信息
-| appid {data-indent=2} | string | 跳转小程序APPID
-| path {data-indent=2} | string | 跳转小程序页面PATH
-| text {data-indent=2} | string | 跳转小程序页面名称
+| mini_program_jump_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
+| appid {data-required data-indent=2} | string | 跳转小程序APPID
+| path {data-required data-indent=2} | string | 跳转小程序页面PATH
+| text {data-required data-indent=2} | string | 跳转小程序页面名称
 
 {.im-table #request}
 

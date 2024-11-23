@@ -9,13 +9,13 @@ description: 订单发送退款的时候，可以对补贴成功的补差单发�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| out_order_no {data-indent=1} | string | 商户补差回退单号
-| transaction_id {data-indent=1} | string | 微信订单号
-| refund_id {data-indent=1} | string | 微信退款单号
-| amount {data-indent=1} | integer | 补差回退金额
-| description {data-indent=1} | string | 补差回退描述
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| out_order_no {data-required data-indent=1} | string | 商户补差回退单号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| refund_id {data-required data-indent=1} | string | 微信退款单号
+| amount {data-required data-indent=1} | integer | 补差回退金额
+| description {data-required data-indent=1} | string | 补差回退描述
 
 {.im-table #request}
 
@@ -118,15 +118,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| transaction_id | string | 微信订单号
-| subsidy_refund_id | string | 微信补差回退单号
-| refund_id | string | 微信退款单号
-| out_order_no | string | 商户补差回退单号
-| amount | integer | 补差回退金额
-| description | string | 补差回退描述
-| result | string | 补差回退结果
-| success_time | string | 补差回退完成时间
+| sub_mchid {data-required}| string | 二级商户号
+| transaction_id {data-required}| string | 微信订单号
+| subsidy_refund_id {data-required}| string | 微信补差回退单号
+| refund_id {data-required}| string | 微信退款单号
+| out_order_no {data-required}| string | 商户补差回退单号
+| amount {data-required}| integer | 补差回退金额
+| description {data-required}| string | 补差回退描述
+| result {data-required}| string | 补差回退结果
+| success_time {data-required}| string | 补差回退完成时间
 
 {.im-table #response}
 

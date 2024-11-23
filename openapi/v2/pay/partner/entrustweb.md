@@ -9,7 +9,7 @@ description: 商户可以通过请求此接口唤起微信委托代扣的页面�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | appid {data-indent=1} | string | 应用ID
 | mch_id {data-indent=1} | string | 商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID

@@ -9,10 +9,10 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 服务商号
-| sub_mch_id {data-indent=1} | string | 商户ID
-| event_code {data-indent=1} | string | 事件单号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 服务商号
+| sub_mch_id {data-required data-indent=1} | string | 商户ID
+| event_code {data-required data-indent=1} | string | 事件单号
 | certificates_number {data-indent=1} | string | 身份证号（需加密）
 | certificates_name {data-indent=1} | string | 身份证所有人姓名（需加密）
 | settlement_card_no {data-indent=1} | string | 结算账号（需加密）
@@ -23,10 +23,10 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 | store_address {data-indent=1} | string | 门店地址
 | store_longitude {data-indent=1} | string | 门店经度
 | store_latitude {data-indent=1} | string | 门店纬度
-| risk_type {data-indent=1} | string | 风险类型
-| punish_type {data-indent=1} | string | 处罚方式
-| sign_type {data-indent=1} | string | 签名类型
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| risk_type {data-required data-indent=1} | string | 风险类型
+| punish_type {data-required data-indent=1} | string | 处罚方式
+| sign_type {data-required data-indent=1} | string | 签名类型
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -195,9 +195,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
 

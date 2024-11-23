@@ -9,9 +9,9 @@ description: 查询对私银行卡号对应的开户银行信息（仅支持部�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| account_number {data-indent=1} | string | 银行卡号
-| headers | object | 声明请求的头参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| account_number {data-required data-indent=1} | string | 银行卡号
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -103,13 +103,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count | integer | 查询数据总条数
-| data | object[] | 银行列表
-| bank_alias {data-indent=1} | string | 银行别名
-| bank_alias_code {data-indent=1} | string | 银行别名编码
-| account_bank {data-indent=1} | string | 开户银行
-| account_bank_code {data-indent=1} | integer | 开户银行编码
-| need_bank_branch {data-indent=1} | boolean | 是否需要填写支行
+| total_count {data-required}| integer | 查询数据总条数
+| data | object[] {data-tooltip="对应PHP的array"} | 银行列表
+| bank_alias {data-required data-indent=1} | string | 银行别名
+| bank_alias_code {data-required data-indent=1} | string | 银行别名编码
+| account_bank {data-required data-indent=1} | string | 开户银行
+| account_bank_code {data-required data-indent=1} | integer | 开户银行编码
+| need_bank_branch {data-required data-indent=1} | boolean | 是否需要填写支行
 
 {.im-table #response}
 

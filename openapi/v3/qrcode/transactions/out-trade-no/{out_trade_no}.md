@@ -9,8 +9,8 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_trade_no | string | 商户系统内部订单号
-| query | object | 声明请求的查询参数
+| out_trade_no {data-required} | string | 商户系统内部订单号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 微信支付分配的子商户号
 
 {.im-table #request}
@@ -108,17 +108,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | attach | string | 
 | contract_id | string | 
 | trade_scene | string | 
-| bus_info | object | 
+| bus_info | object {data-tooltip="对应PHP的array"} | 
 | start_time {data-indent=1} | string | 用户乘车时间（上车）
 | line_name {data-indent=1} | string | 乘车路线
 | plate_number {data-indent=1} | string | 车牌号。
-| metro_info | object | 
+| metro_info | object {data-tooltip="对应PHP的array"} | 
 | start_time {data-indent=1} | string | 用户乘车时间（上车）
 | end_time {data-indent=1} | string | 用户下车时间
 | start_station {data-indent=1} | string | 乘车起始站
 | end_station {data-indent=1} | string | 乘车终点站
-| amount | object | 
-| promotion_detail | object[] | 
+| amount | object {data-tooltip="对应PHP的array"} | 
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 
 | coupon_id {data-indent=1} | string | 
 | name {data-indent=1} | string | 
 | scope {data-indent=1} | string | `GLOBAL` \| `SINGLE` 枚举值之一

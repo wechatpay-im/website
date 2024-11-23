@@ -9,7 +9,7 @@ description: 可调用此接口查询特约商户设置的允许服务商分账�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
+| sub_mchid {data-required} | string | 子商户号
 
 {.im-table #request}
 
@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
-| max_ratio | integer | 最大分账比例
+| sub_mchid {data-required}| string | 子商户号
+| max_ratio {data-required}| integer | 最大分账比例
 
 {.im-table #response}
 

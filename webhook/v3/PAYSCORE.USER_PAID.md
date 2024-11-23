@@ -1,5 +1,5 @@
 ---
-title: 支付分服务用户支付成功通知(JSON)
+title: 支付分服务用户支付成功(PAYSCORE.USER_PAID)通知(JSON)
 description: 支付分服务用户支付成功通知
 ---
 
@@ -16,41 +16,41 @@ description: 支付分服务用户支付成功通知
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_PAID` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_PAID` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| service_id {data-indent=3} | string | 调用授权服务接口提交的服务ID。
-| appid {data-indent=3} | string | 调用授权服务接口提交的应用ID。
-| mchid {data-indent=3} | string | 调用授权服务接口提交的商户号。
+| service_id {data-required data-indent=3} | string | 调用授权服务接口提交的服务ID。
+| appid {data-required data-indent=3} | string | 调用授权服务接口提交的应用ID。
+| mchid {data-required data-indent=3} | string | 调用授权服务接口提交的商户号。
 | sub_appid {data-indent=3} | string | 子商户应用ID
-| sub_mchid {data-indent=3} | string | 子商户商户号
+| sub_mchid {data-required data-indent=3} | string | 子商户商户号
 | channel_id {data-indent=3} | string | 调用创单接口时传入的渠道商商户号
-| out_order_no {data-indent=3} | string | 商户服务订单号
-| out_trade_no {data-indent=3} | string | 商户系统内部扣款单号
-| openid {data-indent=3} | string | 微信用户在商户对应AppID下的唯一标识。
+| out_order_no {data-required data-indent=3} | string | 商户服务订单号
+| out_trade_no {data-required data-indent=3} | string | 商户系统内部扣款单号
+| openid {data-required data-indent=3} | string | 微信用户在商户对应AppID下的唯一标识。
 | sub_openid {data-indent=3} | string | 子商户公众号下的用户标识
-| state {data-indent=3} | string | 服务订单状态
-| service_introduction {data-indent=3} | string | 服务信息
+| state {data-required data-indent=3} | string | 服务订单状态
+| service_introduction {data-required data-indent=3} | string | 服务信息
 | total_amount {data-indent=3} | number | 商户收款总金额
-| post_payments {data-indent=3} | object[] | 后付费项目
+| post_payments {data-required data-indent=3} | object[] | 后付费项目
 | name {data-indent=4} | string | 付费项目名称
 | amount {data-indent=4} | number | 金额
 | description {data-indent=4} | string | 计费说明
@@ -59,11 +59,11 @@ description: 支付分服务用户支付成功通知
 | name {data-indent=4} | string | 优惠名称
 | description {data-indent=4} | string | 优惠说明
 | amount {data-indent=4} | number | 优惠金额
-| risk_fund {data-indent=3} | object | 订单风险金
-| amount {data-indent=4} | number | 风险金额
+| risk_fund {data-required data-indent=3} | object | 订单风险金
+| amount {data-required data-indent=4} | number | 风险金额
 | description {data-indent=4} | string | 风险说明
-| time_range {data-indent=3} | object | 服务时间段
-| start_time {data-indent=4} | string | 服务开始时间
+| time_range {data-required data-indent=3} | object | 服务时间段
+| start_time {data-required data-indent=4} | string | 服务开始时间
 | start_time_remark {data-indent=4} | string | 服务开始时间备注
 | end_time {data-indent=4} | string | 服务结束时间
 | end_time_remark {data-indent=4} | string | 服务结束时间备注
@@ -74,29 +74,29 @@ description: 支付分服务用户支付成功通知
 | order_id {data-indent=3} | string | 微信支付服务订单号
 | need_collection {data-indent=3} | boolean | 是否需要收款
 | collection {data-indent=3} | object | 收款信息
-| state {data-indent=4} | string | 收款状态
-| total_amount {data-indent=4} | number | 总收款金额
-| paying_amount {data-indent=4} | number | 待收金额
-| paid_amount {data-indent=4} | number | 已收金额
+| state {data-required data-indent=4} | string | 收款状态
+| total_amount {data-required data-indent=4} | number | 总收款金额
+| paying_amount {data-required data-indent=4} | number | 待收金额
+| paid_amount {data-required data-indent=4} | number | 已收金额
 | details {data-indent=4} | object[] | 收款明细列表
 | seq {data-indent=5} | number | 收款序号
-| amount {data-indent=5} | number | 单笔收款金额
+| amount {data-required data-indent=5} | number | 单笔收款金额
 | paid_type {data-indent=5} | string | 收款成功渠道
-| paid_time {data-indent=5} | string | 收款成功时间
+| paid_time {data-required data-indent=5} | string | 收款成功时间
 | transaction_id {data-indent=5} | string | 微信支付交易单号
 | promotion_detail {data-indent=5} | object[] | 优惠功能
-| coupon_id {data-indent=6} | string | 券ID
+| coupon_id {data-required data-indent=6} | string | 券ID
 | name {data-indent=6} | string | 优惠名称
 | scope {data-indent=6} | string | 优惠范围
 | type {data-indent=6} | string | 优惠类型
-| amount {data-indent=6} | number | 优惠券面额
+| amount {data-required data-indent=6} | number | 优惠券面额
 | stock_id {data-indent=6} | string | 活动ID
 | wechatpay_contribute {data-indent=6} | number | 微信出资
 | merchant_contribute {data-indent=6} | number | 商户出资
 | other_contribute {data-indent=6} | number | 其他出资
 | currency {data-indent=6} | string | 优惠币种
 | goods_detail {data-indent=6} | object[] | 单品列表
-| goods_id {data-indent=7} | string | 商品编码
+| goods_id {data-required data-indent=7} | string | 商品编码
 | quantity {data-indent=7} | number | 商品数量
 | unit_price {data-indent=7} | number | 商品价格
 | discount_amount {data-indent=7} | number | 商品优惠金额

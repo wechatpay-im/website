@@ -57,10 +57,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 省份列表
-| province_name {data-indent=1} | string | 省份名称
-| province_code {data-indent=1} | integer | 省份编码
-| total_count | integer | 查询数据总条数
+| data | object[] {data-tooltip="对应PHP的array"} | 省份列表
+| province_name {data-required data-indent=1} | string | 省份名称
+| province_code {data-required data-indent=1} | integer | 省份编码
+| total_count {data-required}| integer | 查询数据总条数
 
 {.im-table #response}
 

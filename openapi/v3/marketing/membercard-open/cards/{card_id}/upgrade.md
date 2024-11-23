@@ -9,10 +9,10 @@ description: 商户可调用此api将微信公众平台创建微信会员卡升�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| json | object | 声明请求的`JSON`数据结构
-| brand_id {data-indent=1} | string | 品牌id
-| appid {data-indent=1} | string | 商户AppId
+| card_id {data-required} | string | 会员卡id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| brand_id {data-required data-indent=1} | string | 品牌id
+| appid {data-required data-indent=1} | string | 商户AppId
 
 {.im-table #request}
 

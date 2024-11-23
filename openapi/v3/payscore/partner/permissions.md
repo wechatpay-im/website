@@ -9,12 +9,12 @@ description: 商户预授权
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| appid {data-indent=1} | string | 服务商应用ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| appid {data-required data-indent=1} | string | 服务商应用ID
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
-| authorization_code {data-indent=1} | string | 授权协议号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| authorization_code {data-required data-indent=1} | string | 授权协议号
 | notify_url {data-indent=1} | string | 商户回调地址
 
 {.im-table #request}
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| apply_permissions_token | string | 预授权token
+| apply_permissions_token {data-required}| string | 预授权token
 
 {.im-table #response}
 

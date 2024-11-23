@@ -9,8 +9,8 @@ description: 直连商户可通过本接口查询已经签订的委托代扣签�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_contract_code | string | 商户签约协议号
-| plan_id | number | 委托代扣模板ID
+| out_contract_code {data-required} | string | 商户签约协议号
+| plan_id {data-required} | number | 委托代扣模板ID
 
 {.im-table #request}
 
@@ -77,32 +77,32 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
-| contract_id | string | 委托代扣协议ID
-| appid | string | 商户AppID
-| plan_id | number | 委托代扣模板ID
-| out_contract_code | string | 商户签约协议号
-| contract_display_account | string | 用户账户展示名称
-| contract_state | string | 委托代扣协议状态
+| mchid {data-required}| string | 商户号
+| contract_id {data-required}| string | 委托代扣协议ID
+| appid {data-required}| string | 商户AppID
+| plan_id {data-required}| number | 委托代扣模板ID
+| out_contract_code {data-required}| string | 商户签约协议号
+| contract_display_account {data-required}| string | 用户账户展示名称
+| contract_state {data-required}| string | 委托代扣协议状态
 | contract_signed_time | string | 协议签署时间
 | contract_expired_time | string | 协议到期时间
-| openid | string | 用户OpenID
-| contract_terminate_info | object | 协议解约信息
-| contract_termination_mode {data-indent=1} | string | 协议解约方式
-| contract_terminated_time {data-indent=1} | string | 协议解约时间
+| openid {data-required}| string | 用户OpenID
+| contract_terminate_info | object {data-tooltip="对应PHP的array"} | 协议解约信息
+| contract_termination_mode {data-required data-indent=1} | string | 协议解约方式
+| contract_terminated_time {data-required data-indent=1} | string | 协议解约时间
 | contract_termination_remark {data-indent=1} | string | 解约备注
 | out_user_code | string | 商户侧用户标识
-| deduct_schedule | object | 预约扣费场景的预约信息
-| estimated_deduct_date {data-indent=1} | string | 预计扣费的日期
-| estimated_deduct_amount {data-indent=1} | object | 预计的扣费金额
-| total {data-indent=2} | number | 金额
+| deduct_schedule | object {data-tooltip="对应PHP的array"} | 预约扣费场景的预约信息
+| estimated_deduct_date {data-required data-indent=1} | string | 预计扣费的日期
+| estimated_deduct_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 预计的扣费金额
+| total {data-required data-indent=2} | number | 金额
 | currency {data-indent=2} | string | 货币类型
-| schedule_state {data-indent=1} | string | 扣费预约状态
-| scheduled_amount {data-indent=1} | object | 已预约的扣费金额信息
-| total {data-indent=2} | number | 金额
+| schedule_state {data-required data-indent=1} | string | 扣费预约状态
+| scheduled_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息
+| total {data-required data-indent=2} | number | 金额
 | currency {data-indent=2} | string | 货币类型
-| deduct_amount {data-indent=1} | object | 实际扣费金额
-| total {data-indent=2} | number | 金额
+| deduct_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际扣费金额
+| total {data-required data-indent=2} | number | 金额
 | currency {data-indent=2} | string | 货币类型
 | deduct_date {data-indent=1} | string | 实际扣费的日期
 

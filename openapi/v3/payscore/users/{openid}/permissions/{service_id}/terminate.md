@@ -9,12 +9,12 @@ description: 商户通过调用该接口，可主动与用户解除此前授权�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| reason {data-indent=1} | string | 撤销原因
-| query | object | 声明请求的查询参数
-| openid {data-indent=1} | string | 用户标识
-| service_id {data-indent=1} | string | 公众账号ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| reason {data-required data-indent=1} | string | 撤销原因
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| openid {data-required data-indent=1} | string | 用户标识
+| service_id {data-required data-indent=1} | string | 公众账号ID
 
 {.im-table #request}
 

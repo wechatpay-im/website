@@ -9,7 +9,7 @@ description: 收付通服务商查询子商户的支付分服务绑定结果
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_apply_no | string | 商户申请绑定单号
+| out_apply_no {data-required} | string | 商户申请绑定单号
 
 {.im-table #request}
 
@@ -70,14 +70,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| service_id | string | 服务ID
-| mchid | string | 服务商商户号
-| appid | string | 服务商应用ID
-| sub_mchid | string | 子商户商户号
+| service_id {data-required}| string | 服务ID
+| mchid {data-required}| string | 服务商商户号
+| appid {data-required}| string | 服务商应用ID
+| sub_mchid {data-required}| string | 子商户商户号
 | sub_appid | string | 子商户应用ID
-| out_apply_no | string | 申请单号
+| out_apply_no {data-required}| string | 申请单号
 | result_notify_url | string | 绑定结果回调通知地址
-| apply_state | string | 受理状态
+| apply_state {data-required}| string | 受理状态
 | reject_reason | string | 拒绝原因
 
 {.im-table #response}

@@ -9,9 +9,9 @@ description: 按商户拉起核身时预下单的单号获取该次微工卡核�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authenticate_number | string | 商家核身单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号
+| authenticate_number {data-required} | string | 商家核身单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 
 {.im-table #request}
 
@@ -90,16 +90,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
-| sub_mchid | string | 子商户号
-| openid | string | 用户标识
-| authenticate_scene | string | 核身渠道
-| authenticate_source | string | 核身渠道标识
-| project_name | string | 项目名称
-| employer_name | string | 单位名称
-| authenticate_state | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
-| authenticate_time | string | 核身时间
-| authenticate_number | string | 商家核身单号
+| mchid {data-required}| string | 商户号
+| sub_mchid {data-required}| string | 子商户号
+| openid {data-required}| string | 用户标识
+| authenticate_scene {data-required}| string | 核身渠道
+| authenticate_source {data-required}| string | 核身渠道标识
+| project_name {data-required}| string | 项目名称
+| employer_name {data-required}| string | 单位名称
+| authenticate_state {data-required}| string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
+| authenticate_time {data-required}| string | 核身时间
+| authenticate_number {data-required}| string | 商家核身单号
 | authenticate_failed_reason | string | 核身失败原因
 
 {.im-table #response}

@@ -9,35 +9,35 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 应用AppID
-| mchid {data-indent=1} | string | 直连商户号
-| description {data-indent=1} | string | 商品描述
-| out_trade_no {data-indent=1} | string | 商户订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 应用AppID
+| mchid {data-required data-indent=1} | string | 直连商户号
+| description {data-required data-indent=1} | string | 商品描述
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | attach {data-indent=1} | string | 附加数据
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | support_fapiao {data-indent=1} | boolean | 电子发票入口开放标识
-| payer {data-indent=1} | object | 支付者
-| auth_code {data-indent=2} | string | 授权码
-| amount {data-indent=1} | object | 订单金额
-| total {data-indent=2} | number | 总金额
+| payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
+| auth_code {data-required data-indent=2} | string | 授权码
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-required data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型
-| scene_info {data-indent=1} | object | 场景信息
+| scene_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
 | device_id {data-indent=2} | string | 商户端设备号
 | device_ip {data-indent=2} | string | 商户端设备 IP
-| store_info {data-indent=2} | object | 商户门店信息
+| store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 商户门店信息
 | id {data-indent=3} | string | 门店编号
 | out_id {data-indent=3} | string | 商家自定义编码
-| detail {data-indent=1} | object | 优惠功能
+| detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | number | 订单原价
 | invoice_id {data-indent=2} | string | 商品小票ID
-| goods_detail {data-indent=2} | object[] | 单品列表
-| merchant_goods_id {data-indent=3} | string | 商品编码
+| goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| merchant_goods_id {data-required data-indent=3} | string | 商品编码
 | wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
 | goods_name {data-indent=3} | string | 商品名称
-| quantity {data-indent=3} | number | 商品数量
-| unit_price {data-indent=3} | number | 商品单价
-| settle_info {data-indent=1} | object | 结算信息
+| quantity {data-required data-indent=3} | number | 商品数量
+| unit_price {data-required data-indent=3} | number | 商品单价
+| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
 | profit_sharing {data-indent=2} | boolean | 是否指定分账
 
 {.im-table #request}
@@ -322,38 +322,38 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | appid | string | 应用AppID
-| mchid | string | 直连商户号
-| out_trade_no | string | 商户订单号
+| mchid {data-required}| string | 直连商户号
+| out_trade_no {data-required}| string | 商户订单号
 | transaction_id | string | 微信支付订单号
 | trade_type | string | 交易类型
 | bank_type | string | 银行类型
 | success_time | string | 支付完成时间
-| trade_state | string | 交易状态
+| trade_state {data-required}| string | 交易状态
 | trade_state_desc | string | 交易状态描述
 | attach | string | 附加数据
-| payer | object | 支付者
+| payer | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=1} | string | 用户标识
-| amount | object | 订单金额
-| total {data-indent=1} | number | 订单金额
+| amount | object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-required data-indent=1} | number | 订单金额
 | payer_total {data-indent=1} | number | 用户支付金额
 | currency {data-indent=1} | string | 订单金额货币类型
 | payer_currency {data-indent=1} | string | 用户支付货币类型
-| promotion_detail | object[] | 优惠信息
-| coupon_id {data-indent=1} | string | 券ID
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠信息
+| coupon_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称
 | scope {data-indent=1} | string | 优惠范围
 | type {data-indent=1} | string | 优惠类型
-| amount {data-indent=1} | number | 优惠券面额
+| amount {data-required data-indent=1} | number | 优惠券面额
 | stock_id {data-indent=1} | string | 活动ID
 | wechatpay_contribute {data-indent=1} | number | 微信出资
 | merchant_contribute {data-indent=1} | number | 商户出资
 | other_contribute {data-indent=1} | number | 其他出资
 | currency {data-indent=1} | string | 优惠货币类型
-| goods_detail {data-indent=1} | object[] | 单品列表
-| goods_id {data-indent=2} | string | 商品编码
-| quantity {data-indent=2} | number | 商品数量
-| unit_price {data-indent=2} | number | 商品单价
-| discount_amount {data-indent=2} | number | 商品优惠金额
+| goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-required data-indent=2} | string | 商品编码
+| quantity {data-required data-indent=2} | number | 商品数量
+| unit_price {data-required data-indent=2} | number | 商品单价
+| discount_amount {data-required data-indent=2} | number | 商品优惠金额
 | goods_remark {data-indent=2} | string | 商品备注
 
 {.im-table #response}

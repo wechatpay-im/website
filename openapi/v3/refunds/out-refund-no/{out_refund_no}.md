@@ -9,9 +9,9 @@ description: 提交退款申请后，通过调用该接口查询退款状态。�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
-| out_refund_no | string | 商户退款订单号
-| query | object | 声明请求的查询参数
+| base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
+| out_refund_no {data-required} | string | 商户退款订单号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | mchid {data-indent=1} | string | 商户号
 | sub_mchid {data-indent=1} | string | 子商户号
 | sp_mchid {data-indent=1} | string | 机构商户号
@@ -111,31 +111,31 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| id | string | 微信支付退款订单号
-| out_refund_no | string | 商户退款单号
-| transaction_id | string | 微信支付交易订单号
-| out_trade_no | string | 商户原交易订单号
+| id {data-required}| string | 微信支付退款订单号
+| out_refund_no {data-required}| string | 商户退款单号
+| transaction_id {data-required}| string | 微信支付交易订单号
+| out_trade_no {data-required}| string | 商户原交易订单号
 | channel | string | 退款渠道
 | recv_account | string | 退款入账账户
 | fund_source | string | 退款资金来源
 | success_time | string | 退款成功时间
-| create_time | string | 退款创建时间
-| status | string | 退款状态
-| amount | object | 退款金额
-| refund {data-indent=1} | integer | 退款金额
+| create_time {data-required}| string | 退款创建时间
+| status {data-required}| string | 退款状态
+| amount {data-required}| object {data-tooltip="对应PHP的array"} | 退款金额
+| refund {data-required data-indent=1} | integer | 退款金额
 | currency {data-indent=1} | string | 货币类型
-| payer_refund {data-indent=1} | integer | 用户退款金额
-| payer_currency {data-indent=1} | string | 支付币种
-| exchange_rate {data-indent=1} | object | 汇率
+| payer_refund {data-required data-indent=1} | integer | 用户退款金额
+| payer_currency {data-required data-indent=1} | string | 支付币种
+| exchange_rate {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 汇率
 | type {data-indent=2} | string | 汇率类型
 | rate {data-indent=2} | integer | 汇率值
-| detail | object | 优惠退款详情
-| promotion_id {data-indent=1} | string | 券ID
+| detail | object {data-tooltip="对应PHP的array"} | 优惠退款详情
+| promotion_id {data-required data-indent=1} | string | 券ID
 | scope {data-indent=1} | string | 优惠范围
 | type {data-indent=1} | string | 优惠类型
 | amount {data-indent=1} | integer | 优惠券面额
 | refund_amount {data-indent=1} | integer | 优惠券退款额
-| currency {data-indent=1} | string | 货币类型
+| currency {data-required data-indent=1} | string | 货币类型
 
 {.im-table #response}
 

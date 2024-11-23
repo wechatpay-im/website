@@ -9,25 +9,25 @@ description: 当用户在商户侧消费时，用户完成了微信先享卡的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_card_code | string | 商户领卡号
-| json | object | 声明请求的`JSON`数据结构
-| card_template_id {data-indent=1} | string | 卡模板ID
-| objective_completion_records {data-indent=1} | object[] | 目标完成记录
-| objective_completion_serial_no {data-indent=2} | string | 目标完成流水号
-| objective_id {data-indent=2} | string | 目标ID
-| completion_time {data-indent=2} | string | 目标完成时间
-| completion_type {data-indent=2} | string | 目标完成类型
-| description {data-indent=2} | string | 目标完成描述
-| completion_count {data-indent=2} | integer | 目标完成数量
+| out_card_code {data-required} | string | 商户领卡号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| card_template_id {data-required data-indent=1} | string | 卡模板ID
+| objective_completion_records {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 目标完成记录
+| objective_completion_serial_no {data-required data-indent=2} | string | 目标完成流水号
+| objective_id {data-required data-indent=2} | string | 目标ID
+| completion_time {data-required data-indent=2} | string | 目标完成时间
+| completion_type {data-required data-indent=2} | string | 目标完成类型
+| description {data-required data-indent=2} | string | 目标完成描述
+| completion_count {data-required data-indent=2} | integer | 目标完成数量
 | remark {data-indent=2} | string | 备注说明
-| reward_usage_records {data-indent=1} | object[] | 优惠使用记录
-| reward_usage_serial_no {data-indent=2} | string | 优惠使用记录流水号
-| reward_id {data-indent=2} | string | 优惠ID
-| usage_time {data-indent=2} | string | 优惠使用时间
-| usage_type {data-indent=2} | string | 优惠使用类型
-| description {data-indent=2} | string | 优惠使用描述
-| usage_count {data-indent=2} | integer | 数量
-| amount {data-indent=2} | integer | 金额
+| reward_usage_records {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 优惠使用记录
+| reward_usage_serial_no {data-required data-indent=2} | string | 优惠使用记录流水号
+| reward_id {data-required data-indent=2} | string | 优惠ID
+| usage_time {data-required data-indent=2} | string | 优惠使用时间
+| usage_type {data-required data-indent=2} | string | 优惠使用类型
+| description {data-required data-indent=2} | string | 优惠使用描述
+| usage_count {data-required data-indent=2} | integer | 数量
+| amount {data-required data-indent=2} | integer | 金额
 | remark {data-indent=2} | string | 备注说明
 
 {.im-table #request}

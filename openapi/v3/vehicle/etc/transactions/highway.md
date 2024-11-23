@@ -9,31 +9,31 @@ description: ETC高速场景订单扣款下单
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_trade_no {data-indent=1} | string | 商户订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | sub_mchid {data-indent=1} | string | 特约商户号
-| appid {data-indent=1} | string | 商户appid
+| appid {data-required data-indent=1} | string | 商户appid
 | sub_appid {data-indent=1} | string | 特约商户appid
-| contract_id {data-indent=1} | string | ETC扣费授权协议号
-| description {data-indent=1} | string | 商品信息
+| contract_id {data-required data-indent=1} | string | ETC扣费授权协议号
+| description {data-required data-indent=1} | string | 商品信息
 | attach {data-indent=1} | string | 附加信息
 | goods_tag {data-indent=1} | string | 营销信息
-| highway_info {data-indent=1} | object | 高速场景信息
-| plate_number {data-indent=2} | string | 车牌号
-| start_time {data-indent=2} | string | 入站时间
-| end_time {data-indent=2} | string | 出站时间
-| channel_type {data-indent=2} | string | 通道类型
+| highway_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 高速场景信息
+| plate_number {data-required data-indent=2} | string | 车牌号
+| start_time {data-required data-indent=2} | string | 入站时间
+| end_time {data-required data-indent=2} | string | 出站时间
+| channel_type {data-required data-indent=2} | string | 通道类型
 | car_type {data-indent=2} | string | 车辆类型
-| entrance {data-indent=2} | string | 入口名称
+| entrance {data-required data-indent=2} | string | 入口名称
 | exit {data-indent=2} | string | 出口名称
 | carrying_capacity {data-indent=2} | integer | 承载人数
 | carrying_range {data-indent=2} | string | 荷载范围
-| amount {data-indent=1} | object | 订单金额
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-indent=2} | integer | 订单金额
 | currency {data-indent=2} | string | 货币类型
-| device_info {data-indent=1} | object | 设备信息
+| device_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
 | device_id {data-indent=2} | string | 商户端设备号
-| device_ip {data-indent=2} | string | 商户端设备IP
+| device_ip {data-required data-indent=2} | string | 商户端设备IP
 
 {.im-table #request}
 
@@ -262,36 +262,36 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
+| mchid {data-required}| string | 商户号
 | sub_mchid | string | 特约商户号
-| appid | string | 商户appid
+| appid {data-required}| string | 商户appid
 | sub_appid | string | 特约商户appid
-| out_trade_no | string | 商户订单号
-| transaction_id | string | 微信支付订单号
+| out_trade_no {data-required}| string | 商户订单号
+| transaction_id {data-required}| string | 微信支付订单号
 | attach | string | 商户数据
-| trade_type | string | 交易类型
+| trade_type {data-required}| string | 交易类型
 | bank_type | string | 付款银行
 | success_time | string | 支付完成时间
-| trade_state | string | 交易状态
+| trade_state {data-required}| string | 交易状态
 | trade_state_desc | string | 交易状态描述
-| payer | object | 支付者
+| payer | object {data-tooltip="对应PHP的array"} | 支付者
 | sp_openid {data-indent=1} | string | 用户在服务商APP的标识
 | sub_openid {data-indent=1} | string | 用户在特约商户APP的标识
-| amount | object | 订单金额
-| total {data-indent=1} | integer | 订单金额
+| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-required data-indent=1} | integer | 订单金额
 | currency {data-indent=1} | string | 货币类型
 | payer_total {data-indent=1} | integer | 用户实际支付金额
 | discount_total {data-indent=1} | integer | 折扣
-| device_info | object | 设备信息
+| device_info | object {data-tooltip="对应PHP的array"} | 设备信息
 | device_id {data-indent=1} | string | 商户端设备号
 | device_ip {data-indent=1} | string | 商户端设备IP
-| promotion_detail | object[] | 优惠详情
-| promotion_id {data-indent=1} | string | 券ID
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠详情
+| promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称
 | scope {data-indent=1} | string | 优惠范围
 | type {data-indent=1} | string | 优惠类型
 | activity_id {data-indent=1} | string | 活动ID
-| amount {data-indent=1} | integer | 优惠券面额
+| amount {data-required data-indent=1} | integer | 优惠券面额
 | wxpay_contribute {data-indent=1} | integer | 微信出资
 | merchant_contribute {data-indent=1} | integer | 商户出资
 | other_contribute {data-indent=1} | integer | 其他出资

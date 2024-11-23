@@ -9,10 +9,10 @@ description: 当微信支付分订单支付状态处于“待支付”时，商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | service_id {data-indent=1} | string | 服务ID
-| sub_mchid {data-indent=1} | string | 子商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 
 {.im-table #request}
 

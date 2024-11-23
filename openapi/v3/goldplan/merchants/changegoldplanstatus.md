@@ -9,9 +9,9 @@ description: 用于服务商/服务商为特约商户开通或关闭点金计划
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 子商户ID
-| operation_type {data-indent=1} | string | 操作类型<br/>`OPEN` \| `CLOSE` 枚举值之一
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 子商户ID
+| operation_type {data-required data-indent=1} | string | 操作类型<br/>`OPEN` \| `CLOSE` 枚举值之一
 
 {.im-table #request}
 
@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户ID
+| sub_mchid {data-required}| string | 子商户ID
 
 {.im-table #response}
 

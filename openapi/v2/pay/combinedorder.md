@@ -9,21 +9,21 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| combine_appid {data-indent=1} | string | 合单appid
-| combine_mch_id {data-indent=1} | string | 合单商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| combine_appid {data-required data-indent=1} | string | 合单appid
+| combine_mch_id {data-required data-indent=1} | string | 合单商户号
 | device_info {data-indent=1} | string | 设备号
-| sign_type {data-indent=1} | string | 签名类型
-| combine_out_trade_no {data-indent=1} | string | 合单商户订单号
-| spbill_create_ip {data-indent=1} | string | 终端IP
+| sign_type {data-required data-indent=1} | string | 签名类型
+| combine_out_trade_no {data-required data-indent=1} | string | 合单商户订单号
+| spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
-| notify_url {data-indent=1} | string | 通知地址
-| trade_type {data-indent=1} | string | 交易类型
+| notify_url {data-required data-indent=1} | string | 通知地址
+| trade_type {data-required data-indent=1} | string | 交易类型
 | product_id {data-indent=1} | string | 商品ID
 | combine_openid {data-indent=1} | string | 合单用户标识
-| scene_info {data-indent=1} | string | 场景信息
-| sub_order_list {data-indent=1} | string | +子单信息
+| scene_info {data-required data-indent=1} | string | 场景信息
+| sub_order_list {data-required data-indent=1} | string | +子单信息
 
 {.im-table #request}
 
@@ -174,19 +174,19 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| combine_appid | string | 合单appid
-| combine_mch_id | string | 合单商户号
+| combine_appid {data-required}| string | 合单appid
+| combine_mch_id {data-required}| string | 合单商户号
 | device_info | string | 设备号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| trade_type | string | 交易类型
+| trade_type {data-required}| string | 交易类型
 | code_url | string | 二维码链接
-| prepay_id | string | 预支付交易会话标识
+| prepay_id {data-required}| string | 预支付交易会话标识
 | mweb_url | string | H5支付跳转链接
 
 {.im-table #response}

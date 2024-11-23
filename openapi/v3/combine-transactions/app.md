@@ -9,41 +9,41 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| combine_appid {data-indent=1} | string | 合单商户appid
-| combine_mchid {data-indent=1} | string | 合单商户号
-| combine_out_trade_no {data-indent=1} | string | 合单商户订单号
-| scene_info {data-indent=1} | object | 场景信息
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| combine_appid {data-required data-indent=1} | string | 合单商户appid
+| combine_mchid {data-required data-indent=1} | string | 合单商户号
+| combine_out_trade_no {data-required data-indent=1} | string | 合单商户订单号
+| scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
 | device_id {data-indent=2} | string | 商户端设备号
-| payer_client_ip {data-indent=2} | string | 用户终端IP
-| sub_orders {data-indent=1} | object[] | 子单信息
-| mchid {data-indent=2} | string | 子单商户号
-| attach {data-indent=2} | string | 附加数据
-| amount {data-indent=2} | object | 订单金额
-| total_amount {data-indent=3} | integer | 标价金额
-| currency {data-indent=3} | string | 标价币种
-| out_trade_no {data-indent=2} | string | 子单商户订单号
-| sub_mchid {data-indent=2} | string | 二级商户号
+| payer_client_ip {data-required data-indent=2} | string | 用户终端IP
+| sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| mchid {data-required data-indent=2} | string | 子单商户号
+| attach {data-required data-indent=2} | string | 附加数据
+| amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total_amount {data-required data-indent=3} | integer | 标价金额
+| currency {data-required data-indent=3} | string | 标价币种
+| out_trade_no {data-required data-indent=2} | string | 子单商户订单号
+| sub_mchid {data-required data-indent=2} | string | 二级商户号
 | detail {data-indent=2} | string | 商品详情
 | goods_tag {data-indent=2} | string | 订单优惠标记
-| description {data-indent=2} | string | 商品描述
-| settle_info {data-indent=2} | object | 结算信息
+| description {data-required data-indent=2} | string | 商品描述
+| settle_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 结算信息
 | profit_sharing {data-indent=3} | boolean | 是否指定分账
 | subsidy_amount {data-indent=3} | integer | 补差金额
 | sub_appid {data-indent=2} | string | 子商户应用ID
-| combine_payer_info {data-indent=1} | object | 支付者
+| combine_payer_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=2} | string | 用户标识
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
-| notify_url {data-indent=1} | string | 通知地址
+| notify_url {data-required data-indent=1} | string | 通知地址
 | limit_pay {data-indent=1} | string[] | `no_balance` \| `no_debit` \| `balance_only` 枚举值之一
-| contract_info {data-indent=1} | object | 预签约信息
-| mchid {data-indent=2} | string | 签约商户号
-| appid {data-indent=2} | string | 签约商户AppID
-| out_contract_code {data-indent=2} | string | 签约商户协议号
-| plan_id {data-indent=2} | number | 委托代扣协议模板ID
-| contract_display_account {data-indent=2} | string | 用户账户展示名称
-| notify_url {data-indent=2} | string | 回调通知地址
+| contract_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 预签约信息
+| mchid {data-required data-indent=2} | string | 签约商户号
+| appid {data-required data-indent=2} | string | 签约商户AppID
+| out_contract_code {data-required data-indent=2} | string | 签约商户协议号
+| plan_id {data-required data-indent=2} | number | 委托代扣协议模板ID
+| contract_display_account {data-required data-indent=2} | string | 用户账户展示名称
+| notify_url {data-required data-indent=2} | string | 回调通知地址
 
 {.im-table #request}
 
@@ -350,9 +350,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| prepay_id | string | 预支付交易会话标识
-| contract_result | object | 预签约结果
-| code {data-indent=1} | string | 签约结果码
+| prepay_id {data-required}| string | 预支付交易会话标识
+| contract_result | object {data-tooltip="对应PHP的array"} | 预签约结果
+| code {data-required data-indent=1} | string | 签约结果码
 | message {data-indent=1} | string | 签约结果描述信息
 
 {.im-table #response}

@@ -9,7 +9,7 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sp_mchid {data-indent=1} | string | 微信支付分配的服务商唯一标识
 | acquiring_bank_id {data-indent=1} | string | 微信支付分配的从业机构唯一标识
 | channel_id {data-indent=1} | string | 微信支付分配的渠道商唯一标识

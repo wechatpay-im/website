@@ -1,5 +1,5 @@
 ---
-title: 会员卡激活事件通知(JSON)
+title: 会员卡激活事件(MEMBERCARD.ACTIVATE_CARD)通知(JSON)
 description: 当会员卡批次或者用户的会员卡发生变化时，微信会把相关事件结果和用户信息发送给商户，商户需要接收处理，并按照文档规范返回应答。
 ---
 
@@ -16,33 +16,33 @@ description: 当会员卡批次或者用户的会员卡发生变化时，微信�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`MEMBERCARD.ACTIVATE_CARD` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`MEMBERCARD.ACTIVATE_CARD` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | event_type {data-indent=3} | string | 事件类型<br/>`MEMBER_CARD_ACTIVATE` 枚举值
 | card_id {data-indent=3} | string | 会员卡ID
 | code {data-indent=3} | string | 会员卡code
-| event_time {data-indent=3} | string | 激活时间
-| activate_scene {data-indent=3} | string | 激活场景
-| openid {data-indent=3} | string | 用户标识
+| event_time {data-required data-indent=3} | string | 激活时间
+| activate_scene {data-required data-indent=3} | string | 激活场景
+| openid {data-required data-indent=3} | string | 用户标识
 | unionid {data-indent=3} | string | 用户统一标识
 | outer_str {data-indent=3} | string | 自定义场景值
 

@@ -4,10 +4,10 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| accept_type {data-indent=1} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| accept_type {data-required data-indent=1} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
 | out_batch_no {data-indent=1} | string | 商家转账批次单号
-| out_detail_no {data-indent=1} | string | 商家转账明细单号
+| out_detail_no {data-required data-indent=1} | string | 商家转账明细单号
 
 {.im-table #request}
 
@@ -92,10 +92,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_type | string | 受理类型
+| accept_type {data-required}| string | 受理类型
 | out_batch_no | string | 商家转账批次单号
-| out_detail_no | string | 商家转账明细单号
-| signature_no | string | 电子回单受理单号
+| out_detail_no {data-required}| string | 商家转账明细单号
+| signature_no {data-required}| string | 电子回单受理单号
 | signature_status | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值
@@ -111,10 +111,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| accept_type {data-indent=1} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| accept_type {data-required data-indent=1} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
 | out_batch_no {data-indent=1} | string | 商家转账批次单号
-| out_detail_no {data-indent=1} | string | 商家转账明细单号
+| out_detail_no {data-required data-indent=1} | string | 商家转账明细单号
 
 {.im-table #request}
 
@@ -199,10 +199,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_type | string | 受理类型
+| accept_type {data-required}| string | 受理类型
 | out_batch_no | string | 商家转账批次单号
-| out_detail_no | string | 商家转账明细单号
-| signature_no | string | 电子回单受理单号
+| out_detail_no {data-required}| string | 商家转账明细单号
+| signature_no {data-required}| string | 电子回单受理单号
 | signature_status | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值

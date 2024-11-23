@@ -9,7 +9,7 @@ description: 查询二级商户商家转账授权状态。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
+| sub_mchid {data-required} | string | 二级商户号
 
 {.im-table #request}
 
@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| authorization_state | string | 授权状态
+| sub_mchid {data-required}| string | 二级商户号
+| authorization_state {data-required}| string | 授权状态
 | authorize_time | string | 授权时间
 
 {.im-table #response}

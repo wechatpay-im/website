@@ -9,7 +9,7 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-indent=1} | string | 商户号
 | sign_type {data-indent=1} | string | 签名类型
 | begin_time {data-indent=1} | string | 开始时间
@@ -17,7 +17,7 @@ description:
 | page_index {data-indent=1} | string | 页码
 | page_size {data-indent=1} | string | 每页返回的数量
 | violation_records_format {data-indent=1} | string | 违规记录数据格式<br/>`csv` \| `json` 枚举值之一
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -132,12 +132,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 错误码描述
 | error_code | string | 错误码
 | error_code_des | string | 错误代码描述
-| result_code | string | 返回状态码
-| result_msg | string | 错误码描述
+| result_code {data-required}| string | 返回状态码
+| result_msg {data-required}| string | 错误码描述
 | violation_records | string | 违规记录数据
 
 {.im-table #response}

@@ -1,5 +1,5 @@
 ---
-title: 商家转账批次完成回调通知(JSON)
+title: 商家转账批次完成回调(MCHTRANSFER.BATCH.FINISHED)通知(JSON)
 description: 商家转账批次单据到终态后（批次完成，对应批次状态batch_status的值为FINISHED），微信支付会把批次单据的信息发送给商户，商户需要接收处理该消息，并返回应答。
 ---
 
@@ -15,26 +15,26 @@ description: 商家转账批次单据到终态后（批次完成，对应批次�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`MCHTRANSFER.BATCH.FINISHED` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`MCHTRANSFER.BATCH.FINISHED` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | out_bill_no {data-indent=3} | string | 商户单号
 | transfer_bill_no {data-indent=3} | string | 商家转账订单号

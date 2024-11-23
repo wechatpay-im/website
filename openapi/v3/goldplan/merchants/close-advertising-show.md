@@ -9,8 +9,8 @@ description: 使用此接口为特约商户的点金计划页面关闭广告展�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 特约商户号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 特约商户号
 
 {.im-table #request}
 

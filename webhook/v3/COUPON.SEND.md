@@ -1,5 +1,5 @@
 ---
-title: 领券事件回调通知(JSON)
+title: 领券事件回调(COUPON.SEND)通知(JSON)
 description: 领券完成后，微信会把相关领券结果和用户信息发送给商户，商户需要接收处理，并按照文档规范返回应答。出于安全的考虑，我们对支付结果数据进行了加密，商户需要先对通知数据进行解密，才能得到支付结果数据。
 ---
 
@@ -14,26 +14,26 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`COUPON.SEND` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`COUPON.SEND` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | event_type {data-indent=3} | string | 业务细分事件类型<br/>`EVENT_TYPE_BUSICOUPON_SEND` 枚举值
 | coupon_code {data-indent=3} | string | 券的唯一标识。
@@ -41,8 +41,8 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | send_time {data-indent=3} | string | 发放时间
 | openid {data-indent=3} | string | 微信用户在AppID下的唯一标识。
 | unionid {data-indent=3} | string | 微信用户在同一个微信开放平台账号下的唯一用户标识
-| send_channel {data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H5` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` 枚举值之一
-| send_merchant {data-indent=3} | string | 发券商户号
+| send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` 枚举值之一
+| send_merchant {data-required data-indent=3} | string | 发券商户号
 | attach_info {data-indent=3} | object | 仅在支付有礼、扫码领券（营销馆）、会员有礼发放渠道，才有该信息
 | transaction_id {data-indent=4} | string | 仅在支付有礼渠道，才有该信息，对应支付有礼曝光支付订单编号信息
 | act_code {data-indent=4} | string | 仅在扫码领券（营销馆）渠道，才有该信息，对应领券的营销馆领券活动ID信息信息。该字段并不会和支付有礼活动编码(act_code)同时出现。

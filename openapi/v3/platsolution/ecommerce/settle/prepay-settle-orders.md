@@ -9,23 +9,23 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 发起方AppID
-| out_settle_batch_no {data-indent=1} | string | 商户结算批次单号
-| individual_auth_id {data-indent=1} | string | 商品单个人收款方受理授权ID
-| notify_url {data-indent=1} | string | 通知地址
-| description {data-indent=1} | string | 收款方描述
-| trade_scenario {data-indent=1} | string | 交易场景
-| settle_info_list {data-indent=1} | object[] | 结算信息列表
-| out_settle_no {data-indent=2} | string | 商户结算单号
-| transaction_id {data-indent=2} | string | 微信支付订单号
-| settle_detail_info_list {data-indent=2} | object[] | 结算明细单列表
-| out_settle_detail_no {data-indent=3} | string | 商户结算明细单号
-| settle_type {data-indent=3} | string | 结算类型
-| receiver_type {data-indent=3} | string | 接收方类型
-| receiver_account {data-indent=3} | string | 接收方账号
-| amount {data-indent=3} | object | 金额
-| amount {data-indent=4} | number | 金额
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 发起方AppID
+| out_settle_batch_no {data-required data-indent=1} | string | 商户结算批次单号
+| individual_auth_id {data-required data-indent=1} | string | 商品单个人收款方受理授权ID
+| notify_url {data-required data-indent=1} | string | 通知地址
+| description {data-required data-indent=1} | string | 收款方描述
+| trade_scenario {data-required data-indent=1} | string | 交易场景
+| settle_info_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 结算信息列表
+| out_settle_no {data-required data-indent=2} | string | 商户结算单号
+| transaction_id {data-required data-indent=2} | string | 微信支付订单号
+| settle_detail_info_list {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 结算明细单列表
+| out_settle_detail_no {data-required data-indent=3} | string | 商户结算明细单号
+| settle_type {data-required data-indent=3} | string | 结算类型
+| receiver_type {data-required data-indent=3} | string | 接收方类型
+| receiver_account {data-required data-indent=3} | string | 接收方账号
+| amount {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 金额
+| amount {data-required data-indent=4} | number | 金额
 | currency {data-indent=4} | string | 币种
 
 {.im-table #request}
@@ -213,13 +213,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_settle_batch_no | string | 商户结算批次单号
-| settle_batch_no | string | 微信支付结算批次单号
-| individual_auth_id | string | 商品单个人收款方受理授权ID
-| description | string | 收款方描述
-| state | string | 批次状态
-| trade_scenario | string | 交易场景
-| create_time | string | 批次创建时间
+| out_settle_batch_no {data-required}| string | 商户结算批次单号
+| settle_batch_no {data-required}| string | 微信支付结算批次单号
+| individual_auth_id {data-required}| string | 商品单个人收款方受理授权ID
+| description {data-required}| string | 收款方描述
+| state {data-required}| string | 批次状态
+| trade_scenario {data-required}| string | 交易场景
+| create_time {data-required}| string | 批次创建时间
 | finish_time | string | 批次完成时间
 | error_message | string | 结算异常原因
 

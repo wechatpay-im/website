@@ -9,7 +9,7 @@ description: 商户通过调用该接口可主动解除与用户的签约关系�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 签约协议号
+| contract_id {data-required} | string | 签约协议号
 
 {.im-table #request}
 

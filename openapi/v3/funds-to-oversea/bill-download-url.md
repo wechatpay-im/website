@@ -9,8 +9,8 @@ description: 服务商可以调用此接口获取购付汇账单文件下载链�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| bill_date {data-indent=1} | string | 账单日期
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| bill_date {data-required data-indent=1} | string | 账单日期
 | sub_mchid {data-indent=1} | string | 子商户号
 
 {.im-table #request}
@@ -90,9 +90,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| hash_type | string | 哈希类型
-| hash_value | string | 哈希值
-| download_url | string | 下载地址
+| hash_type {data-required}| string | 哈希类型
+| hash_value {data-required}| string | 哈希值
+| download_url {data-required}| string | 下载地址
 
 {.im-table #response}
 

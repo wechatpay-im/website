@@ -9,14 +9,14 @@ description: 指定服务商可通过该接口报名加价购活动、查询某�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| order_information {data-indent=1} | object | 订单信息
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| order_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单信息
 | payer_openid {data-indent=2} | string | 支付订单的微信用户OpenID
 | out_trade_no {data-indent=2} | string | 商户订单号
 | total_fee {data-indent=2} | number | 订单总金额
 | store_id {data-indent=2} | string | 门店ID
 | store_merchant_id {data-indent=2} | string | 门店商户号
-| qualification_ids {data-indent=1} | string[] | 
+| qualification_ids {data-required data-indent=1} | string[] | 
 
 {.im-table #request}
 

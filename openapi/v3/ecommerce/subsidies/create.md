@@ -9,11 +9,11 @@ description: 服务商下单的时候带上补差标识，微信订单支付成�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| transaction_id {data-indent=1} | string | 微信订单号
-| amount {data-indent=1} | integer | 补差金额
-| description {data-indent=1} | string | 补差描述
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| amount {data-required data-indent=1} | integer | 补差金额
+| description {data-required data-indent=1} | string | 补差描述
 | refund_id {data-indent=1} | string | 微信退款单号
 
 {.im-table #request}
@@ -111,13 +111,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| transaction_id | string | 微信订单号
-| subsidy_id | string | 微信补差单号
-| description | string | 补差描述
-| amount | integer | 补差金额
-| result | string | 补差单结果
-| success_time | string | 补差完成时间
+| sub_mchid {data-required}| string | 二级商户号
+| transaction_id {data-required}| string | 微信订单号
+| subsidy_id {data-required}| string | 微信补差单号
+| description {data-required}| string | 补差描述
+| amount {data-required}| integer | 补差金额
+| result {data-required}| string | 补差单结果
+| success_time {data-required}| string | 补差完成时间
 
 {.im-table #response}
 

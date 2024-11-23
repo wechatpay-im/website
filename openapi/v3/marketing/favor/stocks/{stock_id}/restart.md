@@ -9,9 +9,9 @@ description: 通过此接口可重启指定代金券批次。重启后，该代�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
-| json | object | 声明请求的`JSON`数据结构
-| stock_creator_mchid {data-indent=1} | string | 创建批次的商户号
+| stock_id {data-required} | string | 批次号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| stock_creator_mchid {data-required data-indent=1} | string | 创建批次的商户号
 
 {.im-table #request}
 
@@ -90,8 +90,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| restart_time | string | 生效时间
-| stock_id | string | 批次号
+| restart_time {data-required}| string | 生效时间
+| stock_id {data-required}| string | 批次号
 
 {.im-table #response}
 

@@ -9,11 +9,11 @@ description: 对于经营会员生意的商户来说，存量会员的注册渠�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡ID
-| json | object | 声明请求的`JSON`数据结构
-| openid {data-indent=1} | string | 用户标识
+| card_id {data-required} | string | 会员卡ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| openid {data-required data-indent=1} | string | 用户标识
 | code {data-indent=1} | string | 会员卡code
-| out_request_no {data-indent=1} | string | 商户请求单号
+| out_request_no {data-required data-indent=1} | string | 商户请求单号
 
 {.im-table #request}
 
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code | string | 会员卡code
+| code {data-required}| string | 会员卡code
 
 {.im-table #response}
 

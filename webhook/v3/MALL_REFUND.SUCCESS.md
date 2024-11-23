@@ -1,5 +1,5 @@
 ---
-title: 商圈会员场内退款通知(JSON)
+title: 商圈会员场内退款(MALL_REFUND.SUCCESS)通知(JSON)
 description: 已授权“商圈会员积分服务”的用户在商圈内门店支付完成后发生退款，微信会通知商圈商户。
 ---
 
@@ -15,38 +15,38 @@ description: 已授权“商圈会员积分服务”的用户在商圈内门店�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`MALL_REFUND.SUCCESS` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`MALL_REFUND.SUCCESS` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| mchid {data-indent=3} | string | 微信支付分配的商户号
-| merchant_name {data-indent=3} | string | 商圈商户名称
-| shop_name {data-indent=3} | string | 门店名称，商圈在商圈小程序上圈店时填写的门店名称
-| shop_number {data-indent=3} | string | 门店编号，商圈在商圈小程序上圈店时填写的门店编号，用于跟商圈自身已有的商户识别码对齐
-| appid {data-indent=3} | string | 顾客授权积分时使用的小程序的AppID
-| openid {data-indent=3} | string | 顾客授权时使用的小程序上的OpenID
-| refund_time {data-indent=3} | string | 交易完成时间
-| pay_amount {data-indent=3} | number | 用户实际消费金额，单位（分）
-| refund_amount {data-indent=3} | number | 用户退款金额，单位（分）
-| transaction_id {data-indent=3} | string | 微信支付订单号
-| refund_id {data-indent=3} | string | 微信支付退款单号
+| mchid {data-required data-indent=3} | string | 微信支付分配的商户号
+| merchant_name {data-required data-indent=3} | string | 商圈商户名称
+| shop_name {data-required data-indent=3} | string | 门店名称，商圈在商圈小程序上圈店时填写的门店名称
+| shop_number {data-required data-indent=3} | string | 门店编号，商圈在商圈小程序上圈店时填写的门店编号，用于跟商圈自身已有的商户识别码对齐
+| appid {data-required data-indent=3} | string | 顾客授权积分时使用的小程序的AppID
+| openid {data-required data-indent=3} | string | 顾客授权时使用的小程序上的OpenID
+| refund_time {data-required data-indent=3} | string | 交易完成时间
+| pay_amount {data-required data-indent=3} | number | 用户实际消费金额，单位（分）
+| refund_amount {data-required data-indent=3} | number | 用户退款金额，单位（分）
+| transaction_id {data-required data-indent=3} | string | 微信支付订单号
+| refund_id {data-required data-indent=3} | string | 微信支付退款单号
 
 {.im-table #request}
 

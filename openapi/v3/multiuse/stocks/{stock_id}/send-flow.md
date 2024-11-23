@@ -9,7 +9,7 @@ description: 可获取到某批次的退款明细数据，用于对账/数据分
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
+| stock_id {data-required} | string | 批次号
 
 {.im-table #request}
 
@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| url | string | 下载链接
+| url {data-required}| string | 下载链接
 
 {.im-table #response}
 

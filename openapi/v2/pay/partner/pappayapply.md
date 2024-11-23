@@ -9,22 +9,22 @@ description: 委托代扣可应用于定期扣款或需事后扣款以期提高�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | sub_mch_id {data-indent=1} | string | 子商户号
-| appid {data-indent=1} | string | 请求appid
-| mch_id {data-indent=1} | string | 商户号
-| body {data-indent=1} | string | 商品描述
+| appid {data-required data-indent=1} | string | 请求appid
+| mch_id {data-required data-indent=1} | string | 商户号
+| body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 商品详情
 | attach {data-indent=1} | string | 附加数据
-| out_trade_no {data-indent=1} | string | 商户订单号
-| total_fee {data-indent=1} | integer | 总金额
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| total_fee {data-required data-indent=1} | integer | 总金额
 | fee_type {data-indent=1} | string | 货币类型
-| spbill_create_ip {data-indent=1} | string | 终端IP
+| spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | goods_tag {data-indent=1} | string | 商品标记
-| notify_url {data-indent=1} | string | 回调通知url
-| trade_type {data-indent=1} | string | 交易类型
-| contract_id {data-indent=1} | string | 委托代扣协议id
+| notify_url {data-required data-indent=1} | string | 回调通知url
+| trade_type {data-required data-indent=1} | string | 交易类型
+| contract_id {data-required data-indent=1} | string | 委托代扣协议id
 | receipt {data-indent=1} | string | 电子发票入口开放标识
 
 {.im-table #request}
@@ -190,13 +190,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | --- | --- | ---
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| appid | string | 公众账号id
-| mch_id | string | 商户号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| appid {data-required}| string | 公众账号id
+| mch_id {data-required}| string | 商户号
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 

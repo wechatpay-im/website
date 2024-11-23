@@ -9,56 +9,56 @@ description: 服务商开具出租车电子发票后，调用本接口将发票�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| company_mchid {data-indent=1} | string | 出租车经营主体商户号
-| trade_number {data-indent=1} | string | 面对面付款单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| company_mchid {data-required data-indent=1} | string | 出租车经营主体商户号
+| trade_number {data-required data-indent=1} | string | 面对面付款单号
 | appid {data-indent=1} | string | 应用ID
-| openid {data-indent=1} | string | 用户标识
-| region_id {data-indent=1} | integer | 行政区划代码
-| driver_license {data-indent=1} | string | 营运资格证号
-| plate_number {data-indent=1} | string | 车牌号
-| fapiao_card_information {data-indent=1} | object | 发票卡券信息
-| fapiao_media_id {data-indent=2} | string | 电子发票文件ID
-| fapiao_number {data-indent=2} | string | 发票号码
-| fapiao_code {data-indent=2} | string | 发票代码
-| fapiao_time {data-indent=2} | string | 开票时间
-| check_code {data-indent=2} | string | 校验码
-| password {data-indent=2} | string | 密码
-| total_amount {data-indent=2} | integer | 总价税合计
-| tax_amount {data-indent=2} | integer | 总税额
-| amount {data-indent=2} | integer | 总金额
-| buyer_information {data-indent=2} | object | 购买方信息
-| type {data-indent=3} | string | 购买方类型
-| name {data-indent=3} | string | 名称
+| openid {data-required data-indent=1} | string | 用户标识
+| region_id {data-required data-indent=1} | integer | 行政区划代码
+| driver_license {data-required data-indent=1} | string | 营运资格证号
+| plate_number {data-required data-indent=1} | string | 车牌号
+| fapiao_card_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 发票卡券信息
+| fapiao_media_id {data-required data-indent=2} | string | 电子发票文件ID
+| fapiao_number {data-required data-indent=2} | string | 发票号码
+| fapiao_code {data-required data-indent=2} | string | 发票代码
+| fapiao_time {data-required data-indent=2} | string | 开票时间
+| check_code {data-required data-indent=2} | string | 校验码
+| password {data-required data-indent=2} | string | 密码
+| total_amount {data-required data-indent=2} | integer | 总价税合计
+| tax_amount {data-required data-indent=2} | integer | 总税额
+| amount {data-required data-indent=2} | integer | 总金额
+| buyer_information {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 购买方信息
+| type {data-required data-indent=3} | string | 购买方类型
+| name {data-required data-indent=3} | string | 名称
 | taxpayer_id {data-indent=3} | string | 纳税人识别号
 | address {data-indent=3} | string | 地址
 | telephone {data-indent=3} | string | 电话
 | bank_name {data-indent=3} | string | 开户银行
 | bank_account {data-indent=3} | string | 银行账号
-| seller_information {data-indent=2} | object | 销售方信息
-| name {data-indent=3} | string | 名称
-| taxpayer_id {data-indent=3} | string | 纳税人识别号
-| address {data-indent=3} | string | 地址
+| seller_information {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 销售方信息
+| name {data-required data-indent=3} | string | 名称
+| taxpayer_id {data-required data-indent=3} | string | 纳税人识别号
+| address {data-required data-indent=3} | string | 地址
 | telephone {data-indent=3} | string | 电话
 | bank_name {data-indent=3} | string | 开户银行
 | bank_account {data-indent=3} | string | 银行账号
-| extra_information {data-indent=2} | object | 附加信息
+| extra_information {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 附加信息
 | payee {data-indent=3} | string | 收款人
 | reviewer {data-indent=3} | string | 复核人
-| drawer {data-indent=3} | string | 开票人
-| items {data-indent=2} | object[] | 发票行信息
-| tax_code {data-indent=3} | string | 货物或应税劳务、服务编码
-| goods_name {data-indent=3} | string | 货物或应税劳务、服务名称
+| drawer {data-required data-indent=3} | string | 开票人
+| items {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 发票行信息
+| tax_code {data-required data-indent=3} | string | 货物或应税劳务、服务编码
+| goods_name {data-required data-indent=3} | string | 货物或应税劳务、服务名称
 | specification {data-indent=3} | string | 规格型号
 | unit {data-indent=3} | string | 单位
-| quantity {data-indent=3} | integer | 数量
-| unit_price {data-indent=3} | integer | 单价
-| amount {data-indent=3} | integer | 单行金额
-| tax_amount {data-indent=3} | integer | 单行税额
-| total_amount {data-indent=3} | integer | 单行金额合计
-| tax_rate {data-indent=3} | integer | 税率
-| tax_prefer_mark {data-indent=3} | string | 税收优惠政策标识
-| discount {data-indent=3} | boolean | 是否折扣行
+| quantity {data-required data-indent=3} | integer | 数量
+| unit_price {data-required data-indent=3} | integer | 单价
+| amount {data-required data-indent=3} | integer | 单行金额
+| tax_amount {data-required data-indent=3} | integer | 单行税额
+| total_amount {data-required data-indent=3} | integer | 单行金额合计
+| tax_rate {data-required data-indent=3} | integer | 税率
+| tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识
+| discount {data-required data-indent=3} | boolean | 是否折扣行
 | remark {data-indent=2} | string | 备注信息
 
 {.im-table #request}
@@ -456,10 +456,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_appid | string | 插入用户卡包的公众号AppID
-| card_openid | string | 用户在插卡公众号下的OpenID
-| card_id | string | 出租车电子发票卡券模板ID
-| card_code | string | 出租车电子发票在卡包中的编码
+| card_appid {data-required}| string | 插入用户卡包的公众号AppID
+| card_openid {data-required}| string | 用户在插卡公众号下的OpenID
+| card_id {data-required}| string | 出租车电子发票卡券模板ID
+| card_code {data-required}| string | 出租车电子发票在卡包中的编码
 
 {.im-table #response}
 

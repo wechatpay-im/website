@@ -9,8 +9,8 @@ description: 商户创建活动后，可以通过该接口删除支付有礼的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 活动id
-| json | object | 声明请求的`JSON`数据结构
+| activity_id {data-required} | string | 活动id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | merchant_id_list {data-indent=1} | string[] | 删除的发券商户号
 | delete_request_no {data-indent=1} | string | 商户请求单号
 

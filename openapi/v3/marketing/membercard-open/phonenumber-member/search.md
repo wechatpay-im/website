@@ -9,10 +9,10 @@ description: 商户可查询导入成功的加密手机号是否已被用户领�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| card_id {data-indent=1} | string | 会员卡id
-| encrypted_phone_number {data-indent=1} | string | 加密手机号
-| headers | object | 声明请求的头参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| card_id {data-required data-indent=1} | string | 会员卡id
+| encrypted_phone_number {data-required data-indent=1} | string | 加密手机号
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -110,13 +110,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| user_card_information | object | 用户会员卡信息
-| code {data-indent=1} | string | 会员卡code
-| openid {data-indent=1} | string | 用户标识
+| receive_status {data-required}| string | 用户领取状态<br/>`UNSHOWED` \| `UNRECEIVED` \| `RECEIVED` 枚举值之一
+| user_card_information | object {data-tooltip="对应PHP的array"} | 用户会员卡信息
+| code {data-required data-indent=1} | string | 会员卡code
+| openid {data-required data-indent=1} | string | 用户标识
 | unionid {data-indent=1} | string | 用户标识
-| receive_time {data-indent=1} | string | 会员卡领取时间
-| card_appid {data-indent=1} | string | 品牌appid
-| card_id {data-indent=1} | string | 会员卡id
+| receive_time {data-required data-indent=1} | string | 会员卡领取时间
+| card_appid {data-required data-indent=1} | string | 品牌appid
+| card_id {data-required data-indent=1} | string | 会员卡id
 
 {.im-table #response}
 

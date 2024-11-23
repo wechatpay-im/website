@@ -9,10 +9,10 @@ description: 服务商可以凭“凭证”查询对应的“乘客行程单”�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| token {data-indent=1} | string | 获取乘客行程单详情的凭证
-| openid {data-indent=1} | string | 用户标识
-| appid {data-indent=1} | string | 应用ID
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| token {data-required data-indent=1} | string | 获取乘客行程单详情的凭证
+| openid {data-required data-indent=1} | string | 用户标识
+| appid {data-required data-indent=1} | string | 应用ID
 | region_id {data-indent=1} | integer | 行政区划代码
 | auth_mode {data-indent=1} | string | 授权模式
 
@@ -111,11 +111,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number | string | 车牌号
-| driver_license | string | 营运资格证号
-| up_time | string | 上车时间
-| region_id | integer | 行政区划代码
-| source | string | 乘客行程单来源
+| plate_number {data-required}| string | 车牌号
+| driver_license {data-required}| string | 营运资格证号
+| up_time {data-required}| string | 上车时间
+| region_id {data-required}| integer | 行政区划代码
+| source {data-required}| string | 乘客行程单来源
 | pay_time | string | 面对面付款时间
 | pay_amount | integer | 面对面付款金额
 

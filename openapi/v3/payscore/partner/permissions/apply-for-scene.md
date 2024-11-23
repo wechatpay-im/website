@@ -9,17 +9,17 @@ description: 服务商场景中预授权
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| appid {data-indent=1} | string | 服务商的公众号ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| appid {data-required data-indent=1} | string | 服务商的公众号ID
 | sub_appid {data-indent=1} | string | 子商户的公众号ID
-| sub_mchid {data-indent=1} | string | 子商户的商户号
-| authorization_code {data-indent=1} | string | 授权协议号
+| sub_mchid {data-required data-indent=1} | string | 子商户的商户号
+| authorization_code {data-required data-indent=1} | string | 授权协议号
 | notify_url {data-indent=1} | string | 通知地址
-| scene {data-indent=1} | string | 授权场景
-| transaction_scene_info {data-indent=1} | object | 微信支付交易中授权附带的参数
-| mchid {data-indent=2} | string | 支付下单的商户号
-| sub_mchid {data-indent=2} | string | 支付下单的子商户号
+| scene {data-required data-indent=1} | string | 授权场景
+| transaction_scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 微信支付交易中授权附带的参数
+| mchid {data-required data-indent=2} | string | 支付下单的商户号
+| sub_mchid {data-required data-indent=2} | string | 支付下单的子商户号
 
 {.im-table #request}
 
@@ -152,7 +152,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| scene | string | 授权场景, 与输入中一致
+| scene {data-required}| string | 授权场景, 与输入中一致
 | transaction_permissions_token | string | 微信支付交易中授权token
 
 {.im-table #response}

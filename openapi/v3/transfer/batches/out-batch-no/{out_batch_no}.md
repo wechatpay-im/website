@@ -9,9 +9,9 @@ description: 商户可以通过该接口查询转账批次单以及指定状态�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 商家批次单号
-| query | object | 声明请求的查询参数
-| need_query_detail {data-indent=1} | boolean | 是否查询转账明细单
+| out_batch_no {data-required} | string | 商家批次单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| need_query_detail {data-required data-indent=1} | boolean | 是否查询转账明细单
 | offset {data-indent=1} | integer | 请求资源起始位置
 | limit {data-indent=1} | integer | 最大资源条数
 | detail_status {data-indent=1} | string | 明细状态
@@ -111,18 +111,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transfer_batch | object | 转账批次单
-| mchid {data-indent=1} | string | 商户号
-| out_batch_no {data-indent=1} | string | 商家批次单号
-| batch_id {data-indent=1} | string | 微信批次单号
-| appid {data-indent=1} | string | 直连商户的appid
-| batch_status {data-indent=1} | string | 批次状态
-| batch_type {data-indent=1} | string | 批次类型
-| batch_name {data-indent=1} | string | 批次名称
-| batch_remark {data-indent=1} | string | 批次备注
+| transfer_batch {data-required}| object {data-tooltip="对应PHP的array"} | 转账批次单
+| mchid {data-required data-indent=1} | string | 商户号
+| out_batch_no {data-required data-indent=1} | string | 商家批次单号
+| batch_id {data-required data-indent=1} | string | 微信批次单号
+| appid {data-required data-indent=1} | string | 直连商户的appid
+| batch_status {data-required data-indent=1} | string | 批次状态
+| batch_type {data-required data-indent=1} | string | 批次类型
+| batch_name {data-required data-indent=1} | string | 批次名称
+| batch_remark {data-required data-indent=1} | string | 批次备注
 | close_reason {data-indent=1} | string | 批次关闭原因
-| total_amount {data-indent=1} | integer | 转账总金额
-| total_num {data-indent=1} | integer | 转账总笔数
+| total_amount {data-required data-indent=1} | integer | 转账总金额
+| total_num {data-required data-indent=1} | integer | 转账总笔数
 | create_time {data-indent=1} | string | 批次创建时间
 | update_time {data-indent=1} | string | 批次更新时间
 | success_amount {data-indent=1} | integer | 转账成功金额
@@ -130,10 +130,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | fail_amount {data-indent=1} | integer | 转账失败金额
 | fail_num {data-indent=1} | integer | 转账失败笔数
 | transfer_scene_id {data-indent=1} | string | 转账场景ID
-| transfer_detail_list | object[] | 转账明细单列表
-| detail_id {data-indent=1} | string | 微信明细单号
-| out_detail_no {data-indent=1} | string | 商家明细单号
-| detail_status {data-indent=1} | string | 明细状态
+| transfer_detail_list | object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
+| detail_id {data-required data-indent=1} | string | 微信明细单号
+| out_detail_no {data-required data-indent=1} | string | 商家明细单号
+| detail_status {data-required data-indent=1} | string | 明细状态
 | offset | integer | 请求资源起始位置
 | limit | integer | 最大资源条数
 

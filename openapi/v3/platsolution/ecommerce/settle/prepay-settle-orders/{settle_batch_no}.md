@@ -9,7 +9,7 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| settle_batch_no | string | 微信支付结算批次单号
+| settle_batch_no {data-required} | string | 微信支付结算批次单号
 
 {.im-table #request}
 
@@ -70,13 +70,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_settle_batch_no | string | 商户结算批次单号
-| settle_batch_no | string | 微信支付结算批次单号
-| individual_auth_id | string | 商品单个人收款方受理授权ID
-| description | string | 收款方描述
-| state | string | 批次状态
-| trade_scenario | string | 交易场景
-| create_time | string | 批次创建时间
+| out_settle_batch_no {data-required}| string | 商户结算批次单号
+| settle_batch_no {data-required}| string | 微信支付结算批次单号
+| individual_auth_id {data-required}| string | 商品单个人收款方受理授权ID
+| description {data-required}| string | 收款方描述
+| state {data-required}| string | 批次状态
+| trade_scenario {data-required}| string | 交易场景
+| create_time {data-required}| string | 批次创建时间
 | finish_time | string | 批次完成时间
 | error_message | string | 结算异常原因
 

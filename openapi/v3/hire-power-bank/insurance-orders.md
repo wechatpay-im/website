@@ -9,7 +9,7 @@ description: 商户可通过该接口创建保险订单。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | out_order_no {data-indent=1} | string | 商户创建保险订单时的凭据号
 | openid {data-indent=1} | string | 微信用户在商户对应appid下的唯一标识
 | notify_url {data-indent=1} | string | 用于接收保险订单状态变化通知

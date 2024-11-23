@@ -9,9 +9,9 @@ description: 如果商家选择跳转激活的投放方式，用户跳转至商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| code | string | 会员卡code
-| json | object | 声明请求的`JSON`数据结构
+| card_id {data-required} | string | 会员卡id
+| code {data-required} | string | 会员卡code
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | membership_number {data-indent=1} | string | 会员卡编号
 
 {.im-table #request}

@@ -9,7 +9,7 @@ description: 微信支付提现申请单号查询提现申请单状态,电商平
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| applyment_id | string | 微信支付提现申请单号
+| applyment_id {data-required} | string | 微信支付提现申请单号
 
 {.im-table #request}
 
@@ -70,10 +70,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| withdrawl_apply | object | 提现申请单信息
-| applyment_id {data-indent=1} | string | 微信支付提现申请单号
-| out_request_no {data-indent=1} | string | 商户提现申请单号
-| state {data-indent=1} | string | 申请单状态
+| withdrawl_apply {data-required}| object {data-tooltip="对应PHP的array"} | 提现申请单信息
+| applyment_id {data-required data-indent=1} | string | 微信支付提现申请单号
+| out_request_no {data-required data-indent=1} | string | 商户提现申请单号
+| state {data-required data-indent=1} | string | 申请单状态
 | fail_reason {data-indent=1} | string | 失败原因
 | modify_time {data-indent=1} | string | 最后更新时间
 

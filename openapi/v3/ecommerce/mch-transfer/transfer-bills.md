@@ -9,17 +9,17 @@ description: 商户可通过此接口申请创建商家转账订单。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| appid {data-indent=1} | string | 服务商AppID
-| out_bill_no {data-indent=1} | string | 商户单号
-| transfer_scene_id {data-indent=1} | string | 转账场景ID
-| openid {data-indent=1} | string | 收款用户OpenID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| appid {data-required data-indent=1} | string | 服务商AppID
+| out_bill_no {data-required data-indent=1} | string | 商户单号
+| transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
+| openid {data-required data-indent=1} | string | 收款用户OpenID
 | user_name {data-indent=1} | string | 收款用户姓名
-| transfer_amount {data-indent=1} | number | 转账金额
-| transfer_remark {data-indent=1} | string | 转账备注
+| transfer_amount {data-required data-indent=1} | number | 转账金额
+| transfer_remark {data-required data-indent=1} | string | 转账备注
 | notify_url {data-indent=1} | string | 商户回调地址
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -159,11 +159,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| out_bill_no | string | 商户单号
-| transfer_bill_no | string | 微信转账单号
-| create_time | string | 单据创建时间
-| state | string | 单据状态
+| sub_mchid {data-required}| string | 二级商户号
+| out_bill_no {data-required}| string | 商户单号
+| transfer_bill_no {data-required}| string | 微信转账单号
+| create_time {data-required}| string | 单据创建时间
+| state {data-required}| string | 单据状态
 | fail_reason | string | 失败原因
 | package_info | string | 跳转领取页面的package信息
 

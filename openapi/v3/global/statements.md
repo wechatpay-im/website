@@ -10,10 +10,10 @@ description: 商户可以通过该接口下载历史交易清单。比如掉单�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| query | object | 声明请求的查询参数
-| date {data-indent=1} | string | 账单日期
-| mchid {data-indent=1} | string | 商户号
-| headers | object | 声明请求的头参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| date {data-required data-indent=1} | string | 账单日期
+| mchid {data-required data-indent=1} | string | 商户号
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Accept-Encoding {data-indent=1} | string | 账单压缩：如需对账单进行压缩，设置HTTP请求头值为gzip
 
 {.im-table #request}

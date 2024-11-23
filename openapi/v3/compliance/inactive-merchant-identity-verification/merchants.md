@@ -9,8 +9,8 @@ description: 服务商可以通过该接口，代特约商户发起不活跃商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 特约商户号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 特约商户号
 
 {.im-table #request}
 
@@ -83,7 +83,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| verification_id | string | 核实单号
+| verification_id {data-required}| string | 核实单号
 
 {.im-table #response}
 

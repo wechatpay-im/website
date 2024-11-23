@@ -9,13 +9,13 @@ description: 通过此接口商家可设置是否在用户的会员卡详情页�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| code | string | 会员卡code
-| json | object | 声明请求的`JSON`数据结构
+| card_id {data-required} | string | 会员卡id
+| code {data-required} | string | 会员卡code
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | before_bonus_value {data-indent=1} | integer | 变更前的会员积分值
 | bonus_value {data-indent=1} | integer | 变更后的会员积分值
 | add_bonus_value {data-indent=1} | integer | 会员积分变动值
-| out_request_no {data-indent=1} | string | 商户请求单号
+| out_request_no {data-required data-indent=1} | string | 商户请求单号
 
 {.im-table #request}
 

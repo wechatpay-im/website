@@ -9,9 +9,9 @@ description: 获取出租车信息
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number | string | 车牌号
-| query | object | 声明请求的查询参数
-| region_id {data-indent=1} | integer | 行政区划代码
+| plate_number {data-required} | string | 车牌号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| region_id {data-required data-indent=1} | integer | 行政区划代码
 
 {.im-table #request}
 
@@ -90,14 +90,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number | string | 车牌号
-| company_name | string | 公司名称
-| company_mchid | string | 公司商户号
-| main_license | string | 主班司机资格证号
-| deputy_license | string | 副班司机资格证号
-| region_id | integer | 行政区划代码
-| support_invoice | boolean | 是否支持开票
-| taxi_state | string | 出租车状态
+| plate_number {data-required}| string | 车牌号
+| company_name {data-required}| string | 公司名称
+| company_mchid {data-required}| string | 公司商户号
+| main_license {data-required}| string | 主班司机资格证号
+| deputy_license {data-required}| string | 副班司机资格证号
+| region_id {data-required}| integer | 行政区划代码
+| support_invoice {data-required}| boolean | 是否支持开票
+| taxi_state {data-required}| string | 出租车状态
 
 {.im-table #response}
 

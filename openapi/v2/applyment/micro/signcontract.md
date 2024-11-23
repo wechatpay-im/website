@@ -10,12 +10,13 @@ description: 若查询申请状态为待签约，接口会一并返回签约二�
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2023.05.23` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 

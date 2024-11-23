@@ -9,10 +9,10 @@ description: 该接口为服务商或商户给零售小店活动查询业务代�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 零售小店活动ID
-| query | object | 声明请求的查询参数
-| offset {data-indent=1} | number | 分页页码
-| limit {data-indent=1} | number | 分页大小
+| activity_id {data-required} | string | 零售小店活动ID
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| offset {data-required data-indent=1} | number | 分页页码
+| limit {data-required data-indent=1} | number | 分页大小
 
 {.im-table #request}
 
@@ -98,10 +98,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | total_count | number | 小店活动业代总数
-| data | object[] | 小店活动业代集合
-| openid {data-indent=1} | string | 业务代理的OpenID
-| offset | number | 分页页码
-| limit | number | 分页大小
+| data | object[] {data-tooltip="对应PHP的array"} | 小店活动业代集合
+| openid {data-required data-indent=1} | string | 业务代理的OpenID
+| offset {data-required}| number | 分页页码
+| limit {data-required}| number | 分页大小
 
 {.im-table #response}
 

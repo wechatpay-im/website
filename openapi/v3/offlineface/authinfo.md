@@ -9,13 +9,13 @@ description: 建议authinfo每1小时内获取一次，否则当设备断网且�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sp_appid {data-indent=1} | string | 
-| sub_appid {data-indent=1} | string | 
-| sub_mchid {data-indent=1} | string | 
-| device_id {data-indent=1} | string | 
-| raw_data {data-indent=1} | string | 
-| organization_id {data-indent=1} | string | 
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_appid {data-required data-indent=1} | string | 服务商公众号appid
+| sub_appid {data-indent=1} | string | 子商户公众号appid
+| sub_mchid {data-required data-indent=1} | string | 子商户商户号
+| device_id {data-required data-indent=1} | string | 设备id
+| raw_data {data-required data-indent=1} | string | 原始数据
+| organization_id {data-required data-indent=1} | string | 机构id
 
 {.im-table #request}
 
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authinfo | string | 
+| authinfo {data-required}| string | 授权信息
 
 {.im-table #response}
 

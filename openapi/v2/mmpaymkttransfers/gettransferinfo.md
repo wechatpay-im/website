@@ -9,11 +9,11 @@ description: 付款操作进行结果查询，返回付款操作详细结果。�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| partner_trade_no {data-indent=1} | string | 商户订单号
-| mch_id {data-indent=1} | string | 商户号
-| appid {data-indent=1} | string | Appid
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| partner_trade_no {data-required data-indent=1} | string | 商户订单号
+| mch_id {data-required data-indent=1} | string | 商户号
+| appid {data-required data-indent=1} | string | Appid
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -104,23 +104,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| partner_trade_no | string | 商户单号
-| appid | string | Appid
-| mch_id | string | 商户号
-| detail_id | string | 付款单号
-| status | string | 转账状态
+| partner_trade_no {data-required}| string | 商户单号
+| appid {data-required}| string | Appid
+| mch_id {data-required}| string | 商户号
+| detail_id {data-required}| string | 付款单号
+| status {data-required}| string | 转账状态
 | reason | string | 失败原因
-| openid | string | 收款用户openid
+| openid {data-required}| string | 收款用户openid
 | transfer_name | string | 收款用户姓名
-| payment_amount | integer | 付款金额
-| transfer_time | string | 转账时间
-| payment_time | string | 付款成功时间
-| desc | string | 企业付款备注
+| payment_amount {data-required}| integer | 付款金额
+| transfer_time {data-required}| string | 转账时间
+| payment_time {data-required}| string | 付款成功时间
+| desc {data-required}| string | 企业付款备注
 
 {.im-table #response}
 

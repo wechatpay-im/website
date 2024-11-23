@@ -9,16 +9,16 @@ description: 车辆入场以后，商户调用该接口，创建停车入场信�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 子商户号
-| out_parking_no {data-indent=1} | string | 商户入场id
-| plate_number {data-indent=1} | string | 车牌号
-| plate_color {data-indent=1} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
-| notify_url {data-indent=1} | string | 回调通知url
-| start_time {data-indent=1} | string | 入场时间
-| parking_name {data-indent=1} | string | 停车场名称
-| free_duration {data-indent=1} | integer | 免费时长
-| headers | object | 声明请求的头参数
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| out_parking_no {data-required data-indent=1} | string | 商户入场id
+| plate_number {data-required data-indent=1} | string | 车牌号
+| plate_color {data-required data-indent=1} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| notify_url {data-required data-indent=1} | string | 回调通知url
+| start_time {data-required data-indent=1} | string | 入场时间
+| parking_name {data-required data-indent=1} | string | 停车场名称
+| free_duration {data-required data-indent=1} | integer | 免费时长
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -152,13 +152,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| id | string | 停车入场id
-| out_parking_no | string | 商户入场id
-| plate_number | string | 车牌号
-| start_time | string | 入场时间
-| parking_name | string | 停车场名称
-| free_duration | integer | 免费时长
-| state | string | 停车入场状态
+| id {data-required}| string | 停车入场id
+| out_parking_no {data-required}| string | 商户入场id
+| plate_number {data-required}| string | 车牌号
+| plate_color {data-required}| string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| start_time {data-required}| string | 入场时间
+| parking_name {data-required}| string | 停车场名称
+| free_duration {data-required}| integer | 免费时长
+| state {data-required}| string | 停车入场状态
 | block_reason | string | 不可用状态描述
 
 {.im-table #response}

@@ -17,39 +17,39 @@ description: 合单支付的支付结果将只通知给合单支付发起方（�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers | object | 通知的头参数
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Content-Type {data-indent=1} | string | `text/xml`
-| body | object | 通知的`XML`数据结构
-| return_code {data-indent=1} | string
-| return_msg {data-indent=1} | string
-| combine_appid {data-indent=1} | string
-| combine_mch_id {data-indent=1} | string
-| nonce_str {data-indent=1} | string
-| device_info {data-indent=1} | string
-| combine_openid {data-indent=1} | string
-| combine_out_trade_no {data-indent=1} | string
-| trade_type {data-indent=1} | string
-| bank_type {data-indent=1} | string
-| sign {data-indent=1} | string
-| sign_type {data-indent=1} | string
-| result_code {data-indent=1} | string
-| result_msg {data-indent=1} | string
-| err_code {data-indent=1} | string
-| err_code_des {data-indent=1} | string
-| sub_order_list {data-indent=1} | string
+| headers {data-required} | object | 通知的头参数
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Content-Type {data-required data-indent=1} | string | `text/xml`
+| body {data-required} | object | 通知的`XML`数据结构
+| return_code {data-required data-indent=1} | string | 返回状态码
+| return_msg {data-indent=1} | string | 返回信息
+| combine_appid {data-required data-indent=1} | string | 合单APPID
+| combine_mch_id {data-required data-indent=1} | string | 合单商户号
+| nonce_str {data-required data-indent=1} | string | 随机字符串
+| device_info {data-indent=1} | string | 设备号
+| combine_openid {data-indent=1} | string | 合单用户标识
+| combine_out_trade_no {data-required data-indent=1} | string | 合单商户订单号
+| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
+| bank_type {data-indent=1} | string | 付款银行
+| sign {data-required data-indent=1} | string | 签名
+| sign_type {data-required data-indent=1} | string | 签名类型
+| result_code {data-required data-indent=1} | string | 业务结果
+| result_msg {data-indent=1} | string | 业务信息
+| err_code {data-indent=1} | string | 错误代码
+| err_code_des {data-indent=1} | string | 错误信息
+| sub_order_list {data-required data-indent=1} | string | `JSON` 序列化的子订单集合
 | {colspan=3 .im-table-line}
-| order_num {data-indent=2} | number
-| order_list {data-indent=2} | object[]
-| appid {data-indent=3} | string
-| mch_id {data-indent=3} | string
-| openid {data-indent=3} | string
-| total_fee {data-indent=3} | number
-| cash_fee {data-indent=3} | number
-| transaction_id {data-indent=3} | string
-| out_trade_no {data-indent=3} | string
-| attach {data-indent=3} | string
-| time_end {data-indent=3} | string
+| order_num {data-required data-indent=2} | number | 子订单数
+| order_list {data-required data-indent=2} | object[] | 子订单列表
+| appid {data-required data-indent=3} | string | 公众账号ID
+| mch_id {data-required data-indent=3} | string | 商户号
+| openid {data-required data-indent=3} | string | 用户标识
+| total_fee {data-required data-indent=3} | number | 标价金额
+| cash_fee {data-required data-indent=3} | number | 现金支付金额
+| transaction_id {data-required data-indent=3} | string | 微信订单号
+| out_trade_no {data-required data-indent=3} | string | 子单商户订单号
+| attach {data-indent=3} | string | 商家数据包
+| time_end {data-required data-indent=3} | string | 支付完成时间
 
 {.im-table #request}
 

@@ -1,5 +1,5 @@
 ---
-title: 平台收付通商家充值-充值资金退回通知(JSON)
+title: 平台收付通商家充值-充值资金退回(RECHARGE.FUND_RETURNED)通知(JSON)
 description: 微信支付通过该接口将充值资金退回的结果通知给平台商户的系统
 ---
 
@@ -13,42 +13,42 @@ description: 微信支付通过该接口将充值资金退回的结果通知给�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`RECHARGE.FUND_RETURNED` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`RECHARGE.FUND_RETURNED` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型<br/>`recharge` 枚举值
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| recharge_returned_id {data-indent=3} | string | 充值退回单号
-| sp_mchid {data-indent=3} | string | 平台商户号
-| sub_mchid {data-indent=3} | string | 二级商户号
-| out_recharge_no {data-indent=3} | string | 商户充值单号
-| recharge_id {data-indent=3} | string | 微信支付充值单号
-| recharge_channel {data-indent=3} | string | 充值渠道<br/>`BANK_TRANSFER` \| `ONLINE_BANK` 枚举值之一
+| recharge_returned_id {data-required data-indent=3} | string | 充值退回单号
+| sp_mchid {data-required data-indent=3} | string | 平台商户号
+| sub_mchid {data-required data-indent=3} | string | 二级商户号
+| out_recharge_no {data-required data-indent=3} | string | 商户充值单号
+| recharge_id {data-required data-indent=3} | string | 微信支付充值单号
+| recharge_channel {data-required data-indent=3} | string | 充值渠道
 | detail {data-indent=3} | object | 充值退回详情
-| bank_name {data-indent=4} | string | 开户银行名称
-| bank_card_tail {data-indent=4} | string | 银行卡尾号
+| bank_name {data-required data-indent=4} | string | 开户银行名称
+| bank_card_tail {data-required data-indent=4} | string | 银行卡尾号
 | bank_account_name {data-indent=4} | string | 银行账户名称
 | amount {data-indent=4} | number | 充值金额
 | currency {data-indent=4} | string | 充值币种
-| memo {data-indent=4} | string | 银行附言
-| return_time {data-indent=4} | string | 退回时间
-| return_reason {data-indent=4} | string | 退回原因
+| memo {data-required data-indent=4} | string | 银行附言
+| return_time {data-required data-indent=4} | string | 退回时间
+| return_reason {data-required data-indent=4} | string | 退回原因
 
 {.im-table #request}
 

@@ -9,9 +9,9 @@ description: 该接口用于获取微信支付集星光用户信息。合作方�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| wechat_openid | string | 用户在appid下的唯一标识
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 商户appid
+| wechat_openid {data-required} | string | 用户在appid下的唯一标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 商户appid
 
 {.im-table #request}
 
@@ -90,9 +90,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| education_star_student | boolean | 是否学生
-| appid | string | appid
-| wechat_openid | string | 用户在appid下的唯一标识
+| education_star_student {data-required}| boolean | 是否学生
+| appid {data-required}| string | appid
+| wechat_openid {data-required}| string | 用户在appid下的唯一标识
 | qq | string | 用户QQ账号
 | register_time | string | 注册时间
 

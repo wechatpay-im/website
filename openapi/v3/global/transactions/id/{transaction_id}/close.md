@@ -10,9 +10,9 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| transaction_id | string | 微信支付订单号
-| json | object | 声明请求的`JSON`数据结构
-| mchid {data-indent=1} | string | 直连商户号
+| transaction_id {data-required} | string | 微信支付订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| mchid {data-required data-indent=1} | string | 直连商户号
 | sub_mchid {data-indent=1} | string | 子商户号
 | sp_mchid {data-indent=1} | string | 机构商户号
 

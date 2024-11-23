@@ -4,7 +4,7 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id | string | 申请单编号
+| application_id {data-required} | string | 申请单编号
 
 {.im-table #request}
 
@@ -65,8 +65,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_state | string | 申请单状态
-| sub_mchid | string | 从业机构特约商户号
+| application_state {data-required}| string | 申请单状态
+| sub_mchid {data-required}| string | 从业机构特约商户号
 | reject_parameter | string | 驳回参数
 | reject_reason | string | 驳回原因
 | pass_time | string | 活动审核通过时间
@@ -81,14 +81,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id | string | 申请单编号
-| json | object | 声明请求的`JSON`数据结构
-| activity_detail_modification {data-indent=1} | object | 活动报名修改信息
+| application_id {data-required} | string | 申请单编号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| activity_detail_modification {data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动报名修改信息
 | activity_rate {data-indent=2} | string | 活动费率
-| activity_apply_information {data-indent=2} | object[] | 活动报名材料
+| activity_apply_information {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 活动报名材料
 | apply_material_id {data-indent=3} | string | 材料ID
 | apply_material_information {data-indent=3} | string[] | 材料内容
-| additional_information {data-indent=1} | object | 补充信息
+| additional_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充信息
 | additional_message {data-indent=2} | string | 补充说明
 | additional_material {data-indent=2} | string[] | 补充材料
 
@@ -229,7 +229,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id | string | 申请单编号
+| application_id {data-required}| string | 申请单编号
 
 {.im-table #response}
 

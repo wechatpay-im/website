@@ -10,16 +10,17 @@ description: 小微商户模式下，与微信支付对接的是服务商，小�
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2023.03.13` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 商户号
-| sub_mch_id {data-indent=1} | string | 小微商户号
-| sign_type {data-indent=1} | string | 签名类型
-| date {data-indent=1} | string | 日期
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-required data-indent=1} | string | 小微商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| date {data-required data-indent=1} | string | 日期
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -116,18 +117,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
-| err_code | string | 错误代码
+| result_code {data-required}| string | 业务结果
+| err_code {data-required}| string | 错误代码
 | err_code_des | string | 错误代码描述
 | sign_type | string | 签名类型
 | sign | string | 签名
-| date | string | 日期
-| mch_id | string | 商户号
-| sub_mch_id | string | 小微商户号
-| nonce_str | string | 随机字符
-| withdraw_status | string | 单据状态
+| date {data-required}| string | 日期
+| mch_id {data-required}| string | 商户号
+| sub_mch_id {data-required}| string | 小微商户号
+| nonce_str {data-required}| string | 随机字符
+| withdraw_status {data-required}| string | 单据状态
 | fail_reason | string | 单据失败原因
 | withdraw_id | string | 提现单单据ID
 | amount | integer | 金额

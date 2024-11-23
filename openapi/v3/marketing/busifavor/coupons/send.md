@@ -9,11 +9,11 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| openid {data-indent=1} | string | 用户标识
-| appid {data-indent=1} | string | 公众账号ID
-| stock_id {data-indent=1} | string | 批次号
-| out_request_no {data-indent=1} | string | 发券凭证
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| openid {data-required data-indent=1} | string | 用户标识
+| appid {data-required data-indent=1} | string | 公众账号ID
+| stock_id {data-required data-indent=1} | string | 批次号
+| out_request_no {data-required data-indent=1} | string | 发券凭证
 | coupon_code {data-indent=1} | string | 券code
 
 {.im-table #request}
@@ -111,7 +111,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
+| stock_id {data-required}| string | 批次号
 | coupon_code | string | 券code
 | out_request_no | string | 发券凭证
 

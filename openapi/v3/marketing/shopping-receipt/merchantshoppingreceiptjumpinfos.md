@@ -9,13 +9,13 @@ description: 接口介绍：可通过该接口给对应的微信支付订单上�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | transaction_id {data-indent=1} | string | 微信支付订单号
 | transaction_mchid {data-indent=1} | string | 商户号
 | transaction_sub_mchid {data-indent=1} | string | 子商户号
 | openid {data-indent=1} | string | 下单用户OpenID
 | merchant_upload_time {data-indent=1} | string | 商户上传时间
-| jump_info {data-indent=1} | object | 跳转信息
+| jump_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 跳转信息
 | merchant_appid {data-indent=2} | string | 商户电子小票跳转信息小程序AppID
 | merchant_path {data-indent=2} | string | 商户电子小票跳转信息小程序路径
 
@@ -138,13 +138,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| merchant_jump_info | object | 商家电子小票跳转信息
+| merchant_jump_info | object {data-tooltip="对应PHP的array"} | 商家电子小票跳转信息
 | transaction_id {data-indent=1} | string | 微信支付订单号
 | transaction_mchid {data-indent=1} | string | 商户号
 | transaction_sub_mchid {data-indent=1} | string | 子商户号
 | openid {data-indent=1} | string | 下单用户OpenID
 | merchant_upload_time {data-indent=1} | string | 商户上传时间
-| jump_info {data-indent=1} | object | 跳转信息
+| jump_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 跳转信息
 | merchant_appid {data-indent=2} | string | 商户电子小票跳转信息小程序AppID
 | merchant_path {data-indent=2} | string | 商户电子小票跳转信息小程序路径
 | create_time {data-indent=1} | string | 创建时间

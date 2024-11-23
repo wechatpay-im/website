@@ -9,11 +9,11 @@ description: 用于商户的企业微信企业付款操作进行结果查询，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | partner_trade_no {data-indent=1} | string | 商户订单号
-| mch_id {data-indent=1} | string | 商户号
-| appid {data-indent=1} | string | Appid
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| mch_id {data-required data-indent=1} | string | 商户号
+| appid {data-required data-indent=1} | string | Appid
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -104,20 +104,20 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| partner_trade_no | string | 商户订单号
-| mch_id | string | 商户号
-| detail_id | string | 红包单号
-| status | string | 红包状态
-| reason | string | 失败原因
+| partner_trade_no {data-required}| string | 商户订单号
+| mch_id {data-required}| string | 商户号
+| detail_id {data-required}| string | 红包单号
+| status {data-required}| string | 红包状态
+| reason {data-required}| string | 失败原因
 | transfer_name | string | 收款用户姓名
-| payment_amount | integer | 红包退款金额
-| transfer_time | string | 转账时间
-| desc | string | 付款描述
+| payment_amount {data-required}| integer | 红包退款金额
+| transfer_time {data-required}| string | 转账时间
+| desc {data-required}| string | 付款描述
 
 {.im-table #response}
 

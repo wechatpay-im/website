@@ -9,8 +9,8 @@ description: 商户可以通过该接口查询单笔转账明细单。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| batch_id | string | 微信批次单号
-| detail_id | string | 微信明细单号
+| batch_id {data-required} | string | 微信批次单号
+| detail_id {data-required} | string | 微信明细单号
 
 {.im-table #request}
 
@@ -77,20 +77,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
-| out_batch_no | string | 商家批次单号
-| batch_id | string | 微信批次单号
-| appid | string | 直连商户的appid
-| out_detail_no | string | 商家明细单号
-| detail_id | string | 微信明细单号
-| detail_status | string | 明细状态
-| transfer_amount | integer | 转账金额
-| transfer_remark | string | 转账备注
+| mchid {data-required}| string | 商户号
+| out_batch_no {data-required}| string | 商家批次单号
+| batch_id {data-required}| string | 微信批次单号
+| appid {data-required}| string | 直连商户的appid
+| out_detail_no {data-required}| string | 商家明细单号
+| detail_id {data-required}| string | 微信明细单号
+| detail_status {data-required}| string | 明细状态
+| transfer_amount {data-required}| integer | 转账金额
+| transfer_remark {data-required}| string | 转账备注
 | fail_reason | string | 明细失败原因
-| openid | string | 用户在直连商户应用下的用户标示
-| user_name | string | 收款用户姓名
-| initiate_time | string | 转账发起时间
-| update_time | string | 明细更新时间
+| openid {data-required}| string | 用户在直连商户应用下的用户标示
+| user_name {data-required}| string | 收款用户姓名
+| initiate_time {data-required}| string | 转账发起时间
+| update_time {data-required}| string | 明细更新时间
 
 {.im-table #response}
 

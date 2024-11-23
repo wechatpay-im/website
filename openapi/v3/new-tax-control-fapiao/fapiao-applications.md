@@ -9,13 +9,13 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| scene {data-indent=1} | string | 开票场景
-| fapiao_apply_id {data-indent=1} | string | 发票申请单号
-| buyer_information {data-indent=1} | object | 购买方信息
-| type {data-indent=2} | string | 购买方类型
-| name {data-indent=2} | string | 名称
+| scene {data-required data-indent=1} | string | 开票场景
+| fapiao_apply_id {data-required data-indent=1} | string | 发票申请单号
+| buyer_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 购买方信息
+| type {data-required data-indent=2} | string | 购买方类型
+| name {data-required data-indent=2} | string | 名称
 | taxpayer_id {data-indent=2} | string | 纳税人识别号
 | address {data-indent=2} | string | 地址
 | telephone {data-indent=2} | string | 电话
@@ -23,24 +23,24 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 | bank_account {data-indent=2} | string | 银行账号
 | phone {data-indent=2} | string | 手机号
 | email {data-indent=2} | string | 邮箱地址
-| fapiao_information {data-indent=1} | object[] | 需要开具的发票信息
-| fapiao_id {data-indent=2} | string | 商户发票单号
-| total_amount {data-indent=2} | integer | 总价税合计
-| need_list {data-indent=2} | boolean | 是否以清单形式开具发票
+| fapiao_information {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 需要开具的发票信息
+| fapiao_id {data-required data-indent=2} | string | 商户发票单号
+| total_amount {data-required data-indent=2} | integer | 总价税合计
+| need_list {data-required data-indent=2} | boolean | 是否以清单形式开具发票
 | remark {data-indent=2} | string | 发票备注
-| items {data-indent=2} | object[] | 发票行信息
-| tax_code {data-indent=3} | string | 税局侧规定的货物或应税劳务、服务税收分类编码
+| items {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 发票行信息
+| tax_code {data-required data-indent=3} | string | 税局侧规定的货物或应税劳务、服务税收分类编码
 | goods_category {data-indent=3} | string | 税局侧规定的货物或应税劳务、服务分类名称
 | goods_name {data-indent=3} | string | 货物或应税劳务、服务名称
 | goods_id {data-indent=3} | number | 企业侧维护的货物或应税劳务、服务编码
 | specification {data-indent=3} | string | 规格型号
 | unit {data-indent=3} | string | 单位
-| quantity {data-indent=3} | integer | 数量
-| total_amount {data-indent=3} | integer | 单行金额合计
+| quantity {data-required data-indent=3} | integer | 数量
+| total_amount {data-required data-indent=3} | integer | 单行金额合计
 | tax_rate {data-indent=3} | number | 税率
 | tax_prefer_mark {data-indent=3} | string | 税收优惠政策标识
-| discount {data-indent=3} | boolean | 是否折扣行
-| headers | object | 声明请求的头参数
+| discount {data-required data-indent=3} | boolean | 是否折扣行
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}

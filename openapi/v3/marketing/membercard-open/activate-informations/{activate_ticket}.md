@@ -9,7 +9,7 @@ description: 如果商家选择跳转激活的投放方式，用户点击开卡�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activate_ticket | string | 激活ticket
+| activate_ticket {data-required} | string | 激活ticket
 
 {.im-table #request}
 
@@ -72,10 +72,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | nickname | string | 微信昵称
 | head_image_url | string | 微信头像url
-| user_information | object | 用户开卡时填写的个人信息
-| common_field_list {data-indent=1} | object[] | 平台提供的通用开卡信息字段
+| user_information | object {data-tooltip="对应PHP的array"} | 用户开卡时填写的个人信息
+| common_field_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 平台提供的通用开卡信息字段
+| name {data-indent=2} | string | 平台提供的通用开卡信息字段<br/>`USER_FORM_FLAG_MOBILE` \| `USER_FORM_FLAG_SEX` \| `USER_FORM_FLAG_NAME` \| `USER_FORM_FLAG_BIRTHDAY` \| `USER_FORM_FLAG_ADDRESS` \| `USER_FORM_FLAG_EMAIL` \| `USER_FORM_FLAG_CITY` 枚举值之一
 | value {data-indent=2} | string | 用户开卡时填写的个人信息
-| custom_field_list {data-indent=1} | object[] | 商户自定义的开卡信息字段
+| custom_field_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商户自定义的开卡信息字段
 | name {data-indent=2} | string | 字段名称
 | value {data-indent=2} | string | 字段值
 | value_list {data-indent=2} | string[] | 

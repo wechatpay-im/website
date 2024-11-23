@@ -9,7 +9,7 @@ description: 商户可通过该接口停止支付有礼活动。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 活动id
+| activity_id {data-required} | string | 活动id
 
 {.im-table #request}
 

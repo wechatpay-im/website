@@ -4,7 +4,7 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | callback_url {data-indent=1} | string | 商户回调地址
 | sub_mch_code {data-indent=1} | string | 子商户号
 | show_fapiao_cell {data-indent=1} | boolean | 全部账单展示开发票入口开关
@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| callback_url | string | 商户回调地址
+| callback_url {data-required}| string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
 
 {.im-table #response}
@@ -153,7 +153,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| callback_url | string | 商户回调地址
+| callback_url {data-required}| string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
 
 {.im-table #response}

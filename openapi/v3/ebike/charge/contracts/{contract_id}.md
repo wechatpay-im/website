@@ -9,8 +9,8 @@ description: 通过调用该接口可查询用户的协议状态。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 充电授权扣费协议号
-| query | object | 声明请求的查询参数
+| contract_id {data-required} | string | 充电授权扣费协议号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 特约商户号
 
 {.im-table #request}
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 服务商商户号
-| openid | string | 用户标识
+| mchid {data-required}| string | 服务商商户号
+| openid {data-required}| string | 用户标识
 | sub_mchid | string | 特约商户号
 | contract_id | string | 充电授权扣费协议号
-| contract_state | string | 协议状态
+| contract_state {data-required}| string | 协议状态
 
 {.im-table #response}
 

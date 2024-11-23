@@ -9,18 +9,18 @@ description: 新增出租车公司，主要用于服务商绑定特约商户，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | company_name {data-indent=1} | string | 公司名称
-| tax_id {data-indent=1} | string | 税号
-| address {data-indent=1} | string | 公司地址
+| tax_id {data-required data-indent=1} | string | 税号
+| address {data-required data-indent=1} | string | 公司地址
 | phone {data-indent=1} | string | 公司电话
 | bank_name {data-indent=1} | string | 开户行
 | bank_account {data-indent=1} | string | 银行账号
-| invoice_mode {data-indent=1} | string | 开票渠道
-| legal_person {data-indent=1} | string | 企业法人姓名
+| invoice_mode {data-required data-indent=1} | string | 开票渠道
+| legal_person {data-required data-indent=1} | string | 企业法人姓名
 | short_name {data-indent=1} | string | 公司简称
-| region_id {data-indent=1} | integer | 行政区划ID
-| enterprise_type {data-indent=1} | string | 企业类型
+| region_id {data-required data-indent=1} | integer | 行政区划ID
+| enterprise_type {data-required data-indent=1} | string | 企业类型
 
 {.im-table #request}
 
@@ -153,7 +153,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
+| mchid {data-required}| string | 商户号
 | company_name | string | 公司名称
 
 {.im-table #response}

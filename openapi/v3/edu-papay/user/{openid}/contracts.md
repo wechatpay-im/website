@@ -9,13 +9,13 @@ description: 商户通过用户标识+签约模板号来查询用户签约信息
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 服务商APPID下的用户标识
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 服务商APPID
+| openid {data-required} | string | 服务商APPID下的用户标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 服务商APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户APPID
 | sub_openid {data-indent=1} | string | 子商户APPID下的用户标识
-| plan_id {data-indent=1} | string | 签约模板号
+| plan_id {data-required data-indent=1} | string | 签约模板号
 | contract_status {data-indent=1} | string | 签约状态<br/>`ADD` \| `DELETE` 枚举值之一
 | offset {data-indent=1} | integer | 分页页码
 | limit {data-indent=1} | integer | 分页大小
@@ -139,15 +139,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 结果集
-| sp_mchid {data-indent=1} | string | 服务商商户号
-| appid {data-indent=1} | string | 服务商APPID
+| data | object[] {data-tooltip="对应PHP的array"} | 结果集
+| sp_mchid {data-required data-indent=1} | string | 服务商商户号
+| appid {data-required data-indent=1} | string | 服务商APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户APPID
 | openid {data-indent=1} | string | 服务商APPID下的用户标识
 | sub_openid {data-indent=1} | string | 子商户APPID下的用户标识
 | plan_id {data-indent=1} | string | 签约模板号
-| contract_information {data-indent=1} | object | 签约信息
+| contract_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约信息
 | contract_id {data-indent=2} | string | 签约协议号
 | contract_status {data-indent=2} | string | 签约状态
 | create_time {data-indent=2} | string | 签约时间

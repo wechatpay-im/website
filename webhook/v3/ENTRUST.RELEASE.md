@@ -1,5 +1,5 @@
 ---
-title: 解约成功通知(JSON)
+title: 教育续费通用户解约成功(ENTRUST.RELEASE)通知(JSON)
 description: 签约、解约成功后（包含用户主动解约），微信会把相关签约、解约信息异步通知给商户。
 ---
 
@@ -15,46 +15,46 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`ENTRUST.RELEASE` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`ENTRUST.RELEASE` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| appid {data-indent=3} | string | 微信公众平台为商户的应用分配的ID，与服务商商户号存在绑定关系
-| out_trade_no {data-indent=3} | string | 商户订单号
+| appid {data-required data-indent=3} | string | 微信公众平台为商户的应用分配的ID，与服务商商户号存在绑定关系
+| out_trade_no {data-required data-indent=3} | string | 商户订单号
 | transaction_id {data-indent=3} | string | 微信支付订单号
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
 | bank_type {data-indent=3} | string | 银行类型，采用字符串类型的银行标识
 | success_time {data-indent=3} | string | 支付成功时返回
-| trade_state {data-indent=3} | string | 枚举值：<br/>`SUCCESS`：支付成功<br/>`REFUND`：转入退款<br/>`ACCEPTED`：已受理，未支付<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)
+| trade_state {data-required data-indent=3} | string | 枚举值：<br/>SUCCESS：支付成功<br/>REFUND：转入退款<br/>ACCEPTED：已受理，未支付<br/>PAY_FAIL：支付失败(其他原因，如银行返回失败)
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引
 | payer {data-indent=3} | object | 支付者
 | openid {data-indent=4} | string | 用户在服务商AppID下的唯一标识
 | sub_openid {data-indent=4} | string | 用户在子商户AppID下的唯一标识，如果是直连商户模式接入，该字段返回为空
 | amount {data-indent=3} | object | 订单金额信息
-| total {data-indent=4} | number | 订单总金额，单位为分，只能为整数
+| total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数
 | payer_total {data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
 | discount_total {data-indent=4} | number | 订单折扣
 | currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
 | device_information {data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号
-| payer_total {data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
+| payer_total {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
 | promotion_detail {data-indent=3} | object[] | 优惠详情
 | coupon_id {data-indent=4} | string | 券ID
 | name {data-indent=4} | string | 优惠名称
@@ -65,7 +65,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | wechatpay_contribute {data-indent=4} | number | 特指由微信支付商户平台创建的优惠，出资金额等于本项优惠总金额，单位为分
 | merchant_contribute {data-indent=4} | number | 特指商户自己创建的优惠，出资金额等于本项优惠总金额，单位为分
 | other_contribute {data-indent=4} | number | 其他出资方出资金额，单位为分
-| sp_mchid {data-indent=3} | string | 微信支付分配的商户号
+| sp_mchid {data-required data-indent=3} | string | 微信支付分配的商户号
 | sub_mchid {data-indent=3} | string | 微信支付分配的商户号，服务商商户号与子商户号存在父子关系，如果是直连商户模式接入，该字段返回为空
 | sub_appid {data-indent=3} | string | 微信公众平台为商户的应用分配的ID，与子商户号存在绑定关系，如果是直连商户模式接入，该字段返回为空
 | openid {data-indent=3} | string | 用户在服务商AppID下的唯一标识

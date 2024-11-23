@@ -9,12 +9,12 @@ description: 电商平台通过该接口可将其平台的收入进行提现
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_request_no {data-indent=1} | string | 商户提现单号
-| amount {data-indent=1} | integer | 提现金额
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_request_no {data-required data-indent=1} | string | 商户提现单号
+| amount {data-required data-indent=1} | integer | 提现金额
 | remark {data-indent=1} | string | 备注
 | bank_memo {data-indent=1} | string | 银行附言
-| account_type {data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| account_type {data-required data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #request}
 
@@ -111,8 +111,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| withdraw_id | string | 微信支付提现单号
-| out_request_no | string | 商户提现单号
+| withdraw_id {data-required}| string | 微信支付提现单号
+| out_request_no {data-required}| string | 商户提现单号
 
 {.im-table #response}
 

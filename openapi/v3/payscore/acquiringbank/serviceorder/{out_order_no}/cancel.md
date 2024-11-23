@@ -1,6 +1,6 @@
 ---
-title: 取消订单
-description: 
+title: 从业机构取消微信支付分订单
+description: 前置条件：服务订单状态为“已创建”或“进行中”
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -9,12 +9,12 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| channel_id {data-indent=1} | string | 渠道商商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| reason {data-indent=1} | string | 撤销原因
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| channel_id {data-required data-indent=1} | string | 渠道商商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| reason {data-required data-indent=1} | string | 撤销原因
 
 {.im-table #request}
 

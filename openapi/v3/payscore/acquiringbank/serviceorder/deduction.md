@@ -1,6 +1,6 @@
 ---
-title: 查询扣款信息
-description: 
+title: 从业机构查询微信支付分扣款信息
+description: 前置条件：服务订单状态为“已完成”或者“进行中”且商户已经完成登记扣款信息
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -9,12 +9,12 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| service_id {data-indent=1} | string | 服务ID
-| appid {data-indent=1} | string | 从业机构申请的公众号或移动应用AppID
-| sub_mchid {data-indent=1} | string | 子商户号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| service_id {data-required data-indent=1} | string | 服务ID
+| appid {data-required data-indent=1} | string | 从业机构申请的公众号或移动应用AppID
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户申请的公众号或移动应用AppID
-| channel_id {data-indent=1} | string | 渠道商商户号
+| channel_id {data-required data-indent=1} | string | 渠道商商户号
 | out_order_no {data-indent=1} | string | 商户服务订单号
 
 {.im-table #request}
@@ -118,8 +118,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| description | string | 商品或支付单简要描述。
-| out_trade_no | string | 商户扣款单号
+| description {data-required}| string | 商品或支付单简要描述。
+| out_trade_no {data-required}| string | 商户扣款单号
 
 {.im-table #response}
 

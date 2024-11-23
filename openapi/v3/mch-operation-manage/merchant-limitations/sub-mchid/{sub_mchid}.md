@@ -9,7 +9,7 @@ description: 服务商查询子商户的管控情况。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
+| sub_mchid {data-required} | string | 子商户号
 
 {.im-table #request}
 
@@ -70,9 +70,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
+| mchid {data-required}| string | 商户号
 | limited_functions | string[] | `NO_PAYMENT` \| `NO_WITHDRAWAL` \| `NO_REFUND` \| `NO_TRANSACTION` \| `NO_PROFIT_SHARING` \| `NO_PAYMENT_POINT_COMPLETE_ORDER` 枚举值之一
-| recovery_specifications | object[] | 被管控原因及解脱路径列表
+| recovery_specifications | object[] {data-tooltip="对应PHP的array"} | 被管控原因及解脱路径列表
 | limitation_reason {data-indent=1} | string | 商户被管控原因描述
 | recover_way {data-indent=1} | string | 商户被该原因管控的解脱路径
 | recover_help_url {data-indent=1} | string | 商户被该原因管控的解脱帮助链接

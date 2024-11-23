@@ -127,6 +127,11 @@ export default defineConfig({
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
       '/devkit/': divkitSidebar(),
+      '/openapi/v3/iotmanage': offlineFacepaySidebar(),
+      '/openapi/v3/offlineface': offlineFacepaySidebar(),
+      '/openapi/v3/bank-batch-transfer/': bankTransferSidebar(),
+      '/openapi/v3/bank-transfer/': bankTransferSidebar(),
+      '/openapi/v3/payscore/acquiringbank/': acquiringbankPayscoreSidebar(),
     },
   },
 })
@@ -1455,6 +1460,93 @@ function openapiSidebar() {
   ];
 }
 
+function offlineFacepaySidebar() {
+  return [
+    {
+      items: [
+        transArrayItem(['刷脸智能设备列表', '/openapi/v3/iotmanage/devices']),
+        {
+          text: 'K12刷脸代扣',
+          collapsed: false,
+          items: [
+            ['查询机构信息', '/openapi/v3/offlinefacemch/organizations'],
+            ['获取授权凭证', '/openapi/v3/offlinefacemch/tokens'],
+            ['查询刷脸用户信息', '/openapi/v3/offlinefacemch/organizations/{organization_id}/users/out-user-id/{out_user_id}#get'],
+            ['修改刷脸用户信息', '/openapi/v3/offlinefacemch/organizations/{organization_id}/users/out-user-id/{out_user_id}#patch'],
+            ['解除刷脸用户签约关系', '/openapi/v3/offlinefacemch/organizations/{organization_id}/users/user-id/{user_id}/terminate-contract'],
+            ['获取authinfo', '/openapi/v3/offlineface/authinfo'],
+            ['预签约', '/openapi/v3/offlineface/contracts/presign'],
+            ['查询签约', '/openapi/v3/offlineface/contracts/{contract_id}'],
+            ['查询重采用户列表', '/openapi/v3/offlineface/face-collections'],
+            ['查询重采请求详情', '/openapi/v3/offlineface/face-collections/{collection_id}'],
+            ['申请扣款', '/openapi/v3/offlineface/transactions'],
+            ['查单', '/openapi/v3/offlineface/transactions/out-trade-no/{out_trade_no}'],
+            ['获取还款链接', '/openapi/v3/offlineface/repayment-url'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
+}
+
+function bankTransferSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '银行模式批量转账',
+          collapsed: false,
+          items: [
+            ['发起批量转账', '/openapi/v3/bank-transfer/batches'],
+            ['查询批次单(微信批次单号)', '/openapi/v3/bank-transfer/batches/batch-id/{batch_id}'],
+            ['查询批次单(银行批次单号)', '/openapi/v3/bank-transfer/batches/out-batch-no/{out_batch_no}'],
+            ['查询明细单(微信明细单号)', '/openapi/v3/bank-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'],
+            ['查询明细单(银行明细单号)', '/openapi/v3/bank-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '银行模式电子回单',
+          collapsed: false,
+          items: [
+            ['受理汇总电子回单', '/openapi/v3/bank-batch-transfer/receipt/summary-receipts#post'],
+            ['查询汇总回单结果', '/openapi/v3/bank-batch-transfer/receipt/summary-receipts#get'],
+            ['受理明细电子回单', '/openapi/v3/bank-batch-transfer/receipt/detail-receipts#post'],
+            ['查询明细回单结果', '/openapi/v3/bank-batch-transfer/receipt/detail-receipts#get'],
+            ['下载电子回单文件', '/openapi/v3/transferdownload/signfile'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
+}
+
+function acquiringbankPayscoreSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '微信支付分(从业机构模式)',
+          collapsed: false,
+          items: [
+            ['预授权', '/openapi/v3/payscore/acquiringbank/permissions'],
+            ['查询用户授权记录', '/openapi/v3/payscore/acquiringbank/permissions/authorization-code/{authorization_code}'],
+            ['解除用户授权关系', '/openapi/v3/payscore/acquiringbank/permissions/authorization-code/{authorization_code}/terminate'],
+            ['创建订单', '/openapi/v3/payscore/acquiringbank/serviceorder#post'],
+            ['查询订单', '/openapi/v3/payscore/acquiringbank/serviceorder#get'],
+            ['修改订单金额', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/modify'],
+            ['登记扣款信息', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeductinfo'],
+            ['查询扣款信息', '/openapi/v3/payscore/acquiringbank/serviceorder/deduction'],
+            ['取消订单', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/cancel'],
+            ['完结订单', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete'],
+            ['同步订单信息', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/sync'],
+            ['创建先用后付订单', '/openapi/v3/payscore/acquiringbank/servicepayondeliveryorder'],
+          ].map(transArrayItem),
+        },
+      ],
+    }
+  ]
+}
+
 function webhookSidebar() {
   return [
     {
@@ -1483,6 +1575,13 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#BASIC'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '刷脸',
+          collapsed: true,
+          items: [
+            ['用户签约状态变更回调通知', '/webhook/v3/FACEPAY.USER_STATE_CHANGE'],
           ].map(transArrayItem),
         },
         {

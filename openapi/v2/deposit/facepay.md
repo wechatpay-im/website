@@ -9,27 +9,27 @@ description: 商户通过支付押金（人脸）接口发起押金支付请求�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| deposit {data-indent=1} | string | 是否押金支付
-| appid {data-indent=1} | string | 公众账号ID
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| deposit {data-required data-indent=1} | string | 是否押金支付
+| appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| sub_mch_id {data-indent=1} | string | 子商户号
+| mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-required data-indent=1} | string | 子商户号
 | device_info {data-indent=1} | string | 设备号
-| body {data-indent=1} | string | 商品描述
+| body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 商品详情
 | attach {data-indent=1} | string | 附加数据
-| out_trade_no {data-indent=1} | string | 商户订单号
-| total_fee {data-indent=1} | integer | 总金额
-| fee_type {data-indent=1} | string | 货币类型
-| spbill_create_ip {data-indent=1} | string | 终端IP
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| total_fee {data-required data-indent=1} | integer | 总金额
+| fee_type {data-required data-indent=1} | string | 货币类型
+| spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | limit_pay {data-indent=1} | string | 指定支付方式
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | openid {data-indent=1} | string | 用户标识
-| face_code {data-indent=1} | string | 授权码
-| sign_type {data-indent=1} | string | 签名类型
+| face_code {data-required data-indent=1} | string | 授权码
+| sign_type {data-required data-indent=1} | string | 签名类型
 
 {.im-table #request}
 
@@ -216,34 +216,34 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| sub_appid | string | 子商户公众账号ID
-| mch_id | string | 商户号
-| sub_mch_id | string | 子商户号
+| appid {data-required}| string | 公众账号ID
+| sub_appid {data-required}| string | 子商户公众账号ID
+| mch_id {data-required}| string | 商户号
+| sub_mch_id {data-required}| string | 子商户号
 | device_info | string | 设备号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| openid | string | 用户标识
-| is_subscribe | string | 是否关注公众账号
+| openid {data-required}| string | 用户标识
+| is_subscribe {data-required}| string | 是否关注公众账号
 | sub_openid | string | 用户子标识
 | sub_is_subscribe | string | 是否关注子公众账号
-| trade_type | string | 交易类型
-| bank_type | string | 付款银行
+| trade_type {data-required}| string | 交易类型
+| bank_type {data-required}| string | 付款银行
 | fee_type | string | 标价币种
-| total_fee | integer | 标价金额
+| total_fee {data-required}| integer | 标价金额
 | cash_fee_type | string | 现金支付币种
-| cash_fee | integer | 现金支付金额
+| cash_fee {data-required}| integer | 现金支付金额
 | settlement_total_fee | integer | 应结订单金额
 | coupon_fee | integer | 代金券金额
-| transaction_id | string | 微信支付订单号
-| out_trade_no | string | 商户订单号
+| transaction_id {data-required}| string | 微信支付订单号
+| out_trade_no {data-required}| string | 商户订单号
 | attach | string | 商家数据包
-| time_end | string | 支付完成时间
+| time_end {data-required}| string | 支付完成时间
 
 {.im-table #response}
 

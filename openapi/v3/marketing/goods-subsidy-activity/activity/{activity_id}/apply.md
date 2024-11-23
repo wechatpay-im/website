@@ -9,11 +9,11 @@ description: 指定服务商可通过该接口报名加价购活动、查询某�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 活动ID
-| json | object | 声明请求的`JSON`数据结构
-| caller_merchant_id {data-indent=1} | string | 调用报名活动API的商户的商户号
-| apply_infos {data-indent=1} | object[] | 门店报名信息
-| store_info {data-indent=2} | object | 
+| activity_id {data-required} | string | 活动ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| caller_merchant_id {data-required data-indent=1} | string | 调用报名活动API的商户的商户号
+| apply_infos {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 门店报名信息
+| store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 
 | store_id {data-indent=3} | string | 门店ID
 | accounting_merchant_id {data-indent=3} | string | 门店补贴入账商户号
 | merchant_id {data-indent=3} | string | 门店商户号
@@ -145,14 +145,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | return_message | string | 返回结果文案
-| failed_apply_infos | object[] | 失败的报名记录
-| store_info {data-indent=1} | object | 
+| failed_apply_infos | object[] {data-tooltip="对应PHP的array"} | 失败的报名记录
+| store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | store_id {data-indent=2} | string | 门店ID
 | accounting_merchant_id {data-indent=2} | string | 门店补贴入账商户号
 | merchant_id {data-indent=2} | string | 门店商户号
 | goods_original_price {data-indent=1} | number | 商品原价
-| succeed_apply_infos | object[] | 成功的报名记录
-| store_info {data-indent=1} | object | 
+| succeed_apply_infos | object[] {data-tooltip="对应PHP的array"} | 成功的报名记录
+| store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | store_id {data-indent=2} | string | 门店ID
 | accounting_merchant_id {data-indent=2} | string | 门店补贴入账商户号
 | merchant_id {data-indent=2} | string | 门店商户号

@@ -9,7 +9,7 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sp_mchid {data-indent=1} | string | 微信支付分配的服务商唯一标识
 | acquiring_bank_id {data-indent=1} | string | 微信支付分配的从业机构唯一标识
 | channel_id {data-indent=1} | string | 微信支付分配的渠道商唯一标识
@@ -29,10 +29,10 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 | phone_from {data-indent=1} | integer | 用户手机号的来源方式
 | seller_userid {data-indent=1} | string | 收款方在商户侧的用户标识，由商户侧定义，账号维度唯一即可
 | scene {data-indent=1} | integer | 0：无明确场景；1：充值；2：生活缴费
-| recharge_fields {data-indent=1} | object | 
+| recharge_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | account_type {data-indent=2} | integer | 充值场景，用户充值的账号类型
 | account {data-indent=2} | string | 
-| living_expenses_fields {data-indent=1} | object | 
+| living_expenses_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | acc_no {data-indent=2} | string | 生活缴费的呼号
 | type {data-indent=2} | integer | 缴费的种类
 | city {data-indent=2} | string | 用户缴费户号所属城市
@@ -43,7 +43,7 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 | extra_fields1 {data-indent=1} | string | 扩展字段1，json格式
 | extra_fields2 {data-indent=1} | string | 扩展字段2，json格式
 | extra_fields3 {data-indent=1} | string | 扩展字段3，json格式
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}

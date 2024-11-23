@@ -9,10 +9,10 @@ description: 通过商户协议号解约协议, 商户可以通过该接口发�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plan_id | number | 委托代扣模板ID
-| out_contract_code | string | 商户签约协议号
-| json | object | 声明请求的`JSON`数据结构
-| contract_termination_remark {data-indent=1} | string | 解约备注
+| plan_id {data-required} | number | 委托代扣模板ID
+| out_contract_code {data-required} | string | 商户签约协议号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| contract_termination_remark {data-required data-indent=1} | string | 解约备注
 
 {.im-table #request}
 
@@ -97,20 +97,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
-| contract_id | string | 委托代扣协议ID
-| appid | string | 商户AppID
-| plan_id | number | 委托代扣模板ID
-| out_contract_code | string | 商户签约协议号
+| mchid {data-required}| string | 商户号
+| contract_id {data-required}| string | 委托代扣协议ID
+| appid {data-required}| string | 商户AppID
+| plan_id {data-required}| number | 委托代扣模板ID
+| out_contract_code {data-required}| string | 商户签约协议号
 | insured_display_name | string | 被保人姓名
-| contract_state | string | 委托代扣协议状态
+| contract_state {data-required}| string | 委托代扣协议状态
 | contract_signed_time | string | 协议签署时间
 | contract_expired_time | string | 协议到期时间
-| contract_terminate_info | object | 协议解约信息
-| contract_termination_mode {data-indent=1} | string | 协议解约方式
-| contract_terminated_time {data-indent=1} | string | 协议解约时间
+| contract_terminate_info | object {data-tooltip="对应PHP的array"} | 协议解约信息
+| contract_termination_mode {data-required data-indent=1} | string | 协议解约方式
+| contract_terminated_time {data-required data-indent=1} | string | 协议解约时间
 | contract_termination_remark {data-indent=1} | string | 解约备注
-| openid | string | 用户OpenID
+| openid {data-required}| string | 用户OpenID
 | out_user_code | string | 商户侧用户标识
 
 {.im-table #response}

@@ -10,9 +10,9 @@ description: 商户可以通过该接口发起撤销订单。
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| out_trade_no | string | 商户订单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号
+| out_trade_no {data-required} | string | 商户订单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 
 {.im-table #request}
 

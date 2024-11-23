@@ -9,57 +9,57 @@ description: 通过调用此接口可创建代金券批次，包括预充值&免
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| stock_name {data-indent=1} | string | 批次名称
-| available_begin_time {data-indent=1} | string | 开始时间
-| available_end_time {data-indent=1} | string | 结束时间
-| stock_use_rule {data-indent=1} | object | 发放规则
-| max_coupons {data-indent=2} | integer | 发放总上限
-| max_amount {data-indent=2} | integer | 总预算
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| stock_name {data-required data-indent=1} | string | 批次名称
+| available_begin_time {data-required data-indent=1} | string | 开始时间
+| available_end_time {data-required data-indent=1} | string | 结束时间
+| stock_use_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 发放规则
+| max_coupons {data-required data-indent=2} | integer | 发放总上限
+| max_amount {data-required data-indent=2} | integer | 总预算
 | max_amount_by_day {data-indent=2} | integer | 单天发放上限金额
-| max_coupons_per_user {data-indent=2} | integer | 单个用户可领个数
-| natural_person_limit {data-indent=2} | boolean | 是否开启自然人限制
-| prevent_api_abuse {data-indent=2} | boolean | api发券防刷
-| no_cash {data-indent=1} | boolean | 是否无资金流
-| stock_type {data-indent=1} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
+| max_coupons_per_user {data-required data-indent=2} | integer | 单个用户可领个数
+| natural_person_limit {data-required data-indent=2} | boolean | 是否开启自然人限制
+| prevent_api_abuse {data-required data-indent=2} | boolean | api发券防刷
+| no_cash {data-required data-indent=1} | boolean | 是否无资金流
+| stock_type {data-required data-indent=1} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
 | comment {data-indent=1} | string | 批次备注
-| belong_merchant {data-indent=1} | string | 归属商户号
-| pattern_info {data-indent=1} | object | 样式信息
+| belong_merchant {data-required data-indent=1} | string | 归属商户号
+| pattern_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 样式信息
 | description {data-indent=2} | string | 使用说明
 | merchant_logo {data-indent=2} | string | 商户logo
 | merchant_name {data-indent=2} | string | 商户名称
 | background_color {data-indent=2} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
 | coupon_image {data-indent=2} | string | 券详情图片
-| coupon_use_rule {data-indent=1} | object | 核销规则
-| coupon_available_time {data-indent=2} | object | 券可核销时间
+| coupon_use_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 核销规则
+| coupon_available_time {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
 | available_begin_time {data-indent=3} | string | 开始时间
 | available_end_time {data-indent=3} | string | 结束时间
-| fix_available_time {data-indent=3} | object | 固定时间段可用
+| fix_available_time {data-indent=3} | object {data-tooltip="对应PHP的array"} | 固定时间段可用
 | available_week_day {data-indent=4} | integer[] | 可用星期数(0代表周日，1代表周一，以此类推)<br/>`0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6` 枚举值之一
 | begin_time {data-indent=4} | integer | 当天开始时间
 | end_time {data-indent=4} | integer | 当天结束时间
 | second_day_available {data-indent=3} | boolean | 领取第二天生效
 | available_time_after_receive {data-indent=3} | integer | 领取后有效时间
-| fixed_normal_coupon {data-indent=2} | object | 固定面额满减券使用规则
-| coupon_amount {data-indent=3} | integer | 面额
-| transaction_minimum {data-indent=3} | integer | 门槛
-| discount_coupon {data-indent=2} | object | 折扣券使用规则
+| fixed_normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
+| coupon_amount {data-required data-indent=3} | integer | 面额
+| transaction_minimum {data-required data-indent=3} | integer | 门槛
+| discount_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
 | discount_amount_max {data-indent=3} | integer | 最高折扣金额
 | discount_percent {data-indent=3} | integer | 折扣百分比
 | transaction_minimum {data-indent=3} | integer | 门槛
-| exchange_coupon {data-indent=2} | object | 换购券使用规则
+| exchange_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 换购券使用规则
 | exchange_price {data-indent=3} | integer | 单品换购价
 | transaction_minimum {data-indent=3} | integer | 消费门槛
 | goods_tag {data-indent=2} | string[] | 订单优惠标记
 | limit_pay {data-indent=2} | string[] | 指定支付方式
-| limit_card {data-indent=2} | object | 指定银行卡BIN
+| limit_card {data-indent=2} | object {data-tooltip="对应PHP的array"} | 指定银行卡BIN
 | name {data-indent=3} | string | 银行卡名称
 | bin {data-indent=3} | string[] | 
 | trade_type {data-indent=2} | string[] | 支付方式<br/>`MICROAPP` \| `APPPAY` \| `PPAY` \| `CARD` \| `FACE` \| `OTHER` 枚举值之一
 | available_items {data-indent=2} | string[] | 可核销商品编码
 | unavailable_items {data-indent=2} | string[] | 不参与优惠商品编码
 | available_merchants {data-indent=2} | string[] | 可核销商户号
-| out_request_no {data-indent=1} | string | 商户单据号
+| out_request_no {data-required data-indent=1} | string | 商户单据号
 | ext_info {data-indent=1} | string | 扩展属性
 
 {.im-table #request}
@@ -487,8 +487,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
-| create_time | string | 创建时间
+| stock_id {data-required}| string | 批次号
+| create_time {data-required}| string | 创建时间
 
 {.im-table #response}
 

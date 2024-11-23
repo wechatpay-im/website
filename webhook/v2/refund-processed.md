@@ -16,31 +16,31 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers | object | 通知的头参数
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Content-Type {data-indent=1} | string | `text/xml`
-| body | object | 通知的`XML`数据结构
-| return_code {data-indent=1} | string
-| return_msg {data-indent=1} | string
-| appid {data-indent=1} | string
-| mch_id {data-indent=1} | string
-| nonce_str {data-indent=1} | string
-| req_info {data-indent=1} | string
+| headers {data-required} | object | 通知的头参数
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Content-Type {data-required data-indent=1} | string | `text/xml`
+| body {data-required} | object | 通知的`XML`数据结构
+| return_code {data-required data-indent=1} | string | 返回状态码
+| return_msg {data-indent=1} | string | 返回信息
+| appid {data-required data-indent=1} | string | 公众平台APPID
+| mch_id {data-required data-indent=1} | string | 商户号
+| nonce_str {data-required data-indent=1} | string | 随机字符串
+| req_info {data-required data-indent=1} | string | 加密的`XML`信息
 | {colspan=3 .im-table-line}
-| out_refund_no {data-indent=2} | string
-| out_trade_no {data-indent=2} | string
-| refund_account {data-indent=2} | string
-| refund_fee {data-indent=2} | string
-| refund_id {data-indent=2} | string
-| refund_recv_accout {data-indent=2} | string
-| refund_request_source {data-indent=2} | string
-| refund_status {data-indent=2} | string
-| settlement_refund_fee {data-indent=2} | string
-| settlement_total_fee {data-indent=2} | string
-| success_time {data-indent=2} | string
-| total_fee {data-indent=2} | string
-| transaction_id {data-indent=2} | string
-| cash_refund_fee {data-indent=2} | string
+| out_refund_no {data-required data-indent=2} | string | 商户退款单号
+| out_trade_no {data-required data-indent=2} | string | 商户订单号
+| refund_account {data-required data-indent=2} | string | 退款资金来源
+| refund_fee {data-required data-indent=2} | string | 申请退款金额
+| refund_id {data-required data-indent=2} | string | 微信退款单号
+| refund_recv_accout {data-indent=2} | string | 退款入账账户
+| refund_request_source {data-indent=2} | string | 退款发起来源<br/>`API` \| `VENDOR_PLATFORM` 枚举值之一
+| refund_status {data-required data-indent=2} | string |退款状态
+| settlement_refund_fee {data-indent=2} | string | 退款金额
+| settlement_total_fee {data-indent=2} | string | 应结订单金额
+| success_time {data-indent=2} | string | 退款成功时间
+| total_fee {data-required data-indent=2} | string | 订单金额
+| transaction_id {data-required data-indent=2} | string | 微信支付订单号
+| cash_refund_fee {data-required data-indent=2} | string | 用户退款金额
 
 {.im-table #request}
 

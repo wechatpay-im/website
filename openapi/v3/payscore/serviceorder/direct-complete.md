@@ -9,26 +9,26 @@ description: 该接口适用于无需微信支付分做订单风控判断的业�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_order_no {data-indent=1} | string | 商户服务订单号
-| appid {data-indent=1} | string | 公众账号ID
-| service_id {data-indent=1} | string | 服务ID
-| post_payments {data-indent=1} | object[] | 后付费项目
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_order_no {data-required data-indent=1} | string | 商户服务订单号
+| appid {data-required data-indent=1} | string | 公众账号ID
+| service_id {data-required data-indent=1} | string | 服务ID
+| post_payments {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=2} | string | 付费项目名称
 | amount {data-indent=2} | integer | 金额
 | description {data-indent=2} | string | 计费说明
 | count {data-indent=2} | integer | 付费数量
-| post_discounts {data-indent=1} | object[] | 后付费商户优惠
+| post_discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费商户优惠
 | name {data-indent=2} | string | 优惠名称
 | description {data-indent=2} | string | 优惠说明
 | amount {data-indent=2} | integer | 优惠金额
 | count {data-indent=2} | integer | 优惠数量
-| time_range {data-indent=1} | object | 服务时间段
+| time_range {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务时间段
 | start_time {data-indent=2} | string | 
 | start_time_remark {data-indent=2} | string | 
 | end_time {data-indent=2} | string | 
 | end_time_remark {data-indent=2} | string | 
-| location {data-indent=1} | object | 服务位置
+| location {data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务位置
 | start_location {data-indent=2} | string | 
 | end_location {data-indent=2} | string | 
 | service_introduction {data-indent=1} | string | 服务信息
@@ -296,32 +296,32 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| appid | string | 公众账号ID
-| service_id | string | 服务ID
-| post_payments | object[] | 后付费项目
+| out_order_no {data-required}| string | 商户服务订单号
+| appid {data-required}| string | 公众账号ID
+| service_id {data-required}| string | 服务ID
+| post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费项目名称
 | amount {data-indent=1} | integer | 金额
 | description {data-indent=1} | string | 计费说明
 | count {data-indent=1} | integer | 付费数量
-| post_discounts | object[] | 后付费商户优惠
+| post_discounts | object[] {data-tooltip="对应PHP的array"} | 后付费商户优惠
 | name {data-indent=1} | string | 优惠名称
 | description {data-indent=1} | string | 优惠说明
 | amount {data-indent=1} | integer | 优惠金额
 | count {data-indent=1} | integer | 优惠数量
-| time_range | object | 服务时间段
+| time_range {data-required}| object {data-tooltip="对应PHP的array"} | 服务时间段
 | start_time {data-indent=1} | string | 
 | start_time_remark {data-indent=1} | string | 
 | end_time {data-indent=1} | string | 
 | end_time_remark {data-indent=1} | string | 
-| location | object | 服务位置
+| location | object {data-tooltip="对应PHP的array"} | 服务位置
 | start_location {data-indent=1} | string | 
 | end_location {data-indent=1} | string | 
-| service_introduction | string | 服务信息
-| mchid | string | 商户号
-| order_id | string | 微信支付服务订单号
-| state | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
-| state_description | string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
+| service_introduction {data-required}| string | 服务信息
+| mchid {data-required}| string | 商户号
+| order_id {data-required}| string | 微信支付服务订单号
+| state {data-required}| string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description {data-required}| string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
 | attach | string | 商户数据包
 | notify_url | string | 商户回调地址
 | total_amount | integer | 总金额

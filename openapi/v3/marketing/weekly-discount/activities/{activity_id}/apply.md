@@ -9,10 +9,10 @@ description: 报名周周惠活动
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 活动ID
-| json | object | 声明请求的`JSON`数据结构
-| applying_merchant_id {data-indent=1} | integer | 报名商户号
-| store_id {data-indent=1} | integer | 报名商户门店号
+| activity_id {data-required} | string | 活动ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| applying_merchant_id {data-required data-indent=1} | integer | 报名商户号
+| store_id {data-required data-indent=1} | integer | 报名商户门店号
 
 {.im-table #request}
 
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | integer | 报名成功的活动ID
-| success_time | string | 报名成功时间
+| activity_id {data-required}| integer | 报名成功的活动ID
+| success_time {data-required}| string | 报名成功时间
 
 {.im-table #response}
 

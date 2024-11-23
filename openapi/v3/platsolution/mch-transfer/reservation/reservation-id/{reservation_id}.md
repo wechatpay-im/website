@@ -9,9 +9,9 @@ description: 商户可通过接口查询预约商家转账记录详情。预计�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| reservation_id | string | 微信转账预约单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 二级商户号
+| reservation_id {data-required} | string | 微信转账预约单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -90,24 +90,24 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_mchid | string | 服务商商户号
-| sub_mchid | string | 二级商户号
-| sp_appid | string | 服务商AppID
+| sp_mchid {data-required}| string | 服务商商户号
+| sub_mchid {data-required}| string | 二级商户号
+| sp_appid {data-required}| string | 服务商AppID
 | sub_appid | string | 二级商户AppID
-| reservation_id | string | 微信转账预约单号
-| out_reservation_no | string | 商户预约单号
-| transfer_scene_id | string | 转账场景ID
+| reservation_id {data-required}| string | 微信转账预约单号
+| out_reservation_no {data-required}| string | 商户预约单号
+| transfer_scene_id {data-required}| string | 转账场景ID
 | estimated_date | string | 预计最晚转账日期
 | estimated_max_amount | number | 预计最大转账金额
 | exact_amount | number | 准确转账金额
-| openid | string | 收款用户OpenID
+| openid {data-required}| string | 收款用户OpenID
 | bank_type | string | 收款银行类型
-| state | string | 预约记录状态
-| accept_time | string | 预约记录受理的时间
+| state {data-required}| string | 预约记录状态
+| accept_time {data-required}| string | 预约记录受理的时间
 | reserve_time | string | 预约记录用户确认预约的时间
-| close_info | object | 预约记录的关闭信息
-| close_time {data-indent=1} | string | 预约记录关闭的时间
-| close_reason {data-indent=1} | string | 预约记录关闭的原因
+| close_info | object {data-tooltip="对应PHP的array"} | 预约记录的关闭信息
+| close_time {data-required data-indent=1} | string | 预约记录关闭的时间
+| close_reason {data-required data-indent=1} | string | 预约记录关闭的原因
 
 {.im-table #response}
 

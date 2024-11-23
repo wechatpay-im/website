@@ -9,10 +9,10 @@ description: 若在可扣费期内扣费失败，商户在可通知时间段可�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 委托代扣协议ID
-| json | object | 声明请求的`JSON`数据结构
-| mchid {data-indent=1} | string | 直连商户号
-| appid {data-indent=1} | string | 公众号ID
+| contract_id {data-required} | string | 委托代扣协议ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| mchid {data-required data-indent=1} | string | 直连商户号
+| appid {data-required data-indent=1} | string | 公众号ID
 
 {.im-table #request}
 

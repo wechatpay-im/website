@@ -10,15 +10,15 @@ description: 如果订单附加信息已请求报送海关，但电子口岸丢�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 机构APPID
-| mchid {data-indent=1} | string | 商户号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 机构APPID
+| mchid {data-required data-indent=1} | string | 商户号
 | out_trade_no {data-indent=1} | string | 商户订单号
 | transaction_id {data-indent=1} | string | 微信订单号
 | sub_order_no {data-indent=1} | string | 商户子单号
 | sub_order_id {data-indent=1} | string | 微信子单号
-| customs {data-indent=1} | string | 海关编码
-| merchant_customs_no {data-indent=1} | string | 商户海关备案号
+| customs {data-required data-indent=1} | string | 海关编码
+| merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 
 {.im-table #request}
 
@@ -139,14 +139,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 机构APPID
-| mchid | string | 商户号
-| state | string | 报关状态
-| out_trade_no | string | 商户订单号
-| transaction_id | string | 微信订单号
+| appid {data-required}| string | 机构APPID
+| mchid {data-required}| string | 商户号
+| state {data-required}| string | 报关状态
+| out_trade_no {data-required}| string | 商户订单号
+| transaction_id {data-required}| string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| modify_time | string | 最后更新时间
+| modify_time {data-required}| string | 最后更新时间
 | explanation | string | 申报结果说明
 
 {.im-table #response}

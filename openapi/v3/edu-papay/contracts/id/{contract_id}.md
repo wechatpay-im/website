@@ -9,9 +9,9 @@ description: 商户通过签约协议号可查询签约信息，如果对应签�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 签约协议号
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 服务商APPID
+| contract_id {data-required} | string | 签约协议号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 服务商APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户APPID
 
@@ -104,14 +104,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_mchid | string | 服务商商户号
-| appid | string | 服务商APPID
+| sp_mchid {data-required}| string | 服务商商户号
+| appid {data-required}| string | 服务商APPID
 | sub_mchid | string | 子商户号
 | sub_appid | string | 子商户APPID
 | openid | string | 服务商APPID下的用户标识
 | sub_openid | string | 子商户APPID下的用户标识
 | plan_id | string | 签约模板号
-| contract_information | object | 签约信息
+| contract_information | object {data-tooltip="对应PHP的array"} | 签约信息
 | contract_id {data-indent=1} | string | 签约协议号
 | contract_status {data-indent=1} | string | 签约状态
 | create_time {data-indent=1} | string | 签约时间

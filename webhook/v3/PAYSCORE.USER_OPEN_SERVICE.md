@@ -1,5 +1,5 @@
 ---
-title: 支付分服务用户授权成功通知(JSON)
+title: 支付分服务用户授权成功(PAYSCORE.USER_OPEN_SERVICE)通知(JSON)
 description: 微信支付分通过授权服务通知接口将用户通过授权服务消息通知给商户，微信后台会把用户的openid和商户的out_request_no（授权服务专属）的关联信息发送给商户，以便关联请求的上下文（商户需要通过openid来给相应用户下单），商户需要接收处理该消息，并返回应答。
 ---
 
@@ -16,26 +16,26 @@ description: 微信支付分通过授权服务通知接口将用户通过授权�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_OPEN_SERVICE` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_OPEN_SERVICE` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | contract_id {data-indent=3} | string | 微信用户在校园轻松付下的合约的唯一标识，用户在校园轻松付小程序完成签约后，由微信支付生成。
 | mchid {data-indent=3} | string | 商户号
@@ -46,9 +46,9 @@ description: 微信支付分通过授权服务通知接口将用户通过授权�
 | create_time {data-indent=3} | string | 签约完成时间
 | out_contract_code {data-indent=3} | string | 由商户自行生成的签约号，要求64个字符内，只能是数字、大小写字母和_-，且在同一签约模板下唯一。
 | sub_appid {data-indent=3} | string | 子商户应用ID
-| sub_mchid {data-indent=3} | string | 子商户的商户号
+| sub_mchid {data-required data-indent=3} | string | 子商户的商户号
 | channel_id {data-indent=3} | string | 调用授权服务接口提交的渠道商商户号。
-| service_id {data-indent=3} | string | 服务ID
+| service_id {data-required data-indent=3} | string | 服务ID
 | sub_openid {data-indent=3} | string | 子商户公众号下OpenID
 | user_service_status {data-indent=3} | string | 回调状态
 | openorclose_time {data-indent=3} | string | 服务开启/解除授权时间

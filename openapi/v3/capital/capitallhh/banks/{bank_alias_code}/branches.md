@@ -9,11 +9,11 @@ description: 本接口可以用于根据银行别名编码（仅支持需要填�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| bank_alias_code | string | 银行别名编码
-| query | object | 声明请求的查询参数
-| city_code {data-indent=1} | integer | 城市编码
+| bank_alias_code {data-required} | string | 银行别名编码
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| city_code {data-required data-indent=1} | integer | 城市编码
 | offset {data-indent=1} | integer | 本次查询偏移量
-| limit {data-indent=1} | integer | 本次请求最大查询条数
+| limit {data-required data-indent=1} | integer | 本次请求最大查询条数
 
 {.im-table #request}
 
@@ -104,20 +104,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count | integer | 查询数据总条数
-| count | integer | 本次查询条数
-| data | object[] | 支行列表
-| bank_branch_name {data-indent=1} | string | 开户银行支行名称
-| bank_branch_id {data-indent=1} | string | 开户银行支行联行号
-| offset | integer | 本次查询偏移量
-| links | object | 分页链接
+| total_count {data-required}| integer | 查询数据总条数
+| count {data-required}| integer | 本次查询条数
+| data | object[] {data-tooltip="对应PHP的array"} | 支行列表
+| bank_branch_name {data-required data-indent=1} | string | 开户银行支行名称
+| bank_branch_id {data-required data-indent=1} | string | 开户银行支行联行号
+| offset {data-required}| integer | 本次查询偏移量
+| links {data-required}| object {data-tooltip="对应PHP的array"} | 分页链接
 | next {data-indent=1} | string | 下一页链接
 | prev {data-indent=1} | string | 上一页链接
 | self {data-indent=1} | string | 当前链接
-| account_bank | string | 开户银行
-| account_bank_code | integer | 开户银行编码
-| bank_alias | string | 银行别名
-| bank_alias_code | string | 银行别名编码
+| account_bank {data-required}| string | 开户银行
+| account_bank_code {data-required}| integer | 开户银行编码
+| bank_alias {data-required}| string | 银行别名
+| bank_alias_code {data-required}| string | 银行别名编码
 
 {.im-table #response}
 

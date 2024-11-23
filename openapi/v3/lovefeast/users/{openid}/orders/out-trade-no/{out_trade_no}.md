@@ -9,8 +9,8 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户在商户AppID下的唯一标识
-| out_trade_no | string | 商户系统内部订单号
+| openid {data-required} | string | 用户在商户AppID下的唯一标识
+| out_trade_no {data-required} | string | 商户系统内部订单号
 
 {.im-table #request}
 
@@ -87,12 +87,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | business_id | string | 
 | business_name | string | 
 | success_time | string | 
-| payer | object | 
+| payer | object {data-tooltip="对应PHP的array"} | 
 | openid {data-indent=1} | string | 
 | sub_openid {data-indent=1} | string | 
 | avatar {data-indent=1} | string | 
 | nickname {data-indent=1} | string | 
-| amount | object | 
+| amount | object {data-tooltip="对应PHP的array"} | 
 | device_id | string | 
 
 {.im-table #response}

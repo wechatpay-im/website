@@ -9,8 +9,8 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 服务商号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 服务商号
 | cert_serial_number {data-indent=1} | string | 平台证书序列号
 | certificates_number {data-indent=1} | string | 身份证号（需加密）
 | certificates_name {data-indent=1} | string | 身份证所有人姓名（需加密）
@@ -22,8 +22,8 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 | store_address {data-indent=1} | string | 门店地址
 | store_longitude {data-indent=1} | string | 门店经度
 | store_latitude {data-indent=1} | string | 门店纬度
-| sign_type {data-indent=1} | string | 签名类型
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| sign_type {data-required data-indent=1} | string | 签名类型
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -174,12 +174,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
-| mch_id | string | 服务商号
-| risk_level | string | 风险级别
-| risk_level_desc | string | 风险描述
+| result_code {data-required}| string | 业务结果
+| mch_id {data-required}| string | 服务商号
+| risk_level {data-required}| string | 风险级别
+| risk_level_desc {data-required}| string | 风险描述
 
 {.im-table #response}
 

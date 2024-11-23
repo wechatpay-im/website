@@ -9,12 +9,12 @@ description: 商户通过该接口获取preopenid，跳转到签约小程序后�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 特约商户号
-| appid {data-indent=1} | string | 服务商公众号ID
+| appid {data-required data-indent=1} | string | 服务商公众号ID
 | sub_appid {data-indent=1} | string | 特约商户公众号ID
-| trade_scene {data-indent=1} | string | 交易场景
-| openid {data-indent=1} | string | 用户标识
+| trade_scene {data-required data-indent=1} | string | 交易场景
+| openid {data-required data-indent=1} | string | 用户标识
 
 {.im-table #request}
 
@@ -111,7 +111,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| preopen_id | string | 预开通ID
+| preopen_id {data-required}| string | 预开通ID
 
 {.im-table #response}
 

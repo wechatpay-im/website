@@ -9,25 +9,25 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | version {data-indent=1} | string | 接口版本号
 | profit_sharing {data-indent=1} | string | 是否指定服务商分账;Y-是，需要分账;N-否，不分账;字母要求大写，不传默认不分账<br/>`N` \| `Y` 枚举值之一
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
 | device_info {data-indent=1} | string | 设备号
 | sign_type {data-indent=1} | string | 签名类型
-| body {data-indent=1} | string | 商品描述
+| body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 单品优惠活动该字段必传，且必须按照规范上传，JSON格式
 | attach {data-indent=1} | string | 附加数据
-| out_trade_no {data-indent=1} | string | 商户订单号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | fee_type {data-indent=1} | string | 标价币种
-| total_fee {data-indent=1} | integer | 标价金额
-| spbill_create_ip {data-indent=1} | string | 终端IP
+| total_fee {data-required data-indent=1} | integer | 标价金额
+| spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | goods_tag {data-indent=1} | string | 订单优惠标记
-| notify_url {data-indent=1} | string | 通知地址
-| trade_type {data-indent=1} | string | 交易类型
+| notify_url {data-required data-indent=1} | string | 通知地址
+| trade_type {data-required data-indent=1} | string | 交易类型
 | product_id {data-indent=1} | string | 商品ID
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
@@ -237,18 +237,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
 | device_info | string | 设备号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| trade_type | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
-| prepay_id | string | 预支付交易会话标识
+| trade_type {data-required}| string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
+| prepay_id {data-required}| string | 预支付交易会话标识
 | code_url | string | 二维码链接
 | mweb_url | string | 支付跳转链接，**mweb_url为拉起微信支付收银台的中间页面，可通过访问该url来拉起微信客户端，完成支付,mweb_url的有效期为5分钟。**
 | promotion_detail | string | 营销详情

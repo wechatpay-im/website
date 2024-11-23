@@ -9,15 +9,15 @@ description: 该接口主要为商户提供营销资源的终止授权能力，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| partner {data-indent=1} | object | 
-| type {data-indent=2} | string | 
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| partner {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| type {data-required data-indent=2} | string | 
 | appid {data-indent=2} | string | 
 | merchant_id {data-indent=2} | string | 
-| authorized_data {data-indent=1} | object | 
-| business_type {data-indent=2} | string | 
+| authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| business_type {data-required data-indent=2} | string | 
 | stock_id {data-indent=2} | string | 
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 业务请求幂等值
 
 {.im-table #request}
@@ -157,7 +157,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| terminate_time | string | 终止合作关系时间
+| terminate_time {data-required}| string | 终止合作关系时间
 
 {.im-table #response}
 

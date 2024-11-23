@@ -9,20 +9,20 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 商户AppID
-| out_bill_no {data-indent=1} | string | 商户单号
-| transfer_scene_id {data-indent=1} | string | 转账场景ID
-| openid {data-indent=1} | string | 收款用户OpenID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 商户AppID
+| out_bill_no {data-required data-indent=1} | string | 商户单号
+| transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
+| openid {data-required data-indent=1} | string | 收款用户OpenID
 | user_name {data-indent=1} | string | 收款用户姓名
-| transfer_amount {data-indent=1} | number | 转账金额
-| transfer_remark {data-indent=1} | string | 转账备注
+| transfer_amount {data-required data-indent=1} | number | 转账金额
+| transfer_remark {data-required data-indent=1} | string | 转账备注
 | notify_url {data-indent=1} | string | 通知地址
 | user_recv_perception {data-indent=1} | string | 用户收款感知
-| transfer_scene_report_infos {data-indent=1} | object[] | 转账场景报备信息
+| transfer_scene_report_infos {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账场景报备信息
 | info_type {data-indent=2} | string | 信息类型
 | info_content {data-indent=2} | string | 信息内容
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -186,10 +186,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_bill_no | string | 商户单号
-| transfer_bill_no | string | 微信转账单号
-| create_time | string | 单据创建时间
-| state | string | 单据状态
+| out_bill_no {data-required}| string | 商户单号
+| transfer_bill_no {data-required}| string | 微信转账单号
+| create_time {data-required}| string | 单据创建时间
+| state {data-required}| string | 单据状态
 | fail_reason | string | 失败原因
 | package_info | string | 跳转领取页面的package信息
 

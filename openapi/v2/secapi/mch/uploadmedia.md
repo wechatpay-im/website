@@ -9,13 +9,13 @@ description: 服务商操作员调用 API 接口，上传证件照片。支持 j
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | `multipart/form-data` 数据结构
-| media {data-indent=1} | object | 媒体文件标识，有filename、filelength、content-type等信息。**不参与签名计算**
-| media_hash {data-indent=1} | string | 根据媒体文件内容进行MD5计算后的值，注意小写
-| mch_id {data-indent=1} | string | 服务商商户号或渠道号
-| sign_type {data-indent=1} | string | `MD5` \| `HMAC-SHA256` 枚举值之一
-| sign {data-indent=1} | string | `media_hash` `mch_id` `sign_type` 三个参数[通过签名算法](/guide/digital-signature#symmetric)计算得出的签名值
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| body {data-required} | object | `multipart/form-data` 数据结构
+| media {data-required data-indent=1} | object | 媒体文件标识，有filename、filelength、content-type等信息。**不参与签名计算**
+| media_hash {data-required data-indent=1} | string | 根据媒体文件内容进行MD5计算后的值，注意小写
+| mch_id {data-required data-indent=1} | string | 服务商商户号或渠道号
+| sign_type {data-required data-indent=1} | string | `MD5` \| `HMAC-SHA256` 枚举值之一
+| sign {data-required data-indent=1} | string | `media_hash` `mch_id` `sign_type` 三个参数[通过签名算法](/guide/digital-signature#symmetric)计算得出的签名值
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -166,16 +166,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required} | string | 返回状态码
 | return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| media_id | string | 媒体标识Id,微信返回的媒体文件标识Id
+| media_id {data-required} | string | 媒体标识Id,微信返回的媒体文件标识Id
 
 {.im-table #response}
 

@@ -9,14 +9,14 @@ description: 服务商可以凭“用户openid”查询该乘客对应的“出�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | limit {data-indent=1} | integer | 最大资源条数
 | offset {data-indent=1} | integer | 请求资源起始位置
-| openid {data-indent=1} | string | 小程序用户的微信openid
-| appid {data-indent=1} | string | 小程序appid
-| begin_date {data-indent=1} | string | 起始日期
-| end_date {data-indent=1} | string | 结束日期
-| region_id {data-indent=1} | integer | 行政区划id
+| openid {data-required data-indent=1} | string | 小程序用户的微信openid
+| appid {data-required data-indent=1} | string | 小程序appid
+| begin_date {data-required data-indent=1} | string | 起始日期
+| end_date {data-required data-indent=1} | string | 结束日期
+| region_id {data-required data-indent=1} | integer | 行政区划id
 
 {.im-table #request}
 
@@ -125,14 +125,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 乘客行程单详情
-| plate_number {data-indent=1} | string | 车牌号
-| driver_license {data-indent=1} | string | 营运资格证号
-| up_time {data-indent=1} | string | 上车时间
-| offset | integer | 请求资源起始位置
-| limit | integer | 最大资源条数
-| total_count | integer | 资源总条数
-| links | object | 相关链接
+| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 乘客行程单详情
+| plate_number {data-required data-indent=1} | string | 车牌号
+| driver_license {data-required data-indent=1} | string | 营运资格证号
+| up_time {data-required data-indent=1} | string | 上车时间
+| offset {data-required}| integer | 请求资源起始位置
+| limit {data-required}| integer | 最大资源条数
+| total_count {data-required}| integer | 资源总条数
+| links | object {data-tooltip="对应PHP的array"} | 相关链接
 | next {data-indent=1} | string | 下一页链接
 | prev {data-indent=1} | string | 上一页链接
 | self {data-indent=1} | string | 当前链接

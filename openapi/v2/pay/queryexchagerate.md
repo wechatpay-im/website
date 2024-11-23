@@ -9,12 +9,12 @@ description: 商户网站的商品以外币标价时，通过该接口可以实�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| fee_type {data-indent=1} | string | 币种
-| date {data-indent=1} | string | 日期
-| nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
+| fee_type {data-required data-indent=1} | string | 币种
+| date {data-required data-indent=1} | string | 日期
+| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 
 {.im-table #request}
 
@@ -111,15 +111,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
 | sub_mch_id | string | 子商户号
-| fee_type | string | 币种
-| rate_time | string | 汇率时间
-| rate | string | 现汇卖出价(汇率)
-| sign | string | 签名
+| fee_type {data-required}| string | 币种
+| rate_time {data-required}| string | 汇率时间
+| rate {data-required}| string | 现汇卖出价(汇率)
+| sign {data-required}| string | 签名
 
 {.im-table #response}
 

@@ -1,6 +1,6 @@
 ---
-title: 修改订单金额
-description: 
+title: 从业机构修改微信支付分订单金额
+description: "前置条件：服务订单状态为“进行中”且订单状态说明需为[MCH_COMPLETE : 商户完结]"
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -9,23 +9,23 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
-| sub_mchid {data-indent=1} | string | 子商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 | channel_id {data-indent=1} | string | 渠道商商户号
-| post_payments {data-indent=1} | object[] | 后付费项目
-| name {data-indent=2} | string | 付费名称
+| post_payments {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费项目
+| name {data-required data-indent=2} | string | 付费名称
 | description {data-indent=2} | string | 付费说明
 | amount {data-indent=2} | integer | 付费金额
 | count {data-indent=2} | integer | 付费数量
-| post_discounts {data-indent=1} | object[] | 后付费商户优惠
-| name {data-indent=2} | string | 优惠名称
-| description {data-indent=2} | string | 优惠说明
-| amount {data-indent=2} | integer | 优惠金额
+| post_discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费商户优惠
+| name {data-required data-indent=2} | string | 优惠名称
+| description {data-required data-indent=2} | string | 优惠说明
+| amount {data-required data-indent=2} | integer | 优惠金额
 | count {data-indent=2} | integer | 优惠数量
-| total_amount {data-indent=1} | integer | 总金额
-| reason {data-indent=1} | string | 修改原因
+| total_amount {data-required data-indent=1} | integer | 总金额
+| reason {data-required data-indent=1} | string | 修改原因
 
 {.im-table #request}
 

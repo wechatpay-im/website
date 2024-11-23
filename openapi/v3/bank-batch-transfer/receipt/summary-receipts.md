@@ -4,8 +4,8 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_batch_no {data-indent=1} | string | 银行转账批次单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_batch_no {data-required data-indent=1} | string | 银行转账批次单号
 
 {.im-table #request}
 
@@ -78,8 +78,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 银行转账批次单号
-| receipt_no | string | 电子回单申请单号
+| out_batch_no {data-required}| string | 银行转账批次单号
+| receipt_no {data-required}| string | 电子回单申请单号
 | receipt_state | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| out_batch_no {data-indent=1} | string | 银行转账批次单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| out_batch_no {data-required data-indent=1} | string | 银行转账批次单号
 
 {.im-table #request}
 
@@ -171,8 +171,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 银行转账批次单号
-| receipt_no | string | 电子回单申请单号
+| out_batch_no {data-required}| string | 银行转账批次单号
+| receipt_no {data-required}| string | 电子回单申请单号
 | receipt_state | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值

@@ -9,12 +9,12 @@ description: 电商子商户需注销商户号时，由其所属电商平台服�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| out_apply_no {data-indent=1} | string | 商户注销申请单号
-| application_info {data-indent=1} | object[] | 注销申请材料
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| out_apply_no {data-required data-indent=1} | string | 商户注销申请单号
+| application_info {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 注销申请材料
 | application_type {data-indent=2} | string | 注销申请材料类型<br/>`SP_CANCEL_ACCOUNT_APPLICATION` \| `SUB_CANCEL_ACCOUNT_APPLICATION` 枚举值之一
-| application_media_id {data-indent=2} | string | 
+| application_media_id {data-indent=2} | string | 图片MediaID
 
 {.im-table #request}
 
@@ -117,8 +117,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_apply_no | string | 商户注销申请单号
-| sub_mchid | string | 二级商户号
+| out_apply_no {data-required}| string | 商户注销申请单号
+| sub_mchid {data-required}| string | 二级商户号
 | reject_reason | string | 受理失败原因
 | cancel_state | string | 注销状态<br/>`REVIEWING` \| `REJECTED` \| `CANCEL_SUCCESS` 枚举值之一
 | update_time | string | 最后更新时间

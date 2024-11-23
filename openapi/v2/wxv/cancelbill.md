@@ -9,15 +9,15 @@ description: 订单创建后，调用完结租借订单接口前。调用完结�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| version {data-indent=1} | string | 接口版本号
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| out_order_no {data-indent=1} | string | 商户服务订单号
-| reason {data-indent=1} | string | 撤销原因
-| service_id {data-indent=1} | string | 服务ID
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| version {data-required data-indent=1} | string | 接口版本号
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| out_order_no {data-required data-indent=1} | string | 商户服务订单号
+| reason {data-required data-indent=1} | string | 撤销原因
+| service_id {data-required data-indent=1} | string | 服务ID
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -132,9 +132,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回结果
-| order_id | string | 微信支付服务订单号
+| order_id {data-required}| string | 微信支付服务订单号
 
 {.im-table #response}
 

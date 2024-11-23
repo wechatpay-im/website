@@ -9,10 +9,10 @@ description: 通过此接口可查询代金券信息，包括代金券的基础�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户openid
-| coupon_id | string | 代金券id
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 公众账号ID
+| openid {data-required} | string | 用户openid
+| coupon_id {data-required} | string | 代金券id
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 公众账号ID
 
 {.im-table #request}
 
@@ -108,19 +108,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | start_time | string | 激活批次的时间
 | stop_time | string | 终止批次的时间
 | singleitem | boolean | 是否单品优惠
-| cut_to_message | object | 减至批次特定信息
+| cut_to_message | object {data-tooltip="对应PHP的array"} | 减至批次特定信息
 | single_price_max {data-indent=1} | integer | 可用优惠的商品最高单价
 | cut_to_price {data-indent=1} | integer | 减至后的优惠单价
 | available_begin_time | string | 可用开始时间
 | available_end_time | string | 可用结束时间
-| normal_coupon_information | object | 固定面额满减券使用规则
-| coupon_amount {data-indent=1} | integer | 面额
-| transaction_minimum {data-indent=1} | integer | 门槛
-| consume_information | object | 已实扣代金券核销信息
+| normal_coupon_information | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
+| coupon_amount {data-required data-indent=1} | integer | 面额
+| transaction_minimum {data-required data-indent=1} | integer | 门槛
+| consume_information | object {data-tooltip="对应PHP的array"} | 已实扣代金券核销信息
 | consume_time {data-indent=1} | string | 核销时间
 | consume_mchid {data-indent=1} | string | 核销商户号
 | transaction_id {data-indent=1} | string | 核销商户号
-| goods_detail {data-indent=1} | object[] | 单品信息
+| goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品信息
 | goods_id {data-indent=2} | string | 
 | quantity {data-indent=2} | integer | 
 | price {data-indent=2} | integer | 

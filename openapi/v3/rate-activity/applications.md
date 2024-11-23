@@ -9,17 +9,17 @@ description: 从业机构可调用该接口帮助已完成开户意愿确认的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| acquiring_bank_id {data-indent=1} | string | 从业机构号
-| channel_id {data-indent=1} | string | 渠道商户号
-| sub_mchid {data-indent=1} | string | 从业机构特约商户号
-| activity_detail {data-indent=1} | object | 活动报名信息
-| activity_id {data-indent=2} | string | 活动ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| acquiring_bank_id {data-required data-indent=1} | string | 从业机构号
+| channel_id {data-required data-indent=1} | string | 渠道商户号
+| sub_mchid {data-required data-indent=1} | string | 从业机构特约商户号
+| activity_detail {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动报名信息
+| activity_id {data-required data-indent=2} | string | 活动ID
 | activity_rate {data-indent=2} | string | 活动费率
-| activity_apply_information {data-indent=2} | object[] | 活动报名材料
+| activity_apply_information {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 活动报名材料
 | apply_material_id {data-indent=3} | string | 材料ID
 | apply_material_information {data-indent=3} | string[] | 材料内容
-| additional_information {data-indent=1} | object | 补充信息
+| additional_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充信息
 | additional_message {data-indent=2} | string | 补充说明
 | additional_material {data-indent=2} | string[] | 补充材料
 
@@ -178,7 +178,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id | string | 申请单编号
+| application_id {data-required}| string | 申请单编号
 
 {.im-table #response}
 

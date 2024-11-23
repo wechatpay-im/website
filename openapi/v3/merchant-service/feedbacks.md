@@ -10,15 +10,16 @@ description: 商户上传反馈处理结果的接口。 包括商户反馈类型
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2021.01.08` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| transaction_id {data-indent=1} | string | 微信支付订单号
-| complainted_mchid {data-indent=1} | string | 被诉商户号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| transaction_id {data-required data-indent=1} | string | 微信支付订单号
+| complainted_mchid {data-required data-indent=1} | string | 被诉商户号
 | feedback_type {data-indent=1} | integer | 反馈内容类型
-| feedback_content {data-indent=1} | string | 反馈内容
+| feedback_content {data-required data-indent=1} | string | 反馈内容
 | feedback_images {data-indent=1} | string[] | 
 | launch_confirm_process {data-indent=1} | boolean | 反馈处理完成
 

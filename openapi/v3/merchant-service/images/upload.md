@@ -9,12 +9,12 @@ description: 商户上传反馈图片的接口。 将媒体图片进行二进制
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | `multipart/form-data` 数据结构
-| file {data-indent=1} | object | 媒体图⽚只⽀持JPG、BMP、PNG格式，⽂件⼤⼩不能超过2M。
-| meta {data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`sha256`、`filename`
+| body {data-required} | object | `multipart/form-data` 数据结构
+| file {data-required data-indent=1} | object | 媒体图⽚只⽀持JPG、BMP、PNG格式，⽂件⼤⼩不能超过2M。
+| meta {data-required data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`sha256`、`filename`
 | {colspan=3 .im-table-line}
-| sha256 {data-indent=2} | string | 图片文件的`sha256`摘要
-| filename {data-indent=2} | string | 商户上传的媒体图片的名称，商户自定义，必须以JPG、BMP、PNG为后缀
+| sha256 {data-required data-indent=2} | string | 图片文件的`sha256`摘要
+| filename {data-required data-indent=2} | string | 商户上传的媒体图片的名称，商户自定义，必须以JPG、BMP、PNG为后缀
 
 {.im-table #request}
 
@@ -105,7 +105,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| media_id | string | 媒体文件标识ID
+| media_id {data-required} | string | 媒体文件标识ID
 
 {.im-table #response}
 

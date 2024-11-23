@@ -9,11 +9,11 @@ description: 通过此接口可查询用户在当前品牌下领取的所有会�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| openid {data-indent=1} | string | 用户标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| openid {data-required data-indent=1} | string | 用户标识
 | appid {data-indent=1} | string | 商户AppId
-| offset {data-indent=1} | integer | 分页页码
-| limit {data-indent=1} | integer | 分页大小
+| offset {data-required data-indent=1} | integer | 分页页码
+| limit {data-required data-indent=1} | integer | 分页大小
 
 {.im-table #request}
 
@@ -104,12 +104,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 会员卡列表
+| data | object[] {data-tooltip="对应PHP的array"} | 会员卡列表
 | card_id {data-indent=1} | string | 会员卡id
 | code {data-indent=1} | string | 会员卡code
-| total_count | integer | 总数量
-| offset | integer | 分页页码
-| limit | integer | 分页大小
+| total_count {data-required}| integer | 总数量
+| offset {data-required}| integer | 分页页码
+| limit {data-required}| integer | 分页大小
 
 {.im-table #response}
 

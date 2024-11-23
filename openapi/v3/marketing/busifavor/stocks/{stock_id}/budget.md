@@ -9,13 +9,13 @@ description: 商户可以通过该接口修改批次单天发放上限数量或�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
-| json | object | 声明请求的`JSON`数据结构
+| stock_id {data-required} | string | 批次号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | target_max_coupons {data-indent=1} | integer | 目标批次最大发放个数
 | target_max_coupons_by_day {data-indent=1} | integer | 目标单天发放上限个数
 | current_max_coupons {data-indent=1} | integer | 当前批次最大发放个数
 | current_max_coupons_by_day {data-indent=1} | integer | 当前单天发放上限个数
-| modify_budget_request_no {data-indent=1} | string | 修改预算请求单据号
+| modify_budget_request_no {data-required data-indent=1} | string | 修改预算请求单据号
 
 {.im-table #request}
 
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| max_coupons | integer | 批次当前最大发放个数
+| max_coupons {data-required}| integer | 批次当前最大发放个数
 | max_coupons_by_day | integer | 当前单天发放上限个数
 
 {.im-table #response}

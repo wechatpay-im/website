@@ -9,12 +9,12 @@ description: 在用户满足优惠门槛后，商户可通过该接口核销用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| coupon_code {data-indent=1} | string | 券code
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| coupon_code {data-required data-indent=1} | string | 券code
 | stock_id {data-indent=1} | string | 批次号
-| appid {data-indent=1} | string | 公众账号ID
-| use_time {data-indent=1} | string | 请求核销时间
-| use_request_no {data-indent=1} | string | 核销请求单据号
+| appid {data-required data-indent=1} | string | 公众账号ID
+| use_time {data-required data-indent=1} | string | 请求核销时间
+| use_request_no {data-required data-indent=1} | string | 核销请求单据号
 | openid {data-indent=1} | string | 用户标识
 
 {.im-table #request}
@@ -118,9 +118,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id | string | 批次号
-| openid | string | 用户标识
-| wechatpay_use_time | string | 系统核销券成功的时间
+| stock_id {data-required}| string | 批次号
+| openid {data-required}| string | 用户标识
+| wechatpay_use_time {data-required}| string | 系统核销券成功的时间
 
 {.im-table #response}
 

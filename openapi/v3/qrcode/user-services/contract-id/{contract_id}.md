@@ -9,8 +9,8 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 签约成功后，微信返回代扣签约ID
-| query | object | 声明请求的查询参数
+| contract_id {data-required} | string | 签约成功后，微信返回代扣签约ID
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | appid {data-indent=1} | string | 商户在微信申请公众号或移动应用成功后分配的账号ID
 | sub_appid {data-indent=1} | string | 子公众账号ID
 | sub_mchid {data-indent=1} | string | 微信支付分配的子商户号
@@ -106,7 +106,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | contract_id | string | 签约成功后，微信返回代扣签约ID
 | user_service_state | string | `NORMAL` \| `BLOCKED` 枚举值之一
-| block_reason | string | 
+| block_reason | string | 原因
 
 {.im-table #response}
 

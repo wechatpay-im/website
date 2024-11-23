@@ -4,21 +4,21 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| brand_mchid {data-indent=1} | string | 品牌主商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| appid {data-indent=1} | string | 公众账号ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| brand_mchid {data-required data-indent=1} | string | 品牌主商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| transaction_id {data-indent=1} | string | 微信订单号
-| out_order_no {data-indent=1} | string | 商户分账单号
-| receivers {data-indent=1} | object[] | 分账接收方列表
-| type {data-indent=2} | string | 分账接收方类型
-| account {data-indent=2} | string | 分账接收方账号
-| amount {data-indent=2} | integer | 分账金额
-| description {data-indent=2} | string | 分账描述
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| out_order_no {data-required data-indent=1} | string | 商户分账单号
+| receivers {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
+| type {data-required data-indent=2} | string | 分账接收方类型
+| account {data-required data-indent=2} | string | 分账接收方账号
+| amount {data-required data-indent=2} | integer | 分账金额
+| description {data-required data-indent=2} | string | 分账描述
 | name {data-indent=2} | string | 分账个人接收方姓名
-| finish {data-indent=1} | boolean | 是否分账完成
-| headers | object | 声明请求的头参数
+| finish {data-required data-indent=1} | boolean | 是否分账完成
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -188,20 +188,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_mchid | string | 品牌主商户号
-| sub_mchid | string | 子商户号
-| transaction_id | string | 微信订单号
-| out_order_no | string | 商户分账单号
-| order_id | string | 微信分账单号
-| receivers | object[] | 分账接收方列表
-| type {data-indent=1} | string | 接收方类型
-| account {data-indent=1} | string | 接收方账号
-| amount {data-indent=1} | number | 分账金额
-| description {data-indent=1} | string | 分账描述
-| result {data-indent=1} | string | 分账结果
-| finish_time {data-indent=1} | string | 分账完成时间
+| brand_mchid {data-required}| string | 品牌主商户号
+| sub_mchid {data-required}| string | 子商户号
+| transaction_id {data-required}| string | 微信订单号
+| out_order_no {data-required}| string | 商户分账单号
+| order_id {data-required}| string | 微信分账单号
+| receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
+| type {data-required data-indent=1} | string | 接收方类型
+| account {data-required data-indent=1} | string | 接收方账号
+| amount {data-required data-indent=1} | number | 分账金额
+| description {data-required data-indent=1} | string | 分账描述
+| result {data-required data-indent=1} | string | 分账结果
+| finish_time {data-required data-indent=1} | string | 分账完成时间
 | fail_reason {data-indent=1} | string | 分账失败原因
-| detail_id {data-indent=1} | string | 分账明细单号
+| detail_id {data-required data-indent=1} | string | 分账明细单号
 | status | string | 分账单状态
 
 {.im-table #response}
@@ -214,10 +214,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号
-| transaction_id {data-indent=1} | string | 微信订单号
-| out_order_no {data-indent=1} | string | 商户分账单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| out_order_no {data-required data-indent=1} | string | 商户分账单号
 
 {.im-table #request}
 
@@ -302,20 +302,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
-| transaction_id | string | 微信订单号
-| out_order_no | string | 商户分账单号
-| order_id | string | 微信分账单号
-| status | string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
-| receivers | object[] | 分账接收方列表
-| type {data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
-| account {data-indent=1} | string | 分账接收方账号
-| amount {data-indent=1} | integer | 分账金额
-| description {data-indent=1} | string | 分账描述
-| result {data-indent=1} | string | 分账结果<br/>`PENDING` \| `SUCEESS` \| `CLOSED` 枚举值之一
-| finish_time {data-indent=1} | string | 完成时间
+| sub_mchid {data-required}| string | 子商户号
+| transaction_id {data-required}| string | 微信订单号
+| out_order_no {data-required}| string | 商户分账单号
+| order_id {data-required}| string | 微信分账单号
+| status {data-required}| string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
+| receivers {data-required}| object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
+| account {data-required data-indent=1} | string | 分账接收方账号
+| amount {data-required data-indent=1} | integer | 分账金额
+| description {data-required data-indent=1} | string | 分账描述
+| result {data-required data-indent=1} | string | 分账结果<br/>`PENDING` \| `SUCEESS` \| `CLOSED` 枚举值之一
+| finish_time {data-required data-indent=1} | string | 完成时间
 | fail_reason {data-indent=1} | string | 分账失败原因<br/>`ACCOUNT_ABNORMAL` \| `NO_RELATION` \| `RECEIVER_HIGH_RISK` 枚举值之一
-| detail_id {data-indent=1} | string | 分账明细单号
+| detail_id {data-required data-indent=1} | string | 分账明细单号
 | finish_amount | integer | 分账完结金额
 | finish_description | string | 分账完结描述
 

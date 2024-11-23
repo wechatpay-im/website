@@ -9,11 +9,11 @@ description: 服务商通过本接口查询指定日期内特约商户银行来�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 特约商户号
-| account_type {data-indent=1} | string | 账户类型
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 特约商户号
+| account_type {data-required data-indent=1} | string | 账户类型
 | offset {data-indent=1} | integer | 本次查询偏移量
-| limit {data-indent=1} | integer | 本次请求最大查询条数
+| limit {data-required data-indent=1} | integer | 本次请求最大查询条数
 
 {.im-table #request}
 
@@ -104,24 +104,24 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count | integer | 查询数据总条数
-| offset | integer | 本次查询偏移量
-| limit | integer | 本次查询条数
-| data | object[] | 银行来账记录列表
-| sub_mchid {data-indent=1} | string | 特约商户号
-| account_type {data-indent=1} | string | 账户类型
-| income_record_type {data-indent=1} | string | 银行来账类型
-| income_record_id {data-indent=1} | string | 银行来账微信单号
-| amount {data-indent=1} | integer | 银行来账金额
-| success_time {data-indent=1} | string | 银行来账完成时间
-| bank_name {data-indent=1} | string | 付款方银行名称
-| bank_account_name {data-indent=1} | string | 付款方银行户名
-| bank_account_number {data-indent=1} | string | 付款方银行卡号
-| recharge_remark {data-indent=1} | string | 银行备注
-| links | object | 分页链接
-| next {data-indent=1} | string | 下一页链接
-| prev {data-indent=1} | string | 上一页链接
-| self {data-indent=1} | string | 当前链接
+| total_count {data-required}| integer | 查询数据总条数
+| offset {data-required}| integer | 本次查询偏移量
+| limit {data-required}| integer | 本次查询条数
+| data | object[] {data-tooltip="对应PHP的array"} | 银行来账记录列表
+| sub_mchid {data-required data-indent=1} | string | 特约商户号
+| account_type {data-required data-indent=1} | string | 账户类型
+| income_record_type {data-required data-indent=1} | string | 银行来账类型
+| income_record_id {data-required data-indent=1} | string | 银行来账微信单号
+| amount {data-required data-indent=1} | integer | 银行来账金额
+| success_time {data-required data-indent=1} | string | 银行来账完成时间
+| bank_name {data-required data-indent=1} | string | 付款方银行名称
+| bank_account_name {data-required data-indent=1} | string | 付款方银行户名
+| bank_account_number {data-required data-indent=1} | string | 付款方银行卡号
+| recharge_remark {data-required data-indent=1} | string | 银行备注
+| links {data-required}| object {data-tooltip="对应PHP的array"} | 分页链接
+| next {data-required data-indent=1} | string | 下一页链接
+| prev {data-required data-indent=1} | string | 上一页链接
+| self {data-required data-indent=1} | string | 当前链接
 
 {.im-table #response}
 

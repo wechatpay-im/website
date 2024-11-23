@@ -9,7 +9,7 @@ description: 该接口主要为商户提供合作关系列表的查询能力。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | partner {data-indent=1} | string | 合作方信息
 | authorized_data {data-indent=1} | string | 被授权数据
 | limit {data-indent=1} | integer | 分页大小
@@ -104,20 +104,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 合作关系结果集
-| partner {data-indent=1} | object | 合作方信息
-| type {data-indent=2} | string | 合作方类别
+| data | object[] {data-tooltip="对应PHP的array"} | 合作关系结果集
+| partner {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 合作方信息
+| type {data-required data-indent=2} | string | 合作方类别
 | appid {data-indent=2} | string | 合作方APPID
 | merchant_id {data-indent=2} | string | 合作方商户ID
-| authorized_data {data-indent=1} | object | 被授权数据
-| business_type {data-indent=2} | string | 授权业务类别
+| authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 被授权数据
+| business_type {data-required data-indent=2} | string | 授权业务类别
 | stock_id {data-indent=2} | string | 授权批次ID
-| build_time {data-indent=1} | string | 建立合作关系时间
+| build_time {data-required data-indent=1} | string | 建立合作关系时间
 | terminate_time {data-indent=1} | string | 终止合作关系时间
-| create_time {data-indent=1} | string | 创建时间
-| update_time {data-indent=1} | string | 更新时间
-| limit | integer | 分页大小
-| offset | integer | 分页页码
+| create_time {data-required data-indent=1} | string | 创建时间
+| update_time {data-required data-indent=1} | string | 更新时间
+| limit {data-required}| integer | 分页大小
+| offset {data-required}| integer | 分页页码
 | total_count | integer | 总数量
 
 {.im-table #response}

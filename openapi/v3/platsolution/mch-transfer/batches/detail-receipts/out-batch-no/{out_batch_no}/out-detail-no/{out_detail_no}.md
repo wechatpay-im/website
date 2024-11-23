@@ -9,10 +9,10 @@ description: 查询商家转账明细电子回单接口，商户通过该接口�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 商家批次单号
-| out_detail_no | string | 商家明细单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 二级商户号
+| out_batch_no {data-required} | string | 商家批次单号
+| out_detail_no {data-required} | string | 商家明细单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -97,12 +97,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| batch_id | string | 商家转账批次单号
-| out_batch_no | string | 商家批次单号
-| detail_id | string | 商家转账明细单号
-| out_detail_no | string | 商家明细单号
-| sub_mchid | string | 二级商户号
-| receipt_state | string | 电子回单状态
+| batch_id {data-required}| string | 商家转账批次单号
+| out_batch_no {data-required}| string | 商家批次单号
+| detail_id {data-required}| string | 商家转账明细单号
+| out_detail_no {data-required}| string | 商家明细单号
+| sub_mchid {data-required}| string | 二级商户号
+| receipt_state {data-required}| string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值
 | download_url | string | 电子回单文件的下载地址

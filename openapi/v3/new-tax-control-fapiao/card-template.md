@@ -9,15 +9,15 @@ description: 为商户创建电子发票的卡券模板，该卡券模板在开�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| card_appid {data-indent=1} | string | 插卡公众号AppID
-| card_template_information {data-indent=1} | object | 卡券模板信息
+| card_appid {data-required data-indent=1} | string | 插卡公众号AppID
+| card_template_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 卡券模板信息
 | payee_name {data-indent=2} | string | 收款方名称
-| logo_url {data-indent=2} | string | 卡券logo地址
-| custom_cell {data-indent=2} | object | 卡券自定义cell位配置
-| words {data-indent=3} | string | cell位文字
-| description {data-indent=3} | string | cell位描述
+| logo_url {data-required data-indent=2} | string | 卡券logo地址
+| custom_cell {data-indent=2} | object {data-tooltip="对应PHP的array"} | 卡券自定义cell位配置
+| words {data-required data-indent=3} | string | cell位文字
+| description {data-required data-indent=3} | string | cell位描述
 | jump_url {data-indent=3} | string | 点击cell位跳转的地址
 | miniprogram_user_name {data-indent=3} | string | 点击cell位跳转的小程序的用户名
 | miniprogram_path {data-indent=3} | string | 点击cell位跳转的小程序的页面路径
@@ -165,8 +165,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_appid | string | 插卡公众号AppID
-| card_id | string | 卡券模板id
+| card_appid {data-required}| string | 插卡公众号AppID
+| card_id {data-required}| string | 卡券模板id
 
 {.im-table #response}
 

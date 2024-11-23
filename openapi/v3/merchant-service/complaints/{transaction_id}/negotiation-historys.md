@@ -10,11 +10,12 @@ description: 商户可通过调用此接口，查询指定投诉的用户商户�
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2021.01.08` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id | string | 微信支付订单号
+| transaction_id {data-required} | string | 微信支付订单号
 
 {.im-table #request}
 
@@ -75,10 +76,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| complaint_negotiation_history | object[] | 投诉协商历史
-| operate_user {data-indent=1} | string | 操作人
-| operate_time {data-indent=1} | string | 操作时间
-| operate_type {data-indent=1} | string | 操作类型<br/>`USER_CREATE_COMPLAINT` \| `CREATE_COMPLAINT_BY_PLATFORM` \| `USER_CONTINUE_COMPLAINT` \| `USER_REVOKE_COMPLAINT` \| `USER_CONFIRM_COMPLAINT` \| `SELLER_REFUND` \| `MERCHANT_LAUNCH_CONFIRM_PROCESS` \| `USER_RESPONSE` \| `MERCHANT_RESPONSE` \| `RESPONSE_BY_PLATFORM` \| `CONTINUE_COMPLAINT_BY_PLATFORM` \| `CREATE_COMPLAINT_SYSTEM_MESSAGE` \| `COMPLAINT_TIMEOUT_SYSTEM_MESSAGE` \| `SELLER_REFUND_SYSTEM_MESSAGE` \| `CONTINUE_COMPLAINT_SYSTEM_MESSAGE` \| `LAUNCH_CONFIRM_PROCESS_SYSTEM_MESSAGE` 枚举值之一
+| complaint_negotiation_history | object[] {data-tooltip="对应PHP的array"} | 投诉协商历史
+| operate_user {data-required data-indent=1} | string | 操作人
+| operate_time {data-required data-indent=1} | string | 操作时间
+| operate_type {data-required data-indent=1} | string | 操作类型<br/>`USER_CREATE_COMPLAINT` \| `CREATE_COMPLAINT_BY_PLATFORM` \| `USER_CONTINUE_COMPLAINT` \| `USER_REVOKE_COMPLAINT` \| `USER_CONFIRM_COMPLAINT` \| `SELLER_REFUND` \| `MERCHANT_LAUNCH_CONFIRM_PROCESS` \| `USER_RESPONSE` \| `MERCHANT_RESPONSE` \| `RESPONSE_BY_PLATFORM` \| `CONTINUE_COMPLAINT_BY_PLATFORM` \| `CREATE_COMPLAINT_SYSTEM_MESSAGE` \| `COMPLAINT_TIMEOUT_SYSTEM_MESSAGE` \| `SELLER_REFUND_SYSTEM_MESSAGE` \| `CONTINUE_COMPLAINT_SYSTEM_MESSAGE` \| `LAUNCH_CONFIRM_PROCESS_SYSTEM_MESSAGE` 枚举值之一
 | operate_details {data-indent=1} | string | 操作内容
 | image_list {data-indent=1} | string[] | 协商历史图片凭证
 

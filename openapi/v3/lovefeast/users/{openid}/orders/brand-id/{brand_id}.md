@@ -9,9 +9,9 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户在商户AppID下的唯一标识
-| brand_id | string | 品牌ID
-| query | object | 声明请求的查询参数
+| openid {data-required} | string | 用户在商户AppID下的唯一标识
+| brand_id {data-required} | string | 品牌ID
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | offset {data-indent=1} | integer | 请求资源起始位置
 | limit {data-indent=1} | integer | 最大资源条数
 
@@ -108,7 +108,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | limit | integer | 
 | offset | integer | 
 | total_count | integer | 
-| data | object[] | 
+| data | object[] {data-tooltip="对应PHP的array"} | 
 | welfare_trade_id {data-indent=1} | string | 
 | appid {data-indent=1} | string | 
 | sub_appid {data-indent=1} | string | 
@@ -119,12 +119,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | business_id {data-indent=1} | string | 
 | business_name {data-indent=1} | string | 
 | success_time {data-indent=1} | string | 
-| payer {data-indent=1} | object | 
+| payer {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | openid {data-indent=2} | string | 
 | sub_openid {data-indent=2} | string | 
 | avatar {data-indent=2} | string | 
 | nickname {data-indent=2} | string | 
-| amount {data-indent=1} | object | 
+| amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | total {data-indent=2} | number | 
 | payer_total {data-indent=2} | number | 
 | currency {data-indent=2} | string | 

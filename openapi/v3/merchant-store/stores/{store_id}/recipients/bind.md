@@ -9,11 +9,11 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| store_id | integer | 微信支付商户门店ID
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 子商户号
-| store_recipient {data-indent=1} | object[] | 门店收款信息
-| mchid {data-indent=2} | string | 门店收款商户号
+| store_id {data-required} | integer | 微信支付商户门店ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| store_recipient {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 收款门店信息
+| mchid {data-required data-indent=2} | string | 门店收款商户号
 | company_name {data-indent=2} | string | 门店收款主体
 
 {.im-table #request}
@@ -117,7 +117,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| failed_store_recipient | object[] | 
+| failed_store_recipient | object[] {data-tooltip="对应PHP的array"} | 收款门店信息
 | mchid {data-indent=1} | string | 门店收款商户号
 | failed_reason {data-indent=1} | string | 绑定当前收款信息失败的原因
 

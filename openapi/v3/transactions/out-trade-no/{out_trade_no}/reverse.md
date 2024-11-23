@@ -9,12 +9,12 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
-| json | object | 声明请求的`JSON`数据结构
-| mchid {data-indent=1} | string | 商户号
-| sp_mchid {data-indent=1} | string | 机构商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| out_trade_no | string | 商户订单号
+| base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| mchid {data-required data-indent=1} | string | 商户号
+| sp_mchid {data-required data-indent=1} | string | 机构商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| out_trade_no {data-required} | string | 商户订单号
 
 {.im-table #request}
 

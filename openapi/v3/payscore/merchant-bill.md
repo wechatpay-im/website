@@ -9,11 +9,11 @@ description: 商户可以调用此接口获取对账单文件的下载链接，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| bill_date {data-indent=1} | string | 账单日期
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| bill_date {data-required data-indent=1} | string | 账单日期
 | tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
-| encryption_algorithm {data-indent=1} | string | 加密算法
-| service_id {data-indent=1} | string | 服务ID
+| encryption_algorithm {data-required data-indent=1} | string | 加密算法
+| service_id {data-required data-indent=1} | string | 服务ID
 
 {.im-table #request}
 
@@ -104,14 +104,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| download_bill_count | integer | 下载信息总数
-| download_bill_list | object[] | 下载信息明细
-| bill_sequence {data-indent=1} | integer | 账单文件序号
-| hash_type {data-indent=1} | string | 哈希类型
-| hash_value {data-indent=1} | string | 哈希值
-| download_url {data-indent=1} | string | 下载地址
-| encrypt_key {data-indent=1} | string | 加密密钥
-| nonce {data-indent=1} | string | 随机字符串
+| download_bill_count {data-required}| integer | 下载信息总数
+| download_bill_list {data-required}| object[] {data-tooltip="对应PHP的array"} | 下载信息明细
+| bill_sequence {data-required data-indent=1} | integer | 账单文件序号
+| hash_type {data-required data-indent=1} | string | 哈希类型
+| hash_value {data-required data-indent=1} | string | 哈希值
+| download_url {data-required data-indent=1} | string | 下载地址
+| encrypt_key {data-required data-indent=1} | string | 加密密钥
+| nonce {data-required data-indent=1} | string | 随机字符串
 
 {.im-table #response}
 

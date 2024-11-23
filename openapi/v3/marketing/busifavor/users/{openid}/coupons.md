@@ -9,9 +9,9 @@ description: 服务商自定义筛选条件（如创建商户号、归属商户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户标识
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 公众账号ID
+| openid {data-required} | string | 用户标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 公众账号ID
 | stock_id {data-indent=1} | string | 批次号
 | coupon_state {data-indent=1} | string | 券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
 | creator_merchant {data-indent=1} | string | 创建批次的商户号
@@ -139,9 +139,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count | number | 总数量
-| offset | number | 分页页码
-| limit | number | 分页大小
+| total_count {data-required}| number | 总数量
+| offset {data-required}| number | 分页页码
+| limit {data-required}| number | 分页大小
 
 {.im-table #response}
 

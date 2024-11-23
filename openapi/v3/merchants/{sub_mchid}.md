@@ -9,11 +9,11 @@ description: 用于机构查询子商户创建是否成功，接口只提供单�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
-| sub_mchid | string | 子商户号
-| query | object | 声明请求的查询参数
-| sp_appid {data-indent=1} | string | 机构appid
-| sp_mchid {data-indent=1} | string | 机构商户号
+| base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
+| sub_mchid {data-required} | string | 子商户号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sp_appid {data-required data-indent=1} | string | 机构appid
+| sp_mchid {data-required data-indent=1} | string | 机构商户号
 
 {.im-table #request}
 
@@ -104,13 +104,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
-| name | string | 子商户全称
-| shortname | string | 子商户简称
-| office_phone | string | 公司联系方式
-| merchant_country_code | string | 册国家或区域
-| business_category | integer | 类目
-| contact | object | 联系人信息
+| sub_mchid {data-required}| string | 子商户号
+| name {data-required}| string | 子商户全称
+| shortname {data-required}| string | 子商户简称
+| office_phone {data-required}| string | 公司联系方式
+| merchant_country_code {data-required}| string | 册国家或区域
+| business_category {data-required}| integer | 类目
+| contact | object {data-tooltip="对应PHP的array"} | 联系人信息
 | name {data-indent=1} | string | 联系人名称
 | phone {data-indent=1} | string | 联系人电话
 | email {data-indent=1} | string | 联系人邮箱
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | registration_certificate_number | string | 公司注册文件编号
 | registration_certificate_date | string | 公司注册文件过期时间
 | settlement_bank_number | string | 子商户结算账户
-| business | object | 业务信息
+| business | object {data-tooltip="对应PHP的array"} | 业务信息
 | business_type {data-indent=1} | string | 业务类型
 | app_download {data-indent=1} | string | APP下载地址
 | website {data-indent=1} | string | 业务网站
@@ -126,10 +126,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | mini_program {data-indent=1} | string | 小程序
 | store_address {data-indent=1} | string | 门店地址
 | mcc {data-indent=1} | string | MCC码
-| director | object | 董事信息
+| director | object {data-tooltip="对应PHP的array"} | 董事信息
 | name {data-indent=1} | string | 董事姓名
 | number {data-indent=1} | string | 董事证件号码
-| principal | object | 负责人信息
+| principal | object {data-tooltip="对应PHP的array"} | 负责人信息
 | name {data-indent=1} | string | 负责人姓名
 | number {data-indent=1} | string | 负责人证件号码
 

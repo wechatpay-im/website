@@ -9,7 +9,7 @@ description: 电商平台通过该接口查询其提现结果。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_request_no | string | 商户提现单号
+| out_request_no {data-required} | string | 商户提现单号
 
 {.im-table #request}
 
@@ -70,17 +70,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| status | string | 提现单状态
-| withdraw_id | string | 微信支付提现单号
-| out_request_no | string | 商户提现单号
-| amount | integer | 提现金额
-| create_time | string | 发起提现时间
-| update_time | string | 提现状态更新时间
-| reason | string | 失败原因
-| remark | string | 提现备注
-| bank_memo | string | 银行附言
-| account_type | string | 出款账户类型
-| solution | string | 提现失败解决方案
+| status {data-required}| string | 提现单状态
+| withdraw_id {data-required}| string | 微信支付提现单号
+| out_request_no {data-required}| string | 商户提现单号
+| amount {data-required}| integer | 提现金额
+| create_time {data-required}| string | 发起提现时间
+| update_time {data-required}| string | 提现状态更新时间
+| reason {data-required}| string | 失败原因
+| remark {data-required}| string | 提现备注
+| bank_memo {data-required}| string | 银行附言
+| account_type {data-required}| string | 出款账户类型
+| solution {data-required}| string | 提现失败解决方案
 
 {.im-table #response}
 

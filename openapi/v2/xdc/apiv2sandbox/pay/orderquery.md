@@ -9,13 +9,13 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| xml | array | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| out_trade_no {data-indent=1} | string | 商户订单号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 公众账号ID
+| mch_id {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 商户号
+| out_trade_no {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 商户订单号
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256`枚举值之一<br/>默认值 `MD5`
-| headers | array | 请求头
-| Wechatpay-Negative-Test {data-indent=1} | string | 声明所请求的用例名称
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Negative-Test {data-indent=1} | string | 异常用例名称<br/>`MICROPAY_USERPAYING` \| `MICROPAY_TIMEOUT` \| `MICROPAY_PAYERROR` \| `MICROPAY_PAY_QUERY_TIMEOUT`枚举值之一
 | timeout | float | 请求超时时间
 
 {.im-table #request}
@@ -130,17 +130,17 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| return_code | string | 返回状态码 `SUCCESS` \| `FAIL`
+| return_code {data-required} | string | 返回状态码 `SUCCESS` \| `FAIL`
 | return_msg | string | 返回信息
-| result_code | string | 业务结果 `SUCCESS` \| `FAIL`
+| result_code {data-required} | string | 业务结果 `SUCCESS` \| `FAIL`
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| trade_type | string | 交易类型 `MICROPAY`
+| trade_type {data-required} | string | 交易类型 `MICROPAY`
 | trade_state | string | 交易状态
-| out_trade_no | string | 商户订单号
-| transaction_id | string | 微信支付订单号
-| total_fee | string | 标价金额
-| cash_fee | string | 现金支付金额
+| out_trade_no {data-required} | string | 商户订单号
+| transaction_id {data-required} | string | 微信支付订单号
+| total_fee {data-required} | string | 标价金额
+| cash_fee {data-required} | string | 现金支付金额
 | coupon_fee | string | 代金券金额
 
 {.im-table #response}

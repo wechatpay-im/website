@@ -9,11 +9,11 @@ description: 商户可通过加密后的用户手机号，将存量会员通过�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡ID
-| json | object | 声明请求的`JSON`数据结构
-| encrypted_phone_number {data-indent=1} | string | 用户加密手机号
+| card_id {data-required} | string | 会员卡ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| encrypted_phone_number {data-required data-indent=1} | string | 用户加密手机号
 | code {data-indent=1} | string | 会员卡code
-| out_request_no {data-indent=1} | string | 商户请求单号
+| out_request_no {data-required data-indent=1} | string | 商户请求单号
 
 {.im-table #request}
 
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code | string | 会员卡code
+| code {data-required}| string | 会员卡code
 
 {.im-table #response}
 

@@ -9,11 +9,11 @@ description: 通过此API，商圈商户/服务商可以自行查询已授权“
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 顾客openid
-| query | object | 声明请求的查询参数
+| openid {data-required} | string | 顾客openid
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 商圈商户ID
-| brandid {data-indent=1} | integer | 品牌ID
-| appid {data-indent=1} | string | 应用ID
+| brandid {data-required data-indent=1} | integer | 品牌ID
+| appid {data-required data-indent=1} | string | 应用ID
 
 {.im-table #request}
 

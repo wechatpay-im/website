@@ -9,7 +9,7 @@ description: 商户通过此接口可以查询本商户号的账号余额情况�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| account_type | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| account_type {data-required} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #request}
 
@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| available_amount | integer | 可用余额
+| available_amount {data-required}| integer | 可用余额
 | pending_amount | integer | 不可用余额
 
 {.im-table #response}

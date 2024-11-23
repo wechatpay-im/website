@@ -9,25 +9,25 @@ description: 商户调用该接口可获取预签约码（presign_token），预
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 商户appid
-| openid {data-indent=1} | string | 商户appid下的用户标识
-| plan_id {data-indent=1} | string | 签约模板号
-| user_id {data-indent=1} | string | 用户账号
-| school_id {data-indent=1} | string | 学校编号
-| out_contract_code {data-indent=1} | string | 外部签约号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 商户appid
+| openid {data-required data-indent=1} | string | 商户appid下的用户标识
+| plan_id {data-required data-indent=1} | string | 签约模板号
+| user_id {data-required data-indent=1} | string | 用户账号
+| school_id {data-required data-indent=1} | string | 学校编号
+| out_contract_code {data-required data-indent=1} | string | 外部签约号
 | contract_mode {data-indent=1} | string | 签约模式
 | downgrade_default_contract {data-indent=1} | boolean | 允许降级为普通签约模式
-| identity {data-indent=1} | object | 实名信息
-| real_name {data-indent=2} | string | 姓名
-| credential_type {data-indent=2} | string | 证件类型
+| identity {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实名信息
+| real_name {data-required data-indent=2} | string | 姓名
+| credential_type {data-required data-indent=2} | string | 证件类型
 | id_card_number {data-indent=2} | string | 身份证号
-| bank_card {data-indent=1} | object | 签约银行卡
-| bank_card_no {data-indent=2} | string | 签约银行卡号
+| bank_card {data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约银行卡
+| bank_card_no {data-required data-indent=2} | string | 签约银行卡号
 | valid_thru {data-indent=2} | string | 银行卡有效期
 | phone {data-indent=2} | string | 银行卡开卡预留手机号
 | bank_type {data-indent=2} | string | 银行类型
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -227,7 +227,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| presign_token | string | 预签约码
+| presign_token {data-required}| string | 预签约码
 
 {.im-table #response}
 

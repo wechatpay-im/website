@@ -9,16 +9,16 @@ description: 服务商发起添加分账接收方请求，建立分账接收方�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| appid {data-indent=1} | string | 应用ID
+| appid {data-required data-indent=1} | string | 应用ID
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| type {data-indent=1} | string | 分账接收方类型
-| account {data-indent=1} | string | 分账接收方帐号
+| type {data-required data-indent=1} | string | 分账接收方类型
+| account {data-required data-indent=1} | string | 分账接收方帐号
 | name {data-indent=1} | string | 分账个人接收方姓名
-| relation_type {data-indent=1} | string | 与分账方的关系类型
+| relation_type {data-required data-indent=1} | string | 与分账方的关系类型
 | custom_relation {data-indent=1} | string | 自定义的分账关系
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -153,10 +153,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| type | string | 分账接收方类型
-| account | string | 分账接收方账号
+| type {data-required}| string | 分账接收方类型
+| account {data-required}| string | 分账接收方账号
 | name | string | 分账接收方全称
-| relation_type | string | 与分账方的关系类型
+| relation_type {data-required}| string | 与分账方的关系类型
 | custom_relation | string | 自定义的分账关系
 
 {.im-table #response}

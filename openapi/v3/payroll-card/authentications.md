@@ -9,13 +9,13 @@ description: 查询指定用户指定日期微工卡核身记录，查询结果�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| openid {data-indent=1} | string | 用户标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| openid {data-required data-indent=1} | string | 用户标识
 | appid {data-indent=1} | string | 应用ID
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
-| authenticate_date {data-indent=1} | string | 核身日期
-| authenticate_state {data-indent=1} | string | 核身状态
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| authenticate_date {data-required data-indent=1} | string | 核身日期
+| authenticate_state {data-required data-indent=1} | string | 核身状态
 | offset {data-indent=1} | integer | 本次查询偏移量
 | limit {data-indent=1} | integer | 本次请求最大查询条数
 
@@ -132,20 +132,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 查询结果记录列表
-| mchid {data-indent=1} | string | 商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| openid {data-indent=1} | string | 用户标识
-| authenticate_scene {data-indent=1} | string | 核身渠道<br/>`FROM_MINI_APP` \| `FROM_HARDWARE` 枚举值之一
-| authenticate_source {data-indent=1} | string | 核身渠道标识
-| project_name {data-indent=1} | string | 项目名称
-| employer_name {data-indent=1} | string | 单位名称
-| authenticate_state {data-indent=1} | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
-| authenticate_time {data-indent=1} | string | 核身时间
-| authenticate_number {data-indent=1} | string | 商家核身单号
-| total_count | integer | 总记录条数
-| offset | integer | 记录起始位置
-| limit | integer | 本次返回条数
+| data | object[] {data-tooltip="对应PHP的array"} | 查询结果记录列表
+| mchid {data-required data-indent=1} | string | 商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| openid {data-required data-indent=1} | string | 用户标识
+| authenticate_scene {data-required data-indent=1} | string | 核身渠道<br/>`FROM_MINI_APP` \| `FROM_HARDWARE` 枚举值之一
+| authenticate_source {data-required data-indent=1} | string | 核身渠道标识
+| project_name {data-required data-indent=1} | string | 项目名称
+| employer_name {data-required data-indent=1} | string | 单位名称
+| authenticate_state {data-required data-indent=1} | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
+| authenticate_time {data-required data-indent=1} | string | 核身时间
+| authenticate_number {data-required data-indent=1} | string | 商家核身单号
+| total_count {data-required}| integer | 总记录条数
+| offset {data-required}| integer | 记录起始位置
+| limit {data-required}| integer | 本次返回条数
 
 {.im-table #response}
 

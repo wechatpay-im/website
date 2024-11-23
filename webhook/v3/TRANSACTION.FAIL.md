@@ -1,5 +1,5 @@
 ---
-title: 停车服务扣费失败通知(JSON)
+title: 停车服务扣费失败(TRANSACTION.FAIL)通知(JSON)
 description: 商户请求微信支付分停车服务扣费受理接口，会完成订单受理。订单实际支付完成后，微信支付会把订单支付结果信息发送给商户，商户需要接收处理，并返回应答。
 ---
 
@@ -16,47 +16,47 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`TRANSACTION.FAIL` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`TRANSACTION.FAIL` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| sp_mchid {data-indent=3} | string | 调用接口提交的商户号
-| appid {data-indent=3} | string | 调用接口提交的应用ID
-| sub_mchid {data-indent=3} | string | 调用接口提交的子商户号
-| sub_appid {data-indent=3} | string | 调用接口提交的子商户应用ID
+| sp_mchid {data-required data-indent=3} | string | 调用接口提交的商户号
+| appid {data-required data-indent=3} | string | 调用接口提交的应用ID
+| sub_mchid {data-required data-indent=3} | string | 调用接口提交的子商户号
+| sub_appid {data-required data-indent=3} | string | 调用接口提交的子商户应用ID
 | openid {data-indent=3} | string | 用户在服务商AppID下的唯一标识
 | sub_openid {data-indent=3} | string | 用户在子商户AppID下的唯一标识，如果是直连商户模式接入，该字段返回为空
 | plan_id {data-indent=3} | string | 签约模板号，签约模板唯一标识
 | contract_information {data-indent=3} | object | 签约信息
 | contract_id {data-indent=4} | string | 标识用户与某签约模板的一次签约，具有唯一性
-| contract_status {data-indent=4} | string | 枚举值：<br/>`ADD`：签约<br/>`DELETE`：解约
+| contract_status {data-indent=4} | string | 枚举值：<br/>ADD：签约<br/>DELETE：解约
 | create_time {data-indent=4} | string | 签约完成时间
-| out_trade_no {data-indent=3} | string | 调用接口提交的商户服务订单号
-| transaction_id {data-indent=3} | string | 微信支付系统生成的订单号
+| out_trade_no {data-required data-indent=3} | string | 调用接口提交的商户服务订单号
+| transaction_id {data-required data-indent=3} | string | 微信支付系统生成的订单号
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，可作为自定义参数使用，实际情况下只有支付完成状态才会返回该字段。
 | bank_type {data-indent=3} | string | 银行类型，采用字符串类型的银行标识。
 | success_time {data-indent=3} | string | 订单支付完成时间
 | trade_state {data-indent=3} | string | 交易状态：<br/>`SUCCESS`：支付成功<br/>`ACCEPT`：已接收，等待扣款<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)<br/>`REFUND`：转入退款
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引。
-| payer {data-indent=3} | object | 支付者信息，详细说明见下文
-| openid {data-indent=4} | string | 用户在服务商的标识
+| payer {data-required data-indent=3} | object | 支付者信息，详细说明见下文
+| openid {data-required data-indent=4} | string | 用户在服务商的标识
 | sub_openid {data-indent=4} | string | 用户在子商户的标识
 | sp_openid {data-indent=4} | string | 用户在服务商商户AppID下的唯一标识。
 | amount {data-indent=3} | object | 订单金额信息，详细说明见下文
@@ -64,24 +64,24 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 | payer_currency {data-indent=4} | string | 用户支付币种。
 | device_information {data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号
-| payer_total {data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
+| payer_total {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
 | promotion_detail {data-indent=3} | object[] | 优惠功能信息，详细说明见下文
-| coupon_id {data-indent=4} | string | 券或者立减优惠ID
+| coupon_id {data-required data-indent=4} | string | 券或者立减优惠ID
 | name {data-indent=4} | string | 优惠名称。
 | scope {data-indent=4} | string | 枚举值<br/>`GLOBAL`：全场代金券<br/>`SINGLE`：单品优惠
 | type {data-indent=4} | string | 枚举值：<br/>`CASH`：充值型代金券<br/>`NOCASH`：免充值型代金券
 | stock_id {data-indent=4} | string | 活动ID。
-| currency {data-indent=4} | string | `CNY`：人民币，境内商户号仅支持人民币。
+| currency {data-indent=4} | string | CNY：人民币，境内商户号仅支持人民币。
 | goods_detail {data-indent=4} | object[] | 单品列表信息
-| goods_id {data-indent=5} | string | 商品编码。
-| quantity {data-indent=5} | number | 用户购买的数量。
-| unit_price {data-indent=5} | number | 商品单价，单位为分。
-| discount_amount {data-indent=5} | number | 商品优惠金额。
+| goods_id {data-required data-indent=5} | string | 商品编码。
+| quantity {data-required data-indent=5} | number | 用户购买的数量。
+| unit_price {data-required data-indent=5} | number | 商品单价，单位为分。
+| discount_amount {data-required data-indent=5} | number | 商品优惠金额。
 | goods_remark {data-indent=5} | string | 商品备注信息。
 | activity_id {data-indent=4} | string | 在微信商户后台配置的批次ID。
-| mchid {data-indent=3} | string | 商户的商户号，由微信支付生成并下发。
-| trade_type {data-indent=3} | string | 交易类型<br/>`PAP` 枚举值
-| trade_state_desc {data-indent=3} | string | 交易状态描述。
+| mchid {data-required data-indent=3} | string | 商户的商户号，由微信支付生成并下发。
+| trade_type {data-required data-indent=3} | string | 交易类型<br/>`PAP` 枚举值
+| trade_state_desc {data-required data-indent=3} | string | 交易状态描述。
 | scene_info {data-indent=3} | object | 支付场景信息描述
 | device_id {data-indent=4} | string | 终端设备号（门店号或收银设备ID）。
 | sp_appid {data-indent=3} | string | 服务商申请的公众号或移动应用AppID。

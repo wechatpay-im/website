@@ -9,10 +9,10 @@ description: 通过积分授权查询API，商圈商户可自行查询用户积�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 顾客openid
-| query | object | 声明请求的查询参数
+| openid {data-required} | string | 顾客openid
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 商圈商户ID
-| appid {data-indent=1} | string | 小程序appid
+| appid {data-required data-indent=1} | string | 小程序appid
 
 {.im-table #request}
 
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 顾客openid
-| authorize_state | string | 授权状态
+| openid {data-required}| string | 顾客openid
+| authorize_state {data-required}| string | 授权状态
 | authorize_time | string | 授权时间
 | deauthorize_time | string | 取消授权时间
 

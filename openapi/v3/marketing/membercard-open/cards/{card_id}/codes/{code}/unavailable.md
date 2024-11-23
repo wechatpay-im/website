@@ -9,9 +9,9 @@ description: 将用户的会员卡设置为失效状态。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| code | string | 会员卡code
-| json | object | 声明请求的`JSON`数据结构
+| card_id {data-required} | string | 会员卡id
+| code {data-required} | string | 会员卡code
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | reason {data-indent=1} | string | 失效理由
 
 {.im-table #request}

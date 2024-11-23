@@ -9,8 +9,8 @@ description: 下载电子回单API为通用接口，商家转账等业务电子�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| token {data-indent=1} | string | 
+| query {data-required} | object | 声明请求的查询参数
+| token {data-required data-indent=1} | string | 前序download_url的查询参数
 
 {.im-table #request}
 
@@ -23,7 +23,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v3->transferdownload->signfile->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => '',
+    'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
 ])
 ->wait();
@@ -36,7 +36,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v3/transferdownload/signfile')->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => '',
+    'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
 ])
 ->wait();
@@ -49,7 +49,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v3/transferdownload/signfile']->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => '',
+    'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
 ])
 ->wait();
@@ -62,7 +62,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v3->transferdownload->signfile->get([
   'sink' => $stream,
   'query' => [
-    'token' => '',
+    'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
 ]);
 ```
@@ -74,7 +74,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v3/transferdownload/signfile')->get([
   'sink' => $stream,
   'query' => [
-    'token' => '',
+    'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
 ]);
 ```
@@ -86,7 +86,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v3/transferdownload/signfile']->get([
   'sink' => $stream,
   'query' => [
-    'token' => '',
+    'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
 ]);
 ```

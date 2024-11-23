@@ -9,40 +9,40 @@ description: 合作伙伴系统先调用该接口在微信支付服务后台生�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sp_appid {data-indent=1} | string | 合作伙伴应用AppID
-| sp_mchid {data-indent=1} | string | 合作伙伴商户号
+| sp_mchid {data-required data-indent=1} | string | 合作伙伴商户号
 | sub_appid {data-indent=1} | string | 特约商户应用AppID
-| sub_mchid {data-indent=1} | string | 特约商户号
-| description {data-indent=1} | string | 商品描述
-| out_trade_no {data-indent=1} | string | 商户订单号
+| sub_mchid {data-required data-indent=1} | string | 特约商户号
+| description {data-required data-indent=1} | string | 商品描述
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | time_expire {data-indent=1} | string | 交易结束时间
 | attach {data-indent=1} | string | 附加数据
 | notify_url {data-indent=1} | string | 通知地址
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | support_fapiao {data-indent=1} | boolean | 电子发票入口开放标识
-| amount {data-indent=1} | object | 订单金额
-| total {data-indent=2} | number | 总金额
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-required data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型
-| payer {data-indent=1} | object | 支付者
+| payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | sp_openid {data-indent=2} | string | 用户标识
 | sub_openid {data-indent=2} | string | 用户子标识
-| detail {data-indent=1} | object | 优惠功能
+| detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | number | 订单原价
 | invoice_id {data-indent=2} | string | 商品小票 ID
-| goods_detail {data-indent=2} | object[] | 单品列表
-| merchant_goods_id {data-indent=3} | string | 商品编码
+| goods_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| merchant_goods_id {data-required data-indent=3} | string | 商品编码
 | wechatpay_goods_id {data-indent=3} | string | 微信侧商品编码
 | goods_name {data-indent=3} | string | 商品名称
-| quantity {data-indent=3} | number | 商品数量
-| unit_price {data-indent=3} | number | 商品单价
-| scene_info {data-indent=1} | object | 场景信息
-| payer_client_ip {data-indent=2} | string | 用户终端IP
+| quantity {data-required data-indent=3} | number | 商品数量
+| unit_price {data-required data-indent=3} | number | 商品单价
+| scene_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
+| payer_client_ip {data-required data-indent=2} | string | 用户终端IP
 | device_id {data-indent=2} | string | 商户端设备号
-| store_info {data-indent=2} | object | 商户门店信息
+| store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 商户门店信息
 | id {data-indent=3} | string | 门店ID
 | out_id {data-indent=3} | string | 商家自定义编码
-| settle_info {data-indent=1} | object | 结算信息
+| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
 | profit_sharing {data-indent=2} | boolean | 是否指定分账
 
 {.im-table #request}
@@ -356,7 +356,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| prepay_id | string | 预支付交易会话标识
+| prepay_id {data-required}| string | 预支付交易会话标识
 
 {.im-table #response}
 

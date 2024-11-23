@@ -9,11 +9,11 @@ description: 不需要进行分账的订单，可直接调用本接口将订单�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 子商户号
-| transaction_id {data-indent=1} | string | 微信订单号
-| out_order_no {data-indent=1} | string | 商户分帐单号
-| description {data-indent=1} | string | 分账描述
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| out_order_no {data-required data-indent=1} | string | 商户分帐单号
+| description {data-required data-indent=1} | string | 分账描述
 
 {.im-table #request}
 
@@ -104,10 +104,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
-| transaction_id | string | 微信订单号
-| out_order_no | string | 商户分帐单号
-| order_id | string | 微信分帐单号
+| sub_mchid {data-required}| string | 子商户号
+| transaction_id {data-required}| string | 微信订单号
+| out_order_no {data-required}| string | 商户分帐单号
+| order_id {data-required}| string | 微信分帐单号
 
 {.im-table #response}
 

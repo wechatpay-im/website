@@ -17,32 +17,34 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers | object | 通知的头参数
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Content-Type {data-indent=1} | string | `text/xml`
-| body | object | 通知的`XML`数据结构
-| mch_id {data-indent=1} | string
-| app_id {data-indent=1} | string
-| algorithm {data-indent=1} | string
-| nonce_str {data-indent=1} | string
-| sign {data-indent=1} | string
-| event_id {data-indent=1} | string
-| event_create_time {data-indent=1} | string
-| event_type {data-indent=1} | string | `CHECK.SUCCESS` 枚举值
-| event_algorithm {data-indent=1} | string | `AEAD_AES_256_GCM` 枚举值
-| event_nonce {data-indent=1} | string
-| event_associated_data {data-indent=1} | string
-| event_ciphertext {data-indent=1} | string
+| headers {data-required} | object | 通知的头参数
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Content-Type {data-required data-indent=1} | string | `text/xml`
+| body {data-required} | object | 通知的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 商户号
+| appid {data-required data-indent=1} | string | 公众账号ID
+| algorithm {data-required data-indent=1} | string | 签名算法<br/> `HMAC-SHA256` 枚举值
+| nonce_str {data-required data-indent=1} | string | 随机字符串
+| sign {data-required data-indent=1} | string | 签名
+| event_id {data-required data-indent=1} | string | 通知ID
+| event_create_time {data-required data-indent=1} | string | 通知创建时间
+| event_type {data-required data-indent=1} | string | 通知类型<br/>`CHECK.SUCCESS` 枚举值
+| event_algorithm {data-required data-indent=1} | string | 通知加密类型<br/>`AEAD_AES_256_GCM` 枚举值
+| event_nonce {data-required data-indent=1} | string | 通知随机串
+| event_associated_data {data-indent=1} | string | 通知附加数据
+| event_ciphertext {data-required data-indent=1} | string | 通知密文
 | {colspan=3 .im-table-line}
-| state {data-indent=2} | string
-| service_id {data-indent=2} | string
-| out_order_no {data-indent=2} | string
-| order_id {data-indent=2} | string
-| goods_name {data-indent=2} | string
-| room {data-indent=2} | string
-| start_time {data-indent=2} | string
-| deposit_amount {data-indent=2} | string
-| finish_ticket {data-indent=2} | string
+| state {data-indent=2} | string | 单据状态
+| service_id {data-indent=2} | string | 服务ID
+| out_order_no {data-indent=2} | string | 商户服务订单号
+| order_id {data-indent=2} | string | 微信支付服务订单号
+| goods_name {data-indent=2} | string | 商品名称
+| returned {data-indent=2} | string | 是否归还
+| room {data-indent=2} | string | 房间
+| checked_in {data-indent=2} | string | 是否入住
+| start_time {data-indent=2} | string | 入住时间
+| deposit_amount {data-indent=2} | string | 押金金额
+| finish_ticket {data-indent=2} | string | 完结凭证
 
 {.im-table #request}
 

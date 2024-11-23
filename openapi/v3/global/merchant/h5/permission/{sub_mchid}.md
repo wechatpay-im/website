@@ -10,7 +10,7 @@ description: 商户可以通过该接口查询子商户的H5支付权限状态�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| sub_mchid | string | 子商户号
+| sub_mchid {data-required} | string | 子商户号
 
 {.im-table #request}
 
@@ -77,8 +77,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
-| authorization_state | string | H5支付权限状态
+| sub_mchid {data-required}| string | 子商户号
+| authorization_state {data-required}| string | H5支付权限状态
 
 {.im-table #response}
 

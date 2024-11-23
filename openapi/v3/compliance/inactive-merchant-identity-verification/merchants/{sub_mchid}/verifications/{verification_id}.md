@@ -9,8 +9,8 @@ description: 在代特约商户发起不活跃商户身份核实后，服务商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户号
-| verification_id | string | 核实单号
+| sub_mchid {data-required} | string | 特约商户号
+| verification_id {data-required} | string | 核实单号
 
 {.im-table #request}
 
@@ -77,9 +77,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户号
-| verification_id | string | 核实单号
-| state | string | 核实单状态<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
+| sub_mchid {data-required}| string | 特约商户号
+| verification_id {data-required}| string | 核实单号
+| state {data-required}| string | 核实单状态<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
 | fail_reason | string | 失败原因<br/>`MATERIALS_ABNORMAL` \| `PROCESS_TIMEOUT` 枚举值之一
 | create_time | string | 创建时间
 | finish_time | string | 完成时间

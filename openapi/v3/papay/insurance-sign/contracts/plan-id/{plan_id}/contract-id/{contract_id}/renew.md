@@ -9,15 +9,15 @@ description: 商户可通过本接口续期保险自动续费协议。前置条�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plan_id | number | 委托代扣模板ID
-| contract_id | string | 委托代扣协议ID
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 应用ID
-| policy_periods {data-indent=1} | object[] | 续期的扣费周期列表
-| policy_period_id {data-indent=2} | number | 保险扣费周期编号
-| estimated_deduct_date {data-indent=2} | string | 预计扣费的日期
-| estimated_deduct_amount {data-indent=2} | object | 预计扣费金额
-| total {data-indent=3} | number | 金额
+| plan_id {data-required} | number | 委托代扣模板ID
+| contract_id {data-required} | string | 委托代扣协议ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 应用ID
+| policy_periods {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 续期的扣费周期列表
+| policy_period_id {data-required data-indent=2} | number | 保险扣费周期编号
+| estimated_deduct_date {data-required data-indent=2} | string | 预计扣费的日期
+| estimated_deduct_amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 预计扣费金额
+| total {data-required data-indent=3} | number | 金额
 | currency {data-indent=3} | string | 货币类型
 
 {.im-table #request}

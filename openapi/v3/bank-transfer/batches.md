@@ -9,28 +9,28 @@ description: 服务商可以通过该接口，批量向用户零钱或务工卡�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| platform_mchid {data-indent=1} | string | 服务平台商户号
-| specialized_payment_mchid {data-indent=1} | string | 付款企业商户号
-| sponsor_mchid {data-indent=1} | string | 实际出资商户号
-| user_authorized_mchid {data-indent=1} | string | 用户授权商户号
-| user_authorized_appid {data-indent=1} | string | 用户授权appid
-| out_batch_no {data-indent=1} | string | 银行批次单号
-| batch_name {data-indent=1} | string | 批次名称
-| batch_remark {data-indent=1} | string | 批次备注
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| platform_mchid {data-required data-indent=1} | string | 服务平台商户号
+| specialized_payment_mchid {data-required data-indent=1} | string | 付款企业商户号
+| sponsor_mchid {data-required data-indent=1} | string | 实际出资商户号
+| user_authorized_mchid {data-required data-indent=1} | string | 用户授权商户号
+| user_authorized_appid {data-required data-indent=1} | string | 用户授权appid
+| out_batch_no {data-required data-indent=1} | string | 银行批次单号
+| batch_name {data-required data-indent=1} | string | 批次名称
+| batch_remark {data-required data-indent=1} | string | 批次备注
 | attach_remark {data-indent=1} | string | 附加信息
-| total_amount {data-indent=1} | integer | 转账总金额
-| total_count {data-indent=1} | integer | 转账总笔数
-| transfer_scene {data-indent=1} | string | 转账场景
-| transfer_purpose {data-indent=1} | string | 批量转账用途
-| transfer_detail_list {data-indent=1} | object[] | 转账明细列表
-| out_detail_no {data-indent=2} | string | 银行明细单号
-| transfer_amount {data-indent=2} | integer | 转账金额
-| transfer_remark {data-indent=2} | string | 转账备注
-| openid {data-indent=2} | string | 收款用户openid
-| user_name {data-indent=2} | string | 收款用户姓名
+| total_amount {data-required data-indent=1} | integer | 转账总金额
+| total_count {data-required data-indent=1} | integer | 转账总笔数
+| transfer_scene {data-required data-indent=1} | string | 转账场景
+| transfer_purpose {data-required data-indent=1} | string | 批量转账用途
+| transfer_detail_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账明细列表
+| out_detail_no {data-required data-indent=2} | string | 银行明细单号
+| transfer_amount {data-required data-indent=2} | integer | 转账金额
+| transfer_remark {data-required data-indent=2} | string | 转账备注
+| openid {data-required data-indent=2} | string | 收款用户openid
+| user_name {data-required data-indent=2} | string | 收款用户姓名
 | user_id_card {data-indent=2} | string | 收款用户身份证
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -242,9 +242,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 银行批次单号
-| batch_id | string | 微信支付批次单号
-| create_time | string | 批次创建时间
+| out_batch_no {data-required}| string | 银行批次单号
+| batch_id {data-required}| string | 微信支付批次单号
+| create_time {data-required}| string | 批次创建时间
 
 {.im-table #response}
 

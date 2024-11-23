@@ -4,8 +4,8 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| organization_id | string | 
-| out_user_id | string | 
+| organization_id {data-required} | string | 机构ID
+| out_user_id {data-required} | string | 商户刷脸用户ID
 
 {.im-table #request}
 
@@ -72,19 +72,19 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| use_id | string | 
-| out_user_id | string | 
-| organization_id | string | 
-| user_name | string | 
-| user_type | string | `STUDENT` \| `STUFF` 枚举值之一
-| student_info | object | 
-| class_name {data-indent=1} | string | 
-| staff_info | object | 
-| occupation {data-indent=1} | string | 
-| status | string | `NORMAL` \| `DISABLED` 枚举值之一
-| contract_state | string | `NOT_CONTRACTED` \| `TERMINATED` \| `CONTRACTED` 枚举值之一
-| face_image_ok | boolean | 
-| contract_id | string | 
+| use_id | string | 刷脸用户ID
+| out_user_id | string | 商户刷脸用户ID
+| organization_id | string | 机构ID
+| user_name | string | 姓名
+| user_type | string | 用户类型<br/>`STUDENT` \| `STUFF` 枚举值之一
+| student_info | object {data-tooltip="对应PHP的array"} | 学生信息
+| class_name {data-indent=1} | string | 班级名
+| staff_info | object {data-tooltip="对应PHP的array"} | 职工信息
+| occupation {data-indent=1} | string | 职业
+| status | string | 用户状态<br/>`NORMAL` \| `DISABLED` 枚举值之一
+| contract_state | string | 签约状态<br/>`NOT_CONTRACTED` \| `TERMINATED` \| `CONTRACTED` 枚举值之一
+| face_image_ok | boolean | 人脸图片上传状态
+| contract_id | string | 签约ID
 
 {.im-table #response}
 
@@ -96,17 +96,19 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| organization_id | string | 
-| out_user_id | string | 
-| json | object | 声明请求的`JSON`数据结构
-| user_name {data-indent=1} | string | 
-| user_type {data-indent=1} | string | `STUDENT` \| `STUFF` 枚举值之一
-| student_info {data-indent=1} | object | 
-| class_name {data-indent=2} | string | 
-| staff_info {data-indent=1} | object | 
-| occupation {data-indent=2} | string | 
+| organization_id {data-required} | string | 机构ID
+| out_user_id {data-required} | string | 商户刷脸用户ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| user_name {data-indent=1} | string | 姓名
+| user_type {data-indent=1} | string | 用户类型<br/>`STUDENT` \| `STUFF` 枚举值之一
+| student_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 学生信息
+| class_name {data-indent=2} | string | 班级名
+| staff_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 职工信息
+| occupation {data-indent=2} | string | 职业
 | status {data-indent=1} | string | 状态<br/>`NORMAL` \| `DISABLED` 枚举值之一
 | phone {data-indent=1} | string | 手机号
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -127,6 +129,9 @@ $instance->v3->offlinefacemch->organizations->_organization_id_->users->outUserI
     ],
     'status' => 'NORMAL',
     'phone' => '',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -151,6 +156,9 @@ $instance->chain('v3/offlinefacemch/organizations/{organization_id}/users/out-us
     'status' => 'NORMAL',
     'phone' => '',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -173,6 +181,9 @@ $instance['v3/offlinefacemch/organizations/{organization_id}/users/out-user-id/{
     ],
     'status' => 'NORMAL',
     'phone' => '',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -197,6 +208,9 @@ $response = $instance->v3->offlinefacemch->organizations->_organization_id_->use
     'status' => 'NORMAL',
     'phone' => '',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r($response->getStatusCode() === 204);
 ```
@@ -217,6 +231,9 @@ $response = $instance->chain('v3/offlinefacemch/organizations/{organization_id}/
     'status' => 'NORMAL',
     'phone' => '',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r($response->getStatusCode() === 204);
 ```
@@ -236,6 +253,9 @@ $response = $instance['v3/offlinefacemch/organizations/{organization_id}/users/o
     ],
     'status' => 'NORMAL',
     'phone' => '',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

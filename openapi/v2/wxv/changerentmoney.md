@@ -9,19 +9,19 @@ description: 前置条件：商户完结订单后，用户支付成功前。用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| version {data-indent=1} | string | 接口版本号
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| out_order_no {data-indent=1} | string | 商户服务订单号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| version {data-required data-indent=1} | string | 接口版本号
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| out_order_no {data-required data-indent=1} | string | 商户服务订单号
 | reason {data-indent=1} | string | 修改原因
-| service_id {data-indent=1} | string | 服务ID
-| total_amount {data-indent=1} | integer | 总金额
-| rent_fee {data-indent=1} | integer | 租金费用
-| compensation_fee {data-indent=1} | string | 赔偿金费用
+| service_id {data-required data-indent=1} | string | 服务ID
+| total_amount {data-required data-indent=1} | integer | 总金额
+| rent_fee {data-required data-indent=1} | integer | 租金费用
+| compensation_fee {data-required data-indent=1} | string | 赔偿金费用
 | compensation_fee_desc {data-indent=1} | string | 赔偿金费用说明
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -160,18 +160,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回结果
-| sign | string | 签名
-| nonce_str | string | 随机字符串
-| result_code | string | 业务结果
+| sign {data-required}| string | 签名
+| nonce_str {data-required}| string | 随机字符串
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
-| out_order_no | string | 商户服务订单号
-| service_id | string | 服务ID
-| order_id | string | 微信支付服务订单号
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
+| out_order_no {data-required}| string | 商户服务订单号
+| service_id {data-required}| string | 服务ID
+| order_id {data-required}| string | 微信支付服务订单号
 
 {.im-table #response}
 

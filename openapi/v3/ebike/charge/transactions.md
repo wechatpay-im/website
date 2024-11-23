@@ -9,30 +9,30 @@ description: 通过调用该接口，为用户当次充电完成后发起代扣�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 特约商户号
-| appid {data-indent=1} | string | 服务商公众号ID
+| appid {data-required data-indent=1} | string | 服务商公众号ID
 | sub_appid {data-indent=1} | string | 特约商户公众号ID
-| out_trade_no {data-indent=1} | string | 商户订单号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | attach {data-indent=1} | string | 附加字段
 | goods_tag {data-indent=1} | string | 营销信息
-| notify_url {data-indent=1} | string | 通知url
-| description {data-indent=1} | string | 商品描述
-| charging_token {data-indent=1} | string | 用户充电代扣凭证
-| amount {data-indent=1} | object | 订单金额信息
-| total {data-indent=2} | integer | 订单总金额
+| notify_url {data-required data-indent=1} | string | 通知url
+| description {data-required data-indent=1} | string | 商品描述
+| charging_token {data-required data-indent=1} | string | 用户充电代扣凭证
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额信息
+| total {data-required data-indent=2} | integer | 订单总金额
 | currency {data-indent=2} | string | 货币类型
-| charge_info {data-indent=1} | object | 充电自行车场景信息
-| start_time {data-indent=2} | string | 开始时间
-| end_time {data-indent=2} | string | 结束时间
-| charging_station_name {data-indent=2} | string | 充电站名称
-| charging_gun_number {data-indent=2} | string | 充电枪编号
-| charged_capacity {data-indent=2} | integer | 已充电量
+| charge_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 充电自行车场景信息
+| start_time {data-required data-indent=2} | string | 开始时间
+| end_time {data-required data-indent=2} | string | 结束时间
+| charging_station_name {data-required data-indent=2} | string | 充电站名称
+| charging_gun_number {data-required data-indent=2} | string | 充电枪编号
+| charged_capacity {data-required data-indent=2} | integer | 已充电量
 | park_duration {data-indent=2} | integer | 车位延时占用时长
 | park_fee {data-indent=2} | integer | 车位延时占用产生的费用
-| device_info {data-indent=1} | object | 设备信息
-| device_id {data-indent=2} | string | 充电位设备号
-| device_ip {data-indent=2} | string | 商户端设备ip
+| device_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
+| device_id {data-required data-indent=2} | string | 充电位设备号
+| device_ip {data-required data-indent=2} | string | 商户端设备ip
 
 {.im-table #request}
 
@@ -255,7 +255,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_state | string | 受理状态
+| accept_state {data-required}| string | 受理状态
 | create_time | string | 订单创建时间
 
 {.im-table #response}

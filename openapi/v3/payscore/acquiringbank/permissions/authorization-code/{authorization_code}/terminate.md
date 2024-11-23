@@ -1,6 +1,6 @@
 ---
 title: 从业机构解除用户授权关系（授权协议号）
-description: 
+description: 从业机构通过调用该接口，使用authorization_code解除用户授权关系
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -9,12 +9,12 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authorization_code | string | 授权协议号
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
+| authorization_code {data-required} | string | 授权协议号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
 | channel_id {data-indent=1} | string | 渠道商商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| reason {data-indent=1} | string | 撤销原因
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| reason {data-required data-indent=1} | string | 撤销原因
 
 {.im-table #request}
 

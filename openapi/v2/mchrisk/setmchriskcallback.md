@@ -9,10 +9,10 @@ description: 设置通知回调链接，当支付风险能力平台有事件通�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 服务商号
-| callback_url {data-indent=1} | string | 回调链接
-| sign_type {data-indent=1} | string | 签名类型
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 服务商号
+| callback_url {data-required data-indent=1} | string | 回调链接
+| sign_type {data-required data-indent=1} | string | 签名类型
 
 {.im-table #request}
 
@@ -97,10 +97,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| mch_id | string | 服务商号
-| result_code | string | 业务结果
+| mch_id {data-required}| string | 服务商号
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
 

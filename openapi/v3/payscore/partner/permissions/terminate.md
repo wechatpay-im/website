@@ -9,14 +9,14 @@ description: 通过openid，服务商帮子商户解除用户授权关系
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | openid {data-indent=1} | string | 服务商公众号下的用户标识
 | sub_openid {data-indent=1} | string | 子商户公众号下openid
-| service_id {data-indent=1} | string | 服务ID
-| appid {data-indent=1} | string | 服务商应用ID
+| service_id {data-required data-indent=1} | string | 服务ID
+| appid {data-required data-indent=1} | string | 服务商应用ID
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
-| reason {data-indent=1} | string | 撤销原因
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| reason {data-required data-indent=1} | string | 撤销原因
 
 {.im-table #request}
 

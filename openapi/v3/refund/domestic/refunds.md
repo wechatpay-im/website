@@ -9,28 +9,28 @@ description: 当交易发生之后一年内，由于买家或者卖家的原因�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
 | transaction_id {data-indent=1} | string | 微信支付订单号
 | out_trade_no {data-indent=1} | string | 商户订单号
-| out_refund_no {data-indent=1} | string | 商户退款单号
+| out_refund_no {data-required data-indent=1} | string | 商户退款单号
 | reason {data-indent=1} | string | 退款原因
 | notify_url {data-indent=1} | string | 退款结果回调url
 | funds_account {data-indent=1} | string | 退款资金来源
-| amount {data-indent=1} | object | 金额信息
-| refund {data-indent=2} | integer | 退款金额
-| from {data-indent=2} | object[] | 退款出资账户及金额
-| account {data-indent=3} | string | 出资账户类型
-| amount {data-indent=3} | integer | 出资金额
-| total {data-indent=2} | integer | 原订单金额
-| currency {data-indent=2} | string | 退款币种
-| goods_detail {data-indent=1} | object[] | 退款商品
-| merchant_goods_id {data-indent=2} | string | 商户侧商品编码
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 金额信息
+| refund {data-required data-indent=2} | integer | 退款金额
+| from {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
+| account {data-required data-indent=3} | string | 出资账户类型
+| amount {data-required data-indent=3} | integer | 出资金额
+| total {data-required data-indent=2} | integer | 原订单金额
+| currency {data-required data-indent=2} | string | 退款币种
+| goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款商品
+| merchant_goods_id {data-required data-indent=2} | string | 商户侧商品编码
 | wechatpay_goods_id {data-indent=2} | string | 微信侧商品编码
 | goods_name {data-indent=2} | string | 商品名称
-| unit_price {data-indent=2} | integer | 商品单价
-| refund_amount {data-indent=2} | integer | 商品退款金额
-| refund_quantity {data-indent=2} | integer | 商品退货数量
+| unit_price {data-required data-indent=2} | integer | 商品单价
+| refund_amount {data-required data-indent=2} | integer | 商品退款金额
+| refund_quantity {data-required data-indent=2} | integer | 商品退货数量
 
 {.im-table #request}
 
@@ -241,42 +241,42 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信支付退款号
-| out_refund_no | string | 商户退款单号
-| transaction_id | string | 微信支付订单号
-| out_trade_no | string | 商户订单号
-| channel | string | 退款渠道
-| user_received_account | string | 退款入账账户
+| refund_id {data-required}| string | 微信支付退款号
+| out_refund_no {data-required}| string | 商户退款单号
+| transaction_id {data-required}| string | 微信支付订单号
+| out_trade_no {data-required}| string | 商户订单号
+| channel {data-required}| string | 退款渠道
+| user_received_account {data-required}| string | 退款入账账户
 | success_time | string | 退款成功时间
-| create_time | string | 退款创建时间
-| status | string | 退款状态
+| create_time {data-required}| string | 退款创建时间
+| status {data-required}| string | 退款状态
 | funds_account | string | 资金账户
-| amount | object | 金额信息
-| total {data-indent=1} | integer | 订单金额
-| refund {data-indent=1} | integer | 退款金额
-| from {data-indent=1} | object[] | 退款出资账户及金额
-| account {data-indent=2} | string | 出资账户类型
-| amount {data-indent=2} | integer | 出资金额
-| payer_total {data-indent=1} | integer | 用户支付金额
-| payer_refund {data-indent=1} | integer | 用户退款金额
-| settlement_refund {data-indent=1} | integer | 应结退款金额
-| settlement_total {data-indent=1} | integer | 应结订单金额
-| discount_refund {data-indent=1} | integer | 优惠退款金额
-| currency {data-indent=1} | string | 退款币种
+| amount {data-required}| object {data-tooltip="对应PHP的array"} | 金额信息
+| total {data-required data-indent=1} | integer | 订单金额
+| refund {data-required data-indent=1} | integer | 退款金额
+| from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
+| account {data-required data-indent=2} | string | 出资账户类型
+| amount {data-required data-indent=2} | integer | 出资金额
+| payer_total {data-required data-indent=1} | integer | 用户支付金额
+| payer_refund {data-required data-indent=1} | integer | 用户退款金额
+| settlement_refund {data-required data-indent=1} | integer | 应结退款金额
+| settlement_total {data-required data-indent=1} | integer | 应结订单金额
+| discount_refund {data-required data-indent=1} | integer | 优惠退款金额
+| currency {data-required data-indent=1} | string | 退款币种
 | refund_fee {data-indent=1} | number | 手续费退款金额
-| promotion_detail | object[] | 优惠退款信息
-| promotion_id {data-indent=1} | string | 券ID
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
-| amount {data-indent=1} | integer | 优惠券面额
-| refund_amount {data-indent=1} | integer | 优惠退款金额
-| goods_detail {data-indent=1} | object[] | 商品列表
-| merchant_goods_id {data-indent=2} | string | 商户侧商品编码
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠退款信息
+| promotion_id {data-required data-indent=1} | string | 券ID
+| scope {data-required data-indent=1} | string | 优惠范围
+| type {data-required data-indent=1} | string | 优惠类型
+| amount {data-required data-indent=1} | integer | 优惠券面额
+| refund_amount {data-required data-indent=1} | integer | 优惠退款金额
+| goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品列表
+| merchant_goods_id {data-required data-indent=2} | string | 商户侧商品编码
 | wechatpay_goods_id {data-indent=2} | string | 微信侧商品编码
 | goods_name {data-indent=2} | string | 商品名称
-| unit_price {data-indent=2} | integer | 商品单价
-| refund_amount {data-indent=2} | integer | 商品退款金额
-| refund_quantity {data-indent=2} | integer | 商品退货数量
+| unit_price {data-required data-indent=2} | integer | 商品单价
+| refund_amount {data-required data-indent=2} | integer | 商品退款金额
+| refund_quantity {data-required data-indent=2} | integer | 商品退货数量
 
 {.im-table #response}
 

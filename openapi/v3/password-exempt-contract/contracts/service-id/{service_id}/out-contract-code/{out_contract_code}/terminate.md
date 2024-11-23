@@ -9,10 +9,10 @@ description: 通过商户协议号解约协议。 直连商户、普通服务商
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| service_id | number | 免密支付服务ID
-| out_contract_code | string | 商户签约协议号
-| json | object | 声明请求的`JSON`数据结构
-| contract_termination_remark {data-indent=1} | string | 解约备注
+| service_id {data-required} | number | 免密支付服务ID
+| out_contract_code {data-required} | string | 商户签约协议号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| contract_termination_remark {data-required data-indent=1} | string | 解约备注
 
 {.im-table #request}
 
@@ -97,9 +97,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
-| service_id | number | 免密支付服务ID
-| out_contract_code | string | 商户签约协议号
+| mchid {data-required}| string | 商户号
+| service_id {data-required}| number | 免密支付服务ID
+| out_contract_code {data-required}| string | 商户签约协议号
 
 {.im-table #response}
 

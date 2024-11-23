@@ -4,11 +4,11 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 零售小店活动ID
-| json | object | 声明请求的`JSON`数据结构
-| representative_info_list {data-indent=1} | object[] | 业务代理信息列表
-| openid {data-indent=2} | string | 业务代理的OpenID
-| out_request_no {data-indent=1} | string | 请求业务单据号
+| activity_id {data-required} | string | 零售小店活动ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| representative_info_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 业务代理信息列表
+| openid {data-required data-indent=2} | string | 业务代理的OpenID
+| out_request_no {data-required data-indent=1} | string | 请求业务单据号
 | add_time {data-indent=1} | string | 添加时间
 
 {.im-table #request}
@@ -112,10 +112,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 零售小店活动ID
-| failed_representative_info_list | object[] | 添加失败业务代理信息列表
-| openid {data-indent=1} | string | 业务代理的OpenID
-| add_time | string | 添加时间
+| activity_id {data-required}| string | 零售小店活动ID
+| failed_representative_info_list | object[] {data-tooltip="对应PHP的array"} | 添加失败业务代理信息列表
+| openid {data-required data-indent=1} | string | 业务代理的OpenID
+| add_time {data-required}| string | 添加时间
 
 {.im-table #response}
 
@@ -127,12 +127,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 零售小店活动ID
-| json | object | 声明请求的`JSON`数据结构
-| representative_info_list {data-indent=1} | object[] | 业务代理信息列表
-| openid {data-indent=2} | string | 业务代理的OpenID
-| out_request_no {data-indent=1} | string | 请求业务单据号
-| delete_time {data-indent=1} | string | 删除时间
+| activity_id {data-required} | string | 零售小店活动ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| representative_info_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 业务代理信息列表
+| openid {data-required data-indent=2} | string | 业务代理的OpenID
+| out_request_no {data-required data-indent=1} | string | 请求业务单据号
+| delete_time {data-required data-indent=1} | string | 删除时间
 
 {.im-table #request}
 
@@ -235,10 +235,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 零售小店活动ID
-| failed_representative_info_list | object[] | 删除失败业务代理信息列表
-| openid {data-indent=1} | string | 业务代理的OpenID
-| delete_time | string | 删除时间
+| activity_id {data-required}| string | 零售小店活动ID
+| failed_representative_info_list | object[] {data-tooltip="对应PHP的array"} | 删除失败业务代理信息列表
+| openid {data-required data-indent=1} | string | 业务代理的OpenID
+| delete_time {data-required}| string | 删除时间
 
 {.im-table #response}
 

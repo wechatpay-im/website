@@ -9,13 +9,13 @@ description: 用于机构查询子商户创建是否成功，接口只提供单�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| queryinstitutionsub | string | 固定值`queryInstitutionsub`
-| xml | object | 声明请求的`XML`数据结构
-| app_id {data-indent=1} | string | 机构appid
-| mch_id {data-indent=1} | string | 机构商户号
-| sub_mch_id {data-indent=1} | string | 子商户号
-| nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| queryinstitutionsub {data-required} | string | 固定值`queryInstitutionsub`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| app_id {data-required data-indent=1} | string | 机构appid
+| mch_id {data-required data-indent=1} | string | 机构商户号
+| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -118,23 +118,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务返回码
+| result_code {data-required}| string | 业务返回码
 | err_code | string | 错误编码
 | err_code_des | string | 错误描述
-| sign | string | 签名
-| sub_mch_id | string | 子商户号
-| merchant_name | string | 子商户名称
-| merchant_shortname | string | 子商户简称
+| sign {data-required}| string | 签名
+| sub_mch_id {data-required}| string | 子商户号
+| merchant_name {data-required}| string | 子商户名称
+| merchant_shortname {data-required}| string | 子商户简称
 | merchant_country_code | string | 注册国家或区域
-| business_category | string | 业务类目
+| business_category {data-required}| string | 业务类目
 | mcc | string | MCC
-| office_phone | string | 公司联系电话
+| office_phone {data-required}| string | 公司联系电话
 | contact_name | string | 联系人姓名
 | contact_phone | string | 联系人手机
 | contact_email | string | 联系人邮箱
-| merchant_remark | string | 子商户唯一标识
+| merchant_remark {data-required}| string | 子商户唯一标识
 | business_type | string | 业务类型
 | merchant_type | string | 商户类型
 | registration_certificate_number | string | 公司注册文件编号

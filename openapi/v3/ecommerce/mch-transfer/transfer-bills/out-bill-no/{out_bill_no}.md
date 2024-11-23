@@ -9,9 +9,9 @@ description: 根据商户单号查询商家转账订单的详细信息。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_bill_no | string | 商户单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 二级商户号
+| out_bill_no {data-required} | string | 商户单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -90,20 +90,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 服务商商户号
-| sub_mchid | string | 二级商户号
-| out_bill_no | string | 商户单号
-| transfer_bill_no | string | 微信转账单号
-| appid | string | 服务商AppID
-| transfer_scene_id | string | 转账场景ID
-| state | string | 单据状态
-| transfer_amount | number | 转账金额
-| transfer_remark | string | 转账备注
+| mchid {data-required}| string | 服务商商户号
+| sub_mchid {data-required}| string | 二级商户号
+| out_bill_no {data-required}| string | 商户单号
+| transfer_bill_no {data-required}| string | 微信转账单号
+| appid {data-required}| string | 服务商AppID
+| transfer_scene_id {data-required}| string | 转账场景ID
+| state {data-required}| string | 单据状态
+| transfer_amount {data-required}| number | 转账金额
+| transfer_remark {data-required}| string | 转账备注
 | fail_reason | string | 失败原因
 | openid | string | 收款用户OpenID
 | user_name | string | 收款用户姓名
-| create_time | string | 单据创建时间
-| update_time | string | 状态变更时间
+| create_time {data-required}| string | 单据创建时间
+| update_time {data-required}| string | 状态变更时间
 
 {.im-table #response}
 

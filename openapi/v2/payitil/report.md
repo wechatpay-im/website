@@ -9,13 +9,13 @@ description: 商户在调用微信支付提供的相关接口时，会得到微�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
 | device_info {data-indent=1} | string | 设备号
-| interface_url {data-indent=1} | string | 接口URL
-| user_ip {data-indent=1} | string | 访问接口IP
-| trades {data-indent=1} | string | 上报数据包
+| interface_url {data-required data-indent=1} | string | 接口URL
+| user_ip {data-required data-indent=1} | string | 访问接口IP
+| trades {data-required data-indent=1} | string | 上报数据包
 
 {.im-table #request}
 
@@ -118,9 +118,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| result_code | string | 业务结果
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| result_code {data-required}| string | 业务结果
 
 {.im-table #response}
 

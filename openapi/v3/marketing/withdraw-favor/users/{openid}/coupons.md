@@ -4,12 +4,12 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户标识
-| json | object | 声明请求的`JSON`数据结构
-| mchid {data-indent=1} | string | 银行提现免费券批次创建方商户号
-| stock_id {data-indent=1} | string | 银行提现免费券批次ID
-| appid {data-indent=1} | string | 应用ID
-| send_request_no {data-indent=1} | string | 商户单据号
+| openid {data-required} | string | 用户标识
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| mchid {data-required data-indent=1} | string | 银行提现免费券批次创建方商户号
+| stock_id {data-required data-indent=1} | string | 银行提现免费券批次ID
+| appid {data-required data-indent=1} | string | 应用ID
+| send_request_no {data-required data-indent=1} | string | 商户单据号
 
 {.im-table #request}
 
@@ -119,11 +119,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户标识
-| query | object | 声明请求的查询参数
-| mchid {data-indent=1} | string | 银行提现免费券批次创建方商户号
-| stock_id {data-indent=1} | string | 银行提现免费券批次ID
-| appid {data-indent=1} | string | 应用ID
+| openid {data-required} | string | 用户标识
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| mchid {data-required data-indent=1} | string | 银行提现免费券批次创建方商户号
+| stock_id {data-required data-indent=1} | string | 银行提现免费券批次ID
+| appid {data-required data-indent=1} | string | 应用ID
 | offset {data-indent=1} | integer | 分页页码
 | limit {data-indent=1} | integer | 分页大小
 
@@ -228,15 +228,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 银行提现免费券列表
+| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 银行提现免费券列表
 | send_time {data-indent=1} | string | 发放时间
 | send_quota {data-indent=1} | integer | 发放额度
 | coupon_id {data-indent=1} | string | 银行提现免费券的券ID
 | use_quota {data-indent=1} | integer | 使用额度
 | coupon_state {data-indent=1} | string | 银行提现免费券券状态
-| offset | integer | 分页页码
-| limit | integer | 分页大小
-| total_count | integer | 查询结果总数
+| offset {data-required}| integer | 分页页码
+| limit {data-required}| integer | 分页大小
+| total_count {data-required}| integer | 查询结果总数
 
 {.im-table #response}
 

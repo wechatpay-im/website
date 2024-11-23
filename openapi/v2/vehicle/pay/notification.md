@@ -9,21 +9,21 @@ description: 在停车场场景下，商户调用本接口，会注册接收用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号id
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| version {data-indent=1} | string | 版本号
-| trade_scene {data-indent=1} | string | 交易场景
-| scene_info {data-indent=1} | string | 场景信息
-| start_time {data-indent=1} | string | 入场时间
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号id
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| version {data-required data-indent=1} | string | 版本号
+| trade_scene {data-required data-indent=1} | string | 交易场景
+| scene_info {data-required data-indent=1} | string | 场景信息
+| start_time {data-required data-indent=1} | string | 入场时间
 | notify_url {data-indent=1} | string | 回调通知URL
-| plate_number {data-indent=1} | string | 车牌号
+| plate_number {data-required data-indent=1} | string | 车牌号
 | car_type {data-indent=1} | string | 车辆类型
-| parking_name {data-indent=1} | string | 停车场名称
-| free_time {data-indent=1} | string | 免费时长
-| openid {data-indent=1} | string | 用户标识
-| space_number {data-indent=1} | string | 车位编号
+| parking_name {data-required data-indent=1} | string | 停车场名称
+| free_time {data-required data-indent=1} | string | 免费时长
+| openid {data-required data-indent=1} | string | 用户标识
+| space_number {data-required data-indent=1} | string | 车位编号
 
 {.im-table #request}
 
@@ -174,16 +174,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| appid | string | 公众账号id
-| mch_id | string | 商户号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| appid {data-required}| string | 公众账号id
+| mch_id {data-required}| string | 商户号
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| user_state | string | 用户状态
+| user_state {data-required}| string | 用户状态
 | deduct_mode | string | 发起扣费方式
 
 {.im-table #response}

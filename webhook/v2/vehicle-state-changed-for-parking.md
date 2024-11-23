@@ -14,21 +14,21 @@ description: 从用户进入开通车主服务的停车场（用户入场通知�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers | object | 通知的头参数
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Content-Type {data-indent=1} | string | `text/xml`
-| body | object | 通知的`XML`数据结构
-| mch_id {data-indent=1} | string
-| sub_mch_id {data-indent=1} | string
-| appid {data-indent=1} | string
-| nonce_str {data-indent=1} | string
-| sign_type {data-indent=1} | string
-| sign {data-indent=1} | string
-| plate_number {data-indent=1} | string
-| vehicle_event_type {data-indent=1} | string | `NORMAL` \| `BLOCKED` 枚举值之一
-| vehicle_event_des {data-indent=1} | string | `OVERDUE` \| `REMOVE` \| `PAUSE` 枚举值之一
-| deduct_mode {data-indent=1} | string | `PROACTIVE` \| `AUTOPAY` 枚举值之一
-| vehicle_event_createtime {data-indent=1} | string
+| headers {data-required} | object | 通知的头参数
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Content-Type {data-required data-indent=1} | string | `text/xml`
+| body {data-required} | object | 通知的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
+| appid {data-required data-indent=1} | string | 公众平台APPID
+| nonce_str {data-required data-indent=1} | string | 随机字符串
+| sign_type {data-required data-indent=1} | string | 签名类型
+| sign {data-required data-indent=1} | string | 签名
+| plate_number {data-required data-indent=1} | string | 车牌号
+| vehicle_event_type {data-indent=1} | string | 车牌变更事件类型<br/>`NORMAL` \| `BLOCKED` 枚举值之一
+| vehicle_event_des {data-indent=1} | string | 车牌变更事件信息<br/>`OVERDUE` \| `REMOVE` \| `PAUSE` 枚举值之一
+| deduct_mode {data-indent=1} | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
+| vehicle_event_createtime {data-required data-indent=1} | string | 车牌变更事件发生时间
 
 {.im-table #request}
 

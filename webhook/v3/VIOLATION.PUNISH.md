@@ -1,5 +1,5 @@
 ---
-title: 商户平台处罚通知(JSON)
+title: 商户平台处罚(VIOLATION.PUNISH)通知(JSON)
 description: 当子商户被平台风险处置时，微信后台会把子商户违规处理记录和交易拦截记录推送给相应的服务商、渠道商、从业机构，商户需要接收处理该消息，并返回应答。
 ---
 
@@ -16,35 +16,35 @@ description: 当子商户被平台风险处置时，微信后台会把子商户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`VIOLATION.PUNISH` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`VIOLATION.PUNISH` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| sub_mchid {data-indent=3} | string | 该商户平台处置记录对应的商户号
-| company_name {data-indent=3} | string | 子商户公司名称
-| record_id {data-indent=3} | string | 微信支付对违约商户处理通知的唯一标识，可用于去重
-| punish_plan {data-indent=3} | string | 微信支付对违约商户的具体处罚方案，可根据具体的处罚方案指引商户登录商户平台/商家助手小程序进行申诉/相关操作，使用时请留意该值为处罚方法的文本内容，并非枚举值。
-| punish_time {data-indent=3} | string | 微信支付对违约商户的处置时间
-| punish_description {data-indent=3} | string | 微信支付对违约商户处罚方案的详细描述信息，补充处罚方案的相关影响。
-| risk_type {data-indent=3} | string | 微信支付对违约商户定义的风险类型<br/>`ONE_YUAN_PURCHASES` \| `MULTI_LEVEL_DISTRIBUTION_REBATE` \| `PROHIBITED_BUSINESS_CATEGORIES` \| `CASH_ADVANCE_VIA_CREDIT_CARD` \| `INDUCING_USERS_TO_MAKE_PAYMENTS` \| `FRAUD` \| `MALICIOUS_FAN_COUNT_BOOSTING` \| `CROSS_CATEGORY_ACTIVITIES` \| `CROSS_CATEGORY_BUSINESS` \| `GAMBLING` \| `LEWD_CONTENT` \| `UNLICENSED_PAYMENT_AND_SETTLEMENT_BUSINESS` \| `INVESTMENT` \| `TRANSACTION_DISPUTE` \| `CROSS_BORDER_USE_OF_DOMESTIC_PAYMENT_API` \| `OVERSEAS_ACTIVITIES_OUTSIDE_THE_BUSINESS_SCOPE_APPROVED_BY_REGULATORY_AUTHORITIES` \| `UNUSUAL_TRANSACTION` \| `UNLICENSED_BUSINESS` \| `WEALTH_INVESTMENT` \| `AFFILIATED_TO_A_VIOLATING_ENTITY` \| `INVOLVED_IN_A_JUDICIAL_CASE` \| `INCORRECT_INFORMATION_SUBMITTED` \| `APPEAL_SUCCESSFUL` \| `REPORTED_BY_OTHERS` \| `VIOLATING_SMART_CATERING_ACTIVITIES` \| `MORE_THAN_ONE_MERCHANT_UNDER_A_SINGLE_MERCHANT_ID` \| `CROSS_REGION_USE_OF_INTERNATIONAL_PAYMENT_API` \| `UNUSUAL_REAL_TIME_TRANSACTION` \| `UNACCEPTABLE_DOCUMENTS` \| `LARGE_AMOUNT_TRANSACTION` \| `ALL_MERCHANTS_HAVE_CONFIRMED_THE_WILLINGNESS_TO_OPEN_AN_ACCOUNT` \| `UNCONFIRMED_WILLINGNESS_TO_OPEN_AN_ACCOUNT` \| `INACTIVE_TRANSACTION` \| `OTHER_UNUSUAL_ACTIVITIES` 枚举值之一
-| risk_description {data-indent=3} | string | 微信支付对违约商户定义的风险类型枚举值对应的中文描述
+| sub_mchid {data-required data-indent=3} | string | 该商户平台处置记录对应的商户号
+| company_name {data-required data-indent=3} | string | 子商户公司名称
+| record_id {data-required data-indent=3} | string | 微信支付对违约商户处理通知的唯一标识，可用于去重
+| punish_plan {data-required data-indent=3} | string | 微信支付对违约商户的具体处罚方案，可根据具体的处罚方案指引商户登录商户平台/商家助手小程序进行申诉/相关操作，使用时请留意该值为处罚方法的文本内容，并非枚举值。
+| punish_time {data-required data-indent=3} | string | 微信支付对违约商户的处置时间
+| punish_description {data-required data-indent=3} | string | 微信支付对违约商户处罚方案的详细描述信息，补充处罚方案的相关影响。
+| risk_type {data-required data-indent=3} | string | 微信支付对违约商户定义的风险类型<br/>`ONE_YUAN_PURCHASES` \| `MULTI_LEVEL_DISTRIBUTION_REBATE` \| `PROHIBITED_BUSINESS_CATEGORIES` \| `CASH_ADVANCE_VIA_CREDIT_CARD` \| `INDUCING_USERS_TO_MAKE_PAYMENTS` \| `FRAUD` \| `MALICIOUS_FAN_COUNT_BOOSTING` \| `CROSS_CATEGORY_ACTIVITIES` \| `CROSS_CATEGORY_BUSINESS` \| `GAMBLING` \| `LEWD_CONTENT` \| `UNLICENSED_PAYMENT_AND_SETTLEMENT_BUSINESS` \| `INVESTMENT` \| `TRANSACTION_DISPUTE` \| `CROSS_BORDER_USE_OF_DOMESTIC_PAYMENT_API` \| `OVERSEAS_ACTIVITIES_OUTSIDE_THE_BUSINESS_SCOPE_APPROVED_BY_REGULATORY_AUTHORITIES` \| `UNUSUAL_TRANSACTION` \| `UNLICENSED_BUSINESS` \| `WEALTH_INVESTMENT` \| `AFFILIATED_TO_A_VIOLATING_ENTITY` \| `INVOLVED_IN_A_JUDICIAL_CASE` \| `INCORRECT_INFORMATION_SUBMITTED` \| `APPEAL_SUCCESSFUL` \| `REPORTED_BY_OTHERS` \| `VIOLATING_SMART_CATERING_ACTIVITIES` \| `MORE_THAN_ONE_MERCHANT_UNDER_A_SINGLE_MERCHANT_ID` \| `CROSS_REGION_USE_OF_INTERNATIONAL_PAYMENT_API` \| `UNUSUAL_REAL_TIME_TRANSACTION` \| `UNACCEPTABLE_DOCUMENTS` \| `LARGE_AMOUNT_TRANSACTION` \| `ALL_MERCHANTS_HAVE_CONFIRMED_THE_WILLINGNESS_TO_OPEN_AN_ACCOUNT` \| `UNCONFIRMED_WILLINGNESS_TO_OPEN_AN_ACCOUNT` \| `INACTIVE_TRANSACTION` \| `OTHER_UNUSUAL_ACTIVITIES` 枚举值之一
+| risk_description {data-required data-indent=3} | string | 微信支付对违约商户定义的风险类型枚举值对应的中文描述
 
 {.im-table #request}
 

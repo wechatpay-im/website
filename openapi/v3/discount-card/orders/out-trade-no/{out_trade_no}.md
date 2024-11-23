@@ -10,11 +10,12 @@ description: 商户可以通过先享卡订单号或商户订单号查询用户�
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2020.03.26` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_trade_no | string | 商户订单号
+| out_trade_no {data-required} | string | 商户订单号
 
 {.im-table #request}
 
@@ -75,48 +76,48 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 先享卡订单号
-| discount_card_id | string | 先享卡ID
-| out_trade_no | string | 商户订单号
-| appid | string | 公众账号ID
-| service_id | string | 服务ID
-| order_id | string | 微信支付服务订单号
+| out_order_no {data-required}| string | 先享卡订单号
+| discount_card_id {data-required}| string | 先享卡ID
+| out_trade_no {data-required}| string | 商户订单号
+| appid {data-required}| string | 公众账号ID
+| service_id {data-required}| string | 服务ID
+| order_id {data-required}| string | 微信支付服务订单号
 | transaction_id | string | 微信支付交易单号
-| openid | string | 用户标识
-| card_begin_time | string | 先享卡开始时间
-| card_end_time | string | 先享卡结束时间
-| card_name | string | 先享卡名称
-| objective_description | string | 目标描述
-| reward_description | string | 奖励描述
-| estimated_reward_amount | integer | 预估奖励金额
+| openid {data-required}| string | 用户标识
+| card_begin_time {data-required}| string | 先享卡开始时间
+| card_end_time {data-required}| string | 先享卡结束时间
+| card_name {data-required}| string | 先享卡名称
+| objective_description {data-required}| string | 目标描述
+| reward_description {data-required}| string | 奖励描述
+| estimated_reward_amount {data-required}| integer | 预估奖励金额
 | online_instructions | string | 线上使用说明
 | offline_instructions | string | 线下使用说明
-| state | string | 订单状态
+| state {data-required}| string | 订单状态
 | total_amount | integer | 总金额
 | deduction_amount | integer | 扣除金额
 | settlement_amount | integer | 结算金额
-| create_time | string | 创建时间
+| create_time {data-required}| string | 创建时间
 | pay_time | string | 支付时间
-| objectives | object[] | 目标达成明细列表
-| objective_serial_no {data-indent=1} | string | 目标流水号
-| objective_id {data-indent=1} | integer | 先享卡目标ID
+| objectives | object[] {data-tooltip="对应PHP的array"} | 目标达成明细列表
+| objective_serial_no {data-required data-indent=1} | string | 目标流水号
+| objective_id {data-required data-indent=1} | integer | 先享卡目标ID
 | name {data-indent=1} | string | 目标名称
 | unit {data-indent=1} | string | 目标单位
-| performance_description {data-indent=1} | string | 履约描述
-| performance_type {data-indent=1} | string | 履约类型
-| count {data-indent=1} | integer | 目标数量
-| performance_time {data-indent=1} | string | 履约时间
+| performance_description {data-required data-indent=1} | string | 履约描述
+| performance_type {data-required data-indent=1} | string | 履约类型
+| count {data-required data-indent=1} | integer | 目标数量
+| performance_time {data-required data-indent=1} | string | 履约时间
 | remark {data-indent=1} | string | 备注说明
-| rewards | object[] | 奖励明细列表
-| reward_serial_no {data-indent=1} | string | 奖励流水号
-| reward_id {data-indent=1} | integer | 先享卡奖励ID
+| rewards | object[] {data-tooltip="对应PHP的array"} | 奖励明细列表
+| reward_serial_no {data-required data-indent=1} | string | 奖励流水号
+| reward_id {data-required data-indent=1} | integer | 先享卡奖励ID
 | name {data-indent=1} | string | 奖励名称
 | unit {data-indent=1} | string | 奖励单位
-| description {data-indent=1} | string | 奖励描述
-| reward_type {data-indent=1} | string | 奖励类型
-| count {data-indent=1} | integer | 奖励数量
-| amount {data-indent=1} | integer | 奖励金额
-| reward_time {data-indent=1} | string | 奖励时间
+| description {data-required data-indent=1} | string | 奖励描述
+| reward_type {data-required data-indent=1} | string | 奖励类型
+| count {data-required data-indent=1} | integer | 奖励数量
+| amount {data-required data-indent=1} | integer | 奖励金额
+| reward_time {data-required data-indent=1} | string | 奖励时间
 | remark {data-indent=1} | string | 备注说明
 
 {.im-table #response}

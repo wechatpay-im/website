@@ -9,23 +9,23 @@ description: 如果使用不支持单品优惠部分退款的历史接口，请�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | detail {data-indent=1} | string | 退款包含的商品列表信息，全额退款可不传，必须按照规范上传，JSON格式
-| appid {data-indent=1} | string | 公众账号ID
+| appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| mch_id {data-indent=1} | string | 商户号
+| mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
 | sign_type {data-indent=1} | string | 签名类型
-| transaction_id {data-indent=1} | string | 微信订单号
-| out_trade_no {data-indent=1} | string | 商户订单号
-| out_refund_no {data-indent=1} | string | 商户退款单号
-| total_fee {data-indent=1} | integer | 订单金额
-| refund_fee {data-indent=1} | integer | 退款金额
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| out_refund_no {data-required data-indent=1} | string | 商户退款单号
+| total_fee {data-required data-indent=1} | integer | 订单金额
+| refund_fee {data-required data-indent=1} | integer | 退款金额
 | refund_fee_type {data-indent=1} | string | 退款货币种类
 | refund_desc {data-indent=1} | string | 退款原因
 | refund_account {data-indent=1} | string | 退款资金来源
 | notify_url {data-indent=1} | string | 退款结果通知url
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -188,27 +188,27 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| result_code | string | 业务结果
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| transaction_id | string | 微信订单号
-| out_trade_no | string | 商户订单号
-| out_refund_no | string | 商户退款单号
-| refund_id | string | 微信退款单号
-| refund_fee | integer | 退款金额
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| transaction_id {data-required}| string | 微信订单号
+| out_trade_no {data-required}| string | 商户订单号
+| out_refund_no {data-required}| string | 商户退款单号
+| refund_id {data-required}| string | 微信退款单号
+| refund_fee {data-required}| integer | 退款金额
 | settlement_refund_fee | integer | 应结退款金额
-| total_fee | integer | 标价金额
+| total_fee {data-required}| integer | 标价金额
 | settlement_total_fee | integer | 应结订单金额
 | fee_type | string | 标价币种
-| cash_fee | integer | 现金支付金额
+| cash_fee {data-required}| integer | 现金支付金额
 | cash_fee_type | string | 现金支付币种
 | cash_refund_fee | integer | 现金退款金额
 | coupon_type_$n | string | 代金券类型

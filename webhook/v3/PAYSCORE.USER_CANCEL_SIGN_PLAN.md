@@ -1,5 +1,5 @@
 ---
-title: 取消签约回调通知(JSON)
+title: 取消签约回调(PAYSCORE.USER_CANCEL_SIGN_PLAN)通知(JSON)
 description: 用户在取消签约或者取消服务授权导致服务下签约计划取消后，微信会把相关计划取消签约信息发送给商户，商户需要接收处理，并按照文档规范返回应答。
 ---
 
@@ -14,34 +14,34 @@ description: 用户在取消签约或者取消服务授权导致服务下签约�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_CANCEL_SIGN_PLAN` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_CANCEL_SIGN_PLAN` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| sign_plan_id {data-indent=3} | string | 签约计划的主键，唯一定义此资源的标识
+| sign_plan_id {data-required data-indent=3} | string | 签约计划的主键，唯一定义此资源的标识
 | openid {data-indent=3} | string | 签约计划用户服务商应用下的OpenID
 | sub_openid {data-indent=3} | string | 签约计划用户子商户应用下的OpenID
-| service_id {data-indent=3} | string | 计划所属服务
-| mchid {data-indent=3} | string | 服务商商户号
-| sub_mchid {data-indent=3} | string | 子商户商户号
-| appid {data-indent=3} | string | 服务商AppID
+| service_id {data-required data-indent=3} | string | 计划所属服务
+| mchid {data-required data-indent=3} | string | 服务商商户号
+| sub_mchid {data-required data-indent=3} | string | 子商户商户号
+| appid {data-required data-indent=3} | string | 服务商AppID
 | sub_appid {data-indent=3} | string | 子商户AppID
 | merchant_sign_plan_no {data-indent=3} | string | 商户系统内部签约计划单号，只能是数字、大小写字母_-* 且在同一个商户号下唯一
 | merchant_callback_url {data-indent=3} | string | 签约事件通知回调地址，用于接收用户签约计划成功后和主动取消签约计划的通知
@@ -60,18 +60,16 @@ description: 用户在取消签约或者取消服务授权导致服务下签约�
 | plan_detail_no {data-indent=4} | number | 根据创建计划时传入明细顺序编号，从1开始
 | original_price {data-indent=4} | number | 计划明细原支付金额（单位分）
 | plan_discount_description {data-indent=4} | string | 计划明细优惠说明
-| actual_price {data-indent=4} | number | 计划明细实际支付金额（单位分）
-| plan_detail_state {data-indent=4} | string | 计划明细状态<br/>`NOT_USED` \| `USING` \| `USED` \| `SIGN_PLAN_DETAIL_CANCEL` 枚举值之一
+| actual_price {data-required data-indent=4} | number | 计划明细实际支付金额（单位分）
+| plan_detail_state {data-required data-indent=4} | string | 计划明细状态<br/>`NOT_USED` \| `USING` \| `USED` \| `SIGN_PLAN_DETAIL_CANCEL` 枚举值之一
 | order_id {data-indent=4} | string | 计划明细在使用中，已使用和已取消状态下存在对应的支付分服务订单号
-| merchant_plan_detail_no {data-indent=4} | string | 必须保障在商户下唯一，会在创建计划详情对应的支付分订单时会使用该字段作为支付分订单商户侧订单号,只能是数字、大小写字母_-*
-| plan_detail_name {data-indent=4} | string | 计划详情名称
+| merchant_plan_detail_no {data-required data-indent=4} | string | 必须保障在商户下唯一，会在创建计划详情对应的支付分订单时会使用该字段作为支付分订单商户侧订单号,只能是数字、大小写字母_-*
+| plan_detail_name {data-required data-indent=4} | string | 计划详情名称
 | actual_pay_price {data-indent=4} | number | 单位分，计划明细对应订单实际支付金额，是根据完结订单填写金额，订单完结后用户实际支付此金额
 | use_time {data-indent=4} | string | 详情使用时间
 | complete_time {data-indent=4} | string | 详情对应订单实际完成支付时间
 | cancel_time {data-indent=4} | string | 详情对应订单取消时间
 | sign_time {data-indent=3} | string | 签约时间
-| » code {data-indent=3} | string | 错误码，SUCCESS为接收成功，其他错误码为失败。
-| message {data-indent=3} | string | 返回信息，如非空，为错误原因。
 
 {.im-table #request}
 

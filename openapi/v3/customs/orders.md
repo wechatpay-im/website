@@ -4,14 +4,14 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 机构APPID
-| mchid {data-indent=1} | string | 商户号
-| out_trade_no {data-indent=1} | string | 商户订单号
-| transaction_id {data-indent=1} | string | 微信订单号
-| customs {data-indent=1} | string | 海关
-| merchant_customs_no {data-indent=1} | string | 商户海关备案号
+| base_uri {data-required} | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 机构APPID
+| mchid {data-required data-indent=1} | string | 商户号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| customs {data-required data-indent=1} | string | 海关
+| merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | duty {data-indent=1} | integer | 关税
 | sub_order_no {data-indent=1} | string | 商户子订单号
 | fee_type {data-indent=1} | string | 货币类型
@@ -162,15 +162,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 机构APPID
-| mchid | string | 商户号
-| state | string | 报关状态
-| out_trade_no | string | 商户订单号
-| transaction_id | string | 微信订单号
+| appid {data-required}| string | 机构APPID
+| mchid {data-required}| string | 商户号
+| state {data-required}| string | 报关状态
+| out_trade_no {data-required}| string | 商户订单号
+| transaction_id {data-required}| string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| verify_department | string | 核验机构
-| verify_department_trade_id | string | 核验机构交易流水号
+| verify_department {data-required}| string | 核验机构
+| verify_department_trade_id {data-required}| string | 核验机构交易流水号
 
 {.im-table #response}
 
@@ -182,13 +182,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | 机构APPID
-| mchid {data-indent=1} | string | 商户号
-| order_type {data-indent=1} | string | 订单类型<br/>`out_trade_no` \| `transaction_id` \| `sub_order_no` \| `sub_order_id` 枚举值之一
-| order_no {data-indent=1} | string | 订单号
-| customs {data-indent=1} | string | 海关
+| base_uri {data-required} | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | 机构APPID
+| mchid {data-required data-indent=1} | string | 商户号
+| order_type {data-required data-indent=1} | string | 订单类型<br/>`out_trade_no` \| `transaction_id` \| `sub_order_no` \| `sub_order_id` 枚举值之一
+| order_no {data-required data-indent=1} | string | 订单号
+| customs {data-required data-indent=1} | string | 海关
 | offset {data-indent=1} | integer | 偏移量
 | limit {data-indent=1} | integer | 请求最大记录条数
 
@@ -305,27 +305,27 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 机构APPID
-| mchid | string | 商户号
-| transaction_id | string | 微信订单号
-| verify_department | string | 核验机构
-| verify_department_trade_id | string | 核验机构流水号
-| offset | integer | 偏移量
-| limit | integer | 请求最大记录条数
-| total_count | integer | 查询结果总条数
-| data | object[] | 报关数据包
+| appid {data-required}| string | 机构APPID
+| mchid {data-required}| string | 商户号
+| transaction_id {data-required}| string | 微信订单号
+| verify_department {data-required}| string | 核验机构
+| verify_department_trade_id {data-required}| string | 核验机构流水号
+| offset {data-required}| integer | 偏移量
+| limit {data-required}| integer | 请求最大记录条数
+| total_count {data-required}| integer | 查询结果总条数
+| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 报关数据包
 | sub_order_no {data-indent=1} | string | 商户子单号
 | sub_order_id {data-indent=1} | string | 微信子单号
 | mch_customs_no {data-indent=1} | string | 商户海关备案号
-| customs {data-indent=1} | string | 海关代码
+| customs {data-required data-indent=1} | string | 海关代码
 | fee_type {data-indent=1} | string | 币种
 | order_fee {data-indent=1} | integer | 子单金额
 | duty {data-indent=1} | integer | 关税
 | transport_fee {data-indent=1} | integer | 物流费用
 | product_fee {data-indent=1} | integer | 商品费用
-| state {data-indent=1} | string | 报关状态
+| state {data-required data-indent=1} | string | 报关状态
 | explanation {data-indent=1} | string | 报关结果说明
-| modify_time {data-indent=1} | string | 最后更新时间
+| modify_time {data-required data-indent=1} | string | 最后更新时间
 
 {.im-table #response}
 
@@ -337,15 +337,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 机构APPID
-| mchid {data-indent=1} | string | 商户号
-| out_trade_no {data-indent=1} | string | 商户订单号
-| transaction_id {data-indent=1} | string | 微信订单号
+| base_uri {data-required} | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 机构APPID
+| mchid {data-required data-indent=1} | string | 商户号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
 | sub_order_no {data-indent=1} | string | 商户子订单号
-| customs {data-indent=1} | string | 海关编码
-| merchant_customs_no {data-indent=1} | string | 商户海关备案号
+| customs {data-required data-indent=1} | string | 海关编码
+| merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | duty {data-indent=1} | integer | 关税
 | order_fee {data-indent=1} | integer | 子订单金额
 | transport_fee {data-indent=1} | integer | 物流费用
@@ -488,16 +488,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 机构APPID
-| mchid | string | 商户号
-| state | string | 报关状态
-| out_trade_no | string | 商户订单号
-| transaction_id | string | 微信订单号
+| appid {data-required}| string | 机构APPID
+| mchid {data-required}| string | 商户号
+| state {data-required}| string | 报关状态
+| out_trade_no {data-required}| string | 商户订单号
+| transaction_id {data-required}| string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| modify_time | string | 最后更新时间
-| verify_department | string | 核验机构
-| verify_department_trade_id | string | 核验机构流水号
+| modify_time {data-required}| string | 最后更新时间
+| verify_department {data-required}| string | 核验机构
+| verify_department_trade_id {data-required}| string | 核验机构流水号
 
 {.im-table #response}
 

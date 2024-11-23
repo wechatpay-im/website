@@ -9,16 +9,16 @@ description: 生成投保结果
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sp_mchid {data-indent=1} | string | 服务商商户号
-| wesure_order_no {data-indent=1} | string | 特约商户商户号
-| token {data-indent=1} | string | 微保保单号
-| insurance_company_order_no {data-indent=1} | string | 保司保单号
-| openid {data-indent=1} | string | 用户标识
-| insure_state {data-indent=1} | string | 投保状态
-| insure_effect_time {data-indent=1} | string | 保障生效时间
-| insure_invalid_time {data-indent=1} | string | 保障失效时间
-| insurance_company_name {data-indent=1} | string | 保障的保险公司名称
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_mchid {data-required data-indent=1} | string | 服务商商户号
+| wesure_order_no {data-required data-indent=1} | string | 特约商户商户号
+| token {data-required data-indent=1} | string | 微保保单号
+| insurance_company_order_no {data-required data-indent=1} | string | 保司保单号
+| openid {data-required data-indent=1} | string | 用户标识
+| insure_state {data-required data-indent=1} | string | 投保状态
+| insure_effect_time {data-required data-indent=1} | string | 保障生效时间
+| insure_invalid_time {data-required data-indent=1} | string | 保障失效时间
+| insurance_company_name {data-required data-indent=1} | string | 保障的保险公司名称
 
 {.im-table #request}
 

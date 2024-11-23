@@ -9,14 +9,14 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| type {data-indent=1} | string | 接收方类型
-| account {data-indent=1} | string | 接收方账号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| type {data-required data-indent=1} | string | 接收方类型
+| account {data-required data-indent=1} | string | 接收方账号
 | name {data-indent=1} | string | 接收方名称
 | encrypted_name {data-indent=1} | string | 接收方名称的密文
-| relation_type {data-indent=1} | string | 与分账方的关系类型
-| headers | object | 声明请求的头参数
+| relation_type {data-required data-indent=1} | string | 与分账方的关系类型
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -138,8 +138,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type | string | 接收方类型
-| account | string | 接收方账号
+| type {data-required}| string | 接收方类型
+| account {data-required}| string | 接收方账号
 
 {.im-table #response}
 

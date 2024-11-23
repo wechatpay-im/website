@@ -9,9 +9,9 @@ description: 建议authinfo每1小时内获取一次，否则当设备断网且�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_user_id {data-indent=1} | string | 
-| organization_id {data-indent=1} | string | 
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_user_id {data-required data-indent=1} | string | 商户用户ID
+| organization_id {data-required data-indent=1} | string | 机构id
 
 {.im-table #request}
 
@@ -90,8 +90,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| repayment_url | string | 
-| expire_at | string | 
+| repayment_url {data-required}| string | 还款链接
+| expire_at {data-required}| string | 链接过期时间
 
 {.im-table #response}
 

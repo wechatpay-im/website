@@ -9,9 +9,9 @@ description: 给用户发送扣款预通知
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 签约协议号
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 服务商APPID
+| contract_id {data-required} | string | 签约协议号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 服务商APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户APPID
 

@@ -9,7 +9,7 @@ description: 通过本接口根据省份编码获取省份下的城市列表信�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| province_code | integer | 省份编码
+| province_code {data-required} | integer | 省份编码
 
 {.im-table #request}
 
@@ -70,10 +70,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 城市列表
-| city_name {data-indent=1} | string | 城市名称
-| city_code {data-indent=1} | integer | 城市编码
-| total_count | integer | 查询数据总条数
+| data | object[] {data-tooltip="对应PHP的array"} | 城市列表
+| city_name {data-required data-indent=1} | string | 城市名称
+| city_code {data-required data-indent=1} | integer | 城市编码
+| total_count {data-required}| integer | 查询数据总条数
 
 {.im-table #response}
 

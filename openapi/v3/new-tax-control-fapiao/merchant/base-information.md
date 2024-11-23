@@ -9,8 +9,8 @@ description: 查询商户在微信支付商户平台中配置的电子发票开�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号
 
 {.im-table #request}
 
@@ -83,17 +83,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| seller_information | object | 销售方信息
-| name {data-indent=1} | string | 名称
-| taxpayer_id {data-indent=1} | string | 纳税人识别号
-| address {data-indent=1} | string | 地址
+| seller_information {data-required}| object {data-tooltip="对应PHP的array"} | 销售方信息
+| name {data-required data-indent=1} | string | 名称
+| taxpayer_id {data-required data-indent=1} | string | 纳税人识别号
+| address {data-required data-indent=1} | string | 地址
 | telephone {data-indent=1} | string | 电话
 | bank_name {data-indent=1} | string | 开户银行
 | bank_account {data-indent=1} | string | 银行账号
-| extra_information | object | 附加信息
+| extra_information {data-required}| object {data-tooltip="对应PHP的array"} | 附加信息
 | payee {data-indent=1} | string | 收款人
 | reviewer {data-indent=1} | string | 复核人
-| drawer {data-indent=1} | string | 开票人
+| drawer {data-required data-indent=1} | string | 开票人
 
 {.im-table #response}
 

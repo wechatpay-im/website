@@ -9,10 +9,10 @@ description: 用于商户停止用户的签约计划，必须是该签约计划�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| merchant_sign_plan_no | string | 商户侧签约计划号
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 子商户号
-| stop_reason {data-indent=1} | string | 停止签约计划原因
+| merchant_sign_plan_no {data-required} | string | 商户侧签约计划号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| stop_reason {data-required data-indent=1} | string | 停止签约计划原因
 
 {.im-table #request}
 
@@ -97,36 +97,36 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sign_plan_id | string | 计划签约ID
+| sign_plan_id {data-required}| string | 计划签约ID
 | openid | string | 签约计划用户服务商应用下的OpenID
 | sub_openid | string | 签约计划用户子商户应用下的OpenID
-| service_id | string | 计划所属服务
-| mchid | string | 服务商商户号
-| sub_mchid | string | 子商户商户号
-| appid | string | 服务商AppID
+| service_id {data-required}| string | 计划所属服务
+| mchid {data-required}| string | 服务商商户号
+| sub_mchid {data-required}| string | 子商户商户号
+| appid {data-required}| string | 服务商AppID
 | sub_appid | string | 子商户AppID
-| merchant_sign_plan_no | string | 商户侧签约计划号
-| merchant_callback_url | string | 商户回调地址
-| plan_id | string | 签约所属计划ID
-| going_detail_no | number | 目前用户进行到的计划详情序号
-| sign_state | string | 计划签约状态
+| merchant_sign_plan_no {data-required}| string | 商户侧签约计划号
+| merchant_callback_url {data-required}| string | 商户回调地址
+| plan_id {data-required}| string | 签约所属计划ID
+| going_detail_no {data-required}| number | 目前用户进行到的计划详情序号
+| sign_state {data-required}| string | 计划签约状态
 | cancel_sign_time | string | 签约计划取消时间
 | cancel_sign_type | string | 签约计划取消类型
 | cancel_reason | string | 签约计划取消原因
-| plan_name | string | 签约计划的名称
-| plan_over_time | string | 签约计划的过期时间
-| total_origin_price | number | 签约计划原总金额(单位分)
-| deduction_quantity | number | 签约计划扣费次数
-| total_actual_price | number | 签约计划实际总金额（单位分）
-| signed_detail_list | object[] | 签约计划明细列表
-| plan_detail_no {data-indent=1} | number | 计划明细序号
-| original_price {data-indent=1} | number | 计划明细原支付金额（单位分）
+| plan_name {data-required}| string | 签约计划的名称
+| plan_over_time {data-required}| string | 签约计划的过期时间
+| total_origin_price {data-required}| number | 签约计划原总金额(单位分)
+| deduction_quantity {data-required}| number | 签约计划扣费次数
+| total_actual_price {data-required}| number | 签约计划实际总金额（单位分）
+| signed_detail_list | object[] {data-tooltip="对应PHP的array"} | 签约计划明细列表
+| plan_detail_no {data-required data-indent=1} | number | 计划明细序号
+| original_price {data-required data-indent=1} | number | 计划明细原支付金额（单位分）
 | plan_discount_description {data-indent=1} | string | 计划明细优惠说明
-| actual_price {data-indent=1} | number | 计划明细实际支付金额（单位分）
-| plan_detail_state {data-indent=1} | string | 计划明细状态
+| actual_price {data-required data-indent=1} | number | 计划明细实际支付金额（单位分）
+| plan_detail_state {data-required data-indent=1} | string | 计划明细状态
 | order_id {data-indent=1} | string | 计划明细对应的支付分服务单号
-| merchant_plan_detail_no {data-indent=1} | string | 商户侧计划明细使用订单号
-| plan_detail_name {data-indent=1} | string | 计划详情名称
+| merchant_plan_detail_no {data-required data-indent=1} | string | 商户侧计划明细使用订单号
+| plan_detail_name {data-required data-indent=1} | string | 计划详情名称
 | actual_pay_price {data-indent=1} | number | 计划明细对应订单实际支付金额（单位分）
 | use_time {data-indent=1} | string | 详情使用时间
 | complete_time {data-indent=1} | string | 详情完成时间

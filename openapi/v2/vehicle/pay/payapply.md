@@ -9,45 +9,45 @@ description: 委托代扣可应用于定期扣款或需事后扣款以期提高�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号id
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| body {data-indent=1} | string | 商品描述
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号id
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 商品详情
 | attach {data-indent=1} | string | 附加数据
-| out_trade_no {data-indent=1} | string | 商户订单号
-| total_fee {data-indent=1} | integer | 总金额
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| total_fee {data-required data-indent=1} | integer | 总金额
 | fee_type {data-indent=1} | string | 货币类型
-| spbill_create_ip {data-indent=1} | string | 终端IP
+| spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | goods_tag {data-indent=1} | string | 商品标记
-| notify_url {data-indent=1} | string | 回调通知url
-| trade_type {data-indent=1} | string | 交易类型
-| version {data-indent=1} | string | 版本号
-| trade_scene {data-indent=1} | string | 交易场景
+| notify_url {data-required data-indent=1} | string | 回调通知url
+| trade_type {data-required data-indent=1} | string | 交易类型
+| version {data-required data-indent=1} | string | 版本号
+| trade_scene {data-required data-indent=1} | string | 交易场景
 | openid {data-indent=1} | string | 用户标识
 | profit_sharing {data-indent=1} | string | 分账标识
-| scene_info {data-indent=1} | string | 场景信息
-| start_time {data-indent=1} | string | 交易时间
-| end_time {data-indent=1} | string | 结束时间
-| charging_time {data-indent=1} | string | 计费时长
-| plate_number {data-indent=1} | string | 车牌号
-| car_type {data-indent=1} | string | 车辆类型
-| parking_name {data-indent=1} | string | 停车场名称
-| deduct_mode {data-indent=1} | string | 发起扣费方式
-| support_deduct_mode {data-indent=1} | string | 支持的扣费方式
-| space_number {data-indent=1} | string | 车位编号
-| gas_station {data-indent=1} | string | 加油站名称
-| gas_label_name {data-indent=1} | string | 油品标号名
-| gas_type {data-indent=1} | string | 油品类型名称
-| gas_standard {data-indent=1} | string | 油品标准
-| gas_amount {data-indent=1} | string | 油量
-| gas_gun_no {data-indent=1} | string | 油枪号
-| entrance_name {data-indent=1} | string | 入口站名称
-| exit_name {data-indent=1} | string | 出口名称
+| scene_info {data-required data-indent=1} | string | 场景信息
+| start_time {data-required data-indent=1} | string | 交易时间
+| end_time {data-required data-indent=1} | string | 结束时间
+| charging_time {data-required data-indent=1} | string | 计费时长
+| plate_number {data-required data-indent=1} | string | 车牌号
+| car_type {data-required data-indent=1} | string | 车辆类型
+| parking_name {data-required data-indent=1} | string | 停车场名称
+| deduct_mode {data-required data-indent=1} | string | 发起扣费方式
+| support_deduct_mode {data-required data-indent=1} | string | 支持的扣费方式
+| space_number {data-required data-indent=1} | string | 车位编号
+| gas_station {data-required data-indent=1} | string | 加油站名称
+| gas_label_name {data-required data-indent=1} | string | 油品标号名
+| gas_type {data-required data-indent=1} | string | 油品类型名称
+| gas_standard {data-required data-indent=1} | string | 油品标准
+| gas_amount {data-required data-indent=1} | string | 油量
+| gas_gun_no {data-required data-indent=1} | string | 油枪号
+| entrance_name {data-required data-indent=1} | string | 入口站名称
+| exit_name {data-required data-indent=1} | string | 出口名称
 | carrying_capacity {data-indent=1} | string | 核载人数
 | carrying_range {data-indent=1} | string | 核载区间
-| channel_type {data-indent=1} | string | 通道类型
+| channel_type {data-required data-indent=1} | string | 通道类型
 
 {.im-table #request}
 
@@ -342,14 +342,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| appid | string | 公众账号id
-| mch_id | string | 商户号
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| appid {data-required}| string | 公众账号id
+| mch_id {data-required}| string | 商户号
 | device_info | string | 设备号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 

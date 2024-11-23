@@ -9,7 +9,7 @@ description: 商户可以通过该接口查看回单申请进度；请务必对�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transfer_bill_no | string | 微信转账单号
+| transfer_bill_no {data-required} | string | 微信转账单号
 
 {.im-table #request}
 
@@ -70,9 +70,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| state | string | 申请单状态
-| create_time | string | 申请单创建时间
-| update_time | string | 申请单更新时间
+| state {data-required}| string | 申请单状态
+| create_time {data-required}| string | 申请单创建时间
+| update_time {data-required}| string | 申请单更新时间
 | hash_type | string | 回单文件摘要类型
 | hash_value | string | 回单文件摘要值
 | download_url | string | 回单文件下载地址

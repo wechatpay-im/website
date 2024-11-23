@@ -9,8 +9,8 @@ description: 服务商/电商平台（不包括支付机构、银行），可使
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户/二级商户号
-| application_no | string | 修改结算账户申请单号
+| sub_mchid {data-required} | string | 特约商户/二级商户号
+| application_no {data-required} | string | 修改结算账户申请单号
 
 {.im-table #request}
 
@@ -77,13 +77,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| account_name | string | 开户名称
-| account_type | string | 账户类型
-| account_bank | string | 开户银行
+| account_name {data-required}| string | 开户名称
+| account_type {data-required}| string | 账户类型
+| account_bank {data-required}| string | 开户银行
 | bank_name | string | 开户银行全称（含支行）
 | bank_branch_id | string | 开户银行联行号
-| account_number | string | 银行账号
-| verify_result | string | 审核状态
+| account_number {data-required}| string | 银行账号
+| verify_result {data-required}| string | 审核状态
 | verify_fail_reason | string | 审核驳回原因
 | verify_finish_time | string | 审核结果更新时间
 

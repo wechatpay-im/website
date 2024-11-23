@@ -9,16 +9,16 @@ description: 服务商从商户小程序拉起微信签约小程序发起签约�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sp_appid {data-indent=1} | string | 商户AppID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_appid {data-required data-indent=1} | string | 商户AppID
 | sp_openid {data-indent=1} | string | 用户标识
-| sub_mchid {data-indent=1} | string | 子商户号
-| sub_appid {data-indent=1} | string | 子商户AppID
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| sub_appid {data-required data-indent=1} | string | 子商户AppID
 | sub_openid {data-indent=1} | string | 用户子标识
-| service_id {data-indent=1} | number | 免密支付服务ID
-| out_contract_code {data-indent=1} | string | 商户签约协议号
-| notify_url {data-indent=1} | string | 回调通知地址
-| contract_display_account {data-indent=1} | string | 用户账户展示名称
+| service_id {data-required data-indent=1} | number | 免密支付服务ID
+| out_contract_code {data-required data-indent=1} | string | 商户签约协议号
+| notify_url {data-required data-indent=1} | string | 回调通知地址
+| contract_display_account {data-required data-indent=1} | string | 用户账户展示名称
 
 {.im-table #request}
 
@@ -139,13 +139,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| pre_entrustweb_id | string | 预签约ID
-| mchid | string | 商户号
-| sub_mchid | string | 子商户号
-| service_id | number | 免密支付服务ID
-| out_contract_code | string | 商户签约协议号
-| sign_mp_appid | string | 跳转签约的小程序AppID
-| sign_mp_path | string | 跳转签约的小程序路径
+| pre_entrustweb_id {data-required}| string | 预签约ID
+| mchid {data-required}| string | 商户号
+| sub_mchid {data-required}| string | 子商户号
+| service_id {data-required}| number | 免密支付服务ID
+| out_contract_code {data-required}| string | 商户签约协议号
+| sign_mp_appid {data-required}| string | 跳转签约的小程序AppID
+| sign_mp_path {data-required}| string | 跳转签约的小程序路径
 
 {.im-table #response}
 

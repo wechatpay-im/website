@@ -9,14 +9,14 @@ description: 商户对已开具的电子发票进行冲红（开具红票），�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| fapiao_apply_id | string | 发票申请单号
-| json | object | 声明请求的`JSON`数据结构
+| fapiao_apply_id {data-required} | string | 发票申请单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| reverse_reason {data-indent=1} | string | 冲红原因
-| fapiao_information {data-indent=1} | object[] | 需要冲红的发票信息
-| fapiao_id {data-indent=2} | string | 商户发票单号
-| fapiao_code {data-indent=2} | string | 发票代码
-| fapiao_number {data-indent=2} | string | 发票号码
+| reverse_reason {data-required data-indent=1} | string | 冲红原因
+| fapiao_information {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 需要冲红的发票信息
+| fapiao_id {data-required data-indent=2} | string | 商户发票单号
+| fapiao_code {data-required data-indent=2} | string | 发票代码
+| fapiao_number {data-required data-indent=2} | string | 发票号码
 
 {.im-table #request}
 

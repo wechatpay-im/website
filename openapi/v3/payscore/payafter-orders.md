@@ -4,21 +4,21 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| out_order_no {data-indent=1} | string | 商户服务订单号
-| service_id {data-indent=1} | string | 服务ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| out_order_no {data-required data-indent=1} | string | 商户服务订单号
+| service_id {data-required data-indent=1} | string | 服务ID
 | service_start_time {data-indent=1} | string | 
 | service_end_time {data-indent=1} | string | 
 | service_start_location {data-indent=1} | string | 
 | service_end_location {data-indent=1} | string | 
 | service_introduction {data-indent=1} | string | 
-| fees {data-indent=1} | object[] | 
+| fees {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 
 | fee_name {data-indent=2} | string | 
 | fee_count {data-indent=2} | integer | 
 | fee_amount {data-indent=2} | integer | 
 | fee_desc {data-indent=2} | string | 
-| discounts {data-indent=1} | object[] | 
+| discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 
 | discount_name {data-indent=2} | string | 优惠名称
 | discount_desc {data-indent=2} | string | 优惠说明
 | risk_amount {data-indent=1} | integer | 
@@ -29,7 +29,7 @@
 | phone {data-indent=1} | string | 
 | userid {data-indent=1} | string | 
 | address {data-indent=1} | string | 
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -292,7 +292,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | service_id {data-indent=1} | string | 
 | out_order_no {data-indent=1} | string | 
 | query_id {data-indent=1} | string | 
@@ -403,12 +403,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | real_service_start_location | string | 
 | real_service_end_location | string | 
 | service_introduction | string | 
-| fees | object[] | 
+| fees | object[] {data-tooltip="对应PHP的array"} | 
 | fee_name {data-indent=1} | string | 
 | fee_count {data-indent=1} | integer | 
 | fee_amount {data-indent=1} | integer | 
 | fee_desc {data-indent=1} | string | 
-| discounts | object[] | 
+| discounts | object[] {data-tooltip="对应PHP的array"} | 
 | discount_name {data-indent=1} | string | 优惠名称
 | discount_amount {data-indent=1} | integer | 
 | discount_desc {data-indent=1} | string | 优惠说明

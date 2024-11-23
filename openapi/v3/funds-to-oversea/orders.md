@@ -9,26 +9,26 @@ description: 商户发起资金出境请求，需要传微信支付单号，商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| out_order_id {data-indent=1} | string | 商户出境单号
-| sub_mchid {data-indent=1} | string | 二级商户号
-| transaction_id {data-indent=1} | string | 微信订单号
-| amount {data-indent=1} | integer | 出境金额
-| foreign_currency {data-indent=1} | string | 境外收款币种
-| goods_info {data-indent=1} | object[] | 商品信息
-| goods_name {data-indent=2} | string | 商品名称
-| goods_category {data-indent=2} | string | 商品类目
-| goods_unit_price {data-indent=2} | integer | 商品单价
-| goods_quantity {data-indent=2} | integer | 商品数量
-| seller_info {data-indent=1} | object | 卖家信息
-| oversea_business_name {data-indent=2} | string | 境外卖家经营主体名称
-| oversea_shop_name {data-indent=2} | string | 境外卖家店铺名称
-| seller_id {data-indent=2} | string | 卖家ID
-| express_info {data-indent=1} | object | 物流信息
-| courier_number {data-indent=2} | string | 物流单号
-| express_company_name {data-indent=2} | string | 物流商名称
-| payee_info {data-indent=1} | object | 收款人信息
-| payee_id {data-indent=2} | string | 收款人识别号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_order_id {data-required data-indent=1} | string | 商户出境单号
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| amount {data-required data-indent=1} | integer | 出境金额
+| foreign_currency {data-required data-indent=1} | string | 境外收款币种
+| goods_info {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品信息
+| goods_name {data-required data-indent=2} | string | 商品名称
+| goods_category {data-required data-indent=2} | string | 商品类目
+| goods_unit_price {data-required data-indent=2} | integer | 商品单价
+| goods_quantity {data-required data-indent=2} | integer | 商品数量
+| seller_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 卖家信息
+| oversea_business_name {data-required data-indent=2} | string | 境外卖家经营主体名称
+| oversea_shop_name {data-required data-indent=2} | string | 境外卖家店铺名称
+| seller_id {data-required data-indent=2} | string | 卖家ID
+| express_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 物流信息
+| courier_number {data-required data-indent=2} | string | 物流单号
+| express_company_name {data-required data-indent=2} | string | 物流商名称
+| payee_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款人信息
+| payee_id {data-required data-indent=2} | string | 收款人识别号
 
 {.im-table #request}
 
@@ -233,14 +233,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_id | string | 商户出境单号
-| sub_mchid | string | 二级商户号
-| order_id | string | 微信出境单号
-| result | string | 出境结果
+| out_order_id {data-required}| string | 商户出境单号
+| sub_mchid {data-required}| string | 二级商户号
+| order_id {data-required}| string | 微信出境单号
+| result {data-required}| string | 出境结果
 | fail_reason | string | 出境失败的原因
-| amount | integer | 请求出境人民币金额
+| amount {data-required}| integer | 请求出境人民币金额
 | foreign_amount | integer | 真实出境外币金额
-| foreign_currency | string | 外币币种
+| foreign_currency {data-required}| string | 外币币种
 | rate | integer | 汇率
 | exchange_rate_time | string | 购汇时间
 | estimate_exchange_rate_time | string | 预计购汇时间

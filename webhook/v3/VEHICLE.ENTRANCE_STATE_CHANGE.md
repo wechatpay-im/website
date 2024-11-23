@@ -1,5 +1,5 @@
 ---
-title: 停车入场状态变更通知(JSON)
+title: 停车入场状态变更(VEHICLE.ENTRANCE_STATE_CHANGE)通知(JSON)
 description: 从用户进入开通微信支付分停车服务的停车场（用户入场通知接口），到用户离场期间（扣款接口），这个时间段内如果停车入场状态变为可用或者不可用，微信会把相关状态变更情况（可用/不可用）异步发送给商户，回调url为调用用户入场通知接口时填写的notify_url字段。商户在收到停车入场状态变更通知后，需进行接收处理并返回应答。
 ---
 
@@ -17,39 +17,39 @@ description: 从用户进入开通微信支付分停车服务的停车场（用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`VEHICLE.ENTRANCE_STATE_CHANGE` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`VEHICLE.ENTRANCE_STATE_CHANGE` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| sp_mchid {data-indent=3} | string | 调用接口提交的商户号
-| sub_mchid {data-indent=3} | string | 调用接口提交的子商户号
-| parking_id {data-indent=3} | string | 车主服务为商户分配的入场ID
-| out_parking_no {data-indent=3} | string | 商户侧入场标识ID，在同一个商户号下唯一
-| plate_number {data-indent=3} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
-| plate_color {data-indent=3} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
-| start_time {data-indent=3} | string | 入场时间
-| parking_name {data-indent=3} | string | 所在停车位车场的名称
-| free_duration {data-indent=3} | number | 停车场的免费停车时长
-| parking_state {data-indent=3} | string | 本次入场车牌的服务状态  <br/>`NORMAL`：正常状态，可以使用车主服务  <br/> `BLOCKED`：不可用状态，暂时不可以使用车主服务
-| blocked_state_description {data-indent=3} | string | 不可用服务状态描述，返回车牌状态为`BLOCKED`，会返回该字段，描述具体`BLOCKED`的原因，<br/>`PAUSE`：已暂停车主服务；<br/>`OVERDUE`：已授权签约但欠费，不能提供服务，商户提示用户进行还款，<br/>`REMOVE`：用户移除车牌导致车牌不可用。请跳转到授权/开通接口。
-| state_update_time {data-indent=3} | string | 状态变更的发生时间(毫秒级)
+| sp_mchid {data-required data-indent=3} | string | 调用接口提交的商户号
+| sub_mchid {data-required data-indent=3} | string | 调用接口提交的子商户号
+| parking_id {data-required data-indent=3} | string | 车主服务为商户分配的入场ID
+| out_parking_no {data-required data-indent=3} | string | 商户侧入场标识ID，在同一个商户号下唯一
+| plate_number {data-required data-indent=3} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
+| plate_color {data-required data-indent=3} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| start_time {data-required data-indent=3} | string | 入场时间
+| parking_name {data-required data-indent=3} | string | 所在停车位车场的名称
+| free_duration {data-required data-indent=3} | number | 停车场的免费停车时长
+| parking_state {data-required data-indent=3} | string | 本次入场车牌的服务状态  <br/>NORMAL：正常状态，可以使用车主服务  <br/> BLOCKED：不可用状态，暂时不可以使用车主服务
+| blocked_state_description {data-indent=3} | string | 不可用服务状态描述，返回车牌状态为BLOCKED，会返回该字段，描述具体BLOCKED的原因， <br/>PAUSE：已暂停车主服务； <br/>OVERDUE：已授权签约但欠费，不能提供服务，商户提示用户进行还款，  <br/>REMOVE：用户移除车牌导致车牌不可用。请跳转到授权/开通接口。
+| state_update_time {data-required data-indent=3} | string | 状态变更的发生时间(毫秒级),遵循<a href="https://datatracker.ietf.org/doc/html/rfc3339" target="_blank" rel="noopener noreferrer">rfc3339<OutboundLink/></a>标准格式
 
 {.im-table #request}
 

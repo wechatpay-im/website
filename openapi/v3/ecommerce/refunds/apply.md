@@ -9,20 +9,20 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
-| sp_appid {data-indent=1} | string | 电商平台APPID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| sp_appid {data-required data-indent=1} | string | 电商平台APPID
 | sub_appid {data-indent=1} | string | 二级商户APPID
 | transaction_id {data-indent=1} | string | 微信订单号
 | out_trade_no {data-indent=1} | string | 商户订单号
-| out_refund_no {data-indent=1} | string | 商户退款单号
+| out_refund_no {data-required data-indent=1} | string | 商户退款单号
 | reason {data-indent=1} | string | 退款原因
-| amount {data-indent=1} | object | 订单金额
-| refund {data-indent=2} | integer | 退款金额
-| from {data-indent=2} | object[] | 退款出资账户及金额
-| account {data-indent=3} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
-| amount {data-indent=3} | number | 出资金额
-| total {data-indent=2} | integer | 原订单金额
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| refund {data-required data-indent=2} | integer | 退款金额
+| from {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
+| account {data-required data-indent=3} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
+| amount {data-required data-indent=3} | number | 出资金额
+| total {data-required data-indent=2} | integer | 原订单金额
 | currency {data-indent=2} | string | 退款币种
 | notify_url {data-indent=1} | string | 退款结果回调url
 | refund_account {data-indent=1} | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
@@ -207,24 +207,24 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id | string | 微信退款单号
-| out_refund_no | string | 商户退款单号
-| create_time | string | 退款创建时间
-| amount | object | 订单金额
-| refund {data-indent=1} | integer | 退款金额
-| from {data-indent=1} | object[] | 退款出资账户及金额
-| account {data-indent=2} | string | 出资账户类型
-| amount {data-indent=2} | number | 出资金额
-| payer_refund {data-indent=1} | integer | 用户退款金额
+| refund_id {data-required}| string | 微信退款单号
+| out_refund_no {data-required}| string | 商户退款单号
+| create_time {data-required}| string | 退款创建时间
+| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| refund {data-required data-indent=1} | integer | 退款金额
+| from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
+| account {data-required data-indent=2} | string | 出资账户类型
+| amount {data-required data-indent=2} | number | 出资金额
+| payer_refund {data-required data-indent=1} | integer | 用户退款金额
 | discount_refund {data-indent=1} | integer | 优惠退款金额
 | currency {data-indent=1} | string | 退款币种
 | advance {data-indent=1} | number | 垫付金额
-| promotion_detail | object[] | 优惠退款详情
-| promotion_id {data-indent=1} | string | 券ID
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
-| amount {data-indent=1} | integer | 优惠券面额
-| refund_amount {data-indent=1} | integer | 优惠退款金额
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠退款详情
+| promotion_id {data-required data-indent=1} | string | 券ID
+| scope {data-required data-indent=1} | string | 优惠范围
+| type {data-required data-indent=1} | string | 优惠类型
+| amount {data-required data-indent=1} | integer | 优惠券面额
+| refund_amount {data-required data-indent=1} | integer | 优惠退款金额
 | refund_account | string | 退款出资商户
 
 {.im-table #response}

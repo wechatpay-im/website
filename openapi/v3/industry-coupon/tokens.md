@@ -9,11 +9,11 @@ description: 商户在拉起快捷切卡小程序前，需要先调用本接口�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| open_id {data-indent=1} | string | 用户标识
-| coupon_list {data-indent=1} | object[] | 出行券列表
-| stock_id {data-indent=2} | integer | 批次号
-| coupon_id {data-indent=2} | string | 券ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| open_id {data-required data-indent=1} | string | 用户标识
+| coupon_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 出行券列表
+| stock_id {data-required data-indent=2} | integer | 批次号
+| coupon_id {data-required data-indent=2} | string | 券ID
 
 {.im-table #request}
 

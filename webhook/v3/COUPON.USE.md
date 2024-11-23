@@ -1,5 +1,5 @@
 ---
-title: 核销事件回调通知(JSON)
+title: 核销事件回调(COUPON.USE)通知(JSON)
 description: 用户使用券后，微信会把相关核销券信息发送给商户，商户需要接收处理，并按照文档规范返回应答。出于安全的考虑，我们对核销券信息数据进行了加密，商户需要先对通知数据进行解密，才能得到核销券信息数据。
 ---
 
@@ -15,30 +15,30 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`COUPON.USE` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`COUPON.USE` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| stock_creator_mchid {data-indent=3} | string | 批次创建方商户号。
-| stock_id {data-indent=3} | string | 微信为每个代金券批次分配的唯一ID。
-| coupon_id {data-indent=3} | string | 微信为代金券或消费金唯一分配的id。
+| stock_creator_mchid {data-required data-indent=3} | string | 批次创建方商户号。
+| stock_id {data-required data-indent=3} | string | 微信为每个代金券批次分配的唯一ID。
+| coupon_id {data-required data-indent=3} | string | 微信为代金券或消费金唯一分配的id。
 | singleitem_discount_off {data-indent=3} | object | 单品优惠特定信息。
 | single_price_max {data-indent=4} | number | 单品最高优惠价格，单位：分。
 | discount_to {data-indent=3} | object | 减至优惠限定字段，仅减至优惠场景有返回。
@@ -54,18 +54,18 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 | available_end_time {data-indent=3} | string | 可用结束时间
 | singleitem {data-indent=3} | boolean | 是否单品优惠
 | normal_coupon_information {data-indent=3} | object | 普通满减券或消费金面额、门槛信息。
-| coupon_amount {data-indent=4} | number | 面额，单位：分。
-| transaction_minimum {data-indent=4} | number | 使用券或消费金金额门槛，单位：分。
+| coupon_amount {data-required data-indent=4} | number | 面额，单位：分。
+| transaction_minimum {data-required data-indent=4} | number | 使用券或消费金金额门槛，单位：分。
 | consume_information {data-indent=3} | object | 已实扣代金券或消费金信息。
 | consume_time {data-indent=4} | string | 代金券核销时间
 | consume_mchid {data-indent=4} | string | 核销代金券的商户号。<br/>校验规则：<br/>该参数目前现在返回的是收款商户号，间连模式下，目前传的是银联和网联的商户号<br/>
 | transaction_id {data-indent=4} | string | 微信支付系统生成的订单号。
 | consume_amount {data-indent=4} | number | 核销金额，仅有当business_type=`MULTIUSE`时，才会返回。单位，分
 | goods_detail {data-indent=4} | object[] | 商户下单接口传的单品信息。
-| goods_id {data-indent=5} | string | 单品券创建时录入的单品编码。
-| quantity {data-indent=5} | number | 单品数据
-| price {data-indent=5} | number | 单品单价
-| discount_amount {data-indent=5} | number | 优惠金额
+| goods_id {data-required data-indent=5} | string | 单品券创建时录入的单品编码。
+| quantity {data-required data-indent=5} | number | 单品数据
+| price {data-required data-indent=5} | number | 单品单价
+| discount_amount {data-required data-indent=5} | number | 优惠金额
 | business_type {data-indent=3} | string | 细分业务类型<br/>`MULTIUSE` 枚举值
 
 {.im-table #request}

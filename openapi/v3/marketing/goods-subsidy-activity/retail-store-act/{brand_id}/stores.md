@@ -4,11 +4,11 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
-| json | object | 声明请求的`JSON`数据结构
-| out_request_no {data-indent=1} | string | 请求业务单据
-| add_time {data-indent=1} | string | 添加时间
-| stores {data-indent=1} | object[] | 待新增的小店活动门店列表
+| brand_id {data-required} | string | 品牌ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_request_no {data-required data-indent=1} | string | 请求业务单据
+| add_time {data-required data-indent=1} | string | 添加时间
+| stores {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 待新增的小店活动门店列表
 | store_code {data-indent=2} | string | 门店编码
 | store_name {data-indent=2} | string | 门店名称
 
@@ -120,7 +120,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | add_time | string | 添加时间
-| failed_stores | object[] | 添加失败的小店活动门店列表
+| failed_stores | object[] {data-tooltip="对应PHP的array"} | 添加失败的小店活动门店列表
 | store_code {data-indent=1} | string | 门店编码
 | store_name {data-indent=1} | string | 门店名称
 
@@ -134,11 +134,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
-| json | object | 声明请求的`JSON`数据结构
-| out_request_no {data-indent=1} | string | 请求业务单据
-| delete_time {data-indent=1} | string | 删除时间
-| stores {data-indent=1} | object[] | 待删除的小店活动门店列表
+| brand_id {data-required} | string | 品牌ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| out_request_no {data-required data-indent=1} | string | 请求业务单据
+| delete_time {data-required data-indent=1} | string | 删除时间
+| stores {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 待删除的小店活动门店列表
 | store_code {data-indent=2} | string | 门店编码
 | store_name {data-indent=2} | string | 门店名称
 
@@ -250,7 +250,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | delete_time | string | 删除时间
-| failed_stores | object[] | 删除失败的小店活动门店列表
+| failed_stores | object[] {data-tooltip="对应PHP的array"} | 删除失败的小店活动门店列表
 | store_code {data-indent=1} | string | 门店编码
 | store_name {data-indent=1} | string | 门店名称
 
@@ -264,10 +264,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
-| query | object | 声明请求的查询参数
-| offset {data-indent=1} | number | 分页页码
-| limit {data-indent=1} | number | 分页大小
+| brand_id {data-required} | string | 品牌ID
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| offset {data-required data-indent=1} | number | 分页页码
+| limit {data-required data-indent=1} | number | 分页大小
 
 {.im-table #request}
 
@@ -353,7 +353,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | total_count | number | 小店活动门店总数
-| data | object[] | 小店活动门店集合
+| data | object[] {data-tooltip="对应PHP的array"} | 小店活动门店集合
 | store_code {data-indent=1} | string | 门店编码
 | store_name {data-indent=1} | string | 门店名称
 | offset | number | 分页页码

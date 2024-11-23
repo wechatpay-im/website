@@ -9,9 +9,9 @@ description: 电商收付通中，针对多次请求出境的场景，商家需�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id | string | 微信支付订单号
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 二级商户号
+| transaction_id {data-required} | string | 微信支付订单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -90,8 +90,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id | string | 微信支付订单号
-| available_abroad_amount | integer | 订单剩余可出境金额
+| transaction_id {data-required}| string | 微信支付订单号
+| available_abroad_amount {data-required}| integer | 订单剩余可出境金额
 
 {.im-table #response}
 

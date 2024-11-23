@@ -9,20 +9,20 @@ description: 该接口用于在开通ETC自动扣费前上传一些必要的信�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sp_appid {data-indent=1} | string | 服务商appid
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_appid {data-required data-indent=1} | string | 服务商appid
 | sub_appid {data-indent=1} | string | 子商户appid
 | sub_mchid {data-indent=1} | string | 特约商户号
-| openid {data-indent=1} | string | 用户标识
-| plan_id {data-indent=1} | string | ETC授权扣费模板ID
+| openid {data-required data-indent=1} | string | 用户标识
+| plan_id {data-required data-indent=1} | string | ETC授权扣费模板ID
 | etc_device_id {data-indent=1} | string | ETC设备号
-| plate_number {data-indent=1} | string | 车牌号
-| identify {data-indent=1} | object | 实名信息
-| encrypted_real_name {data-indent=2} | string | 姓名
-| encrypted_credential_id {data-indent=2} | string | 证件号码
-| credential_type {data-indent=2} | string | 证件类型
+| plate_number {data-required data-indent=1} | string | 车牌号
+| identify {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 实名信息
+| encrypted_real_name {data-required data-indent=2} | string | 姓名
+| encrypted_credential_id {data-required data-indent=2} | string | 证件号码
+| credential_type {data-required data-indent=2} | string | 证件类型
 | bank_card_no {data-indent=1} | string | 用户开通ETC时绑定的银行卡
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -186,7 +186,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| preopen_id | string | 预开通ID
+| preopen_id {data-required}| string | 预开通ID
 
 {.im-table #response}
 

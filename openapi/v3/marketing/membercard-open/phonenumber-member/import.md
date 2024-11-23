@@ -9,15 +9,15 @@ description: 如商户有存量注册会员未领取会员卡，可导入最近�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| member_information {data-indent=1} | object | 会员信息
-| card_id {data-indent=2} | string | 会员卡id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| member_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员信息
+| card_id {data-required data-indent=2} | string | 会员卡id
 | code {data-indent=2} | string | 会员卡code
 | membership_number {data-indent=2} | string | 会员卡编号
-| registration_time {data-indent=2} | string | 会员注册时间
-| encrypted_phone_number {data-indent=1} | string | 加密手机号
+| registration_time {data-required data-indent=2} | string | 会员注册时间
+| encrypted_phone_number {data-required data-indent=1} | string | 加密手机号
 | outer_str {data-indent=1} | string | 自定义场景值
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}

@@ -9,7 +9,7 @@ description: 提交开通保险理赔功能请求后，通过调用该接口查�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
+| sub_mchid {data-required} | string | 二级商户号
 
 {.im-table #request}
 
@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| opened | boolean | 是否开通成功
+| sub_mchid {data-required}| string | 二级商户号
+| opened {data-required}| boolean | 是否开通成功
 | success_time | string | 成功时间
 
 {.im-table #response}

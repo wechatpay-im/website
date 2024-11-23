@@ -9,7 +9,7 @@ description: 商户可以根据face_sid查询用户UnionId，调用该接口获�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | organization_id {data-indent=1} | string | 机构ID
 | organization_name {data-indent=1} | string | 机构名称
 
@@ -90,8 +90,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| organization_id | string | 
-| organization_name | string | 
+| organization_id | string | 机构ID
+| organization_name | string | 机构名称
 
 {.im-table #response}
 

@@ -9,16 +9,16 @@ description: 商户通过该接口，得到用户当次充电的代扣凭证，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 充电授权扣费协议号
-| json | object | 声明请求的`JSON`数据结构
+| contract_id {data-required} | string | 充电授权扣费协议号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 特约商户号
-| appid {data-indent=1} | string | 服务商公众号ID
+| appid {data-required data-indent=1} | string | 服务商公众号ID
 | sub_appid {data-indent=1} | string | 特约商户公众号ID
-| charge_info {data-indent=1} | object | 充电场景信息
-| start_time {data-indent=2} | string | 开始时间
-| charging_station_name {data-indent=2} | string | 充电站名称
-| charging_gun_number {data-indent=2} | string | 充电枪编号
-| device_id {data-indent=2} | string | 充电位设备号
+| charge_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 充电场景信息
+| start_time {data-required data-indent=2} | string | 开始时间
+| charging_station_name {data-required data-indent=2} | string | 充电站名称
+| charging_gun_number {data-required data-indent=2} | string | 充电枪编号
+| device_id {data-required data-indent=2} | string | 充电位设备号
 
 {.im-table #request}
 
@@ -145,7 +145,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| charging_token | string | 用户充电代扣凭证
+| charging_token {data-required}| string | 用户充电代扣凭证
 
 {.im-table #response}
 

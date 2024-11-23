@@ -9,9 +9,9 @@ description: 商户创建会员卡后，可以调用此api创建二维码，用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| json | object | 声明请求的`JSON`数据结构
-| activate_type {data-indent=1} | string | 会员卡激活类型<br/>`AUTO_ACTIVATE` \| `JUMP_ACTIVATE` 枚举值之一
+| card_id {data-required} | string | 会员卡id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| activate_type {data-required data-indent=1} | string | 会员卡激活类型<br/>`AUTO_ACTIVATE` \| `JUMP_ACTIVATE` 枚举值之一
 | activate_url {data-indent=1} | string | 跳转激活的url
 | activate_appid {data-indent=1} | string | 跳转激活的appid
 | activate_path {data-indent=1} | string | 跳转激活的path
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| url | string | 二维码对应的url
+| url {data-required}| string | 二维码对应的url
 
 {.im-table #response}
 

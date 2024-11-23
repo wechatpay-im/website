@@ -9,9 +9,9 @@ description: 生成商户预授权投放会员卡的凭证
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡模板id
-| json | object | 声明请求的`JSON`数据结构
-| activate_type {data-indent=1} | string | 激活类型
+| card_id {data-required} | string | 会员卡模板id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| activate_type {data-required data-indent=1} | string | 激活类型
 | navigate_back_previous_page {data-indent=1} | boolean | 设置用户在开卡完成后，是否返回拉起开卡组件的商家页面
 | activate_url {data-indent=1} | string | 跳转激活的url
 | activate_appid {data-indent=1} | string | 跳转激活的appid
@@ -125,7 +125,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| permission_token | string | 预授权token
+| permission_token {data-required}| string | 预授权token
 
 {.im-table #response}
 

@@ -9,7 +9,7 @@ description: 服务商提交申请单后需要修改信息时，或者申请单�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| applyment_id | string | 申请单编号
+| applyment_id {data-required} | string | 申请单编号
 
 {.im-table #request}
 

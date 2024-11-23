@@ -10,15 +10,15 @@ description: 商户可以通过该接口为自身和子商户发起H5支付域�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| domains {data-indent=1} | string[] | 
-| website_url {data-indent=1} | string | 子商户H5经营网址
-| website_business_page_pics {data-indent=1} | string[] | 
-| website_homepage_pics {data-indent=1} | string[] | 
+| domains {data-required data-indent=1} | string[] | 域名
+| website_url {data-required data-indent=1} | string | 子商户H5经营网址
+| website_business_page_pics {data-indent=1} | string[] | 图片MediaID
+| website_homepage_pics {data-indent=1} | string[] | 图片MediaID
 | website_state {data-indent=1} | string | 子商户经营网址状态
 | notify_url {data-indent=1} | string | 商户提供的审核结果回调接口
-| out_applyment_id {data-indent=1} | string | 商户申请单号
+| out_applyment_id {data-required data-indent=1} | string | 商户申请单号
 
 {.im-table #request}
 
@@ -139,17 +139,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
-| website_state | string | 子商户经营网址状态
-| domains | string[] | 
-| webiste_url | string | 子商户H5经营网址
-| website_business_page_pics | string[] | 
-| website_homepage_pics | string[] | 
-| applyment_id | integer | 申请单号
+| sub_mchid {data-required}| string | 子商户号
+| website_state {data-required}| string | 子商户经营网址状态
+| domains {data-required}| string[] | 域名
+| webiste_url {data-required}| string | 子商户H5经营网址
+| website_business_page_pics | string[] | 图片MediaID
+| website_homepage_pics | string[] | 图片MediaID
+| applyment_id {data-required}| integer | 申请单号
 | audit_reject_detail | string | 驳回原因
 | applyment_state | string | 申请单状态
 | notify_url | string | 商户提供的审核结果回调接口
-| out_applyment_id | string | 商户申请单号
+| out_applyment_id {data-required}| string | 商户申请单号
 
 {.im-table #response}
 

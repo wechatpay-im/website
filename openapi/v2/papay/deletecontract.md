@@ -9,15 +9,15 @@ description: 商户与用户的签约关系有误或者商户主动要求与用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 请求appid
-| mch_id {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 请求appid
+| mch_id {data-required data-indent=1} | string | 商户号
 | plan_id {data-indent=1} | string | 模板id
 | contract_code {data-indent=1} | string | 签约协议号
 | contract_id {data-indent=1} | string | 委托代扣协议id
-| contract_termination_remark {data-indent=1} | string | 解约备注
-| version {data-indent=1} | string | 版本号
-| nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
+| contract_termination_remark {data-required data-indent=1} | string | 解约备注
+| version {data-required data-indent=1} | string | 版本号
+| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 
 {.im-table #request}
 
@@ -132,17 +132,17 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| appid | string | 公众账号id
-| mch_id | string | 商户号
-| contract_id | string | 委托代扣协议id
-| plan_id | string | 模板id
-| contract_code | string | 签约协议号
-| result_code | string | 业务结果
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| appid {data-required}| string | 公众账号id
+| mch_id {data-required}| string | 商户号
+| contract_id {data-required}| string | 委托代扣协议id
+| plan_id {data-required}| string | 模板id
+| contract_code {data-required}| string | 签约协议号
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| sign | string | 签名
+| sign {data-required}| string | 签名
 
 {.im-table #response}
 

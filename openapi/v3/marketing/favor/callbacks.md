@@ -4,8 +4,8 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| mchid {data-indent=1} | string | 商户号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| mchid {data-required data-indent=1} | string | 商户号
 
 {.im-table #request}
 
@@ -78,8 +78,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid | string | 商户号
-| notify_url | string | 通知地址
+| mchid {data-required}| string | 商户号
+| notify_url {data-required}| string | 通知地址
 
 {.im-table #response}
 
@@ -91,9 +91,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| mchid {data-indent=1} | string | 商户号
-| notify_url {data-indent=1} | string | 通知url地址
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| mchid {data-required data-indent=1} | string | 商户号
+| notify_url {data-required data-indent=1} | string | 通知url地址
 | switch {data-indent=1} | boolean | 回调开关
 
 {.im-table #request}
@@ -179,8 +179,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| update_time | string | 修改时间
-| notify_url | string | 通知地址
+| update_time {data-required}| string | 修改时间
+| notify_url {data-required}| string | 通知地址
 
 {.im-table #response}
 

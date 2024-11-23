@@ -9,23 +9,23 @@ description: 新增、更新司机信息，司机需有实名认证的微信号�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| driver_name {data-indent=1} | string | 司机姓名
-| id_card_number {data-indent=1} | string | 司机身份证号码
-| company_name {data-indent=1} | string | 公司名称
-| mchid {data-indent=1} | string | 商户号
-| driver_license {data-indent=1} | string | 营运资格证号
-| driver_category {data-indent=1} | string | 司机类别
-| driver_status {data-indent=1} | string | 岗位状态
-| driver_photo {data-indent=1} | object | 司机头像
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| driver_name {data-required data-indent=1} | string | 司机姓名
+| id_card_number {data-required data-indent=1} | string | 司机身份证号码
+| company_name {data-required data-indent=1} | string | 公司名称
+| mchid {data-required data-indent=1} | string | 商户号
+| driver_license {data-required data-indent=1} | string | 营运资格证号
+| driver_category {data-required data-indent=1} | string | 司机类别
+| driver_status {data-required data-indent=1} | string | 岗位状态
+| driver_photo {data-indent=1} | object {data-tooltip="对应PHP的array"} | 司机头像
 | photo_type {data-indent=2} | string | 照片类型
-| photo_digest {data-indent=2} | object | 司机头像摘要
+| photo_digest {data-indent=2} | object {data-tooltip="对应PHP的array"} | 司机头像摘要
 | hash_type {data-indent=3} | string | 哈希类型
 | hash_value {data-indent=3} | string | 哈希值
 | photo_url {data-indent=2} | string | 头像url
 | photo_icon {data-indent=2} | string | 头像icon
-| region_id {data-indent=1} | integer | 行政区划ID
-| headers | object | 声明请求的头参数
+| region_id {data-required data-indent=1} | integer | 行政区划ID
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -213,21 +213,21 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| driver_name | string | 司机姓名
-| id_card_number | string | 司机身份证号码
-| company_name | string | 公司名称
-| mchid | string | 商户号
-| driver_license | string | 营运资格证号
-| driver_category | string | 司机类别
-| driver_status | string | 岗位状态
-| driver_photo | object | 司机头像
+| driver_name {data-required}| string | 司机姓名
+| id_card_number {data-required}| string | 司机身份证号码
+| company_name {data-required}| string | 公司名称
+| mchid {data-required}| string | 商户号
+| driver_license {data-required}| string | 营运资格证号
+| driver_category {data-required}| string | 司机类别
+| driver_status {data-required}| string | 岗位状态
+| driver_photo | object {data-tooltip="对应PHP的array"} | 司机头像
 | photo_type {data-indent=1} | string | 照片类型
-| photo_digest {data-indent=1} | object | 司机头像摘要
+| photo_digest {data-indent=1} | object {data-tooltip="对应PHP的array"} | 司机头像摘要
 | hash_type {data-indent=2} | string | 哈希类型
 | hash_value {data-indent=2} | string | 哈希值
 | photo_url {data-indent=1} | string | 头像url
 | photo_icon {data-indent=1} | string | 头像icon
-| region_id | integer | 行政区划ID
+| region_id {data-required}| integer | 行政区划ID
 
 {.im-table #response}
 

@@ -9,7 +9,7 @@ description: 通过申请单号查询申请状态
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| applyment_id | number | 业务申请编号
+| applyment_id {data-required} | number | 业务申请编号
 
 {.im-table #request}
 
@@ -74,9 +74,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | applyment_id | number | 微信支付申请单号
 | sub_mchid | string | 特约商户号
 | sign_url | string | 超级管理员签约链接
-| applyment_state | string | 申请单状态<br/>`APPLYMENT_STATE_WAITTING_FOR_AUDIT` \| `APPLYMENT_STATE_WAITTING_FOR_CONFIRM_CONTACT` \| `APPLYMENT_STATE_WAITTING_FOR_CONFIRM_LEGALPERSON` \| `APPLYMENT_STATE_PASSED` \| `APPLYMENT_STATE_FREEZED` \| `APPLYMENT_STATE_EDITTING` \| `APPLYMENT_STATE_AUDITING` \| `APPLYMENT_STATE_REJECTED` \| `APPLYMENT_STATE_TO_BE_CONFIRMED` \| `APPLYMENT_STATE_TO_BE_SIGNED` \| `APPLYMENT_STATE_SIGNING` \| `APPLYMENT_STATE_FINISHED` \| `APPLYMENT_STATE_CANCELED` 枚举值之一
+| applyment_state {data-required}| string | 申请单状态<br/>`APPLYMENT_STATE_WAITTING_FOR_AUDIT` \| `APPLYMENT_STATE_WAITTING_FOR_CONFIRM_CONTACT` \| `APPLYMENT_STATE_WAITTING_FOR_CONFIRM_LEGALPERSON` \| `APPLYMENT_STATE_PASSED` \| `APPLYMENT_STATE_FREEZED` \| `APPLYMENT_STATE_EDITTING` \| `APPLYMENT_STATE_AUDITING` \| `APPLYMENT_STATE_REJECTED` \| `APPLYMENT_STATE_TO_BE_CONFIRMED` \| `APPLYMENT_STATE_TO_BE_SIGNED` \| `APPLYMENT_STATE_SIGNING` \| `APPLYMENT_STATE_FINISHED` \| `APPLYMENT_STATE_CANCELED` 枚举值之一
 | applyment_state_msg | string | 申请状态描述
-| audit_detail | object[] | 驳回原因详情
+| audit_detail | object[] {data-tooltip="对应PHP的array"} | 驳回原因详情
 | field {data-indent=1} | string | 字段名
 | field_name {data-indent=1} | string | 字段名称
 | reject_reason {data-indent=1} | string | 驳回原因

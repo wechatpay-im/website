@@ -9,7 +9,7 @@ description: 普通服务商（支付机构、银行不可用），可使用本�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户/二级商户号
+| sub_mchid {data-required} | string | 特约商户/二级商户号
 
 {.im-table #request}
 
@@ -70,12 +70,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| account_type | string | 账户类型
-| account_bank | string | 开户银行
+| account_type {data-required}| string | 账户类型
+| account_bank {data-required}| string | 开户银行
 | bank_name | string | 开户银行全称（含支行）
 | bank_branch_id | string | 开户银行联行号
-| account_number | string | 银行账号
-| verify_result | string | 验证结果
+| account_number {data-required}| string | 银行账号
+| verify_result {data-required}| string | 验证结果
 | verify_fail_reason | string | 验证失败原因
 
 {.im-table #response}

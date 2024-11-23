@@ -9,9 +9,9 @@ description: 商户通过转账接口发起转账后，在**用户确认收款**
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_bill_no | string | 商户单号
-| json | object | 声明请求的`JSON`数据结构
-| sub_mchid {data-indent=1} | string | 二级商户号
+| out_bill_no {data-required} | string | 商户单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| out_bill_no | string | 商户单号
-| transfer_bill_no | string | 微信转账单号
-| state | string | 单据状态
-| update_time | string | 状态变更时间
+| sub_mchid {data-required}| string | 二级商户号
+| out_bill_no {data-required}| string | 商户单号
+| transfer_bill_no {data-required}| string | 微信转账单号
+| state {data-required}| string | 单据状态
+| update_time {data-required}| string | 状态变更时间
 
 {.im-table #response}
 

@@ -9,17 +9,17 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| merchant_name {data-indent=1} | string | 商户名称
-| sub_mch_id {data-indent=1} | string | 商户识别码
-| page_index {data-indent=1} | string | 页码
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
+| merchant_name {data-required data-indent=1} | string | 商户名称
+| sub_mch_id {data-required data-indent=1} | string | 商户识别码
+| page_index {data-required data-indent=1} | string | 页码
 | page_size {data-indent=1} | string | 展示资料个数
-| nonceless | boolean | 声明请求的`XML`无随机字符串参数<br/>固定值`true`
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
-| query | object | 声明请求的查询参数
-| action {data-indent=1} | string | `add` \| `query` 枚举值之一
+| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
+| security {data-required} | `true` | 声明加载商户API证书
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| action {data-required data-indent=1} | string | `add` \| `query` 枚举值之一
 
 {.im-table #request}
 
@@ -152,20 +152,20 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
-| merchant_name | string | 商户名称
-| merchant_shortname | string | 商户简称
-| service_phone | string | 客服电话
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
+| merchant_name {data-required}| string | 商户名称
+| merchant_shortname {data-required}| string | 商户简称
+| service_phone {data-required}| string | 客服电话
 | contact | string | 联系人
 | contact_phone | string | 联系电话
 | contact_email | string | 联系邮箱
-| business | string | 经营类目
-| channel_id | string | 渠道商商户号
-| channel_name | string | 渠道商名称
-| total | string | 总记录数
+| business {data-required}| string | 经营类目
+| channel_id {data-required}| string | 渠道商商户号
+| channel_name {data-required}| string | 渠道商名称
+| total {data-required}| string | 总记录数
 
 {.im-table #response}
 

@@ -10,18 +10,18 @@ description: 该接口用于商户上传用户身份信息，微信支付会重�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 机构APPID
-| mchid {data-indent=1} | string | 商户号
-| out_trade_no {data-indent=1} | string | 商户订单号
-| transaction_id {data-indent=1} | string | 微信订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 机构APPID
+| mchid {data-required data-indent=1} | string | 商户号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
 | sub_order_no {data-indent=1} | string | 商户子订单号
-| customs {data-indent=1} | string | 海关
-| merchant_customs_no {data-indent=1} | string | 商户海关备案号
-| certificate_type {data-indent=1} | string | 证件类型
-| certificate_id {data-indent=1} | string | 证件号
-| certificate_name {data-indent=1} | string | 证件姓名
-| headers | object | 声明请求的头参数
+| customs {data-required data-indent=1} | string | 海关
+| merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
+| certificate_type {data-required data-indent=1} | string | 证件类型
+| certificate_id {data-required data-indent=1} | string | 证件号
+| certificate_name {data-required data-indent=1} | string | 证件姓名
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -173,11 +173,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | 机构APPID
-| mchid | string | 商户号
-| out_trade_no | string | 商户订单号
-| transaction_id | string | 微信订单号
-| certificate_check_result | string | 身份核验结果
+| appid {data-required}| string | 机构APPID
+| mchid {data-required}| string | 商户号
+| out_trade_no {data-required}| string | 商户订单号
+| transaction_id {data-required}| string | 微信订单号
+| certificate_check_result {data-required}| string | 身份核验结果
 
 {.im-table #response}
 

@@ -9,15 +9,15 @@ description: 商户可以通过该接口拉取用户在微信支付交易记录�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-indent=1} | string | 签名类型
-| begin_time {data-indent=1} | string | 开始时间
-| end_time {data-indent=1} | string | 结束时间
-| offset {data-indent=1} | number | 位移
+| begin_time {data-required data-indent=1} | string | 开始时间
+| end_time {data-required data-indent=1} | string | 结束时间
+| offset {data-required data-indent=1} | number | 位移
 | limit {data-indent=1} | number | 条数
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -132,10 +132,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| result_code | string | 业务结果
-| err_code | string | 错误代码
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| result_code {data-required}| string | 业务结果
+| err_code {data-required}| string | 错误代码
 | err_code_des | string | 错误代码描述
 
 {.im-table #response}

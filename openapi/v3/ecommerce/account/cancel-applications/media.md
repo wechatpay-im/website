@@ -1,5 +1,5 @@
 ---
-title: 图片上传
+title: 注销申请图片上传
 description: 电商平台服务商调用注销申请接口时，需要先调用本接口上传相关的资料图片，获取图片ID后，再填写到注销申请请求中。
 ---
 
@@ -9,12 +9,12 @@ description: 电商平台服务商调用注销申请接口时，需要先调用�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | `multipart/form-data` 数据结构
-| file {data-indent=1} | object | 媒体图⽚只⽀持JPG、BMP、PNG格式，⽂件⼤⼩不能超过2M。
-| meta {data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`file_digest`、`file_name`
+| body {data-required} | object | `multipart/form-data` 数据结构
+| file {data-required data-indent=1} | object | 媒体图⽚只⽀持JPG、BMP、PNG格式，⽂件⼤⼩不能超过2M。
+| meta {data-required data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`file_digest`、`file_name`
 | {colspan=3 .im-table-line}
-| file_digest {data-indent=2} | string | 图片文件的`sha256`摘要
-| file_name {data-indent=2} | string | 商户上传的媒体图片的名称，商户自定义，必须以JPG、BMP、PNG为后缀
+| file_digest {data-required data-indent=2} | string | 图片文件的`sha256`摘要
+| file_name {data-required data-indent=2} | string | 商户上传的媒体图片的名称，商户自定义，必须以JPG、BMP、PNG为后缀
 
 {.im-table #request}
 
@@ -129,7 +129,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| media_id | string | 媒体文件标识Id
+| media_id {data-required} | string | 媒体文件标识Id
 
 {.im-table #response}
 

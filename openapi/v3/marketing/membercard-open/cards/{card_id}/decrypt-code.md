@@ -9,9 +9,9 @@ description: 如果商家选择跳转激活的投放方式，用户点击开卡�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id | string | 会员卡id
-| query | object | 声明请求的查询参数
-| encrypt_code {data-indent=1} | string | 加密code
+| card_id {data-required} | string | 会员卡id
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| encrypt_code {data-required data-indent=1} | string | 加密code
 
 {.im-table #request}
 
@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code | string | 会员卡code
+| code {data-required}| string | 会员卡code
 
 {.im-table #response}
 

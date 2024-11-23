@@ -9,12 +9,12 @@ description: 签到签退数据主要用于控制微信支付凭证是否包含�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| plate_number {data-indent=1} | string | 车牌号
-| driver_license {data-indent=1} | string | 营运资格证号
-| event_time {data-indent=1} | string | 事件发生时间
-| event_type {data-indent=1} | string | 事件类型
-| region_id {data-indent=1} | integer | 行政区划ID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| plate_number {data-required data-indent=1} | string | 车牌号
+| driver_license {data-required data-indent=1} | string | 营运资格证号
+| event_time {data-required data-indent=1} | string | 事件发生时间
+| event_type {data-required data-indent=1} | string | 事件类型
+| region_id {data-required data-indent=1} | integer | 行政区划ID
 
 {.im-table #request}
 

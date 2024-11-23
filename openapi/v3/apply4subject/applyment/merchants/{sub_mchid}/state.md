@@ -9,7 +9,7 @@ description: 当服务商需要确认微信支付子商户号是否完成确认�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户号
+| sub_mchid {data-required} | string | 特约商户号
 
 {.im-table #request}
 
@@ -70,6 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| authorize_state {data-required}| string | 授权状态<br/>`AUTHORIZE_STATE_UNAUTHORIZED` \| `AUTHORIZE_STATE_AUTHORIZED` 枚举值之一
 
 {.im-table #response}
 

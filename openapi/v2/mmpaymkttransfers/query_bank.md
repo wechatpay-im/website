@@ -9,10 +9,10 @@ description: 用于对商户企业付款到银行卡操作进行结果查询，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 商户号
-| partner_trade_no {data-indent=1} | string | 商户企业付款单号
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string | 商户号
+| partner_trade_no {data-required data-indent=1} | string | 商户企业付款单号
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -97,20 +97,20 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| mch_id | string | 商户号
-| partner_trade_no | string | 商户企业付款单号
-| payment_no | string | 微信企业付款单号
-| bank_no_md5 | string | 银行卡号
-| true_name_md5 | string | 用户真实姓名
-| amount | integer | 代付金额
-| status | string | 代付单状态
-| cmms_amt | integer | 手续费金额
-| create_time | string | 商户下单时间
+| mch_id {data-required}| string | 商户号
+| partner_trade_no {data-required}| string | 商户企业付款单号
+| payment_no {data-required}| string | 微信企业付款单号
+| bank_no_md5 {data-required}| string | 银行卡号
+| true_name_md5 {data-required}| string | 用户真实姓名
+| amount {data-required}| integer | 代付金额
+| status {data-required}| string | 代付单状态
+| cmms_amt {data-required}| integer | 手续费金额
+| create_time {data-required}| string | 商户下单时间
 | pay_succ_time | string | 成功付款时间
 | reason | string | 失败原因
 

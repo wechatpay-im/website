@@ -9,9 +9,9 @@ description: 商户可通过调用此接口，反馈投诉单已处理完成。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| complaint_id | string | 投诉单号
-| json | object | 声明请求的`JSON`数据结构
-| complainted_mchid {data-indent=1} | string | 被诉商户号
+| complaint_id {data-required} | string | 投诉单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| complainted_mchid {data-required data-indent=1} | string | 被诉商户号
 
 {.im-table #request}
 

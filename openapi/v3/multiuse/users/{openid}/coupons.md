@@ -9,16 +9,16 @@ description: 商户平台/API完成制券/消费金后，可使用发放代金�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户OpenID
-| json | object | 声明请求的`JSON`数据结构
-| stock_id {data-indent=1} | string | 批次号
-| out_request_no {data-indent=1} | string | 商户单据号
-| user_name {data-indent=1} | string | 用户姓名
-| id_card_number {data-indent=1} | string | 身份证号码
+| openid {data-required} | string | 用户OpenID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| stock_id {data-required data-indent=1} | string | 批次号
+| out_request_no {data-required data-indent=1} | string | 商户单据号
+| user_name {data-required data-indent=1} | string | 用户姓名
+| id_card_number {data-required data-indent=1} | string | 身份证号码
 | amount {data-indent=1} | number | 发放面额
-| appid {data-indent=1} | string | 公众账号ID
-| card_type {data-indent=1} | string | 证件类型
-| headers | object | 声明请求的头参数
+| appid {data-required data-indent=1} | string | 公众账号ID
+| card_type {data-required data-indent=1} | string | 证件类型
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -152,7 +152,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| coupon_id | string | 消费金ID
+| coupon_id {data-required}| string | 消费金ID
 
 {.im-table #response}
 

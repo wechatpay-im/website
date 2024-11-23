@@ -1,5 +1,5 @@
 ---
-title: 校园轻松付扣费支付成功通知(JSON)
+title: 校园轻松付扣费支付成功(TRANSACTION.INDUSTRY_SUCCESS)通知(JSON)
 description: 扣费成功后，微信会把相关支付结果信息异步通知给商户。
 ---
 
@@ -16,50 +16,50 @@ description: 扣费成功后，微信会把相关支付结果信息异步通知�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`TRANSACTION.INDUSTRY_SUCCESS` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`TRANSACTION.INDUSTRY_SUCCESS` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| mchid {data-indent=3} | string | 微信支付分配的商户号。如果是服务商模式接入则为服务商商户号；如果是直连商户模式接入则为直连商户号。
-| appid {data-indent=3} | string | 微信公众平台为服务商商户分配的公众账号ID，与商户号存在绑定关系。 如果是服务商模式接入则为服务商商户号绑定的AppID；如果是直连商户模式接入则为直连商户号绑定的AppID。
+| mchid {data-required data-indent=3} | string | 微信支付分配的商户号。如果是服务商模式接入则为服务商商户号；如果是直连商户模式接入则为直连商户号。
+| appid {data-required data-indent=3} | string | 微信公众平台为服务商商户分配的公众账号ID，与商户号存在绑定关系。 如果是服务商模式接入则为服务商商户号绑定的AppID；如果是直连商户模式接入则为直连商户号绑定的AppID。
 | sub_mchid {data-indent=3} | string | 微信支付分配的商户号，服务商商户号与子商户号存在父子关系。如果是服务商模式接入则有值；如果是直连商户模式接入则该字段为空。
 | sub_appid {data-indent=3} | string | 微信公众平台为商户分配的公众账号ID，与子商户号存在绑定关系。如果是服务商模式接入则有值；如果是直连商户模式接入则该字段为空。
-| out_trade_no {data-indent=3} | string | 商户自行生成的订单号，要求64个字符内，只能是数字、大小写字母和_-，且在同一个商户号下唯一。
+| out_trade_no {data-required data-indent=3} | string | 商户自行生成的订单号，要求64个字符内，只能是数字、大小写字母和_-，且在同一个商户号下唯一。
 | transaction_id {data-indent=3} | string | 微信支付订单号，订单已受理，但未完成扣款时不返回。
 | trade_type {data-indent=3} | string | 交易类型，订单已受理，但未完成扣款时不返回，取值如下：<br/>AUTH：平台代扣
-| trade_state {data-indent=3} | string | 本支付订单的状态<br/>`SUCCESS` \| `REFUND` \| `ACCEPTED` \| `PAY_FAIL` \| `PAY_BACK` 枚举值之一
+| trade_state {data-required data-indent=3} | string | 本支付订单的状态<br/>`SUCCESS` \| `REFUND` \| `ACCEPTED` \| `PAY_FAIL` \| `PAY_BACK` 枚举值之一
 | trade_state_desc {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引。
 | bank_type {data-indent=3} | string | 银行类型，扣款成功时返回，采用字符串类型的银行标识。<br/>注：使用`BPA`表示本笔订单由微信支付预先垫付资金。
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
 | success_time {data-indent=3} | string | 支付订单已成功才会返回
 | payer {data-indent=3} | object | 支付者
-| openid {data-indent=4} | string | 用户在商户AppID下的唯一标识。
+| openid {data-required data-indent=4} | string | 用户在商户AppID下的唯一标识。
 | sub_openid {data-indent=4} | string | 用户在子商户AppID下的唯一标识。如果是服务商模式接入则有值；如果是直连商户模式接入则该字段为空。
-| amount {data-indent=3} | object | 订单金额信息
-| total {data-indent=4} | number | 订单总金额，单位为分，只能为整数。
+| amount {data-required data-indent=3} | object | 订单金额信息
+| total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数。
 | payer_total {data-indent=4} | number | 用户实际支付金额，支付成功时有返回，单位为分，只能为整数。
 | discount_total {data-indent=4} | number | 订单折扣，有优惠折扣则返回该字段。
 | currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
 | device_info {data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号，商户自定义，最大长度32个字符。
-| device_ip {data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP），支持IPv6
+| device_ip {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP），支持IPv6
 | promotion_detail {data-indent=3} | object[] | 优惠详情
 | coupon_id {data-indent=4} | string | 券ID。
 | name {data-indent=4} | string | 优惠名称。

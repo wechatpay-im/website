@@ -9,9 +9,9 @@ description: 商户调用「预约扣费」接口，因系统原因未能明确�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id | string | 委托代扣协议ID
-| query | object | 声明请求的查询参数
-| sub_mchid {data-indent=1} | string | 子商户号商户号
+| contract_id {data-required} | string | 委托代扣协议ID
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 子商户号商户号
 
 {.im-table #request}
 
@@ -90,14 +90,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| schedule_state | string | 扣费预约的状态
+| schedule_state {data-required}| string | 扣费预约的状态
 | deduct_start_date | string | 可扣费开始日期
 | deduct_end_date | string | 可扣费结束日期
-| scheduled_amount | object | 已预约的扣费金额信息
-| total {data-indent=1} | number | 金额
+| scheduled_amount | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息
+| total {data-required data-indent=1} | number | 金额
 | currency {data-indent=1} | string | 货币类型
-| deduct_amount | object | 实际扣费金额
-| total {data-indent=1} | number | 金额
+| deduct_amount | object {data-tooltip="对应PHP的array"} | 实际扣费金额
+| total {data-required data-indent=1} | number | 金额
 | currency {data-indent=1} | string | 货币类型
 | deduct_date | string | 实际扣费的日期
 

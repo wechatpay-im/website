@@ -9,7 +9,7 @@ description: 商户查询商家券营销补差回退单详情
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| subsidy_return_receipt_id | string | 补差回退单号
+| subsidy_return_receipt_id {data-required} | string | 补差回退单号
 
 {.im-table #request}
 
@@ -71,19 +71,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | subsidy_return_receipt_id | string | 补差回退单号
-| stock_id | string | 商家券批次号
-| coupon_code | string | 商家券Code
-| transaction_id | string | 微信支付订单号
-| refund_id | string | 微信支付退款单号
-| payer_merchant | string | 原营销补差扣款商户号
-| payee_merchant | string | 原营销补差入账商户号
-| amount | integer | 补差回退金额
-| description | string | 补差回退描述
-| status | string | 补差回退单据状态
+| stock_id {data-required}| string | 商家券批次号
+| coupon_code {data-required}| string | 商家券Code
+| transaction_id {data-required}| string | 微信支付订单号
+| refund_id {data-required}| string | 微信支付退款单号
+| payer_merchant {data-required}| string | 原营销补差扣款商户号
+| payee_merchant {data-required}| string | 原营销补差入账商户号
+| amount {data-required}| integer | 补差回退金额
+| description {data-required}| string | 补差回退描述
+| status {data-required}| string | 补差回退单据状态
 | fail_reason | string | 补差回退失败原因
 | return_done_time | string | 补差回退完成时间
-| subsidy_receipt_id | string | 补差付款单号
-| out_subsidy_return_no | string | 业务请求唯一单号
+| subsidy_receipt_id {data-required}| string | 补差付款单号
+| out_subsidy_return_no {data-required}| string | 业务请求唯一单号
 | return_create_time | string | 补差回退发起时间
 
 {.im-table #response}

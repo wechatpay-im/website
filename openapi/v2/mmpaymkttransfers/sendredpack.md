@@ -9,21 +9,21 @@ description: 现金红包发放后会以公众号消息的形式触达用户，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_billno {data-indent=1} | string | 商户订单号
-| mch_id {data-indent=1} | string | 商户号
-| wxappid {data-indent=1} | string | 公众账号appid
-| send_name {data-indent=1} | string | 商户名称
-| re_openid {data-indent=1} | string | 用户openid
-| total_amount {data-indent=1} | integer | 付款金额
-| total_num {data-indent=1} | integer | 红包发放总人数
-| wishing {data-indent=1} | string | 红包祝福语
-| client_ip {data-indent=1} | string | Ip地址
-| act_name {data-indent=1} | string | 活动名称
-| remark {data-indent=1} | string | 备注
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_billno {data-required data-indent=1} | string | 商户订单号
+| mch_id {data-required data-indent=1} | string | 商户号
+| wxappid {data-required data-indent=1} | string | 公众账号appid
+| send_name {data-required data-indent=1} | string | 商户名称
+| re_openid {data-required data-indent=1} | string | 用户openid
+| total_amount {data-required data-indent=1} | integer | 付款金额
+| total_num {data-required data-indent=1} | integer | 红包发放总人数
+| wishing {data-required data-indent=1} | string | 红包祝福语
+| client_ip {data-required data-indent=1} | string | Ip地址
+| act_name {data-required data-indent=1} | string | 活动名称
+| remark {data-required data-indent=1} | string | 备注
 | scene_id {data-indent=1} | string | 场景id
 | risk_info {data-indent=1} | string | 活动信息
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -174,17 +174,17 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| mch_billno | string | 商户订单号
-| mch_id | string | 商户号
-| wxappid | string | 公众账号appid
-| re_openid | string | 用户openid
-| total_amount | integer | 付款金额
-| send_listid | string | 微信单号
+| mch_billno {data-required}| string | 商户订单号
+| mch_id {data-required}| string | 商户号
+| wxappid {data-required}| string | 公众账号appid
+| re_openid {data-required}| string | 用户openid
+| total_amount {data-required}| integer | 付款金额
+| send_listid {data-required}| string | 微信单号
 
 {.im-table #response}
 

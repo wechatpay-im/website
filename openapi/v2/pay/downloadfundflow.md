@@ -9,14 +9,14 @@ description: 商户可以通过该接口下载自2017年6月1日起 的历史资
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| bill_date {data-indent=1} | string | 资金账单日期
-| account_type {data-indent=1} | string | 资金账户类型
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>固定枚举值`HMAC-SHA256`
+| bill_date {data-required data-indent=1} | string | 资金账单日期
+| account_type {data-required data-indent=1} | string | 资金账户类型
 | tar_type {data-indent=1} | string | 压缩账单
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 

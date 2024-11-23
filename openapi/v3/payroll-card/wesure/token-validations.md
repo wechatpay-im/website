@@ -9,14 +9,14 @@ description: 校验按商户拉起核身时预下单的token值对应的微工�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| sp_mchid {data-indent=1} | string | 服务商商户号
-| sub_mchid {data-indent=1} | string | 特约商户商户号
-| token {data-indent=1} | string | token值
-| user_name {data-indent=1} | string | 用户姓名
-| id_card_number {data-indent=1} | string | 用户身份证号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_mchid {data-required data-indent=1} | string | 服务商商户号
+| sub_mchid {data-required data-indent=1} | string | 特约商户商户号
+| token {data-required data-indent=1} | string | token值
+| user_name {data-required data-indent=1} | string | 用户姓名
+| id_card_number {data-required data-indent=1} | string | 用户身份证号
 | authenticate_type {data-indent=1} | string | 核身类型<br/>`NORMAL` \| `SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -138,7 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| result | string | 校验结果
+| result {data-required}| string | 校验结果
 | authenticate_success_time | string | 核身成功时间
 | openid | string | 用户标识
 | fail_reason | string | 校验不通过原因

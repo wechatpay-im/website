@@ -9,7 +9,7 @@ description: 接口介绍：该接口为电子小票自定义入口创建接口�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | custom_entrance_type {data-indent=1} | string | 自定义入口种类<br/>`MERCHANT_ACTIVITY` \| `MERCHANT_MINI_PROGRAM` 枚举值之一
 | subtitle {data-indent=1} | string | 副标题，辅助描述商家活动或商家小程序信息
 | goods_thumbnail_url {data-indent=1} | string | 展示商品信息，当自定义入口种类为商家活动时，该字段必填，种类为商家小程序该字段不填
@@ -18,7 +18,7 @@ description: 接口介绍：该接口为电子小票自定义入口创建接口�
 | custom_entrance_state {data-indent=1} | string | 设置自定义入口的状态，ONLINE-在线对用户展示，OFFLINE-下线对用户不展示 可选取值
 | brand_id {data-indent=1} | string | 自定义入口的归属品牌ID
 | out_request_no {data-indent=1} | string | 商户创建自定义入口的凭据号（格式：商户ID+日期+流水号），商家侧需要保持唯一且递增
-| jump_link {data-indent=1} | object | 自定义入口跳转信息
+| jump_link {data-indent=1} | object {data-tooltip="对应PHP的array"} | 自定义入口跳转信息
 | mini_programs_appid {data-indent=2} | string | 自定义入口的跳转小程序AppID
 | mini_programs_path {data-indent=2} | string | 自定义入口跳转小程序的path
 
@@ -169,7 +169,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | create_time | string | 自定义入口创建的时间
 | modify_time | string | 自定义入口修改的时间
 | out_request_no | string | 商户创建自定义入口的凭据号（格式：商户ID+日期+流水号），商家侧需要保持唯一且递增
-| jump_link | object | 自定义入口跳转信息
+| jump_link | object {data-tooltip="对应PHP的array"} | 自定义入口跳转信息
 | mini_programs_appid {data-indent=1} | string | 自定义入口的跳转小程序AppID
 | mini_programs_path {data-indent=1} | string | 自定义入口跳转小程序的path
 

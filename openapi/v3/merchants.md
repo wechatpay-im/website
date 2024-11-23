@@ -4,27 +4,27 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
-| json | object | 声明请求的`JSON`数据结构
-| sp_appid {data-indent=1} | string | 机构appid
-| sp_mchid {data-indent=1} | string | 机构商户号
-| name {data-indent=1} | string | 子商户全称
-| shortname {data-indent=1} | string | 子商户简称
-| office_phone {data-indent=1} | string | 公司电话
-| contact {data-indent=1} | object | 联系人信息
-| name {data-indent=2} | string | 联系人名称
-| phone {data-indent=2} | string | 联系人电话
-| email {data-indent=2} | string | 联系人邮箱
-| business_category {data-indent=1} | integer | 类目
+| base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_appid {data-required data-indent=1} | string | 机构appid
+| sp_mchid {data-required data-indent=1} | string | 机构商户号
+| name {data-required data-indent=1} | string | 子商户全称
+| shortname {data-required data-indent=1} | string | 子商户简称
+| office_phone {data-required data-indent=1} | string | 公司电话
+| contact {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 联系人信息
+| name {data-required data-indent=2} | string | 联系人名称
+| phone {data-required data-indent=2} | string | 联系人电话
+| email {data-required data-indent=2} | string | 联系人邮箱
+| business_category {data-required data-indent=1} | integer | 类目
 | channel_id {data-indent=1} | string | 渠道号
-| merchant_country_code {data-indent=1} | string | 注册国家或区域
-| merchant_type {data-indent=1} | string | 商户类型
+| merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
+| merchant_type {data-required data-indent=1} | string | 商户类型
 | registration_certificate_number {data-indent=1} | string | 公司注册文件编号
 | registration_certificate_date {data-indent=1} | string | 公司注册文件过期时间
 | registration_certificate_copy {data-indent=1} | string | 公司注册文件照片
 | settlement_bank_number {data-indent=1} | string | 子商户银行结算账户信息
-| business {data-indent=1} | object | 业务信息
-| business_type {data-indent=2} | string | 业务类型
+| business {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 业务信息
+| business_type {data-required data-indent=2} | string | 业务类型
 | app_download {data-indent=2} | string | APP下载链接
 | website {data-indent=2} | string | 业务网站
 | office_account {data-indent=2} | string | 公众号
@@ -32,13 +32,13 @@
 | store_address {data-indent=2} | string | 门店地址
 | store_photos {data-indent=2} | string | 门店照片
 | mcc {data-indent=2} | string | MCC码
-| director {data-indent=1} | object | 董事信息
+| director {data-indent=1} | object {data-tooltip="对应PHP的array"} | 董事信息
 | name {data-indent=2} | string | 董事姓名
 | number {data-indent=2} | string | 董事证件号
-| principal {data-indent=1} | object | 负责人信息
+| principal {data-indent=1} | object {data-tooltip="对应PHP的array"} | 负责人信息
 | name {data-indent=2} | string | 负责人姓名
 | number {data-indent=2} | string | 负责人证件号
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 由商户侧生成的唯一key，用来标识多次重试是否为同一请求
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
@@ -353,7 +353,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
+| sub_mchid {data-required}| string | 子商户号
 | verification_status | string | 验证状态
 | description | string | 验证状态描述
 
@@ -367,28 +367,28 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
-| json | object | 声明请求的`JSON`数据结构
-| sp_appid {data-indent=1} | string | 机构appid
-| sp_mchid {data-indent=1} | string | 机构商户号
-| sub_mchid {data-indent=1} | string | 子商户号
-| name {data-indent=1} | string | 子商户全称
-| shortname {data-indent=1} | string | 子商户简称
-| office_phone {data-indent=1} | string | 公司电话
-| contact {data-indent=1} | object | 联系人信息
-| name {data-indent=2} | string | 联系人名称
-| phone {data-indent=2} | string | 联系人电话
-| email {data-indent=2} | string | 联系人邮箱
-| business_category {data-indent=1} | integer | 类目
+| base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| sp_appid {data-required data-indent=1} | string | 机构appid
+| sp_mchid {data-required data-indent=1} | string | 机构商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| name {data-required data-indent=1} | string | 子商户全称
+| shortname {data-required data-indent=1} | string | 子商户简称
+| office_phone {data-required data-indent=1} | string | 公司电话
+| contact {data-indent=1} | object {data-tooltip="对应PHP的array"} | 联系人信息
+| name {data-required data-indent=2} | string | 联系人名称
+| phone {data-required data-indent=2} | string | 联系人电话
+| email {data-required data-indent=2} | string | 联系人邮箱
+| business_category {data-required data-indent=1} | integer | 类目
 | channel_id {data-indent=1} | string | 渠道号
-| merchant_country_code {data-indent=1} | string | 注册国家或区域
-| merchant_type {data-indent=1} | string | 商户类型
+| merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
+| merchant_type {data-required data-indent=1} | string | 商户类型
 | registration_certificate_number {data-indent=1} | string | 公司注册文件编号
 | registration_certificate_date {data-indent=1} | string | 公司注册文件过期时间
 | registration_certificate_copy {data-indent=1} | string | 公司注册文件照片
 | settlement_bank_number {data-indent=1} | string | 子商户银行结算账户信息
-| business {data-indent=1} | object | 业务信息
-| business_type {data-indent=2} | string | 业务类型
+| business {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 业务信息
+| business_type {data-required data-indent=2} | string | 业务类型
 | app_download {data-indent=2} | string | APP下载链接
 | website {data-indent=2} | string | 业务网站
 | office_account {data-indent=2} | string | 公众号
@@ -396,13 +396,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | store_address {data-indent=2} | string | 门店地址
 | store_photos {data-indent=2} | string | 门店照片
 | mcc {data-indent=2} | string | MCC码
-| director {data-indent=1} | object | 董事信息
+| director {data-indent=1} | object {data-tooltip="对应PHP的array"} | 董事信息
 | name {data-indent=2} | string | 董事姓名
 | number {data-indent=2} | string | 董事证件号
-| principal {data-indent=1} | object | 负责人信息
+| principal {data-indent=1} | object {data-tooltip="对应PHP的array"} | 负责人信息
 | name {data-indent=2} | string | 负责人姓名
 | number {data-indent=2} | string | 负责人证件号
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -716,7 +716,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 子商户号
+| sub_mchid {data-required}| string | 子商户号
 
 {.im-table #response}
 

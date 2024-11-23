@@ -9,7 +9,7 @@ description: 当申请单状态为编辑中/审核中/已驳回时，才支持�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| apply_id | string | 微信支付申请单号
+| apply_id {data-required} | string | 微信支付申请单号
 
 {.im-table #request}
 
@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| result | string | 撤销状态
+| result {data-required}| string | 撤销状态
 
 {.im-table #response}
 

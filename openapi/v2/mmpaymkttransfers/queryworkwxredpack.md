@@ -9,11 +9,11 @@ description: 查询红包记录API只支持查询30天内的红包订单，30天
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| mch_billno {data-indent=1} | string | 商户订单号
-| mch_id {data-indent=1} | string | 商户号
-| appid {data-indent=1} | string | Appid
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_billno {data-required data-indent=1} | string | 商户订单号
+| mch_id {data-required data-indent=1} | string | 商户号
+| appid {data-required data-indent=1} | string | Appid
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -104,28 +104,28 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
 | sign | string | 微信支付签名
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| mch_billno | string | 商户订单号
-| mch_id | string | 商户号
-| detail_id | string | 红包单号
-| status | string | 红包状态
-| send_type | string | 发放类型
-| total_amount | integer | 红包金额
+| mch_billno {data-required}| string | 商户订单号
+| mch_id {data-required}| string | 商户号
+| detail_id {data-required}| string | 红包单号
+| status {data-required}| string | 红包状态
+| send_type {data-required}| string | 发放类型
+| total_amount {data-required}| integer | 红包金额
 | reason | string | 失败原因
-| send_time | string | 红包发送时间
+| send_time {data-required}| string | 红包发送时间
 | refund_time | string | 红包退款时间
 | refund_amount | integer | 红包退款金额
 | wishing | string | 祝福语
 | remark | string | 活动描述
 | act_name | string | 活动名称
-| openid | string | 领取红包的Openid
-| amount | integer | 金额
-| rcv_time | string | 接收时间
+| openid {data-required}| string | 领取红包的Openid
+| amount {data-required}| integer | 金额
+| rcv_time {data-required}| string | 接收时间
 | sender_name | string | 发送者名称
 | sender_header_media_id | string | 发送者头像
 

@@ -1,5 +1,5 @@
 ---
-title: 支付成功通知(JSON)
+title: 支付成功(TRANSACTION.SUCCESS)通知(JSON)
 description: 微信支付通过支付通知接口将用户支付成功消息通知给商户
 ---
 
@@ -16,61 +16,61 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`TRANSACTION.SUCCESS` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`TRANSACTION.SUCCESS` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型<br/>`transaction` \| `profitsharing` 枚举值之一
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| sp_mchid {data-indent=3} | string | 调用接口提交的商户号
-| sub_mchid {data-indent=3} | string | 调用接口提交的子商户号
-| transaction_id {data-indent=3} | string | 微信支付系统生成的订单号
-| order_id {data-indent=3} | string | 微信分账/回退单号
-| out_order_no {data-indent=3} | string | 分账方系统内部的分账/回退单号
-| receiver {data-indent=3} | object | 分账接收方对象
-| type {data-indent=4} | string | 分账接收方的类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
-| account {data-indent=4} | string | 分账接收方的账号<br/>类型是`MERCHANT_ID`时，是商户号<br/>类型是`PERSONAL_OPENID`时，是个人OpenID
-| amount {data-indent=4} | number | 分账动账金额，单位为分，只能为整数
-| description {data-indent=4} | string | 分账/回退描述
-| success_time {data-indent=3} | string | 订单支付完成时间
-| appid {data-indent=3} | string | 调用接口提交的应用ID
-| out_trade_no {data-indent=3} | string | 调用接口提交的商户服务订单号
-| description {data-indent=3} | string | 商户自定义字段，用户交易账单中对扣费服务的描述。
-| create_time {data-indent=3} | string | 订单成功创建时返回
-| trade_state {data-indent=3} | string | 交易状态：<br/>`SUCCESS`：支付成功<br/>`ACCEPT`：已接收，等待扣款<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)<br/>`REFUND`：转入退款
+| sp_mchid {data-required data-indent=3} | string | 调用接口提交的商户号
+| sub_mchid {data-required data-indent=3} | string | 调用接口提交的子商户号
+| transaction_id {data-required data-indent=3} | string | 微信支付系统生成的订单号
+| order_id {data-required data-indent=3} | string | 微信分账/回退单号
+| out_order_no {data-required data-indent=3} | string | 分账方系统内部的分账/回退单号
+| receiver {data-required data-indent=3} | object | 分账接收方对象
+| type {data-required data-indent=4} | string | 分账接收方的类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
+| account {data-required data-indent=4} | string | 分账接收方的账号<br/>类型是`MERCHANT_ID`时，是商户号<br/>类型是`PERSONAL_OPENID`时，是个人`OpenID`
+| amount {data-required data-indent=4} | number | 分账动账金额，单位为分，只能为整数
+| description {data-required data-indent=4} | string | 分账/回退描述
+| success_time {data-required data-indent=3} | string | 订单支付完成时间
+| appid {data-required data-indent=3} | string | 调用接口提交的应用ID
+| out_trade_no {data-required data-indent=3} | string | 调用接口提交的商户服务订单号
+| description {data-required data-indent=3} | string | 商户自定义字段，用户交易账单中对扣费服务的描述。
+| create_time {data-required data-indent=3} | string | 订单成功创建时返回
+| trade_state {data-required data-indent=3} | string | 交易状态：<br/>`SUCCESS`：支付成功 <br/>`ACCEPT`：已接收，等待扣款 <br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败) <br/>`REFUND`：转入退款
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引。
 | bank_type {data-indent=3} | string | 银行类型，采用字符串类型的银行标识。
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，可作为自定义参数使用，实际情况下只有支付完成状态才会返回该字段。
-| user_repaid {data-indent=3} | string | 枚举值：<br/>`Y`：用户已还款<br/>`N`：用户未还款<br/>注意：使用此字段前需先确认bank_type字段值为`BPA`以及 trade_state字段值为`SUCCESS`。
-| trade_scene {data-indent=3} | string | 交易场景值，`PARKING`：车场停车场景
+| user_repaid {data-indent=3} | string | 枚举值：<br/>`Y`：用户已还款<br/>`N`：用户未还款<br/>注意：使用此字段前需先确认`bank_type`字段值为BPA以及 `trade_state`字段值为`SUCCESS`。
+| trade_scene {data-required data-indent=3} | string | 交易场景值，目前支持`PARKING`：车场停车场景
 | parking_info {data-indent=3} | object | trade_scene为`PARKING`时，返回停车场景信息
-| parking_id {data-indent=4} | string | 车主服务为商户分配的入场ID，商户通过入场通知接口获取入场ID
-| plate_number {data-indent=4} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
-| plate_color {data-indent=4} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
-| start_time {data-indent=4} | string | 用户入场时间
-| end_time {data-indent=4} | string | 用户出场时间
-| parking_name {data-indent=4} | string | 所在停车位车场的名称
-| charging_duration {data-indent=4} | number | 计费的时间长，单位为秒
-| device_id {data-indent=4} | string | 停车场设备ID
+| parking_id {data-required data-indent=4} | string | 车主服务为商户分配的入场ID，商户通过入场通知接口获取入场ID
+| plate_number {data-required data-indent=4} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
+| plate_color {data-required data-indent=4} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| start_time {data-required data-indent=4} | string | 用户入场时间
+| end_time {data-required data-indent=4} | string | 用户出场时间
+| parking_name {data-required data-indent=4} | string | 所在停车位车场的名称
+| charging_duration {data-required data-indent=4} | number | 计费的时间长，单位为秒
+| device_id {data-required data-indent=4} | string | 停车场设备ID
 | payer {data-indent=3} | object | 支付者信息，详细说明见下文
-| openid {data-indent=4} | string | 用户在服务商的标识
+| openid {data-required data-indent=4} | string | 用户在服务商的标识
 | sub_openid {data-indent=4} | string | 用户在子商户的标识
-| amount {data-indent=3} | object | 订单金额信息，详细说明见下文
+| amount {data-required data-indent=3} | object | 订单金额信息，详细说明见下文
 | currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
 | payer_total {data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
 | payer_currency {data-indent=4} | string | 用户支付币种
@@ -78,13 +78,13 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 | type {data-indent=5} | string | 汇率类型
 | rate {data-indent=5} | integer | 汇率值
 | promotion_detail {data-indent=3} | object[] | 优惠功能信息，详细说明见下文
-| coupon_id {data-indent=4} | string | 券或者立减优惠ID
+| coupon_id {data-required data-indent=4} | string | 券或者立减优惠ID
 | name {data-indent=4} | string | 优惠名称。
 | scope {data-indent=4} | string | 枚举值<br/>`GLOBAL`：全场代金券<br/>`SINGLE`：单品优惠
 | type {data-indent=4} | string | 枚举值：<br/>`CASH`：充值型代金券<br/>`NOCASH`：免充值型代金券
 | activity_id {data-indent=4} | string | 在微信商户后台配置的批次ID。
 | currency {data-indent=4} | string | `CNY`：人民币，境内商户号仅支持人民币。
-| sub_appid {data-indent=3} | string | 调用接口提交的子商户应用ID
+| sub_appid {data-required data-indent=3} | string | 调用接口提交的子商户应用ID
 
 {.im-table #request}
 

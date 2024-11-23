@@ -9,9 +9,9 @@ description: 使用业务单号查询申请单状态
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_request_no | string | 业务申请编号
-| json | object | 声明请求的`JSON`数据结构
-| merchant_code {data-indent=1} | string | 微信支付商户号
+| out_request_no {data-required} | string | 业务申请编号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| merchant_code {data-required data-indent=1} | string | 微信支付商户号
 
 {.im-table #request}
 
@@ -90,12 +90,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| merchant_code | string | 微信支付商户号
-| apply_id | string | 申请单号
-| out_request_no | string | 业务申请编号
-| state | string | 申请单状态
+| merchant_code {data-required}| string | 微信支付商户号
+| apply_id {data-required}| string | 申请单号
+| out_request_no {data-required}| string | 业务申请编号
+| state {data-required}| string | 申请单状态
 | audit_reject_reason | string | 总体驳回原因
-| audit_reject_detail | object[] | 驳回原因详情
+| audit_reject_detail | object[] {data-tooltip="对应PHP的array"} | 驳回原因详情
 | param_name {data-indent=1} | string | 参数名称
 | reject_reason {data-indent=1} | string | 驳回原因
 

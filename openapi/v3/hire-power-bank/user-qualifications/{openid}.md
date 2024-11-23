@@ -9,7 +9,7 @@ description: 商户通过该接口查询用户保险订单领取资格。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 微信用户在商户对应appid下的唯一标识。
+| openid {data-required} | string | 微信用户在商户对应appid下的唯一标识。
 
 {.im-table #request}
 

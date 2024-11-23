@@ -9,10 +9,10 @@ description: 电商平台发起删除分账接收方请求。删除后，不支�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| type {data-indent=1} | string | 接收方类型
-| account {data-indent=1} | string | 接收方账号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| type {data-required data-indent=1} | string | 接收方类型
+| account {data-required data-indent=1} | string | 接收方账号
 
 {.im-table #request}
 
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type | string | 接收方类型
-| account | string | 接收方账号
+| type {data-required}| string | 接收方类型
+| account {data-required}| string | 接收方账号
 
 {.im-table #response}
 

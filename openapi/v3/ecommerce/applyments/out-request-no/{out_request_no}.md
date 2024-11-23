@@ -9,7 +9,7 @@ description: 电商平台通过查询申请状态API查询二级商户入驻申�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_request_no | string | 业务申请编号
+| out_request_no {data-required} | string | 业务申请编号
 
 {.im-table #request}
 
@@ -70,11 +70,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| applyment_state | string | 申请状态
-| applyment_state_desc | string | 申请状态描述
+| applyment_state {data-required}| string | 申请状态
+| applyment_state_desc {data-required}| string | 申请状态描述
 | sign_url | string | 签约链接
 | sub_mchid | string | 电商平台二级商户号
-| account_validation | object | 汇款账户验证信息
+| account_validation | object {data-tooltip="对应PHP的array"} | 汇款账户验证信息
 | account_name {data-indent=1} | string | 付款户名
 | account_no {data-indent=1} | string | 付款卡号
 | pay_amount {data-indent=1} | number | 汇款金额
@@ -84,12 +84,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | city {data-indent=1} | string | 省市信息
 | remark {data-indent=1} | string | 备注信息
 | deadline {data-indent=1} | string | 汇款截止时间
-| audit_detail | object[] | 驳回原因详情
-| param_name {data-indent=1} | string | 参数名称
-| reject_reason {data-indent=1} | string | 驳回原因
+| audit_detail | object[] {data-tooltip="对应PHP的array"} | 驳回原因详情
+| param_name {data-required data-indent=1} | string | 参数名称
+| reject_reason {data-required data-indent=1} | string | 驳回原因
 | legal_validation_url | string | 法人验证链接
-| out_request_no | string | 业务申请编号
-| applyment_id | number | 微信支付申请单号
+| out_request_no {data-required}| string | 业务申请编号
+| applyment_id {data-required}| number | 微信支付申请单号
 | sign_state | string | 签约状态<br/>`UNSIGNED` \| `SIGNED` \| `NOT_SIGNABLE` 枚举值之一
 
 {.im-table #response}

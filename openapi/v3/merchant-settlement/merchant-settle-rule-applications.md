@@ -9,11 +9,11 @@ description: 从业机构可调用该接口帮助特约商户进行结算规则I
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| acquiring_bank_id {data-indent=1} | string | 从业机构号
-| channel_id {data-indent=1} | string | 渠道商户号
-| sub_mchid {data-indent=1} | string | 从业机构特约商户号
-| settle_rule_id {data-indent=1} | integer | 结算规则id
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| acquiring_bank_id {data-required data-indent=1} | string | 从业机构号
+| channel_id {data-required data-indent=1} | string | 渠道商户号
+| sub_mchid {data-required data-indent=1} | string | 从业机构特约商户号
+| settle_rule_id {data-required data-indent=1} | integer | 结算规则id
 
 {.im-table #request}
 
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id | string | 申请单编号
+| application_id {data-required}| string | 申请单编号
 | application_process_info | string | 申请单处理信息
 | application_state | string | 申请单状态
 | update_time | string | 最后更新时间

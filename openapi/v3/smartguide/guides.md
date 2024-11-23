@@ -4,16 +4,16 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户ID
-| corpid {data-indent=1} | string | 企业ID
-| store_id {data-indent=1} | integer | 门店ID
-| userid {data-indent=1} | string | 企业微信的员工ID
-| name {data-indent=1} | string | 企业微信的员工姓名
-| mobile {data-indent=1} | string | 手机号码
-| qr_code {data-indent=1} | string | 员工个人二维码
-| avatar {data-indent=1} | string | 头像URL
-| headers | object | 声明请求的头参数
+| corpid {data-required data-indent=1} | string | 企业ID
+| store_id {data-required data-indent=1} | integer | 门店ID
+| userid {data-required data-indent=1} | string | 企业微信的员工ID
+| name {data-required data-indent=1} | string | 企业微信的员工姓名
+| mobile {data-required data-indent=1} | string | 手机号码
+| qr_code {data-required data-indent=1} | string | 员工个人二维码
+| avatar {data-required data-indent=1} | string | 头像URL
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -147,7 +147,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| guide_id | string | 服务人员ID
+| guide_id {data-required}| string | 服务人员ID
 
 {.im-table #response}
 
@@ -159,15 +159,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户ID
-| store_id {data-indent=1} | integer | 门店ID
+| store_id {data-required data-indent=1} | integer | 门店ID
 | userid {data-indent=1} | string | 企业微信的员工ID
 | mobile {data-indent=1} | string | 手机号码
 | work_id {data-indent=1} | string | 工号
 | limit {data-indent=1} | integer | 最大资源条数
 | offset {data-indent=1} | integer | 请求资源起始位置
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -298,7 +298,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | total_count | integer | 服务人员数量
 | limit | integer | 最大资源条数
 | offset | integer | 请求资源起始位置
-| data | object[] | 
+| data | object[] {data-tooltip="对应PHP的array"} | 服务人员信息
 | guide_id {data-indent=1} | string | 服务人员ID
 | store_id {data-indent=1} | integer | 门店ID
 | name {data-indent=1} | string | 企业微信的员工姓名

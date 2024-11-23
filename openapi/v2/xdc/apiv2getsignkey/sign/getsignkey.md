@@ -9,8 +9,8 @@ description: 仿真系统与生产环境完全独立，包括存储层。商户�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| xml | array | 声明请求的`XML`数据结构
-| mch_id {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| mch_id {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 商户号
 
 {.im-table #request}
 
@@ -82,12 +82,9 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| return_code | string | 返回状态码 `SUCCESS` \| `FAIL`
+| return_code {data-required} | string | 返回状态码 `SUCCESS` \| `FAIL`
 | return_msg | string | 返回信息
-| result_code | string | 业务结果 `SUCCESS` \| `FAIL`
-| err_code | string | 错误代码
-| err_code_des | string | 错误代码描述
-| mch_id | string | 商户号
+| mch_id {data-required} | string | 商户号
 | sandbox_signkey | string | 沙箱密钥
 
 {.im-table #response}

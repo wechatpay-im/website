@@ -9,13 +9,13 @@ description: 非微信支付场景中，商户需先调用本接口获取抬头�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
-| fapiao_apply_id {data-indent=1} | string | 发票申请单号
-| source {data-indent=1} | string | 开票来源
-| appid {data-indent=1} | string | 商户AppID
-| openid {data-indent=1} | string | 用户OpenID
-| total_amount {data-indent=1} | integer | 总金额
+| fapiao_apply_id {data-required data-indent=1} | string | 发票申请单号
+| source {data-required data-indent=1} | string | 开票来源
+| appid {data-required data-indent=1} | string | 商户AppID
+| openid {data-required data-indent=1} | string | 用户OpenID
+| total_amount {data-required data-indent=1} | integer | 总金额
 | seller_name {data-indent=1} | string | 销售方名称
 | show_phone_cell {data-indent=1} | boolean | 是否需要展示手机号填写栏
 | must_input_phone {data-indent=1} | boolean | 用户是否必须填写手机号

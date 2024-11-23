@@ -9,14 +9,14 @@ description: 通过此API，商圈商户/服务商可将会员的停车状态同
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 商圈商户ID
-| brandid {data-indent=1} | integer | 品牌ID
-| appid {data-indent=1} | string | 应用ID
-| openid {data-indent=1} | string | 用户标识
-| plate_number {data-indent=1} | string | 车牌号
-| state {data-indent=1} | string | 状态
-| time {data-indent=1} | string | 时间
+| brandid {data-required data-indent=1} | integer | 品牌ID
+| appid {data-required data-indent=1} | string | 应用ID
+| openid {data-required data-indent=1} | string | 用户标识
+| plate_number {data-required data-indent=1} | string | 车牌号
+| state {data-required data-indent=1} | string | 状态
+| time {data-required data-indent=1} | string | 时间
 
 {.im-table #request}
 

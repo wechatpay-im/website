@@ -9,16 +9,16 @@ description: 商户通过调用该接口可获取预签约号（“presign_token
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 服务商APPID
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 服务商APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户APPID
-| openid {data-indent=1} | string | 服务商APPID下的用户标识
+| openid {data-required data-indent=1} | string | 服务商APPID下的用户标识
 | sub_openid {data-indent=1} | string | 子商户APPID下的用户标识
-| plan_id {data-indent=1} | string | 签约模板号
-| user_id {data-indent=1} | string | 用户账号
-| period_start_date {data-indent=1} | string | 首次扣款日期
-| trade_scene {data-indent=1} | string | 场景信息枚举
+| plan_id {data-required data-indent=1} | string | 签约模板号
+| user_id {data-required data-indent=1} | string | 用户账号
+| period_start_date {data-required data-indent=1} | string | 首次扣款日期
+| trade_scene {data-required data-indent=1} | string | 场景信息枚举
 
 {.im-table #request}
 
@@ -139,7 +139,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| presign_token | string | 预签约号
+| presign_token {data-required}| string | 预签约号
 
 {.im-table #response}
 

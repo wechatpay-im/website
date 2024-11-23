@@ -2,7 +2,7 @@
 layout: home
 pageClass: im-home
 title: 微信支付社区版
-description: 由微信开放社区驱动的、微信支付官方推荐的全功能PHP SDK，超过770+接口示例代码，数据对称/非对称加解密、签名，XML/JSON数据请求，流式上传文件、下载账单，极小的footpoints带来极致开发体验。
+description: 由微信开放社区驱动的、微信支付官方推荐的全功能PHP SDK，超过770+接口示例代码，对称/非对称数据加解密、签名，XML/JSON数据请求，流式上传文件、下载账单，极小的footpoints带来极致开发体验。
 head:
   - - meta
     - name: keywords
@@ -15,8 +15,8 @@ hero:
       text: 指南
       link: /guide/
   image:
-      src: /pay.webp
-      alt: wechatpay
+      src: /avatar.webp
+      alt: elephant-bubble
 features:
   - title: 简洁
     details: XML/JSON编解码，AES/RSA加解密，文件上传，GZIP/图片下载，几乎无需过多编写代码。

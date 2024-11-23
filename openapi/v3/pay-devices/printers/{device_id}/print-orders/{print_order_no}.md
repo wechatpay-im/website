@@ -9,8 +9,8 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| device_id | string | 小票机设备号
-| print_order_no | string | 打印单号
+| device_id {data-required} | string | 小票机设备号
+| print_order_no {data-required} | string | 打印单号
 
 {.im-table #request}
 
@@ -82,12 +82,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | notify_url | string | 回调通知地址
 | print_state | string | 打印状态<br/>`PRINT_STATE_WAIT` \| `PRINT_STATE_SUCCESS` \| `PRINT_STATE_FAIL` \| `PRINT_STATE_CACHED` 枚举值之一
 | print_state_description | string | 打印状态描述
-| variable_list | object[] | 变量列表
+| variable_list | object[] {data-tooltip="对应PHP的array"} | 变量列表
 | key {data-indent=1} | string | 
 | value {data-indent=1} | string | 
-| table_list | object[] | 表格变量列表
+| table_list | object[] {data-tooltip="对应PHP的array"} | 表格变量列表
 | key {data-indent=1} | string | 
-| row_list {data-indent=1} | object[] | 
+| row_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 
 | cell_list {data-indent=2} | string[] | 
 
 {.im-table #response}

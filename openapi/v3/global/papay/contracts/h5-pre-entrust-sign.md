@@ -10,7 +10,7 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
-| json | object | 声明请求的`JSON`数据结构
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-indent=1} | string | 机构APPID
 | sub_mchid {data-indent=1} | string | 子商户号
 | sp_appid {data-indent=1} | string | 机构appid
@@ -174,7 +174,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sign_url | string | 签约跳转URL
+| sign_url {data-required}| string | 签约跳转URL
 
 {.im-table #response}
 

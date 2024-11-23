@@ -9,8 +9,8 @@ description: 服务商通过此接口可以查询特约商户账户余额信息�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 二级商户号
-| query | object | 声明请求的查询参数
+| sub_mchid {data-required} | string | 二级商户号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | account_type {data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` \| `DEPOSIT` 枚举值之一
 
 {.im-table #request}
@@ -90,8 +90,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户号
-| available_amount | integer | 可用余额
+| sub_mchid {data-required}| string | 特约商户号
+| account_type | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` \| `DEPOSIT` 枚举值之一
+| available_amount {data-required}| integer | 可用余额
 | pending_amount | integer | 不可用余额
 
 {.im-table #response}

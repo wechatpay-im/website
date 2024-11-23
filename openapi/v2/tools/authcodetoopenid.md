@@ -9,12 +9,12 @@ description: 通过授权码查询公众号Openid，调用查询后，该授权�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mch_id {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mch_id {data-required data-indent=1} | string | 商户号
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | sub_mch_id {data-indent=1} | string | 子商户号
-| auth_code {data-indent=1} | string | 授权码
+| auth_code {data-required data-indent=1} | string | 授权码
 
 {.im-table #request}
 
@@ -114,15 +114,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
 | sub_openid | string | 用户子标识
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
-| openid | string | 用户标识
+| openid {data-required}| string | 用户标识
 
 {.im-table #response}
 

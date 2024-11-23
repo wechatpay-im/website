@@ -9,37 +9,37 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 公众号ID
-| mchid {data-indent=1} | string | 直连商户号
-| description {data-indent=1} | string | 商品描述
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 公众号ID
+| mchid {data-required data-indent=1} | string | 直连商户号
+| description {data-required data-indent=1} | string | 商品描述
 | attach {data-indent=1} | string | 附加数据
-| out_trade_no {data-indent=1} | string | 商户订单号
-| amount {data-indent=1} | object | 订单金额
-| total {data-indent=2} | integer | 总金额
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-required data-indent=2} | integer | 总金额
 | currency {data-indent=2} | string | 货币类型
 | time_expire {data-indent=1} | string | 交易结束时间
-| notify_url {data-indent=1} | string | 通知地址
+| notify_url {data-required data-indent=1} | string | 通知地址
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | limit_pay {data-indent=1} | string[] | 支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
 | support_fapiao {data-indent=1} | boolean | 电子发票入口开放标识
-| detail {data-indent=1} | object | 优惠功能
+| detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | integer | 订单原价
 | invoice_id {data-indent=2} | string | 商品小票ID
-| goods_detail {data-indent=2} | object[] | 单品列表
-| merchant_goods_id {data-indent=3} | string | 商户侧商品编码
+| goods_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| merchant_goods_id {data-required data-indent=3} | string | 商户侧商品编码
 | wechatpay_goods_id {data-indent=3} | string | 微信侧商品编码
 | goods_name {data-indent=3} | string | 商品名称
-| quantity {data-indent=3} | integer | 商品数量
-| unit_price {data-indent=3} | integer | 商品单价
-| scene_info {data-indent=1} | object | 场景信息
+| quantity {data-required data-indent=3} | integer | 商品数量
+| unit_price {data-required data-indent=3} | integer | 商品单价
+| scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
 | payer_client_ip {data-indent=2} | string | 用户终端IP
 | device_id {data-indent=2} | string | 商户端设备号
-| store_info {data-indent=2} | object | 商户门店信息
+| store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 商户门店信息
 | id {data-indent=3} | string | 门店编号
-| name {data-indent=3} | string | 门店名称
-| area_code {data-indent=3} | string | 地区编码
-| address {data-indent=3} | string | 详细地址
+| name {data-required data-indent=3} | string | 门店名称
+| area_code {data-required data-indent=3} | string | 地区编码
+| address {data-required data-indent=3} | string | 详细地址
 
 {.im-table #request}
 
@@ -316,7 +316,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code_url | string | 二维码链接
+| code_url {data-required}| string | 二维码链接
 
 {.im-table #response}
 

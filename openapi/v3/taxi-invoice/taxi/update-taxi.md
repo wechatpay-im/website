@@ -9,13 +9,13 @@ description: 商户可通过调用该接口新增、更新出租车信息，出�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| plate_number {data-indent=1} | string | 车牌号
-| company_name {data-indent=1} | string | 公司名称
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| plate_number {data-required data-indent=1} | string | 车牌号
+| company_name {data-required data-indent=1} | string | 公司名称
 | mchid {data-indent=1} | string | 商户号
-| main_license {data-indent=1} | string | 主班司机资格证号
+| main_license {data-required data-indent=1} | string | 主班司机资格证号
 | deputy_license {data-indent=1} | string | 副班司机资格证号
-| region_id {data-indent=1} | integer | 行政区划ID
+| region_id {data-required data-indent=1} | integer | 行政区划ID
 | invoice_flag {data-indent=1} | string | 开票标记
 
 {.im-table #request}
@@ -125,12 +125,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number | string | 车牌号
-| company_name | string | 公司名称
+| plate_number {data-required}| string | 车牌号
+| company_name {data-required}| string | 公司名称
 | mchid | string | 商户号
-| main_license | string | 主班司机资格证号
+| main_license {data-required}| string | 主班司机资格证号
 | deputy_license | string | 副班司机资格证号
-| region_id | integer | 行政区划ID
+| region_id {data-required}| integer | 行政区划ID
 
 {.im-table #response}
 

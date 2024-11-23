@@ -9,9 +9,9 @@ description: 商户根据一定过滤条件，查询已创建的支付有礼活�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| offset {data-indent=1} | integer | 分页页码
-| limit {data-indent=1} | integer | 分页大小
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| offset {data-required data-indent=1} | integer | 分页页码
+| limit {data-required data-indent=1} | integer | 分页大小
 | activity_name {data-indent=1} | string | 活动名称
 | activity_status {data-indent=1} | string | 活动状态<br/>`CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
 | award_type {data-indent=1} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值

@@ -10,16 +10,17 @@ description: 使用“提交升级申请单”接口后，可不定期调用此�
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2023.05.23` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| version {data-indent=1} | string | 接口版本号
-| mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
-| sub_mch_id {data-indent=1} | string | 小微商户号
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| version {data-required data-indent=1} | string | 接口版本号
+| mch_id {data-required data-indent=1} | string | 商户号
+| sign_type {data-required data-indent=1} | string | 签名类型
+| sub_mch_id {data-required data-indent=1} | string | 小微商户号
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -116,29 +117,29 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
-| nonce_str | string | 随机字符串
-| sign | string | 签名
-| result_code | string | 业务结果
+| nonce_str {data-required}| string | 随机字符串
+| sign {data-required}| string | 签名
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| sub_mch_id | string | 小微商户号
-| applyment_state | string | 申请状态
-| applyment_state_desc | string | 申请状态描述
+| sub_mch_id {data-required}| string | 小微商户号
+| applyment_state {data-required}| string | 申请状态
+| applyment_state_desc {data-required}| string | 申请状态描述
 | sign_qrcode | string | 签约二维码
 | sign_url | string | 签约链接
 | audit_detail | string | 审核详情
-| account_name | string | 付款户名
-| pay_amount | string | 汇款金额
-| destination_account_number | string | 收款卡号
-| destination_account_name | string | 收款户名
-| destination_account_bank | string | 开户银行
-| city | string | 省市信息
-| remark | string | 备注信息
-| deadline_time | string | 汇款截止时间
-| param_name | string | 参数名称
-| reject_reason | string | 驳回原因
+| account_name {data-required}| string | 付款户名
+| pay_amount {data-required}| string | 汇款金额
+| destination_account_number {data-required}| string | 收款卡号
+| destination_account_name {data-required}| string | 收款户名
+| destination_account_bank {data-required}| string | 开户银行
+| city {data-required}| string | 省市信息
+| remark {data-required}| string | 备注信息
+| deadline_time {data-required}| string | 汇款截止时间
+| param_name {data-required}| string | 参数名称
+| reject_reason {data-required}| string | 驳回原因
 
 {.im-table #response}
 

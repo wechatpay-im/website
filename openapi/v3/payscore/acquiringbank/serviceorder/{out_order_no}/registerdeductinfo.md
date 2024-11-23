@@ -1,6 +1,6 @@
 ---
-title: 登记扣款信息
-description: 
+title: 从业机构登记微信支付分扣款信息
+description: "前置条件：服务订单状态为“进行中”且订单状态说明需为[MCH_COMPLETE : 商户完结]"
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -9,12 +9,12 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no | string | 商户服务订单号
-| json | object | 声明请求的`JSON`数据结构
-| service_id {data-indent=1} | string | 服务ID
+| out_order_no {data-required} | string | 商户服务订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| service_id {data-required data-indent=1} | string | 服务ID
 | appid {data-indent=1} | string | 服务商应用ID
-| sub_mchid {data-indent=1} | string | 子商户号
-| channel_id {data-indent=1} | string | 渠道商商户号
+| sub_mchid {data-required data-indent=1} | string | 子商户号
+| channel_id {data-required data-indent=1} | string | 渠道商商户号
 | out_trade_no {data-indent=1} | string | 商户系统内部扣款单号。
 
 {.im-table #request}

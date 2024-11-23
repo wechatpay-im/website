@@ -9,23 +9,23 @@ description: 商户可以通过该接口同时向多个用户微信零钱进行�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 直连商户的appid
-| out_batch_no {data-indent=1} | string | 商家批次单号
-| batch_name {data-indent=1} | string | 批次名称
-| batch_remark {data-indent=1} | string | 批次备注
-| total_amount {data-indent=1} | integer | 转账总金额
-| total_num {data-indent=1} | integer | 转账总笔数
-| transfer_detail_list {data-indent=1} | object[] | 转账明细列表
-| out_detail_no {data-indent=2} | string | 商家明细单号
-| transfer_amount {data-indent=2} | integer | 转账金额
-| transfer_remark {data-indent=2} | string | 转账备注
-| openid {data-indent=2} | string | 用户在直连商户应用下的用户标示
-| user_name {data-indent=2} | string | 收款用户姓名
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 直连商户的appid
+| out_batch_no {data-required data-indent=1} | string | 商家批次单号
+| batch_name {data-required data-indent=1} | string | 批次名称
+| batch_remark {data-required data-indent=1} | string | 批次备注
+| total_amount {data-required data-indent=1} | integer | 转账总金额
+| total_num {data-required data-indent=1} | integer | 转账总笔数
+| transfer_detail_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账明细列表
+| out_detail_no {data-required data-indent=2} | string | 商家明细单号
+| transfer_amount {data-required data-indent=2} | integer | 转账金额
+| transfer_remark {data-required data-indent=2} | string | 转账备注
+| openid {data-required data-indent=2} | string | 用户在直连商户应用下的用户标示
+| user_name {data-required data-indent=2} | string | 收款用户姓名
 | user_id_card {data-indent=2} | string | 收款用户身份证
-| transfer_scene_id {data-indent=1} | string | 转账场景ID
+| transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
 | notify_url {data-indent=1} | string | 通知地址
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -207,9 +207,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no | string | 商家批次单号
-| batch_id | string | 微信批次单号
-| create_time | string | 批次创建时间
+| out_batch_no {data-required}| string | 商家批次单号
+| batch_id {data-required}| string | 微信批次单号
+| create_time {data-required}| string | 批次创建时间
 | batch_status | string | 批次状态<br/>`ACCEPTED` \| `PROCESSING` \| `FINISHED` \| `CLOSED` 枚举值之一
 
 {.im-table #response}

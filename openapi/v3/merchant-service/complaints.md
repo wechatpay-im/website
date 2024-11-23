@@ -10,15 +10,16 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 ::: danger :no_entry_sign: {.im-deprecated}
 
 本接口服务已于 `2020.11.27` (北京时间)下线，文档仅做留存参考。
+
 :::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | limit {data-indent=1} | integer | 
 | offset {data-indent=1} | integer | 
-| begin_date {data-indent=1} | string | 
-| end_date {data-indent=1} | string | 
+| begin_date {data-required data-indent=1} | string | 
+| end_date {data-required data-indent=1} | string | 
 | sub_mchid {data-indent=1} | string | 
 
 {.im-table #request}
@@ -116,16 +117,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| offset | integer | 
-| limit | integer | 
+| offset {data-required}| integer | 
+| limit {data-required}| integer | 
 | total_count | integer | 
-| data | object[] | 
-| out_trade_no {data-indent=1} | string | 
-| complaint_time {data-indent=1} | string | 
-| amount {data-indent=1} | integer | 
+| data | object[] {data-tooltip="对应PHP的array"} | 
+| out_trade_no {data-required data-indent=1} | string | 
+| complaint_time {data-required data-indent=1} | string | 
+| amount {data-required data-indent=1} | integer | 
 | payer_phone {data-indent=1} | string | 
-| complaint_detail {data-indent=1} | string | 
-| transaction_id {data-indent=1} | string | 
+| complaint_detail {data-required data-indent=1} | string | 
+| complaint_state {data-required data-indent=1} | string | 投诉单状态<br/>`PAYER_COMPLAINTED` \| `FROZENED` \| `FROZEN_FINISHED` \| `PAYER_CANCELED` \| `MERCHANT_REFUNDED` \| `SYSTEM_REFUNDED` \| `MANUAL_UNFROZEN` 枚举值之一
+| transaction_id {data-required data-indent=1} | string | 
 | frozen_end_time {data-indent=1} | string | 
 | sub_mchid {data-indent=1} | string | 
 

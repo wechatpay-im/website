@@ -1,6 +1,6 @@
 ---
 title: 人脸识别SDK-获取调用凭证
-description: 
+description: 人脸识别通过识别用户人脸，获取用户信息（openid）。此功能常用于商户会员、商品推荐等场景， 此流程无法用于支付。FACEID-ONCE为直接启动人脸识别流程。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -9,20 +9,20 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| base_uri | string | 声明接入点<br/>固定值`https://payapp.weixin.qq.com/`
-| xml | object | 声明请求的`XML`数据结构
-| store_id {data-indent=1} | string | 门店编号， 由商户定义， 各门店唯一。
-| store_name {data-indent=1} | string | 门店名称，由商户定义。（可用于展示）
-| device_id {data-indent=1} | string | 终端设备编号，由商户定义。
+| base_uri {data-required} | string | 声明接入点<br/>固定值`https://payapp.weixin.qq.com/`
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| store_id {data-required data-indent=1} | string | 门店编号， 由商户定义， 各门店唯一。
+| store_name {data-required data-indent=1} | string | 门店名称，由商户定义。（可用于展示）
+| device_id {data-required data-indent=1} | string | 终端设备编号，由商户定义。
 | attach {data-indent=1} | string | 附加字段。字段格式使用Json
-| rawdata {data-indent=1} | string | 初始化数据。由微信人脸SDK的接口返回。
-| appid {data-indent=1} | string | 商户号绑定的公众号/小程序 appid
-| mch_id {data-indent=1} | string | 商户号
+| rawdata {data-required data-indent=1} | string | 初始化数据。由微信人脸SDK的接口返回。
+| appid {data-required data-indent=1} | string | 商户号绑定的公众号/小程序 appid
+| mch_id {data-required data-indent=1} | string | 商户号
 | sub_appid {data-indent=1} | string | 子商户绑定的公众号/小程序 appid(服务商模式)
 | sub_mch_id {data-indent=1} | string | 子商户号(服务商模式)
-| now {data-indent=1} | integer | 取当前时间，10位unix时间戳。
-| version {data-indent=1} | string | 
-| sign_type {data-indent=1} | string | `MD5` \| `HMAC-SHA256` 枚举值之一
+| now {data-required data-indent=1} | integer | 取当前时间，10位unix时间戳。
+| version {data-required data-indent=1} | string | 版本号。固定为1
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 
 {.im-table #request}
 
@@ -167,16 +167,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 错误码描述
-| authinfo | string | SDK调用凭证。用于调用SDK的人脸识别接口。
+| authinfo {data-required}| string | SDK调用凭证。用于调用SDK的人脸识别接口。
 | expires_in | integer | authinfo的有效时间, 单位秒。
-| nonce_str | string | 随机字符串，不长于32位
-| sign | string | 参数签名。
-| appid | string | 公众号
-| mch_id | string | 商户号
+| nonce_str {data-required}| string | 随机字符串，不长于32位
+| sign {data-required}| string | 参数签名。
+| appid {data-required}| string | 公众号
+| mch_id {data-required}| string | 商户号
 | sub_appid | string | 子商户公众账号ID(服务商模式)
-| sub_mch_id | string | 子商户号(服务商模式)
+| sub_mch_id {data-required}| string | 子商户号(服务商模式)
 
 {.im-table #response}
 

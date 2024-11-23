@@ -9,7 +9,7 @@ description: 获取商户当前可用的平台证书列表。微信支付提供�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| query | array | 声明请求的查询参数(可选)
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数(可选)
 | algorithm_type {data-indent=1} | string |平台证书算法类型<br/>`SM2`\|`RSA`\|`ALL`枚举值之一<br/>默认为`RSA`
 
 {.im-table #request}
@@ -82,15 +82,15 @@ print_r(json_decode((string)$response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| data | array[] | 平台证书列表
-| serial_no {data-indent=1} | string | 证书序列号
-| effective_time {data-indent=1} | string | 证书启用时间
-| expire_time {data-indent=1} | string | 证书弃用时间
-| encrypt_certificate {data-indent=1} | array | 证书信息
-| algorithm {data-indent=2} | string | 加密证书的算法
-| nonce {data-indent=2} | string | 加密证书的随机串
-| associated_data {data-indent=2} | string | 加密证书的附加数据<br/>固定为`certificate`
-| ciphertext {data-indent=2} | string | 加密后的证书内容
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 平台证书列表
+| serial_no {data-required data-indent=1} | string | 证书序列号
+| effective_time {data-required data-indent=1} | string | 证书启用时间
+| expire_time {data-required data-indent=1} | string | 证书弃用时间
+| encrypt_certificate {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 证书信息
+| algorithm {data-required data-indent=2} | string | 加密证书的算法
+| nonce {data-required data-indent=2} | string | 加密证书的随机串
+| associated_data {data-required data-indent=2} | string | 加密证书的附加数据<br/>固定为`certificate`
+| ciphertext {data-required data-indent=2} | string | 加密后的证书内容
 
 {.im-table #response}
 

@@ -9,10 +9,10 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_trade_no | string | 商户订单号
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 应用AppID
-| mchid {data-indent=1} | string | 直连商户号
+| out_trade_no {data-required} | string | 商户订单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 应用AppID
+| mchid {data-required data-indent=1} | string | 直连商户号
 
 {.im-table #request}
 
@@ -98,8 +98,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | appid | string | 应用AppID
-| mchid | string | 直连商户号
-| out_trade_no | string | 商户订单号
+| mchid {data-required}| string | 直连商户号
+| out_trade_no {data-required}| string | 商户订单号
 
 {.im-table #response}
 

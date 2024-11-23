@@ -4,12 +4,12 @@
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | appid
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | appid
 | wechat_openid {data-indent=1} | string | 用户在appid下的唯一标识
 | qq {data-indent=1} | string | 用户QQ账号
-| right_id {data-indent=1} | string | 权益ID
-| create_time {data-indent=1} | string | 权益核销时间
+| right_id {data-required data-indent=1} | string | 权益ID
+| create_time {data-required data-indent=1} | string | 权益核销时间
 
 {.im-table #request}
 
@@ -106,13 +106,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid | string | appid
-| wechat_openid | string | 用户在appid下的唯一标识
+| appid {data-required}| string | appid
+| wechat_openid {data-required}| string | 用户在appid下的唯一标识
 | qq | string | 用户QQ账号
-| right_id | string | 权益ID
-| create_time | string | 权益核销时间
-| order_state | string | 订单状态
-| order_id | string | 订单号
+| right_id {data-required}| string | 权益ID
+| create_time {data-required}| string | 权益核销时间
+| order_state {data-required}| string | 订单状态
+| order_id {data-required}| string | 订单号
 
 {.im-table #response}
 
@@ -124,8 +124,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object | 声明请求的查询参数
-| appid {data-indent=1} | string | appid
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| appid {data-required data-indent=1} | string | appid
 | wechat_openid {data-indent=1} | string | 用户在appid下的唯一标识
 | qq {data-indent=1} | string | 用户QQ账号
 | offset {data-indent=1} | integer | 分页页码
@@ -226,15 +226,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data | object[] | 结果集
-| appid {data-indent=1} | string | appid
-| wechat_openid {data-indent=1} | string | 用户在appid下的唯一标识
+| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 结果集
+| appid {data-required data-indent=1} | string | appid
+| wechat_openid {data-required data-indent=1} | string | 用户在appid下的唯一标识
 | qq {data-indent=1} | string | 用户QQ账号
-| right_id {data-indent=1} | string | 权益ID
-| create_time {data-indent=1} | string | 权益核销时间
-| order_state {data-indent=1} | string | 订单状态
-| order_id {data-indent=1} | string | 订单号
-| total_count | integer | 总数量
+| right_id {data-required data-indent=1} | string | 权益ID
+| create_time {data-required data-indent=1} | string | 权益核销时间
+| order_state {data-required data-indent=1} | string | 订单状态
+| order_id {data-required data-indent=1} | string | 订单号
+| total_count {data-required}| integer | 总数量
 | offset | integer | 分页页码
 | limit | integer | 分页大小
 

@@ -9,9 +9,9 @@ description: 将另一个应用的用户openid转换为指定appid应用下的�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 用户openid
-| json | object | 声明请求的`JSON`数据结构
-| appid {data-indent=1} | string | 目标应用的appid
+| openid {data-required} | string | 用户openid
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| appid {data-required data-indent=1} | string | 目标应用的appid
 
 {.im-table #request}
 
@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid | string | 转换后的openid
+| openid {data-required}| string | 转换后的openid
 
 {.im-table #response}
 

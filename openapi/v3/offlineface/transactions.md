@@ -9,26 +9,26 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| json | object | 声明请求的`JSON`数据结构
-| auth_code {data-indent=1} | string | 
-| sp_appid {data-indent=1} | string | 
-| sp_mchid {data-indent=1} | string | 
-| sub_appid {data-indent=1} | string | 
-| sub_mchid {data-indent=1} | string | 
-| amount {data-indent=1} | object | 
-| total {data-indent=2} | integer | 
-| currency {data-indent=2} | string | `CNY` 枚举值
-| scene_info {data-indent=1} | object | 
-| device_ip {data-indent=2} | string | 
-| goods_tag {data-indent=1} | string | 
-| description {data-indent=1} | string | 
-| attach {data-indent=1} | string | 
-| settle_info {data-indent=1} | object | 
-| profit_sharing {data-indent=2} | boolean | 
-| out_trade_no {data-indent=1} | string | 
-| business {data-indent=1} | object | 
-| business_product_id {data-indent=2} | integer | `2` \| `11` 枚举值之一
-| business_scene_id {data-indent=2} | integer | `3` \| `4` \| `5` \| `6` \| `124` \| `125` \| `126` 枚举值之一
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| auth_code {data-required data-indent=1} | string | 支付凭证
+| sp_appid {data-indent=1} | string | 服务商公众号appid
+| sp_mchid {data-indent=1} | string | 服务商商户号
+| sub_appid {data-indent=1} | string | 子商户公众号appid
+| sub_mchid {data-indent=1} | string | 子商户商户号
+| amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 金额信息
+| total {data-required data-indent=2} | integer | 总金额
+| currency {data-required data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
+| scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付场景信息
+| device_ip {data-required data-indent=2} | string | 设备IP
+| goods_tag {data-indent=1} | string | 优惠标记
+| description {data-indent=1} | string | 商品信息
+| attach {data-indent=1} | string | 商户附加信息
+| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
+| profit_sharing {data-indent=2} | boolean | 是否支持分账
+| out_trade_no {data-indent=1} | string | 商户订单号
+| business {data-indent=1} | object {data-tooltip="对应PHP的array"} | 业务信息
+| business_product_id {data-required data-indent=2} | integer | 平台产品ID<br/>`2` \| `11` 枚举值之一
+| business_scene_id {data-required data-indent=2} | integer | 平台场景ID<br/>`3` \| `4` \| `5` \| `6` \| `124` \| `125` \| `126` 枚举值之一
 
 {.im-table #request}
 
@@ -233,31 +233,31 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_appid | string | 
-| sp_mchid | string | 
-| sub_appid | string | 
-| sub_mchid | string | 
-| payer | object | 
-| sp_openid {data-indent=1} | string | 
-| sub_openid {data-indent=1} | string | 
-| amount | object | 
-| total {data-indent=1} | integer | 
-| currency {data-indent=1} | string | `CNY` 枚举值
-| promotion_detail | object[] | 
-| scene_info | object | 
-| device_ip {data-indent=1} | string | 
-| bank_type | string | 
-| trade_type | string | `NATIVE` \| `JSAPI` \| `APP` \| `MWEB` \| `AUTH` 枚举值之一
-| trade_state | string | 
-| trade_state_description | string | 
-| debt_state | string | 
-| description | string | 
-| attach | string | 
-| success_time | string | 
-| transaction_id | string | 
-| repayment_transaction_id | string | 
-| out_trade_no | string | 
-| error_type | string | 
+| sp_appid {data-required}| string | 服务商公众号appid
+| sp_mchid {data-required}| string | 服务商商户号
+| sub_appid | string | 子商户公众号appid
+| sub_mchid {data-required}| string | 子商户商户号
+| payer | object {data-tooltip="对应PHP的array"} | 支付用户信息
+| sp_openid {data-indent=1} | string | 公众下的openid
+| sub_openid {data-indent=1} | string | 子公众下的openid
+| amount | object {data-tooltip="对应PHP的array"} | 金额信息
+| total {data-required data-indent=1} | integer | 总金额
+| currency {data-required data-indent=1} | string | 货币类型<br/>`CNY` 枚举值
+| promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠信息
+| scene_info | object {data-tooltip="对应PHP的array"} | 支付场景信息
+| device_ip {data-indent=1} | string | 设备IP
+| bank_type | string | 付款银行
+| trade_type | string | 交易类型<br/>`NATIVE` \| `JSAPI` \| `APP` \| `MWEB` \| `AUTH` 枚举值之一
+| trade_state | string | 交易状态
+| trade_state_description | string | 交易描述
+| debt_state | string | 欠款状态
+| description | string | 商品信息
+| attach | string | 商户附加信息
+| success_time | string | 支付成功时间
+| transaction_id | string | 微信订单号
+| repayment_transaction_id | string | 还款微信订单号
+| out_trade_no | string | 商户订单号
+| error_type | string | 错误分类
 
 {.im-table #response}
 

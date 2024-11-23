@@ -1,5 +1,5 @@
 ---
-title: 支付分从业机构-商户预下单通知(JSON)
+title: 支付分从业机构-商户预下单(PAYSCORE.MCH_PREPAY)通知(JSON)
 description: 微信支付分通过商户预下单通知告知商户对待支付的支付分服务订单生成收银台订单，以便用户通过收银台完成对服务订单的主动支付。
 ---
 
@@ -13,46 +13,46 @@ description: 微信支付分通过商户预下单通知告知商户对待支付�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers | object | 通知的头参数
-| Content-Type {data-indent=1} | string | `application/json`
-| Request-ID {data-indent=1} | string | 通知的唯一标识
-| Wechatpay-Nonce {data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-indent=1} | string | 平台证书序列号/平台公钥ID
-| Wechatpay-Signature {data-indent=1} | string | 签名串
-| Wechatpay-Signature-Type {data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
-| Wechatpay-Timestamp {data-indent=1} | string | 时间戳
-| body | object | 通知的`JSON`数据结构
-| id {data-indent=1} | string | 通知的唯一ID
-| create_time {data-indent=1} | string | 通知创建的时间
-| event_type {data-indent=1} | string | 通知的类型<br/>`PAYSCORE.MCH_PREPAY` 枚举值
-| resource_type {data-indent=1} | string | 通知的资源数据类型
-| summary {data-indent=1} | string | 回调摘要
-| resource {data-indent=1} | object | 通知资源数据
-| algorithm {data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
+| headers {data-required} | object | 通知的头参数
+| Content-Type {data-required data-indent=1} | string | `application/json`
+| Request-ID {data-required data-indent=1} | string | 通知的唯一标识
+| Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
+| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Signature {data-required data-indent=1} | string | 签名串
+| Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
+| Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
+| body {data-required} | object | 通知的`JSON`数据结构
+| id {data-required data-indent=1} | string | 通知的唯一ID
+| create_time {data-required data-indent=1} | string | 通知创建的时间
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`PAYSCORE.MCH_PREPAY` 枚举值
+| resource_type {data-required data-indent=1} | string | 通知的资源数据类型
+| summary {data-required data-indent=1} | string | 回调摘要
+| resource {data-required data-indent=1} | object | 通知资源数据
+| algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
-| nonce {data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-indent=2} | string | 加密后的密文数据
-| original_type {data-indent=2} | string | 原始回调类型
+| nonce {data-required data-indent=2} | string | 加密使用的随机串
+| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| service_id {data-indent=3} | string | 调用创单接口时提交的服务ID
-| appid {data-indent=3} | string | 调用创单接口时提交的应用ID
-| mchid {data-indent=3} | string | 调用创单接口时提交的商户号
+| service_id {data-required data-indent=3} | string | 调用创单接口时提交的服务ID
+| appid {data-required data-indent=3} | string | 调用创单接口时提交的应用ID
+| mchid {data-required data-indent=3} | string | 调用创单接口时提交的商户号
 | sub_appid {data-indent=3} | string | 调用创单接口时传入的子商户应用ID
-| sub_mchid {data-indent=3} | string | 调用创单接口时传入的子商户商户号
+| sub_mchid {data-required data-indent=3} | string | 调用创单接口时传入的子商户商户号
 | channel_id {data-indent=3} | string | 调用创单接口时传入的渠道商商户号
-| out_order_no {data-indent=3} | string | 调用创单接口时提交的商户服务订单号
+| out_order_no {data-required data-indent=3} | string | 调用创单接口时提交的商户服务订单号
 | openid {data-indent=3} | string | 微信用户在商户对应AppID下的唯一标识。（传了sub_appid的情况下则只返回sub_openid）
 | sub_openid {data-indent=3} | string | 微信用户在商户对应sub_appid下的唯一标识。（传了sub_appid的情况下则只返回sub_openid）
-| total_amount {data-indent=3} | number | 总金额，大于等于0的数字，单位为分，只能为整数。
-| prepay_req_body {data-indent=3} | object | 预下单请求部分输入参数。  <br/>注意：商户请求预下单接口时需要使用本对象中同名字段值，若字段在本对象中不存在则由商户根据实际情况填写。
-| appid {data-indent=4} | string | 从业机构在微信公众平台申请服务号对应的AppID，申请商户功能的时候微信支付会配置绑定关系
-| mchid {data-indent=4} | string | 微信支付分配给从业机机构的机构号
+| total_amount {data-required data-indent=3} | number | 总金额，大于等于0的数字，单位为分，只能为整数。
+| prepay_req_body {data-required data-indent=3} | object | 预下单请求部分输入参数。  <br/>注意：商户请求预下单接口时需要使用本对象中同名字段值，若字段在本对象中不存在则由商户根据实际情况填写。
+| appid {data-required data-indent=4} | string | 从业机构在微信公众平台申请服务号对应的AppID，申请商户功能的时候微信支付会配置绑定关系
+| mchid {data-required data-indent=4} | string | 微信支付分配给从业机机构的机构号
 | sub_appid {data-indent=4} | string | AppID 是商户在微信申请公众号成功后分配的帐号ID，需要机构侧有配置绑定关系才能传
-| sub_mchid {data-indent=4} | string | 从业机构报备的商户返回的商户识别码
-| channel_id {data-indent=4} | string | 微信支付分配给收单服务商的ID
-| device_info {data-indent=4} | string | 终端设备号，PC网页或公众号内支付请传&quot;WEB&quot;
-| nonce_str {data-indent=4} | string | 微信支付分配给收单服务商的ID
-| body {data-indent=4} | string | 商品或支付单简要描述
+| sub_mchid {data-required data-indent=4} | string | 从业机构报备的商户返回的商户识别码
+| channel_id {data-required data-indent=4} | string | 微信支付分配给收单服务商的ID
+| device_info {data-required data-indent=4} | string | 终端设备号，PC网页或公众号内支付请传`WEB`
+| nonce_str {data-required data-indent=4} | string | 微信支付分配给收单服务商的ID
+| body {data-required data-indent=4} | string | 商品或支付单简要描述
 | attach {data-indent=4} | string | 附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
 | fee_type {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，默认人民币：`CNY`
 | time_start {data-indent=4} | string | 订单生成时间，格式为`yyyyMMddHHmmss`

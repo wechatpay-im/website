@@ -9,17 +9,17 @@ description: 修改结算帐号API
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid | string | 特约商户号
-| json | object | 声明请求的`JSON`数据结构
+| sub_mchid {data-required} | string | 特约商户号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | modify_mode {data-indent=1} | string | 修改模式
-| account_type {data-indent=1} | string | 账户类型
-| account_bank {data-indent=1} | string | 开户银行
-| bank_address_code {data-indent=1} | string | 开户银行省市编码
+| account_type {data-required data-indent=1} | string | 账户类型
+| account_bank {data-required data-indent=1} | string | 开户银行
+| bank_address_code {data-required data-indent=1} | string | 开户银行省市编码
 | bank_name {data-indent=1} | string | 开户银行全称（含支行）
 | bank_branch_id {data-indent=1} | string | 开户银行联行号
-| account_number {data-indent=1} | string | 银行账号
+| account_number {data-required data-indent=1} | string | 银行账号
 | account_name {data-indent=1} | string | 开户名称
-| headers | object | 声明请求的头参数
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
@@ -159,7 +159,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_no | string | 修改结算账户申请单号
+| application_no {data-required}| string | 修改结算账户申请单号
 
 {.im-table #response}
 

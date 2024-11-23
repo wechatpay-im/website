@@ -9,15 +9,15 @@ description: 通过此接口可以查询结算资金的明细。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号ID
-| mchid {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号ID
+| mchid {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
-| usetag {data-indent=1} | integer | 结算状态
-| offset {data-indent=1} | integer | 偏移量
-| limit {data-indent=1} | integer | 最大记录条数
-| date_start {data-indent=1} | string | 开始日期
-| date_end {data-indent=1} | string | 结束日期
+| usetag {data-required data-indent=1} | integer | 结算状态
+| offset {data-required data-indent=1} | integer | 偏移量
+| limit {data-required data-indent=1} | integer | 最大记录条数
+| date_start {data-required data-indent=1} | string | 开始日期
+| date_end {data-required data-indent=1} | string | 结束日期
 
 {.im-table #request}
 
@@ -132,26 +132,26 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
-| return_msg | string | 返回信息
-| appid | string | 公众账号ID
-| mch_id | string | 商户号
-| nonce_str | string | 随机字符串
-| result_code | string | 业务结果
+| return_code {data-required}| string | 返回状态码
+| return_msg {data-required}| string | 返回信息
+| appid {data-required}| string | 公众账号ID
+| mch_id {data-required}| string | 商户号
+| nonce_str {data-required}| string | 随机字符串
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| record_num | string | 返回数据行数
-| fbatchno | string | 付汇批次号
-| date_settlement | string | 结算日期
-| date_start | string | 交易开始日期
-| date_end | string | 交易结束日期
-| settlement_fee | integer | 划账金额
-| unsettlement_fee | integer | 未划账金额
-| settlementfee_type | string | 结算币种
-| pay_fee | integer | 支付金额
-| refund_fee | integer | 退款金额
-| pay_net_fee | integer | 支付净额
-| poundage_fee | integer | 手续费金额
+| record_num {data-required}| string | 返回数据行数
+| fbatchno {data-required}| string | 付汇批次号
+| date_settlement {data-required}| string | 结算日期
+| date_start {data-required}| string | 交易开始日期
+| date_end {data-required}| string | 交易结束日期
+| settlement_fee {data-required}| integer | 划账金额
+| unsettlement_fee {data-required}| integer | 未划账金额
+| settlementfee_type {data-required}| string | 结算币种
+| pay_fee {data-required}| integer | 支付金额
+| refund_fee {data-required}| integer | 退款金额
+| pay_net_fee {data-required}| integer | 支付净额
+| poundage_fee {data-required}| integer | 手续费金额
 
 {.im-table #response}
 

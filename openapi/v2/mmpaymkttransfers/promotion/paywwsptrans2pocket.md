@@ -9,24 +9,24 @@ description: 给同一个实名用户付款，单笔单日限额200/200元；一
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml | object | 声明请求的`XML`数据结构
-| appid {data-indent=1} | string | 公众账号appid
-| mchid {data-indent=1} | string | 商户号
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| appid {data-required data-indent=1} | string | 公众账号appid
+| mchid {data-required data-indent=1} | string | 商户号
 | device_info {data-indent=1} | string | 设备号
-| partner_trade_no {data-indent=1} | string | 商户订单号
-| openid {data-indent=1} | string | 用户openid
-| check_name {data-indent=1} | string | 校验用户姓名选项
+| partner_trade_no {data-required data-indent=1} | string | 商户订单号
+| openid {data-required data-indent=1} | string | 用户openid
+| check_name {data-required data-indent=1} | string | 校验用户姓名选项
 | re_user_name {data-indent=1} | string | 收款用户姓名
-| amount {data-indent=1} | integer | 金额
-| desc {data-indent=1} | string | 企业付款备注
-| spbill_create_ip {data-indent=1} | string | Ip地址
+| amount {data-required data-indent=1} | integer | 金额
+| desc {data-required data-indent=1} | string | 企业付款备注
+| spbill_create_ip {data-required data-indent=1} | string | Ip地址
 | workwx_sign {data-indent=1} | string | 活动信息
 | ww_msg_type {data-indent=1} | string | 付款消息类型
 | approval_number {data-indent=1} | string | 付款消息类型
 | approval_type {data-indent=1} | number | 审批类型
 | act_name {data-indent=1} | string | 项目名称
 | agentid {data-indent=1} | number | 付款的应用id
-| security | boolean | 声明加载商户API证书<br/>固定值`true`
+| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -195,18 +195,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code {data-required}| string | 返回状态码
 | return_msg | string | 返回信息
 | appid | string | 公众账号appid
 | mchid | string | 商户号
 | device_info | string | 设备号
 | nonce_str | string | 随机字符串
-| result_code | string | 业务结果
+| result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| partner_trade_no | string | 商户订单号
-| payment_no | string | 微信付款单号
-| payment_time | string | 付款成功时间
+| partner_trade_no {data-required}| string | 商户订单号
+| payment_no {data-required}| string | 微信付款单号
+| payment_time {data-required}| string | 付款成功时间
 
 {.im-table #response}
 
