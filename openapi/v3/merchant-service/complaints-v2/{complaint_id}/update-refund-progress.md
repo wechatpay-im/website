@@ -14,7 +14,7 @@ description: 商户可通过调用此接口，更新“申请退款”单据的�
 | action {data-required data-indent=1} | string | 审批动作<br/>`REJECT` \| `APPROVE` 枚举值之一
 | launch_refund_day {data-indent=1} | integer | 预计发起退款时间
 | reject_reason {data-indent=1} | string | 拒绝退款原因
-| reject_media_list {data-indent=1} | string[] | 如果有拒绝的图片举证，可以提供 最多上传4张图片, 传入调用“商户上传反馈图片”接口返回的media_id，最多上传4张图片凭证
+| reject_media_list {data-indent=1} | string[] | 拒绝退款的举证图片列表
 | remark {data-indent=1} | string | 备注
 
 {.im-table #request}

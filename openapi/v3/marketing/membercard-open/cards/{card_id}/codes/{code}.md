@@ -89,7 +89,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | custom_field_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商户自定义的开卡信息字段
 | name {data-indent=2} | string | 字段名称
 | value {data-indent=2} | string | 字段值
-| value_list {data-indent=2} | string[] | 
+| value_list {data-indent=2} | string[] | 字段值列表
 | bonus_value | integer | 用户当前积分
 
 {.im-table #response}

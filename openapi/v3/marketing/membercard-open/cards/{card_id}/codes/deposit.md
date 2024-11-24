@@ -11,7 +11,7 @@ description: 如果会员卡的code分配类型是“预存code”模式，商�
 | --- | --- | ---
 | card_id {data-required} | string | 会员卡id
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| code {data-indent=1} | string[] | 
+| code {data-indent=1} | string[] | 会员卡code
 
 {.im-table #request}
 

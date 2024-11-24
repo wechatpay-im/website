@@ -33,7 +33,7 @@ description: 针对被微信支付平台不收不付管控的电商子商户，�
 | proof_media_type {data-required data-indent=3} | string | 申请证明材料类型
 | proof_media {data-required data-indent=3} | string | 证明材料照片
 | additional_materials {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料
-| additional_media {data-indent=2} | string[] | 照片MediaID
+| additional_media {data-indent=2} | string[] | 补充材料照片列表，最多10张
 | remark {data-indent=1} | string | 备注
 | headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号

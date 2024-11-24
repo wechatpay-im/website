@@ -27,13 +27,13 @@ description:
 | amount {data-indent=2} | integer | 优惠金额
 | count {data-indent=2} | integer | 优惠数量
 | time_range {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务时间
-| start_time {data-indent=2} | string | 
-| start_time_remark {data-indent=2} | string | 
-| end_time {data-indent=2} | string | 
-| end_time_remark {data-indent=2} | string | 
+| start_time {data-indent=2} | string | 服务开始时间
+| start_time_remark {data-indent=2} | string | 服务开始时间备注
+| end_time {data-indent=2} | string | 服务结束时间
+| end_time_remark {data-indent=2} | string | 服务结束时间备注
 | location {data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务位置
-| start_location {data-indent=2} | string | 
-| end_location {data-indent=2} | string | 
+| start_location {data-indent=2} | string | 服务开始地点
+| end_location {data-indent=2} | string | 服务结束地点
 | risk_fund {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单风险金
 | name {data-required data-indent=2} | string | 风险金名称<br/>`DEPOSIT` \| `ADVANCE` \| `CASH_DEPOSIT` \| `ESTIMATE_ORDER_COST` 枚举值之一
 | amount {data-required data-indent=2} | integer | 风险金额
@@ -44,18 +44,18 @@ description:
 | sub_openid {data-indent=1} | string | 子商户公众号下的用户标识
 | need_user_confirm {data-indent=1} | boolean | 是否需要用户确认
 | mchid {data-indent=1} | string | 商户号
-| shopping_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| shopping_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 先用后付购物详情
 | real_merchant_appid {data-indent=2} | string | 实际购物商家公众号ID
-| jump_link {data-indent=2} | object {data-tooltip="对应PHP的array"} | 
+| jump_link {data-indent=2} | object {data-tooltip="对应PHP的array"} | 单详跳转链接
 | jump_link_type {data-indent=3} | string | 跳转链接类型<br/>`JUMP_LINK_MINI_PROGRAM` 枚举值
 | appid {data-indent=3} | string | 小程序跳转AppID
 | path {data-indent=3} | string | 小程序跳转path
-| goods {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 
+| goods {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 商品列表
 | name {data-indent=3} | string | 商品名称
 | picture {data-indent=3} | string | 商品图片链接
 | amount {data-indent=3} | integer | 商品单价金额
 | count {data-indent=3} | integer | 商品数量
-| category_id {data-indent=3} | string[] | 
+| category_id {data-indent=3} | string[] | 商品品类ID
 
 {.im-table #request}
 
@@ -83,14 +83,14 @@ $instance->v3->payscore->partner->servicepayondeliveryorder->postAsync([
       'count' => 2,
     ],],
     'time_range' => [
-      'start_time' => '',
-      'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'start_time' => '20091225091010',
+      'start_time_remark' => '备注1',
+      'end_time' => '20091225121010',
+      'end_time_remark' => '备注2',
     ],
     'location' => [
-      'start_location' => '',
-      'end_location' => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location' => '嗨客时尚主题展餐厅',
     ],
     'risk_fund' => [
       'name' => 'DEPOSIT',
@@ -148,14 +148,14 @@ $instance->chain('v3/payscore/partner/servicepayondeliveryorder')->postAsync([
       'count' => 2,
     ],],
     'time_range' => [
-      'start_time' => '',
-      'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'start_time' => '20091225091010',
+      'start_time_remark' => '备注1',
+      'end_time' => '20091225121010',
+      'end_time_remark' => '备注2',
     ],
     'location' => [
-      'start_location' => '',
-      'end_location' => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location' => '嗨客时尚主题展餐厅',
     ],
     'risk_fund' => [
       'name' => 'DEPOSIT',
@@ -213,14 +213,14 @@ $instance['v3/payscore/partner/servicepayondeliveryorder']->postAsync([
       'count' => 2,
     ],],
     'time_range' => [
-      'start_time' => '',
-      'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'start_time' => '20091225091010',
+      'start_time_remark' => '备注1',
+      'end_time' => '20091225121010',
+      'end_time_remark' => '备注2',
     ],
     'location' => [
-      'start_location' => '',
-      'end_location' => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location' => '嗨客时尚主题展餐厅',
     ],
     'risk_fund' => [
       'name' => 'DEPOSIT',
@@ -278,14 +278,14 @@ $response = $instance->v3->payscore->partner->servicepayondeliveryorder->post([
       'count' => 2,
     ],],
     'time_range' => [
-      'start_time' => '',
-      'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'start_time' => '20091225091010',
+      'start_time_remark' => '备注1',
+      'end_time' => '20091225121010',
+      'end_time_remark' => '备注2',
     ],
     'location' => [
-      'start_location' => '',
-      'end_location' => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location' => '嗨客时尚主题展餐厅',
     ],
     'risk_fund' => [
       'name' => 'DEPOSIT',
@@ -340,14 +340,14 @@ $response = $instance->chain('v3/payscore/partner/servicepayondeliveryorder')->p
       'count' => 2,
     ],],
     'time_range' => [
-      'start_time' => '',
-      'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'start_time' => '20091225091010',
+      'start_time_remark' => '备注1',
+      'end_time' => '20091225121010',
+      'end_time_remark' => '备注2',
     ],
     'location' => [
-      'start_location' => '',
-      'end_location' => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location' => '嗨客时尚主题展餐厅',
     ],
     'risk_fund' => [
       'name' => 'DEPOSIT',
@@ -402,14 +402,14 @@ $response = $instance['v3/payscore/partner/servicepayondeliveryorder']->post([
       'count' => 2,
     ],],
     'time_range' => [
-      'start_time' => '',
-      'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'start_time' => '20091225091010',
+      'start_time_remark' => '备注1',
+      'end_time' => '20091225121010',
+      'end_time_remark' => '备注2',
     ],
     'location' => [
-      'start_location' => '',
-      'end_location' => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location' => '嗨客时尚主题展餐厅',
     ],
     'risk_fund' => [
       'name' => 'DEPOSIT',
@@ -492,7 +492,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | picture {data-required data-indent=2} | string | 商品图片链接
 | amount {data-required data-indent=2} | number | 商品单价金额
 | count {data-required data-indent=2} | number | 商品数量
-| category_id {data-indent=2} | string[] | 
+| category_id {data-indent=2} | string[] | 商品品类ID
 
 {.im-table #response}
 

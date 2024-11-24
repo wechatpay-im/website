@@ -51,7 +51,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | certificate_letter_copy {data-indent=2} | string | 单位证明函照片
 | finance_institution_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 金融机构许可证信息
 | finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
-| finance_license_pics {data-indent=3} | string[] | 图片MediaID
+| finance_license_pics {data-indent=3} | string[] | 金融机构许可证图片
 | identity_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 经营者/法人身份证件
 | id_holder_type {data-indent=3} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
 | id_doc_type {data-required data-indent=3} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
@@ -116,12 +116,12 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | settlement_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算规则
 | settlement_id {data-indent=2} | string | 入驻结算规则ID
 | qualification_type {data-indent=2} | string | 所属行业
-| qualifications {data-indent=2} | string[] | 图片MediaID
+| qualifications {data-indent=2} | string[] | 特殊资质图片
 | activities_id {data-indent=2} | string | 优惠费率活动ID
 | activities_rate {data-indent=2} | string | 优惠费率活动值
 | debit_activities_rate {data-indent=2} | string | 非信用卡活动费率值
 | credit_activities_rate {data-indent=2} | string | 信用卡活动费率值
-| activities_additions {data-indent=2} | string[] | 图片MediaID
+| activities_additions {data-indent=2} | string[] | 优惠费率活动补充材料
 | bank_account_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算银行账户
 | bank_account_type {data-required data-indent=2} | string | 账户类型<br/>`BANK_ACCOUNT_TYPE_CORPORATE` \| `BANK_ACCOUNT_TYPE_PERSONAL` 枚举值之一
 | account_name {data-required data-indent=2} | string | 开户名称
@@ -133,7 +133,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | addition_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料
 | legal_person_commitment {data-indent=2} | string | 法人开户承诺函
 | legal_person_video {data-indent=2} | string | 法人开户意愿视频
-| business_addition_pics {data-indent=2} | string[] | 图片MediaID
+| business_addition_pics {data-indent=2} | string[] | 补充材料
 | business_addition_msg {data-indent=2} | string | 补充说明
 | headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号

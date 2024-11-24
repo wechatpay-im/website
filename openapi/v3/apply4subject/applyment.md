@@ -48,7 +48,7 @@
 | store_indoor_copy {data-indent=3} | string[] | 店内环境照片
 | finance_institution_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 金融机构许可证信息
 | finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
-| finance_license_pics {data-indent=3} | string[] | 图片MediaID
+| finance_license_pics {data-indent=3} | string[] | 金融机构许可证图片
 | identification_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 法人身份信息
 | id_holder_type {data-indent=2} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
 | identification_type {data-required data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
@@ -70,7 +70,7 @@
 | ubo_period_begin {data-required data-indent=2} | string | 证件有效期开始时间
 | ubo_period_end {data-required data-indent=2} | string | 证件有效期结束时间
 | addition_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料
-| confirm_mchid_list {data-indent=2} | string[] | 待确认商户号
+| confirm_mchid_list {data-indent=2} | string[] | 待确认商户号列表
 | query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | channel_id {data-indent=1} | string | 渠道商户号
 | headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数

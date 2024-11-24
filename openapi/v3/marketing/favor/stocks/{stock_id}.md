@@ -121,7 +121,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | city {data-indent=1} | string | 市
 | district {data-indent=1} | string | 区
 | country {data-indent=1} | string | 国家
-| available_industry_list | string[] | 
+| available_industry_list | string[] | 消费金可用行业
 
 {.im-table #response}
 

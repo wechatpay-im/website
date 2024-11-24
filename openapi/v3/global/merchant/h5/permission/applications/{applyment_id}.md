@@ -73,12 +73,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required}| string | 子商户号
-| domains {data-required}| string[] | 域名
+| domains {data-required}| string[] | H5支付域名
 | business_description | string | 公司介绍和业务描述
 | transaction_limit_type {data-required}| string | 限额类型
 | company_register_cert | string | 公司注册资质证书
-| website_business_page_pics | string[] | 图片MediaID
-| website_homepage_pics | string[] | 图片MediaID
+| website_business_page_pics | string[] | 经营网址商业页面截图
+| website_homepage_pics | string[] | 经营网址首页截图
 | website_state {data-required}| string | 子商户经营网址状态
 | website_url {data-required}| string | 子商户H5经营网址
 | applyment_id {data-required}| integer | 申请单号
@@ -100,11 +100,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
 | applyment_id {data-required} | integer | 申请单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| domains {data-required data-indent=1} | string[] | 域名
+| domains {data-required data-indent=1} | string[] | H5支付域名
 | business_description {data-indent=1} | string | 公司介绍和业务描述
 | company_register_cert {data-indent=1} | string | 公司注册资质证书
-| website_business_page_pics {data-indent=1} | string[] | 图片MediaID
-| website_homepage_pics {data-indent=1} | string[] | 图片MediaID
+| website_business_page_pics {data-indent=1} | string[] | 经营网址商业页面截图
+| website_homepage_pics {data-indent=1} | string[] | 经营网址首页截图
 | website_state {data-indent=1} | string | 子商户经营网址状态
 | website_url {data-indent=1} | string | 子商户H5经营网址
 
@@ -232,8 +232,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | business_description | string | 公司介绍和业务描述
 | transaction_limit_type {data-required}| string | 限额类型
 | company_register_cert | string | 公司注册资质证书
-| website_business_page_pics | string[] | 图片MediaID
-| website_homepage_pics | string[] | 图片MediaID
+| website_business_page_pics | string[] | 经营网址商业页面截图
+| website_homepage_pics | string[] | 经营网址首页截图
 | website_state {data-required}| string | 子商户经营网址状态
 | website_url {data-required}| string | 子商户H5经营网址
 | applyment_id {data-required}| integer | 申请单号

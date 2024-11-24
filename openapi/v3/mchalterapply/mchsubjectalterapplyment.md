@@ -33,7 +33,7 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | cert_period_end {data-required data-indent=2} | string | 有效期结束时间
 | finance_institution_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 金融机构许可证
 | finance_type {data-required data-indent=2} | string | 金融机构类型
-| finance_license_pics {data-required data-indent=2} | string[] | 图片MediaID
+| finance_license_pics {data-required data-indent=2} | string[] | 金融机构许可证图片
 | legal_person_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 法人身份信息
 | id_holder_type {data-required data-indent=2} | string | 证件持有人类型
 | id_doc_type {data-indent=2} | string | 证件类型
@@ -56,10 +56,10 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | card_period_begin {data-required data-indent=2} | string | 证件有效期开始时间
 | card_period_end {data-required data-indent=2} | string | 证件有效期结束时间
 | addition {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料列表
-| bank_openaccount_license {data-indent=2} | string[] | 图片MediaID
-| openaccount_approval {data-indent=2} | string[] | 图片MediaID
-| legal_other_prove {data-indent=2} | string[] | 图片MediaID
-| agency_prove {data-indent=2} | string[] | 图片MediaID
+| bank_openaccount_license {data-indent=2} | string[] | 银行开户许可证
+| openaccount_approval {data-indent=2} | string[] | 开户核准通知书
+| legal_other_prove {data-indent=2} | string[] | 法人身份辅助证明
+| agency_prove {data-indent=2} | string[] | 发证机关证明
 
 {.im-table #request}
 

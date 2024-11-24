@@ -128,7 +128,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | state {data-indent=2} | string | 支付分服务单状态
 | complaint_media_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 投诉资料列表
 | media_type {data-required data-indent=2} | string | 媒体文件业务类型<br/>`USER_COMPLAINT_IMAGE` \| `OPERATION_IMAGE` 枚举值之一
-| media_url {data-indent=2} | string[] | 媒体文件URL
+| media_url {data-indent=2} | string[] | 媒体文列表
 | complaint_full_refunded {data-required data-indent=1} | boolean | 投诉单是否已全额退款
 | incoming_user_response {data-required data-indent=1} | boolean | 是否有待回复的用户留言
 | problem_description {data-required data-indent=1} | string | 问题描述

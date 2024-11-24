@@ -6,7 +6,7 @@
 | --- | --- | ---
 | stock_id {data-required} | string | 批次号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| coupon_code_list {data-indent=1} | string[] | 
+| coupon_code_list {data-indent=1} | string[] | 券code列表
 | upload_request_no {data-required data-indent=1} | string | 请求业务单据号
 
 {.im-table #request}
@@ -95,7 +95,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | stock_id {data-required}| string | 批次号
 | total_count {data-required}| integer | 去重后上传code总数
 | success_count {data-required}| integer | 上传成功code个数
-| success_codes | string[] | 
+| success_codes | string[] | 上传成功的code列表
 | success_time {data-required}| string | 上传成功时间
 | fail_count | integer | 上传失败code个数
 | fail_codes | object[] {data-tooltip="对应PHP的array"} | 上传失败的code及原因
@@ -221,7 +221,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | total_count {data-required}| integer | 批次总数
 | limit {data-required}| integer | 分页大小
 | offset {data-required}| integer | 分页页码
-| data | object[] {data-tooltip="对应PHP的array"} | 
+| data | object[] {data-tooltip="对应PHP的array"} | 券code信息
 | code {data-indent=1} | string | 商户上传code
 | code_status {data-indent=1} | string | 商户上传code分配状态
 | upload_time {data-indent=1} | string | 上传时间

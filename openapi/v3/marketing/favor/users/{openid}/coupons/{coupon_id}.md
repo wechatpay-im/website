@@ -121,10 +121,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | consume_mchid {data-indent=1} | string | 核销商户号
 | transaction_id {data-indent=1} | string | 核销商户号
 | goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品信息
-| goods_id {data-indent=2} | string | 
-| quantity {data-indent=2} | integer | 
-| price {data-indent=2} | integer | 
-| discount_amount {data-indent=2} | integer | 
+| goods_id {data-indent=2} | string | 商品编码
+| quantity {data-indent=2} | integer | 商品数量
+| price {data-indent=2} | integer | 商品价格
+| discount_amount {data-indent=2} | integer | 商品优惠金额
 | available_balance | number | 剩余金额
 | business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
 

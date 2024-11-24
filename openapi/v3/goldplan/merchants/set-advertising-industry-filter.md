@@ -11,7 +11,7 @@ description: 服务商使用此接口为特约商户配置同业过滤标签，�
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-required data-indent=1} | string | 特约子商户号
-| advertising_industry_filters {data-indent=1} | string[] | 子商户同业过滤的同业过滤标签值<br/>`E_COMMERCE` \| `LOVE_MARRIAGE` \| `POTOGRAPHY` \| `EDUCATION` \| `FINANCE` \| `TOURISM` \| `SKINCARE` \| `FOOD` \| `SPORT` \| `JEWELRY_WATCH` \| `HEALTHCARE` \| `BUSSINESS` \| `PARENTING` \| `CATERING` \| `RETAIL` \| `SERVICES` \| `LAW` \| `ESTATE` \| `TRANSPORTATION` \| `ENERGY_SAVING` \| `SECURITY` \| `BUILDING_MATERIAL` \| `COMMUNICATION` \| `MERCHANDISE` \| `ASSOCIATION` \| `COMMUNITY` \| `ONLINE_AVR` \| `WE_MEDIA` \| `CAR` \| `SOFTWARE` \| `GAME` \| `CLOTHING` \| `INDUSTY` \| `AGRICULTURE` \| `PUBLISHING_MEDIA` \| `HOME_DIGITAL` 枚举值之一
+| advertising_industry_filters {data-indent=1} | string[] | 同业过滤标签值<br/>`E_COMMERCE` \| `LOVE_MARRIAGE` \| `POTOGRAPHY` \| `EDUCATION` \| `FINANCE` \| `TOURISM` \| `SKINCARE` \| `FOOD` \| `SPORT` \| `JEWELRY_WATCH` \| `HEALTHCARE` \| `BUSSINESS` \| `PARENTING` \| `CATERING` \| `RETAIL` \| `SERVICES` \| `LAW` \| `ESTATE` \| `TRANSPORTATION` \| `ENERGY_SAVING` \| `SECURITY` \| `BUILDING_MATERIAL` \| `COMMUNICATION` \| `MERCHANDISE` \| `ASSOCIATION` \| `COMMUNITY` \| `ONLINE_AVR` \| `WE_MEDIA` \| `CAR` \| `SOFTWARE` \| `GAME` \| `CLOTHING` \| `INDUSTY` \| `AGRICULTURE` \| `PUBLISHING_MEDIA` \| `HOME_DIGITAL` 枚举值之一
 
 {.im-table #request}
 

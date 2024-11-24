@@ -10,13 +10,13 @@ description: 该接口主要为商户提供营销资源的终止授权能力，�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| partner {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
-| type {data-required data-indent=2} | string | 
-| appid {data-indent=2} | string | 
-| merchant_id {data-indent=2} | string | 
-| authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
-| business_type {data-required data-indent=2} | string | 
-| stock_id {data-indent=2} | string | 
+| partner {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 合作方信息
+| type {data-required data-indent=2} | string | 合作方类别<br/>`APPID` \| `MERCHANT` 枚举值之一
+| appid {data-indent=2} | string | 合作方APPID
+| merchant_id {data-indent=2} | string | 合作方商户ID
+| authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 被授权数据
+| business_type {data-required data-indent=2} | string | 授权业务类别<br/>`FAVOR_STOCK` \| `BUSIFAVOR_STOCK` 枚举值之一
+| stock_id {data-indent=2} | string | 授权批次ID
 | headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 业务请求幂等值
 
@@ -28,12 +28,12 @@ description: 该接口主要为商户提供营销资源的终止授权能力，�
 $instance->v3->marketing->partnerships->terminate->postAsync([
   'json' => [
     'partner' => [
-      'type' => '',
+      'type' => 'APPID',
       'appid' => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
-      'business_type' => '',
+      'business_type' => 'FAVOR_STOCK',
       'stock_id' => '',
     ],
   ],
@@ -51,12 +51,12 @@ $instance->v3->marketing->partnerships->terminate->postAsync([
 $instance->chain('v3/marketing/partnerships/terminate')->postAsync([
   'json' => [
     'partner' => [
-      'type' => '',
+      'type' => 'APPID',
       'appid' => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
-      'business_type' => '',
+      'business_type' => 'FAVOR_STOCK',
       'stock_id' => '',
     ],
   ],
@@ -74,12 +74,12 @@ $instance->chain('v3/marketing/partnerships/terminate')->postAsync([
 $instance['v3/marketing/partnerships/terminate']->postAsync([
   'json' => [
     'partner' => [
-      'type' => '',
+      'type' => 'APPID',
       'appid' => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
-      'business_type' => '',
+      'business_type' => 'FAVOR_STOCK',
       'stock_id' => '',
     ],
   ],
@@ -97,12 +97,12 @@ $instance['v3/marketing/partnerships/terminate']->postAsync([
 $response = $instance->v3->marketing->partnerships->terminate->post([
   'json' => [
     'partner' => [
-      'type' => '',
+      'type' => 'APPID',
       'appid' => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
-      'business_type' => '',
+      'business_type' => 'FAVOR_STOCK',
       'stock_id' => '',
     ],
   ],
@@ -117,12 +117,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/partnerships/terminate')->post([
   'json' => [
     'partner' => [
-      'type' => '',
+      'type' => 'APPID',
       'appid' => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
-      'business_type' => '',
+      'business_type' => 'FAVOR_STOCK',
       'stock_id' => '',
     ],
   ],
@@ -137,12 +137,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/partnerships/terminate']->post([
   'json' => [
     'partner' => [
-      'type' => '',
+      'type' => 'APPID',
       'appid' => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
-      'business_type' => '',
+      'business_type' => 'FAVOR_STOCK',
       'stock_id' => '',
     ],
   ],

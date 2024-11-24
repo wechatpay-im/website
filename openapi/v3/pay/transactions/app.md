@@ -21,7 +21,7 @@ description: 商户系统先调用该接口在微信支付服务后台生成预�
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-required data-indent=1} | string | 通知地址
 | goods_tag {data-indent=1} | string | 订单优惠标记
-| limit_pay {data-indent=1} | string[] | 支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
+| limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
 | support_fapiao {data-indent=1} | boolean | 电子发票入口开放标识
 | detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | integer | 订单原价

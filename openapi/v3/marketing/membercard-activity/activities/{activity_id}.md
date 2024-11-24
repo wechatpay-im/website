@@ -112,7 +112,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | limit_bank {data-indent=2} | string | 指定银行的简称
 | goods_tags {data-indent=2} | string[] | 订单优惠标记
 | miniprogram_activity_setting | object {data-tooltip="对应PHP的array"} | 支付前会员活动设置
-| outer_str {data-indent=1} | string[] | 
+| outer_str {data-indent=1} | string[] | 指定领取渠道
 | award_jump_deploy {data-indent=1} | object {data-tooltip="对应PHP的array"} | 领奖页面跳转配置
 | mini_program_appid {data-indent=2} | string | 小程序AppID
 | mini_program_path {data-indent=2} | string | 小程序path

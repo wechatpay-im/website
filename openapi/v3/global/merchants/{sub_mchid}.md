@@ -176,7 +176,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | apply_h5_payment {data-indent=1} | boolean | 是否申请H5支付权限
 | h5_payment_apply_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | H5支付申请资料资料
 | website_url {data-indent=2} | string | H5经营网址
-| domains {data-indent=2} | string[] | 域名
+| domains {data-indent=2} | string[] | H5支付域名
 
 {.im-table #request}
 

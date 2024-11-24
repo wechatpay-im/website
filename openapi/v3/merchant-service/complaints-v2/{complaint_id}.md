@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | payer_openid | string | 投诉人openid
 | complaint_media_list | object[] {data-tooltip="对应PHP的array"} | 投诉资料列表
 | media_type {data-required data-indent=1} | string | 媒体文件业务类型<br/>`USER_COMPLAINT_IMAGE` \| `OPERATION_IMAGE` 枚举值之一
-| media_url {data-indent=1} | string[] | 媒体文件URL
+| media_url {data-indent=1} | string[] | 媒体文列表
 | complaint_order_info | object[] {data-tooltip="对应PHP的array"} | 投诉单关联订单信息
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号

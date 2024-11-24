@@ -20,7 +20,7 @@ description:
 | picture {data-required data-indent=3} | string | 商品图片链接
 | amount {data-required data-indent=3} | number | 商品单价金额
 | count {data-required data-indent=3} | number | 商品数量
-| category_id {data-indent=3} | string[] | 
+| category_id {data-indent=3} | string[] | 商品品类ID
 
 {.im-table #request}
 

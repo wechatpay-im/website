@@ -119,7 +119,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | time_expire | string | 交易结束时间
 | notify_url {data-required}| string | 通知地址
 | goods_tag | string | 订单优惠标记
-| limit_pay | string[] | 支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
+| limit_pay | string[] | 指定支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
 | support_fapiao | boolean | 电子发票入口开放标识
 | detail | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=1} | integer | 订单原价

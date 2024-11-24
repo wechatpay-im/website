@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code_information {data-required}| object {data-tooltip="对应PHP的array"} | 
+| code_information {data-required}| object {data-tooltip="对应PHP的array"} | 券code信息
 | code {data-indent=1} | string | 商户上传code
 | code_status {data-indent=1} | string | 商户上传code分配状态
 | upload_time {data-indent=1} | string | 上传时间
@@ -100,15 +100,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | openid {data-indent=1} | string | 领券用户的OpenID
 | unionid {data-indent=1} | string | 领券用户的UnionID
 | coupon_code {data-indent=1} | string | 用户券code
-| coupon_information {data-required}| object {data-tooltip="对应PHP的array"} | 
+| coupon_information {data-required}| object {data-tooltip="对应PHP的array"} | 券码信息
 | stock_name {data-required data-indent=1} | string | 商家券批次名称
 | belong_merchant {data-required data-indent=1} | string | 批次归属商户号
 | comment {data-indent=1} | string | 批次备注
 | goods_name {data-required data-indent=1} | string | 适用商品范围
 | stock_type {data-required data-indent=1} | string | 批次类型
-| transferable {data-indent=1} | boolean | 
-| shareable {data-indent=1} | boolean | 
-| coupon_state {data-indent=1} | string | 
+| transferable {data-indent=1} | boolean | 是否允许转赠
+| shareable {data-indent=1} | boolean | 是否允许分享领券链接
+| coupon_state {data-indent=1} | string | 券状态
 | coupon_use_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 核销规则
 | coupon_available_time {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
 | available_begin_time {data-required data-indent=3} | string | 开始时间

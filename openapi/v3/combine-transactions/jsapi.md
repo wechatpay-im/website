@@ -37,7 +37,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-required data-indent=1} | string | 通知地址
-| limit_pay {data-indent=1} | string[] | `no_balance` \| `no_debit` \| `balance_only` 枚举值之一
+| limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_debit` \| `balance_only` 枚举值之一
 
 {.im-table #request}
 

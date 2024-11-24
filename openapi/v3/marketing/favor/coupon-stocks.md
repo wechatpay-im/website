@@ -54,7 +54,7 @@ description: 通过调用此接口可创建代金券批次，包括预充值&免
 | limit_pay {data-indent=2} | string[] | 指定支付方式
 | limit_card {data-indent=2} | object {data-tooltip="对应PHP的array"} | 指定银行卡BIN
 | name {data-indent=3} | string | 银行卡名称
-| bin {data-indent=3} | string[] | 
+| bin {data-indent=3} | string[] | 指定卡BIN
 | trade_type {data-indent=2} | string[] | 支付方式<br/>`MICROAPP` \| `APPPAY` \| `PPAY` \| `CARD` \| `FACE` \| `OTHER` 枚举值之一
 | available_items {data-indent=2} | string[] | 可核销商品编码
 | unavailable_items {data-indent=2} | string[] | 不参与优惠商品编码

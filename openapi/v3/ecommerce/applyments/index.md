@@ -23,7 +23,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | business_time {data-indent=2} | string | 营业期限
 | finance_institution_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 金融机构许可证信息
 | finance_type {data-indent=2} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
-| finance_license_pics {data-indent=2} | string[] | 图片MediaID
+| finance_license_pics {data-indent=2} | string[] | 金融机构许可证图片
 | id_holder_type {data-indent=1} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
 | id_doc_type {data-indent=1} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | authorize_letter_copy {data-indent=1} | string | 法定代表人说明函

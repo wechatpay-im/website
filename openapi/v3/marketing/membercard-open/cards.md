@@ -35,7 +35,7 @@
 | custom_field_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 商户自定义的开卡信息字段
 | type {data-indent=3} | string | 商户自定义的开卡信息字段类型<br/>`TEXT` \| `SELECT` \| `RADIO` \| `CHECK_BOX` 枚举值之一
 | name {data-indent=3} | string | 字段名称
-| values {data-indent=3} | string[] | 
+| values {data-indent=3} | string[] | 字段值
 | additional_statement {data-indent=1} | object {data-tooltip="对应PHP的array"} | 商户补充声明
 | title {data-indent=2} | string | 标题
 | url {data-indent=2} | string | 跳转url

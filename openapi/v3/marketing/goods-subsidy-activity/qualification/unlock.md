@@ -16,7 +16,7 @@ description: 指定服务商可通过该接口报名加价购活动、查询某�
 | total_fee {data-indent=2} | number | 订单总金额
 | store_id {data-indent=2} | string | 门店ID
 | store_merchant_id {data-indent=2} | string | 门店商户号
-| qualification_ids {data-required data-indent=1} | string[] | 
+| qualification_ids {data-required data-indent=1} | string[] | 待锁定的加价购资格ID列表
 
 {.im-table #request}
 
@@ -132,8 +132,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | return_message | string | 返回结果文案
-| failed_qualification_ids | string[] | 
-| succeed_qualification_ids | string[] | 
+| failed_qualification_ids | string[] | 锁定失败的资格ID列表
+| succeed_qualification_ids | string[] | 锁定成功的资格ID列表
 
 {.im-table #response}
 

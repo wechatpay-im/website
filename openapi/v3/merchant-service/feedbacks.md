@@ -20,7 +20,7 @@ description: 商户上传反馈处理结果的接口。 包括商户反馈类型
 | complainted_mchid {data-required data-indent=1} | string | 被诉商户号
 | feedback_type {data-indent=1} | integer | 反馈内容类型
 | feedback_content {data-required data-indent=1} | string | 反馈内容
-| feedback_images {data-indent=1} | string[] | 
+| feedback_images {data-indent=1} | string[] | 图片凭证
 | launch_confirm_process {data-indent=1} | boolean | 反馈处理完成
 
 {.im-table #request}
