@@ -50,15 +50,13 @@ function webhookProcessor(\Psr\Http\Message\RequestInterface $request,
   // 转换通知的XML文本消息为PHP Array数组
   $inBodyArray = \WeChatPay\Transformer::toArray($inBody);
 
-  if (!\array_key_exists('req_info', $inBodyArray)) {
-    throw new \WeChatPay\Exception\InvalidArgumentException('通知的XML数据异常');
+  if (!\WeChatPay\Crypto\Hash::equals(\WeChatPay\Crypto\Hash::sign(
+    $inBodyArray['sign_type'] ?? \WeChatPay\Crypto\ALGO_MD5,
+    \WeChatPay\Formatter::queryStringLike(\WeChatPay\Formatter::ksort($inBodyArray)),
+    $apiv2Key), $inBodyArray['sign'] ?? null
+  )) {
+    throw new \WeChatPay\Exception\InvalidArgumentException('通知的数据签名校验未通过');
   }
-
-  $cipherKey = \WeChatPay\Crypto\Hash::md5($apiv2Key);
-
-  $plaintext = \WeChatPay\Crypto\AesEcb::decrypt($inBodyArray['req_info'], $cipherKey);
-
-  $inBodyArray['refund'] = \WeChatPay\Transformer::toArray($plaintext);
 
   return [
     'headers' => $request->getHeaders(),
