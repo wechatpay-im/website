@@ -127,6 +127,8 @@ export default defineConfig({
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
       '/devkit/': divkitSidebar(),
+      '/openapi/v2/applyment/': microMerchantSidebar(),
+      '/openapi/v2/fund/': microMerchantSidebar(),
       '/openapi/v2/secapi/mch/addsubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/querysubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/risk/getviolation': acquiringBankMgrSidebar(),
@@ -1462,6 +1464,30 @@ function openapiSidebar() {
       ]
     },
   ];
+}
+
+function microMerchantSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '小微特约商户',
+          collapsed: false,
+          items: [
+            ['申请入驻', '/openapi/v2/applyment/micro/submit'],
+            ['查询申请状态', '/openapi/v2/applyment/micro/getstate'],
+            ['修改联系信息', '/openapi/v2/applyment/micro/modifycontactinfo'],
+            ['修改结算银行卡', '/openapi/v2/applyment/micro/modifyarchives'],
+            ['提交升级申请单', '/openapi/v2/applyment/micro/submitupgrade'],
+            ['查询升级申请单状态', '/openapi/v2/applyment/micro/getupgradestate'],
+            ['签约报备', '/openapi/v2/applyment/micro/signcontract'],
+            ['查询提现状态', '/openapi/v2/fund/queryautowithdrawbydate'],
+            ['重新发起提现', '/openapi/v2/fund/reautowithdrawbydate'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
 }
 
 function acquiringBankMgrSidebar() {
