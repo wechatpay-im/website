@@ -127,10 +127,14 @@ export default defineConfig({
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
       '/devkit/': divkitSidebar(),
+      '/openapi/v2/secapi/mch/addsubdevconfig': acquiringBankMgrSidebar(),
+      '/openapi/v2/secapi/mch/querysubdevconfig': acquiringBankMgrSidebar(),
+      '/openapi/v2/risk/getviolation': acquiringBankMgrSidebar(),
+      '/webhook/v2/transcation-risk-occurred': acquiringBankMgrSidebar(),
+      '/openapi/v2/mchrisk/': acquiringBankMgrSidebar(),
       '/openapi/v3/iotmanage': offlineFacepaySidebar(),
       '/openapi/v3/offlineface': offlineFacepaySidebar(),
-      '/openapi/v3/bank-batch-transfer/': bankTransferSidebar(),
-      '/openapi/v3/bank-transfer/': bankTransferSidebar(),
+      '/openapi/v3/bank-': bankTransferSidebar(),
       '/openapi/v3/payscore/acquiringbank/': acquiringbankPayscoreSidebar(),
     },
   },
@@ -1458,6 +1462,38 @@ function openapiSidebar() {
       ]
     },
   ];
+}
+
+function acquiringBankMgrSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '银行服务商',
+          collapsed: false,
+          items: [
+            ...[
+              ['查询特约子商户配置信息', '/openapi/v2/secapi/mch/querysubdevconfig'],
+              ['设置特约子商户配置信息', '/openapi/v2/secapi/mch/addsubdevconfig'],
+              ['查询商户审核状态(间联模式)', '/openapi/v2/mchrisk/bankquerymchauditinfo'],
+              ['查询商户审核信息(渠道商)', '/openapi/v2/mchrisk/channelquerymchauditinfo'],
+              ['查询商户违规记录', '/openapi/v2/risk/getviolation'],
+            ].map(transArrayItem),
+            {
+              text: '风险服务',
+              collapsed: false,
+              items: [
+                ['设置风险通知回调链接', '/openapi/v2/mchrisk/setmchriskcallback'],
+                ['事前-风险商户核查', '/openapi/v2/mchrisk/querymchrisk'],
+                ['事中-风险交易通知', '/webhook/v2/transcation-risk-occurred'],
+                ['事后-风险处理结果同步', '/openapi/v2/mchrisk/syncmchriskresult'],
+              ].map(transArrayItem),
+            },
+          ],
+        },
+      ],
+    },
+  ]
 }
 
 function offlineFacepaySidebar() {

@@ -22,7 +22,7 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 | store_address {data-indent=1} | string | 门店地址
 | store_longitude {data-indent=1} | string | 门店经度
 | store_latitude {data-indent=1} | string | 门店纬度
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

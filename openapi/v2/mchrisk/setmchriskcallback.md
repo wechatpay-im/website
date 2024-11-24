@@ -12,7 +12,7 @@ description: 设置通知回调链接，当支付风险能力平台有事件通�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 服务商号
 | callback_url {data-required data-indent=1} | string | 回调链接
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 

@@ -13,8 +13,7 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 | mch_id {data-required data-indent=1} | string | 服务商号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | channel_id {data-required data-indent=1} | string | 渠道号
-| sign_type {data-required data-indent=1} | string | 签名类型
-| security {data-required} | `true` | 声明加载商户API证书
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 
@@ -28,7 +27,6 @@ $instance->v2->mchrisk->bankquerymchauditinfo->postAsync([
     'channel_id' => '999990017',
     'sign_type' => 'HMAC-SHA256',
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -44,7 +42,6 @@ $instance->chain('v2/mchrisk/bankquerymchauditinfo')->postAsync([
     'channel_id' => '999990017',
     'sign_type' => 'HMAC-SHA256',
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -60,7 +57,6 @@ $instance['v2/mchrisk/bankquerymchauditinfo']->postAsync([
     'channel_id' => '999990017',
     'sign_type' => 'HMAC-SHA256',
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -76,7 +72,6 @@ $response = $instance->v2->mchrisk->bankquerymchauditinfo->post([
     'channel_id' => '999990017',
     'sign_type' => 'HMAC-SHA256',
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -89,7 +84,6 @@ $response = $instance->chain('v2/mchrisk/bankquerymchauditinfo')->post([
     'channel_id' => '999990017',
     'sign_type' => 'HMAC-SHA256',
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -102,7 +96,6 @@ $response = $instance['v2/mchrisk/bankquerymchauditinfo']->post([
     'channel_id' => '999990017',
     'sign_type' => 'HMAC-SHA256',
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -123,8 +116,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | audit_comment {data-required}| string | 审核备注
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
-| sign_type | string | 签名类型
+| sign_type | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_291)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_295)

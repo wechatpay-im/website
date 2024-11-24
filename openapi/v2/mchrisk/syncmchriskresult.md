@@ -1,6 +1,6 @@
 ---
 title: 事后-风险商户处理结果同步接口
-description: 为了提升特约商户录入质量，发现并及时中止特约商户风险交易行为，现面向银行服务商开放风险商户数据，支持银行在录入商户前提前核查商户风险、了解风险交易、并且将风险处理结果同步微信支付。用于服务商/银行准入商户时，根据身份证，银行卡号，营业执照等信息查询商户是否有风险。
+description: 商户收到微信发送的商户风险交易推送后，调用该接口回传风险商户详细信息.
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -25,7 +25,7 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 | store_latitude {data-indent=1} | string | 门店纬度
 | risk_type {data-required data-indent=1} | string | 风险类型
 | punish_type {data-required data-indent=1} | string | 处罚方式
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
@@ -195,12 +195,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_291)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_293)

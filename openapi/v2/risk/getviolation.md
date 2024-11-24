@@ -1,6 +1,6 @@
 ---
 title: 银行特约商户违规信息查询
-description: 
+description: 方便银行服务商查询特约商户违规记录
 ---
 
 # {{ $frontmatter.title }} {#post}

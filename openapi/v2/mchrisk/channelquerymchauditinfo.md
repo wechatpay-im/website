@@ -13,7 +13,7 @@ description: 用于渠道商查询其下属关联机构进件的商户的审核�
 | mch_id {data-required data-indent=1} | string | 渠道商号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | acquiring_bank_id {data-required data-indent=1} | string | 服务商号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 
@@ -104,9 +104,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-required}| string | 返回结果
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
 | mch_id {data-required}| string | 服务商号
@@ -116,7 +116,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | audit_comment {data-required}| string | 审核备注
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
-| sign_type | string | 签名类型
+| sign_type | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #response}
 
