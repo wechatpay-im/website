@@ -1,5 +1,5 @@
 ---
-title: 查询用户信息
+title: 查询用户授权的实名信息
 description: 商户可以根据face_sid查询用户UnionId，调用该接口获取授权的实名信息商户需要先申请权限。
 ---
 

@@ -7,6 +7,12 @@ description: 商户通过该接口获取preopenid，跳转到签约小程序后�
 
 {{ $frontmatter.description }}
 
+::: danger :no_entry_sign: {.im-deprecated}
+
+本接口服务已于 `2019.12.16` (北京时间)下线，文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构

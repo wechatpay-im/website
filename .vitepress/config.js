@@ -135,6 +135,8 @@ export default defineConfig({
       '/openapi/v2/risk/getviolation': acquiringBankMgrSidebar(),
       '/webhook/v2/transactions-risk-occurred': acquiringBankMgrSidebar(),
       '/openapi/v2/mchrisk/': acquiringBankMgrSidebar(),
+      '/openapi/v3/ebike/': ebikeInstitutionSidebar(),
+      '/openapi/v3/facemch/': offlineFacepaySidebar(),
       '/openapi/v3/iotmanage': offlineFacepaySidebar(),
       '/openapi/v3/offlineface': offlineFacepaySidebar(),
       '/openapi/v3/bank-': bankTransferSidebar(),
@@ -1546,11 +1548,34 @@ function acquiringBankMgrSidebar() {
   ]
 }
 
+function ebikeInstitutionSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '电动自行车行业代扣',
+          collapsed: false,
+          items: [
+            ['通过用户标识查询用户状态', '/openapi/v3/ebike/charge/users/{openid}/contract'],
+            ['通过签约号查询用户状态', '/openapi/v3/ebike/charge/contracts/{contract_id}'],
+            ['预开通服务', '/openapi/v3/ebike/charge/contracts/preopen'],
+            ['创建用户当次充电代扣凭证', '/openapi/v3/ebike/charge/contracts/{contract_id}/confirm'],
+            ['查询订单(商户单号)', '/openapi/v3/ebike/charge/transactions/out-trade-no/{out_trade_no}'],
+            ['查询订单(平台单号)', '/openapi/v3/ebike/charge/transactions/id/{transaction_id}'],
+            ['申请代扣受理扣款', '/openapi/v3/ebike/charge/transactions'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
+}
+
 function offlineFacepaySidebar() {
   return [
     {
       items: [
         transArrayItem(['刷脸智能设备列表', '/openapi/v3/iotmanage/devices']),
+        transArrayItem(['查询用户授权的实名信息', '/openapi/v3/facemch/users/{face_sid}']),
         {
           text: 'K12刷脸代扣',
           collapsed: false,

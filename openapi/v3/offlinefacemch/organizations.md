@@ -1,6 +1,6 @@
 ---
 title: 查询机构信息接口
-description: 商户可以根据face_sid查询用户UnionId，调用该接口获取授权的实名信息商户需要先申请权限。
+description: 根据机构ID或者机构名称，查询入驻的机构信息
 ---
 
 # {{ $frontmatter.title }} {#get}
