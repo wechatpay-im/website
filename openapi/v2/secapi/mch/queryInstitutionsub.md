@@ -155,6 +155,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_mch_status | string | 子商户状态
 | application_status | string | 子商户入驻状态
 | application_reject_detail | string | 子商户入驻驳回详情
+| {colspan=3 .im-table-line}
+| reason {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 驳回原因列表
+| field {data-indent=2} | string | 字段
+| reason {data-indent=2} | string | 原因
 
 {.im-table #response}
 

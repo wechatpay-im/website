@@ -10,7 +10,7 @@ description: 重点注意：请求接口前请先在以下页面提交您的海�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` 枚举值
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号

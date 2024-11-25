@@ -18,7 +18,7 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | merchant_shortname {data-required data-indent=1} | string | 子商户简称
 | merchant_remark {data-required data-indent=1} | string | 子商户唯一标识
 | merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
-| merchant_type {data-required data-indent=1} | string | 商户类型
+| merchant_type {data-required data-indent=1} | string | 商户类型<br/>`ENTERPRISE` \| `INDIVIDUAL` 枚举值之一
 | business_category {data-required data-indent=1} | string | 业务类目
 | mcc {data-required data-indent=1} | string | MCC码
 | registration_certificate_number {data-required data-indent=1} | string | 公司注册文件编号
@@ -31,6 +31,8 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | mini_program {data-required data-indent=1} | string | 小程序
 | store_address {data-required data-indent=1} | string | 门店地址
 | store_photos {data-required data-indent=1} | string | 门店照片
+| {colspan=3 .im-table-line}
+| media_id {data-required data-indent=2} | string[] | 门店照片列表
 | director_name {data-required data-indent=1} | string | 董事姓名
 | director_id_number {data-required data-indent=1} | string | 董事证件号码
 | principal_name {data-required data-indent=1} | string | 负责人姓名
@@ -43,6 +45,8 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | apply_h5_payment {data-indent=1} | string | 是否申请H5支付权限<br/>`YES` \| `NO` 枚举值之一
 | h5_website_url {data-indent=1} | string | H5经营网址
 | h5_domains {data-indent=1} | string | H5支付域名
+| {colspan=3 .im-table-line}
+| domain {data-required data-indent=2} | string[] | 域名列表
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 | security {data-required} | `true` | 声明加载商户API证书
 

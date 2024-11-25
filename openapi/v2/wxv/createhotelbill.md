@@ -13,7 +13,7 @@ description: 创建订单后如果超过一小时用户没有进行确认订单�
 | version {data-required data-indent=1} | string | 接口版本号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | out_order_no {data-required data-indent=1} | string | 商户服务订单号
 | service_id {data-required data-indent=1} | string | 服务ID
 | room {data-required data-indent=1} | string | 房间

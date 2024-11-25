@@ -30,6 +30,8 @@ description: 用于机构子商户创建成功后，接口提供子商户信息�
 | mini_program {data-required data-indent=1} | string | 小程序
 | store_address {data-required data-indent=1} | string | 门店地址
 | store_photos {data-indent=1} | string | 门店照片
+| {colspan=3 .im-table-line}
+| media_id {data-required data-indent=2} | string[] | 门店照片列表
 | director_name {data-indent=1} | string | 董事姓名
 | director_id_number {data-indent=1} | string | 董事证件号码
 | principal_name {data-indent=1} | string | 负责人姓名
@@ -42,6 +44,8 @@ description: 用于机构子商户创建成功后，接口提供子商户信息�
 | apply_h5_payment {data-indent=1} | string | 是否申请H5支付权限<br/>`YES` \| `NO` 枚举值之一
 | h5_website_url {data-indent=1} | string | H5经营网址
 | h5_domains {data-indent=1} | string | H5支付域名
+| {colspan=3 .im-table-line}
+| domain {data-required data-indent=2} | string[] | 域名列表
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 | security {data-required} | `true` | 声明加载商户API证书
 

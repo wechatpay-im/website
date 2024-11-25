@@ -13,7 +13,7 @@ description: 前置条件：商户下单待受理后。
 | version {data-required data-indent=1} | string | 接口版本号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | out_order_no {data-required data-indent=1} | string | 商户服务订单号
 | return_query_id {data-required data-indent=1} | string | 回跳查询id
 | service_id {data-required data-indent=1} | string | 服务ID

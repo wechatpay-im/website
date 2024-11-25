@@ -129,6 +129,7 @@ export default defineConfig({
       '/devkit/': divkitSidebar(),
       '/openapi/v2/applyment/': microMerchantSidebar(),
       '/openapi/v2/fund/': microMerchantSidebar(),
+      '/openapi/v2/deposit/': depositSidebar(),
       '/openapi/v2/secapi/mch/addsubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/querysubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/risk/getviolation': acquiringBankMgrSidebar(),
@@ -1464,6 +1465,29 @@ function openapiSidebar() {
       ]
     },
   ];
+}
+
+function depositSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '酒店押金',
+          collapsed: false,
+          items: [
+            ['支付押金(付款码支付)', '/openapi/v2/deposit/micropay'],
+            ['支付押金(人脸支付)', '/openapi/v2/deposit/facepay'],
+            ['支付押金(统一下单)', '/openapi/v2/deposit/unifiedorder'],
+            ['查询订单', '/openapi/v2/deposit/orderquery'],
+            ['撤销订单', '/openapi/v2/deposit/reverse'],
+            ['消费押金', '/openapi/v2/deposit/consume'],
+            ['申请退款(押金)', '/openapi/v2/deposit/refund'],
+            ['查询退款(押金)', '/openapi/v2/deposit/refundquery'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
 }
 
 function microMerchantSidebar() {

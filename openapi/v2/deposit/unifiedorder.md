@@ -15,9 +15,18 @@ description: 微信支付提供了四种付款方式供用户支付押金：付�
 | sub_appid {data-indent=1} | string | 子商户应用ID
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | device_info {data-indent=1} | string | 设备号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 商品详情
+| detail {data-indent=1} | string | 单品优惠活动该字段必传，`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| cost_price {data-indent=2} | number | 订单原价
+| receipt_id {data-indent=2} | string | 商品小票ID
+| goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=3} | string | 商品编码
+| wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
+| goods_name {data-indent=3} | string | 商品名称
+| quantity {data-required data-indent=3} | number | 商品数量
+| price {data-required data-indent=3} | number | 商品单价
 | attach {data-indent=1} | string | 附加数据
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | fee_type {data-required data-indent=1} | string | 货币类型
@@ -26,17 +35,19 @@ description: 微信支付提供了四种付款方式供用户支付押金：付�
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-required data-indent=1} | string | 通知地址
-| trade_type {data-required data-indent=1} | string | 交易类型
+| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `APP` 枚举值之一
 | product_id {data-indent=1} | string | 商品ID
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
 | sub_openid {data-indent=1} | string | 用户子标识
-| receipt {data-indent=1} | string | 电子发票入口开放标识
-| scene_info {data-indent=1} | string | 场景信息
-| id {data-required data-indent=1} | string | 门店id
-| name {data-indent=1} | string | 门店名称
-| area_code {data-indent=1} | string | 门店行政区划码
-| address {data-indent=1} | string | 门店详细地址
+| receipt {data-indent=1} | string | 电子发票入口开放标识<br/>`Y` \| `N` 枚举值之一
+| scene_info {data-indent=1} | string | 场景信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 实际门店信息
+| id {data-required data-indent=3} | string | 门店id
+| name {data-indent=3} | string | 门店名称
+| area_code {data-indent=3} | string | 门店行政区划码
+| address {data-indent=3} | string | 门店详细地址
 
 {.im-table #request}
 
@@ -52,7 +63,7 @@ $instance->v2->deposit->unifiedorder->postAsync([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => '腾讯充值中心-QQ会员充值',
-    'detail' => 'Ipadmini16G白色',
+    'detail' => '{"goods_detail":[]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'fee_type' => 'CNY',
@@ -68,10 +79,6 @@ $instance->v2->deposit->unifiedorder->postAsync([
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'receipt' => 'Y',
     'scene_info' => '{"store_info":{"id":"SZTX001","name":"腾大餐厅","area_code":"440305","address":"科技园中一路腾讯大厦"}}',
-    'id' => 'SZTX001',
-    'name' => '腾讯大厦腾大餐厅',
-    'area_code' => '440305',
-    'address' => '科技园中一路腾讯大厦',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -90,7 +97,7 @@ $instance->chain('v2/deposit/unifiedorder')->postAsync([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => '腾讯充值中心-QQ会员充值',
-    'detail' => 'Ipadmini16G白色',
+    'detail' => '{"goods_detail":[]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'fee_type' => 'CNY',
@@ -106,10 +113,6 @@ $instance->chain('v2/deposit/unifiedorder')->postAsync([
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'receipt' => 'Y',
     'scene_info' => '{"store_info":{"id":"SZTX001","name":"腾大餐厅","area_code":"440305","address":"科技园中一路腾讯大厦"}}',
-    'id' => 'SZTX001',
-    'name' => '腾讯大厦腾大餐厅',
-    'area_code' => '440305',
-    'address' => '科技园中一路腾讯大厦',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -128,7 +131,7 @@ $instance['v2/deposit/unifiedorder']->postAsync([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => '腾讯充值中心-QQ会员充值',
-    'detail' => 'Ipadmini16G白色',
+    'detail' => '{"goods_detail":[]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'fee_type' => 'CNY',
@@ -144,10 +147,6 @@ $instance['v2/deposit/unifiedorder']->postAsync([
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'receipt' => 'Y',
     'scene_info' => '{"store_info":{"id":"SZTX001","name":"腾大餐厅","area_code":"440305","address":"科技园中一路腾讯大厦"}}',
-    'id' => 'SZTX001',
-    'name' => '腾讯大厦腾大餐厅',
-    'area_code' => '440305',
-    'address' => '科技园中一路腾讯大厦',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -166,7 +165,7 @@ $response = $instance->v2->deposit->unifiedorder->post([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => '腾讯充值中心-QQ会员充值',
-    'detail' => 'Ipadmini16G白色',
+    'detail' => '{"goods_detail":[]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'fee_type' => 'CNY',
@@ -182,10 +181,6 @@ $response = $instance->v2->deposit->unifiedorder->post([
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'receipt' => 'Y',
     'scene_info' => '{"store_info":{"id":"SZTX001","name":"腾大餐厅","area_code":"440305","address":"科技园中一路腾讯大厦"}}',
-    'id' => 'SZTX001',
-    'name' => '腾讯大厦腾大餐厅',
-    'area_code' => '440305',
-    'address' => '科技园中一路腾讯大厦',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -201,7 +196,7 @@ $response = $instance->chain('v2/deposit/unifiedorder')->post([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => '腾讯充值中心-QQ会员充值',
-    'detail' => 'Ipadmini16G白色',
+    'detail' => '{"goods_detail":[]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'fee_type' => 'CNY',
@@ -217,10 +212,6 @@ $response = $instance->chain('v2/deposit/unifiedorder')->post([
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'receipt' => 'Y',
     'scene_info' => '{"store_info":{"id":"SZTX001","name":"腾大餐厅","area_code":"440305","address":"科技园中一路腾讯大厦"}}',
-    'id' => 'SZTX001',
-    'name' => '腾讯大厦腾大餐厅',
-    'area_code' => '440305',
-    'address' => '科技园中一路腾讯大厦',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -236,7 +227,7 @@ $response = $instance['v2/deposit/unifiedorder']->post([
     'device_info' => '013467007045764',
     'sign_type' => 'HMAC-SHA256',
     'body' => '腾讯充值中心-QQ会员充值',
-    'detail' => 'Ipadmini16G白色',
+    'detail' => '{"goods_detail":[]}',
     'attach' => '说明',
     'out_trade_no' => '1217752501201407033233368018',
     'fee_type' => 'CNY',
@@ -252,10 +243,6 @@ $response = $instance['v2/deposit/unifiedorder']->post([
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'receipt' => 'Y',
     'scene_info' => '{"store_info":{"id":"SZTX001","name":"腾大餐厅","area_code":"440305","address":"科技园中一路腾讯大厦"}}',
-    'id' => 'SZTX001',
-    'name' => '腾讯大厦腾大餐厅',
-    'area_code' => '440305',
-    'address' => '科技园中一路腾讯大厦',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
