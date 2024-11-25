@@ -15,9 +15,18 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | device_info {data-indent=1} | string | 设备号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 单品优惠活动该字段必传，且必须按照规范上传，JSON格式
+| detail {data-indent=1} | string | 单品优惠活动该字段必传，`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| cost_price {data-indent=2} | number | 订单原价
+| receipt_id {data-indent=2} | string | 商品小票ID
+| goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=3} | string | 商品编码
+| wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
+| goods_name {data-indent=3} | string | 商品名称
+| quantity {data-required data-indent=3} | number | 商品数量
+| price {data-required data-indent=3} | number | 商品单价
 | attach {data-indent=1} | string | 附加数据
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | fee_type {data-indent=1} | string | 标价币种
@@ -32,7 +41,13 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
 | receipt {data-indent=1} | string | 电子发票入口开放标识
-| scene_info {data-indent=1} | string | +场景信息
+| scene_info {data-indent=1} | string | 场景信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 实际门店信息
+| id {data-required data-indent=3} | string | 门店id
+| name {data-indent=3} | string | 门店名称
+| area_code {data-indent=3} | string | 门店行政区划码
+| address {data-indent=3} | string | 门店详细地址
 
 {.im-table #request}
 
@@ -251,7 +266,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | prepay_id {data-required}| string | 预支付交易会话标识
 | code_url | string | 二维码链接
 | mweb_url | string | 支付跳转链接，**mweb_url为拉起微信支付收银台的中间页面，可通过访问该url来拉起微信客户端，完成支付,mweb_url的有效期为5分钟。**
-| promotion_detail | string | 营销详情
+| promotion_detail | string | 营销详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| promotion_id {data-required data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
+| amount {data-required data-indent=1} | string | 优惠券面额
+| activity_id {data-required data-indent=1} | string | 活动ID
+| wxpay_contribute {data-indent=1} | string | 微信出资
+| merchant_contribute {data-indent=1} | string | 商户出资
+| other_contribute {data-indent=1} | string | 其他出资
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 
 {.im-table #response}
 

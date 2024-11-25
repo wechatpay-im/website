@@ -18,7 +18,7 @@ description: 小微商户模式下，与微信支付对接的是服务商，小�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 小微商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | date {data-required data-indent=1} | string | 日期
 | security {data-required} | `true` | 声明加载商户API证书
 

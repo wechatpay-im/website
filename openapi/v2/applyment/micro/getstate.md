@@ -18,7 +18,7 @@ description: 使用申请入驻接口提交小微商户资料后，一般5分钟
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | version {data-required data-indent=1} | string | 接口版本号
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | applyment_id {data-indent=1} | string | 商户申请单号
 | business_code {data-indent=1} | string | 业务申请编号
 | security {data-required} | `true` | 声明加载商户API证书

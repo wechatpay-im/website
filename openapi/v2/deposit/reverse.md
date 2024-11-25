@@ -16,7 +16,7 @@ description: 押金退回:在未押金消费的情况下，商户可调用该接
 | sub_mch_id {data-indent=1} | string | 子商户号
 | transaction_id {data-indent=1} | string | 微信订单号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

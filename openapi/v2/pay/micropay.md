@@ -18,9 +18,18 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
 | device_info {data-indent=1} | string | 设备号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 单品优惠活动该字段必传，且必须按照规范上传，JSON格式
+| detail {data-indent=1} | string | 单品优惠活动该字段必传，`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| cost_price {data-indent=2} | number | 订单原价
+| receipt_id {data-indent=2} | string | 商品小票ID
+| goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=3} | string | 商品编码
+| wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
+| goods_name {data-indent=3} | string | 商品名称
+| quantity {data-required data-indent=3} | number | 商品数量
+| price {data-required data-indent=3} | number | 商品单价
 | attach {data-indent=1} | string | 附加数据
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | total_fee {data-required data-indent=1} | integer | 订单金额
@@ -32,7 +41,13 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 | time_expire {data-indent=1} | string | 交易结束时间
 | receipt {data-indent=1} | string | 电子发票入口开放标识
 | auth_code {data-required data-indent=1} | string | 授权码
-| scene_info {data-indent=1} | string | +场景信息
+| scene_info {data-indent=1} | string | 场景信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 实际门店信息
+| id {data-required data-indent=3} | string | 门店id
+| name {data-indent=3} | string | 门店名称
+| area_code {data-indent=3} | string | 门店行政区划码
+| address {data-indent=3} | string | 门店详细地址
 
 {.im-table #request}
 
@@ -263,7 +278,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | out_trade_no {data-required}| string | 商户订单号
 | attach | string | 商家数据包
 | time_end {data-required}| string | 支付完成时间
-| promotion_detail | string | 营销详情
+| promotion_detail | string | 营销详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| promotion_id {data-required data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
+| amount {data-required data-indent=1} | string | 优惠券面额
+| activity_id {data-required data-indent=1} | string | 活动ID
+| wxpay_contribute {data-indent=1} | string | 微信出资
+| merchant_contribute {data-indent=1} | string | 商户出资
+| other_contribute {data-indent=1} | string | 其他出资
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 
 {.im-table #response}
 

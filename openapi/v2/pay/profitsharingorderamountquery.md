@@ -12,7 +12,7 @@ description: 商户可通过调用此接口查询订单剩余待分金额。
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 

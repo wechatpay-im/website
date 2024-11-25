@@ -10,12 +10,21 @@ description: 如果使用不支持单品优惠部分退款的历史接口，请�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| detail {data-indent=1} | string | 退款包含的商品列表信息，全额退款可不传，必须按照规范上传，JSON格式
+| detail {data-indent=1} | string | 退款包含的商品列表信息，全额退款可不传`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| cost_price {data-indent=2} | number | 订单原价
+| receipt_id {data-indent=2} | string | 商品小票ID
+| goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=3} | string | 商品编码
+| wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
+| goods_name {data-indent=3} | string | 商品名称
+| quantity {data-required data-indent=3} | number | 商品数量
+| price {data-required data-indent=3} | number | 商品单价
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | out_refund_no {data-required data-indent=1} | string | 商户退款单号
@@ -216,7 +225,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | coupon_refund_fee_$n | integer | 单个代金券退款金额
 | coupon_refund_count | integer | 退款代金券使用数量
 | coupon_refund_id_$n | string | 退款代金券ID
-| promotion_detail | string | 营销详情列表
+| promotion_detail | string | 营销详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| promotion_id {data-required data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
+| amount {data-required data-indent=1} | string | 优惠券面额
+| activity_id {data-required data-indent=1} | string | 活动ID
+| wxpay_contribute {data-indent=1} | string | 微信出资
+| merchant_contribute {data-indent=1} | string | 商户出资
+| other_contribute {data-indent=1} | string | 其他出资
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 
 {.im-table #response}
 

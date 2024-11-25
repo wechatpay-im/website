@@ -138,7 +138,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | error_code_des | string | 错误代码描述
 | result_code {data-required}| string | 返回状态码
 | result_msg {data-required}| string | 错误码描述
-| violation_records | string | 违规记录数据
+| violation_records | string | 违规记录数据`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| total_size {data-required data-indent=1} | number | 记录总数
+| violation_records {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 违规记录列表
+| company_name {data-required data-indent=2} | string | 公司名称
+| handle_method {data-required data-indent=2} | string | 处理方式
+| handle_state {data-required data-indent=2} | string | 处理状态
+| punish_time {data-required data-indent=2} | string | 处罚时间
+| sub_mch_id {data-required data-indent=2} | string | 违规子商户号
+| deadline {data-indent=2} | string | 最后处理时间
 
 {.im-table #response}
 

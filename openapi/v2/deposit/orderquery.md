@@ -17,7 +17,7 @@ description: 该接口提供所有微信支付订单的查询，商户可以通�
 | sub_mch_id {data-indent=1} | string | 子商户号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 
 {.im-table #request}
 
@@ -166,7 +166,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | attach | string | 附加数据
 | time_end {data-required}| string | 支付完成时间
 | trade_state_desc {data-required}| string | 交易状态描述
-| promotion_detail | string | 营销详情列表，使返回值为Json格式
+| promotion_detail | string | 营销详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| promotion_id {data-required data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
+| amount {data-required data-indent=1} | string | 优惠券面额
+| activity_id {data-required data-indent=1} | string | 活动ID
+| wxpay_contribute {data-indent=1} | string | 微信出资
+| merchant_contribute {data-indent=1} | string | 商户出资
+| other_contribute {data-indent=1} | string | 其他出资
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 | consume_fee | integer | 押金消费金额
 
 {.im-table #response}

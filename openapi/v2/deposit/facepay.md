@@ -17,7 +17,16 @@ description: 商户通过支付押金（人脸）接口发起押金支付请求�
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | device_info {data-indent=1} | string | 设备号
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 商品详情
+| detail {data-indent=1} | string | 商品详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-required data-indent=3} | string | 商品编码
+| wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
+| goods_name {data-required data-indent=3} | string | 商品名称
+| goods_num {data-required data-indent=3} | number | 商品数量
+| price {data-required data-indent=3} | number | 商品单价
+| goods_category {data-indent=3} | string | 商品类目ID
+| body {data-indent=3} | string | 商品描述信息
 | attach {data-indent=1} | string | 附加数据
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | total_fee {data-required data-indent=1} | integer | 总金额
@@ -29,7 +38,7 @@ description: 商户通过支付押金（人脸）接口发起押金支付请求�
 | time_expire {data-indent=1} | string | 交易结束时间
 | openid {data-indent=1} | string | 用户标识
 | face_code {data-required data-indent=1} | string | 授权码
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 
@@ -244,6 +253,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | out_trade_no {data-required}| string | 商户订单号
 | attach | string | 商家数据包
 | time_end {data-required}| string | 支付完成时间
+| promotion_detail | string | 营销详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| promotion_id {data-required data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
+| amount {data-required data-indent=1} | string | 优惠券面额
+| activity_id {data-required data-indent=1} | string | 活动ID
+| wxpay_contribute {data-indent=1} | string | 微信出资
+| merchant_contribute {data-indent=1} | string | 商户出资
+| other_contribute {data-indent=1} | string | 其他出资
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 
 {.im-table #response}
 

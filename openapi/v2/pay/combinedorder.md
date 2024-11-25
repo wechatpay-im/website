@@ -13,7 +13,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | combine_appid {data-required data-indent=1} | string | 合单appid
 | combine_mch_id {data-required data-indent=1} | string | 合单商户号
 | device_info {data-indent=1} | string | 设备号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | combine_out_trade_no {data-required data-indent=1} | string | 合单商户订单号
 | spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | time_start {data-indent=1} | string | 交易起始时间
@@ -22,8 +22,31 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | trade_type {data-required data-indent=1} | string | 交易类型
 | product_id {data-indent=1} | string | 商品ID
 | combine_openid {data-indent=1} | string | 合单用户标识
-| scene_info {data-required data-indent=1} | string | 场景信息
-| sub_order_list {data-required data-indent=1} | string | +子单信息
+| scene_info {data-required data-indent=1} | string | 场景信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| device_id {data-indent=2} | string | 商户端设备号
+| payer_client_ip {data-required data-indent=2} | string | 用户终端IP
+| h5_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | H5场景信息
+| type {data-required data-indent=3} | string | 场景类型<br/>`iOS` \| `Android` \| `Wap` 枚举值之一
+| app_name {data-indent=3} | string | 应用名称
+| app_url {data-indent=3} | string | 网站URL
+| bundle_id {data-indent=3} | string | iOS平台BundleID
+| package_name {data-indent=3} | string | Android平台PackageName
+| sub_order_list {data-required data-indent=1} | string | 子单信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| order_num {data-required data-indent=2} | number | 子订单数
+| order_list {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 子订单信息
+| mchid {data-required data-indent=3} | string | 子单商户号
+| attach {data-required data-indent=3} | string | 附加数据
+| amount {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total_amount {data-required data-indent=4} | number | 标价金额
+| currency {data-indent=4} | string | 标价币种
+| out_trade_no {data-required data-indent=3} | string | 子单商户订单号
+| goods_tag {data-indent=3} | string | 订单优惠标记
+| description {data-required data-indent=3} | string | 商品描述
+| settle_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 结算信息
+| profit_sharing {data-indent=4} | boolean | 是否指定分账
+| subsidy_amount {data-indent=4} | number | 补差金额
 
 {.im-table #request}
 

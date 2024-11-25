@@ -14,7 +14,7 @@ description: 此功能需要接收方在商户平台-交易中心-分账-分账�
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | order_id {data-indent=1} | string | 微信分账单号
 | out_order_no {data-indent=1} | string | 商户分账单号
 | out_return_no {data-required data-indent=1} | string | 商户回退单号

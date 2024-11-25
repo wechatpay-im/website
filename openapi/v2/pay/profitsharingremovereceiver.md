@@ -14,8 +14,11 @@ description: 服务商代子商户发起删除分账接收方请求，删除后�
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| sign_type {data-indent=1} | string | 签名类型
-| receiver {data-required data-indent=1} | string | +分账接收方
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
+| receiver {data-required data-indent=1} | string | 分账接收方`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
+| account {data-required data-indent=2} | string | 分账接收方账号
 
 {.im-table #request}
 
@@ -29,7 +32,7 @@ $instance->v2->pay->profitsharingremovereceiver->postAsync([
     'appid' => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888888',
     'sign_type' => 'HMAC-SHA256',
-    'receiver' => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称"}',
+    'receiver' => '{"type": "MERCHANT_ID","account": "190001001"}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -46,7 +49,7 @@ $instance->chain('v2/pay/profitsharingremovereceiver')->postAsync([
     'appid' => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888888',
     'sign_type' => 'HMAC-SHA256',
-    'receiver' => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称"}',
+    'receiver' => '{"type": "MERCHANT_ID","account": "190001001"}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,7 +66,7 @@ $instance['v2/pay/profitsharingremovereceiver']->postAsync([
     'appid' => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888888',
     'sign_type' => 'HMAC-SHA256',
-    'receiver' => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称"}',
+    'receiver' => '{"type": "MERCHANT_ID","account": "190001001"}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,7 +83,7 @@ $response = $instance->v2->pay->profitsharingremovereceiver->post([
     'appid' => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888888',
     'sign_type' => 'HMAC-SHA256',
-    'receiver' => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称"}',
+    'receiver' => '{"type": "MERCHANT_ID","account": "190001001"}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -94,7 +97,7 @@ $response = $instance->chain('v2/pay/profitsharingremovereceiver')->post([
     'appid' => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888888',
     'sign_type' => 'HMAC-SHA256',
-    'receiver' => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称"}',
+    'receiver' => '{"type": "MERCHANT_ID","account": "190001001"}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -108,7 +111,7 @@ $response = $instance['v2/pay/profitsharingremovereceiver']->post([
     'appid' => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888888',
     'sign_type' => 'HMAC-SHA256',
-    'receiver' => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称"}',
+    'receiver' => '{"type": "MERCHANT_ID","account": "190001001"}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -129,7 +132,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| receiver {data-required}| string | 分账接收方
+| receiver {data-required}| string | 分账接收方`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
+| account {data-required data-indent=1} | string | 分账接收方账号
 
 {.im-table #response}
 

@@ -14,7 +14,7 @@ description: 注意：本接口支持查询单品优惠相关退款信息，且�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | sub_mch_id {data-indent=1} | string | 子商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | out_refund_no {data-required data-indent=1} | string | 商户退款单号
@@ -179,6 +179,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | refund_account_$n | string | 退款资金来源
 | refund_recv_accout_$n {data-required}| string | 退款入账账户
 | refund_success_time_$n | string | 退款成功时间
+| promotion_detail | string | 营销详情`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| promotion_id {data-required data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
+| amount {data-required data-indent=1} | string | 优惠券面额
+| activity_id {data-required data-indent=1} | string | 活动ID
+| wxpay_contribute {data-indent=1} | string | 微信出资
+| merchant_contribute {data-indent=1} | string | 商户出资
+| other_contribute {data-indent=1} | string | 其他出资
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 
 {.im-table #response}
 

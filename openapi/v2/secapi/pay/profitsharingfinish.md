@@ -13,7 +13,7 @@ description: 1、不需要进行分账的订单，可直接调用本接口将订
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
 | description {data-required data-indent=1} | string | 分账完结描述

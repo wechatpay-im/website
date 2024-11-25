@@ -19,13 +19,15 @@ description: 使用申请入驻接口提交你的小微商户资料，申请后�
 | version {data-required data-indent=1} | string | 接口版本号
 | cert_sn {data-required data-indent=1} | string | 平台证书序列号
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | business_code {data-required data-indent=1} | string | 业务申请编号
 | id_card_copy {data-required data-indent=1} | string | 身份证人像面照片
 | id_card_national {data-required data-indent=1} | string | 身份证国徽面照片
 | id_card_name {data-required data-indent=1} | string | 身份证姓名
 | id_card_number {data-required data-indent=1} | string | 身份证号码
-| id_card_valid_time {data-required data-indent=1} | string | 身份证有效期限
+| id_card_valid_time {data-required data-indent=1} | string | 身份证有效期限`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| period {data-required data-indent=2} | string[] | 有效期限
 | account_name {data-required data-indent=1} | string | 开户名称
 | account_bank {data-required data-indent=1} | string | 开户银行
 | bank_address_code {data-required data-indent=1} | string | 开户银行省市编码
@@ -45,6 +47,8 @@ description: 使用申请入驻接口提交你的小微商户资料，申请后�
 | rate {data-required data-indent=1} | string | 费率
 | business_addition_desc {data-indent=1} | string | 补充说明
 | business_addition_pics {data-indent=1} | string | 补充材料
+| {colspan=3 .im-table-line}
+| media_id {data-required data-indent=2} | string[] | 图片列表
 | contact {data-required data-indent=1} | string | 超级管理员姓名
 | contact_phone {data-required data-indent=1} | string | 手机号码
 | contact_email {data-indent=1} | string | 联系邮箱

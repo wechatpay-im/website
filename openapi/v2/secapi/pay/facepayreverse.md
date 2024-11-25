@@ -1,6 +1,6 @@
 ---
 title: 撤销订单
-description: 
+description: 支付交易返回失败或支付系统超时，调用该接口撤销交易。如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。调用支付接口后请勿立即调用撤销订单API，建议支付后至少15s后再调用撤销订单接口。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -16,7 +16,7 @@ description:
 | sub_mch_id {data-indent=1} | string | 子商户号
 | transaction_id {data-indent=1} | string | 微信订单号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

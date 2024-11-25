@@ -14,19 +14,27 @@ description: 在停车场场景下，如用户已加入车主平台，则进行�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_appid {data-required data-indent=1} | string | 子商户公众账号id
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | version {data-required data-indent=1} | string | 版本号
-| trade_scene {data-required data-indent=1} | string | 交易场景
-| scene_info {data-required data-indent=1} | string | 场景信息
-| start_time {data-required data-indent=1} | string | 入场时间
-| plate_number {data-required data-indent=1} | string | 车牌号
-| notify_url {data-indent=1} | string | 回调通知URL
-| car_type {data-indent=1} | string | 车辆类型
-| parking_name {data-required data-indent=1} | string | 停车场名称
-| free_time {data-required data-indent=1} | string | 免费时长
-| openid {data-required data-indent=1} | string | 用户标识
-| sub_openid {data-indent=1} | string | 用户子标识
-| space_number {data-required data-indent=1} | string | 车位编号
+| trade_scene {data-required data-indent=1} | string | 交易场景<br/>`PARKING` \| `PARKING SPACE` 枚举值之一
+| scene_info {data-required data-indent=1} | string | 场景信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`PARKING`信息
+| start_time {data-required data-indent=3} | string | 入场时间
+| notify_url {data-indent=3} | string | 回调通知URL
+| plate_number {data-required data-indent=3} | string | 车牌号
+| car_type {data-indent=3} | string | 车辆类型
+| parking_name {data-required data-indent=3} | string | 停车场名称
+| free_time {data-required data-indent=3} | string | 免费时长
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`PARKING SPACE`信息
+| start_time {data-required data-indent=3} | string | 入场时间
+| car_type {data-indent=3} | string | 车辆类型
+| parking_name {data-indent=3} | string | 停车场名称
+| free_time {data-required data-indent=3} | string | 免费时长
+| openid {data-indent=3} | string | 用户标识
+| sub_openid {data-indent=3} | string | 用户子标识
+| space_number {data-required data-indent=3} | string | 车位编号
 
 {.im-table #request}
 
@@ -43,15 +51,6 @@ $instance->v2->vehicle->partnerpay->notification->postAsync([
     'version' => '3.0',
     'trade_scene' => 'PARKING',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'plate_number' => '粤B888888',
-    'notify_url' => 'https://weixin.qq.com',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'free_time' => '1200',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'space_number' => 'D6666',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,15 +70,6 @@ $instance->chain('v2/vehicle/partnerpay/notification')->postAsync([
     'version' => '3.0',
     'trade_scene' => 'PARKING',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'plate_number' => '粤B888888',
-    'notify_url' => 'https://weixin.qq.com',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'free_time' => '1200',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'space_number' => 'D6666',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -99,15 +89,6 @@ $instance['v2/vehicle/partnerpay/notification']->postAsync([
     'version' => '3.0',
     'trade_scene' => 'PARKING',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'plate_number' => '粤B888888',
-    'notify_url' => 'https://weixin.qq.com',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'free_time' => '1200',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'space_number' => 'D6666',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -127,15 +108,6 @@ $response = $instance->v2->vehicle->partnerpay->notification->post([
     'version' => '3.0',
     'trade_scene' => 'PARKING',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'plate_number' => '粤B888888',
-    'notify_url' => 'https://weixin.qq.com',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'free_time' => '1200',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'space_number' => 'D6666',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -152,15 +124,6 @@ $response = $instance->chain('v2/vehicle/partnerpay/notification')->post([
     'version' => '3.0',
     'trade_scene' => 'PARKING',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'plate_number' => '粤B888888',
-    'notify_url' => 'https://weixin.qq.com',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'free_time' => '1200',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'space_number' => 'D6666',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -177,15 +140,6 @@ $response = $instance['v2/vehicle/partnerpay/notification']->post([
     'version' => '3.0',
     'trade_scene' => 'PARKING',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'plate_number' => '粤B888888',
-    'notify_url' => 'https://weixin.qq.com',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'free_time' => '1200',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'space_number' => 'D6666',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -206,8 +160,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required}| string | 业务结果
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| user_state {data-required}| string | 用户状态
-| deduct_mode | string | 发起扣费方式
+| user_state {data-required}| string | 用户状态<br/>`NORMAL` \| `BLOCK` 枚举值之一
+| deduct_mode | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
 
 {.im-table #response}
 

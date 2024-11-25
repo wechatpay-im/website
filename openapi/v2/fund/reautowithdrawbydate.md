@@ -19,7 +19,7 @@ description: 微信支付已完成小微商户提现功能的升级，小微商�
 | mch_id {data-required data-indent=1} | string | 服务商商户号
 | sub_mch_id {data-required data-indent=1} | string | 小微商户号
 | date {data-required data-indent=1} | string | 自动提现单提现日期
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

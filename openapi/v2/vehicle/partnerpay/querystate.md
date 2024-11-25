@@ -14,7 +14,7 @@ description: 在停车场、高速、加油等场景下，商户需获取用户�
 | sub_appid {data-required data-indent=1} | string | 子商户公众账号id
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | trade_scene {data-required data-indent=1} | string | 交易场景
 | jump_scene {data-indent=1} | string | 跳转场景
 | openid {data-required data-indent=1} | string | 用户标识
@@ -156,9 +156,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_openid | string | 用户子标识
 | path | string | 跳转路径
 | plate_number_info | string | 车牌信息
-| plate_number {data-required}| string | 车牌号
-| channel_type | string | 车牌通道标识
-| common_use_flag | string | 常用车牌标志
+| {colspan=3 .im-table-line}
+| plate_number_info {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 车牌信息列表
+| plate_number {data-indent=2} | string | 车牌号
+| channel_type {data-indent=2} | string | 车牌通道标识
+| common_use_flag {data-indent=2} | string | 常用车牌标志
 
 {.im-table #response}
 

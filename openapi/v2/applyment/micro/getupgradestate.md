@@ -18,7 +18,7 @@ description: 使用“提交升级申请单”接口后，可不定期调用此�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | version {data-required data-indent=1} | string | 接口版本号
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | sub_mch_id {data-required data-indent=1} | string | 小微商户号
 | security {data-required} | `true` | 声明加载商户API证书
 

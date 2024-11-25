@@ -19,7 +19,7 @@ description: 微信支付根据商户指令，将用户消费金额扣除手续�
 | total_fee {data-required data-indent=1} | integer | 押金总金额
 | consume_fee {data-required data-indent=1} | integer | 消费金额
 | fee_type {data-required data-indent=1} | string | 货币类型
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

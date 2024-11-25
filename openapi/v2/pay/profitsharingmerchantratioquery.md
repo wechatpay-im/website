@@ -13,7 +13,7 @@ description: 服务商可以查询子商户设置的允许服务商分账的最�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
 | brand_mch_id {data-indent=1} | string | 品牌主商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 

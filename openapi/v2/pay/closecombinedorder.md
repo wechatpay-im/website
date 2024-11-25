@@ -12,9 +12,13 @@ description: 合单支付订单只能使用此合单关单api完成关单。调�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | combine_appid {data-required data-indent=1} | string | 合单appid
 | combine_mch_id {data-required data-indent=1} | string | 合单商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | combine_out_trade_no {data-required data-indent=1} | string | 合单商户订单号
-| sub_order_list {data-required data-indent=1} | string | +子单信息
+| sub_order_list {data-required data-indent=1} | string | 子单信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| order {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| mchid {data-required data-indent=3} | string | 子单商户号
+| out_trade_no {data-required data-indent=3} | string | 子单商户订单号
 
 {.im-table #request}
 
@@ -27,7 +31,7 @@ $instance->v2->pay->closecombinedorder->postAsync([
     'combine_mch_id' => '1900000109',
     'sign_type' => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","mch_id": "1900009001","out_trade_no": "OD201708030001","sub_appid": "wxdace645e0bc2c423","sub_mch_id": 1900009002}],"order_num": 3}',
+    'sub_order_list' => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,7 +47,7 @@ $instance->chain('v2/pay/closecombinedorder')->postAsync([
     'combine_mch_id' => '1900000109',
     'sign_type' => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","mch_id": "1900009001","out_trade_no": "OD201708030001","sub_appid": "wxdace645e0bc2c423","sub_mch_id": 1900009002}],"order_num": 3}',
+    'sub_order_list' => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,7 +63,7 @@ $instance['v2/pay/closecombinedorder']->postAsync([
     'combine_mch_id' => '1900000109',
     'sign_type' => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","mch_id": "1900009001","out_trade_no": "OD201708030001","sub_appid": "wxdace645e0bc2c423","sub_mch_id": 1900009002}],"order_num": 3}',
+    'sub_order_list' => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,7 +79,7 @@ $response = $instance->v2->pay->closecombinedorder->post([
     'combine_mch_id' => '1900000109',
     'sign_type' => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","mch_id": "1900009001","out_trade_no": "OD201708030001","sub_appid": "wxdace645e0bc2c423","sub_mch_id": 1900009002}],"order_num": 3}',
+    'sub_order_list' => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -88,7 +92,7 @@ $response = $instance->chain('v2/pay/closecombinedorder')->post([
     'combine_mch_id' => '1900000109',
     'sign_type' => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","mch_id": "1900009001","out_trade_no": "OD201708030001","sub_appid": "wxdace645e0bc2c423","sub_mch_id": 1900009002}],"order_num": 3}',
+    'sub_order_list' => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -101,7 +105,7 @@ $response = $instance['v2/pay/closecombinedorder']->post([
     'combine_mch_id' => '1900000109',
     'sign_type' => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","mch_id": "1900009001","out_trade_no": "OD201708030001","sub_appid": "wxdace645e0bc2c423","sub_mch_id": 1900009002}],"order_num": 3}',
+    'sub_order_list' => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

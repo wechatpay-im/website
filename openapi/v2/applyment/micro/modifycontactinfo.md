@@ -12,7 +12,7 @@ description:
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | version {data-required data-indent=1} | string | 接口版本号
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | sub_mch_id {data-required data-indent=1} | string | 小微商户号
 | mobile_phone {data-indent=1} | string | 手机号
 | email {data-indent=1} | string | 邮箱

@@ -15,7 +15,7 @@ description: 该接口仅提供微信代扣订单的查询，商户可以通过�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 

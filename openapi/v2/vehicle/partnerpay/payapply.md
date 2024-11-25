@@ -14,7 +14,7 @@ description: 委托代扣可应用于定期扣款或需事后扣款以期提高�
 | sub_appid {data-required data-indent=1} | string | 子商户公众账号id
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 商品详情
 | attach {data-indent=1} | string | 附加数据
@@ -29,27 +29,54 @@ description: 委托代扣可应用于定期扣款或需事后扣款以期提高�
 | trade_scene {data-required data-indent=1} | string | 交易场景
 | openid {data-indent=1} | string | 用户标识
 | profit_sharing {data-indent=1} | string | 分账标识
-| scene_info {data-required data-indent=1} | string | 场景信息
-| start_time {data-required data-indent=1} | string | 交易时间
-| end_time {data-required data-indent=1} | string | 结束时间
-| charging_time {data-required data-indent=1} | string | 计费时长
-| plate_number {data-required data-indent=1} | string | 车牌号
-| car_type {data-required data-indent=1} | string | 车辆类型
-| parking_name {data-required data-indent=1} | string | 停车场名称
-| deduct_mode {data-required data-indent=1} | string | 发起扣费方式
-| support_deduct_mode {data-required data-indent=1} | string | 支持的扣费方式
-| space_number {data-required data-indent=1} | string | 车位编号
-| gas_station {data-required data-indent=1} | string | 加油站名称
-| gas_label_name {data-required data-indent=1} | string | 油品标号名
-| gas_type {data-required data-indent=1} | string | 油品类型名称
-| gas_standard {data-required data-indent=1} | string | 油品标准
-| gas_amount {data-required data-indent=1} | string | 油量
-| gas_gun_no {data-required data-indent=1} | string | 油枪号
-| entrance_name {data-required data-indent=1} | string | 入口站名称
-| exit_name {data-required data-indent=1} | string | 出口名称
-| carrying_capacity {data-indent=1} | string | 核载人数
-| carrying_range {data-indent=1} | string | 核载区间
-| channel_type {data-required data-indent=1} | string | 通道类型
+| scene_info {data-required data-indent=1} | string | 场景信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`PARKING`信息
+| start_time {data-required data-indent=3} | string | 交易时间
+| end_time {data-indent=3} | string | 结束时间
+| charging_time {data-required data-indent=3} | string | 计费时长
+| plate_number {data-required data-indent=3} | string | 车牌号
+| car_type {data-indent=3} | string | 车辆类型
+| parking_name {data-required data-indent=3} | string | 停车场名称
+| free_time {data-indent=3} | string | 免费时长(秒)
+| deduct_mode {data-required data-indent=3} | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
+| support_deduct_mode {data-required data-indent=3} | string | 支持的扣费方式<br/>`DEDUCT_PROACTIVE_ONLY` \| `DEDUCT_AUTOPAY_ONLY` \| `DEDUCT_ALL` 枚举值之一
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`PARKING SPACE`信息
+| start_time {data-required data-indent=3} | string | 交易时间
+| end_time {data-indent=3} | string | 结束时间
+| charging_time {data-required data-indent=3} | string | 计费时长
+| car_type {data-indent=3} | string | 车辆类型
+| parking_name {data-indent=3} | string | 停车场名称
+| space_number {data-required data-indent=3} | string | 车位编号
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`GAS`信息
+| start_time {data-required data-indent=3} | string | 交易时间
+| plate_number {data-required data-indent=3} | string | 车牌号
+| car_type {data-indent=3} | string | 车辆类型
+| gas_station {data-required data-indent=3} | string | 加油站名称
+| gas_label_name {data-required data-indent=3} | string | 油品标号名
+| gas_type {data-required data-indent=3} | string | 油品类型名称
+| gas_standard {data-required data-indent=3} | string | 油品标准
+| gas_amount {data-required data-indent=3} | string | 油量
+| gas_gun_no {data-required data-indent=3} | string | 油枪号
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`HIGHWAY`信息
+| start_time {data-required data-indent=3} | string | 交易时间
+| end_time {data-required data-indent=3} | string | 结束时间
+| plate_number {data-required data-indent=3} | string | 车牌号
+| car_type {data-required data-indent=3} | string | 车辆类型
+| entrance_name {data-required data-indent=3} | string | 入口站名称
+| exit_name {data-required data-indent=3} | string | 出口名称
+| carrying_capacity {data-indent=3} | string | 核载人数
+| carrying_range {data-indent=3} | string | 核载区间
+| channel_type {data-required data-indent=3} | string | 通道类型<br/>`ETC` \| `MTC` 枚举值之一
+| {colspan=3 .im-table-line}
+| scene_info {data-required data-indent=2} | object | 场景`BRIDGE`信息
+| start_time {data-required data-indent=3} | string | 交易时间
+| plate_number {data-required data-indent=3} | string | 车牌号
+| car_type {data-indent=3} | string | 车辆类型
+| exit_name {data-required data-indent=3} | string | 出口名称
 
 {.im-table #request}
 
@@ -78,26 +105,6 @@ $instance->v2->vehicle->partnerpay->payapply->postAsync([
     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'profit_sharing' => 'Y',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'end_time' => '20170826114339',
-    'charging_time' => '3600',
-    'plate_number' => '粤B888888',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'deduct_mode' => 'PROACTIVE',
-    'support_deduct_mode' => 'DEDUCT_PROACTIVE_ONLY',
-    'space_number' => 'D6666',
-    'gas_station' => '中国石油加油站',
-    'gas_label_name' => '98',
-    'gas_type' => '汽油',
-    'gas_standard' => '国V',
-    'gas_amount' => '50120',
-    'gas_gun_no' => '10',
-    'entrance_name' => '沿江深圳-大铲湾',
-    'exit_name' => '虎门大桥',
-    'carrying_capacity' => '10',
-    'carrying_range' => '6-12',
-    'channel_type' => 'ETC',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -129,26 +136,6 @@ $instance->chain('v2/vehicle/partnerpay/payapply')->postAsync([
     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'profit_sharing' => 'Y',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'end_time' => '20170826114339',
-    'charging_time' => '3600',
-    'plate_number' => '粤B888888',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'deduct_mode' => 'PROACTIVE',
-    'support_deduct_mode' => 'DEDUCT_PROACTIVE_ONLY',
-    'space_number' => 'D6666',
-    'gas_station' => '中国石油加油站',
-    'gas_label_name' => '98',
-    'gas_type' => '汽油',
-    'gas_standard' => '国V',
-    'gas_amount' => '50120',
-    'gas_gun_no' => '10',
-    'entrance_name' => '沿江深圳-大铲湾',
-    'exit_name' => '虎门大桥',
-    'carrying_capacity' => '10',
-    'carrying_range' => '6-12',
-    'channel_type' => 'ETC',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -180,26 +167,6 @@ $instance['v2/vehicle/partnerpay/payapply']->postAsync([
     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'profit_sharing' => 'Y',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'end_time' => '20170826114339',
-    'charging_time' => '3600',
-    'plate_number' => '粤B888888',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'deduct_mode' => 'PROACTIVE',
-    'support_deduct_mode' => 'DEDUCT_PROACTIVE_ONLY',
-    'space_number' => 'D6666',
-    'gas_station' => '中国石油加油站',
-    'gas_label_name' => '98',
-    'gas_type' => '汽油',
-    'gas_standard' => '国V',
-    'gas_amount' => '50120',
-    'gas_gun_no' => '10',
-    'entrance_name' => '沿江深圳-大铲湾',
-    'exit_name' => '虎门大桥',
-    'carrying_capacity' => '10',
-    'carrying_range' => '6-12',
-    'channel_type' => 'ETC',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -231,26 +198,6 @@ $response = $instance->v2->vehicle->partnerpay->payapply->post([
     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'profit_sharing' => 'Y',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'end_time' => '20170826114339',
-    'charging_time' => '3600',
-    'plate_number' => '粤B888888',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'deduct_mode' => 'PROACTIVE',
-    'support_deduct_mode' => 'DEDUCT_PROACTIVE_ONLY',
-    'space_number' => 'D6666',
-    'gas_station' => '中国石油加油站',
-    'gas_label_name' => '98',
-    'gas_type' => '汽油',
-    'gas_standard' => '国V',
-    'gas_amount' => '50120',
-    'gas_gun_no' => '10',
-    'entrance_name' => '沿江深圳-大铲湾',
-    'exit_name' => '虎门大桥',
-    'carrying_capacity' => '10',
-    'carrying_range' => '6-12',
-    'channel_type' => 'ETC',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -279,26 +226,6 @@ $response = $instance->chain('v2/vehicle/partnerpay/payapply')->post([
     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'profit_sharing' => 'Y',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'end_time' => '20170826114339',
-    'charging_time' => '3600',
-    'plate_number' => '粤B888888',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'deduct_mode' => 'PROACTIVE',
-    'support_deduct_mode' => 'DEDUCT_PROACTIVE_ONLY',
-    'space_number' => 'D6666',
-    'gas_station' => '中国石油加油站',
-    'gas_label_name' => '98',
-    'gas_type' => '汽油',
-    'gas_standard' => '国V',
-    'gas_amount' => '50120',
-    'gas_gun_no' => '10',
-    'entrance_name' => '沿江深圳-大铲湾',
-    'exit_name' => '虎门大桥',
-    'carrying_capacity' => '10',
-    'carrying_range' => '6-12',
-    'channel_type' => 'ETC',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -327,26 +254,6 @@ $response = $instance['v2/vehicle/partnerpay/payapply']->post([
     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'profit_sharing' => 'Y',
     'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
-    'start_time' => '20170826104339',
-    'end_time' => '20170826114339',
-    'charging_time' => '3600',
-    'plate_number' => '粤B888888',
-    'car_type' => '小型车',
-    'parking_name' => '欢乐海岸停车场',
-    'deduct_mode' => 'PROACTIVE',
-    'support_deduct_mode' => 'DEDUCT_PROACTIVE_ONLY',
-    'space_number' => 'D6666',
-    'gas_station' => '中国石油加油站',
-    'gas_label_name' => '98',
-    'gas_type' => '汽油',
-    'gas_standard' => '国V',
-    'gas_amount' => '50120',
-    'gas_gun_no' => '10',
-    'entrance_name' => '沿江深圳-大铲湾',
-    'exit_name' => '虎门大桥',
-    'carrying_capacity' => '10',
-    'carrying_range' => '6-12',
-    'channel_type' => 'ETC',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
