@@ -17,7 +17,7 @@ description: 商户通过订单号查询提交的订单附加信息。如果是�
 | transaction_id {data-required data-indent=1} | string | 微信支付订单号
 | sub_order_no {data-required data-indent=1} | string | 商户子订单号
 | sub_order_id {data-required data-indent=1} | string | 微信子订单号
-| customs {data-required data-indent=1} | string | 海关
+| customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 
 {.im-table #request}
@@ -152,17 +152,17 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_order_no_$n | string | 商户子订单号
 | sub_order_id_$n | string | 微信子订单号
 | mch_customs_no_$n | string | 商户海关备案号
-| customs_$n {data-required}| string | 海关
+| customs_$n {data-required}| string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | fee_type_$n | string | 币种
 | order_fee_$n | integer | 应付金额
 | duty_$n | integer | 关税
 | transport_fee_$n | integer | 物流费
 | product_fee_$n | integer | 商品价格
-| state_$n {data-required}| string | 状态码
+| state_$n {data-required}| string | 状态码<br/>`NDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | explanation_$n | string | 申报结果说明
 | modify_time_$n {data-required}| string | 最后更新时间
-| cert_check_result_$n {data-required}| string | 订购人和支付人身份信息校验结果
-| verify_department {data-required}| string | 验核机构
+| cert_check_result_$n {data-required}| string | 订购人和支付人身份信息校验结果<br/>`UNCHECKED` \| `SAME` \| `DIFFERENT` 枚举值之一
+| verify_department {data-required}| string | 验核机构**注：商户需将该字段取值`UNIONPAY`/`NETSUNION`/`OTHERS`映射至海关verDept字段的`1`/`2`/`3`**<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
 | verify_department_trade_id {data-required}| string | 验核机构交易流水号
 
 {.im-table #response}

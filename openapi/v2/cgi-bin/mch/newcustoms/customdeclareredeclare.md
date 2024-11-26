@@ -17,7 +17,7 @@ description: 重点注意：请求接口前请先在以下页面提交您的海�
 | transaction_id {data-required data-indent=1} | string | 微信支付订单号
 | sub_order_no {data-indent=1} | string | 商户子订单号
 | sub_order_id {data-indent=1} | string | 微信子订单号
-| customs {data-required data-indent=1} | string | 海关
+| customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | mch_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 
@@ -148,14 +148,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | --- | --- | ---
 | return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| sign_type {data-required}| string | 签名类型
+| sign_type {data-required}| string | 签名类型<br/>`MD5` 枚举值
 | sign {data-required}| string | 签名
 | appid {data-required}| string | 公众账号ID
 | mch_id {data-required}| string | 商户号
 | result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| state {data-required}| string | 状态码
+| state {data-required}| string | 状态码<br/>`UNDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | transaction_id {data-required}| string | 微信支付订单号
 | out_trade_no {data-required}| string | 商户订单号
 | sub_order_no | string | 商户子订单号

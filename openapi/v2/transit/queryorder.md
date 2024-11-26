@@ -116,7 +116,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | device_info | string | 设备号
 | openid {data-required}| string | 用户标识
 | is_subscribe | string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
-| trade_type {data-required}| string | 交易类型
+| trade_type {data-required}| string | 交易类型<br/>`PAP` 枚举值
 | trade_state {data-required}| string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` 枚举值之一
 | bank_type {data-required}| string | 付款银行
 | total_fee {data-required}| integer | 总金额

@@ -264,7 +264,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| trade_type {data-required}| string | 交易类型
+| trade_type {data-required}| string | 交易类型<br/>`JSAPI` \| `APP` 枚举值之一
 | prepay_id {data-required}| string | 预支付交易会话标识
 | code_url | string | 二维码链接
 

@@ -254,6 +254,7 @@ function openapiSidebar() {
           collapsed: true,
           items: [
             ['发放普通红包', '/openapi/v2/mmpaymkttransfers/sendredpack'],
+            ['发放裂变红包', '/openapi/v2/mmpaymkttransfers/sendgroupredpack'],
             ['查询红包记录', '/openapi/v2/mmpaymkttransfers/gethbinfo'],
             ['发放小程序红包', '/openapi/v2/mmpaymkttransfers/sendminiprogramhb'],
           ].map(transArrayItem),

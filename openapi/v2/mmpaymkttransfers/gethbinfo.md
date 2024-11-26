@@ -13,7 +13,7 @@ description: 用于商户对已发放的红包进行查询红包的具体信息�
 | mch_billno {data-required data-indent=1} | string | 商户订单号
 | mch_id {data-required data-indent=1} | string | 商户号
 | appid {data-required data-indent=1} | string | Appid
-| bill_type {data-required data-indent=1} | string | 订单类型
+| bill_type {data-required data-indent=1} | string | 订单类型<br/>`MCHT` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

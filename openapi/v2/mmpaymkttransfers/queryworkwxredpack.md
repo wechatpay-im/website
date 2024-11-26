@@ -113,8 +113,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | mch_billno {data-required}| string | 商户订单号
 | mch_id {data-required}| string | 商户号
 | detail_id {data-required}| string | 红包单号
-| status {data-required}| string | 红包状态
-| send_type {data-required}| string | 发放类型
+| status {data-required}| string | 红包状态<br/>`SENDING` \| `SENT` \| `FAILED` \| `RECEIVED` \| `RFUND_ING` \| `REFUND` 枚举值之一
+| send_type {data-required}| string | 发放类型<br/>`API` 枚举值
 | total_amount {data-required}| integer | 红包金额
 | reason | string | 失败原因
 | send_time {data-required}| string | 红包发送时间

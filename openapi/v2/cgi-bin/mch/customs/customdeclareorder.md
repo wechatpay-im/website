@@ -14,16 +14,16 @@ description: 以下为财付通的海关备案信息，财付通10位海关注�
 | mch_id {data-required data-indent=1} | string | 商户号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | transaction_id {data-required data-indent=1} | string | 微信支付订单号
-| customs {data-required data-indent=1} | string | 海关
+| customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | mch_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | duty {data-indent=1} | integer | 关税
-| action_type {data-indent=1} | string | 报关类型
+| action_type {data-indent=1} | string | 报关类型<br/>`ADD` \| `MODIFY` 枚举值之一
 | sub_order_no {data-indent=1} | string | 商户子订单号
 | fee_type {data-indent=1} | string | 币种
 | order_fee {data-indent=1} | integer | 应付金额
 | transport_fee {data-indent=1} | integer | 物流费
 | product_fee {data-indent=1} | integer | 商品价格
-| cert_type {data-indent=1} | string | 证件类型
+| cert_type {data-indent=1} | string | 证件类型<br/>`IDCARD` 枚举值
 | cert_id {data-indent=1} | string | 证件号码
 | name {data-indent=1} | string | 姓名
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
@@ -197,21 +197,21 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | --- | --- | ---
 | return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| sign_type {data-required}| string | 签名类型
+| sign_type {data-required}| string | 签名类型<br/>`MD5` 枚举值
 | sign {data-required}| string | 签名
 | appid {data-required}| string | 公众账号ID
 | mch_id {data-required}| string | 商户号
 | result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| state {data-required}| string | 状态码
+| state {data-required}| string | 状态码<br/>`NDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | transaction_id {data-required}| string | 微信支付订单号
 | out_trade_no {data-required}| string | 商户订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
 | modify_time {data-required}| string | 最后更新时间
-| cert_check_result {data-required}| string | 订购人和支付人身份信息校验结果
-| verify_department {data-required}| string | 验核机构
+| cert_check_result {data-required}| string | 订购人和支付人身份信息校验结果<br/>`UNCHECKED` \| `SAME` \| `DIFFERENT` 枚举值之一
+| verify_department {data-required}| string | 验核机构**注：商户需将该字段取值`UNIONPAY`/`NETSUNION`/`OTHERS`映射至海关verDept字段的`1`/`2`/`3`**<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
 | verify_department_trade_id {data-required}| string | 验核机构交易流水号
 
 {.im-table #response}

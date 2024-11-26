@@ -21,7 +21,7 @@ description: 人脸识别通过识别用户人脸，获取用户信息（openid�
 | sub_appid {data-indent=1} | string | 子商户绑定的公众号/小程序 appid(服务商模式)
 | sub_mch_id {data-indent=1} | string | 子商户号(服务商模式)
 | now {data-required data-indent=1} | integer | 取当前时间，10位unix时间戳。
-| version {data-required data-indent=1} | string | 版本号。固定为1
+| version {data-required data-indent=1} | string | 版本号。固定为1<br/>`1` 枚举值
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 
 {.im-table #request}
