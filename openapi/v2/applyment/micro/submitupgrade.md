@@ -16,7 +16,7 @@ description: 使用“提交升级申请单”接口为小微商户发起升级�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| version {data-required data-indent=1} | string | 接口版本号
+| version {data-required data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | cert_sn {data-required data-indent=1} | string | 平台证书序列号

@@ -176,7 +176,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | appid {data-required}| string | 公众号
 | mch_id {data-required}| string | 商户号
 | sub_appid | string | 子商户公众账号ID(服务商模式)
-| sub_mch_id {data-required}| string | 子商户号(服务商模式)
+| sub_mch_id | string | 子商户号(服务商模式)
 
 {.im-table #response}
 

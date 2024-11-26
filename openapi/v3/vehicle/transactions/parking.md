@@ -19,7 +19,7 @@ description: 商户请求扣费受理接口，会完成订单受理。微信支�
 | trade_scene {data-required data-indent=1} | string | 交易场景
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | notify_url {data-required data-indent=1} | string | 回调通知url
-| profit_sharing {data-indent=1} | string | 分账标识
+| profit_sharing {data-indent=1} | string | 分账标识<br/>`Y` \| `N` 枚举值之一
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=2} | integer | 订单金额
 | currency {data-required data-indent=2} | string | 货币类型

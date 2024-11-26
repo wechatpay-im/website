@@ -10,10 +10,10 @@ description:
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| version {data-required data-indent=1} | string | 接口版本号
+| version {data-required data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
-| sub_mch_id {data-required data-indent=1} | string | 小微商户号
+| sub_mch_id {data-indent=1} | string | 小微商户号
 | mobile_phone {data-indent=1} | string | 手机号
 | email {data-indent=1} | string | 邮箱
 | merchant_name {data-indent=1} | string | 商户简称
@@ -146,8 +146,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| mch_id {data-required}| string | 商户号
-| sub_mch_id {data-required}| string | 小微商户号
+| mch_id | string | 商户号
+| sub_mch_id | string | 小微商户号
 
 {.im-table #response}
 

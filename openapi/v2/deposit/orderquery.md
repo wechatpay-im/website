@@ -10,7 +10,7 @@ description: 该接口提供所有微信支付订单的查询，商户可以通�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| version {data-indent=1} | string | 接口版本号
+| version {data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号

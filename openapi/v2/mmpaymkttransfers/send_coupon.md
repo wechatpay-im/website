@@ -24,8 +24,8 @@ description: 用于商户主动调用接口给用户发放代金券的场景，�
 | mch_id {data-required data-indent=1} | string | 商户号
 | op_user_id {data-indent=1} | string | 操作员
 | device_info {data-indent=1} | string | 设备号
-| version {data-indent=1} | string | 协议版本
-| type {data-indent=1} | string | 协议类型
+| version {data-indent=1} | string | 协议版本<br/>`1.0` 枚举值
+| type {data-indent=1} | string | 协议类型<br/>`XML` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}

@@ -13,13 +13,13 @@ description: 外部App拉起微信客户端发起签约前，需先后台调用�
 | appid {data-required data-indent=1} | string | 应用ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
 | plan_id {data-required data-indent=1} | string | 模板id
 | contract_code {data-required data-indent=1} | string | 签约协议号
 | request_serial {data-required data-indent=1} | integer | 请求序列号
 | contract_display_account {data-required data-indent=1} | string | 用户账户展示名称
 | notify_url {data-required data-indent=1} | string | 回调通知url
-| version {data-required data-indent=1} | string | 版本号
+| version {data-required data-indent=1} | string | 版本号<br/>`1.0` 枚举值
 | sign_type {data-indent=1} | string | 签名类型
 | timestamp {data-required data-indent=1} | string | 时间戳
 | return_app {data-indent=1} | string | 返回app

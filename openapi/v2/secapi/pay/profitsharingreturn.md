@@ -11,14 +11,14 @@ description: 此功能需要接收方在商户平台-交易中心-分账-分账�
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
-| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | order_id {data-indent=1} | string | 微信分账单号
 | out_order_no {data-indent=1} | string | 商户分账单号
 | out_return_no {data-required data-indent=1} | string | 商户回退单号
-| return_account_type {data-required data-indent=1} | string | 回退方类型
+| return_account_type {data-required data-indent=1} | string | 回退方类型<br/>`MERCHANT_ID` 枚举值
 | return_account {data-required data-indent=1} | string | 回退方账号
 | return_amount {data-required data-indent=1} | integer | 回退金额
 | description {data-required data-indent=1} | string | 回退描述
@@ -176,21 +176,21 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| sub_mch_id {data-required}| string | 子商户号
+| sub_mch_id | string | 子商户号
 | sub_appid | string | 子商户公众账号ID
-| sign_type | string | 签名类型
+| sign_type | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | order_id | string | 微信分账单号
 | out_order_no | string | 商户分账单号
 | out_return_no {data-required}| string | 商户回退单号
 | return_no | string | 微信回退单号
-| return_account_type {data-required}| string | 回退方类型
+| return_account_type {data-required}| string | 回退方类型<br/>`MERCHANT_ID` 枚举值
 | return_account {data-required}| string | 回退方账号
 | return_amount {data-required}| integer | 回退金额
 | description {data-required}| string | 回退描述
 | result | string | 回退结果<br/>`SUCCESS` \| `PROCESSING` \| `FAILED` 枚举值之一
-| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` 枚举值之一
+| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | finish_time | string | 完成时间
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sp.php?chapter=25_7&index=9)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation.php?chapter=27_7&index=8) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sp.php?chapter=25_7&index=9)

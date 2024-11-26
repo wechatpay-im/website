@@ -10,7 +10,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| version {data-indent=1} | string | 接口版本号
+| version {data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | profit_sharing {data-indent=1} | string | 是否指定服务商分账;Y-是，需要分账;N-否，不分账;字母要求大写，不传默认不分账<br/>`N` \| `Y` 枚举值之一
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
@@ -40,7 +40,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | product_id {data-indent=1} | string | 商品ID
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
-| receipt {data-indent=1} | string | 电子发票入口开放标识
+| receipt {data-indent=1} | string | 电子发票入口开放标识<br/>`Y` \| `N` 枚举值之一
 | scene_info {data-indent=1} | string | 场景信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 实际门店信息

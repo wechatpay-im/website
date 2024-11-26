@@ -10,11 +10,11 @@ description: 商户通过支付押金（人脸）接口发起押金支付请求�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| deposit {data-required data-indent=1} | string | 是否押金支付
+| deposit {data-indent=1} | string | 是否押金支付<br/>`Y` \| `N` 枚举值之一
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
-| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
 | device_info {data-indent=1} | string | 设备号
 | body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 商品详情`JSON`格式字符串
@@ -228,9 +228,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | appid {data-required}| string | 公众账号ID
-| sub_appid {data-required}| string | 子商户公众账号ID
+| sub_appid | string | 子商户公众账号ID
 | mch_id {data-required}| string | 商户号
-| sub_mch_id {data-required}| string | 子商户号
+| sub_mch_id | string | 子商户号
 | device_info | string | 设备号
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名

@@ -16,7 +16,7 @@ description: 商户与用户的签约关系有误或者商户主动要求与用�
 | contract_code {data-indent=1} | string | 签约协议号
 | contract_id {data-indent=1} | string | 委托代扣协议id
 | contract_termination_remark {data-required data-indent=1} | string | 解约备注
-| version {data-required data-indent=1} | string | 版本号
+| version {data-required data-indent=1} | string | 版本号<br/>`1.0` 枚举值
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 
 {.im-table #request}

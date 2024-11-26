@@ -11,7 +11,7 @@ description: 发起分账请求后，可调用此接口查询分账结果；发�
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
-| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
@@ -125,8 +125,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | transaction_id {data-required}| string | 微信订单号
 | out_order_no {data-required}| string | 商户分账单号
 | order_id {data-required}| string | 微信分账单号
-| status {data-required}| string | 分账单状态
-| close_reason | string | 关单原因
+| status {data-required}| string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
 | receivers {data-required}| string | 分账接收方列表`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | receiver {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表`JSON`表达式
@@ -137,8 +136,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | detail_id {data-required data-indent=2} | string | 分账明细单号
 | finish_time {data-required data-indent=2} | string | 分账完成时间
 | receiver_mchid {data-required data-indent=2} | string | 分账接收商户号
-| result {data-required data-indent=2} | string | 分账结果
+| result {data-required data-indent=2} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_2&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation.php?chapter=27_2&index=3) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_2&index=3)

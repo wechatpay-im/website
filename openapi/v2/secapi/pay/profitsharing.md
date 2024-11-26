@@ -11,7 +11,7 @@ description: 单次分账请求按照传入的分账接收方账号和资金进�
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
-| sub_mch_id {data-required data-indent=1} | string | 子商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
 | brand_mch_id {data-indent=1} | string | 品牌主商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
@@ -179,8 +179,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | detail_id {data-required data-indent=2} | string | 分账明细单号
 | finish_time {data-required data-indent=2} | string | 分账完成时间
 | receiver_mchid {data-required data-indent=2} | string | 分账接收商户号
-| result {data-required data-indent=2} | string | 分账结果
+| result {data-required data-indent=2} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_1&index=1)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation.php?chapter=27_1&index=1) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_1&index=1)

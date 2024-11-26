@@ -12,6 +12,8 @@ description: 现金红包发放后会以公众号消息的形式触达用户，�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_billno {data-required data-indent=1} | string | 商户订单号
 | mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
+| msgappid {data-indent=1} | string | 触达用户appid
 | wxappid {data-required data-indent=1} | string | 公众账号appid
 | send_name {data-required data-indent=1} | string | 商户名称
 | re_openid {data-required data-indent=1} | string | 用户openid
@@ -34,6 +36,8 @@ $instance->v2->mmpaymkttransfers->sendredpack->postAsync([
   'xml' => [
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
+    'sub_mch_id' => '10000090',
+    'msgappid' => 'wx8888888888888888',
     'wxappid' => 'wx8888888888888888',
     'send_name' => '天虹百货',
     're_openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
@@ -59,6 +63,8 @@ $instance->chain('v2/mmpaymkttransfers/sendredpack')->postAsync([
   'xml' => [
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
+    'sub_mch_id' => '10000090',
+    'msgappid' => 'wx8888888888888888',
     'wxappid' => 'wx8888888888888888',
     'send_name' => '天虹百货',
     're_openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
@@ -84,6 +90,8 @@ $instance['v2/mmpaymkttransfers/sendredpack']->postAsync([
   'xml' => [
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
+    'sub_mch_id' => '10000090',
+    'msgappid' => 'wx8888888888888888',
     'wxappid' => 'wx8888888888888888',
     'send_name' => '天虹百货',
     're_openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
@@ -109,6 +117,8 @@ $response = $instance->v2->mmpaymkttransfers->sendredpack->post([
   'xml' => [
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
+    'sub_mch_id' => '10000090',
+    'msgappid' => 'wx8888888888888888',
     'wxappid' => 'wx8888888888888888',
     'send_name' => '天虹百货',
     're_openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
@@ -131,6 +141,8 @@ $response = $instance->chain('v2/mmpaymkttransfers/sendredpack')->post([
   'xml' => [
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
+    'sub_mch_id' => '10000090',
+    'msgappid' => 'wx8888888888888888',
     'wxappid' => 'wx8888888888888888',
     'send_name' => '天虹百货',
     're_openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
@@ -153,6 +165,8 @@ $response = $instance['v2/mmpaymkttransfers/sendredpack']->post([
   'xml' => [
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
+    'sub_mch_id' => '10000090',
+    'msgappid' => 'wx8888888888888888',
     'wxappid' => 'wx8888888888888888',
     'send_name' => '天虹百货',
     're_openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
@@ -188,4 +202,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon.php?chapter=13_4&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_sl.php?chapter=13_4&index=3) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon.php?chapter=13_4&index=3)
