@@ -31,6 +31,23 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 ::: code-group
 
 ```php [异步纯链式]
+$workwxSign = \strtoupper(
+  \WeChatPay\Crypto\Hash::md5(
+    \WeChatPay\Formatter::queryStringLike(
+        \WeChatPay\Formatter::ksort([
+          'act_name'     => '猜灯谜抢红包活动',
+          'mch_billno'   => '10000098201411111234567890',
+          'mch_id'       => '10000098',
+          'nonce_str'    => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+          're_openid'    => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+          'total_amount' => '1000',
+          'wxappid'      => 'wx8888888888888888',
+        ])
+    ),
+    $agentSecret, //应用的secret字符串
+    '1' //应用agentid字符串
+  )
+);
 $instance->v2->mmpaymkttransfers->sendworkwxredpack->postAsync([
   'xml' => [
     'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
@@ -46,7 +63,7 @@ $instance->v2->mmpaymkttransfers->sendworkwxredpack->postAsync([
     'act_name' => '猜灯谜抢红包活动',
     'remark' => '猜越多得越多，快来抢！',
     'scene_id' => 'PRODUCT_8',
-    'workwx_sign' => 'C380BEC2BFD727A4B6845133519F3AD6',
+    'workwx_sign' => $workwxSign,
   ],
   'security' => true,
 ])
@@ -57,6 +74,23 @@ $instance->v2->mmpaymkttransfers->sendworkwxredpack->postAsync([
 ```
 
 ```php [异步声明式]
+$workwxSign = \strtoupper(
+  \WeChatPay\Crypto\Hash::md5(
+    \WeChatPay\Formatter::queryStringLike(
+        \WeChatPay\Formatter::ksort([
+          'act_name'     => '猜灯谜抢红包活动',
+          'mch_billno'   => '10000098201411111234567890',
+          'mch_id'       => '10000098',
+          'nonce_str'    => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+          're_openid'    => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+          'total_amount' => '1000',
+          'wxappid'      => 'wx8888888888888888',
+        ])
+    ),
+    $agentSecret, //应用的secret字符串
+    '1' //应用agentid字符串
+  )
+);
 $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->postAsync([
   'xml' => [
     'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
@@ -72,7 +106,7 @@ $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->postAsync([
     'act_name' => '猜灯谜抢红包活动',
     'remark' => '猜越多得越多，快来抢！',
     'scene_id' => 'PRODUCT_8',
-    'workwx_sign' => 'C380BEC2BFD727A4B6845133519F3AD6',
+    'workwx_sign' => $workwxSign,
   ],
   'security' => true,
 ])
@@ -83,6 +117,23 @@ $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->postAsync([
 ```
 
 ```php [异步属性式]
+$workwxSign = \strtoupper(
+  \WeChatPay\Crypto\Hash::md5(
+    \WeChatPay\Formatter::queryStringLike(
+        \WeChatPay\Formatter::ksort([
+          'act_name'     => '猜灯谜抢红包活动',
+          'mch_billno'   => '10000098201411111234567890',
+          'mch_id'       => '10000098',
+          'nonce_str'    => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+          're_openid'    => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+          'total_amount' => '1000',
+          'wxappid'      => 'wx8888888888888888',
+        ])
+    ),
+    $agentSecret, //应用的secret字符串
+    '1' //应用agentid字符串
+  )
+);
 $instance['v2/mmpaymkttransfers/sendworkwxredpack']->postAsync([
   'xml' => [
     'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
@@ -98,7 +149,7 @@ $instance['v2/mmpaymkttransfers/sendworkwxredpack']->postAsync([
     'act_name' => '猜灯谜抢红包活动',
     'remark' => '猜越多得越多，快来抢！',
     'scene_id' => 'PRODUCT_8',
-    'workwx_sign' => 'C380BEC2BFD727A4B6845133519F3AD6',
+    'workwx_sign' => $workwxSign,
   ],
   'security' => true,
 ])
@@ -109,6 +160,23 @@ $instance['v2/mmpaymkttransfers/sendworkwxredpack']->postAsync([
 ```
 
 ```php [同步纯链式]
+$workwxSign = \strtoupper(
+  \WeChatPay\Crypto\Hash::md5(
+    \WeChatPay\Formatter::queryStringLike(
+        \WeChatPay\Formatter::ksort([
+          'act_name'     => '猜灯谜抢红包活动',
+          'mch_billno'   => '10000098201411111234567890',
+          'mch_id'       => '10000098',
+          'nonce_str'    => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+          're_openid'    => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+          'total_amount' => '1000',
+          'wxappid'      => 'wx8888888888888888',
+        ])
+    ),
+    $agentSecret, //应用的secret字符串
+    '1' //应用agentid字符串
+  )
+);
 $response = $instance->v2->mmpaymkttransfers->sendworkwxredpack->post([
   'xml' => [
     'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
@@ -124,7 +192,7 @@ $response = $instance->v2->mmpaymkttransfers->sendworkwxredpack->post([
     'act_name' => '猜灯谜抢红包活动',
     'remark' => '猜越多得越多，快来抢！',
     'scene_id' => 'PRODUCT_8',
-    'workwx_sign' => 'C380BEC2BFD727A4B6845133519F3AD6',
+    'workwx_sign' => $workwxSign,
   ],
   'security' => true,
 ]);
@@ -132,6 +200,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
+$workwxSign = \strtoupper(
+  \WeChatPay\Crypto\Hash::md5(
+    \WeChatPay\Formatter::queryStringLike(
+        \WeChatPay\Formatter::ksort([
+          'act_name'     => '猜灯谜抢红包活动',
+          'mch_billno'   => '10000098201411111234567890',
+          'mch_id'       => '10000098',
+          'nonce_str'    => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+          're_openid'    => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+          'total_amount' => '1000',
+          'wxappid'      => 'wx8888888888888888',
+        ])
+    ),
+    $agentSecret, //应用的secret字符串
+    '1' //应用agentid字符串
+  )
+);
 $response = $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->post([
   'xml' => [
     'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
@@ -147,7 +232,7 @@ $response = $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->post([
     'act_name' => '猜灯谜抢红包活动',
     'remark' => '猜越多得越多，快来抢！',
     'scene_id' => 'PRODUCT_8',
-    'workwx_sign' => 'C380BEC2BFD727A4B6845133519F3AD6',
+    'workwx_sign' => $workwxSign,
   ],
   'security' => true,
 ]);
@@ -155,6 +240,23 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
+$workwxSign = \strtoupper(
+  \WeChatPay\Crypto\Hash::md5(
+    \WeChatPay\Formatter::queryStringLike(
+        \WeChatPay\Formatter::ksort([
+          'act_name'     => '猜灯谜抢红包活动',
+          'mch_billno'   => '10000098201411111234567890',
+          'mch_id'       => '10000098',
+          'nonce_str'    => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+          're_openid'    => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+          'total_amount' => '1000',
+          'wxappid'      => 'wx8888888888888888',
+        ])
+    ),
+    $agentSecret, //应用的secret字符串
+    '1' //应用agentid字符串
+  )
+);
 $response = $instance['v2/mmpaymkttransfers/sendworkwxredpack']->post([
   'xml' => [
     'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
@@ -170,7 +272,7 @@ $response = $instance['v2/mmpaymkttransfers/sendworkwxredpack']->post([
     'act_name' => '猜灯谜抢红包活动',
     'remark' => '猜越多得越多，快来抢！',
     'scene_id' => 'PRODUCT_8',
-    'workwx_sign' => 'C380BEC2BFD727A4B6845133519F3AD6',
+    'workwx_sign' => $workwxSign,
   ],
   'security' => true,
 ]);
