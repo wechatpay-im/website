@@ -118,9 +118,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required}| string | 业务返回码
+| result_code {data-required}| string | 业务返回码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误编码
 | err_code_des | string | 错误描述
 | sign {data-required}| string | 签名

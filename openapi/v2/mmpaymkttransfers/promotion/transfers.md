@@ -20,7 +20,7 @@ description: 目前支持向指定微信用户的openid付款。
 | amount {data-required data-indent=1} | integer | 金额
 | desc {data-required data-indent=1} | string | 企业付款备注
 | spbill_create_ip {data-required data-indent=1} | string | Ip地址
-| scene {data-indent=1} | string | 付款场景，BRAND_REDPACKET：品牌红包，其他值或不传则默认为普通付款到零钱
+| scene {data-indent=1} | string | 付款场景，`BRAND_REDPACKET`：品牌红包，其他值或不传则默认为普通付款到零钱
 | brand_id {data-indent=1} | integer | 品牌ID，品牌在微信支付的唯一标识。仅在付款场景为品牌红包时必填。
 | finder_template_id {data-indent=1} | string | 消息模板ID，品牌在微信支付的唯一标识。仅在付款场景为品牌红包时必填。
 | security {data-required} | `true` | 声明加载商户API证书
@@ -174,13 +174,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | mch_appid | string | 商户appid
 | mchid | string | 商户号
 | device_info | string | 设备号
 | nonce_str | string | 随机字符串
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | partner_trade_no {data-required}| string | 商户订单号

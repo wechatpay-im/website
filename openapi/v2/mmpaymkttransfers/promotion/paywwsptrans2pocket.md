@@ -15,17 +15,17 @@ description: 给同一个实名用户付款，单笔单日限额200/200元；一
 | device_info {data-indent=1} | string | 设备号
 | partner_trade_no {data-required data-indent=1} | string | 商户订单号
 | openid {data-required data-indent=1} | string | 用户openid
-| check_name {data-required data-indent=1} | string | 校验用户姓名选项
+| check_name {data-required data-indent=1} | string | 校验用户姓名选项<br/>`FORCE_CHECK` 枚举值
 | re_user_name {data-indent=1} | string | 收款用户姓名
 | amount {data-required data-indent=1} | integer | 金额
 | desc {data-required data-indent=1} | string | 企业付款备注
 | spbill_create_ip {data-required data-indent=1} | string | Ip地址
 | workwx_sign {data-indent=1} | string | 活动信息
-| ww_msg_type {data-indent=1} | string | 付款消息类型
+| ww_msg_type {data-indent=1} | string | 付款消息类型<br/>`NORMAL_MSG` \| `APPROVAL_MSG` 枚举值之一
 | approval_number {data-indent=1} | string | 付款消息类型
-| approval_type {data-indent=1} | number | 审批类型
+| approval_type {data-indent=1} | number | 审批类型<br/>`1` 枚举值
 | act_name {data-indent=1} | string | 项目名称
-| agentid {data-indent=1} | number | 付款的应用id
+| agentid {data-indent=1} | string | 付款的应用id
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
@@ -195,13 +195,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | appid | string | 公众账号appid
 | mchid | string | 商户号
 | device_info | string | 设备号
 | nonce_str | string | 随机字符串
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | partner_trade_no {data-required}| string | 商户订单号

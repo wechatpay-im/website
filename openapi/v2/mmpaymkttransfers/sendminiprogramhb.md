@@ -20,8 +20,8 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 | wishing {data-required data-indent=1} | string | 红包祝福语
 | act_name {data-required data-indent=1} | string | 活动名称
 | remark {data-required data-indent=1} | string | 备注
-| notify_way {data-required data-indent=1} | string | 活动信息
-| scene_id {data-indent=1} | string | 场景id
+| notify_way {data-required data-indent=1} | string | 活动信息<br/>`MINI_PROGRAM_JSAPI` 枚举值
+| scene_id {data-indent=1} | string | 场景id<br/>`PRODUCT_1` \| `PRODUCT_2` \| `PRODUCT_3` \| `PRODUCT_4` \| `PRODUCT_5` \| `PRODUCT_6` \| `PRODUCT_7` \| `PRODUCT_8` 枚举值之一
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
@@ -167,9 +167,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | mch_billno {data-required}| string | 商户订单号

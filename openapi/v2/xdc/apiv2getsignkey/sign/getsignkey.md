@@ -82,7 +82,7 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| return_code {data-required} | string | 返回状态码 `SUCCESS` \| `FAIL`
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | mch_id {data-required} | string | 商户号
 | sandbox_signkey | string | 沙箱密钥

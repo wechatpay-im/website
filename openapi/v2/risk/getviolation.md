@@ -132,11 +132,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 错误码描述
 | error_code | string | 错误码
 | error_code_des | string | 错误代码描述
-| result_code {data-required}| string | 返回状态码
+| result_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | result_msg {data-required}| string | 错误码描述
 | violation_records | string | 违规记录数据`JSON`格式字符串
 | {colspan=3 .im-table-line}

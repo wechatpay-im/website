@@ -13,8 +13,8 @@ description: 商户可以通过该接口下载历史交易清单。比如掉单�
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | bill_date {data-required data-indent=1} | string | 对账单日期
-| bill_type {data-indent=1} | string | 账单类型
-| tar_type {data-indent=1} | string | 压缩账单
+| bill_type {data-indent=1} | string | 账单类型<br/> `ALL` \| `SUCCESS` \| `REFUND` \| `RECHARGE_REFUND` 枚举值之一
+| tar_type {data-indent=1} | string | 压缩账单<br/>`GZIP` 枚举值
 
 {.im-table #request}
 
@@ -168,7 +168,7 @@ if ('<xml>' === $firstFiveBytes) {
 
 | 异常字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code | string | 返回状态码<br/>`FAIL` 枚举值
 | return_msg | string | 错误码描述
 | error_code | string | 错误码
 

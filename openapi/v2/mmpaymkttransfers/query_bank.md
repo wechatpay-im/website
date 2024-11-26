@@ -97,9 +97,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | mch_id {data-required}| string | 商户号
@@ -108,7 +108,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | bank_no_md5 {data-required}| string | 银行卡号
 | true_name_md5 {data-required}| string | 用户真实姓名
 | amount {data-required}| integer | 代付金额
-| status {data-required}| string | 代付单状态
+| status {data-required}| string | 代付单状态<br/>`SUCCESS` \| `FAILED` \| `PROCESSING` \| `BANK_FAIL` 枚举值之一
 | cmms_amt {data-required}| integer | 手续费金额
 | create_time {data-required}| string | 商户下单时间
 | pay_succ_time | string | 成功付款时间

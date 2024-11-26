@@ -15,10 +15,10 @@ description: 在停车场、高速、加油等场景下，商户需获取用户�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
-| trade_scene {data-required data-indent=1} | string | 交易场景
-| jump_scene {data-indent=1} | string | 跳转场景
+| trade_scene {data-required data-indent=1} | string | 交易场景<br/>`PARKING` \| `PARKING SPACE` \| `GAS` \| `HIGHWAY` \| `BRIDGE` 枚举值之一
+| jump_scene {data-indent=1} | string | 跳转场景<br/>`APP` \| `H5` 枚举值之一
 | openid {data-required data-indent=1} | string | 用户标识
-| version {data-required data-indent=1} | string | 版本号
+| version {data-required data-indent=1} | string | 版本号<br/>`3.0` 枚举值
 
 {.im-table #request}
 
@@ -139,7 +139,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | appid {data-required}| string | 请求appid
 | sub_appid | string | 子商户公众账号id
@@ -147,12 +147,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_mch_id {data-required}| string | 子商户号
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| user_state {data-required}| string | 用户状态
+| user_state {data-required}| string | 用户状态<br/>`NORMAL` \| `PAUSED` \| `OVERDUE` \| `UNAUTHORIZED` 枚举值之一
 | openid | string | 用户标识
-| deduct_mode | string | 发起扣费方式
+| deduct_mode | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
 | sub_openid | string | 用户子标识
 | path | string | 跳转路径
 | plate_number_info | string | 车牌信息

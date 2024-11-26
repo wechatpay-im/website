@@ -132,7 +132,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-required}| string | 返回信息
 | appid {data-required}| string | 公众账号ID
 | sub_appid | string | 子商户公众账号ID
@@ -140,16 +140,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_mch_id | string | 子商户号
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | device_info | string | 设备号
 | openid {data-required}| string | 用户标识
-| is_subscribe {data-required}| string | 是否关注公众账号
+| is_subscribe {data-required}| string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
 | sub_openid | string | 用户子标识
-| sub_is_subscribe | string | 是否关注子公众账号
+| sub_is_subscribe | string | 是否关注子公众账号<br/>`Y` \| `N` 枚举值之一
 | trade_type {data-required}| string | 交易类型
-| trade_state {data-required}| string | 交易状态
+| trade_state {data-required}| string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` 枚举值之一
 | bank_type {data-required}| string | 付款银行
 | total_fee {data-required}| integer | 标价金额
 | settlement_total_fee | integer | 应结订单金额

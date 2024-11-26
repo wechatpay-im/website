@@ -158,13 +158,13 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| return_code {data-required} | string | 返回状态码 `SUCCESS` \| `FAIL`
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required} | string | 业务结果 `SUCCESS` \| `FAIL`
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | trade_type {data-required} | string | 交易类型 `MICROPAY`
-| trade_state | string | 交易状态
+| trade_state | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` 枚举值之一
 | out_trade_no {data-required} | string | 商户订单号
 | transaction_id {data-required} | string | 微信支付订单号
 | total_fee {data-required} | string | 标价金额

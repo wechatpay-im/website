@@ -90,13 +90,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 错误码描述
 | nonce_str | string | 随机字符串
 | sign | string | 签名
 | error_code | string | 错误码
 | error_code_des | string | 错误代码描述
-| result_code {data-required}| string | 返回状态码
+| result_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | mch_id {data-required}| string | 商户号
 | certificates {data-required}| string | 平台证书信息
 

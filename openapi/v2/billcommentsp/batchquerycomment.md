@@ -12,7 +12,7 @@ description: 商户可以通过该接口拉取用户在微信支付交易记录�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | begin_time {data-required data-indent=1} | string | 开始时间
 | end_time {data-required data-indent=1} | string | 结束时间
 | offset {data-required data-indent=1} | number | 位移
@@ -132,9 +132,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-required}| string | 返回信息
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`FAIL` 枚举值
 | err_code {data-required}| string | 错误代码
 | err_code_des | string | 错误代码描述
 

@@ -10,7 +10,7 @@ description: 前置条件：商户下单待受理后。
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| version {data-required data-indent=1} | string | 接口版本号
+| version {data-required data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
@@ -132,18 +132,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回结果
 | sign {data-required}| string | 签名
 | nonce_str {data-required}| string | 随机字符串
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
 | appid {data-required}| string | 公众账号ID
 | mch_id {data-required}| string | 商户号
 | out_order_no {data-required}| string | 商户服务订单号
 | service_id {data-required}| string | 服务ID
-| state {data-required}| string | 单据状态
+| state {data-required}| string | 单据状态<br/>`CREATED` \| `USER_ACCEPTED` \| `FINISHED` \| `USER_PAID` \| `REVOKED` \| `EXPIRED` 枚举值之一
 | room {data-required}| string | 房间
 | start_time {data-required}| string | 入住时间
 | end_time | string | 预定离店时间
@@ -165,7 +165,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | finish_ticket {data-required}| string | 完结凭证
 | attach | string | 回调数据包
 | finish_transaction_id | string | 结单交易单号
-| pay_type | string | 支付方式
+| pay_type | string | 支付方式<br/>`MchChannelPayType` 枚举值
 
 {.im-table #response}
 

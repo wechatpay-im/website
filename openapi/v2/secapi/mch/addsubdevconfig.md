@@ -125,11 +125,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-required}| string | 返回信息
 | err_code {data-required}| string | 错误代码
 | err_code_des {data-required}| string | 错误代码描述
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | sign {data-required}| string | 签名
 
 {.im-table #response}

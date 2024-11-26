@@ -10,7 +10,7 @@ description: 订单创建后，调用完结租借订单接口前。调用完结�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| version {data-required data-indent=1} | string | 接口版本号
+| version {data-required data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
@@ -132,7 +132,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回结果
 | order_id {data-required}| string | 微信支付服务订单号
 

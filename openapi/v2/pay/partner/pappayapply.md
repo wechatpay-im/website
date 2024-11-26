@@ -190,13 +190,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | --- | --- | ---
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-required}| string | 返回信息
 | appid {data-required}| string | 公众账号id
 | mch_id {data-required}| string | 商户号
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 

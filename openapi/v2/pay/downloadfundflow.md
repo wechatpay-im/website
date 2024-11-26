@@ -14,8 +14,8 @@ description: 商户可以通过该接口下载自2017年6月1日起 的历史资
 | mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>固定枚举值`HMAC-SHA256`
 | bill_date {data-required data-indent=1} | string | 资金账单日期
-| account_type {data-required data-indent=1} | string | 资金账户类型
-| tar_type {data-indent=1} | string | 压缩账单
+| account_type {data-required data-indent=1} | string | 资金账户类型<br/>`Basic` \| `Operation` \| `Fees` 枚举值之一
+| tar_type {data-indent=1} | string | 压缩账单<br/>`GZIP` 枚举值
 | security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
@@ -176,9 +176,9 @@ if ('<xml>' === $firstFiveBytes) {
 
 | 异常字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code | string | 返回状态码
+| return_code | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code | string | 业务结果
+| result_code | string | 业务结果<br/>`FAIL` 枚举值
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 

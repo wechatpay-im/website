@@ -197,14 +197,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | combine_appid {data-required}| string | 合单appid
 | combine_mch_id {data-required}| string | 合单商户号
 | device_info | string | 设备号
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | trade_type {data-required}| string | 交易类型

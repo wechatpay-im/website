@@ -139,6 +139,27 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_msg | string | 返回信息
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| mch_id {data-required}| integer | 商户号
+| appid {data-required}| string | 公众账号id
+| contract_id {data-required}| string | 委托代扣协议id
+| plan_id {data-required}| integer | 模板id
+| contract_code {data-required}| string | 签约协议号
+| contract_display_account {data-required}| string | 用户账户展示名称
+| contract_state {data-required}| integer | 协议状态
+| contract_signed_time {data-required}| string | 协议签署时间
+| contract_expired_time {data-required}| string | 协议到期时间
+| contract_terminated_time | string | 协议解约时间
+| contract_termination_mode | integer | 协议解约方式
+| sign {data-required}| string | 签名
+| contract_termination_remark | string | 解约备注
+| openid {data-required}| string | 用户标识
+| err_code {data-required}| string | 错误代码
+| err_code_des {data-required}| string | 错误代码描述
+| sub_appid | string | 子商户公众账号ID
+| sub_mch_id | string | 子商户号
 
 {.im-table #response}
 

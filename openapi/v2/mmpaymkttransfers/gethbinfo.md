@@ -111,17 +111,17 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码
+| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required}| string | 业务结果
+| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | mch_billno {data-required}| string | 商户订单号
 | mch_id {data-required}| string | 商户号
 | detail_id {data-required}| string | 红包单号
-| status {data-required}| string | 红包状态
-| send_type {data-required}| string | 发放类型
-| hb_type {data-required}| string | 红包类型
+| status {data-required}| string | 红包状态<br/>`SENDING` \| `SENT` \| `FAILED` \| `RECEIVED` \| `RFUND_ING` \| `REFUND` 枚举值之一
+| send_type {data-required}| string | 发放类型<br/>`API` \| `UPLOAD` \| `ACTIVITY` 枚举值之一
+| hb_type {data-required}| string | 红包类型<br/>`NORMAL` \| `GROUP` 枚举值之一
 | total_num {data-required}| integer | 红包个数
 | total_amount {data-required}| integer | 红包金额
 | reason | string | 失败原因
