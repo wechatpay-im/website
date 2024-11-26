@@ -10,6 +10,7 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
+| nonce_str {data-required data-indent=1} | string | 随机字符串
 | mch_billno {data-required data-indent=1} | string | 商户订单号
 | mch_id {data-required data-indent=1} | string | 商户号
 | wxappid {data-required data-indent=1} | string | 公众账号appid
@@ -32,6 +33,7 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 ```php [异步纯链式]
 $instance->v2->mmpaymkttransfers->sendworkwxredpack->postAsync([
   'xml' => [
+    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
     'wxappid' => 'wx8888888888888888',
@@ -57,6 +59,7 @@ $instance->v2->mmpaymkttransfers->sendworkwxredpack->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->postAsync([
   'xml' => [
+    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
     'wxappid' => 'wx8888888888888888',
@@ -82,6 +85,7 @@ $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->postAsync([
 ```php [异步属性式]
 $instance['v2/mmpaymkttransfers/sendworkwxredpack']->postAsync([
   'xml' => [
+    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
     'wxappid' => 'wx8888888888888888',
@@ -107,6 +111,7 @@ $instance['v2/mmpaymkttransfers/sendworkwxredpack']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->mmpaymkttransfers->sendworkwxredpack->post([
   'xml' => [
+    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
     'wxappid' => 'wx8888888888888888',
@@ -129,6 +134,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/mmpaymkttransfers/sendworkwxredpack')->post([
   'xml' => [
+    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
     'wxappid' => 'wx8888888888888888',
@@ -151,6 +157,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/mmpaymkttransfers/sendworkwxredpack']->post([
   'xml' => [
+    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
     'mch_billno' => '10000098201411111234567890',
     'mch_id' => '10000098',
     'wxappid' => 'wx8888888888888888',
