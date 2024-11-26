@@ -109,11 +109,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | mch_id {data-required}| string | 商户号
 | sub_mch_id | string | 子商户号
 | brand_mch_id | string | 品牌主商户号
-| transaction_id | string | 微信订单号
 | max_ratio {data-required}| integer | 最大分账比例
 | nonce_str {data-required}| string | 随机字符串
 | sign {data-required}| string | 签名
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sp.php?chapter=25_11&index=8)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_11&index=8)
