@@ -31,12 +31,12 @@ description: 商户在调用微信支付提供的相关接口时，会得到微�
 ```php [异步纯链式]
 $instance->v2->payitil->report->postAsync([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
+    'appid'         => 'wx8888888888888888',
+    'mch_id'        => '1900000109',
+    'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
-    'user_ip' => '8.8.8.8',
-    'trades' => '',
+    'user_ip'       => '8.8.8.8',
+    'trades'        => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,12 +48,12 @@ $instance->v2->payitil->report->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/payitil/report')->postAsync([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
+    'appid'         => 'wx8888888888888888',
+    'mch_id'        => '1900000109',
+    'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
-    'user_ip' => '8.8.8.8',
-    'trades' => '',
+    'user_ip'       => '8.8.8.8',
+    'trades'        => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,12 +65,12 @@ $instance->chain('v2/payitil/report')->postAsync([
 ```php [异步属性式]
 $instance['v2/payitil/report']->postAsync([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
+    'appid'         => 'wx8888888888888888',
+    'mch_id'        => '1900000109',
+    'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
-    'user_ip' => '8.8.8.8',
-    'trades' => '',
+    'user_ip'       => '8.8.8.8',
+    'trades'        => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -82,12 +82,12 @@ $instance['v2/payitil/report']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->payitil->report->post([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
+    'appid'         => 'wx8888888888888888',
+    'mch_id'        => '1900000109',
+    'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
-    'user_ip' => '8.8.8.8',
-    'trades' => '',
+    'user_ip'       => '8.8.8.8',
+    'trades'        => '',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -96,12 +96,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/payitil/report')->post([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
+    'appid'         => 'wx8888888888888888',
+    'mch_id'        => '1900000109',
+    'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
-    'user_ip' => '8.8.8.8',
-    'trades' => '',
+    'user_ip'       => '8.8.8.8',
+    'trades'        => '',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -110,12 +110,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/payitil/report']->post([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
+    'appid'         => 'wx8888888888888888',
+    'mch_id'        => '1900000109',
+    'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
-    'user_ip' => '8.8.8.8',
-    'trades' => '',
+    'user_ip'       => '8.8.8.8',
+    'trades'        => '',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -125,9 +125,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| return_msg {data-required}| string | 返回信息
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_msg {data-required} | string | 返回信息
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 
 {.im-table #response}
 

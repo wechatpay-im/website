@@ -83,24 +83,24 @@ description: 委托代扣可应用于定期扣款或需事后扣款以期提高�
 ```php [异步纯链式]
 $instance->v2->vehicle->pay->payapply->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => '公交代扣',
-    'detail' => '公交代扣：A公交代扣：B公交代扣：C',
-    'attach' => '自定义参数',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'appid'            => 'wxcbda96de0b165486',
+    'mch_id'           => '10000098',
+    'sign_type'        => 'HMAC-SHA256',
+    'body'             => '公交代扣',
+    'detail'           => '公交代扣：A公交代扣：B公交代扣：C',
+    'attach'           => '自定义参数',
+    'out_trade_no'     => '1217752501201407033233368018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => 'WXG',
-    'notify_url' => 'http://yoursite.com/wxpay.html',
-    'trade_type' => 'PAP',
-    'version' => '3.0',
-    'trade_scene' => 'PARKING',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'profit_sharing' => 'Y',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'goods_tag'        => 'WXG',
+    'notify_url'       => 'http://yoursite.com/wxpay.html',
+    'trade_type'       => 'PAP',
+    'version'          => '3.0',
+    'trade_scene'      => 'PARKING',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'   => 'Y',
+    'scene_info'       => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -112,24 +112,24 @@ $instance->v2->vehicle->pay->payapply->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/vehicle/pay/payapply')->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => '公交代扣',
-    'detail' => '公交代扣：A公交代扣：B公交代扣：C',
-    'attach' => '自定义参数',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'appid'            => 'wxcbda96de0b165486',
+    'mch_id'           => '10000098',
+    'sign_type'        => 'HMAC-SHA256',
+    'body'             => '公交代扣',
+    'detail'           => '公交代扣：A公交代扣：B公交代扣：C',
+    'attach'           => '自定义参数',
+    'out_trade_no'     => '1217752501201407033233368018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => 'WXG',
-    'notify_url' => 'http://yoursite.com/wxpay.html',
-    'trade_type' => 'PAP',
-    'version' => '3.0',
-    'trade_scene' => 'PARKING',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'profit_sharing' => 'Y',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'goods_tag'        => 'WXG',
+    'notify_url'       => 'http://yoursite.com/wxpay.html',
+    'trade_type'       => 'PAP',
+    'version'          => '3.0',
+    'trade_scene'      => 'PARKING',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'   => 'Y',
+    'scene_info'       => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -141,24 +141,24 @@ $instance->chain('v2/vehicle/pay/payapply')->postAsync([
 ```php [异步属性式]
 $instance['v2/vehicle/pay/payapply']->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => '公交代扣',
-    'detail' => '公交代扣：A公交代扣：B公交代扣：C',
-    'attach' => '自定义参数',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'appid'            => 'wxcbda96de0b165486',
+    'mch_id'           => '10000098',
+    'sign_type'        => 'HMAC-SHA256',
+    'body'             => '公交代扣',
+    'detail'           => '公交代扣：A公交代扣：B公交代扣：C',
+    'attach'           => '自定义参数',
+    'out_trade_no'     => '1217752501201407033233368018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => 'WXG',
-    'notify_url' => 'http://yoursite.com/wxpay.html',
-    'trade_type' => 'PAP',
-    'version' => '3.0',
-    'trade_scene' => 'PARKING',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'profit_sharing' => 'Y',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'goods_tag'        => 'WXG',
+    'notify_url'       => 'http://yoursite.com/wxpay.html',
+    'trade_type'       => 'PAP',
+    'version'          => '3.0',
+    'trade_scene'      => 'PARKING',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'   => 'Y',
+    'scene_info'       => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -170,24 +170,24 @@ $instance['v2/vehicle/pay/payapply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->vehicle->pay->payapply->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => '公交代扣',
-    'detail' => '公交代扣：A公交代扣：B公交代扣：C',
-    'attach' => '自定义参数',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'appid'            => 'wxcbda96de0b165486',
+    'mch_id'           => '10000098',
+    'sign_type'        => 'HMAC-SHA256',
+    'body'             => '公交代扣',
+    'detail'           => '公交代扣：A公交代扣：B公交代扣：C',
+    'attach'           => '自定义参数',
+    'out_trade_no'     => '1217752501201407033233368018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => 'WXG',
-    'notify_url' => 'http://yoursite.com/wxpay.html',
-    'trade_type' => 'PAP',
-    'version' => '3.0',
-    'trade_scene' => 'PARKING',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'profit_sharing' => 'Y',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'goods_tag'        => 'WXG',
+    'notify_url'       => 'http://yoursite.com/wxpay.html',
+    'trade_type'       => 'PAP',
+    'version'          => '3.0',
+    'trade_scene'      => 'PARKING',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'   => 'Y',
+    'scene_info'       => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -196,24 +196,24 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/vehicle/pay/payapply')->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => '公交代扣',
-    'detail' => '公交代扣：A公交代扣：B公交代扣：C',
-    'attach' => '自定义参数',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'appid'            => 'wxcbda96de0b165486',
+    'mch_id'           => '10000098',
+    'sign_type'        => 'HMAC-SHA256',
+    'body'             => '公交代扣',
+    'detail'           => '公交代扣：A公交代扣：B公交代扣：C',
+    'attach'           => '自定义参数',
+    'out_trade_no'     => '1217752501201407033233368018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => 'WXG',
-    'notify_url' => 'http://yoursite.com/wxpay.html',
-    'trade_type' => 'PAP',
-    'version' => '3.0',
-    'trade_scene' => 'PARKING',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'profit_sharing' => 'Y',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'goods_tag'        => 'WXG',
+    'notify_url'       => 'http://yoursite.com/wxpay.html',
+    'trade_type'       => 'PAP',
+    'version'          => '3.0',
+    'trade_scene'      => 'PARKING',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'   => 'Y',
+    'scene_info'       => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -222,24 +222,24 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/vehicle/pay/payapply']->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => '公交代扣',
-    'detail' => '公交代扣：A公交代扣：B公交代扣：C',
-    'attach' => '自定义参数',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'appid'            => 'wxcbda96de0b165486',
+    'mch_id'           => '10000098',
+    'sign_type'        => 'HMAC-SHA256',
+    'body'             => '公交代扣',
+    'detail'           => '公交代扣：A公交代扣：B公交代扣：C',
+    'attach'           => '自定义参数',
+    'out_trade_no'     => '1217752501201407033233368018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => 'WXG',
-    'notify_url' => 'http://yoursite.com/wxpay.html',
-    'trade_type' => 'PAP',
-    'version' => '3.0',
-    'trade_scene' => 'PARKING',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'profit_sharing' => 'Y',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'goods_tag'        => 'WXG',
+    'notify_url'       => 'http://yoursite.com/wxpay.html',
+    'trade_type'       => 'PAP',
+    'version'          => '3.0',
+    'trade_scene'      => 'PARKING',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'   => 'Y',
+    'scene_info'       => '{"scene_info":{"start_time":"20170926114339","end_time":"20170826114339","charging_time":"12312312312","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -249,14 +249,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| return_msg {data-required}| string | 返回信息
-| appid {data-required}| string | 公众账号id
-| mch_id {data-required}| string | 商户号
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_msg {data-required} | string | 返回信息
+| appid {data-required} | string | 公众账号id
+| mch_id {data-required} | string | 商户号
 | device_info | string | 设备号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 

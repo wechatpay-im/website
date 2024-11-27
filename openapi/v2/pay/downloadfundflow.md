@@ -9,6 +9,7 @@ description: 商户可以通过该接口下载自2017年6月1日起 的历史资
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
@@ -16,7 +17,6 @@ description: 商户可以通过该接口下载自2017年6月1日起 的历史资
 | bill_date {data-required data-indent=1} | string | 资金账单日期
 | account_type {data-required data-indent=1} | string | 资金账户类型<br/>`Basic` \| `Operation` \| `Fees` 枚举值之一
 | tar_type {data-indent=1} | string | 压缩账单<br/>`GZIP` 枚举值
-| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -27,15 +27,16 @@ $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $instance->v2->pay->downloadfundflow->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'bill_date' => '20140603',
-    'account_type' => 'Basic',
-    'tar_type' => 'GZIP',
-  ],
+  'sink' => $stream,
   'security' => true,
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'bill_date'    => '20140603',
+    'account_type' => 'Basic',
+    'tar_type'     => 'GZIP',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   $tmp = $response->getBody();
@@ -53,15 +54,16 @@ $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $instance->chain('v2/pay/downloadfundflow')->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'bill_date' => '20140603',
-    'account_type' => 'Basic',
-    'tar_type' => 'GZIP',
-  ],
+  'sink' => $stream,
   'security' => true,
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'bill_date'    => '20140603',
+    'account_type' => 'Basic',
+    'tar_type'     => 'GZIP',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   $tmp = $response->getBody();
@@ -79,15 +81,16 @@ $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $instance['v2/pay/downloadfundflow']->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'bill_date' => '20140603',
-    'account_type' => 'Basic',
-    'tar_type' => 'GZIP',
-  ],
+  'sink' => $stream,
   'security' => true,
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'bill_date'    => '20140603',
+    'account_type' => 'Basic',
+    'tar_type'     => 'GZIP',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   $tmp = $response->getBody();
@@ -105,15 +108,16 @@ $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $response = $instance->v2->pay->downloadfundflow->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'bill_date' => '20140603',
-    'account_type' => 'Basic',
-    'tar_type' => 'GZIP',
-  ],
+  'sink' => $stream,
   'security' => true,
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'bill_date'    => '20140603',
+    'account_type' => 'Basic',
+    'tar_type'     => 'GZIP',
+  ],
 ]);
 
 $tmp = $response->getBody();
@@ -129,15 +133,16 @@ $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $response = $instance->chain('v2/pay/downloadfundflow')->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'bill_date' => '20140603',
-    'account_type' => 'Basic',
-    'tar_type' => 'GZIP',
-  ],
+  'sink' => $stream,
   'security' => true,
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'bill_date'    => '20140603',
+    'account_type' => 'Basic',
+    'tar_type'     => 'GZIP',
+  ],
 ]);
 
 $tmp = $response->getBody();
@@ -153,15 +158,16 @@ $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $response = $instance['v2/pay/downloadfundflow']->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'bill_date' => '20140603',
-    'account_type' => 'Basic',
-    'tar_type' => 'GZIP',
-  ],
+  'sink' => $stream,
   'security' => true,
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'bill_date'    => '20140603',
+    'account_type' => 'Basic',
+    'tar_type'     => 'GZIP',
+  ],
 ]);
 
 $tmp = $response->getBody();

@@ -23,11 +23,11 @@ description: 通过授权码查询公众号Openid，调用查询后，该授权�
 ```php [异步纯链式]
 $instance->v2->tools->authcodetoopenid->postAsync([
   'xml' => [
-    'appid' => '',
-    'mch_id' => '',
-    'sub_appid' => '',
+    'appid'      => '',
+    'mch_id'     => '',
+    'sub_appid'  => '',
     'sub_mch_id' => '',
-    'auth_code' => '',
+    'auth_code'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v2->tools->authcodetoopenid->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/tools/authcodetoopenid')->postAsync([
   'xml' => [
-    'appid' => '',
-    'mch_id' => '',
-    'sub_appid' => '',
+    'appid'      => '',
+    'mch_id'     => '',
+    'sub_appid'  => '',
     'sub_mch_id' => '',
-    'auth_code' => '',
+    'auth_code'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v2/tools/authcodetoopenid')->postAsync([
 ```php [异步属性式]
 $instance['v2/tools/authcodetoopenid']->postAsync([
   'xml' => [
-    'appid' => '',
-    'mch_id' => '',
-    'sub_appid' => '',
+    'appid'      => '',
+    'mch_id'     => '',
+    'sub_appid'  => '',
     'sub_mch_id' => '',
-    'auth_code' => '',
+    'auth_code'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v2/tools/authcodetoopenid']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->tools->authcodetoopenid->post([
   'xml' => [
-    'appid' => '',
-    'mch_id' => '',
-    'sub_appid' => '',
+    'appid'      => '',
+    'mch_id'     => '',
+    'sub_appid'  => '',
     'sub_mch_id' => '',
-    'auth_code' => '',
+    'auth_code'  => '',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -84,11 +84,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/tools/authcodetoopenid')->post([
   'xml' => [
-    'appid' => '',
-    'mch_id' => '',
-    'sub_appid' => '',
+    'appid'      => '',
+    'mch_id'     => '',
+    'sub_appid'  => '',
     'sub_mch_id' => '',
-    'auth_code' => '',
+    'auth_code'  => '',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -97,11 +97,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/tools/authcodetoopenid']->post([
   'xml' => [
-    'appid' => '',
-    'mch_id' => '',
-    'sub_appid' => '',
+    'appid'      => '',
+    'mch_id'     => '',
+    'sub_appid'  => '',
     'sub_mch_id' => '',
-    'auth_code' => '',
+    'auth_code'  => '',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -114,15 +114,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
 | sub_openid | string | 用户子标识
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| appid {data-required}| string | 公众账号ID
-| mch_id {data-required}| string | 商户号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
-| openid {data-required}| string | 用户标识
+| openid {data-required} | string | 用户标识
 
 {.im-table #response}
 

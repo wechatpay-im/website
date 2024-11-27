@@ -15,12 +15,12 @@ description: 注意：API只支持新增配置，配置后隔30天才能重新�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | sub_appid {data-required data-indent=1} | string | 特约商户APPID
 | subscribe_appid {data-required data-indent=1} | string | 推荐关注APPID
-| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -28,13 +28,13 @@ description: 注意：API只支持新增配置，配置后隔30天才能重新�
 
 ```php [异步纯链式]
 $instance->v2->secapi->mkt->addrecommendconf->postAsync([
+  'security' => true,
   'xml' => [
-    'mch_id' => '1900000109',
-    'sub_mch_id' => '1900000100',
-    'sub_appid' => 'wx8888888888888888',
+    'mch_id'          => '1900000109',
+    'sub_mch_id'      => '1900000100',
+    'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -44,13 +44,13 @@ $instance->v2->secapi->mkt->addrecommendconf->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/secapi/mkt/addrecommendconf')->postAsync([
+  'security' => true,
   'xml' => [
-    'mch_id' => '1900000109',
-    'sub_mch_id' => '1900000100',
-    'sub_appid' => 'wx8888888888888888',
+    'mch_id'          => '1900000109',
+    'sub_mch_id'      => '1900000100',
+    'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -60,13 +60,13 @@ $instance->chain('v2/secapi/mkt/addrecommendconf')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/secapi/mkt/addrecommendconf']->postAsync([
+  'security' => true,
   'xml' => [
-    'mch_id' => '1900000109',
-    'sub_mch_id' => '1900000100',
-    'sub_appid' => 'wx8888888888888888',
+    'mch_id'          => '1900000109',
+    'sub_mch_id'      => '1900000100',
+    'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -76,39 +76,39 @@ $instance['v2/secapi/mkt/addrecommendconf']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->secapi->mkt->addrecommendconf->post([
+  'security' => true,
   'xml' => [
-    'mch_id' => '1900000109',
-    'sub_mch_id' => '1900000100',
-    'sub_appid' => 'wx8888888888888888',
+    'mch_id'          => '1900000109',
+    'sub_mch_id'      => '1900000100',
+    'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/secapi/mkt/addrecommendconf')->post([
+  'security' => true,
   'xml' => [
-    'mch_id' => '1900000109',
-    'sub_mch_id' => '1900000100',
-    'sub_appid' => 'wx8888888888888888',
+    'mch_id'          => '1900000109',
+    'sub_mch_id'      => '1900000100',
+    'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/secapi/mkt/addrecommendconf']->post([
+  'security' => true,
   'xml' => [
-    'mch_id' => '1900000109',
-    'sub_mch_id' => '1900000100',
-    'sub_appid' => 'wx8888888888888888',
+    'mch_id'          => '1900000109',
+    'sub_mch_id'      => '1900000100',
+    'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -117,12 +117,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| return_msg {data-required}| string | 返回信息
-| err_code {data-required}| string | 错误代码
-| err_code_des {data-required}| string | 错误代码描述
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| sign {data-required}| string | 签名
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_msg {data-required} | string | 返回信息
+| err_code {data-required} | string | 错误代码
+| err_code_des {data-required} | string | 错误代码描述
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| sign {data-required} | string | 签名
 
 {.im-table #response}
 

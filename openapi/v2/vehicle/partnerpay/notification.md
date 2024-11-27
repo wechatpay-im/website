@@ -43,14 +43,14 @@ description: 在停车场场景下，如用户已加入车主平台，则进行�
 ```php [异步纯链式]
 $instance->v2->vehicle->partnerpay->notification->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'version' => '3.0',
+    'appid'       => 'wxcbda96de0b165486',
+    'mch_id'      => '10000098',
+    'sub_appid'   => 'wxcbda96de0b165489',
+    'sub_mch_id'  => '1900000109',
+    'sign_type'   => 'HMAC-SHA256',
+    'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,14 +62,14 @@ $instance->v2->vehicle->partnerpay->notification->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/vehicle/partnerpay/notification')->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'version' => '3.0',
+    'appid'       => 'wxcbda96de0b165486',
+    'mch_id'      => '10000098',
+    'sub_appid'   => 'wxcbda96de0b165489',
+    'sub_mch_id'  => '1900000109',
+    'sign_type'   => 'HMAC-SHA256',
+    'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,14 +81,14 @@ $instance->chain('v2/vehicle/partnerpay/notification')->postAsync([
 ```php [异步属性式]
 $instance['v2/vehicle/partnerpay/notification']->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'version' => '3.0',
+    'appid'       => 'wxcbda96de0b165486',
+    'mch_id'      => '10000098',
+    'sub_appid'   => 'wxcbda96de0b165489',
+    'sub_mch_id'  => '1900000109',
+    'sign_type'   => 'HMAC-SHA256',
+    'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -100,14 +100,14 @@ $instance['v2/vehicle/partnerpay/notification']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->vehicle->partnerpay->notification->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'version' => '3.0',
+    'appid'       => 'wxcbda96de0b165486',
+    'mch_id'      => '10000098',
+    'sub_appid'   => 'wxcbda96de0b165489',
+    'sub_mch_id'  => '1900000109',
+    'sign_type'   => 'HMAC-SHA256',
+    'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -116,14 +116,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/vehicle/partnerpay/notification')->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'version' => '3.0',
+    'appid'       => 'wxcbda96de0b165486',
+    'mch_id'      => '10000098',
+    'sub_appid'   => 'wxcbda96de0b165489',
+    'sub_mch_id'  => '1900000109',
+    'sign_type'   => 'HMAC-SHA256',
+    'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -132,14 +132,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/vehicle/partnerpay/notification']->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'version' => '3.0',
+    'appid'       => 'wxcbda96de0b165486',
+    'mch_id'      => '10000098',
+    'sub_appid'   => 'wxcbda96de0b165489',
+    'sub_mch_id'  => '1900000109',
+    'sign_type'   => 'HMAC-SHA256',
+    'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info' => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -149,18 +149,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| appid {data-required}| string | 公众账号id
-| mch_id {data-required}| string | 商户号
+| appid {data-required} | string | 公众账号id
+| mch_id {data-required} | string | 商户号
 | sub_appid | string | 子商户公众账号id
-| sub_mch_id {data-required}| string | 子商户号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| sub_mch_id {data-required} | string | 子商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| user_state {data-required}| string | 用户状态<br/>`NORMAL` \| `BLOCK` 枚举值之一
+| user_state {data-required} | string | 用户状态<br/>`NORMAL` \| `BLOCK` 枚举值之一
 | deduct_mode | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
 
 {.im-table #response}

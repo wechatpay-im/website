@@ -9,6 +9,7 @@ description: 给同一个实名用户付款，单笔单日限额200/200元；一
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string | 公众账号appid
 | mch_id {data-required data-indent=1} | string | 商户号
@@ -27,7 +28,6 @@ description: 给同一个实名用户付款，单笔单日限额200/200元；一
 | approval_type {data-indent=1} | number | 审批类型<br/>`1` 枚举值
 | act_name {data-indent=1} | string | 项目名称
 | agentid {data-indent=1} | string | 付款的应用id
-| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -53,26 +53,26 @@ $workwxSign = \strtoupper(
   )
 );
 $instance->v2->mmpaymkttransfers->promotion->paywwsptrans2pocket->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
-    'partner_trade_no' => '10000098201411111234567890',
-    'openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
-    'check_name' => 'FORCE_CHECK',
-    're_user_name' => '王小王',
-    'amount' => '10099',
-    'desc' => '六月出差报销费用',
-    'spbill_create_ip' => '192.168.0.1',
-    'workwx_sign' => $workwxSign,
-    'ww_msg_type' => 'NORMAL_MSG',
-    'approval_number' => '201705160008',
-    'approval_type' => '1',
-    'act_name' => '产品部门报销',
-    'agentid' => '1',
-  ],
   'security' => true,
+  'xml' => [
+    'appid'            => 'wx8888888888888888',
+    'mch_id'           => '1900000109',
+    'device_info'      => '013467007045764',
+    'nonce_str'        => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+    'partner_trade_no' => '10000098201411111234567890',
+    'openid'           => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+    'check_name'       => 'FORCE_CHECK',
+    're_user_name'     => '王小王',
+    'amount'           => '10099',
+    'desc'             => '六月出差报销费用',
+    'spbill_create_ip' => '192.168.0.1',
+    'workwx_sign'      => $workwxSign,
+    'ww_msg_type'      => 'NORMAL_MSG',
+    'approval_number'  => '201705160008',
+    'approval_type'    => '1',
+    'act_name'         => '产品部门报销',
+    'agentid'          => '1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -100,26 +100,26 @@ $workwxSign = \strtoupper(
   )
 );
 $instance->chain('v2/mmpaymkttransfers/promotion/paywwsptrans2pocket')->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
-    'partner_trade_no' => '10000098201411111234567890',
-    'openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
-    'check_name' => 'FORCE_CHECK',
-    're_user_name' => '王小王',
-    'amount' => '10099',
-    'desc' => '六月出差报销费用',
-    'spbill_create_ip' => '192.168.0.1',
-    'workwx_sign' => $workwxSign,
-    'ww_msg_type' => 'NORMAL_MSG',
-    'approval_number' => '201705160008',
-    'approval_type' => '1',
-    'act_name' => '产品部门报销',
-    'agentid' => '1',
-  ],
   'security' => true,
+  'xml' => [
+    'appid'            => 'wx8888888888888888',
+    'mch_id'           => '1900000109',
+    'device_info'      => '013467007045764',
+    'nonce_str'        => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+    'partner_trade_no' => '10000098201411111234567890',
+    'openid'           => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+    'check_name'       => 'FORCE_CHECK',
+    're_user_name'     => '王小王',
+    'amount'           => '10099',
+    'desc'             => '六月出差报销费用',
+    'spbill_create_ip' => '192.168.0.1',
+    'workwx_sign'      => $workwxSign,
+    'ww_msg_type'      => 'NORMAL_MSG',
+    'approval_number'  => '201705160008',
+    'approval_type'    => '1',
+    'act_name'         => '产品部门报销',
+    'agentid'          => '1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -147,26 +147,26 @@ $workwxSign = \strtoupper(
   )
 );
 $instance['v2/mmpaymkttransfers/promotion/paywwsptrans2pocket']->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
-    'partner_trade_no' => '10000098201411111234567890',
-    'openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
-    'check_name' => 'FORCE_CHECK',
-    're_user_name' => '王小王',
-    'amount' => '10099',
-    'desc' => '六月出差报销费用',
-    'spbill_create_ip' => '192.168.0.1',
-    'workwx_sign' => $workwxSign,
-    'ww_msg_type' => 'NORMAL_MSG',
-    'approval_number' => '201705160008',
-    'approval_type' => '1',
-    'act_name' => '产品部门报销',
-    'agentid' => '1',
-  ],
   'security' => true,
+  'xml' => [
+    'appid'            => 'wx8888888888888888',
+    'mch_id'           => '1900000109',
+    'device_info'      => '013467007045764',
+    'nonce_str'        => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+    'partner_trade_no' => '10000098201411111234567890',
+    'openid'           => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+    'check_name'       => 'FORCE_CHECK',
+    're_user_name'     => '王小王',
+    'amount'           => '10099',
+    'desc'             => '六月出差报销费用',
+    'spbill_create_ip' => '192.168.0.1',
+    'workwx_sign'      => $workwxSign,
+    'ww_msg_type'      => 'NORMAL_MSG',
+    'approval_number'  => '201705160008',
+    'approval_type'    => '1',
+    'act_name'         => '产品部门报销',
+    'agentid'          => '1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -194,26 +194,26 @@ $workwxSign = \strtoupper(
   )
 );
 $response = $instance->v2->mmpaymkttransfers->promotion->paywwsptrans2pocket->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
-    'partner_trade_no' => '10000098201411111234567890',
-    'openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
-    'check_name' => 'FORCE_CHECK',
-    're_user_name' => '王小王',
-    'amount' => '10099',
-    'desc' => '六月出差报销费用',
-    'spbill_create_ip' => '192.168.0.1',
-    'workwx_sign' => $workwxSign,
-    'ww_msg_type' => 'NORMAL_MSG',
-    'approval_number' => '201705160008',
-    'approval_type' => '1',
-    'act_name' => '产品部门报销',
-    'agentid' => '1',
-  ],
   'security' => true,
+  'xml' => [
+    'appid'            => 'wx8888888888888888',
+    'mch_id'           => '1900000109',
+    'device_info'      => '013467007045764',
+    'nonce_str'        => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+    'partner_trade_no' => '10000098201411111234567890',
+    'openid'           => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+    'check_name'       => 'FORCE_CHECK',
+    're_user_name'     => '王小王',
+    'amount'           => '10099',
+    'desc'             => '六月出差报销费用',
+    'spbill_create_ip' => '192.168.0.1',
+    'workwx_sign'      => $workwxSign,
+    'ww_msg_type'      => 'NORMAL_MSG',
+    'approval_number'  => '201705160008',
+    'approval_type'    => '1',
+    'act_name'         => '产品部门报销',
+    'agentid'          => '1',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -238,26 +238,26 @@ $workwxSign = \strtoupper(
   )
 );
 $response = $instance->chain('v2/mmpaymkttransfers/promotion/paywwsptrans2pocket')->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
-    'partner_trade_no' => '10000098201411111234567890',
-    'openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
-    'check_name' => 'FORCE_CHECK',
-    're_user_name' => '王小王',
-    'amount' => '10099',
-    'desc' => '六月出差报销费用',
-    'spbill_create_ip' => '192.168.0.1',
-    'workwx_sign' => $workwxSign,
-    'ww_msg_type' => 'NORMAL_MSG',
-    'approval_number' => '201705160008',
-    'approval_type' => '1',
-    'act_name' => '产品部门报销',
-    'agentid' => '1',
-  ],
   'security' => true,
+  'xml' => [
+    'appid'            => 'wx8888888888888888',
+    'mch_id'           => '1900000109',
+    'device_info'      => '013467007045764',
+    'nonce_str'        => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+    'partner_trade_no' => '10000098201411111234567890',
+    'openid'           => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+    'check_name'       => 'FORCE_CHECK',
+    're_user_name'     => '王小王',
+    'amount'           => '10099',
+    'desc'             => '六月出差报销费用',
+    'spbill_create_ip' => '192.168.0.1',
+    'workwx_sign'      => $workwxSign,
+    'ww_msg_type'      => 'NORMAL_MSG',
+    'approval_number'  => '201705160008',
+    'approval_type'    => '1',
+    'act_name'         => '产品部门报销',
+    'agentid'          => '1',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -282,26 +282,26 @@ $workwxSign = \strtoupper(
   )
 );
 $response = $instance['v2/mmpaymkttransfers/promotion/paywwsptrans2pocket']->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'nonce_str' => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
-    'partner_trade_no' => '10000098201411111234567890',
-    'openid' => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
-    'check_name' => 'FORCE_CHECK',
-    're_user_name' => '王小王',
-    'amount' => '10099',
-    'desc' => '六月出差报销费用',
-    'spbill_create_ip' => '192.168.0.1',
-    'workwx_sign' => $workwxSign,
-    'ww_msg_type' => 'NORMAL_MSG',
-    'approval_number' => '201705160008',
-    'approval_type' => '1',
-    'act_name' => '产品部门报销',
-    'agentid' => '1',
-  ],
   'security' => true,
+  'xml' => [
+    'appid'            => 'wx8888888888888888',
+    'mch_id'           => '1900000109',
+    'device_info'      => '013467007045764',
+    'nonce_str'        => '5K8264ILTKCH16CQ2502SI8ZNMTM67VS',
+    'partner_trade_no' => '10000098201411111234567890',
+    'openid'           => 'oxTWIuGaIt6gTKsQRLau2M0yL16E',
+    'check_name'       => 'FORCE_CHECK',
+    're_user_name'     => '王小王',
+    'amount'           => '10099',
+    'desc'             => '六月出差报销费用',
+    'spbill_create_ip' => '192.168.0.1',
+    'workwx_sign'      => $workwxSign,
+    'ww_msg_type'      => 'NORMAL_MSG',
+    'approval_number'  => '201705160008',
+    'approval_type'    => '1',
+    'act_name'         => '产品部门报销',
+    'agentid'          => '1',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -310,18 +310,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
 | appid | string | 公众账号appid
 | mch_id | string | 商户号
 | device_info | string | 设备号
 | nonce_str | string | 随机字符串
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| partner_trade_no {data-required}| string | 商户订单号
-| payment_no {data-required}| string | 微信付款单号
-| payment_time {data-required}| string | 付款成功时间
+| partner_trade_no {data-required} | string | 商户订单号
+| payment_no {data-required} | string | 微信付款单号
+| payment_time {data-required} | string | 付款成功时间
 
 {.im-table #response}
 

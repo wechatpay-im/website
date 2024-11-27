@@ -41,29 +41,29 @@ description: 通过此接口在支付的同时完成扣费服务的签约
 ```php [异步纯链式]
 $instance->v2->pay->contractorder->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '1200009811',
-    'contract_mchid' => '1200009811',
-    'contract_appid' => 'wxcbda96de0b165486',
-    'out_trade_no' => '123456',
-    'device_info' => '013467007045764',
-    'body' => 'Ipadmini16G白色',
-    'detail' => 'Ipadmini16G白色',
-    'attach' => '深圳分店',
-    'notify_url' => 'http://yoursite.com',
-    'total_fee' => '888',
-    'spbill_create_ip' => '123.12.12.123',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'JSAPI',
-    'product_id' => '12235413214070356458058',
-    'limit_pay' => 'no_credit',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'plan_id' => '123',
-    'contract_code' => '100001256',
+    'appid'                    => 'wxcbda96de0b165486',
+    'mch_id'                   => '1200009811',
+    'contract_mchid'           => '1200009811',
+    'contract_appid'           => 'wxcbda96de0b165486',
+    'out_trade_no'             => '123456',
+    'device_info'              => '013467007045764',
+    'body'                     => 'Ipadmini16G白色',
+    'detail'                   => 'Ipadmini16G白色',
+    'attach'                   => '深圳分店',
+    'notify_url'               => 'http://yoursite.com',
+    'total_fee'                => '888',
+    'spbill_create_ip'         => '123.12.12.123',
+    'time_start'               => '20091225091010',
+    'time_expire'              => '20091227091010',
+    'goods_tag'                => 'WXG',
+    'trade_type'               => 'JSAPI',
+    'product_id'               => '12235413214070356458058',
+    'limit_pay'                => 'no_credit',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'plan_id'                  => '123',
+    'contract_code'            => '100001256',
     'contract_display_account' => '123',
-    'contract_notify_url' => 'http://yoursite.com',
+    'contract_notify_url'      => 'http://yoursite.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,29 +75,29 @@ $instance->v2->pay->contractorder->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/pay/contractorder')->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '1200009811',
-    'contract_mchid' => '1200009811',
-    'contract_appid' => 'wxcbda96de0b165486',
-    'out_trade_no' => '123456',
-    'device_info' => '013467007045764',
-    'body' => 'Ipadmini16G白色',
-    'detail' => 'Ipadmini16G白色',
-    'attach' => '深圳分店',
-    'notify_url' => 'http://yoursite.com',
-    'total_fee' => '888',
-    'spbill_create_ip' => '123.12.12.123',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'JSAPI',
-    'product_id' => '12235413214070356458058',
-    'limit_pay' => 'no_credit',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'plan_id' => '123',
-    'contract_code' => '100001256',
+    'appid'                    => 'wxcbda96de0b165486',
+    'mch_id'                   => '1200009811',
+    'contract_mchid'           => '1200009811',
+    'contract_appid'           => 'wxcbda96de0b165486',
+    'out_trade_no'             => '123456',
+    'device_info'              => '013467007045764',
+    'body'                     => 'Ipadmini16G白色',
+    'detail'                   => 'Ipadmini16G白色',
+    'attach'                   => '深圳分店',
+    'notify_url'               => 'http://yoursite.com',
+    'total_fee'                => '888',
+    'spbill_create_ip'         => '123.12.12.123',
+    'time_start'               => '20091225091010',
+    'time_expire'              => '20091227091010',
+    'goods_tag'                => 'WXG',
+    'trade_type'               => 'JSAPI',
+    'product_id'               => '12235413214070356458058',
+    'limit_pay'                => 'no_credit',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'plan_id'                  => '123',
+    'contract_code'            => '100001256',
     'contract_display_account' => '123',
-    'contract_notify_url' => 'http://yoursite.com',
+    'contract_notify_url'      => 'http://yoursite.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -109,29 +109,29 @@ $instance->chain('v2/pay/contractorder')->postAsync([
 ```php [异步属性式]
 $instance['v2/pay/contractorder']->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '1200009811',
-    'contract_mchid' => '1200009811',
-    'contract_appid' => 'wxcbda96de0b165486',
-    'out_trade_no' => '123456',
-    'device_info' => '013467007045764',
-    'body' => 'Ipadmini16G白色',
-    'detail' => 'Ipadmini16G白色',
-    'attach' => '深圳分店',
-    'notify_url' => 'http://yoursite.com',
-    'total_fee' => '888',
-    'spbill_create_ip' => '123.12.12.123',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'JSAPI',
-    'product_id' => '12235413214070356458058',
-    'limit_pay' => 'no_credit',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'plan_id' => '123',
-    'contract_code' => '100001256',
+    'appid'                    => 'wxcbda96de0b165486',
+    'mch_id'                   => '1200009811',
+    'contract_mchid'           => '1200009811',
+    'contract_appid'           => 'wxcbda96de0b165486',
+    'out_trade_no'             => '123456',
+    'device_info'              => '013467007045764',
+    'body'                     => 'Ipadmini16G白色',
+    'detail'                   => 'Ipadmini16G白色',
+    'attach'                   => '深圳分店',
+    'notify_url'               => 'http://yoursite.com',
+    'total_fee'                => '888',
+    'spbill_create_ip'         => '123.12.12.123',
+    'time_start'               => '20091225091010',
+    'time_expire'              => '20091227091010',
+    'goods_tag'                => 'WXG',
+    'trade_type'               => 'JSAPI',
+    'product_id'               => '12235413214070356458058',
+    'limit_pay'                => 'no_credit',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'plan_id'                  => '123',
+    'contract_code'            => '100001256',
     'contract_display_account' => '123',
-    'contract_notify_url' => 'http://yoursite.com',
+    'contract_notify_url'      => 'http://yoursite.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -143,29 +143,29 @@ $instance['v2/pay/contractorder']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->pay->contractorder->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '1200009811',
-    'contract_mchid' => '1200009811',
-    'contract_appid' => 'wxcbda96de0b165486',
-    'out_trade_no' => '123456',
-    'device_info' => '013467007045764',
-    'body' => 'Ipadmini16G白色',
-    'detail' => 'Ipadmini16G白色',
-    'attach' => '深圳分店',
-    'notify_url' => 'http://yoursite.com',
-    'total_fee' => '888',
-    'spbill_create_ip' => '123.12.12.123',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'JSAPI',
-    'product_id' => '12235413214070356458058',
-    'limit_pay' => 'no_credit',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'plan_id' => '123',
-    'contract_code' => '100001256',
+    'appid'                    => 'wxcbda96de0b165486',
+    'mch_id'                   => '1200009811',
+    'contract_mchid'           => '1200009811',
+    'contract_appid'           => 'wxcbda96de0b165486',
+    'out_trade_no'             => '123456',
+    'device_info'              => '013467007045764',
+    'body'                     => 'Ipadmini16G白色',
+    'detail'                   => 'Ipadmini16G白色',
+    'attach'                   => '深圳分店',
+    'notify_url'               => 'http://yoursite.com',
+    'total_fee'                => '888',
+    'spbill_create_ip'         => '123.12.12.123',
+    'time_start'               => '20091225091010',
+    'time_expire'              => '20091227091010',
+    'goods_tag'                => 'WXG',
+    'trade_type'               => 'JSAPI',
+    'product_id'               => '12235413214070356458058',
+    'limit_pay'                => 'no_credit',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'plan_id'                  => '123',
+    'contract_code'            => '100001256',
     'contract_display_account' => '123',
-    'contract_notify_url' => 'http://yoursite.com',
+    'contract_notify_url'      => 'http://yoursite.com',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -174,29 +174,29 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/pay/contractorder')->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '1200009811',
-    'contract_mchid' => '1200009811',
-    'contract_appid' => 'wxcbda96de0b165486',
-    'out_trade_no' => '123456',
-    'device_info' => '013467007045764',
-    'body' => 'Ipadmini16G白色',
-    'detail' => 'Ipadmini16G白色',
-    'attach' => '深圳分店',
-    'notify_url' => 'http://yoursite.com',
-    'total_fee' => '888',
-    'spbill_create_ip' => '123.12.12.123',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'JSAPI',
-    'product_id' => '12235413214070356458058',
-    'limit_pay' => 'no_credit',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'plan_id' => '123',
-    'contract_code' => '100001256',
+    'appid'                    => 'wxcbda96de0b165486',
+    'mch_id'                   => '1200009811',
+    'contract_mchid'           => '1200009811',
+    'contract_appid'           => 'wxcbda96de0b165486',
+    'out_trade_no'             => '123456',
+    'device_info'              => '013467007045764',
+    'body'                     => 'Ipadmini16G白色',
+    'detail'                   => 'Ipadmini16G白色',
+    'attach'                   => '深圳分店',
+    'notify_url'               => 'http://yoursite.com',
+    'total_fee'                => '888',
+    'spbill_create_ip'         => '123.12.12.123',
+    'time_start'               => '20091225091010',
+    'time_expire'              => '20091227091010',
+    'goods_tag'                => 'WXG',
+    'trade_type'               => 'JSAPI',
+    'product_id'               => '12235413214070356458058',
+    'limit_pay'                => 'no_credit',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'plan_id'                  => '123',
+    'contract_code'            => '100001256',
     'contract_display_account' => '123',
-    'contract_notify_url' => 'http://yoursite.com',
+    'contract_notify_url'      => 'http://yoursite.com',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -205,29 +205,29 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/pay/contractorder']->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '1200009811',
-    'contract_mchid' => '1200009811',
-    'contract_appid' => 'wxcbda96de0b165486',
-    'out_trade_no' => '123456',
-    'device_info' => '013467007045764',
-    'body' => 'Ipadmini16G白色',
-    'detail' => 'Ipadmini16G白色',
-    'attach' => '深圳分店',
-    'notify_url' => 'http://yoursite.com',
-    'total_fee' => '888',
-    'spbill_create_ip' => '123.12.12.123',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'JSAPI',
-    'product_id' => '12235413214070356458058',
-    'limit_pay' => 'no_credit',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'plan_id' => '123',
-    'contract_code' => '100001256',
+    'appid'                    => 'wxcbda96de0b165486',
+    'mch_id'                   => '1200009811',
+    'contract_mchid'           => '1200009811',
+    'contract_appid'           => 'wxcbda96de0b165486',
+    'out_trade_no'             => '123456',
+    'device_info'              => '013467007045764',
+    'body'                     => 'Ipadmini16G白色',
+    'detail'                   => 'Ipadmini16G白色',
+    'attach'                   => '深圳分店',
+    'notify_url'               => 'http://yoursite.com',
+    'total_fee'                => '888',
+    'spbill_create_ip'         => '123.12.12.123',
+    'time_start'               => '20091225091010',
+    'time_expire'              => '20091227091010',
+    'goods_tag'                => 'WXG',
+    'trade_type'               => 'JSAPI',
+    'product_id'               => '12235413214070356458058',
+    'limit_pay'                => 'no_credit',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'plan_id'                  => '123',
+    'contract_code'            => '100001256',
     'contract_display_account' => '123',
-    'contract_notify_url' => 'http://yoursite.com',
+    'contract_notify_url'      => 'http://yoursite.com',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -237,27 +237,27 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| appid {data-required}| string | 公众账号id
-| mch_id {data-required}| string | 商户号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| appid {data-required} | string | 公众账号id
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| contract_result_code {data-required}| string | 预签约结果
+| contract_result_code {data-required} | string | 预签约结果
 | contract_err_code | string | 预签约错误代码
 | contract_err_code_des | string | 预签约错误描述
-| prepay_id {data-required}| string | 预支付交易会话标识
-| trade_type {data-required}| string | 交易类型
+| prepay_id {data-required} | string | 预支付交易会话标识
+| trade_type {data-required} | string | 交易类型
 | code_url | string | 二维码链接
 | plan_id | integer | 模板id
 | request_serial | string | 请求序列号
 | contract_code | string | 签约协议号
 | contract_display_account | string | 用户账户展示名称
 | mweb_url | string | 支付跳转链接
-| out_trade_no {data-required}| string | 商户订单号
+| out_trade_no {data-required} | string | 商户订单号
 
 {.im-table #response}
 

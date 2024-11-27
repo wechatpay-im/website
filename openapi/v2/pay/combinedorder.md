@@ -55,20 +55,20 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 ```php [异步纯链式]
 $instance->v2->pay->combinedorder->postAsync([
   'xml' => [
-    'combine_appid' => 'wx8888888888888888',
-    'combine_mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'sign_type' => 'HMAC-SHA256',
+    'combine_appid'        => 'wx8888888888888888',
+    'combine_mch_id'       => '1900000109',
+    'device_info'          => '013467007045764',
+    'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'spbill_create_ip' => '8.8.8.8',
-    'time_start' => '20171225091010',
-    'time_expire' => '20171225091510',
-    'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
-    'trade_type' => 'JSAPI',
-    'product_id' => '1234567890',
-    'combine_openid' => '120061098828009406',
-    'scene_info' => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
+    'spbill_create_ip'     => '8.8.8.8',
+    'time_start'           => '20171225091010',
+    'time_expire'          => '20171225091510',
+    'notify_url'           => 'http://www.weixin.qq.com/wxpay/pay.php',
+    'trade_type'           => 'JSAPI',
+    'product_id'           => '1234567890',
+    'combine_openid'       => '120061098828009406',
+    'scene_info'           => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
+    'sub_order_list'       => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,20 +80,20 @@ $instance->v2->pay->combinedorder->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/pay/combinedorder')->postAsync([
   'xml' => [
-    'combine_appid' => 'wx8888888888888888',
-    'combine_mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'sign_type' => 'HMAC-SHA256',
+    'combine_appid'        => 'wx8888888888888888',
+    'combine_mch_id'       => '1900000109',
+    'device_info'          => '013467007045764',
+    'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'spbill_create_ip' => '8.8.8.8',
-    'time_start' => '20171225091010',
-    'time_expire' => '20171225091510',
-    'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
-    'trade_type' => 'JSAPI',
-    'product_id' => '1234567890',
-    'combine_openid' => '120061098828009406',
-    'scene_info' => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
+    'spbill_create_ip'     => '8.8.8.8',
+    'time_start'           => '20171225091010',
+    'time_expire'          => '20171225091510',
+    'notify_url'           => 'http://www.weixin.qq.com/wxpay/pay.php',
+    'trade_type'           => 'JSAPI',
+    'product_id'           => '1234567890',
+    'combine_openid'       => '120061098828009406',
+    'scene_info'           => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
+    'sub_order_list'       => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -105,20 +105,20 @@ $instance->chain('v2/pay/combinedorder')->postAsync([
 ```php [异步属性式]
 $instance['v2/pay/combinedorder']->postAsync([
   'xml' => [
-    'combine_appid' => 'wx8888888888888888',
-    'combine_mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'sign_type' => 'HMAC-SHA256',
+    'combine_appid'        => 'wx8888888888888888',
+    'combine_mch_id'       => '1900000109',
+    'device_info'          => '013467007045764',
+    'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'spbill_create_ip' => '8.8.8.8',
-    'time_start' => '20171225091010',
-    'time_expire' => '20171225091510',
-    'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
-    'trade_type' => 'JSAPI',
-    'product_id' => '1234567890',
-    'combine_openid' => '120061098828009406',
-    'scene_info' => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
+    'spbill_create_ip'     => '8.8.8.8',
+    'time_start'           => '20171225091010',
+    'time_expire'          => '20171225091510',
+    'notify_url'           => 'http://www.weixin.qq.com/wxpay/pay.php',
+    'trade_type'           => 'JSAPI',
+    'product_id'           => '1234567890',
+    'combine_openid'       => '120061098828009406',
+    'scene_info'           => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
+    'sub_order_list'       => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -130,20 +130,20 @@ $instance['v2/pay/combinedorder']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->pay->combinedorder->post([
   'xml' => [
-    'combine_appid' => 'wx8888888888888888',
-    'combine_mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'sign_type' => 'HMAC-SHA256',
+    'combine_appid'        => 'wx8888888888888888',
+    'combine_mch_id'       => '1900000109',
+    'device_info'          => '013467007045764',
+    'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'spbill_create_ip' => '8.8.8.8',
-    'time_start' => '20171225091010',
-    'time_expire' => '20171225091510',
-    'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
-    'trade_type' => 'JSAPI',
-    'product_id' => '1234567890',
-    'combine_openid' => '120061098828009406',
-    'scene_info' => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
+    'spbill_create_ip'     => '8.8.8.8',
+    'time_start'           => '20171225091010',
+    'time_expire'          => '20171225091510',
+    'notify_url'           => 'http://www.weixin.qq.com/wxpay/pay.php',
+    'trade_type'           => 'JSAPI',
+    'product_id'           => '1234567890',
+    'combine_openid'       => '120061098828009406',
+    'scene_info'           => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
+    'sub_order_list'       => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -152,20 +152,20 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/pay/combinedorder')->post([
   'xml' => [
-    'combine_appid' => 'wx8888888888888888',
-    'combine_mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'sign_type' => 'HMAC-SHA256',
+    'combine_appid'        => 'wx8888888888888888',
+    'combine_mch_id'       => '1900000109',
+    'device_info'          => '013467007045764',
+    'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'spbill_create_ip' => '8.8.8.8',
-    'time_start' => '20171225091010',
-    'time_expire' => '20171225091510',
-    'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
-    'trade_type' => 'JSAPI',
-    'product_id' => '1234567890',
-    'combine_openid' => '120061098828009406',
-    'scene_info' => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
+    'spbill_create_ip'     => '8.8.8.8',
+    'time_start'           => '20171225091010',
+    'time_expire'          => '20171225091510',
+    'notify_url'           => 'http://www.weixin.qq.com/wxpay/pay.php',
+    'trade_type'           => 'JSAPI',
+    'product_id'           => '1234567890',
+    'combine_openid'       => '120061098828009406',
+    'scene_info'           => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
+    'sub_order_list'       => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -174,20 +174,20 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/pay/combinedorder']->post([
   'xml' => [
-    'combine_appid' => 'wx8888888888888888',
-    'combine_mch_id' => '1900000109',
-    'device_info' => '013467007045764',
-    'sign_type' => 'HMAC-SHA256',
+    'combine_appid'        => 'wx8888888888888888',
+    'combine_mch_id'       => '1900000109',
+    'device_info'          => '013467007045764',
+    'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'spbill_create_ip' => '8.8.8.8',
-    'time_start' => '20171225091010',
-    'time_expire' => '20171225091510',
-    'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
-    'trade_type' => 'JSAPI',
-    'product_id' => '1234567890',
-    'combine_openid' => '120061098828009406',
-    'scene_info' => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
-    'sub_order_list' => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
+    'spbill_create_ip'     => '8.8.8.8',
+    'time_start'           => '20171225091010',
+    'time_expire'          => '20171225091510',
+    'notify_url'           => 'http://www.weixin.qq.com/wxpay/pay.php',
+    'trade_type'           => 'JSAPI',
+    'product_id'           => '1234567890',
+    'combine_openid'       => '120061098828009406',
+    'scene_info'           => '{"h5_info": {"type":"IOS","app_name": "王者荣耀","bundle_id": "com.tencent.wzryIOS"}}',
+    'sub_order_list'       => '{"order_list": [{"appid": "wxdace645e0bc2c424","attach": "深圳分店","body": "子订单1","fee_type": "CNY","mch_id": "1900009001","out_trade_no": "OD201708030001","total_fee": 1234}],"order_num": 3}',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -197,19 +197,19 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| combine_appid {data-required}| string | 合单appid
-| combine_mch_id {data-required}| string | 合单商户号
+| combine_appid {data-required} | string | 合单appid
+| combine_mch_id {data-required} | string | 合单商户号
 | device_info | string | 设备号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| trade_type {data-required}| string | 交易类型
+| trade_type {data-required} | string | 交易类型
 | code_url | string | 二维码链接
-| prepay_id {data-required}| string | 预支付交易会话标识
+| prepay_id {data-required} | string | 预支付交易会话标识
 | mweb_url | string | H5支付跳转链接
 
 {.im-table #response}

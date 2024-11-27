@@ -22,10 +22,10 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 ```php [异步纯链式]
 $instance->v2->pay->closeorder->postAsync([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
-    'sign_type' => 'HMAC-SHA256',
+    'sign_type'    => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +37,10 @@ $instance->v2->pay->closeorder->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/pay/closeorder')->postAsync([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
-    'sign_type' => 'HMAC-SHA256',
+    'sign_type'    => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +52,10 @@ $instance->chain('v2/pay/closeorder')->postAsync([
 ```php [异步属性式]
 $instance['v2/pay/closeorder']->postAsync([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
-    'sign_type' => 'HMAC-SHA256',
+    'sign_type'    => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +67,10 @@ $instance['v2/pay/closeorder']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->pay->closeorder->post([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
-    'sign_type' => 'HMAC-SHA256',
+    'sign_type'    => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -79,10 +79,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/pay/closeorder')->post([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
-    'sign_type' => 'HMAC-SHA256',
+    'sign_type'    => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -91,10 +91,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/pay/closeorder']->post([
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
-    'sign_type' => 'HMAC-SHA256',
+    'sign_type'    => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -104,14 +104,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| return_msg {data-required}| string | 返回信息
-| appid {data-required}| string | 公众账号ID
-| mch_id {data-required}| string | 商户号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| result_msg {data-required}| string | 业务结果描述
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_msg {data-required} | string | 返回信息
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| result_msg {data-required} | string | 业务结果描述
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 

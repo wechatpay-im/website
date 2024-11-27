@@ -26,14 +26,14 @@ description: 通过此接口可以查询结算资金的明细。
 ```php [异步纯链式]
 $instance->v2->pay->settlementquery->postAsync([
   'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1900000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1900000109',
     'sub_mch_id' => '1230000109',
-    'usetag' => '1',
-    'offset' => '0',
-    'limit' => '10',
+    'usetag'     => '1',
+    'offset'     => '0',
+    'limit'      => '10',
     'date_start' => '20150807',
-    'date_end' => '20150807',
+    'date_end'   => '20150807',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,14 +45,14 @@ $instance->v2->pay->settlementquery->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/pay/settlementquery')->postAsync([
   'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1900000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1900000109',
     'sub_mch_id' => '1230000109',
-    'usetag' => '1',
-    'offset' => '0',
-    'limit' => '10',
+    'usetag'     => '1',
+    'offset'     => '0',
+    'limit'      => '10',
     'date_start' => '20150807',
-    'date_end' => '20150807',
+    'date_end'   => '20150807',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,14 +64,14 @@ $instance->chain('v2/pay/settlementquery')->postAsync([
 ```php [异步属性式]
 $instance['v2/pay/settlementquery']->postAsync([
   'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1900000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1900000109',
     'sub_mch_id' => '1230000109',
-    'usetag' => '1',
-    'offset' => '0',
-    'limit' => '10',
+    'usetag'     => '1',
+    'offset'     => '0',
+    'limit'      => '10',
     'date_start' => '20150807',
-    'date_end' => '20150807',
+    'date_end'   => '20150807',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -83,14 +83,14 @@ $instance['v2/pay/settlementquery']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->pay->settlementquery->post([
   'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1900000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1900000109',
     'sub_mch_id' => '1230000109',
-    'usetag' => '1',
-    'offset' => '0',
-    'limit' => '10',
+    'usetag'     => '1',
+    'offset'     => '0',
+    'limit'      => '10',
     'date_start' => '20150807',
-    'date_end' => '20150807',
+    'date_end'   => '20150807',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -99,14 +99,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/pay/settlementquery')->post([
   'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1900000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1900000109',
     'sub_mch_id' => '1230000109',
-    'usetag' => '1',
-    'offset' => '0',
-    'limit' => '10',
+    'usetag'     => '1',
+    'offset'     => '0',
+    'limit'      => '10',
     'date_start' => '20150807',
-    'date_end' => '20150807',
+    'date_end'   => '20150807',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -115,14 +115,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/pay/settlementquery']->post([
   'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1900000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1900000109',
     'sub_mch_id' => '1230000109',
-    'usetag' => '1',
-    'offset' => '0',
-    'limit' => '10',
+    'usetag'     => '1',
+    'offset'     => '0',
+    'limit'      => '10',
     'date_start' => '20150807',
-    'date_end' => '20150807',
+    'date_end'   => '20150807',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -132,26 +132,26 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| return_msg {data-required}| string | 返回信息
-| appid {data-required}| string | 公众账号ID
-| mch_id {data-required}| string | 商户号
-| nonce_str {data-required}| string | 随机字符串
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_msg {data-required} | string | 返回信息
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| record_num {data-required}| string | 返回数据行数
-| fbatchno {data-required}| string | 付汇批次号
-| date_settlement {data-required}| string | 结算日期
-| date_start {data-required}| string | 交易开始日期
-| date_end {data-required}| string | 交易结束日期
-| settlement_fee {data-required}| integer | 划账金额
-| unsettlement_fee {data-required}| integer | 未划账金额
-| settlementfee_type {data-required}| string | 结算币种
-| pay_fee {data-required}| integer | 支付金额
-| refund_fee {data-required}| integer | 退款金额
-| pay_net_fee {data-required}| integer | 支付净额
-| poundage_fee {data-required}| integer | 手续费金额
+| record_num {data-required} | string | 返回数据行数
+| fbatchno {data-required} | string | 付汇批次号
+| date_settlement {data-required} | string | 结算日期
+| date_start {data-required} | string | 交易开始日期
+| date_end {data-required} | string | 交易结束日期
+| settlement_fee {data-required} | integer | 划账金额
+| unsettlement_fee {data-required} | integer | 未划账金额
+| settlementfee_type {data-required} | string | 结算币种
+| pay_fee {data-required} | integer | 支付金额
+| refund_fee {data-required} | integer | 退款金额
+| pay_net_fee {data-required} | integer | 支付净额
+| poundage_fee {data-required} | integer | 手续费金额
 
 {.im-table #response}
 

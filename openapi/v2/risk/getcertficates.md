@@ -20,7 +20,7 @@ description: 调用获取平台证书V2接口之前，请前往微信支付商�
 ```php [异步纯链式]
 $instance->v2->risk->getcertficates->postAsync([
   'xml' => [
-    'mch_id' => '1900000109',
+    'mch_id'    => '1900000109',
     'sign_type' => 'HMAC-SHA256',
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v2->risk->getcertficates->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/risk/getcertficates')->postAsync([
   'xml' => [
-    'mch_id' => '1900000109',
+    'mch_id'    => '1900000109',
     'sign_type' => 'HMAC-SHA256',
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v2/risk/getcertficates')->postAsync([
 ```php [异步属性式]
 $instance['v2/risk/getcertficates']->postAsync([
   'xml' => [
-    'mch_id' => '1900000109',
+    'mch_id'    => '1900000109',
     'sign_type' => 'HMAC-SHA256',
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v2/risk/getcertficates']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->risk->getcertficates->post([
   'xml' => [
-    'mch_id' => '1900000109',
+    'mch_id'    => '1900000109',
     'sign_type' => 'HMAC-SHA256',
   ],
 ]);
@@ -69,7 +69,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/risk/getcertficates')->post([
   'xml' => [
-    'mch_id' => '1900000109',
+    'mch_id'    => '1900000109',
     'sign_type' => 'HMAC-SHA256',
   ],
 ]);
@@ -79,7 +79,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/risk/getcertficates']->post([
   'xml' => [
-    'mch_id' => '1900000109',
+    'mch_id'    => '1900000109',
     'sign_type' => 'HMAC-SHA256',
   ],
 ]);
@@ -90,15 +90,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 错误码描述
 | nonce_str | string | 随机字符串
 | sign | string | 签名
 | error_code | string | 错误码
 | error_code_des | string | 错误代码描述
-| result_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| mch_id {data-required}| string | 商户号
-| certificates {data-required}| string | 平台证书信息
+| result_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| mch_id {data-required} | string | 商户号
+| certificates {data-required} | string | 平台证书信息
 
 {.im-table #response}
 

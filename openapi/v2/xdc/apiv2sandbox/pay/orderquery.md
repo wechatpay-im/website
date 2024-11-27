@@ -9,14 +9,14 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
+| timeout | float | 请求超时时间
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Negative-Test {data-indent=1} | string | 异常用例名称<br/>`MICROPAY_USERPAYING` \| `MICROPAY_TIMEOUT` \| `MICROPAY_PAYERROR` \| `MICROPAY_PAY_QUERY_TIMEOUT`枚举值之一
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 公众账号ID
 | mch_id {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 商户号
 | out_trade_no {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 商户订单号
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256`枚举值之一<br/>默认值 `MD5`
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Negative-Test {data-indent=1} | string | 异常用例名称<br/>`MICROPAY_USERPAYING` \| `MICROPAY_TIMEOUT` \| `MICROPAY_PAYERROR` \| `MICROPAY_PAY_QUERY_TIMEOUT`枚举值之一
-| timeout | float | 请求超时时间
 
 {.im-table #request}
 
@@ -24,16 +24,16 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 ```php [异步纯链式]
 $instance->v2->xdc->apiv2sandbox->pay->orderquery->postAsync([
-  'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'sign_type' => 'HMAC-SHA256',
-  ],
+  'timeout' => 0.4,
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-  'timeout' => 0.4,
+  'xml' => [
+    'appid'        => 'wxd678efh567hg6787',
+    'mch_id'       => '1230000109',
+    'out_trade_no' => '20150806125346',
+    'sign_type'    => 'HMAC-SHA256',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
@@ -43,16 +43,16 @@ $instance->v2->xdc->apiv2sandbox->pay->orderquery->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->postAsync([
-  'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'sign_type' => 'HMAC-SHA256',
-  ],
+  'timeout' => 0.4,
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-  'timeout' => 0.4,
+  'xml' => [
+    'appid'        => 'wxd678efh567hg6787',
+    'mch_id'       => '1230000109',
+    'out_trade_no' => '20150806125346',
+    'sign_type'    => 'HMAC-SHA256',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
@@ -62,16 +62,16 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/xdc/apiv2sandbox/pay/orderquery']->postAsync([
-  'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'sign_type' => 'HMAC-SHA256',
-  ],
+  'timeout' => 0.4,
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-  'timeout' => 0.4,
+  'xml' => [
+    'appid'        => 'wxd678efh567hg6787',
+    'mch_id'       => '1230000109',
+    'out_trade_no' => '20150806125346',
+    'sign_type'    => 'HMAC-SHA256',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
@@ -81,48 +81,48 @@ $instance['v2/xdc/apiv2sandbox/pay/orderquery']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->xdc->apiv2sandbox->pay->orderquery->post([
-  'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'sign_type' => 'HMAC-SHA256',
-  ],
+  'timeout' => 0.4,
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-  'timeout' => 0.4,
+  'xml' => [
+    'appid'        => 'wxd678efh567hg6787',
+    'mch_id'       => '1230000109',
+    'out_trade_no' => '20150806125346',
+    'sign_type'    => 'HMAC-SHA256',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/xdc/apiv2sandbox/pay/orderquery')->post([
-  'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'sign_type' => 'HMAC-SHA256',
-  ],
+  'timeout' => 0.4,
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-  'timeout' => 0.4,
+  'xml' => [
+    'appid'        => 'wxd678efh567hg6787',
+    'mch_id'       => '1230000109',
+    'out_trade_no' => '20150806125346',
+    'sign_type'    => 'HMAC-SHA256',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/xdc/apiv2sandbox/pay/orderquery']->post([
-  'xml' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'sign_type' => 'HMAC-SHA256',
-  ],
+  'timeout' => 0.4,
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
   ],
-  'timeout' => 0.4,
+  'xml' => [
+    'appid'        => 'wxd678efh567hg6787',
+    'mch_id'       => '1230000109',
+    'out_trade_no' => '20150806125346',
+    'sign_type'    => 'HMAC-SHA256',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 ```

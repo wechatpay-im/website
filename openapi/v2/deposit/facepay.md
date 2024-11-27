@@ -47,26 +47,26 @@ description: 商户通过支付押金（人脸）接口发起押金支付请求�
 ```php [异步纯链式]
 $instance->v2->deposit->facepay->postAsync([
   'xml' => [
-    'deposit' => 'Y',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000100',
-    'device_info' => '013467007045764',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '',
-    'attach' => '说明',
-    'out_trade_no' => '1217472501201407033233367018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'deposit'          => 'Y',
+    'appid'            => 'wx8888888888888888',
+    'sub_appid'        => 'wx8888888888888888',
+    'mch_id'           => '1900000100',
+    'sub_mch_id'       => '1900000100',
+    'device_info'      => '013467007045764',
+    'body'             => 'image形象店-深圳腾大- QQ公仔',
+    'detail'           => '',
+    'attach'           => '说明',
+    'out_trade_no'     => '1217472501201407033233367018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => '1234',
-    'limit_pay' => 'no_credit',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'face_code' => 'b713b5d2-666c-48',
-    'sign_type' => 'HMAC-SHA256',
+    'goods_tag'        => '1234',
+    'limit_pay'        => 'no_credit',
+    'time_start'       => '20091225091010',
+    'time_expire'      => '20091227091010',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'face_code'        => 'b713b5d2-666c-48',
+    'sign_type'        => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,26 +78,26 @@ $instance->v2->deposit->facepay->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/deposit/facepay')->postAsync([
   'xml' => [
-    'deposit' => 'Y',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000100',
-    'device_info' => '013467007045764',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '',
-    'attach' => '说明',
-    'out_trade_no' => '1217472501201407033233367018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'deposit'          => 'Y',
+    'appid'            => 'wx8888888888888888',
+    'sub_appid'        => 'wx8888888888888888',
+    'mch_id'           => '1900000100',
+    'sub_mch_id'       => '1900000100',
+    'device_info'      => '013467007045764',
+    'body'             => 'image形象店-深圳腾大- QQ公仔',
+    'detail'           => '',
+    'attach'           => '说明',
+    'out_trade_no'     => '1217472501201407033233367018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => '1234',
-    'limit_pay' => 'no_credit',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'face_code' => 'b713b5d2-666c-48',
-    'sign_type' => 'HMAC-SHA256',
+    'goods_tag'        => '1234',
+    'limit_pay'        => 'no_credit',
+    'time_start'       => '20091225091010',
+    'time_expire'      => '20091227091010',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'face_code'        => 'b713b5d2-666c-48',
+    'sign_type'        => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -109,26 +109,26 @@ $instance->chain('v2/deposit/facepay')->postAsync([
 ```php [异步属性式]
 $instance['v2/deposit/facepay']->postAsync([
   'xml' => [
-    'deposit' => 'Y',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000100',
-    'device_info' => '013467007045764',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '',
-    'attach' => '说明',
-    'out_trade_no' => '1217472501201407033233367018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'deposit'          => 'Y',
+    'appid'            => 'wx8888888888888888',
+    'sub_appid'        => 'wx8888888888888888',
+    'mch_id'           => '1900000100',
+    'sub_mch_id'       => '1900000100',
+    'device_info'      => '013467007045764',
+    'body'             => 'image形象店-深圳腾大- QQ公仔',
+    'detail'           => '',
+    'attach'           => '说明',
+    'out_trade_no'     => '1217472501201407033233367018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => '1234',
-    'limit_pay' => 'no_credit',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'face_code' => 'b713b5d2-666c-48',
-    'sign_type' => 'HMAC-SHA256',
+    'goods_tag'        => '1234',
+    'limit_pay'        => 'no_credit',
+    'time_start'       => '20091225091010',
+    'time_expire'      => '20091227091010',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'face_code'        => 'b713b5d2-666c-48',
+    'sign_type'        => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -140,26 +140,26 @@ $instance['v2/deposit/facepay']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->deposit->facepay->post([
   'xml' => [
-    'deposit' => 'Y',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000100',
-    'device_info' => '013467007045764',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '',
-    'attach' => '说明',
-    'out_trade_no' => '1217472501201407033233367018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'deposit'          => 'Y',
+    'appid'            => 'wx8888888888888888',
+    'sub_appid'        => 'wx8888888888888888',
+    'mch_id'           => '1900000100',
+    'sub_mch_id'       => '1900000100',
+    'device_info'      => '013467007045764',
+    'body'             => 'image形象店-深圳腾大- QQ公仔',
+    'detail'           => '',
+    'attach'           => '说明',
+    'out_trade_no'     => '1217472501201407033233367018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => '1234',
-    'limit_pay' => 'no_credit',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'face_code' => 'b713b5d2-666c-48',
-    'sign_type' => 'HMAC-SHA256',
+    'goods_tag'        => '1234',
+    'limit_pay'        => 'no_credit',
+    'time_start'       => '20091225091010',
+    'time_expire'      => '20091227091010',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'face_code'        => 'b713b5d2-666c-48',
+    'sign_type'        => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -168,26 +168,26 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/deposit/facepay')->post([
   'xml' => [
-    'deposit' => 'Y',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000100',
-    'device_info' => '013467007045764',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '',
-    'attach' => '说明',
-    'out_trade_no' => '1217472501201407033233367018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'deposit'          => 'Y',
+    'appid'            => 'wx8888888888888888',
+    'sub_appid'        => 'wx8888888888888888',
+    'mch_id'           => '1900000100',
+    'sub_mch_id'       => '1900000100',
+    'device_info'      => '013467007045764',
+    'body'             => 'image形象店-深圳腾大- QQ公仔',
+    'detail'           => '',
+    'attach'           => '说明',
+    'out_trade_no'     => '1217472501201407033233367018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => '1234',
-    'limit_pay' => 'no_credit',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'face_code' => 'b713b5d2-666c-48',
-    'sign_type' => 'HMAC-SHA256',
+    'goods_tag'        => '1234',
+    'limit_pay'        => 'no_credit',
+    'time_start'       => '20091225091010',
+    'time_expire'      => '20091227091010',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'face_code'        => 'b713b5d2-666c-48',
+    'sign_type'        => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -196,26 +196,26 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/deposit/facepay']->post([
   'xml' => [
-    'deposit' => 'Y',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000100',
-    'device_info' => '013467007045764',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'detail' => '',
-    'attach' => '说明',
-    'out_trade_no' => '1217472501201407033233367018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
+    'deposit'          => 'Y',
+    'appid'            => 'wx8888888888888888',
+    'sub_appid'        => 'wx8888888888888888',
+    'mch_id'           => '1900000100',
+    'sub_mch_id'       => '1900000100',
+    'device_info'      => '013467007045764',
+    'body'             => 'image形象店-深圳腾大- QQ公仔',
+    'detail'           => '',
+    'attach'           => '说明',
+    'out_trade_no'     => '1217472501201407033233367018',
+    'total_fee'        => '888',
+    'fee_type'         => 'CNY',
     'spbill_create_ip' => '8.8.8.8',
-    'goods_tag' => '1234',
-    'limit_pay' => 'no_credit',
-    'time_start' => '20091225091010',
-    'time_expire' => '20091227091010',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'face_code' => 'b713b5d2-666c-48',
-    'sign_type' => 'HMAC-SHA256',
+    'goods_tag'        => '1234',
+    'limit_pay'        => 'no_credit',
+    'time_start'       => '20091225091010',
+    'time_expire'      => '20091227091010',
+    'openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'face_code'        => 'b713b5d2-666c-48',
+    'sign_type'        => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -225,34 +225,34 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| appid {data-required}| string | 公众账号ID
+| appid {data-required} | string | 公众账号ID
 | sub_appid | string | 子商户公众账号ID
-| mch_id {data-required}| string | 商户号
+| mch_id {data-required} | string | 商户号
 | sub_mch_id | string | 子商户号
 | device_info | string | 设备号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| openid {data-required}| string | 用户标识
-| is_subscribe {data-required}| string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
+| openid {data-required} | string | 用户标识
+| is_subscribe {data-required} | string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
 | sub_openid | string | 用户子标识
 | sub_is_subscribe | string | 是否关注子公众账号<br/>`Y` \| `N` 枚举值之一
-| trade_type {data-required}| string | 交易类型
-| bank_type {data-required}| string | 付款银行
+| trade_type {data-required} | string | 交易类型
+| bank_type {data-required} | string | 付款银行
 | fee_type | string | 标价币种
-| total_fee {data-required}| integer | 标价金额
+| total_fee {data-required} | integer | 标价金额
 | cash_fee_type | string | 现金支付币种
-| cash_fee {data-required}| integer | 现金支付金额
+| cash_fee {data-required} | integer | 现金支付金额
 | settlement_total_fee | integer | 应结订单金额
 | coupon_fee | integer | 代金券金额
-| transaction_id {data-required}| string | 微信支付订单号
-| out_trade_no {data-required}| string | 商户订单号
+| transaction_id {data-required} | string | 微信支付订单号
+| out_trade_no {data-required} | string | 商户订单号
 | attach | string | 商家数据包
-| time_end {data-required}| string | 支付完成时间
+| time_end {data-required} | string | 支付完成时间
 | promotion_detail | string | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID

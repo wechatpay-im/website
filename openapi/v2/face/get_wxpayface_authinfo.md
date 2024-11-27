@@ -32,18 +32,18 @@ description: 人脸识别通过识别用户人脸，获取用户信息（openid�
 $instance->v2->face->get_wxpayface_authinfo->postAsync([
   'base_uri' => 'https://payapp.weixin.qq.com/', // 接入点
   'xml' => [
-    'store_id' => 'IMG001',
+    'store_id'   => 'IMG001',
     'store_name' => '爱马哥南山店',
-    'device_id' => 'DEV001',
-    'attach' => '',
-    'rawdata' => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
-    'appid' => 'wx31fdaErqR31',
-    'mch_id' => '12345689',
-    'sub_appid' => 'wx31fdaErqR31',
+    'device_id'  => 'DEV001',
+    'attach'     => '',
+    'rawdata'    => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
+    'appid'      => 'wx31fdaErqR31',
+    'mch_id'     => '12345689',
+    'sub_appid'  => 'wx31fdaErqR31',
     'sub_mch_id' => '12345689',
-    'now' => '1239878956',
-    'version' => '1',
-    'sign_type' => 'MD5',
+    'now'        => '1239878956',
+    'version'    => '1',
+    'sign_type'  => 'MD5',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,18 +56,18 @@ $instance->v2->face->get_wxpayface_authinfo->postAsync([
 $instance->chain('v2/face/get_wxpayface_authinfo')->postAsync([
   'base_uri' => 'https://payapp.weixin.qq.com/', // 接入点
   'xml' => [
-    'store_id' => 'IMG001',
+    'store_id'   => 'IMG001',
     'store_name' => '爱马哥南山店',
-    'device_id' => 'DEV001',
-    'attach' => '',
-    'rawdata' => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
-    'appid' => 'wx31fdaErqR31',
-    'mch_id' => '12345689',
-    'sub_appid' => 'wx31fdaErqR31',
+    'device_id'  => 'DEV001',
+    'attach'     => '',
+    'rawdata'    => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
+    'appid'      => 'wx31fdaErqR31',
+    'mch_id'     => '12345689',
+    'sub_appid'  => 'wx31fdaErqR31',
     'sub_mch_id' => '12345689',
-    'now' => '1239878956',
-    'version' => '1',
-    'sign_type' => 'MD5',
+    'now'        => '1239878956',
+    'version'    => '1',
+    'sign_type'  => 'MD5',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,18 +80,18 @@ $instance->chain('v2/face/get_wxpayface_authinfo')->postAsync([
 $instance['v2/face/get_wxpayface_authinfo']->postAsync([
   'base_uri' => 'https://payapp.weixin.qq.com/', // 接入点
   'xml' => [
-    'store_id' => 'IMG001',
+    'store_id'   => 'IMG001',
     'store_name' => '爱马哥南山店',
-    'device_id' => 'DEV001',
-    'attach' => '',
-    'rawdata' => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
-    'appid' => 'wx31fdaErqR31',
-    'mch_id' => '12345689',
-    'sub_appid' => 'wx31fdaErqR31',
+    'device_id'  => 'DEV001',
+    'attach'     => '',
+    'rawdata'    => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
+    'appid'      => 'wx31fdaErqR31',
+    'mch_id'     => '12345689',
+    'sub_appid'  => 'wx31fdaErqR31',
     'sub_mch_id' => '12345689',
-    'now' => '1239878956',
-    'version' => '1',
-    'sign_type' => 'MD5',
+    'now'        => '1239878956',
+    'version'    => '1',
+    'sign_type'  => 'MD5',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -104,18 +104,18 @@ $instance['v2/face/get_wxpayface_authinfo']->postAsync([
 $response = $instance->v2->face->get_wxpayface_authinfo->post([
   'base_uri' => 'https://payapp.weixin.qq.com/', // 接入点
   'xml' => [
-    'store_id' => 'IMG001',
+    'store_id'   => 'IMG001',
     'store_name' => '爱马哥南山店',
-    'device_id' => 'DEV001',
-    'attach' => '',
-    'rawdata' => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
-    'appid' => 'wx31fdaErqR31',
-    'mch_id' => '12345689',
-    'sub_appid' => 'wx31fdaErqR31',
+    'device_id'  => 'DEV001',
+    'attach'     => '',
+    'rawdata'    => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
+    'appid'      => 'wx31fdaErqR31',
+    'mch_id'     => '12345689',
+    'sub_appid'  => 'wx31fdaErqR31',
     'sub_mch_id' => '12345689',
-    'now' => '1239878956',
-    'version' => '1',
-    'sign_type' => 'MD5',
+    'now'        => '1239878956',
+    'version'    => '1',
+    'sign_type'  => 'MD5',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -125,18 +125,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 $response = $instance->chain('v2/face/get_wxpayface_authinfo')->post([
   'base_uri' => 'https://payapp.weixin.qq.com/', // 接入点
   'xml' => [
-    'store_id' => 'IMG001',
+    'store_id'   => 'IMG001',
     'store_name' => '爱马哥南山店',
-    'device_id' => 'DEV001',
-    'attach' => '',
-    'rawdata' => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
-    'appid' => 'wx31fdaErqR31',
-    'mch_id' => '12345689',
-    'sub_appid' => 'wx31fdaErqR31',
+    'device_id'  => 'DEV001',
+    'attach'     => '',
+    'rawdata'    => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
+    'appid'      => 'wx31fdaErqR31',
+    'mch_id'     => '12345689',
+    'sub_appid'  => 'wx31fdaErqR31',
     'sub_mch_id' => '12345689',
-    'now' => '1239878956',
-    'version' => '1',
-    'sign_type' => 'MD5',
+    'now'        => '1239878956',
+    'version'    => '1',
+    'sign_type'  => 'MD5',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -146,18 +146,18 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 $response = $instance['v2/face/get_wxpayface_authinfo']->post([
   'base_uri' => 'https://payapp.weixin.qq.com/', // 接入点
   'xml' => [
-    'store_id' => 'IMG001',
+    'store_id'   => 'IMG001',
     'store_name' => '爱马哥南山店',
-    'device_id' => 'DEV001',
-    'attach' => '',
-    'rawdata' => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
-    'appid' => 'wx31fdaErqR31',
-    'mch_id' => '12345689',
-    'sub_appid' => 'wx31fdaErqR31',
+    'device_id'  => 'DEV001',
+    'attach'     => '',
+    'rawdata'    => 'H0kvnUgGHKuqflNwtNqCdOVpbO4FPSowudTG',
+    'appid'      => 'wx31fdaErqR31',
+    'mch_id'     => '12345689',
+    'sub_appid'  => 'wx31fdaErqR31',
     'sub_mch_id' => '12345689',
-    'now' => '1239878956',
-    'version' => '1',
-    'sign_type' => 'MD5',
+    'now'        => '1239878956',
+    'version'    => '1',
+    'sign_type'  => 'MD5',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -167,14 +167,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 错误码描述
-| authinfo {data-required}| string | SDK调用凭证。用于调用SDK的人脸识别接口。
+| authinfo {data-required} | string | SDK调用凭证。用于调用SDK的人脸识别接口。
 | expires_in | integer | authinfo的有效时间, 单位秒。
-| nonce_str {data-required}| string | 随机字符串，不长于32位
-| sign {data-required}| string | 参数签名。
-| appid {data-required}| string | 公众号
-| mch_id {data-required}| string | 商户号
+| nonce_str {data-required} | string | 随机字符串，不长于32位
+| sign {data-required} | string | 参数签名。
+| appid {data-required} | string | 公众号
+| mch_id {data-required} | string | 商户号
 | sub_appid | string | 子商户公众账号ID(服务商模式)
 | sub_mch_id | string | 子商户号(服务商模式)
 

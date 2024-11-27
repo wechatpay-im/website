@@ -15,6 +15,7 @@ description: 通过此接口可以修改小微商户的入驻资料，例如银�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | version {data-required data-indent=1} | string | 接口版本号<br/>`1.0` 枚举值
 | mch_id {data-required data-indent=1} | string | 商户号
@@ -25,7 +26,6 @@ description: 通过此接口可以修改小微商户的入驻资料，例如银�
 | account_bank {data-indent=1} | string | 开户银行
 | bank_address_code {data-required data-indent=1} | string | 开户银行省市编码
 | cert_sn {data-required data-indent=1} | string | 平台证书序列号
-| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -33,18 +33,18 @@ description: 通过此接口可以修改小微商户的入驻资料，例如银�
 
 ```php [异步纯链式]
 $instance->v2->applyment->micro->modifyarchives->postAsync([
-  'xml' => [
-    'version' => '1.0',
-    'mch_id' => '1230000109',
-    'sign_type' => 'HMAC-SHA256',
-    'sub_mch_id' => '1230000109',
-    'account_number' => '',
-    'bank_name' => '深圳农村商业银行xxx支行',
-    'account_bank' => '中国银行',
-    'bank_address_code' => '110000',
-    'cert_sn' => '5430056GFRJK54YTFF653GDFH09HFGHF',
-  ],
   'security' => true,
+  'xml' => [
+    'version'           => '1.0',
+    'mch_id'            => '1230000109',
+    'sign_type'         => 'HMAC-SHA256',
+    'sub_mch_id'        => '1230000109',
+    'account_number'    => '',
+    'bank_name'         => '深圳农村商业银行xxx支行',
+    'account_bank'      => '中国银行',
+    'bank_address_code' => '110000',
+    'cert_sn'           => '5430056GFRJK54YTFF653GDFH09HFGHF',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -54,18 +54,18 @@ $instance->v2->applyment->micro->modifyarchives->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/applyment/micro/modifyarchives')->postAsync([
-  'xml' => [
-    'version' => '1.0',
-    'mch_id' => '1230000109',
-    'sign_type' => 'HMAC-SHA256',
-    'sub_mch_id' => '1230000109',
-    'account_number' => '',
-    'bank_name' => '深圳农村商业银行xxx支行',
-    'account_bank' => '中国银行',
-    'bank_address_code' => '110000',
-    'cert_sn' => '5430056GFRJK54YTFF653GDFH09HFGHF',
-  ],
   'security' => true,
+  'xml' => [
+    'version'           => '1.0',
+    'mch_id'            => '1230000109',
+    'sign_type'         => 'HMAC-SHA256',
+    'sub_mch_id'        => '1230000109',
+    'account_number'    => '',
+    'bank_name'         => '深圳农村商业银行xxx支行',
+    'account_bank'      => '中国银行',
+    'bank_address_code' => '110000',
+    'cert_sn'           => '5430056GFRJK54YTFF653GDFH09HFGHF',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -75,18 +75,18 @@ $instance->chain('v2/applyment/micro/modifyarchives')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/applyment/micro/modifyarchives']->postAsync([
-  'xml' => [
-    'version' => '1.0',
-    'mch_id' => '1230000109',
-    'sign_type' => 'HMAC-SHA256',
-    'sub_mch_id' => '1230000109',
-    'account_number' => '',
-    'bank_name' => '深圳农村商业银行xxx支行',
-    'account_bank' => '中国银行',
-    'bank_address_code' => '110000',
-    'cert_sn' => '5430056GFRJK54YTFF653GDFH09HFGHF',
-  ],
   'security' => true,
+  'xml' => [
+    'version'           => '1.0',
+    'mch_id'            => '1230000109',
+    'sign_type'         => 'HMAC-SHA256',
+    'sub_mch_id'        => '1230000109',
+    'account_number'    => '',
+    'bank_name'         => '深圳农村商业银行xxx支行',
+    'account_bank'      => '中国银行',
+    'bank_address_code' => '110000',
+    'cert_sn'           => '5430056GFRJK54YTFF653GDFH09HFGHF',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -96,54 +96,54 @@ $instance['v2/applyment/micro/modifyarchives']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->applyment->micro->modifyarchives->post([
-  'xml' => [
-    'version' => '1.0',
-    'mch_id' => '1230000109',
-    'sign_type' => 'HMAC-SHA256',
-    'sub_mch_id' => '1230000109',
-    'account_number' => '',
-    'bank_name' => '深圳农村商业银行xxx支行',
-    'account_bank' => '中国银行',
-    'bank_address_code' => '110000',
-    'cert_sn' => '5430056GFRJK54YTFF653GDFH09HFGHF',
-  ],
   'security' => true,
+  'xml' => [
+    'version'           => '1.0',
+    'mch_id'            => '1230000109',
+    'sign_type'         => 'HMAC-SHA256',
+    'sub_mch_id'        => '1230000109',
+    'account_number'    => '',
+    'bank_name'         => '深圳农村商业银行xxx支行',
+    'account_bank'      => '中国银行',
+    'bank_address_code' => '110000',
+    'cert_sn'           => '5430056GFRJK54YTFF653GDFH09HFGHF',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/applyment/micro/modifyarchives')->post([
-  'xml' => [
-    'version' => '1.0',
-    'mch_id' => '1230000109',
-    'sign_type' => 'HMAC-SHA256',
-    'sub_mch_id' => '1230000109',
-    'account_number' => '',
-    'bank_name' => '深圳农村商业银行xxx支行',
-    'account_bank' => '中国银行',
-    'bank_address_code' => '110000',
-    'cert_sn' => '5430056GFRJK54YTFF653GDFH09HFGHF',
-  ],
   'security' => true,
+  'xml' => [
+    'version'           => '1.0',
+    'mch_id'            => '1230000109',
+    'sign_type'         => 'HMAC-SHA256',
+    'sub_mch_id'        => '1230000109',
+    'account_number'    => '',
+    'bank_name'         => '深圳农村商业银行xxx支行',
+    'account_bank'      => '中国银行',
+    'bank_address_code' => '110000',
+    'cert_sn'           => '5430056GFRJK54YTFF653GDFH09HFGHF',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/applyment/micro/modifyarchives']->post([
-  'xml' => [
-    'version' => '1.0',
-    'mch_id' => '1230000109',
-    'sign_type' => 'HMAC-SHA256',
-    'sub_mch_id' => '1230000109',
-    'account_number' => '',
-    'bank_name' => '深圳农村商业银行xxx支行',
-    'account_bank' => '中国银行',
-    'bank_address_code' => '110000',
-    'cert_sn' => '5430056GFRJK54YTFF653GDFH09HFGHF',
-  ],
   'security' => true,
+  'xml' => [
+    'version'           => '1.0',
+    'mch_id'            => '1230000109',
+    'sign_type'         => 'HMAC-SHA256',
+    'sub_mch_id'        => '1230000109',
+    'account_number'    => '',
+    'bank_name'         => '深圳农村商业银行xxx支行',
+    'account_bank'      => '中国银行',
+    'bank_address_code' => '110000',
+    'cert_sn'           => '5430056GFRJK54YTFF653GDFH09HFGHF',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -152,11 +152,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | mch_id | string | 商户号

@@ -1,6 +1,6 @@
 ---
 title: 查询签约关系
-description: 查询签约关系接口提供单笔签约关系查询。注意：查询签约关系可通过下面两种方式查询：方式一：使用微信返回的委托代扣协议contract_id进行查询。方式二：plan_id+contract_code模式：传入模板id和签约协议号进行查询。两种查询方式返回结果相同。
+description: 查询签约关系接口提供单笔签约关系查询。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -11,10 +11,12 @@ description: 查询签约关系接口提供单笔签约关系查询。注意：�
 | --- | --- | ---
 | nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| appid {data-required data-indent=1} | string | 请求appid
-| mch_id {data-required data-indent=1} | integer | 商户号
+| appid {data-required data-indent=1} | string | 应用ID
+| mch_id {data-required data-indent=1} | string | 商户号
+| sub_appid {data-indent=1} | string | 子商户应用ID
+| sub_mch_id {data-indent=1} | string | 子商户号
 | contract_id {data-indent=1} | string | 委托代扣协议id
-| plan_id {data-indent=1} | integer | 模板id
+| plan_id {data-indent=1} | string | 模板id
 | contract_code {data-indent=1} | string | 签约协议号
 | version {data-required data-indent=1} | string | 版本号<br/>`1.0` 枚举值
 
@@ -23,11 +25,13 @@ description: 查询签约关系接口提供单笔签约关系查询。注意：�
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v2->papay->querycontract->postAsync([
+$instance->v2->papay->partner->querycontract->postAsync([
   'nonceless' => true,
   'xml' => [
     'appid'         => 'wxcbda96de0b165486',
-    'mch_id'        => '10000098',
+    'mch_id'        => '1200009811',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mch_id'    => '1900000109',
     'contract_id'   => '100005698',
     'plan_id'       => '123',
     'contract_code' => '1023658866',
@@ -41,11 +45,13 @@ $instance->v2->papay->querycontract->postAsync([
 ```
 
 ```php [异步声明式]
-$instance->chain('v2/papay/querycontract')->postAsync([
+$instance->chain('v2/papay/partner/querycontract')->postAsync([
   'nonceless' => true,
   'xml' => [
     'appid'         => 'wxcbda96de0b165486',
-    'mch_id'        => '10000098',
+    'mch_id'        => '1200009811',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mch_id'    => '1900000109',
     'contract_id'   => '100005698',
     'plan_id'       => '123',
     'contract_code' => '1023658866',
@@ -59,11 +65,13 @@ $instance->chain('v2/papay/querycontract')->postAsync([
 ```
 
 ```php [异步属性式]
-$instance['v2/papay/querycontract']->postAsync([
+$instance['v2/papay/partner/querycontract']->postAsync([
   'nonceless' => true,
   'xml' => [
     'appid'         => 'wxcbda96de0b165486',
-    'mch_id'        => '10000098',
+    'mch_id'        => '1200009811',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mch_id'    => '1900000109',
     'contract_id'   => '100005698',
     'plan_id'       => '123',
     'contract_code' => '1023658866',
@@ -77,11 +85,13 @@ $instance['v2/papay/querycontract']->postAsync([
 ```
 
 ```php [同步纯链式]
-$response = $instance->v2->papay->querycontract->post([
+$response = $instance->v2->papay->partner->querycontract->post([
   'nonceless' => true,
   'xml' => [
     'appid'         => 'wxcbda96de0b165486',
-    'mch_id'        => '10000098',
+    'mch_id'        => '1200009811',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mch_id'    => '1900000109',
     'contract_id'   => '100005698',
     'plan_id'       => '123',
     'contract_code' => '1023658866',
@@ -92,11 +102,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v2/papay/querycontract')->post([
+$response = $instance->chain('v2/papay/partner/querycontract')->post([
   'nonceless' => true,
   'xml' => [
     'appid'         => 'wxcbda96de0b165486',
-    'mch_id'        => '10000098',
+    'mch_id'        => '1200009811',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mch_id'    => '1900000109',
     'contract_id'   => '100005698',
     'plan_id'       => '123',
     'contract_code' => '1023658866',
@@ -107,11 +119,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
-$response = $instance['v2/papay/querycontract']->post([
+$response = $instance['v2/papay/partner/querycontract']->post([
   'nonceless' => true,
   'xml' => [
     'appid'         => 'wxcbda96de0b165486',
-    'mch_id'        => '10000098',
+    'mch_id'        => '1200009811',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mch_id'    => '1900000109',
     'contract_id'   => '100005698',
     'plan_id'       => '123',
     'contract_code' => '1023658866',
@@ -144,7 +158,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | openid {data-required} | string | 用户标识
 | err_code {data-required} | string | 错误代码
 | err_code_des {data-required} | string | 错误代码描述
+| sub_appid | string | 子商户公众账号ID
+| sub_mch_id | string | 子商户号
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_7.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter5_7.shtml)

@@ -9,6 +9,7 @@ description: 此功能需要接收方在商户平台-交易中心-分账-分账�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
@@ -22,7 +23,6 @@ description: 此功能需要接收方在商户平台-交易中心-分账-分账�
 | return_account {data-required data-indent=1} | string | 回退方账号
 | return_amount {data-required data-indent=1} | integer | 回退金额
 | description {data-required data-indent=1} | string | 回退描述
-| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -30,21 +30,21 @@ description: 此功能需要接收方在商户平台-交易中心-分账-分账�
 
 ```php [异步纯链式]
 $instance->v2->secapi->pay->profitsharingreturn->postAsync([
-  'xml' => [
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'sign_type' => 'HMAC-SHA256',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'out_return_no' => 'R20190516001',
-    'return_account_type' => 'MERCHANT_ID',
-    'return_account' => '86693852',
-    'return_amount' => '888',
-    'description' => '用户退款',
-  ],
   'security' => true,
+  'xml' => [
+    'mch_id'              => '1900000100',
+    'sub_mch_id'          => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888888',
+    'sign_type'           => 'HMAC-SHA256',
+    'order_id'            => '3008450740201411110007820472',
+    'out_order_no'        => 'P20150806125346',
+    'out_return_no'       => 'R20190516001',
+    'return_account_type' => 'MERCHANT_ID',
+    'return_account'      => '86693852',
+    'return_amount'       => '888',
+    'description'         => '用户退款',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -54,21 +54,21 @@ $instance->v2->secapi->pay->profitsharingreturn->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/secapi/pay/profitsharingreturn')->postAsync([
-  'xml' => [
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'sign_type' => 'HMAC-SHA256',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'out_return_no' => 'R20190516001',
-    'return_account_type' => 'MERCHANT_ID',
-    'return_account' => '86693852',
-    'return_amount' => '888',
-    'description' => '用户退款',
-  ],
   'security' => true,
+  'xml' => [
+    'mch_id'              => '1900000100',
+    'sub_mch_id'          => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888888',
+    'sign_type'           => 'HMAC-SHA256',
+    'order_id'            => '3008450740201411110007820472',
+    'out_order_no'        => 'P20150806125346',
+    'out_return_no'       => 'R20190516001',
+    'return_account_type' => 'MERCHANT_ID',
+    'return_account'      => '86693852',
+    'return_amount'       => '888',
+    'description'         => '用户退款',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -78,21 +78,21 @@ $instance->chain('v2/secapi/pay/profitsharingreturn')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/secapi/pay/profitsharingreturn']->postAsync([
-  'xml' => [
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'sign_type' => 'HMAC-SHA256',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'out_return_no' => 'R20190516001',
-    'return_account_type' => 'MERCHANT_ID',
-    'return_account' => '86693852',
-    'return_amount' => '888',
-    'description' => '用户退款',
-  ],
   'security' => true,
+  'xml' => [
+    'mch_id'              => '1900000100',
+    'sub_mch_id'          => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888888',
+    'sign_type'           => 'HMAC-SHA256',
+    'order_id'            => '3008450740201411110007820472',
+    'out_order_no'        => 'P20150806125346',
+    'out_return_no'       => 'R20190516001',
+    'return_account_type' => 'MERCHANT_ID',
+    'return_account'      => '86693852',
+    'return_amount'       => '888',
+    'description'         => '用户退款',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -102,63 +102,63 @@ $instance['v2/secapi/pay/profitsharingreturn']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->secapi->pay->profitsharingreturn->post([
-  'xml' => [
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'sign_type' => 'HMAC-SHA256',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'out_return_no' => 'R20190516001',
-    'return_account_type' => 'MERCHANT_ID',
-    'return_account' => '86693852',
-    'return_amount' => '888',
-    'description' => '用户退款',
-  ],
   'security' => true,
+  'xml' => [
+    'mch_id'              => '1900000100',
+    'sub_mch_id'          => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888888',
+    'sign_type'           => 'HMAC-SHA256',
+    'order_id'            => '3008450740201411110007820472',
+    'out_order_no'        => 'P20150806125346',
+    'out_return_no'       => 'R20190516001',
+    'return_account_type' => 'MERCHANT_ID',
+    'return_account'      => '86693852',
+    'return_amount'       => '888',
+    'description'         => '用户退款',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/secapi/pay/profitsharingreturn')->post([
-  'xml' => [
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'sign_type' => 'HMAC-SHA256',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'out_return_no' => 'R20190516001',
-    'return_account_type' => 'MERCHANT_ID',
-    'return_account' => '86693852',
-    'return_amount' => '888',
-    'description' => '用户退款',
-  ],
   'security' => true,
+  'xml' => [
+    'mch_id'              => '1900000100',
+    'sub_mch_id'          => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888888',
+    'sign_type'           => 'HMAC-SHA256',
+    'order_id'            => '3008450740201411110007820472',
+    'out_order_no'        => 'P20150806125346',
+    'out_return_no'       => 'R20190516001',
+    'return_account_type' => 'MERCHANT_ID',
+    'return_account'      => '86693852',
+    'return_amount'       => '888',
+    'description'         => '用户退款',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/secapi/pay/profitsharingreturn']->post([
-  'xml' => [
-    'mch_id' => '1900000100',
-    'sub_mch_id' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'sign_type' => 'HMAC-SHA256',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'out_return_no' => 'R20190516001',
-    'return_account_type' => 'MERCHANT_ID',
-    'return_account' => '86693852',
-    'return_amount' => '888',
-    'description' => '用户退款',
-  ],
   'security' => true,
+  'xml' => [
+    'mch_id'              => '1900000100',
+    'sub_mch_id'          => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888888',
+    'sign_type'           => 'HMAC-SHA256',
+    'order_id'            => '3008450740201411110007820472',
+    'out_order_no'        => 'P20150806125346',
+    'out_return_no'       => 'R20190516001',
+    'return_account_type' => 'MERCHANT_ID',
+    'return_account'      => '86693852',
+    'return_amount'       => '888',
+    'description'         => '用户退款',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -167,13 +167,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| appid {data-required}| string | 公众账号ID
-| mch_id {data-required}| string | 商户号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | sub_mch_id | string | 子商户号
@@ -181,12 +181,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sign_type | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | order_id | string | 微信分账单号
 | out_order_no | string | 商户分账单号
-| out_return_no {data-required}| string | 商户回退单号
+| out_return_no {data-required} | string | 商户回退单号
 | return_no | string | 微信回退单号
-| return_account_type {data-required}| string | 回退方类型<br/>`MERCHANT_ID` 枚举值
-| return_account {data-required}| string | 回退方账号
-| return_amount {data-required}| integer | 回退金额
-| description {data-required}| string | 回退描述
+| return_account_type {data-required} | string | 回退方类型<br/>`MERCHANT_ID` 枚举值
+| return_account {data-required} | string | 回退方账号
+| return_amount {data-required} | integer | 回退金额
+| description {data-required} | string | 回退描述
 | result | string | 回退结果<br/>`SUCCESS` \| `PROCESSING` \| `FAILED` 枚举值之一
 | fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | finish_time | string | 完成时间

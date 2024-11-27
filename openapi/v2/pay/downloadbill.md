@@ -27,11 +27,11 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v2->pay->downloadbill->postAsync([
   'sink' => $stream,
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'     => 'wx8888888888888888',
+    'mch_id'    => '1900000109',
     'bill_date' => '20140603',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,11 +52,11 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v2/pay/downloadbill')->postAsync([
   'sink' => $stream,
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'     => 'wx8888888888888888',
+    'mch_id'    => '1900000109',
     'bill_date' => '20140603',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -77,11 +77,11 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v2/pay/downloadbill']->postAsync([
   'sink' => $stream,
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'     => 'wx8888888888888888',
+    'mch_id'    => '1900000109',
     'bill_date' => '20140603',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -102,11 +102,11 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $response = $instance->v2->pay->downloadbill->post([
   'sink' => $stream,
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'     => 'wx8888888888888888',
+    'mch_id'    => '1900000109',
     'bill_date' => '20140603',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 
@@ -125,11 +125,11 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $response = $instance->chain('v2/pay/downloadbill')->post([
   'sink' => $stream,
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'     => 'wx8888888888888888',
+    'mch_id'    => '1900000109',
     'bill_date' => '20140603',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 
@@ -148,11 +148,11 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $response = $instance['v2/pay/downloadbill']->post([
   'sink' => $stream,
   'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
+    'appid'     => 'wx8888888888888888',
+    'mch_id'    => '1900000109',
     'bill_date' => '20140603',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 

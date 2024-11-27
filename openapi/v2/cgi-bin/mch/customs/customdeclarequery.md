@@ -9,6 +9,7 @@ description: 商户通过订单号查询提交的订单附加信息。如果是�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` 枚举值
 | appid {data-required data-indent=1} | string | 公众账号ID
@@ -18,7 +19,6 @@ description: 商户通过订单号查询提交的订单附加信息。如果是�
 | sub_order_no {data-required data-indent=1} | string | 商户子订单号
 | sub_order_id {data-required data-indent=1} | string | 微信子订单号
 | customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
-| nonceless {data-required} | `true` | 声明请求的`XML`无随机字符串参数
 
 {.im-table #request}
 
@@ -26,17 +26,17 @@ description: 商户通过订单号查询提交的订单附加信息。如果是�
 
 ```php [异步纯链式]
 $instance->v2->cgiBin->mch->customs->customdeclarequery->postAsync([
-  'xml' => [
-    'sign_type' => 'MD5',
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '20150806125346',
-    'customs' => 'SHANGHAI',
-  ],
   'nonceless' => true,
+  'xml' => [
+    'sign_type'      => 'MD5',
+    'appid'          => 'wxd678efh567hg6787',
+    'mch_id'         => '1230000109',
+    'out_trade_no'   => '20150806125346',
+    'transaction_id' => '1000320306201511078440737890',
+    'sub_order_no'   => '20150806125346',
+    'sub_order_id'   => '20150806125346',
+    'customs'        => 'SHANGHAI',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -46,17 +46,17 @@ $instance->v2->cgiBin->mch->customs->customdeclarequery->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/cgi-bin/mch/customs/customdeclarequery')->postAsync([
-  'xml' => [
-    'sign_type' => 'MD5',
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '20150806125346',
-    'customs' => 'SHANGHAI',
-  ],
   'nonceless' => true,
+  'xml' => [
+    'sign_type'      => 'MD5',
+    'appid'          => 'wxd678efh567hg6787',
+    'mch_id'         => '1230000109',
+    'out_trade_no'   => '20150806125346',
+    'transaction_id' => '1000320306201511078440737890',
+    'sub_order_no'   => '20150806125346',
+    'sub_order_id'   => '20150806125346',
+    'customs'        => 'SHANGHAI',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -66,17 +66,17 @@ $instance->chain('v2/cgi-bin/mch/customs/customdeclarequery')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/cgi-bin/mch/customs/customdeclarequery']->postAsync([
-  'xml' => [
-    'sign_type' => 'MD5',
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '20150806125346',
-    'customs' => 'SHANGHAI',
-  ],
   'nonceless' => true,
+  'xml' => [
+    'sign_type'      => 'MD5',
+    'appid'          => 'wxd678efh567hg6787',
+    'mch_id'         => '1230000109',
+    'out_trade_no'   => '20150806125346',
+    'transaction_id' => '1000320306201511078440737890',
+    'sub_order_no'   => '20150806125346',
+    'sub_order_id'   => '20150806125346',
+    'customs'        => 'SHANGHAI',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -86,51 +86,51 @@ $instance['v2/cgi-bin/mch/customs/customdeclarequery']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->cgiBin->mch->customs->customdeclarequery->post([
-  'xml' => [
-    'sign_type' => 'MD5',
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '20150806125346',
-    'customs' => 'SHANGHAI',
-  ],
   'nonceless' => true,
+  'xml' => [
+    'sign_type'      => 'MD5',
+    'appid'          => 'wxd678efh567hg6787',
+    'mch_id'         => '1230000109',
+    'out_trade_no'   => '20150806125346',
+    'transaction_id' => '1000320306201511078440737890',
+    'sub_order_no'   => '20150806125346',
+    'sub_order_id'   => '20150806125346',
+    'customs'        => 'SHANGHAI',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/cgi-bin/mch/customs/customdeclarequery')->post([
-  'xml' => [
-    'sign_type' => 'MD5',
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '20150806125346',
-    'customs' => 'SHANGHAI',
-  ],
   'nonceless' => true,
+  'xml' => [
+    'sign_type'      => 'MD5',
+    'appid'          => 'wxd678efh567hg6787',
+    'mch_id'         => '1230000109',
+    'out_trade_no'   => '20150806125346',
+    'transaction_id' => '1000320306201511078440737890',
+    'sub_order_no'   => '20150806125346',
+    'sub_order_id'   => '20150806125346',
+    'customs'        => 'SHANGHAI',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/cgi-bin/mch/customs/customdeclarequery']->post([
-  'xml' => [
-    'sign_type' => 'MD5',
-    'appid' => 'wxd678efh567hg6787',
-    'mch_id' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '20150806125346',
-    'customs' => 'SHANGHAI',
-  ],
   'nonceless' => true,
+  'xml' => [
+    'sign_type'      => 'MD5',
+    'appid'          => 'wxd678efh567hg6787',
+    'mch_id'         => '1230000109',
+    'out_trade_no'   => '20150806125346',
+    'transaction_id' => '1000320306201511078440737890',
+    'sub_order_no'   => '20150806125346',
+    'sub_order_id'   => '20150806125346',
+    'customs'        => 'SHANGHAI',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -139,31 +139,31 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| sign {data-required}| string | 签名
-| appid {data-required}| string | 公众账号ID
-| mch_id {data-required}| string | 商户号
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| sign {data-required} | string | 签名
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| transaction_id {data-required}| string | 微信支付订单号
-| count {data-required}| integer | 笔数
+| transaction_id {data-required} | string | 微信支付订单号
+| count {data-required} | integer | 笔数
 | sub_order_no_$n | string | 商户子订单号
 | sub_order_id_$n | string | 微信子订单号
 | mch_customs_no_$n | string | 商户海关备案号
-| customs_$n {data-required}| string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
+| customs_$n {data-required} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | fee_type_$n | string | 币种
 | order_fee_$n | integer | 应付金额
 | duty_$n | integer | 关税
 | transport_fee_$n | integer | 物流费
 | product_fee_$n | integer | 商品价格
-| state_$n {data-required}| string | 状态码<br/>`NDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
+| state_$n {data-required} | string | 状态码<br/>`NDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | explanation_$n | string | 申报结果说明
-| modify_time_$n {data-required}| string | 最后更新时间
-| cert_check_result_$n {data-required}| string | 订购人和支付人身份信息校验结果<br/>`UNCHECKED` \| `SAME` \| `DIFFERENT` 枚举值之一
-| verify_department {data-required}| string | 验核机构**注：商户需将该字段取值`UNIONPAY`/`NETSUNION`/`OTHERS`映射至海关verDept字段的`1`/`2`/`3`**<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
-| verify_department_trade_id {data-required}| string | 验核机构交易流水号
+| modify_time_$n {data-required} | string | 最后更新时间
+| cert_check_result_$n {data-required} | string | 订购人和支付人身份信息校验结果<br/>`UNCHECKED` \| `SAME` \| `DIFFERENT` 枚举值之一
+| verify_department {data-required} | string | 验核机构**注：商户需将该字段取值`UNIONPAY`/`NETSUNION`/`OTHERS`映射至海关verDept字段的`1`/`2`/`3`**<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
+| verify_department_trade_id {data-required} | string | 验核机构交易流水号
 
 {.im-table #response}
 

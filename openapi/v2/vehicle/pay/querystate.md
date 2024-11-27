@@ -25,13 +25,13 @@ description: 在停车场、高速、加油等场景下，商户需获取用户�
 ```php [异步纯链式]
 $instance->v2->vehicle->pay->querystate->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'trade_scene' => 'PARKING',
-    'jump_scene' => 'H5',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'version' => '3.0',
+    'appid'        => 'wxcbda96de0b165486',
+    'mch_id'       => '10000098',
+    'sign_type'    => 'HMAC-SHA256',
+    'trade_scene'  => 'PARKING',
+    'jump_scene'   => 'H5',
+    'openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'version'      => '3.0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v2->vehicle->pay->querystate->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/vehicle/pay/querystate')->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'trade_scene' => 'PARKING',
-    'jump_scene' => 'H5',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'version' => '3.0',
+    'appid'        => 'wxcbda96de0b165486',
+    'mch_id'       => '10000098',
+    'sign_type'    => 'HMAC-SHA256',
+    'trade_scene'  => 'PARKING',
+    'jump_scene'   => 'H5',
+    'openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'version'      => '3.0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v2/vehicle/pay/querystate')->postAsync([
 ```php [异步属性式]
 $instance['v2/vehicle/pay/querystate']->postAsync([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'trade_scene' => 'PARKING',
-    'jump_scene' => 'H5',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'version' => '3.0',
+    'appid'        => 'wxcbda96de0b165486',
+    'mch_id'       => '10000098',
+    'sign_type'    => 'HMAC-SHA256',
+    'trade_scene'  => 'PARKING',
+    'jump_scene'   => 'H5',
+    'openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'version'      => '3.0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v2/vehicle/pay/querystate']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->vehicle->pay->querystate->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'trade_scene' => 'PARKING',
-    'jump_scene' => 'H5',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'version' => '3.0',
+    'appid'        => 'wxcbda96de0b165486',
+    'mch_id'       => '10000098',
+    'sign_type'    => 'HMAC-SHA256',
+    'trade_scene'  => 'PARKING',
+    'jump_scene'   => 'H5',
+    'openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'version'      => '3.0',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -94,13 +94,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/vehicle/pay/querystate')->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'trade_scene' => 'PARKING',
-    'jump_scene' => 'H5',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'version' => '3.0',
+    'appid'        => 'wxcbda96de0b165486',
+    'mch_id'       => '10000098',
+    'sign_type'    => 'HMAC-SHA256',
+    'trade_scene'  => 'PARKING',
+    'jump_scene'   => 'H5',
+    'openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'version'      => '3.0',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -109,13 +109,13 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/vehicle/pay/querystate']->post([
   'xml' => [
-    'appid' => 'wxcbda96de0b165486',
-    'mch_id' => '10000098',
-    'sign_type' => 'HMAC-SHA256',
-    'trade_scene' => 'PARKING',
-    'jump_scene' => 'H5',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'version' => '3.0',
+    'appid'        => 'wxcbda96de0b165486',
+    'mch_id'       => '10000098',
+    'sign_type'    => 'HMAC-SHA256',
+    'trade_scene'  => 'PARKING',
+    'jump_scene'   => 'H5',
+    'openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'version'      => '3.0',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -125,16 +125,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| appid {data-required}| string | 请求appid
-| mch_id {data-required}| string | 商户号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| appid {data-required} | string | 请求appid
+| mch_id {data-required} | string | 商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| user_state {data-required}| string | 用户状态<br/>`NORMAL` \| `PAUSED` \| `OVERDUE` \| `UNAUTHORIZED` 枚举值之一
+| user_state {data-required} | string | 用户状态<br/>`NORMAL` \| `PAUSED` \| `OVERDUE` \| `UNAUTHORIZED` 枚举值之一
 | openid | string | 用户标识
 | deduct_mode | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
 | path | string | 跳转路径

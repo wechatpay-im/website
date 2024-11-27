@@ -56,6 +56,13 @@ head:
 | [查询付款记录](/openapi/v2/mmpaymkttransfers/promotion/querywwsptrans2pocket)
 | [发放企业红包](/openapi/v2/mmpaymkttransfers/sendworkwxredpack)
 | [查询红包记录](/openapi/v2/mmpaymkttransfers/queryworkwxredpack)
+| 扣款服务v2{rowspan=7} | [公众号纯签约](/openapi/v2/papay/entrustweb) | [公众号纯签约](/openapi/v2/pay/partner/entrustweb)
+| [H5纯签约](/openapi/v2/vehicle/pay/querystate) | [H5纯签约](/openapi/v2/vehicle/partnerpay/querystate)
+| [APP预签约](/openapi/v2/vehicle/pay/payapply) | [APP预签约](/openapi/v2/vehicle/partnerpay/payapply)
+| [支付中签约](/openapi/v2/pay/contractorder)
+| [查询签约关系](/openapi/v2/papay/querycontract) | [查询签约关系](/openapi/v2/papay/partner/querycontract)
+| [申请扣款](/openapi/v2/pay/pappayapply) | [申请扣款](/openapi/v2/pay/partner/pappayapply)
+| [申请解约](/openapi/v2/papay/deletecontract) {colspan=2}
 | 微信车主服务v2{rowspan=4} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)

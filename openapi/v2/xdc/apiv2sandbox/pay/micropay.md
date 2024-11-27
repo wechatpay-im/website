@@ -9,6 +9,8 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
+| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Negative-Test {data-indent=1} | string | 异常用例名称<br/>`MICROPAY_USERPAYING` \| `MICROPAY_TIMEOUT` \| `MICROPAY_PAYERROR` \| `MICROPAY_PAY_QUERY_TIMEOUT`枚举值之一
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string {data-tooltip="最长32字符"}  | 公众账号ID
 | mch_id {data-required data-indent=1} | string {data-tooltip="最长32字符"} | 商户号
@@ -19,8 +21,6 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 | total_fee {data-required data-indent=1} | integer | 订单金额
 | fee_type {data-indent=1} | string {data-tooltip="最长64字符"} | 货币类型
 | auth_code {data-required data-indent=1} | string {data-tooltip="最长128字符"} | 授权码
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Negative-Test {data-indent=1} | string | 异常用例名称<br/>`MICROPAY_USERPAYING` \| `MICROPAY_TIMEOUT` \| `MICROPAY_PAYERROR` \| `MICROPAY_PAY_QUERY_TIMEOUT`枚举值之一
 
 {.im-table #request}
 
@@ -28,19 +28,19 @@ description: 该系统分为两种用例类型：支付成功用例与支付异�
 
 ```php [异步纯链式]
 $instance->v2->xdc->apiv2sandbox->pay->micropay->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '说明',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
-    'auth_code' => '120061098828009406',
-  ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
+  ],
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'body'         => 'image形象店-深圳腾大- QQ公仔',
+    'attach'       => '说明',
+    'out_trade_no' => '1217752501201407033233368018',
+    'total_fee'    => '888',
+    'fee_type'     => 'CNY',
+    'auth_code'    => '120061098828009406',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,19 +51,19 @@ $instance->v2->xdc->apiv2sandbox->pay->micropay->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '说明',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
-    'auth_code' => '120061098828009406',
-  ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
+  ],
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'body'         => 'image形象店-深圳腾大- QQ公仔',
+    'attach'       => '说明',
+    'out_trade_no' => '1217752501201407033233368018',
+    'total_fee'    => '888',
+    'fee_type'     => 'CNY',
+    'auth_code'    => '120061098828009406',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,19 +74,19 @@ $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/xdc/apiv2sandbox/pay/micropay']->postAsync([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '说明',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
-    'auth_code' => '120061098828009406',
-  ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
+  ],
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'body'         => 'image形象店-深圳腾大- QQ公仔',
+    'attach'       => '说明',
+    'out_trade_no' => '1217752501201407033233368018',
+    'total_fee'    => '888',
+    'fee_type'     => 'CNY',
+    'auth_code'    => '120061098828009406',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -97,19 +97,19 @@ $instance['v2/xdc/apiv2sandbox/pay/micropay']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->xdc->apiv2sandbox->pay->micropay->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '说明',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
-    'auth_code' => '120061098828009406',
-  ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
+  ],
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'body'         => 'image形象店-深圳腾大- QQ公仔',
+    'attach'       => '说明',
+    'out_trade_no' => '1217752501201407033233368018',
+    'total_fee'    => '888',
+    'fee_type'     => 'CNY',
+    'auth_code'    => '120061098828009406',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
@@ -117,19 +117,19 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 ```php [同步声明式]
 $response = $instance->chain('v2/xdc/apiv2sandbox/pay/micropay')->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '说明',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
-    'auth_code' => '120061098828009406',
-  ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
+  ],
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'body'         => 'image形象店-深圳腾大- QQ公仔',
+    'attach'       => '说明',
+    'out_trade_no' => '1217752501201407033233368018',
+    'total_fee'    => '888',
+    'fee_type'     => 'CNY',
+    'auth_code'    => '120061098828009406',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
@@ -137,19 +137,19 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 
 ```php [同步属性式]
 $response = $instance['v2/xdc/apiv2sandbox/pay/micropay']->post([
-  'xml' => [
-    'appid' => 'wx8888888888888888',
-    'mch_id' => '1900000109',
-    'sign_type' => 'HMAC-SHA256',
-    'body' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '说明',
-    'out_trade_no' => '1217752501201407033233368018',
-    'total_fee' => '888',
-    'fee_type' => 'CNY',
-    'auth_code' => '120061098828009406',
-  ],
   'headers' => [
     'Wechatpay-Negative-Test' => 'MICROPAY_USERPAYING',
+  ],
+  'xml' => [
+    'appid'        => 'wx8888888888888888',
+    'mch_id'       => '1900000109',
+    'sign_type'    => 'HMAC-SHA256',
+    'body'         => 'image形象店-深圳腾大- QQ公仔',
+    'attach'       => '说明',
+    'out_trade_no' => '1217752501201407033233368018',
+    'total_fee'    => '888',
+    'fee_type'     => 'CNY',
+    'auth_code'    => '120061098828009406',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));

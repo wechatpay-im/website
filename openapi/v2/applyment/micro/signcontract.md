@@ -15,8 +15,8 @@ description: 若查询申请状态为待签约，接口会一并返回签约二�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | security {data-required} | `true` | 声明加载商户API证书
+| xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 
 {.im-table #request}
 
@@ -24,9 +24,9 @@ description: 若查询申请状态为待签约，接口会一并返回签约二�
 
 ```php [异步纯链式]
 $instance->v2->applyment->micro->signcontract->postAsync([
+  'security' => true,
   'xml' => [
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -36,9 +36,9 @@ $instance->v2->applyment->micro->signcontract->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/applyment/micro/signcontract')->postAsync([
+  'security' => true,
   'xml' => [
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -48,9 +48,9 @@ $instance->chain('v2/applyment/micro/signcontract')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/applyment/micro/signcontract']->postAsync([
+  'security' => true,
   'xml' => [
   ],
-  'security' => true,
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -60,27 +60,27 @@ $instance['v2/applyment/micro/signcontract']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->applyment->micro->signcontract->post([
+  'security' => true,
   'xml' => [
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/applyment/micro/signcontract')->post([
+  'security' => true,
   'xml' => [
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/applyment/micro/signcontract']->post([
+  'security' => true,
   'xml' => [
   ],
-  'security' => true,
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```

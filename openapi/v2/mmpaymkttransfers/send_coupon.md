@@ -15,6 +15,7 @@ description: 用于商户主动调用接口给用户发放代金券的场景，�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | coupon_stock_id {data-required data-indent=1} | string | 代金券批次id
 | openid_count {data-required data-indent=1} | integer | openid记录数
@@ -26,7 +27,6 @@ description: 用于商户主动调用接口给用户发放代金券的场景，�
 | device_info {data-indent=1} | string | 设备号
 | version {data-indent=1} | string | 协议版本<br/>`1.0` 枚举值
 | type {data-indent=1} | string | 协议类型<br/>`XML` 枚举值
-| security {data-required} | `true` | 声明加载商户API证书
 
 {.im-table #request}
 
@@ -34,19 +34,19 @@ description: 用于商户主动调用接口给用户发放代金券的场景，�
 
 ```php [异步纯链式]
 $instance->v2->mmpaymkttransfers->send_coupon->postAsync([
-  'xml' => [
-    'coupon_stock_id' => '1757',
-    'openid_count' => '1',
-    'partner_trade_no' => '1000009820141203515766',
-    'openid' => 'onqOjjrXT-776SpHnfexGm1_P7iE',
-    'appid' => 'wx5edab3bdfba3dc1c',
-    'mch_id' => '10000098',
-    'op_user_id' => '10000098',
-    'device_info' => '',
-    'version' => '1.0',
-    'type' => 'XML',
-  ],
   'security' => true,
+  'xml' => [
+    'coupon_stock_id'  => '1757',
+    'openid_count'     => '1',
+    'partner_trade_no' => '1000009820141203515766',
+    'openid'           => 'onqOjjrXT-776SpHnfexGm1_P7iE',
+    'appid'            => 'wx5edab3bdfba3dc1c',
+    'mch_id'           => '10000098',
+    'op_user_id'       => '10000098',
+    'device_info'      => '',
+    'version'          => '1.0',
+    'type'             => 'XML',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -56,19 +56,19 @@ $instance->v2->mmpaymkttransfers->send_coupon->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v2/mmpaymkttransfers/send_coupon')->postAsync([
-  'xml' => [
-    'coupon_stock_id' => '1757',
-    'openid_count' => '1',
-    'partner_trade_no' => '1000009820141203515766',
-    'openid' => 'onqOjjrXT-776SpHnfexGm1_P7iE',
-    'appid' => 'wx5edab3bdfba3dc1c',
-    'mch_id' => '10000098',
-    'op_user_id' => '10000098',
-    'device_info' => '',
-    'version' => '1.0',
-    'type' => 'XML',
-  ],
   'security' => true,
+  'xml' => [
+    'coupon_stock_id'  => '1757',
+    'openid_count'     => '1',
+    'partner_trade_no' => '1000009820141203515766',
+    'openid'           => 'onqOjjrXT-776SpHnfexGm1_P7iE',
+    'appid'            => 'wx5edab3bdfba3dc1c',
+    'mch_id'           => '10000098',
+    'op_user_id'       => '10000098',
+    'device_info'      => '',
+    'version'          => '1.0',
+    'type'             => 'XML',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -78,19 +78,19 @@ $instance->chain('v2/mmpaymkttransfers/send_coupon')->postAsync([
 
 ```php [异步属性式]
 $instance['v2/mmpaymkttransfers/send_coupon']->postAsync([
-  'xml' => [
-    'coupon_stock_id' => '1757',
-    'openid_count' => '1',
-    'partner_trade_no' => '1000009820141203515766',
-    'openid' => 'onqOjjrXT-776SpHnfexGm1_P7iE',
-    'appid' => 'wx5edab3bdfba3dc1c',
-    'mch_id' => '10000098',
-    'op_user_id' => '10000098',
-    'device_info' => '',
-    'version' => '1.0',
-    'type' => 'XML',
-  ],
   'security' => true,
+  'xml' => [
+    'coupon_stock_id'  => '1757',
+    'openid_count'     => '1',
+    'partner_trade_no' => '1000009820141203515766',
+    'openid'           => 'onqOjjrXT-776SpHnfexGm1_P7iE',
+    'appid'            => 'wx5edab3bdfba3dc1c',
+    'mch_id'           => '10000098',
+    'op_user_id'       => '10000098',
+    'device_info'      => '',
+    'version'          => '1.0',
+    'type'             => 'XML',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -100,57 +100,57 @@ $instance['v2/mmpaymkttransfers/send_coupon']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v2->mmpaymkttransfers->send_coupon->post([
-  'xml' => [
-    'coupon_stock_id' => '1757',
-    'openid_count' => '1',
-    'partner_trade_no' => '1000009820141203515766',
-    'openid' => 'onqOjjrXT-776SpHnfexGm1_P7iE',
-    'appid' => 'wx5edab3bdfba3dc1c',
-    'mch_id' => '10000098',
-    'op_user_id' => '10000098',
-    'device_info' => '',
-    'version' => '1.0',
-    'type' => 'XML',
-  ],
   'security' => true,
+  'xml' => [
+    'coupon_stock_id'  => '1757',
+    'openid_count'     => '1',
+    'partner_trade_no' => '1000009820141203515766',
+    'openid'           => 'onqOjjrXT-776SpHnfexGm1_P7iE',
+    'appid'            => 'wx5edab3bdfba3dc1c',
+    'mch_id'           => '10000098',
+    'op_user_id'       => '10000098',
+    'device_info'      => '',
+    'version'          => '1.0',
+    'type'             => 'XML',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v2/mmpaymkttransfers/send_coupon')->post([
-  'xml' => [
-    'coupon_stock_id' => '1757',
-    'openid_count' => '1',
-    'partner_trade_no' => '1000009820141203515766',
-    'openid' => 'onqOjjrXT-776SpHnfexGm1_P7iE',
-    'appid' => 'wx5edab3bdfba3dc1c',
-    'mch_id' => '10000098',
-    'op_user_id' => '10000098',
-    'device_info' => '',
-    'version' => '1.0',
-    'type' => 'XML',
-  ],
   'security' => true,
+  'xml' => [
+    'coupon_stock_id'  => '1757',
+    'openid_count'     => '1',
+    'partner_trade_no' => '1000009820141203515766',
+    'openid'           => 'onqOjjrXT-776SpHnfexGm1_P7iE',
+    'appid'            => 'wx5edab3bdfba3dc1c',
+    'mch_id'           => '10000098',
+    'op_user_id'       => '10000098',
+    'device_info'      => '',
+    'version'          => '1.0',
+    'type'             => 'XML',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
 $response = $instance['v2/mmpaymkttransfers/send_coupon']->post([
-  'xml' => [
-    'coupon_stock_id' => '1757',
-    'openid_count' => '1',
-    'partner_trade_no' => '1000009820141203515766',
-    'openid' => 'onqOjjrXT-776SpHnfexGm1_P7iE',
-    'appid' => 'wx5edab3bdfba3dc1c',
-    'mch_id' => '10000098',
-    'op_user_id' => '10000098',
-    'device_info' => '',
-    'version' => '1.0',
-    'type' => 'XML',
-  ],
   'security' => true,
+  'xml' => [
+    'coupon_stock_id'  => '1757',
+    'openid_count'     => '1',
+    'partner_trade_no' => '1000009820141203515766',
+    'openid'           => 'onqOjjrXT-776SpHnfexGm1_P7iE',
+    'appid'            => 'wx5edab3bdfba3dc1c',
+    'mch_id'           => '10000098',
+    'op_user_id'       => '10000098',
+    'device_info'      => '',
+    'version'          => '1.0',
+    'type'             => 'XML',
+  ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
@@ -159,24 +159,24 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| return_code {data-required}| string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
-| appid {data-required}| string | 公众账号ID
-| mch_id {data-required}| string | 商户号
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
 | device_info | string | 设备号
-| nonce_str {data-required}| string | 随机字符串
-| sign {data-required}| string | 签名
-| result_code {data-required}| string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| coupon_stock_id {data-required}| string | 代金券批次id
-| resp_count {data-required}| integer | 返回记录数
-| success_count {data-required}| integer | 成功记录数
-| failed_count {data-required}| integer | 失败记录数
-| openid {data-required}| string | 用户标识
-| ret_code {data-required}| string | 返回码
-| coupon_id {data-required}| string | 代金券id
-| ret_msg {data-required}| string | 返回信息
+| coupon_stock_id {data-required} | string | 代金券批次id
+| resp_count {data-required} | integer | 返回记录数
+| success_count {data-required} | integer | 成功记录数
+| failed_count {data-required} | integer | 失败记录数
+| openid {data-required} | string | 用户标识
+| ret_code {data-required} | string | 返回码
+| coupon_id {data-required} | string | 代金券id
+| ret_msg {data-required} | string | 返回信息
 
 {.im-table #response}
 

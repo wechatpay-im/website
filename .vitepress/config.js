@@ -291,6 +291,38 @@ function openapiSidebar() {
           collapsed: true,
           items: [
             {
+              text: '扣款服务',
+              collapsed: true,
+              items: [
+                {
+                  text: '直连商户模式',
+                  collapsed: true,
+                  items: [
+                    ['公众号纯签约', '/openapi/v2/papay/entrustweb'],
+                    ['H5纯签约', '/openapi/v2/papay/h5entrustweb'],
+                    ['APP预签约', '/openapi/v2/papay/preentrustweb'],
+                    ['支付中签约', '/openapi/v2/pay/contractorder'],
+                    ['查询签约关系', '/openapi/v2/papay/querycontract'],
+                    ['申请扣款', '/openapi/v2/pay/pappayapply'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '合作伙伴模式',
+                  collapsed: true,
+                  items: [
+                    ['公众号纯签约', '/openapi/v2/pay/partner/entrustweb'],
+                    ['H5纯签约', '/openapi/v2/pay/partner/h5entrustweb'],
+                    ['APP预签约', '/openapi/v2/pay/partner/preentrustweb'],
+                    ['查询签约关系', '/openapi/v2/papay/partner/querycontract'],
+                    ['申请扣款', '/openapi/v2/pay/partner/pappayapply'],
+                  ].map(transArrayItem),
+                },
+                transArrayItem(
+                  ['申请解约', '/openapi/v2/papay/deletecontract'],
+                )
+              ],
+            },
+            {
               text: '微信车主服务',
               collapsed: true,
               items: [
