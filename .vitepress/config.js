@@ -130,6 +130,8 @@ export default defineConfig({
       '/openapi/v2/applyment/': microMerchantSidebar(),
       '/openapi/v2/fund/': microMerchantSidebar(),
       '/openapi/v2/deposit/': depositSidebar(),
+      '/openapi/v2/secapi/mkt/addrecommendconf': acquiringBankMgrSidebar(),
+      '/openapi/v2/secapi/mch/channelsetting': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/addsubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/querysubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/risk/getviolation': acquiringBankMgrSidebar(),
@@ -304,6 +306,7 @@ function openapiSidebar() {
                     ['支付中签约', '/openapi/v2/pay/contractorder'],
                     ['查询签约关系', '/openapi/v2/papay/querycontract'],
                     ['申请扣款', '/openapi/v2/pay/pappayapply'],
+                    ['查询订单', '/openapi/v2/pay/paporderquery'],
                   ].map(transArrayItem),
                 },
                 {
@@ -315,6 +318,7 @@ function openapiSidebar() {
                     ['APP预签约', '/openapi/v2/pay/partner/preentrustweb'],
                     ['查询签约关系', '/openapi/v2/papay/partner/querycontract'],
                     ['申请扣款', '/openapi/v2/pay/partner/pappayapply'],
+                    ['查询订单', '/openapi/v2/papay/partner/paporderquery'],
                   ].map(transArrayItem),
                 },
                 transArrayItem(
@@ -1560,6 +1564,8 @@ function acquiringBankMgrSidebar() {
             ...[
               ['查询特约子商户配置信息', '/openapi/v2/secapi/mch/querysubdevconfig'],
               ['设置特约子商户配置信息', '/openapi/v2/secapi/mch/addsubdevconfig'],
+              ['设置特约子商户指定渠道号', '/openapi/v2/secapi/mch/channelsetting'],
+              ['设置子商户关注功能配置信息', '/openapi/v2/secapi/mkt/addrecommendconf'],
               ['查询商户审核状态(间联模式)', '/openapi/v2/mchrisk/bankquerymchauditinfo'],
               ['查询商户审核信息(渠道商)', '/openapi/v2/mchrisk/channelquerymchauditinfo'],
               ['查询商户违规记录', '/openapi/v2/risk/getviolation'],
