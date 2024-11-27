@@ -26,11 +26,13 @@ description: 当收到通知进行处理时，首先检查对应业务数据的�
 | fee_type {data-indent=1} | string | 货币种类
 | is_subscribe {data-required data-indent=1} | string | 是否关注公众账号
 | mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
+| sub_appid {data-indent=1} | string | 子商户应用ID
 | nonce_str {data-required data-indent=1} | string | 随机字符串
 | openid {data-required data-indent=1} | string | 用户标识
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
-| result_code {data-required data-indent=1} | string | 业务结果
-| return_code {data-required data-indent=1} | string | 返回状态码
+| result_code {data-required data-indent=1} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| return_code {data-required data-indent=1} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | sign {data-required data-indent=1} | string | 签名
 | time_end {data-indent=1} | string | 支付完成时间
 | total_fee {data-required data-indent=1} | string | 标价金额
@@ -40,8 +42,15 @@ description: 当收到通知进行处理时，首先检查对应业务数据的�
 | coupon_id_$n {data-indent=1} | string | 代金券ID
 | trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
 | transaction_id {data-required data-indent=1} | string | 微信支付订单号
+| contract_id {data-indent=1} | string | 委托代扣协议id
 
 {.im-table #request}
+
+1. 普通支付只有支付成功(**trade_state=SUCCESS**)才有通知 {#BASIC}
+
+1. 服务商支付成功会带上(**sub_mchid及sub_mch_id**)字段 {#PARTNER}
+
+1. 扣款服务回调会带上(**contract_id**)字段 {#PAP}
 
 ::: code-group
 
@@ -96,3 +105,4 @@ $xml = \WeChatPay\Transformer::toXml([
 - [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_7&index=3)
 - [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_3&index=8)
 - [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_7&index=8)
+- [扣款结果通知](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter4_2.shtml)

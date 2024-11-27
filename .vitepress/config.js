@@ -1700,6 +1700,7 @@ function webhookSidebar() {
         ['合单支付通知', '/webhook/v2/combined-transactions-success'],
         ['退款结果通知', '/webhook/v2/refund-processed'],
         ['车牌状态变更通知', '/webhook/v2/vehicle-state-changed-for-parking'],
+        ['签/解约扣款服务通知', '/webhook/v2/pap-contract-state-changed'],
       ].map(transArrayItem).concat({
         text: '免压租借/速住',
         collapsed: true,
