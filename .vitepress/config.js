@@ -142,7 +142,10 @@ export default defineConfig({
       '/openapi/v3/iotmanage': offlineFacepaySidebar(),
       '/openapi/v3/offlineface': offlineFacepaySidebar(),
       '/openapi/v3/bank-': bankTransferSidebar(),
-      '/openapi/v3/payscore/acquiringbank/': acquiringbankPayscoreSidebar(),
+      '/openapi/v3/rate-activity/': acquiringBankMixedSidebar(),
+      '/openapi/v3/merchant-settlement/': acquiringBankMixedSidebar(),
+      '/openapi/v3/payscore/acquiringbank/': acquiringBankMixedSidebar(),
+      '/webhook/v3/PAYSCORE.MCH_PREPAY': acquiringBankMixedSidebar(),
       '/openapi/v3/combine-transactions/miniprogram': personalCollectionsSidebar(),
       '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close#INDIVIDUAL': personalCollectionsSidebar(),
       '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}#INDIVIDUAL': personalCollectionsSidebar(),
@@ -1686,10 +1689,28 @@ function bankTransferSidebar() {
   ]
 }
 
-function acquiringbankPayscoreSidebar() {
+function acquiringBankMixedSidebar() {
   return [
     {
       items: [
+        {
+          text: '从业机构特约商户结算规则',
+          collapsed: false,
+          items: [
+            ['提交修改申请单', '/openapi/v3/merchant-settlement/merchant-settle-rule-applications'],
+            ['查询申请单结果', '/openapi/v3/merchant-settlement/merchant-settle-rule-applications/{application_id}'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '从业机构子商户优惠费率活动',
+          collapsed: false,
+          items: [
+            ['提交费率优惠活动报名申请', '/openapi/v3/rate-activity/applications'],
+            ['查询费率优惠申请结果', '/openapi/v3/rate-activity/applications/id/{application_id}#get'],
+            ['修改费率优惠申请单信息', '/openapi/v3/rate-activity/applications/id/{application_id}#patch'],
+            ['申请单图片资料上传', '/openapi/v3/merchant/media/upload'],
+          ].map(transArrayItem),
+        },
         {
           text: '微信支付分(从业机构模式)',
           collapsed: false,
@@ -1706,6 +1727,9 @@ function acquiringbankPayscoreSidebar() {
             ['完结订单', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete'],
             ['同步订单信息', '/openapi/v3/payscore/acquiringbank/serviceorder/{out_order_no}/sync'],
             ['创建先用后付订单', '/openapi/v3/payscore/acquiringbank/servicepayondeliveryorder'],
+            ['商户预下单通知', '/webhook/v3/PAYSCORE.MCH_PREPAY'],
+            ['用户支付成功通知', '/webhook/v3/PAYSCORE.USER_PAID#ACQUIRINGBANK'],
+            ['用户确认成功通知', '/webhook/v3/PAYSCORE.USER_CONFIRM#ACQUIRINGBANK'],
           ].map(transArrayItem),
         },
       ],
@@ -1945,7 +1969,6 @@ function webhookSidebar() {
             ].map(transArrayItem),
           }).concat([
             ['智慧零售/先享后付订单确认', '/webhook/v3/PAYSCORE.USER_ACCEPTED'],
-            ['从业机构-商户预下单通知', '/webhook/v3/PAYSCORE.MCH_PREPAY'],
           ].map(transArrayItem)).concat({
             text: '微信先享卡',
             collapsed: true,

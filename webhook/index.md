@@ -78,7 +78,6 @@ head:
 | JSON {rowspan=2} | [用户签约计划成功通知](/webhook/v3/PAYSCORE.USER_SIGN_PLAN) {colspan=2}
 | [用户取消已签约的计划通知](/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN) {colspan=2}
 | JSON {rowspan=1} | [智慧零售/先享后付确认订单通知](/webhook/v3/PAYSCORE.USER_ACCEPTED)
-| JSON {rowspan=1} | [支付分从业机构-商户预下单通知](/webhook/v3/PAYSCORE.MCH_PREPAY)
 | JSON {rowspan=5} | [先享卡用户领卡通知(预受理领卡)](/webhook/v3/DISCOUNT_CARD.USER_ACCEPTED)
 | [先享卡用户领卡通知(模板配置)](/webhook/v3/DISCOUNT_CARD.GET_CARD)
 | [先享卡守约状态变化通知](/webhook/v3/DISCOUNT_CARD.AGREEMENT_ENDED)
