@@ -22,8 +22,8 @@ description: 指定服务商可通过该接口报名加价购活动、查询某�
 $instance->v3->marketing->goodsSubsidyActivity->activities->getAsync([
   'query' => [
     'city_id' => '',
-    'offset' => 0,
-    'limit' => 0,
+    'offset'  => 0,
+    'limit'   => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -36,8 +36,8 @@ $instance->v3->marketing->goodsSubsidyActivity->activities->getAsync([
 $instance->chain('v3/marketing/goods-subsidy-activity/activities')->getAsync([
   'query' => [
     'city_id' => '',
-    'offset' => 0,
-    'limit' => 0,
+    'offset'  => 0,
+    'limit'   => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,8 +50,8 @@ $instance->chain('v3/marketing/goods-subsidy-activity/activities')->getAsync([
 $instance['v3/marketing/goods-subsidy-activity/activities']->getAsync([
   'query' => [
     'city_id' => '',
-    'offset' => 0,
-    'limit' => 0,
+    'offset'  => 0,
+    'limit'   => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,8 +64,8 @@ $instance['v3/marketing/goods-subsidy-activity/activities']->getAsync([
 $response = $instance->v3->marketing->goodsSubsidyActivity->activities->get([
   'query' => [
     'city_id' => '',
-    'offset' => 0,
-    'limit' => 0,
+    'offset'  => 0,
+    'limit'   => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -75,8 +75,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/goods-subsidy-activity/activities')->get([
   'query' => [
     'city_id' => '',
-    'offset' => 0,
-    'limit' => 0,
+    'offset'  => 0,
+    'limit'   => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -86,8 +86,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/goods-subsidy-activity/activities']->get([
   'query' => [
     'city_id' => '',
-    'offset' => 0,
-    'limit' => 0,
+    'offset'  => 0,
+    'limit'   => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

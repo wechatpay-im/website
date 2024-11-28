@@ -25,7 +25,7 @@ $instance->v3->payscore->acquiringbank->permissions->authorizationCode->_authori
   'query' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
+    'sub_mchid'  => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,7 +40,7 @@ $instance->chain('v3/payscore/acquiringbank/permissions/authorization-code/{auth
   'query' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
+    'sub_mchid'  => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,7 +55,7 @@ $instance['v3/payscore/acquiringbank/permissions/authorization-code/{authorizati
   'query' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
+    'sub_mchid'  => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,7 +70,7 @@ $response = $instance->v3->payscore->acquiringbank->permissions->authorizationCo
   'query' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
+    'sub_mchid'  => '1230000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -82,7 +82,7 @@ $response = $instance->chain('v3/payscore/acquiringbank/permissions/authorizatio
   'query' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
+    'sub_mchid'  => '1230000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,7 +94,7 @@ $response = $instance['v3/payscore/acquiringbank/permissions/authorization-code/
   'query' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
+    'sub_mchid'  => '1230000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

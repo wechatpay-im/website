@@ -25,10 +25,10 @@ description: 通过openid查询用户授权信息
 $instance->v3->payscore->partner->permissions->search->getAsync([
   'query' => [
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
@@ -42,10 +42,10 @@ $instance->v3->payscore->partner->permissions->search->getAsync([
 $instance->chain('v3/payscore/partner/permissions/search')->getAsync([
   'query' => [
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
@@ -59,10 +59,10 @@ $instance->chain('v3/payscore/partner/permissions/search')->getAsync([
 $instance['v3/payscore/partner/permissions/search']->getAsync([
   'query' => [
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
@@ -76,10 +76,10 @@ $instance['v3/payscore/partner/permissions/search']->getAsync([
 $response = $instance->v3->payscore->partner->permissions->search->get([
   'query' => [
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
@@ -90,10 +90,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/partner/permissions/search')->get([
   'query' => [
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
@@ -104,10 +104,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/partner/permissions/search']->get([
   'query' => [
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);

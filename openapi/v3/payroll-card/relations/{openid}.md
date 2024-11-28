@@ -24,7 +24,7 @@ $instance->v3->payrollCard->relations->_openid_->getAsync([
   'openid' => '9x111111',
   'query' => [
     'sub_mchid' => '1111111',
-    'appid' => 'wxa1111111',
+    'appid'     => 'wxa1111111',
     'sub_appid' => 'wxa1111111',
   ],
 ])
@@ -39,7 +39,7 @@ $instance->chain('v3/payroll-card/relations/{openid}')->getAsync([
   'openid' => '9x111111',
   'query' => [
     'sub_mchid' => '1111111',
-    'appid' => 'wxa1111111',
+    'appid'     => 'wxa1111111',
     'sub_appid' => 'wxa1111111',
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/payroll-card/relations/{openid}']->getAsync([
   'openid' => '9x111111',
   'query' => [
     'sub_mchid' => '1111111',
-    'appid' => 'wxa1111111',
+    'appid'     => 'wxa1111111',
     'sub_appid' => 'wxa1111111',
   ],
 ])
@@ -69,7 +69,7 @@ $response = $instance->v3->payrollCard->relations->_openid_->get([
   'openid' => '9x111111',
   'query' => [
     'sub_mchid' => '1111111',
-    'appid' => 'wxa1111111',
+    'appid'     => 'wxa1111111',
     'sub_appid' => 'wxa1111111',
   ],
 ]);
@@ -81,7 +81,7 @@ $response = $instance->chain('v3/payroll-card/relations/{openid}')->get([
   'openid' => '9x111111',
   'query' => [
     'sub_mchid' => '1111111',
-    'appid' => 'wxa1111111',
+    'appid'     => 'wxa1111111',
     'sub_appid' => 'wxa1111111',
   ],
 ]);
@@ -93,7 +93,7 @@ $response = $instance['v3/payroll-card/relations/{openid}']->get([
   'openid' => '9x111111',
   'query' => [
     'sub_mchid' => '1111111',
-    'appid' => 'wxa1111111',
+    'appid'     => 'wxa1111111',
     'sub_appid' => 'wxa1111111',
   ],
 ]);

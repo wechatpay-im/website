@@ -24,12 +24,12 @@ description: 查询周周惠活动列表
 ```php [异步纯链式]
 $instance->v3->marketing->weeklyDiscount->activities->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
+    'limit'                => 5,
+    'offset'               => 10,
     'applying_merchant_id' => 10000098,
-    'store_id' => 1111111,
-    'activity_area_code' => 110000,
-    'activity_scene' => 'SCAN_CODE_TO_ORDER',
+    'store_id'             => 1111111,
+    'activity_area_code'   => 110000,
+    'activity_scene'       => 'SCAN_CODE_TO_ORDER',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,12 +41,12 @@ $instance->v3->marketing->weeklyDiscount->activities->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/weekly-discount/activities')->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
+    'limit'                => 5,
+    'offset'               => 10,
     'applying_merchant_id' => 10000098,
-    'store_id' => 1111111,
-    'activity_area_code' => 110000,
-    'activity_scene' => 'SCAN_CODE_TO_ORDER',
+    'store_id'             => 1111111,
+    'activity_area_code'   => 110000,
+    'activity_scene'       => 'SCAN_CODE_TO_ORDER',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,12 +58,12 @@ $instance->chain('v3/marketing/weekly-discount/activities')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/weekly-discount/activities']->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
+    'limit'                => 5,
+    'offset'               => 10,
     'applying_merchant_id' => 10000098,
-    'store_id' => 1111111,
-    'activity_area_code' => 110000,
-    'activity_scene' => 'SCAN_CODE_TO_ORDER',
+    'store_id'             => 1111111,
+    'activity_area_code'   => 110000,
+    'activity_scene'       => 'SCAN_CODE_TO_ORDER',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,12 +75,12 @@ $instance['v3/marketing/weekly-discount/activities']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->weeklyDiscount->activities->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
+    'limit'                => 5,
+    'offset'               => 10,
     'applying_merchant_id' => 10000098,
-    'store_id' => 1111111,
-    'activity_area_code' => 110000,
-    'activity_scene' => 'SCAN_CODE_TO_ORDER',
+    'store_id'             => 1111111,
+    'activity_area_code'   => 110000,
+    'activity_scene'       => 'SCAN_CODE_TO_ORDER',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,12 +89,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/weekly-discount/activities')->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
+    'limit'                => 5,
+    'offset'               => 10,
     'applying_merchant_id' => 10000098,
-    'store_id' => 1111111,
-    'activity_area_code' => 110000,
-    'activity_scene' => 'SCAN_CODE_TO_ORDER',
+    'store_id'             => 1111111,
+    'activity_area_code'   => 110000,
+    'activity_scene'       => 'SCAN_CODE_TO_ORDER',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,12 +103,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/weekly-discount/activities']->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
+    'limit'                => 5,
+    'offset'               => 10,
     'applying_merchant_id' => 10000098,
-    'store_id' => 1111111,
-    'activity_area_code' => 110000,
-    'activity_scene' => 'SCAN_CODE_TO_ORDER',
+    'store_id'             => 1111111,
+    'activity_area_code'   => 110000,
+    'activity_scene'       => 'SCAN_CODE_TO_ORDER',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

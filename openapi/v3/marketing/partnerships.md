@@ -22,10 +22,10 @@ description: 该接口主要为商户提供合作关系列表的查询能力。
 ```php [异步纯链式]
 $instance->v3->marketing->partnerships->getAsync([
   'query' => [
-    'partner' => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
+    'partner'         => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
     'authorized_data' => '{"business_type":"FAVOR_STOCK","stock_id":"2433405"}',
-    'limit' => 50,
-    'offset' => 0,
+    'limit'           => 50,
+    'offset'          => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +37,10 @@ $instance->v3->marketing->partnerships->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/partnerships')->getAsync([
   'query' => [
-    'partner' => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
+    'partner'         => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
     'authorized_data' => '{"business_type":"FAVOR_STOCK","stock_id":"2433405"}',
-    'limit' => 50,
-    'offset' => 0,
+    'limit'           => 50,
+    'offset'          => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +52,10 @@ $instance->chain('v3/marketing/partnerships')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/partnerships']->getAsync([
   'query' => [
-    'partner' => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
+    'partner'         => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
     'authorized_data' => '{"business_type":"FAVOR_STOCK","stock_id":"2433405"}',
-    'limit' => 50,
-    'offset' => 0,
+    'limit'           => 50,
+    'offset'          => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +67,10 @@ $instance['v3/marketing/partnerships']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->partnerships->get([
   'query' => [
-    'partner' => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
+    'partner'         => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
     'authorized_data' => '{"business_type":"FAVOR_STOCK","stock_id":"2433405"}',
-    'limit' => 50,
-    'offset' => 0,
+    'limit'           => 50,
+    'offset'          => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -79,10 +79,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/partnerships')->get([
   'query' => [
-    'partner' => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
+    'partner'         => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
     'authorized_data' => '{"business_type":"FAVOR_STOCK","stock_id":"2433405"}',
-    'limit' => 50,
-    'offset' => 0,
+    'limit'           => 50,
+    'offset'          => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -91,10 +91,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/partnerships']->get([
   'query' => [
-    'partner' => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
+    'partner'         => '{"type":"APPID","appid":"wx4e1916a585d1f4e9"}',
     'authorized_data' => '{"business_type":"FAVOR_STOCK","stock_id":"2433405"}',
-    'limit' => 50,
-    'offset' => 0,
+    'limit'           => 50,
+    'offset'          => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

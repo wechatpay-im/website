@@ -21,7 +21,7 @@ description: 通过本接口可以查询支持对公业务的银行列表
 $instance->v3->capital->capitallhh->banks->corporateBanking->getAsync([
   'query' => [
     'offset' => 0,
-    'limit' => 200,
+    'limit'  => 200,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,7 +34,7 @@ $instance->v3->capital->capitallhh->banks->corporateBanking->getAsync([
 $instance->chain('v3/capital/capitallhh/banks/corporate-banking')->getAsync([
   'query' => [
     'offset' => 0,
-    'limit' => 200,
+    'limit'  => 200,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,7 +47,7 @@ $instance->chain('v3/capital/capitallhh/banks/corporate-banking')->getAsync([
 $instance['v3/capital/capitallhh/banks/corporate-banking']->getAsync([
   'query' => [
     'offset' => 0,
-    'limit' => 200,
+    'limit'  => 200,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,7 +60,7 @@ $instance['v3/capital/capitallhh/banks/corporate-banking']->getAsync([
 $response = $instance->v3->capital->capitallhh->banks->corporateBanking->get([
   'query' => [
     'offset' => 0,
-    'limit' => 200,
+    'limit'  => 200,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/capital/capitallhh/banks/corporate-banking')->get([
   'query' => [
     'offset' => 0,
-    'limit' => 200,
+    'limit'  => 200,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,7 +80,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/capital/capitallhh/banks/corporate-banking']->get([
   'query' => [
     'offset' => 0,
-    'limit' => 200,
+    'limit'  => 200,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

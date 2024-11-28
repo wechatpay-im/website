@@ -23,11 +23,11 @@ description: 该接口仅支持停车场景，商户首先请求查询车牌服�
 ```php [异步纯链式]
 $instance->v3->vehicle->parking->services->find->getAsync([
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
-    'sub_mchid' => '1900000109',
+    'appid'        => 'wxcbda96de0b165486',
+    'sub_mchid'    => '1900000109',
     'plate_number' => '粤B888888',
-    'plate_color' => 'BLUE',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'plate_color'  => 'BLUE',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v3->vehicle->parking->services->find->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/vehicle/parking/services/find')->getAsync([
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
-    'sub_mchid' => '1900000109',
+    'appid'        => 'wxcbda96de0b165486',
+    'sub_mchid'    => '1900000109',
     'plate_number' => '粤B888888',
-    'plate_color' => 'BLUE',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'plate_color'  => 'BLUE',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v3/vehicle/parking/services/find')->getAsync([
 ```php [异步属性式]
 $instance['v3/vehicle/parking/services/find']->getAsync([
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
-    'sub_mchid' => '1900000109',
+    'appid'        => 'wxcbda96de0b165486',
+    'sub_mchid'    => '1900000109',
     'plate_number' => '粤B888888',
-    'plate_color' => 'BLUE',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'plate_color'  => 'BLUE',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v3/vehicle/parking/services/find']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->vehicle->parking->services->find->get([
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
-    'sub_mchid' => '1900000109',
+    'appid'        => 'wxcbda96de0b165486',
+    'sub_mchid'    => '1900000109',
     'plate_number' => '粤B888888',
-    'plate_color' => 'BLUE',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'plate_color'  => 'BLUE',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,11 +84,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/vehicle/parking/services/find')->get([
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
-    'sub_mchid' => '1900000109',
+    'appid'        => 'wxcbda96de0b165486',
+    'sub_mchid'    => '1900000109',
     'plate_number' => '粤B888888',
-    'plate_color' => 'BLUE',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'plate_color'  => 'BLUE',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/vehicle/parking/services/find']->get([
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
-    'sub_mchid' => '1900000109',
+    'appid'        => 'wxcbda96de0b165486',
+    'sub_mchid'    => '1900000109',
     'plate_number' => '粤B888888',
-    'plate_color' => 'BLUE',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'plate_color'  => 'BLUE',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

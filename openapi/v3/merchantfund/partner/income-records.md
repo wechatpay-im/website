@@ -22,10 +22,10 @@ description: 服务商通过本接口查询指定日期内特约商户银行来�
 ```php [异步纯链式]
 $instance->v3->merchantfund->partner->incomeRecords->getAsync([
   'query' => [
-    'sub_mchid' => '2480253391',
+    'sub_mchid'    => '2480253391',
     'account_type' => 'BASIC',
-    'offset' => 0,
-    'limit' => 100,
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +37,10 @@ $instance->v3->merchantfund->partner->incomeRecords->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchantfund/partner/income-records')->getAsync([
   'query' => [
-    'sub_mchid' => '2480253391',
+    'sub_mchid'    => '2480253391',
     'account_type' => 'BASIC',
-    'offset' => 0,
-    'limit' => 100,
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +52,10 @@ $instance->chain('v3/merchantfund/partner/income-records')->getAsync([
 ```php [异步属性式]
 $instance['v3/merchantfund/partner/income-records']->getAsync([
   'query' => [
-    'sub_mchid' => '2480253391',
+    'sub_mchid'    => '2480253391',
     'account_type' => 'BASIC',
-    'offset' => 0,
-    'limit' => 100,
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +67,10 @@ $instance['v3/merchantfund/partner/income-records']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantfund->partner->incomeRecords->get([
   'query' => [
-    'sub_mchid' => '2480253391',
+    'sub_mchid'    => '2480253391',
     'account_type' => 'BASIC',
-    'offset' => 0,
-    'limit' => 100,
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -79,10 +79,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/merchantfund/partner/income-records')->get([
   'query' => [
-    'sub_mchid' => '2480253391',
+    'sub_mchid'    => '2480253391',
     'account_type' => 'BASIC',
-    'offset' => 0,
-    'limit' => 100,
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -91,10 +91,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/merchantfund/partner/income-records']->get([
   'query' => [
-    'sub_mchid' => '2480253391',
+    'sub_mchid'    => '2480253391',
     'account_type' => 'BASIC',
-    'offset' => 0,
-    'limit' => 100,
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

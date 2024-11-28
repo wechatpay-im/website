@@ -138,11 +138,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->eduStar->orders->getAsync([
   'query' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'offset' => 0,
-    'limit' => 20,
+    'qq'            => '',
+    'offset'        => 0,
+    'limit'         => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -154,11 +154,11 @@ $instance->v3->eduStar->orders->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/edu-star/orders')->getAsync([
   'query' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'offset' => 0,
-    'limit' => 20,
+    'qq'            => '',
+    'offset'        => 0,
+    'limit'         => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -170,11 +170,11 @@ $instance->chain('v3/edu-star/orders')->getAsync([
 ```php [异步属性式]
 $instance['v3/edu-star/orders']->getAsync([
   'query' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'offset' => 0,
-    'limit' => 20,
+    'qq'            => '',
+    'offset'        => 0,
+    'limit'         => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -186,11 +186,11 @@ $instance['v3/edu-star/orders']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->eduStar->orders->get([
   'query' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'offset' => 0,
-    'limit' => 20,
+    'qq'            => '',
+    'offset'        => 0,
+    'limit'         => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -199,11 +199,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/edu-star/orders')->get([
   'query' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'offset' => 0,
-    'limit' => 20,
+    'qq'            => '',
+    'offset'        => 0,
+    'limit'         => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -212,11 +212,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/edu-star/orders']->get([
   'query' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'offset' => 0,
-    'limit' => 20,
+    'qq'            => '',
+    'offset'        => 0,
+    'limit'         => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

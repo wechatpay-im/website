@@ -135,11 +135,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->withdrawFavor->users->_openid_->coupons->getAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'query' => [
-    'mchid' => '1230000109',
+    'mchid'    => '1230000109',
     'stock_id' => '1304490000000059',
-    'appid' => 'wxd678efh567hg6787',
-    'offset' => 1,
-    'limit' => 10,
+    'appid'    => 'wxd678efh567hg6787',
+    'offset'   => 1,
+    'limit'    => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -152,11 +152,11 @@ $instance->v3->marketing->withdrawFavor->users->_openid_->coupons->getAsync([
 $instance->chain('v3/marketing/withdraw-favor/users/{openid}/coupons')->getAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'query' => [
-    'mchid' => '1230000109',
+    'mchid'    => '1230000109',
     'stock_id' => '1304490000000059',
-    'appid' => 'wxd678efh567hg6787',
-    'offset' => 1,
-    'limit' => 10,
+    'appid'    => 'wxd678efh567hg6787',
+    'offset'   => 1,
+    'limit'    => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -169,11 +169,11 @@ $instance->chain('v3/marketing/withdraw-favor/users/{openid}/coupons')->getAsync
 $instance['v3/marketing/withdraw-favor/users/{openid}/coupons']->getAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'query' => [
-    'mchid' => '1230000109',
+    'mchid'    => '1230000109',
     'stock_id' => '1304490000000059',
-    'appid' => 'wxd678efh567hg6787',
-    'offset' => 1,
-    'limit' => 10,
+    'appid'    => 'wxd678efh567hg6787',
+    'offset'   => 1,
+    'limit'    => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -186,11 +186,11 @@ $instance['v3/marketing/withdraw-favor/users/{openid}/coupons']->getAsync([
 $response = $instance->v3->marketing->withdrawFavor->users->_openid_->coupons->get([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'query' => [
-    'mchid' => '1230000109',
+    'mchid'    => '1230000109',
     'stock_id' => '1304490000000059',
-    'appid' => 'wxd678efh567hg6787',
-    'offset' => 1,
-    'limit' => 10,
+    'appid'    => 'wxd678efh567hg6787',
+    'offset'   => 1,
+    'limit'    => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -200,11 +200,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/withdraw-favor/users/{openid}/coupons')->get([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'query' => [
-    'mchid' => '1230000109',
+    'mchid'    => '1230000109',
     'stock_id' => '1304490000000059',
-    'appid' => 'wxd678efh567hg6787',
-    'offset' => 1,
-    'limit' => 10,
+    'appid'    => 'wxd678efh567hg6787',
+    'offset'   => 1,
+    'limit'    => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -214,11 +214,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/withdraw-favor/users/{openid}/coupons']->get([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'query' => [
-    'mchid' => '1230000109',
+    'mchid'    => '1230000109',
     'stock_id' => '1304490000000059',
-    'appid' => 'wxd678efh567hg6787',
-    'offset' => 1,
-    'limit' => 10,
+    'appid'    => 'wxd678efh567hg6787',
+    'offset'   => 1,
+    'limit'    => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

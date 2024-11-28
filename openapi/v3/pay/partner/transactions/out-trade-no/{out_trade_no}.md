@@ -22,7 +22,7 @@ description: 商户可以通过查询订单接口主动查询订单状态，完�
 $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->getAsync([
   'out_trade_no' => '',
   'query' => [
-    'sp_mchid' => '',
+    'sp_mchid'  => '',
     'sub_mchid' => '',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->getAsync(
 $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}')->getAsync([
   'out_trade_no' => '',
   'query' => [
-    'sp_mchid' => '',
+    'sp_mchid'  => '',
     'sub_mchid' => '',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}')->get
 $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}']->getAsync([
   'out_trade_no' => '',
   'query' => [
-    'sp_mchid' => '',
+    'sp_mchid'  => '',
     'sub_mchid' => '',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}']->getAsync([
 $response = $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->get([
   'out_trade_no' => '',
   'query' => [
-    'sp_mchid' => '',
+    'sp_mchid'  => '',
     'sub_mchid' => '',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}')->get([
   'out_trade_no' => '',
   'query' => [
-    'sp_mchid' => '',
+    'sp_mchid'  => '',
     'sub_mchid' => '',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}']->get([
   'out_trade_no' => '',
   'query' => [
-    'sp_mchid' => '',
+    'sp_mchid'  => '',
     'sub_mchid' => '',
   ],
 ]);

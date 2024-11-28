@@ -24,7 +24,7 @@ $instance->v3->papay->insuranceSign->policy_periods->planId->_plan_id_->outContr
   'out_contract_code' => 'wxwtdk20200910100000',
   'plan_id' => '12535',
   'query' => [
-    'limit' => 20,
+    'limit'  => 20,
     'offset' => 50,
   ],
 ])
@@ -39,7 +39,7 @@ $instance->chain('v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-c
   'out_contract_code' => 'wxwtdk20200910100000',
   'plan_id' => '12535',
   'query' => [
-    'limit' => 20,
+    'limit'  => 20,
     'offset' => 50,
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-contract
   'out_contract_code' => 'wxwtdk20200910100000',
   'plan_id' => '12535',
   'query' => [
-    'limit' => 20,
+    'limit'  => 20,
     'offset' => 50,
   ],
 ])
@@ -69,7 +69,7 @@ $response = $instance->v3->papay->insuranceSign->policy_periods->planId->_plan_i
   'out_contract_code' => 'wxwtdk20200910100000',
   'plan_id' => '12535',
   'query' => [
-    'limit' => 20,
+    'limit'  => 20,
     'offset' => 50,
   ],
 ]);
@@ -81,7 +81,7 @@ $response = $instance->chain('v3/papay/insurance-sign/policy_periods/plan-id/{pl
   'out_contract_code' => 'wxwtdk20200910100000',
   'plan_id' => '12535',
   'query' => [
-    'limit' => 20,
+    'limit'  => 20,
     'offset' => 50,
   ],
 ]);
@@ -93,7 +93,7 @@ $response = $instance['v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/
   'out_contract_code' => 'wxwtdk20200910100000',
   'plan_id' => '12535',
   'query' => [
-    'limit' => 20,
+    'limit'  => 20,
     'offset' => 50,
   ],
 ]);

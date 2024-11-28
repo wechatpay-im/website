@@ -27,11 +27,11 @@ $instance->v3->global->profitSharing->receivers->_account_->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'account' => '86693852',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
+    'type'           => 'MERCHANT_ID',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,11 +45,11 @@ $instance->chain('v3/global/profit-sharing/receivers/{account}')->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'account' => '86693852',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
+    'type'           => 'MERCHANT_ID',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,11 +63,11 @@ $instance['v3/global/profit-sharing/receivers/{account}']->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'account' => '86693852',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
+    'type'           => 'MERCHANT_ID',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,11 +81,11 @@ $response = $instance->v3->global->profitSharing->receivers->_account_->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'account' => '86693852',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
+    'type'           => 'MERCHANT_ID',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -96,11 +96,11 @@ $response = $instance->chain('v3/global/profit-sharing/receivers/{account}')->ge
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'account' => '86693852',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
+    'type'           => 'MERCHANT_ID',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,11 +111,11 @@ $response = $instance['v3/global/profit-sharing/receivers/{account}']->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'account' => '86693852',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
+    'type'           => 'MERCHANT_ID',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

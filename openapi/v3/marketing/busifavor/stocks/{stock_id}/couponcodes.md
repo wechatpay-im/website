@@ -131,9 +131,9 @@ $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->getAsync([
   'stock_id' => '98065001',
   'query' => [
     'status' => 'SENDED',
-    'appid' => 'wx233544546545989',
+    'appid'  => 'wx233544546545989',
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -147,9 +147,9 @@ $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->getAsy
   'stock_id' => '98065001',
   'query' => [
     'status' => 'SENDED',
-    'appid' => 'wx233544546545989',
+    'appid'  => 'wx233544546545989',
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -163,9 +163,9 @@ $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->getAsync([
   'stock_id' => '98065001',
   'query' => [
     'status' => 'SENDED',
-    'appid' => 'wx233544546545989',
+    'appid'  => 'wx233544546545989',
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -179,9 +179,9 @@ $response = $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes
   'stock_id' => '98065001',
   'query' => [
     'status' => 'SENDED',
-    'appid' => 'wx233544546545989',
+    'appid'  => 'wx233544546545989',
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -192,9 +192,9 @@ $response = $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcod
   'stock_id' => '98065001',
   'query' => [
     'status' => 'SENDED',
-    'appid' => 'wx233544546545989',
+    'appid'  => 'wx233544546545989',
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -205,9 +205,9 @@ $response = $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->g
   'stock_id' => '98065001',
   'query' => [
     'status' => 'SENDED',
-    'appid' => 'wx233544546545989',
+    'appid'  => 'wx233544546545989',
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -200,13 +200,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->global->customs->orders->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1230000109',
     'order_type' => 'out_trade_no',
-    'order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
-    'offset' => 1,
-    'limit' => 20,
+    'order_no'   => '20150806125346',
+    'customs'    => 'SHANGHAI_ZS',
+    'offset'     => 1,
+    'limit'      => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -219,13 +219,13 @@ $instance->v3->global->customs->orders->getAsync([
 $instance->chain('v3/global/customs/orders')->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1230000109',
     'order_type' => 'out_trade_no',
-    'order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
-    'offset' => 1,
-    'limit' => 20,
+    'order_no'   => '20150806125346',
+    'customs'    => 'SHANGHAI_ZS',
+    'offset'     => 1,
+    'limit'      => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -238,13 +238,13 @@ $instance->chain('v3/global/customs/orders')->getAsync([
 $instance['v3/global/customs/orders']->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1230000109',
     'order_type' => 'out_trade_no',
-    'order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
-    'offset' => 1,
-    'limit' => 20,
+    'order_no'   => '20150806125346',
+    'customs'    => 'SHANGHAI_ZS',
+    'offset'     => 1,
+    'limit'      => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -257,13 +257,13 @@ $instance['v3/global/customs/orders']->getAsync([
 $response = $instance->v3->global->customs->orders->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1230000109',
     'order_type' => 'out_trade_no',
-    'order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
-    'offset' => 1,
-    'limit' => 20,
+    'order_no'   => '20150806125346',
+    'customs'    => 'SHANGHAI_ZS',
+    'offset'     => 1,
+    'limit'      => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -273,13 +273,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/customs/orders')->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1230000109',
     'order_type' => 'out_trade_no',
-    'order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
-    'offset' => 1,
-    'limit' => 20,
+    'order_no'   => '20150806125346',
+    'customs'    => 'SHANGHAI_ZS',
+    'offset'     => 1,
+    'limit'      => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -289,13 +289,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/customs/orders']->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
+    'appid'      => 'wxd678efh567hg6787',
+    'mchid'      => '1230000109',
     'order_type' => 'out_trade_no',
-    'order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
-    'offset' => 1,
-    'limit' => 20,
+    'order_no'   => '20150806125346',
+    'customs'    => 'SHANGHAI_ZS',
+    'offset'     => 1,
+    'limit'      => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

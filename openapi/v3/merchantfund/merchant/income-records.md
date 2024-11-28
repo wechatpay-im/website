@@ -23,9 +23,9 @@ description: 服务商通过本接口查询指定日期内本商户银行来账�
 $instance->v3->merchantfund->merchant->incomeRecords->getAsync([
   'query' => [
     'account_type' => 'BASIC',
-    'date' => '2019-06-11',
-    'offset' => 0,
-    'limit' => 100,
+    'date'         => '2019-06-11',
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,9 +38,9 @@ $instance->v3->merchantfund->merchant->incomeRecords->getAsync([
 $instance->chain('v3/merchantfund/merchant/income-records')->getAsync([
   'query' => [
     'account_type' => 'BASIC',
-    'date' => '2019-06-11',
-    'offset' => 0,
-    'limit' => 100,
+    'date'         => '2019-06-11',
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +53,9 @@ $instance->chain('v3/merchantfund/merchant/income-records')->getAsync([
 $instance['v3/merchantfund/merchant/income-records']->getAsync([
   'query' => [
     'account_type' => 'BASIC',
-    'date' => '2019-06-11',
-    'offset' => 0,
-    'limit' => 100,
+    'date'         => '2019-06-11',
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +68,9 @@ $instance['v3/merchantfund/merchant/income-records']->getAsync([
 $response = $instance->v3->merchantfund->merchant->incomeRecords->get([
   'query' => [
     'account_type' => 'BASIC',
-    'date' => '2019-06-11',
-    'offset' => 0,
-    'limit' => 100,
+    'date'         => '2019-06-11',
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,9 +80,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/merchantfund/merchant/income-records')->get([
   'query' => [
     'account_type' => 'BASIC',
-    'date' => '2019-06-11',
-    'offset' => 0,
-    'limit' => 100,
+    'date'         => '2019-06-11',
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -92,9 +92,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/merchantfund/merchant/income-records']->get([
   'query' => [
     'account_type' => 'BASIC',
-    'date' => '2019-06-11',
-    'offset' => 0,
-    'limit' => 100,
+    'date'         => '2019-06-11',
+    'offset'       => 0,
+    'limit'        => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

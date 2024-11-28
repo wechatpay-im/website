@@ -25,7 +25,7 @@ $instance->v3->lovefeast->users->_openid_->orders->brandId->_brand_id_->getAsync
   'brand_id' => '2250',
   'query' => [
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,7 +40,7 @@ $instance->chain('v3/lovefeast/users/{openid}/orders/brand-id/{brand_id}')->getA
   'brand_id' => '2250',
   'query' => [
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,7 +55,7 @@ $instance['v3/lovefeast/users/{openid}/orders/brand-id/{brand_id}']->getAsync([
   'brand_id' => '2250',
   'query' => [
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,7 +70,7 @@ $response = $instance->v3->lovefeast->users->_openid_->orders->brandId->_brand_i
   'brand_id' => '2250',
   'query' => [
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -82,7 +82,7 @@ $response = $instance->chain('v3/lovefeast/users/{openid}/orders/brand-id/{brand
   'brand_id' => '2250',
   'query' => [
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,7 +94,7 @@ $response = $instance['v3/lovefeast/users/{openid}/orders/brand-id/{brand_id}']-
   'brand_id' => '2250',
   'query' => [
     'offset' => 0,
-    'limit' => 20,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

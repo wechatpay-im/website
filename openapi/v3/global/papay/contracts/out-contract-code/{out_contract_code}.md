@@ -27,10 +27,10 @@ $instance->v3->global->papay->contracts->outContractCode->_out_contract_code_->g
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_contract_code' => '100005698',
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'     => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
+    'sp_appid'  => 'wx8888888888888888',
+    'sp_mchid'  => '3200000001',
     'sub_appid' => 'wxcbda96de0b165484',
   ],
 ])
@@ -45,10 +45,10 @@ $instance->chain('v3/global/papay/contracts/out-contract-code/{out_contract_code
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_contract_code' => '100005698',
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'     => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
+    'sp_appid'  => 'wx8888888888888888',
+    'sp_mchid'  => '3200000001',
     'sub_appid' => 'wxcbda96de0b165484',
   ],
 ])
@@ -63,10 +63,10 @@ $instance['v3/global/papay/contracts/out-contract-code/{out_contract_code}']->ge
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_contract_code' => '100005698',
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'     => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
+    'sp_appid'  => 'wx8888888888888888',
+    'sp_mchid'  => '3200000001',
     'sub_appid' => 'wxcbda96de0b165484',
   ],
 ])
@@ -81,10 +81,10 @@ $response = $instance->v3->global->papay->contracts->outContractCode->_out_contr
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_contract_code' => '100005698',
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'     => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
+    'sp_appid'  => 'wx8888888888888888',
+    'sp_mchid'  => '3200000001',
     'sub_appid' => 'wxcbda96de0b165484',
   ],
 ]);
@@ -96,10 +96,10 @@ $response = $instance->chain('v3/global/papay/contracts/out-contract-code/{out_c
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_contract_code' => '100005698',
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'     => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
+    'sp_appid'  => 'wx8888888888888888',
+    'sp_mchid'  => '3200000001',
     'sub_appid' => 'wxcbda96de0b165484',
   ],
 ]);
@@ -111,10 +111,10 @@ $response = $instance['v3/global/papay/contracts/out-contract-code/{out_contract
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_contract_code' => '100005698',
   'query' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'     => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
+    'sp_appid'  => 'wx8888888888888888',
+    'sp_mchid'  => '3200000001',
     'sub_appid' => 'wxcbda96de0b165484',
   ],
 ]);

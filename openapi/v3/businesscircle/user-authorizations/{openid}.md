@@ -23,7 +23,7 @@ $instance->v3->businesscircle->userAuthorizations->_openid_->getAsync([
   'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
   'query' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx1234567890abcdef',
+    'appid'     => 'wx1234567890abcdef',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/businesscircle/user-authorizations/{openid}')->getAsync([
   'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
   'query' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx1234567890abcdef',
+    'appid'     => 'wx1234567890abcdef',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/businesscircle/user-authorizations/{openid}']->getAsync([
   'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
   'query' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx1234567890abcdef',
+    'appid'     => 'wx1234567890abcdef',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->businesscircle->userAuthorizations->_openid_->get([
   'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
   'query' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx1234567890abcdef',
+    'appid'     => 'wx1234567890abcdef',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/businesscircle/user-authorizations/{openid}')->
   'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
   'query' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx1234567890abcdef',
+    'appid'     => 'wx1234567890abcdef',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/businesscircle/user-authorizations/{openid}']->get([
   'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
   'query' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx1234567890abcdef',
+    'appid'     => 'wx1234567890abcdef',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -123,8 +123,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->transferDetail->electronicReceipts->getAsync([
   'query' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -137,8 +137,8 @@ $instance->v3->transferDetail->electronicReceipts->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/transfer-detail/electronic-receipts')->getAsync([
   'query' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -151,8 +151,8 @@ $instance->chain('v3/transfer-detail/electronic-receipts')->getAsync([
 ```php [异步属性式]
 $instance['v3/transfer-detail/electronic-receipts']->getAsync([
   'query' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -165,8 +165,8 @@ $instance['v3/transfer-detail/electronic-receipts']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->transferDetail->electronicReceipts->get([
   'query' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -176,8 +176,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/transfer-detail/electronic-receipts')->get([
   'query' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -187,8 +187,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/transfer-detail/electronic-receipts']->get([
   'query' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);

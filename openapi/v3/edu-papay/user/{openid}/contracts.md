@@ -28,14 +28,14 @@ description: 商户通过用户标识+签约模板号来查询用户签约信息
 $instance->v3->eduPapay->user->_openid_->contracts->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
+    'appid'           => 'wx8888888888888888',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wx8888888888888888',
+    'sub_openid'      => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,14 +48,14 @@ $instance->v3->eduPapay->user->_openid_->contracts->getAsync([
 $instance->chain('v3/edu-papay/user/{openid}/contracts')->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
+    'appid'           => 'wx8888888888888888',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wx8888888888888888',
+    'sub_openid'      => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,14 +68,14 @@ $instance->chain('v3/edu-papay/user/{openid}/contracts')->getAsync([
 $instance['v3/edu-papay/user/{openid}/contracts']->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
+    'appid'           => 'wx8888888888888888',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wx8888888888888888',
+    'sub_openid'      => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -88,14 +88,14 @@ $instance['v3/edu-papay/user/{openid}/contracts']->getAsync([
 $response = $instance->v3->eduPapay->user->_openid_->contracts->get([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
+    'appid'           => 'wx8888888888888888',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wx8888888888888888',
+    'sub_openid'      => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -105,14 +105,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/edu-papay/user/{openid}/contracts')->get([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
+    'appid'           => 'wx8888888888888888',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wx8888888888888888',
+    'sub_openid'      => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -122,14 +122,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/edu-papay/user/{openid}/contracts']->get([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
+    'appid'           => 'wx8888888888888888',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wx8888888888888888',
+    'sub_openid'      => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

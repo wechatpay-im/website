@@ -25,9 +25,9 @@ $instance->v3->partnerTransfer->batches->batchId->_batch_id_->getAsync([
   'batch_id' => '1030000071100999991182020050700019480001',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,9 +41,9 @@ $instance->chain('v3/partner-transfer/batches/batch-id/{batch_id}')->getAsync([
   'batch_id' => '1030000071100999991182020050700019480001',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,9 +57,9 @@ $instance['v3/partner-transfer/batches/batch-id/{batch_id}']->getAsync([
   'batch_id' => '1030000071100999991182020050700019480001',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -73,9 +73,9 @@ $response = $instance->v3->partnerTransfer->batches->batchId->_batch_id_->get([
   'batch_id' => '1030000071100999991182020050700019480001',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -86,9 +86,9 @@ $response = $instance->chain('v3/partner-transfer/batches/batch-id/{batch_id}')-
   'batch_id' => '1030000071100999991182020050700019480001',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -99,9 +99,9 @@ $response = $instance['v3/partner-transfer/batches/batch-id/{batch_id}']->get([
   'batch_id' => '1030000071100999991182020050700019480001',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

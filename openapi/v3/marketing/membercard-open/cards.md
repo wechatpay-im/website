@@ -425,9 +425,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->membercardOpen->cards->getAsync([
   'query' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
-    'offset' => 0,
-    'limit' => 20,
+    'appid'    => 'wxea9c30890f48d5ae',
+    'offset'   => 0,
+    'limit'    => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -440,9 +440,9 @@ $instance->v3->marketing->membercardOpen->cards->getAsync([
 $instance->chain('v3/marketing/membercard-open/cards')->getAsync([
   'query' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
-    'offset' => 0,
-    'limit' => 20,
+    'appid'    => 'wxea9c30890f48d5ae',
+    'offset'   => 0,
+    'limit'    => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -455,9 +455,9 @@ $instance->chain('v3/marketing/membercard-open/cards')->getAsync([
 $instance['v3/marketing/membercard-open/cards']->getAsync([
   'query' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
-    'offset' => 0,
-    'limit' => 20,
+    'appid'    => 'wxea9c30890f48d5ae',
+    'offset'   => 0,
+    'limit'    => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -470,9 +470,9 @@ $instance['v3/marketing/membercard-open/cards']->getAsync([
 $response = $instance->v3->marketing->membercardOpen->cards->get([
   'query' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
-    'offset' => 0,
-    'limit' => 20,
+    'appid'    => 'wxea9c30890f48d5ae',
+    'offset'   => 0,
+    'limit'    => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -482,9 +482,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/membercard-open/cards')->get([
   'query' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
-    'offset' => 0,
-    'limit' => 20,
+    'appid'    => 'wxea9c30890f48d5ae',
+    'offset'   => 0,
+    'limit'    => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -494,9 +494,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/membercard-open/cards']->get([
   'query' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
-    'offset' => 0,
-    'limit' => 20,
+    'appid'    => 'wxea9c30890f48d5ae',
+    'offset'   => 0,
+    'limit'    => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

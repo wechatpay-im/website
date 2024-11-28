@@ -25,9 +25,9 @@ $instance->v3->partnerTransfer->batches->outBatchNo->_out_batch_no_->getAsync([
   'out_batch_no' => 'plfk2020042013',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,9 +41,9 @@ $instance->chain('v3/partner-transfer/batches/out-batch-no/{out_batch_no}')->get
   'out_batch_no' => 'plfk2020042013',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,9 +57,9 @@ $instance['v3/partner-transfer/batches/out-batch-no/{out_batch_no}']->getAsync([
   'out_batch_no' => 'plfk2020042013',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -73,9 +73,9 @@ $response = $instance->v3->partnerTransfer->batches->outBatchNo->_out_batch_no_-
   'out_batch_no' => 'plfk2020042013',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -86,9 +86,9 @@ $response = $instance->chain('v3/partner-transfer/batches/out-batch-no/{out_batc
   'out_batch_no' => 'plfk2020042013',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -99,9 +99,9 @@ $response = $instance['v3/partner-transfer/batches/out-batch-no/{out_batch_no}']
   'out_batch_no' => 'plfk2020042013',
   'query' => [
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_status' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_status'     => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

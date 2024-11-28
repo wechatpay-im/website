@@ -28,7 +28,7 @@ description: 商户使用用户标识通过该接口查询用户的协议状态�
 $instance->v3->ebike->charge->users->_openid_->contract->getAsync([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'   => '1900000109',
     'trade_scene' => 'CHARGE',
   ],
 ])
@@ -42,7 +42,7 @@ $instance->v3->ebike->charge->users->_openid_->contract->getAsync([
 $instance->chain('v3/ebike/charge/users/{openid}/contract')->getAsync([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'   => '1900000109',
     'trade_scene' => 'CHARGE',
   ],
 ])
@@ -56,7 +56,7 @@ $instance->chain('v3/ebike/charge/users/{openid}/contract')->getAsync([
 $instance['v3/ebike/charge/users/{openid}/contract']->getAsync([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'   => '1900000109',
     'trade_scene' => 'CHARGE',
   ],
 ])
@@ -70,7 +70,7 @@ $instance['v3/ebike/charge/users/{openid}/contract']->getAsync([
 $response = $instance->v3->ebike->charge->users->_openid_->contract->get([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'   => '1900000109',
     'trade_scene' => 'CHARGE',
   ],
 ]);
@@ -81,7 +81,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/ebike/charge/users/{openid}/contract')->get([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'   => '1900000109',
     'trade_scene' => 'CHARGE',
   ],
 ]);
@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/ebike/charge/users/{openid}/contract']->get([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'   => '1900000109',
     'trade_scene' => 'CHARGE',
   ],
 ]);

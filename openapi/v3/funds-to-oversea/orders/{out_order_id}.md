@@ -22,7 +22,7 @@ description: 根据微信支付单号+商户出境单号，查询出境结果，
 $instance->v3->fundsToOversea->orders->_out_order_id_->getAsync([
   'out_order_id' => 'merchant123123',
   'query' => [
-    'sub_mchid' => '1231231',
+    'sub_mchid'      => '1231231',
     'transaction_id' => '4200000000000',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->fundsToOversea->orders->_out_order_id_->getAsync([
 $instance->chain('v3/funds-to-oversea/orders/{out_order_id}')->getAsync([
   'out_order_id' => 'merchant123123',
   'query' => [
-    'sub_mchid' => '1231231',
+    'sub_mchid'      => '1231231',
     'transaction_id' => '4200000000000',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/funds-to-oversea/orders/{out_order_id}')->getAsync([
 $instance['v3/funds-to-oversea/orders/{out_order_id}']->getAsync([
   'out_order_id' => 'merchant123123',
   'query' => [
-    'sub_mchid' => '1231231',
+    'sub_mchid'      => '1231231',
     'transaction_id' => '4200000000000',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/funds-to-oversea/orders/{out_order_id}']->getAsync([
 $response = $instance->v3->fundsToOversea->orders->_out_order_id_->get([
   'out_order_id' => 'merchant123123',
   'query' => [
-    'sub_mchid' => '1231231',
+    'sub_mchid'      => '1231231',
     'transaction_id' => '4200000000000',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/funds-to-oversea/orders/{out_order_id}')->get([
   'out_order_id' => 'merchant123123',
   'query' => [
-    'sub_mchid' => '1231231',
+    'sub_mchid'      => '1231231',
     'transaction_id' => '4200000000000',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/funds-to-oversea/orders/{out_order_id}']->get([
   'out_order_id' => 'merchant123123',
   'query' => [
-    'sub_mchid' => '1231231',
+    'sub_mchid'      => '1231231',
     'transaction_id' => '4200000000000',
   ],
 ]);

@@ -22,7 +22,7 @@ description: 商户需要核实回退结果，可调用此接口查询回退结�
 $instance->v3->profitsharing->returnOrders->_out_return_no_->getAsync([
   'out_return_no' => 'R20190516001',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_order_no' => 'P20190806125346',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->profitsharing->returnOrders->_out_return_no_->getAsync([
 $instance->chain('v3/profitsharing/return-orders/{out_return_no}')->getAsync([
   'out_return_no' => 'R20190516001',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_order_no' => 'P20190806125346',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/profitsharing/return-orders/{out_return_no}')->getAsync([
 $instance['v3/profitsharing/return-orders/{out_return_no}']->getAsync([
   'out_return_no' => 'R20190516001',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_order_no' => 'P20190806125346',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/profitsharing/return-orders/{out_return_no}']->getAsync([
 $response = $instance->v3->profitsharing->returnOrders->_out_return_no_->get([
   'out_return_no' => 'R20190516001',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_order_no' => 'P20190806125346',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/profitsharing/return-orders/{out_return_no}')->get([
   'out_return_no' => 'R20190516001',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_order_no' => 'P20190806125346',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/profitsharing/return-orders/{out_return_no}']->get([
   'out_return_no' => 'R20190516001',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_order_no' => 'P20190806125346',
   ],
 ]);

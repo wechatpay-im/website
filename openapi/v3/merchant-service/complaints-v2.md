@@ -23,10 +23,10 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 ```php [异步纯链式]
 $instance->v3->merchantService->complaintsV2->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'begin_date' => '2019-01-01',
-    'end_date' => '2019-01-01',
+    'limit'             => 5,
+    'offset'            => 10,
+    'begin_date'        => '2019-01-01',
+    'end_date'          => '2019-01-01',
     'complainted_mchid' => '1900012181',
   ],
 ])
@@ -39,10 +39,10 @@ $instance->v3->merchantService->complaintsV2->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchant-service/complaints-v2')->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'begin_date' => '2019-01-01',
-    'end_date' => '2019-01-01',
+    'limit'             => 5,
+    'offset'            => 10,
+    'begin_date'        => '2019-01-01',
+    'end_date'          => '2019-01-01',
     'complainted_mchid' => '1900012181',
   ],
 ])
@@ -55,10 +55,10 @@ $instance->chain('v3/merchant-service/complaints-v2')->getAsync([
 ```php [异步属性式]
 $instance['v3/merchant-service/complaints-v2']->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'begin_date' => '2019-01-01',
-    'end_date' => '2019-01-01',
+    'limit'             => 5,
+    'offset'            => 10,
+    'begin_date'        => '2019-01-01',
+    'end_date'          => '2019-01-01',
     'complainted_mchid' => '1900012181',
   ],
 ])
@@ -71,10 +71,10 @@ $instance['v3/merchant-service/complaints-v2']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantService->complaintsV2->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'begin_date' => '2019-01-01',
-    'end_date' => '2019-01-01',
+    'limit'             => 5,
+    'offset'            => 10,
+    'begin_date'        => '2019-01-01',
+    'end_date'          => '2019-01-01',
     'complainted_mchid' => '1900012181',
   ],
 ]);
@@ -84,10 +84,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/merchant-service/complaints-v2')->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'begin_date' => '2019-01-01',
-    'end_date' => '2019-01-01',
+    'limit'             => 5,
+    'offset'            => 10,
+    'begin_date'        => '2019-01-01',
+    'end_date'          => '2019-01-01',
     'complainted_mchid' => '1900012181',
   ],
 ]);
@@ -97,10 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/merchant-service/complaints-v2']->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'begin_date' => '2019-01-01',
-    'end_date' => '2019-01-01',
+    'limit'             => 5,
+    'offset'            => 10,
+    'begin_date'        => '2019-01-01',
+    'end_date'          => '2019-01-01',
     'complainted_mchid' => '1900012181',
   ],
 ]);

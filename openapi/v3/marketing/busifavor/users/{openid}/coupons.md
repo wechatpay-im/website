@@ -28,14 +28,14 @@ description: 服务商自定义筛选条件（如创建商户号、归属商户�
 $instance->v3->marketing->busifavor->users->_openid_->coupons->getAsync([
   'openid' => '2323dfsdf342342',
   'query' => [
-    'appid' => 'wx233544546545989',
-    'stock_id' => '9865000',
-    'coupon_state' => 'SENDED',
+    'appid'            => 'wx233544546545989',
+    'stock_id'         => '9865000',
+    'coupon_state'     => 'SENDED',
     'creator_merchant' => '1000000001',
-    'belong_merchant' => '1000000002',
-    'sender_merchant' => '1000000003',
-    'offset' => 0,
-    'limit' => 20,
+    'belong_merchant'  => '1000000002',
+    'sender_merchant'  => '1000000003',
+    'offset'           => 0,
+    'limit'            => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,14 +48,14 @@ $instance->v3->marketing->busifavor->users->_openid_->coupons->getAsync([
 $instance->chain('v3/marketing/busifavor/users/{openid}/coupons')->getAsync([
   'openid' => '2323dfsdf342342',
   'query' => [
-    'appid' => 'wx233544546545989',
-    'stock_id' => '9865000',
-    'coupon_state' => 'SENDED',
+    'appid'            => 'wx233544546545989',
+    'stock_id'         => '9865000',
+    'coupon_state'     => 'SENDED',
     'creator_merchant' => '1000000001',
-    'belong_merchant' => '1000000002',
-    'sender_merchant' => '1000000003',
-    'offset' => 0,
-    'limit' => 20,
+    'belong_merchant'  => '1000000002',
+    'sender_merchant'  => '1000000003',
+    'offset'           => 0,
+    'limit'            => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,14 +68,14 @@ $instance->chain('v3/marketing/busifavor/users/{openid}/coupons')->getAsync([
 $instance['v3/marketing/busifavor/users/{openid}/coupons']->getAsync([
   'openid' => '2323dfsdf342342',
   'query' => [
-    'appid' => 'wx233544546545989',
-    'stock_id' => '9865000',
-    'coupon_state' => 'SENDED',
+    'appid'            => 'wx233544546545989',
+    'stock_id'         => '9865000',
+    'coupon_state'     => 'SENDED',
     'creator_merchant' => '1000000001',
-    'belong_merchant' => '1000000002',
-    'sender_merchant' => '1000000003',
-    'offset' => 0,
-    'limit' => 20,
+    'belong_merchant'  => '1000000002',
+    'sender_merchant'  => '1000000003',
+    'offset'           => 0,
+    'limit'            => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -88,14 +88,14 @@ $instance['v3/marketing/busifavor/users/{openid}/coupons']->getAsync([
 $response = $instance->v3->marketing->busifavor->users->_openid_->coupons->get([
   'openid' => '2323dfsdf342342',
   'query' => [
-    'appid' => 'wx233544546545989',
-    'stock_id' => '9865000',
-    'coupon_state' => 'SENDED',
+    'appid'            => 'wx233544546545989',
+    'stock_id'         => '9865000',
+    'coupon_state'     => 'SENDED',
     'creator_merchant' => '1000000001',
-    'belong_merchant' => '1000000002',
-    'sender_merchant' => '1000000003',
-    'offset' => 0,
-    'limit' => 20,
+    'belong_merchant'  => '1000000002',
+    'sender_merchant'  => '1000000003',
+    'offset'           => 0,
+    'limit'            => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -105,14 +105,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/busifavor/users/{openid}/coupons')->get([
   'openid' => '2323dfsdf342342',
   'query' => [
-    'appid' => 'wx233544546545989',
-    'stock_id' => '9865000',
-    'coupon_state' => 'SENDED',
+    'appid'            => 'wx233544546545989',
+    'stock_id'         => '9865000',
+    'coupon_state'     => 'SENDED',
     'creator_merchant' => '1000000001',
-    'belong_merchant' => '1000000002',
-    'sender_merchant' => '1000000003',
-    'offset' => 0,
-    'limit' => 20,
+    'belong_merchant'  => '1000000002',
+    'sender_merchant'  => '1000000003',
+    'offset'           => 0,
+    'limit'            => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -122,14 +122,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/busifavor/users/{openid}/coupons']->get([
   'openid' => '2323dfsdf342342',
   'query' => [
-    'appid' => 'wx233544546545989',
-    'stock_id' => '9865000',
-    'coupon_state' => 'SENDED',
+    'appid'            => 'wx233544546545989',
+    'stock_id'         => '9865000',
+    'coupon_state'     => 'SENDED',
     'creator_merchant' => '1000000001',
-    'belong_merchant' => '1000000002',
-    'sender_merchant' => '1000000003',
-    'offset' => 0,
-    'limit' => 20,
+    'belong_merchant'  => '1000000002',
+    'sender_merchant'  => '1000000003',
+    'offset'           => 0,
+    'limit'            => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

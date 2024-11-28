@@ -23,8 +23,8 @@ description: 通过调用此接口可查询批次的可用商户号，判断券�
 $instance->v3->marketing->favor->stocks->_stock_id_->merchants->getAsync([
   'stock_id' => '',
   'query' => [
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
     'stock_creator_mchid' => '',
   ],
 ])
@@ -38,8 +38,8 @@ $instance->v3->marketing->favor->stocks->_stock_id_->merchants->getAsync([
 $instance->chain('v3/marketing/favor/stocks/{stock_id}/merchants')->getAsync([
   'stock_id' => '',
   'query' => [
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
     'stock_creator_mchid' => '',
   ],
 ])
@@ -53,8 +53,8 @@ $instance->chain('v3/marketing/favor/stocks/{stock_id}/merchants')->getAsync([
 $instance['v3/marketing/favor/stocks/{stock_id}/merchants']->getAsync([
   'stock_id' => '',
   'query' => [
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
     'stock_creator_mchid' => '',
   ],
 ])
@@ -68,8 +68,8 @@ $instance['v3/marketing/favor/stocks/{stock_id}/merchants']->getAsync([
 $response = $instance->v3->marketing->favor->stocks->_stock_id_->merchants->get([
   'stock_id' => '',
   'query' => [
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
     'stock_creator_mchid' => '',
   ],
 ]);
@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/favor/stocks/{stock_id}/merchants')->get([
   'stock_id' => '',
   'query' => [
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
     'stock_creator_mchid' => '',
   ],
 ]);
@@ -92,8 +92,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/favor/stocks/{stock_id}/merchants']->get([
   'stock_id' => '',
   'query' => [
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
     'stock_creator_mchid' => '',
   ],
 ]);

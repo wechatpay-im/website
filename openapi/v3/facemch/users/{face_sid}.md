@@ -25,10 +25,10 @@ description: 商户可以根据face_sid查询用户UnionId，调用该接口获�
 $instance->v3->facemch->users->_face_sid_->getAsync([
   'face_sid' => 'aabbccdd12345',
   'query' => [
-    'info_type' => 'ASK_UNIONID',
-    'appid' => 'wx2b029c08a6233333',
-    'sub_mchid' => '123456789',
-    'sub_appid' => 'wx2b029c08a6255555',
+    'info_type'     => 'ASK_UNIONID',
+    'appid'         => 'wx2b029c08a6233333',
+    'sub_mchid'     => '123456789',
+    'sub_appid'     => 'wx2b029c08a6255555',
     'sub_serial_no' => 'wx2b029c08a6255555',
   ],
 ])
@@ -42,10 +42,10 @@ $instance->v3->facemch->users->_face_sid_->getAsync([
 $instance->chain('v3/facemch/users/{face_sid}')->getAsync([
   'face_sid' => 'aabbccdd12345',
   'query' => [
-    'info_type' => 'ASK_UNIONID',
-    'appid' => 'wx2b029c08a6233333',
-    'sub_mchid' => '123456789',
-    'sub_appid' => 'wx2b029c08a6255555',
+    'info_type'     => 'ASK_UNIONID',
+    'appid'         => 'wx2b029c08a6233333',
+    'sub_mchid'     => '123456789',
+    'sub_appid'     => 'wx2b029c08a6255555',
     'sub_serial_no' => 'wx2b029c08a6255555',
   ],
 ])
@@ -59,10 +59,10 @@ $instance->chain('v3/facemch/users/{face_sid}')->getAsync([
 $instance['v3/facemch/users/{face_sid}']->getAsync([
   'face_sid' => 'aabbccdd12345',
   'query' => [
-    'info_type' => 'ASK_UNIONID',
-    'appid' => 'wx2b029c08a6233333',
-    'sub_mchid' => '123456789',
-    'sub_appid' => 'wx2b029c08a6255555',
+    'info_type'     => 'ASK_UNIONID',
+    'appid'         => 'wx2b029c08a6233333',
+    'sub_mchid'     => '123456789',
+    'sub_appid'     => 'wx2b029c08a6255555',
     'sub_serial_no' => 'wx2b029c08a6255555',
   ],
 ])
@@ -76,10 +76,10 @@ $instance['v3/facemch/users/{face_sid}']->getAsync([
 $response = $instance->v3->facemch->users->_face_sid_->get([
   'face_sid' => 'aabbccdd12345',
   'query' => [
-    'info_type' => 'ASK_UNIONID',
-    'appid' => 'wx2b029c08a6233333',
-    'sub_mchid' => '123456789',
-    'sub_appid' => 'wx2b029c08a6255555',
+    'info_type'     => 'ASK_UNIONID',
+    'appid'         => 'wx2b029c08a6233333',
+    'sub_mchid'     => '123456789',
+    'sub_appid'     => 'wx2b029c08a6255555',
     'sub_serial_no' => 'wx2b029c08a6255555',
   ],
 ]);
@@ -90,10 +90,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/facemch/users/{face_sid}')->get([
   'face_sid' => 'aabbccdd12345',
   'query' => [
-    'info_type' => 'ASK_UNIONID',
-    'appid' => 'wx2b029c08a6233333',
-    'sub_mchid' => '123456789',
-    'sub_appid' => 'wx2b029c08a6255555',
+    'info_type'     => 'ASK_UNIONID',
+    'appid'         => 'wx2b029c08a6233333',
+    'sub_mchid'     => '123456789',
+    'sub_appid'     => 'wx2b029c08a6255555',
     'sub_serial_no' => 'wx2b029c08a6255555',
   ],
 ]);
@@ -104,10 +104,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/facemch/users/{face_sid}']->get([
   'face_sid' => 'aabbccdd12345',
   'query' => [
-    'info_type' => 'ASK_UNIONID',
-    'appid' => 'wx2b029c08a6233333',
-    'sub_mchid' => '123456789',
-    'sub_appid' => 'wx2b029c08a6255555',
+    'info_type'     => 'ASK_UNIONID',
+    'appid'         => 'wx2b029c08a6233333',
+    'sub_mchid'     => '123456789',
+    'sub_appid'     => 'wx2b029c08a6255555',
     'sub_serial_no' => 'wx2b029c08a6255555',
   ],
 ]);

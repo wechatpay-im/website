@@ -22,8 +22,8 @@ description: 查询商户在微信支付商户平台中配置的电子发票税�
 $instance->v3->newTaxControlFapiao->merchant->taxCodes->getAsync([
   'query' => [
     'sub_mchid' => '1900000109',
-    'offset' => 0,
-    'limit' => 5,
+    'offset'    => 0,
+    'limit'     => 5,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -36,8 +36,8 @@ $instance->v3->newTaxControlFapiao->merchant->taxCodes->getAsync([
 $instance->chain('v3/new-tax-control-fapiao/merchant/tax-codes')->getAsync([
   'query' => [
     'sub_mchid' => '1900000109',
-    'offset' => 0,
-    'limit' => 5,
+    'offset'    => 0,
+    'limit'     => 5,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,8 +50,8 @@ $instance->chain('v3/new-tax-control-fapiao/merchant/tax-codes')->getAsync([
 $instance['v3/new-tax-control-fapiao/merchant/tax-codes']->getAsync([
   'query' => [
     'sub_mchid' => '1900000109',
-    'offset' => 0,
-    'limit' => 5,
+    'offset'    => 0,
+    'limit'     => 5,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,8 +64,8 @@ $instance['v3/new-tax-control-fapiao/merchant/tax-codes']->getAsync([
 $response = $instance->v3->newTaxControlFapiao->merchant->taxCodes->get([
   'query' => [
     'sub_mchid' => '1900000109',
-    'offset' => 0,
-    'limit' => 5,
+    'offset'    => 0,
+    'limit'     => 5,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -75,8 +75,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/new-tax-control-fapiao/merchant/tax-codes')->get([
   'query' => [
     'sub_mchid' => '1900000109',
-    'offset' => 0,
-    'limit' => 5,
+    'offset'    => 0,
+    'limit'     => 5,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -86,8 +86,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/new-tax-control-fapiao/merchant/tax-codes']->get([
   'query' => [
     'sub_mchid' => '1900000109',
-    'offset' => 0,
-    'limit' => 5,
+    'offset'    => 0,
+    'limit'     => 5,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

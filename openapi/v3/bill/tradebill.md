@@ -25,7 +25,7 @@ $instance->v3->bill->tradebill->getAsync([
     'bill_date' => '2019-06-11',
     'sub_mchid' => '19000000001',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,7 +40,7 @@ $instance->chain('v3/bill/tradebill')->getAsync([
     'bill_date' => '2019-06-11',
     'sub_mchid' => '19000000001',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,7 +55,7 @@ $instance['v3/bill/tradebill']->getAsync([
     'bill_date' => '2019-06-11',
     'sub_mchid' => '19000000001',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,7 +70,7 @@ $response = $instance->v3->bill->tradebill->get([
     'bill_date' => '2019-06-11',
     'sub_mchid' => '19000000001',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -82,7 +82,7 @@ $response = $instance->chain('v3/bill/tradebill')->get([
     'bill_date' => '2019-06-11',
     'sub_mchid' => '19000000001',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,7 +94,7 @@ $response = $instance['v3/bill/tradebill']->get([
     'bill_date' => '2019-06-11',
     'sub_mchid' => '19000000001',
     'bill_type' => 'ALL',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

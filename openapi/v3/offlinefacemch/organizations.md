@@ -20,7 +20,7 @@ description: 根据机构ID或者机构名称，查询入驻的机构信息
 ```php [异步纯链式]
 $instance->v3->offlinefacemch->organizations->getAsync([
   'query' => [
-    'organization_id' => 'DBES323aeb',
+    'organization_id'   => 'DBES323aeb',
     'organization_name' => '南山中兴小学部',
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->offlinefacemch->organizations->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/offlinefacemch/organizations')->getAsync([
   'query' => [
-    'organization_id' => 'DBES323aeb',
+    'organization_id'   => 'DBES323aeb',
     'organization_name' => '南山中兴小学部',
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v3/offlinefacemch/organizations')->getAsync([
 ```php [异步属性式]
 $instance['v3/offlinefacemch/organizations']->getAsync([
   'query' => [
-    'organization_id' => 'DBES323aeb',
+    'organization_id'   => 'DBES323aeb',
     'organization_name' => '南山中兴小学部',
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/offlinefacemch/organizations']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->offlinefacemch->organizations->get([
   'query' => [
-    'organization_id' => 'DBES323aeb',
+    'organization_id'   => 'DBES323aeb',
     'organization_name' => '南山中兴小学部',
   ],
 ]);
@@ -69,7 +69,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/offlinefacemch/organizations')->get([
   'query' => [
-    'organization_id' => 'DBES323aeb',
+    'organization_id'   => 'DBES323aeb',
     'organization_name' => '南山中兴小学部',
   ],
 ]);
@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/offlinefacemch/organizations']->get([
   'query' => [
-    'organization_id' => 'DBES323aeb',
+    'organization_id'   => 'DBES323aeb',
     'organization_name' => '南山中兴小学部',
   ],
 ]);

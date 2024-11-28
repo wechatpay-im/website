@@ -23,11 +23,11 @@ description: 商户根据一定过滤条件，查询已创建的支付有礼活�
 ```php [异步纯链式]
 $instance->v3->marketing->paygiftactivity->activities->getAsync([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
-    'activity_name' => '',
+    'offset'          => 0,
+    'limit'           => 0,
+    'activity_name'   => '',
     'activity_status' => 'CREATE_ACT_STATUS',
-    'award_type' => 'BUSIFAVOR',
+    'award_type'      => 'BUSIFAVOR',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v3->marketing->paygiftactivity->activities->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/paygiftactivity/activities')->getAsync([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
-    'activity_name' => '',
+    'offset'          => 0,
+    'limit'           => 0,
+    'activity_name'   => '',
     'activity_status' => 'CREATE_ACT_STATUS',
-    'award_type' => 'BUSIFAVOR',
+    'award_type'      => 'BUSIFAVOR',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v3/marketing/paygiftactivity/activities')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/paygiftactivity/activities']->getAsync([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
-    'activity_name' => '',
+    'offset'          => 0,
+    'limit'           => 0,
+    'activity_name'   => '',
     'activity_status' => 'CREATE_ACT_STATUS',
-    'award_type' => 'BUSIFAVOR',
+    'award_type'      => 'BUSIFAVOR',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v3/marketing/paygiftactivity/activities']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->paygiftactivity->activities->get([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
-    'activity_name' => '',
+    'offset'          => 0,
+    'limit'           => 0,
+    'activity_name'   => '',
     'activity_status' => 'CREATE_ACT_STATUS',
-    'award_type' => 'BUSIFAVOR',
+    'award_type'      => 'BUSIFAVOR',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,11 +84,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/paygiftactivity/activities')->get([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
-    'activity_name' => '',
+    'offset'          => 0,
+    'limit'           => 0,
+    'activity_name'   => '',
     'activity_status' => 'CREATE_ACT_STATUS',
-    'award_type' => 'BUSIFAVOR',
+    'award_type'      => 'BUSIFAVOR',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/paygiftactivity/activities']->get([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
-    'activity_name' => '',
+    'offset'          => 0,
+    'limit'           => 0,
+    'activity_name'   => '',
     'activity_status' => 'CREATE_ACT_STATUS',
-    'award_type' => 'BUSIFAVOR',
+    'award_type'      => 'BUSIFAVOR',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

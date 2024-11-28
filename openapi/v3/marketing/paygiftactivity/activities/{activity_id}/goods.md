@@ -23,7 +23,7 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->goods->get
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/goods')-
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}/goods']->getAsy
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}/goo
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

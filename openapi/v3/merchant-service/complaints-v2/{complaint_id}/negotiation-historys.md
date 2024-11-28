@@ -22,7 +22,7 @@ description: 商户可通过调用此接口，查询指定投诉的用户商户�
 $instance->v3->merchantService->complaintsV2->_complaint_id_->negotiationHistorys->getAsync([
   'complaint_id' => '200201820200101080076610000',
   'query' => [
-    'limit' => 50,
+    'limit'  => 50,
     'offset' => 10,
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->negotiationHistory
 $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys')->getAsync([
   'complaint_id' => '200201820200101080076610000',
   'query' => [
-    'limit' => 50,
+    'limit'  => 50,
     'offset' => 10,
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/negotiation-h
 $instance['v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys']->getAsync([
   'complaint_id' => '200201820200101080076610000',
   'query' => [
-    'limit' => 50,
+    'limit'  => 50,
     'offset' => 10,
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys
 $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->negotiationHistorys->get([
   'complaint_id' => '200201820200101080076610000',
   'query' => [
-    'limit' => 50,
+    'limit'  => 50,
     'offset' => 10,
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys')->get([
   'complaint_id' => '200201820200101080076610000',
   'query' => [
-    'limit' => 50,
+    'limit'  => 50,
     'offset' => 10,
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys']->get([
   'complaint_id' => '200201820200101080076610000',
   'query' => [
-    'limit' => 50,
+    'limit'  => 50,
     'offset' => 10,
   ],
 ]);

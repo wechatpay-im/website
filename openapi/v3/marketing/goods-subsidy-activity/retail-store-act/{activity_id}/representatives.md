@@ -23,7 +23,7 @@ $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_activity_id_->r
   'activity_id' => '3118550000000004',
   'query' => [
     'offset' => 0,
-    'limit' => 10,
+    'limit'  => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-act/{activity
   'activity_id' => '3118550000000004',
   'query' => [
     'offset' => 0,
-    'limit' => 10,
+    'limit'  => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{activity_id}/re
   'activity_id' => '3118550000000004',
   'query' => [
     'offset' => 0,
-    'limit' => 10,
+    'limit'  => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_act
   'activity_id' => '3118550000000004',
   'query' => [
     'offset' => 0,
-    'limit' => 10,
+    'limit'  => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-a
   'activity_id' => '3118550000000004',
   'query' => [
     'offset' => 0,
-    'limit' => 10,
+    'limit'  => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{act
   'activity_id' => '3118550000000004',
   'query' => [
     'offset' => 0,
-    'limit' => 10,
+    'limit'  => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

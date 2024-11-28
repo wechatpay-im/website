@@ -24,7 +24,7 @@ $instance->v3->global->profitSharing->orders->_out_order_no_->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ])
@@ -39,7 +39,7 @@ $instance->chain('v3/global/profit-sharing/orders/{out_order_no}')->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/global/profit-sharing/orders/{out_order_no}']->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ])
@@ -69,7 +69,7 @@ $response = $instance->v3->global->profitSharing->orders->_out_order_no_->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ]);
@@ -81,7 +81,7 @@ $response = $instance->chain('v3/global/profit-sharing/orders/{out_order_no}')->
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ]);
@@ -93,7 +93,7 @@ $response = $instance['v3/global/profit-sharing/orders/{out_order_no}']->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ]);

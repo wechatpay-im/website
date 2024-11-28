@@ -22,10 +22,10 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 ```php [异步纯链式]
 $instance->v3->bill->fundflowbill->getAsync([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'sub_mchid' => '',
+    'bill_date'    => '2019-06-11',
+    'sub_mchid'    => '',
     'account_type' => 'BASIC',
-    'tar_type' => 'GZIP',
+    'tar_type'     => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +37,10 @@ $instance->v3->bill->fundflowbill->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/bill/fundflowbill')->getAsync([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'sub_mchid' => '',
+    'bill_date'    => '2019-06-11',
+    'sub_mchid'    => '',
     'account_type' => 'BASIC',
-    'tar_type' => 'GZIP',
+    'tar_type'     => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +52,10 @@ $instance->chain('v3/bill/fundflowbill')->getAsync([
 ```php [异步属性式]
 $instance['v3/bill/fundflowbill']->getAsync([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'sub_mchid' => '',
+    'bill_date'    => '2019-06-11',
+    'sub_mchid'    => '',
     'account_type' => 'BASIC',
-    'tar_type' => 'GZIP',
+    'tar_type'     => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +67,10 @@ $instance['v3/bill/fundflowbill']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->bill->fundflowbill->get([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'sub_mchid' => '',
+    'bill_date'    => '2019-06-11',
+    'sub_mchid'    => '',
     'account_type' => 'BASIC',
-    'tar_type' => 'GZIP',
+    'tar_type'     => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -79,10 +79,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/bill/fundflowbill')->get([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'sub_mchid' => '',
+    'bill_date'    => '2019-06-11',
+    'sub_mchid'    => '',
     'account_type' => 'BASIC',
-    'tar_type' => 'GZIP',
+    'tar_type'     => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -91,10 +91,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/bill/fundflowbill']->get([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'sub_mchid' => '',
+    'bill_date'    => '2019-06-11',
+    'sub_mchid'    => '',
     'account_type' => 'BASIC',
-    'tar_type' => 'GZIP',
+    'tar_type'     => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

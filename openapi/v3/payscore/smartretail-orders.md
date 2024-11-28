@@ -257,10 +257,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->payscore->smartretailOrders->getAsync([
   'query' => [
-    'service_id' => '',
+    'service_id'   => '',
     'out_order_no' => '',
-    'query_id' => '',
-    'appid' => '',
+    'query_id'     => '',
+    'appid'        => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -272,10 +272,10 @@ $instance->v3->payscore->smartretailOrders->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/smartretail-orders')->getAsync([
   'query' => [
-    'service_id' => '',
+    'service_id'   => '',
     'out_order_no' => '',
-    'query_id' => '',
-    'appid' => '',
+    'query_id'     => '',
+    'appid'        => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -287,10 +287,10 @@ $instance->chain('v3/payscore/smartretail-orders')->getAsync([
 ```php [异步属性式]
 $instance['v3/payscore/smartretail-orders']->getAsync([
   'query' => [
-    'service_id' => '',
+    'service_id'   => '',
     'out_order_no' => '',
-    'query_id' => '',
-    'appid' => '',
+    'query_id'     => '',
+    'appid'        => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -302,10 +302,10 @@ $instance['v3/payscore/smartretail-orders']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->smartretailOrders->get([
   'query' => [
-    'service_id' => '',
+    'service_id'   => '',
     'out_order_no' => '',
-    'query_id' => '',
-    'appid' => '',
+    'query_id'     => '',
+    'appid'        => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -314,10 +314,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/smartretail-orders')->get([
   'query' => [
-    'service_id' => '',
+    'service_id'   => '',
     'out_order_no' => '',
-    'query_id' => '',
-    'appid' => '',
+    'query_id'     => '',
+    'appid'        => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -326,10 +326,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/smartretail-orders']->get([
   'query' => [
-    'service_id' => '',
+    'service_id'   => '',
     'out_order_no' => '',
-    'query_id' => '',
-    'appid' => '',
+    'query_id'     => '',
+    'appid'        => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

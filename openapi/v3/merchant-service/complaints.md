@@ -29,11 +29,11 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 ```php [异步纯链式]
 $instance->v3->merchantService->complaints->getAsync([
   'query' => [
-    'limit' => 0,
-    'offset' => 0,
+    'limit'      => 0,
+    'offset'     => 0,
     'begin_date' => '',
-    'end_date' => '',
-    'sub_mchid' => '',
+    'end_date'   => '',
+    'sub_mchid'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,11 +45,11 @@ $instance->v3->merchantService->complaints->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchant-service/complaints')->getAsync([
   'query' => [
-    'limit' => 0,
-    'offset' => 0,
+    'limit'      => 0,
+    'offset'     => 0,
     'begin_date' => '',
-    'end_date' => '',
-    'sub_mchid' => '',
+    'end_date'   => '',
+    'sub_mchid'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,11 +61,11 @@ $instance->chain('v3/merchant-service/complaints')->getAsync([
 ```php [异步属性式]
 $instance['v3/merchant-service/complaints']->getAsync([
   'query' => [
-    'limit' => 0,
-    'offset' => 0,
+    'limit'      => 0,
+    'offset'     => 0,
     'begin_date' => '',
-    'end_date' => '',
-    'sub_mchid' => '',
+    'end_date'   => '',
+    'sub_mchid'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -77,11 +77,11 @@ $instance['v3/merchant-service/complaints']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantService->complaints->get([
   'query' => [
-    'limit' => 0,
-    'offset' => 0,
+    'limit'      => 0,
+    'offset'     => 0,
     'begin_date' => '',
-    'end_date' => '',
-    'sub_mchid' => '',
+    'end_date'   => '',
+    'sub_mchid'  => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/merchant-service/complaints')->get([
   'query' => [
-    'limit' => 0,
-    'offset' => 0,
+    'limit'      => 0,
+    'offset'     => 0,
     'begin_date' => '',
-    'end_date' => '',
-    'sub_mchid' => '',
+    'end_date'   => '',
+    'sub_mchid'  => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/merchant-service/complaints']->get([
   'query' => [
-    'limit' => 0,
-    'offset' => 0,
+    'limit'      => 0,
+    'offset'     => 0,
     'begin_date' => '',
-    'end_date' => '',
-    'sub_mchid' => '',
+    'end_date'   => '',
+    'sub_mchid'  => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -22,10 +22,10 @@ description: 商户可以调用此接口获取对账单文件的下载链接，�
 ```php [异步纯链式]
 $instance->v3->payscore->merchantBill->getAsync([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'bill_date'            => '2019-06-11',
+    'tar_type'             => 'GZIP',
     'encryption_algorithm' => 'AEAD_AES_256_GCM',
-    'service_id' => '2002000000000558128851361561536',
+    'service_id'           => '2002000000000558128851361561536',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +37,10 @@ $instance->v3->payscore->merchantBill->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/merchant-bill')->getAsync([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'bill_date'            => '2019-06-11',
+    'tar_type'             => 'GZIP',
     'encryption_algorithm' => 'AEAD_AES_256_GCM',
-    'service_id' => '2002000000000558128851361561536',
+    'service_id'           => '2002000000000558128851361561536',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +52,10 @@ $instance->chain('v3/payscore/merchant-bill')->getAsync([
 ```php [异步属性式]
 $instance['v3/payscore/merchant-bill']->getAsync([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'bill_date'            => '2019-06-11',
+    'tar_type'             => 'GZIP',
     'encryption_algorithm' => 'AEAD_AES_256_GCM',
-    'service_id' => '2002000000000558128851361561536',
+    'service_id'           => '2002000000000558128851361561536',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +67,10 @@ $instance['v3/payscore/merchant-bill']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->merchantBill->get([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'bill_date'            => '2019-06-11',
+    'tar_type'             => 'GZIP',
     'encryption_algorithm' => 'AEAD_AES_256_GCM',
-    'service_id' => '2002000000000558128851361561536',
+    'service_id'           => '2002000000000558128851361561536',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -79,10 +79,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/merchant-bill')->get([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'bill_date'            => '2019-06-11',
+    'tar_type'             => 'GZIP',
     'encryption_algorithm' => 'AEAD_AES_256_GCM',
-    'service_id' => '2002000000000558128851361561536',
+    'service_id'           => '2002000000000558128851361561536',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -91,10 +91,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/merchant-bill']->get([
   'query' => [
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'bill_date'            => '2019-06-11',
+    'tar_type'             => 'GZIP',
     'encryption_algorithm' => 'AEAD_AES_256_GCM',
-    'service_id' => '2002000000000558128851361561536',
+    'service_id'           => '2002000000000558128851361561536',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

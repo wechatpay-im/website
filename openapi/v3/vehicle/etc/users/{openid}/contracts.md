@@ -23,8 +23,8 @@ description: 通过用户标识、ETC扣费授权协议号查询ETC绑定信息�
 $instance->v3->vehicle->etc->users->_openid_->contracts->getAsync([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
-    'plan_id' => '123',
+    'sub_mchid'    => '1900000109',
+    'plan_id'      => '123',
     'plate_number' => '浙ASB945',
   ],
 ])
@@ -38,8 +38,8 @@ $instance->v3->vehicle->etc->users->_openid_->contracts->getAsync([
 $instance->chain('v3/vehicle/etc/users/{openid}/contracts')->getAsync([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
-    'plan_id' => '123',
+    'sub_mchid'    => '1900000109',
+    'plan_id'      => '123',
     'plate_number' => '浙ASB945',
   ],
 ])
@@ -53,8 +53,8 @@ $instance->chain('v3/vehicle/etc/users/{openid}/contracts')->getAsync([
 $instance['v3/vehicle/etc/users/{openid}/contracts']->getAsync([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
-    'plan_id' => '123',
+    'sub_mchid'    => '1900000109',
+    'plan_id'      => '123',
     'plate_number' => '浙ASB945',
   ],
 ])
@@ -68,8 +68,8 @@ $instance['v3/vehicle/etc/users/{openid}/contracts']->getAsync([
 $response = $instance->v3->vehicle->etc->users->_openid_->contracts->get([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
-    'plan_id' => '123',
+    'sub_mchid'    => '1900000109',
+    'plan_id'      => '123',
     'plate_number' => '浙ASB945',
   ],
 ]);
@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/vehicle/etc/users/{openid}/contracts')->get([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
-    'plan_id' => '123',
+    'sub_mchid'    => '1900000109',
+    'plan_id'      => '123',
     'plate_number' => '浙ASB945',
   ],
 ]);
@@ -92,8 +92,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/vehicle/etc/users/{openid}/contracts']->get([
   'openid' => 'onqOjjmM1tad-3ROpncN-yUfa6ua',
   'query' => [
-    'sub_mchid' => '1900000109',
-    'plan_id' => '123',
+    'sub_mchid'    => '1900000109',
+    'plan_id'      => '123',
     'plate_number' => '浙ASB945',
   ],
 ]);

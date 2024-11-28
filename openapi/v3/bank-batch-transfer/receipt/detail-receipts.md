@@ -114,7 +114,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->bankBatchTransfer->receipt->detailReceipts->getAsync([
   'query' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -127,7 +127,7 @@ $instance->v3->bankBatchTransfer->receipt->detailReceipts->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/bank-batch-transfer/receipt/detail-receipts')->getAsync([
   'query' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -140,7 +140,7 @@ $instance->chain('v3/bank-batch-transfer/receipt/detail-receipts')->getAsync([
 ```php [异步属性式]
 $instance['v3/bank-batch-transfer/receipt/detail-receipts']->getAsync([
   'query' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -153,7 +153,7 @@ $instance['v3/bank-batch-transfer/receipt/detail-receipts']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->bankBatchTransfer->receipt->detailReceipts->get([
   'query' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -163,7 +163,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/bank-batch-transfer/receipt/detail-receipts')->get([
   'query' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -173,7 +173,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/bank-batch-transfer/receipt/detail-receipts']->get([
   'query' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);

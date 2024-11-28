@@ -25,11 +25,11 @@ description: 微信商家转账批次单号查单接口。商户可以通过该�
 $instance->v3->platsolution->mchTransfer->batches->batchId->_batch_id_->getAsync([
   'batch_id' => '131000011085109987515042023022300246500006',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'detail_state' => 'FAIL',
-    'offset' => 0,
-    'limit' => 20,
+    'detail_state'      => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,11 +42,11 @@ $instance->v3->platsolution->mchTransfer->batches->batchId->_batch_id_->getAsync
 $instance->chain('v3/platsolution/mch-transfer/batches/batch-id/{batch_id}')->getAsync([
   'batch_id' => '131000011085109987515042023022300246500006',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'detail_state' => 'FAIL',
-    'offset' => 0,
-    'limit' => 20,
+    'detail_state'      => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,11 +59,11 @@ $instance->chain('v3/platsolution/mch-transfer/batches/batch-id/{batch_id}')->ge
 $instance['v3/platsolution/mch-transfer/batches/batch-id/{batch_id}']->getAsync([
   'batch_id' => '131000011085109987515042023022300246500006',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'detail_state' => 'FAIL',
-    'offset' => 0,
-    'limit' => 20,
+    'detail_state'      => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,11 +76,11 @@ $instance['v3/platsolution/mch-transfer/batches/batch-id/{batch_id}']->getAsync(
 $response = $instance->v3->platsolution->mchTransfer->batches->batchId->_batch_id_->get([
   'batch_id' => '131000011085109987515042023022300246500006',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'detail_state' => 'FAIL',
-    'offset' => 0,
-    'limit' => 20,
+    'detail_state'      => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/platsolution/mch-transfer/batches/batch-id/{batch_id}')->get([
   'batch_id' => '131000011085109987515042023022300246500006',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'detail_state' => 'FAIL',
-    'offset' => 0,
-    'limit' => 20,
+    'detail_state'      => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,11 +104,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/platsolution/mch-transfer/batches/batch-id/{batch_id}']->get([
   'batch_id' => '131000011085109987515042023022300246500006',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'detail_state' => 'FAIL',
-    'offset' => 0,
-    'limit' => 20,
+    'detail_state'      => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

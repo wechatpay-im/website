@@ -21,7 +21,7 @@ description: 查询个人收款方授权结果，以下情况需要调用：1. �
 ```php [异步纯链式]
 $instance->v3->ecommerce->individualContracts->_openid_->getAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-  'query'  => [
+  'query' => [
     'appid'           => 'wxd678efh567h23787',
     'permission_type' => 'INDIVIDUAL_PAYEE',
   ],
@@ -35,7 +35,7 @@ $instance->v3->ecommerce->individualContracts->_openid_->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/individual-contracts/{openid}')->getAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-  'query'  => [
+  'query' => [
     'appid'           => 'wxd678efh567h23787',
     'permission_type' => 'INDIVIDUAL_PAYEE',
   ],
@@ -49,7 +49,7 @@ $instance->chain('v3/ecommerce/individual-contracts/{openid}')->getAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/individual-contracts/{openid}']->getAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-  'query'  => [
+  'query' => [
     'appid'           => 'wxd678efh567h23787',
     'permission_type' => 'INDIVIDUAL_PAYEE',
   ],
@@ -63,7 +63,7 @@ $instance['v3/ecommerce/individual-contracts/{openid}']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->individualContracts->_openid_->get([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-  'query'  => [
+  'query' => [
     'appid'           => 'wxd678efh567h23787',
     'permission_type' => 'INDIVIDUAL_PAYEE',
   ],
@@ -74,7 +74,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/individual-contracts/{openid}')->get([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-  'query'  => [
+  'query' => [
     'appid'           => 'wxd678efh567h23787',
     'permission_type' => 'INDIVIDUAL_PAYEE',
   ],
@@ -85,7 +85,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/individual-contracts/{openid}']->get([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-  'query'  => [
+  'query' => [
     'appid'           => 'wxd678efh567h23787',
     'permission_type' => 'INDIVIDUAL_PAYEE',
   ],

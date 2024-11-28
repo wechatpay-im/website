@@ -20,7 +20,7 @@ description: 商户可以通过该接口分页拉取到自己拥有的设备的�
 ```php [异步纯链式]
 $instance->v3->iotmanage->devices->getAsync([
   'query' => [
-    'limit' => 5,
+    'limit'  => 5,
     'offset' => 10,
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->iotmanage->devices->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/iotmanage/devices')->getAsync([
   'query' => [
-    'limit' => 5,
+    'limit'  => 5,
     'offset' => 10,
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v3/iotmanage/devices')->getAsync([
 ```php [异步属性式]
 $instance['v3/iotmanage/devices']->getAsync([
   'query' => [
-    'limit' => 5,
+    'limit'  => 5,
     'offset' => 10,
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/iotmanage/devices']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->iotmanage->devices->get([
   'query' => [
-    'limit' => 5,
+    'limit'  => 5,
     'offset' => 10,
   ],
 ]);
@@ -69,7 +69,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/iotmanage/devices')->get([
   'query' => [
-    'limit' => 5,
+    'limit'  => 5,
     'offset' => 10,
   ],
 ]);
@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/iotmanage/devices']->get([
   'query' => [
-    'limit' => 5,
+    'limit'  => 5,
     'offset' => 10,
   ],
 ]);

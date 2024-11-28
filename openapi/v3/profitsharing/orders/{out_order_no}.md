@@ -22,7 +22,7 @@ description: 发起分账请求后，可调用此接口查询分账结果
 $instance->v3->profitsharing->orders->_out_order_no_->getAsync([
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->profitsharing->orders->_out_order_no_->getAsync([
 $instance->chain('v3/profitsharing/orders/{out_order_no}')->getAsync([
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/profitsharing/orders/{out_order_no}')->getAsync([
 $instance['v3/profitsharing/orders/{out_order_no}']->getAsync([
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/profitsharing/orders/{out_order_no}']->getAsync([
 $response = $instance->v3->profitsharing->orders->_out_order_no_->get([
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/profitsharing/orders/{out_order_no}')->get([
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/profitsharing/orders/{out_order_no}']->get([
   'out_order_no' => 'P20150806125346',
   'query' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
   ],
 ]);

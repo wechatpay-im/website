@@ -24,8 +24,8 @@ $instance->v3->marketing->favor->stocks->_stock_id_->items->getAsync([
   'stock_id' => '',
   'query' => [
     'stock_creator_mchid' => '',
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/marketing/favor/stocks/{stock_id}/items')->getAsync([
   'stock_id' => '',
   'query' => [
     'stock_creator_mchid' => '',
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +54,8 @@ $instance['v3/marketing/favor/stocks/{stock_id}/items']->getAsync([
   'stock_id' => '',
   'query' => [
     'stock_creator_mchid' => '',
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,8 +69,8 @@ $response = $instance->v3->marketing->favor->stocks->_stock_id_->items->get([
   'stock_id' => '',
   'query' => [
     'stock_creator_mchid' => '',
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -81,8 +81,8 @@ $response = $instance->chain('v3/marketing/favor/stocks/{stock_id}/items')->get(
   'stock_id' => '',
   'query' => [
     'stock_creator_mchid' => '',
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -93,8 +93,8 @@ $response = $instance['v3/marketing/favor/stocks/{stock_id}/items']->get([
   'stock_id' => '',
   'query' => [
     'stock_creator_mchid' => '',
-    'offset' => 0,
-    'limit' => '',
+    'offset'              => 0,
+    'limit'               => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -154,9 +154,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->returnorders->getAsync([
   'query' => [
-    'sub_mchid' => '',
-    'order_id' => '',
-    'out_order_no' => '',
+    'sub_mchid'     => '',
+    'order_id'      => '',
+    'out_order_no'  => '',
     'out_return_no' => '',
   ],
 ])
@@ -169,9 +169,9 @@ $instance->v3->ecommerce->profitsharing->returnorders->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/returnorders')->getAsync([
   'query' => [
-    'sub_mchid' => '',
-    'order_id' => '',
-    'out_order_no' => '',
+    'sub_mchid'     => '',
+    'order_id'      => '',
+    'out_order_no'  => '',
     'out_return_no' => '',
   ],
 ])
@@ -184,9 +184,9 @@ $instance->chain('v3/ecommerce/profitsharing/returnorders')->getAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/returnorders']->getAsync([
   'query' => [
-    'sub_mchid' => '',
-    'order_id' => '',
-    'out_order_no' => '',
+    'sub_mchid'     => '',
+    'order_id'      => '',
+    'out_order_no'  => '',
     'out_return_no' => '',
   ],
 ])
@@ -199,9 +199,9 @@ $instance['v3/ecommerce/profitsharing/returnorders']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->returnorders->get([
   'query' => [
-    'sub_mchid' => '',
-    'order_id' => '',
-    'out_order_no' => '',
+    'sub_mchid'     => '',
+    'order_id'      => '',
+    'out_order_no'  => '',
     'out_return_no' => '',
   ],
 ]);
@@ -211,9 +211,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/returnorders')->get([
   'query' => [
-    'sub_mchid' => '',
-    'order_id' => '',
-    'out_order_no' => '',
+    'sub_mchid'     => '',
+    'order_id'      => '',
+    'out_order_no'  => '',
     'out_return_no' => '',
   ],
 ]);
@@ -223,9 +223,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/returnorders']->get([
   'query' => [
-    'sub_mchid' => '',
-    'order_id' => '',
-    'out_order_no' => '',
+    'sub_mchid'     => '',
+    'order_id'      => '',
+    'out_order_no'  => '',
     'out_return_no' => '',
   ],
 ]);

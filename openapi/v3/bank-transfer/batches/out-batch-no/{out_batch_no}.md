@@ -23,11 +23,11 @@ description: 批次单号查单接口。转账处理后延迟一段时间（异�
 ```php [异步纯链式]
 $instance->v3->bankTransfer->batches->outBatchNo->_out_batch_no_->getAsync([
   'query' => [
-    'out_batch_no' => 'plfk2020042013',
+    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v3->bankTransfer->batches->outBatchNo->_out_batch_no_->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/bank-transfer/batches/out-batch-no/{out_batch_no}')->getAsync([
   'query' => [
-    'out_batch_no' => 'plfk2020042013',
+    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v3/bank-transfer/batches/out-batch-no/{out_batch_no}')->getAsy
 ```php [异步属性式]
 $instance['v3/bank-transfer/batches/out-batch-no/{out_batch_no}']->getAsync([
   'query' => [
-    'out_batch_no' => 'plfk2020042013',
+    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'FAIL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v3/bank-transfer/batches/out-batch-no/{out_batch_no}']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->bankTransfer->batches->outBatchNo->_out_batch_no_->get([
   'query' => [
-    'out_batch_no' => 'plfk2020042013',
+    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,11 +84,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/bank-transfer/batches/out-batch-no/{out_batch_no}')->get([
   'query' => [
-    'out_batch_no' => 'plfk2020042013',
+    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/bank-transfer/batches/out-batch-no/{out_batch_no}']->get([
   'query' => [
-    'out_batch_no' => 'plfk2020042013',
+    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'FAIL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'FAIL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

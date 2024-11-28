@@ -23,8 +23,8 @@ description:
 $instance->v3->offlineface->transactions->outTradeNo->_out_trade_no_->getAsync([
   'out_trade_no' => '1217752501201407033233368018',
   'query' => [
-    'sp_mchid' => '198798777',
-    'sub_mchid' => '3233122121',
+    'sp_mchid'            => '198798777',
+    'sub_mchid'           => '3233122121',
     'business_product_id' => '2',
   ],
 ])
@@ -38,8 +38,8 @@ $instance->v3->offlineface->transactions->outTradeNo->_out_trade_no_->getAsync([
 $instance->chain('v3/offlineface/transactions/out-trade-no/{out_trade_no}')->getAsync([
   'out_trade_no' => '1217752501201407033233368018',
   'query' => [
-    'sp_mchid' => '198798777',
-    'sub_mchid' => '3233122121',
+    'sp_mchid'            => '198798777',
+    'sub_mchid'           => '3233122121',
     'business_product_id' => '2',
   ],
 ])
@@ -53,8 +53,8 @@ $instance->chain('v3/offlineface/transactions/out-trade-no/{out_trade_no}')->get
 $instance['v3/offlineface/transactions/out-trade-no/{out_trade_no}']->getAsync([
   'out_trade_no' => '1217752501201407033233368018',
   'query' => [
-    'sp_mchid' => '198798777',
-    'sub_mchid' => '3233122121',
+    'sp_mchid'            => '198798777',
+    'sub_mchid'           => '3233122121',
     'business_product_id' => '2',
   ],
 ])
@@ -68,8 +68,8 @@ $instance['v3/offlineface/transactions/out-trade-no/{out_trade_no}']->getAsync([
 $response = $instance->v3->offlineface->transactions->outTradeNo->_out_trade_no_->get([
   'out_trade_no' => '1217752501201407033233368018',
   'query' => [
-    'sp_mchid' => '198798777',
-    'sub_mchid' => '3233122121',
+    'sp_mchid'            => '198798777',
+    'sub_mchid'           => '3233122121',
     'business_product_id' => '2',
   ],
 ]);
@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/offlineface/transactions/out-trade-no/{out_trade_no}')->get([
   'out_trade_no' => '1217752501201407033233368018',
   'query' => [
-    'sp_mchid' => '198798777',
-    'sub_mchid' => '3233122121',
+    'sp_mchid'            => '198798777',
+    'sub_mchid'           => '3233122121',
     'business_product_id' => '2',
   ],
 ]);
@@ -92,8 +92,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/offlineface/transactions/out-trade-no/{out_trade_no}']->get([
   'out_trade_no' => '1217752501201407033233368018',
   'query' => [
-    'sp_mchid' => '198798777',
-    'sub_mchid' => '3233122121',
+    'sp_mchid'            => '198798777',
+    'sub_mchid'           => '3233122121',
     'business_product_id' => '2',
   ],
 ]);

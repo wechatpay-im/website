@@ -23,10 +23,10 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 ```php [异步纯链式]
 $instance->v3->bill->subMerchantFundflowbill->getAsync([
   'query' => [
-    'sub_mchid' => '19000000001',
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
-    'algorithm' => 'AEAD_AES_256_GCM',
+    'sub_mchid'    => '19000000001',
+    'bill_date'    => '2019-06-11',
+    'tar_type'     => 'GZIP',
+    'algorithm'    => 'AEAD_AES_256_GCM',
     'account_type' => 'BASIC',
   ],
 ])
@@ -39,10 +39,10 @@ $instance->v3->bill->subMerchantFundflowbill->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/bill/sub-merchant-fundflowbill')->getAsync([
   'query' => [
-    'sub_mchid' => '19000000001',
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
-    'algorithm' => 'AEAD_AES_256_GCM',
+    'sub_mchid'    => '19000000001',
+    'bill_date'    => '2019-06-11',
+    'tar_type'     => 'GZIP',
+    'algorithm'    => 'AEAD_AES_256_GCM',
     'account_type' => 'BASIC',
   ],
 ])
@@ -55,10 +55,10 @@ $instance->chain('v3/bill/sub-merchant-fundflowbill')->getAsync([
 ```php [异步属性式]
 $instance['v3/bill/sub-merchant-fundflowbill']->getAsync([
   'query' => [
-    'sub_mchid' => '19000000001',
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
-    'algorithm' => 'AEAD_AES_256_GCM',
+    'sub_mchid'    => '19000000001',
+    'bill_date'    => '2019-06-11',
+    'tar_type'     => 'GZIP',
+    'algorithm'    => 'AEAD_AES_256_GCM',
     'account_type' => 'BASIC',
   ],
 ])
@@ -71,10 +71,10 @@ $instance['v3/bill/sub-merchant-fundflowbill']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->bill->subMerchantFundflowbill->get([
   'query' => [
-    'sub_mchid' => '19000000001',
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
-    'algorithm' => 'AEAD_AES_256_GCM',
+    'sub_mchid'    => '19000000001',
+    'bill_date'    => '2019-06-11',
+    'tar_type'     => 'GZIP',
+    'algorithm'    => 'AEAD_AES_256_GCM',
     'account_type' => 'BASIC',
   ],
 ]);
@@ -84,10 +84,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/bill/sub-merchant-fundflowbill')->get([
   'query' => [
-    'sub_mchid' => '19000000001',
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
-    'algorithm' => 'AEAD_AES_256_GCM',
+    'sub_mchid'    => '19000000001',
+    'bill_date'    => '2019-06-11',
+    'tar_type'     => 'GZIP',
+    'algorithm'    => 'AEAD_AES_256_GCM',
     'account_type' => 'BASIC',
   ],
 ]);
@@ -97,10 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/bill/sub-merchant-fundflowbill']->get([
   'query' => [
-    'sub_mchid' => '19000000001',
-    'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
-    'algorithm' => 'AEAD_AES_256_GCM',
+    'sub_mchid'    => '19000000001',
+    'bill_date'    => '2019-06-11',
+    'tar_type'     => 'GZIP',
+    'algorithm'    => 'AEAD_AES_256_GCM',
     'account_type' => 'BASIC',
   ],
 ]);

@@ -23,7 +23,7 @@ description: 商户通过签约协议号可查询签约信息，如果对应签�
 $instance->v3->eduPapay->contracts->id->_contract_id_->getAsync([
   'contract_id' => 'wx998877665544wx',
   'query' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -38,7 +38,7 @@ $instance->v3->eduPapay->contracts->id->_contract_id_->getAsync([
 $instance->chain('v3/edu-papay/contracts/id/{contract_id}')->getAsync([
   'contract_id' => 'wx998877665544wx',
   'query' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -53,7 +53,7 @@ $instance->chain('v3/edu-papay/contracts/id/{contract_id}')->getAsync([
 $instance['v3/edu-papay/contracts/id/{contract_id}']->getAsync([
   'contract_id' => 'wx998877665544wx',
   'query' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -68,7 +68,7 @@ $instance['v3/edu-papay/contracts/id/{contract_id}']->getAsync([
 $response = $instance->v3->eduPapay->contracts->id->_contract_id_->get([
   'contract_id' => 'wx998877665544wx',
   'query' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -80,7 +80,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/edu-papay/contracts/id/{contract_id}')->get([
   'contract_id' => 'wx998877665544wx',
   'query' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/edu-papay/contracts/id/{contract_id}']->get([
   'contract_id' => 'wx998877665544wx',
   'query' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],

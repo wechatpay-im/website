@@ -22,7 +22,7 @@ description: 电商服务商通过该接口可以查询二级商户指定日期�
 $instance->v3->ecommerce->fund->enddaybalance->_sub_mchid_->getAsync([
   'sub_mchid' => '1222212222',
   'query' => [
-    'date' => '2019-08-17',
+    'date'         => '2019-08-17',
     'account_type' => 'BASIC',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->ecommerce->fund->enddaybalance->_sub_mchid_->getAsync([
 $instance->chain('v3/ecommerce/fund/enddaybalance/{sub_mchid}')->getAsync([
   'sub_mchid' => '1222212222',
   'query' => [
-    'date' => '2019-08-17',
+    'date'         => '2019-08-17',
     'account_type' => 'BASIC',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/ecommerce/fund/enddaybalance/{sub_mchid}')->getAsync([
 $instance['v3/ecommerce/fund/enddaybalance/{sub_mchid}']->getAsync([
   'sub_mchid' => '1222212222',
   'query' => [
-    'date' => '2019-08-17',
+    'date'         => '2019-08-17',
     'account_type' => 'BASIC',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/ecommerce/fund/enddaybalance/{sub_mchid}']->getAsync([
 $response = $instance->v3->ecommerce->fund->enddaybalance->_sub_mchid_->get([
   'sub_mchid' => '1222212222',
   'query' => [
-    'date' => '2019-08-17',
+    'date'         => '2019-08-17',
     'account_type' => 'BASIC',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/ecommerce/fund/enddaybalance/{sub_mchid}')->get([
   'sub_mchid' => '1222212222',
   'query' => [
-    'date' => '2019-08-17',
+    'date'         => '2019-08-17',
     'account_type' => 'BASIC',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/ecommerce/fund/enddaybalance/{sub_mchid}']->get([
   'sub_mchid' => '1222212222',
   'query' => [
-    'date' => '2019-08-17',
+    'date'         => '2019-08-17',
     'account_type' => 'BASIC',
   ],
 ]);

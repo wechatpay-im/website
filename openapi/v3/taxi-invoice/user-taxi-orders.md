@@ -25,13 +25,13 @@ description: 服务商可以凭“用户openid”查询该乘客对应的“出�
 ```php [异步纯链式]
 $instance->v3->taxiInvoice->userTaxiOrders->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'limit'      => 5,
+    'offset'     => 10,
+    'openid'     => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'      => 'wxb1170446a4c0a5a2',
     'begin_date' => '20200307',
-    'end_date' => '20200407',
-    'region_id' => 510100,
+    'end_date'   => '20200407',
+    'region_id'  => 510100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->taxiInvoice->userTaxiOrders->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/taxi-invoice/user-taxi-orders')->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'limit'      => 5,
+    'offset'     => 10,
+    'openid'     => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'      => 'wxb1170446a4c0a5a2',
     'begin_date' => '20200307',
-    'end_date' => '20200407',
-    'region_id' => 510100,
+    'end_date'   => '20200407',
+    'region_id'  => 510100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/taxi-invoice/user-taxi-orders')->getAsync([
 ```php [异步属性式]
 $instance['v3/taxi-invoice/user-taxi-orders']->getAsync([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'limit'      => 5,
+    'offset'     => 10,
+    'openid'     => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'      => 'wxb1170446a4c0a5a2',
     'begin_date' => '20200307',
-    'end_date' => '20200407',
-    'region_id' => 510100,
+    'end_date'   => '20200407',
+    'region_id'  => 510100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/taxi-invoice/user-taxi-orders']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->taxiInvoice->userTaxiOrders->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'limit'      => 5,
+    'offset'     => 10,
+    'openid'     => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'      => 'wxb1170446a4c0a5a2',
     'begin_date' => '20200307',
-    'end_date' => '20200407',
-    'region_id' => 510100,
+    'end_date'   => '20200407',
+    'region_id'  => 510100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,13 +94,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/taxi-invoice/user-taxi-orders')->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'limit'      => 5,
+    'offset'     => 10,
+    'openid'     => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'      => 'wxb1170446a4c0a5a2',
     'begin_date' => '20200307',
-    'end_date' => '20200407',
-    'region_id' => 510100,
+    'end_date'   => '20200407',
+    'region_id'  => 510100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,13 +109,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/taxi-invoice/user-taxi-orders']->get([
   'query' => [
-    'limit' => 5,
-    'offset' => 10,
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'limit'      => 5,
+    'offset'     => 10,
+    'openid'     => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'      => 'wxb1170446a4c0a5a2',
     'begin_date' => '20200307',
-    'end_date' => '20200407',
-    'region_id' => 510100,
+    'end_date'   => '20200407',
+    'region_id'  => 510100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

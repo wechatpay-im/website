@@ -24,8 +24,8 @@ $instance->v3->businesscircle->users->_openid_->points->commit_status->getAsync(
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
     'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
+    'brandid'   => 1000,
+    'appid'     => 'wx931386123456789e',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/businesscircle/users/{openid}/points/commit_status')->getAs
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
     'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
+    'brandid'   => 1000,
+    'appid'     => 'wx931386123456789e',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +54,8 @@ $instance['v3/businesscircle/users/{openid}/points/commit_status']->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
     'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
+    'brandid'   => 1000,
+    'appid'     => 'wx931386123456789e',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,8 +69,8 @@ $response = $instance->v3->businesscircle->users->_openid_->points->commit_statu
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
     'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
+    'brandid'   => 1000,
+    'appid'     => 'wx931386123456789e',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -81,8 +81,8 @@ $response = $instance->chain('v3/businesscircle/users/{openid}/points/commit_sta
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
     'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
+    'brandid'   => 1000,
+    'appid'     => 'wx931386123456789e',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -93,8 +93,8 @@ $response = $instance['v3/businesscircle/users/{openid}/points/commit_status']->
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
     'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
+    'brandid'   => 1000,
+    'appid'     => 'wx931386123456789e',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

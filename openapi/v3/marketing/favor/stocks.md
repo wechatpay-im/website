@@ -24,12 +24,12 @@ description: 通过此接口可查询多个批次的信息，包括批次的配�
 ```php [异步纯链式]
 $instance->v3->marketing->favor->stocks->getAsync([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
+    'offset'              => 0,
+    'limit'               => 0,
     'stock_creator_mchid' => '',
-    'create_start_time' => '2015-05-20T13:29:35.120+08:00',
-    'create_end_time' => '2015-05-20T13:29:35.120+08:00',
-    'status' => 'unactivated',
+    'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
+    'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
+    'status'              => 'unactivated',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,12 +41,12 @@ $instance->v3->marketing->favor->stocks->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/stocks')->getAsync([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
+    'offset'              => 0,
+    'limit'               => 0,
     'stock_creator_mchid' => '',
-    'create_start_time' => '2015-05-20T13:29:35.120+08:00',
-    'create_end_time' => '2015-05-20T13:29:35.120+08:00',
-    'status' => 'unactivated',
+    'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
+    'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
+    'status'              => 'unactivated',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,12 +58,12 @@ $instance->chain('v3/marketing/favor/stocks')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/favor/stocks']->getAsync([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
+    'offset'              => 0,
+    'limit'               => 0,
     'stock_creator_mchid' => '',
-    'create_start_time' => '2015-05-20T13:29:35.120+08:00',
-    'create_end_time' => '2015-05-20T13:29:35.120+08:00',
-    'status' => 'unactivated',
+    'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
+    'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
+    'status'              => 'unactivated',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,12 +75,12 @@ $instance['v3/marketing/favor/stocks']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->stocks->get([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
+    'offset'              => 0,
+    'limit'               => 0,
     'stock_creator_mchid' => '',
-    'create_start_time' => '2015-05-20T13:29:35.120+08:00',
-    'create_end_time' => '2015-05-20T13:29:35.120+08:00',
-    'status' => 'unactivated',
+    'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
+    'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
+    'status'              => 'unactivated',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,12 +89,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/stocks')->get([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
+    'offset'              => 0,
+    'limit'               => 0,
     'stock_creator_mchid' => '',
-    'create_start_time' => '2015-05-20T13:29:35.120+08:00',
-    'create_end_time' => '2015-05-20T13:29:35.120+08:00',
-    'status' => 'unactivated',
+    'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
+    'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
+    'status'              => 'unactivated',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,12 +103,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/stocks']->get([
   'query' => [
-    'offset' => 0,
-    'limit' => 0,
+    'offset'              => 0,
+    'limit'               => 0,
     'stock_creator_mchid' => '',
-    'create_start_time' => '2015-05-20T13:29:35.120+08:00',
-    'create_end_time' => '2015-05-20T13:29:35.120+08:00',
-    'status' => 'unactivated',
+    'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
+    'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
+    'status'              => 'unactivated',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

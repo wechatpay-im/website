@@ -138,7 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->afterSalesOrders->getAsync([
   'query' => [
-    'sub_mchid' => '',
+    'sub_mchid'      => '',
     'transaction_id' => '',
   ],
 ])
@@ -151,7 +151,7 @@ $instance->v3->ecommerce->profitsharing->afterSalesOrders->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/after-sales-orders')->getAsync([
   'query' => [
-    'sub_mchid' => '',
+    'sub_mchid'      => '',
     'transaction_id' => '',
   ],
 ])
@@ -164,7 +164,7 @@ $instance->chain('v3/ecommerce/profitsharing/after-sales-orders')->getAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/after-sales-orders']->getAsync([
   'query' => [
-    'sub_mchid' => '',
+    'sub_mchid'      => '',
     'transaction_id' => '',
   ],
 ])
@@ -177,7 +177,7 @@ $instance['v3/ecommerce/profitsharing/after-sales-orders']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->afterSalesOrders->get([
   'query' => [
-    'sub_mchid' => '',
+    'sub_mchid'      => '',
     'transaction_id' => '',
   ],
 ]);
@@ -187,7 +187,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/after-sales-orders')->get([
   'query' => [
-    'sub_mchid' => '',
+    'sub_mchid'      => '',
     'transaction_id' => '',
   ],
 ]);
@@ -197,7 +197,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/after-sales-orders']->get([
   'query' => [
-    'sub_mchid' => '',
+    'sub_mchid'      => '',
     'transaction_id' => '',
   ],
 ]);

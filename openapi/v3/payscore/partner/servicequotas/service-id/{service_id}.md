@@ -24,9 +24,9 @@ description: 查询用户分层对应建议先享金额API。
 $instance->v3->payscore->partner->servicequotas->serviceId->_service_id_->getAsync([
   'service_id' => '2002000000000558128851361561536',
   'query' => [
-    'sub_mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'risk_level_version' => 1,
   ],
 ])
@@ -40,9 +40,9 @@ $instance->v3->payscore->partner->servicequotas->serviceId->_service_id_->getAsy
 $instance->chain('v3/payscore/partner/servicequotas/service-id/{service_id}')->getAsync([
   'service_id' => '2002000000000558128851361561536',
   'query' => [
-    'sub_mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'risk_level_version' => 1,
   ],
 ])
@@ -56,9 +56,9 @@ $instance->chain('v3/payscore/partner/servicequotas/service-id/{service_id}')->g
 $instance['v3/payscore/partner/servicequotas/service-id/{service_id}']->getAsync([
   'service_id' => '2002000000000558128851361561536',
   'query' => [
-    'sub_mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'risk_level_version' => 1,
   ],
 ])
@@ -72,9 +72,9 @@ $instance['v3/payscore/partner/servicequotas/service-id/{service_id}']->getAsync
 $response = $instance->v3->payscore->partner->servicequotas->serviceId->_service_id_->get([
   'service_id' => '2002000000000558128851361561536',
   'query' => [
-    'sub_mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'risk_level_version' => 1,
   ],
 ]);
@@ -85,9 +85,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/partner/servicequotas/service-id/{service_id}')->get([
   'service_id' => '2002000000000558128851361561536',
   'query' => [
-    'sub_mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'risk_level_version' => 1,
   ],
 ]);
@@ -98,9 +98,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/partner/servicequotas/service-id/{service_id}']->get([
   'service_id' => '2002000000000558128851361561536',
   'query' => [
-    'sub_mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'risk_level_version' => 1,
   ],
 ]);

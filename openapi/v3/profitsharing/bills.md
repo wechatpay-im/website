@@ -23,7 +23,7 @@ $instance->v3->profitsharing->bills->getAsync([
   'query' => [
     'sub_mchid' => '',
     'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/profitsharing/bills')->getAsync([
   'query' => [
     'sub_mchid' => '',
     'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/profitsharing/bills']->getAsync([
   'query' => [
     'sub_mchid' => '',
     'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->profitsharing->bills->get([
   'query' => [
     'sub_mchid' => '',
     'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/profitsharing/bills')->get([
   'query' => [
     'sub_mchid' => '',
     'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/profitsharing/bills']->get([
   'query' => [
     'sub_mchid' => '',
     'bill_date' => '2019-06-11',
-    'tar_type' => 'GZIP',
+    'tar_type'  => 'GZIP',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

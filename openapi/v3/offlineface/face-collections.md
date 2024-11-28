@@ -22,8 +22,8 @@ description: 离线刷脸业务中，偶尔会出现前期采集头像质量不�
 $instance->v3->offlineface->faceCollections->getAsync([
   'query' => [
     'organization_id' => 'Ofewewfwefweewf',
-    'offset' => 30,
-    'limit' => 20,
+    'offset'          => 30,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -36,8 +36,8 @@ $instance->v3->offlineface->faceCollections->getAsync([
 $instance->chain('v3/offlineface/face-collections')->getAsync([
   'query' => [
     'organization_id' => 'Ofewewfwefweewf',
-    'offset' => 30,
-    'limit' => 20,
+    'offset'          => 30,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,8 +50,8 @@ $instance->chain('v3/offlineface/face-collections')->getAsync([
 $instance['v3/offlineface/face-collections']->getAsync([
   'query' => [
     'organization_id' => 'Ofewewfwefweewf',
-    'offset' => 30,
-    'limit' => 20,
+    'offset'          => 30,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,8 +64,8 @@ $instance['v3/offlineface/face-collections']->getAsync([
 $response = $instance->v3->offlineface->faceCollections->get([
   'query' => [
     'organization_id' => 'Ofewewfwefweewf',
-    'offset' => 30,
-    'limit' => 20,
+    'offset'          => 30,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -75,8 +75,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/offlineface/face-collections')->get([
   'query' => [
     'organization_id' => 'Ofewewfwefweewf',
-    'offset' => 30,
-    'limit' => 20,
+    'offset'          => 30,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -86,8 +86,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/offlineface/face-collections']->get([
   'query' => [
     'organization_id' => 'Ofewewfwefweewf',
-    'offset' => 30,
-    'limit' => 20,
+    'offset'          => 30,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -392,11 +392,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->payscore->acquiringbank->serviceorder->getAsync([
   'query' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
+    'query_id'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -408,11 +408,11 @@ $instance->v3->payscore->acquiringbank->serviceorder->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/acquiringbank/serviceorder')->getAsync([
   'query' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
+    'query_id'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -424,11 +424,11 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder')->getAsync([
 ```php [异步属性式]
 $instance['v3/payscore/acquiringbank/serviceorder']->getAsync([
   'query' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
+    'query_id'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -440,11 +440,11 @@ $instance['v3/payscore/acquiringbank/serviceorder']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->acquiringbank->serviceorder->get([
   'query' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
+    'query_id'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -453,11 +453,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/acquiringbank/serviceorder')->get([
   'query' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
+    'query_id'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -466,11 +466,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/acquiringbank/serviceorder']->get([
   'query' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
+    'query_id'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -23,9 +23,9 @@ description: 通过此接口可查询用户在当前品牌下领取的所有会�
 $instance->v3->marketing->membercardOpen->user->cards->getAsync([
   'query' => [
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,9 +38,9 @@ $instance->v3->marketing->membercardOpen->user->cards->getAsync([
 $instance->chain('v3/marketing/membercard-open/user/cards')->getAsync([
   'query' => [
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +53,9 @@ $instance->chain('v3/marketing/membercard-open/user/cards')->getAsync([
 $instance['v3/marketing/membercard-open/user/cards']->getAsync([
   'query' => [
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +68,9 @@ $instance['v3/marketing/membercard-open/user/cards']->getAsync([
 $response = $instance->v3->marketing->membercardOpen->user->cards->get([
   'query' => [
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,9 +80,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/membercard-open/user/cards')->get([
   'query' => [
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -92,9 +92,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/membercard-open/user/cards']->get([
   'query' => [
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit' => 0,
+    'limit'  => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

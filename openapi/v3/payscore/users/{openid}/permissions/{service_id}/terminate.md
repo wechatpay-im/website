@@ -27,7 +27,7 @@ $instance->v3->payscore->users->_openid_->permissions->_service_id_->terminate->
     'reason' => '',
   ],
   'query' => [
-    'openid' => '',
+    'openid'     => '',
     'service_id' => '',
   ],
 ])
@@ -44,7 +44,7 @@ $instance->chain('v3/payscore/users/{openid}/permissions/{service_id}/terminate'
     'reason' => '',
   ],
   'query' => [
-    'openid' => '',
+    'openid'     => '',
     'service_id' => '',
   ],
 ])
@@ -61,7 +61,7 @@ $instance['v3/payscore/users/{openid}/permissions/{service_id}/terminate']->post
     'reason' => '',
   ],
   'query' => [
-    'openid' => '',
+    'openid'     => '',
     'service_id' => '',
   ],
 ])
@@ -78,7 +78,7 @@ $response = $instance->v3->payscore->users->_openid_->permissions->_service_id_-
     'reason' => '',
   ],
   'query' => [
-    'openid' => '',
+    'openid'     => '',
     'service_id' => '',
   ],
 ]);
@@ -92,7 +92,7 @@ $response = $instance->chain('v3/payscore/users/{openid}/permissions/{service_id
     'reason' => '',
   ],
   'query' => [
-    'openid' => '',
+    'openid'     => '',
     'service_id' => '',
   ],
 ]);
@@ -106,7 +106,7 @@ $response = $instance['v3/payscore/users/{openid}/permissions/{service_id}/termi
     'reason' => '',
   ],
   'query' => [
-    'openid' => '',
+    'openid'     => '',
     'service_id' => '',
   ],
 ]);

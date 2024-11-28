@@ -23,9 +23,9 @@ description: 服务商可以凭“凭证”查询对应的“乘客行程单”�
 ```php [异步纯链式]
 $instance->v3->taxiInvoice->userTaxiOrder->findByToken->getAsync([
   'query' => [
-    'token' => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'token'     => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
+    'openid'    => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'     => 'wxb1170446a4c0a5a2',
     'region_id' => 310100,
     'auth_mode' => 'ORDER_AUTH',
   ],
@@ -39,9 +39,9 @@ $instance->v3->taxiInvoice->userTaxiOrder->findByToken->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/taxi-invoice/user-taxi-order/find-by-token')->getAsync([
   'query' => [
-    'token' => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'token'     => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
+    'openid'    => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'     => 'wxb1170446a4c0a5a2',
     'region_id' => 310100,
     'auth_mode' => 'ORDER_AUTH',
   ],
@@ -55,9 +55,9 @@ $instance->chain('v3/taxi-invoice/user-taxi-order/find-by-token')->getAsync([
 ```php [异步属性式]
 $instance['v3/taxi-invoice/user-taxi-order/find-by-token']->getAsync([
   'query' => [
-    'token' => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'token'     => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
+    'openid'    => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'     => 'wxb1170446a4c0a5a2',
     'region_id' => 310100,
     'auth_mode' => 'ORDER_AUTH',
   ],
@@ -71,9 +71,9 @@ $instance['v3/taxi-invoice/user-taxi-order/find-by-token']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->taxiInvoice->userTaxiOrder->findByToken->get([
   'query' => [
-    'token' => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'token'     => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
+    'openid'    => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'     => 'wxb1170446a4c0a5a2',
     'region_id' => 310100,
     'auth_mode' => 'ORDER_AUTH',
   ],
@@ -84,9 +84,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/taxi-invoice/user-taxi-order/find-by-token')->get([
   'query' => [
-    'token' => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'token'     => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
+    'openid'    => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'     => 'wxb1170446a4c0a5a2',
     'region_id' => 310100,
     'auth_mode' => 'ORDER_AUTH',
   ],
@@ -97,9 +97,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/taxi-invoice/user-taxi-order/find-by-token']->get([
   'query' => [
-    'token' => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
-    'openid' => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
-    'appid' => 'wxb1170446a4c0a5a2',
+    'token'     => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V-ztUUuQvu_YBEZg9FAht0Y15r71mft9rcaMIjn7y6x0KSg',
+    'openid'    => 'oUypO5fUvaUkyuc6ueOwgwDMjCiM',
+    'appid'     => 'wxb1170446a4c0a5a2',
     'region_id' => 310100,
     'auth_mode' => 'ORDER_AUTH',
   ],

@@ -22,7 +22,7 @@ description: 商户可查询导入成功的加密手机号是否已被用户领�
 ```php [异步纯链式]
 $instance->v3->marketing->membercardOpen->phonenumberMember->search->getAsync([
   'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzLyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
   ],
   'headers' => [
@@ -38,7 +38,7 @@ $instance->v3->marketing->membercardOpen->phonenumberMember->search->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/membercard-open/phonenumber-member/search')->getAsync([
   'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzLyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
   ],
   'headers' => [
@@ -54,7 +54,7 @@ $instance->chain('v3/marketing/membercard-open/phonenumber-member/search')->getA
 ```php [异步属性式]
 $instance['v3/marketing/membercard-open/phonenumber-member/search']->getAsync([
   'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzLyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
   ],
   'headers' => [
@@ -70,7 +70,7 @@ $instance['v3/marketing/membercard-open/phonenumber-member/search']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->membercardOpen->phonenumberMember->search->get([
   'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzLyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
   ],
   'headers' => [
@@ -83,7 +83,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/membercard-open/phonenumber-member/search')->get([
   'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzLyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
   ],
   'headers' => [
@@ -96,7 +96,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/membercard-open/phonenumber-member/search']->get([
   'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzLyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
   ],
   'headers' => [

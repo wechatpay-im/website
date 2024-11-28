@@ -24,11 +24,11 @@ description:
 ```php [异步纯链式]
 $instance->v3->merchantRiskManage->tradeRiskInformation->getAsync([
   'query' => [
-    'sp_mchid' => '1900000109',
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '1900000108',
-    'sub_mchid' => '1900009231',
-    'out_trade_no' => '1217752501201407033233368018',
+    'sp_mchid'               => '1900000109',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '1900000108',
+    'sub_mchid'              => '1900009231',
+    'out_trade_no'           => '1217752501201407033233368018',
     'complaints_information' => '商家说高额返利，支付很大金额之后发现并没有返利，是骗子',
   ],
 ])
@@ -41,11 +41,11 @@ $instance->v3->merchantRiskManage->tradeRiskInformation->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchant-risk-manage/trade-risk-information')->getAsync([
   'query' => [
-    'sp_mchid' => '1900000109',
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '1900000108',
-    'sub_mchid' => '1900009231',
-    'out_trade_no' => '1217752501201407033233368018',
+    'sp_mchid'               => '1900000109',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '1900000108',
+    'sub_mchid'              => '1900009231',
+    'out_trade_no'           => '1217752501201407033233368018',
     'complaints_information' => '商家说高额返利，支付很大金额之后发现并没有返利，是骗子',
   ],
 ])
@@ -58,11 +58,11 @@ $instance->chain('v3/merchant-risk-manage/trade-risk-information')->getAsync([
 ```php [异步属性式]
 $instance['v3/merchant-risk-manage/trade-risk-information']->getAsync([
   'query' => [
-    'sp_mchid' => '1900000109',
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '1900000108',
-    'sub_mchid' => '1900009231',
-    'out_trade_no' => '1217752501201407033233368018',
+    'sp_mchid'               => '1900000109',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '1900000108',
+    'sub_mchid'              => '1900009231',
+    'out_trade_no'           => '1217752501201407033233368018',
     'complaints_information' => '商家说高额返利，支付很大金额之后发现并没有返利，是骗子',
   ],
 ])
@@ -75,11 +75,11 @@ $instance['v3/merchant-risk-manage/trade-risk-information']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantRiskManage->tradeRiskInformation->get([
   'query' => [
-    'sp_mchid' => '1900000109',
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '1900000108',
-    'sub_mchid' => '1900009231',
-    'out_trade_no' => '1217752501201407033233368018',
+    'sp_mchid'               => '1900000109',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '1900000108',
+    'sub_mchid'              => '1900009231',
+    'out_trade_no'           => '1217752501201407033233368018',
     'complaints_information' => '商家说高额返利，支付很大金额之后发现并没有返利，是骗子',
   ],
 ]);
@@ -89,11 +89,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/merchant-risk-manage/trade-risk-information')->get([
   'query' => [
-    'sp_mchid' => '1900000109',
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '1900000108',
-    'sub_mchid' => '1900009231',
-    'out_trade_no' => '1217752501201407033233368018',
+    'sp_mchid'               => '1900000109',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '1900000108',
+    'sub_mchid'              => '1900009231',
+    'out_trade_no'           => '1217752501201407033233368018',
     'complaints_information' => '商家说高额返利，支付很大金额之后发现并没有返利，是骗子',
   ],
 ]);
@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/merchant-risk-manage/trade-risk-information']->get([
   'query' => [
-    'sp_mchid' => '1900000109',
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '1900000108',
-    'sub_mchid' => '1900009231',
-    'out_trade_no' => '1217752501201407033233368018',
+    'sp_mchid'               => '1900000109',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '1900000108',
+    'sub_mchid'              => '1900009231',
+    'out_trade_no'           => '1217752501201407033233368018',
     'complaints_information' => '商家说高额返利，支付很大金额之后发现并没有返利，是骗子',
   ],
 ]);

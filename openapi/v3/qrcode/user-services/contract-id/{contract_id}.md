@@ -23,7 +23,7 @@ description:
 $instance->v3->qrcode->userServices->contractId->_contract_id_->getAsync([
   'contract_id' => 'Wx15463511252015071056489715',
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
+    'appid'     => 'wxcbda96de0b165486',
     'sub_appid' => 'wxcbda96de0b165486',
     'sub_mchid' => '1900000109',
   ],
@@ -38,7 +38,7 @@ $instance->v3->qrcode->userServices->contractId->_contract_id_->getAsync([
 $instance->chain('v3/qrcode/user-services/contract-id/{contract_id}')->getAsync([
   'contract_id' => 'Wx15463511252015071056489715',
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
+    'appid'     => 'wxcbda96de0b165486',
     'sub_appid' => 'wxcbda96de0b165486',
     'sub_mchid' => '1900000109',
   ],
@@ -53,7 +53,7 @@ $instance->chain('v3/qrcode/user-services/contract-id/{contract_id}')->getAsync(
 $instance['v3/qrcode/user-services/contract-id/{contract_id}']->getAsync([
   'contract_id' => 'Wx15463511252015071056489715',
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
+    'appid'     => 'wxcbda96de0b165486',
     'sub_appid' => 'wxcbda96de0b165486',
     'sub_mchid' => '1900000109',
   ],
@@ -68,7 +68,7 @@ $instance['v3/qrcode/user-services/contract-id/{contract_id}']->getAsync([
 $response = $instance->v3->qrcode->userServices->contractId->_contract_id_->get([
   'contract_id' => 'Wx15463511252015071056489715',
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
+    'appid'     => 'wxcbda96de0b165486',
     'sub_appid' => 'wxcbda96de0b165486',
     'sub_mchid' => '1900000109',
   ],
@@ -80,7 +80,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/qrcode/user-services/contract-id/{contract_id}')->get([
   'contract_id' => 'Wx15463511252015071056489715',
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
+    'appid'     => 'wxcbda96de0b165486',
     'sub_appid' => 'wxcbda96de0b165486',
     'sub_mchid' => '1900000109',
   ],
@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/qrcode/user-services/contract-id/{contract_id}']->get([
   'contract_id' => 'Wx15463511252015071056489715',
   'query' => [
-    'appid' => 'wxcbda96de0b165486',
+    'appid'     => 'wxcbda96de0b165486',
     'sub_appid' => 'wxcbda96de0b165486',
     'sub_mchid' => '1900000109',
   ],

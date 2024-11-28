@@ -656,7 +656,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->apply4subject->applyment->getAsync([
   'query' => [
-    'applyment_id' => '',
+    'applyment_id'  => '',
     'business_code' => '',
   ],
 ])
@@ -669,7 +669,7 @@ $instance->v3->apply4subject->applyment->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/apply4subject/applyment')->getAsync([
   'query' => [
-    'applyment_id' => '',
+    'applyment_id'  => '',
     'business_code' => '',
   ],
 ])
@@ -682,7 +682,7 @@ $instance->chain('v3/apply4subject/applyment')->getAsync([
 ```php [异步属性式]
 $instance['v3/apply4subject/applyment']->getAsync([
   'query' => [
-    'applyment_id' => '',
+    'applyment_id'  => '',
     'business_code' => '',
   ],
 ])
@@ -695,7 +695,7 @@ $instance['v3/apply4subject/applyment']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->apply4subject->applyment->get([
   'query' => [
-    'applyment_id' => '',
+    'applyment_id'  => '',
     'business_code' => '',
   ],
 ]);
@@ -705,7 +705,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/apply4subject/applyment')->get([
   'query' => [
-    'applyment_id' => '',
+    'applyment_id'  => '',
     'business_code' => '',
   ],
 ]);
@@ -715,7 +715,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/apply4subject/applyment']->get([
   'query' => [
-    'applyment_id' => '',
+    'applyment_id'  => '',
     'business_code' => '',
   ],
 ]);

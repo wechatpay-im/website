@@ -362,9 +362,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->payscore->serviceorder->getAsync([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
+    'query_id'     => '',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -377,9 +377,9 @@ $instance->v3->payscore->serviceorder->getAsync([
 $instance->chain('v3/payscore/serviceorder')->getAsync([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
+    'query_id'     => '',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -392,9 +392,9 @@ $instance->chain('v3/payscore/serviceorder')->getAsync([
 $instance['v3/payscore/serviceorder']->getAsync([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
+    'query_id'     => '',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -407,9 +407,9 @@ $instance['v3/payscore/serviceorder']->getAsync([
 $response = $instance->v3->payscore->serviceorder->get([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
+    'query_id'     => '',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -419,9 +419,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/serviceorder')->get([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
+    'query_id'     => '',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -431,9 +431,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/serviceorder']->get([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id' => '',
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
+    'query_id'     => '',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

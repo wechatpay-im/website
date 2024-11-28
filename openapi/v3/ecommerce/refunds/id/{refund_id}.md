@@ -23,7 +23,7 @@ $instance->v3->ecommerce->refunds->id->_refund_id_->getAsync([
   'refund_id' => '50000000382019052709732678859',
   'query' => [
     'individual_auth_id' => '1900000109',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/ecommerce/refunds/id/{refund_id}')->getAsync([
   'refund_id' => '50000000382019052709732678859',
   'query' => [
     'individual_auth_id' => '1900000109',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/ecommerce/refunds/id/{refund_id}']->getAsync([
   'refund_id' => '50000000382019052709732678859',
   'query' => [
     'individual_auth_id' => '1900000109',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->ecommerce->refunds->id->_refund_id_->get([
   'refund_id' => '50000000382019052709732678859',
   'query' => [
     'individual_auth_id' => '1900000109',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/ecommerce/refunds/id/{refund_id}')->get([
   'refund_id' => '50000000382019052709732678859',
   'query' => [
     'individual_auth_id' => '1900000109',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/ecommerce/refunds/id/{refund_id}']->get([
   'refund_id' => '50000000382019052709732678859',
   'query' => [
     'individual_auth_id' => '1900000109',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

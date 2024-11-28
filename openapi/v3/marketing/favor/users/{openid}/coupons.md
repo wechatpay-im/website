@@ -152,15 +152,15 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->favor->users->_openid_->coupons->getAsync([
   'openid' => '',
   'query' => [
-    'appid' => '',
-    'stock_id' => '',
-    'status' => 'SENDED',
-    'creator_mchid' => '',
-    'sender_mchid' => '',
+    'appid'           => '',
+    'stock_id'        => '',
+    'status'          => 'SENDED',
+    'creator_mchid'   => '',
+    'sender_mchid'    => '',
     'available_mchid' => '',
-    'offset' => 0,
-    'limit' => 20,
-    'business_type' => 'MULTIUSE',
+    'offset'          => 0,
+    'limit'           => 20,
+    'business_type'   => 'MULTIUSE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -173,15 +173,15 @@ $instance->v3->marketing->favor->users->_openid_->coupons->getAsync([
 $instance->chain('v3/marketing/favor/users/{openid}/coupons')->getAsync([
   'openid' => '',
   'query' => [
-    'appid' => '',
-    'stock_id' => '',
-    'status' => 'SENDED',
-    'creator_mchid' => '',
-    'sender_mchid' => '',
+    'appid'           => '',
+    'stock_id'        => '',
+    'status'          => 'SENDED',
+    'creator_mchid'   => '',
+    'sender_mchid'    => '',
     'available_mchid' => '',
-    'offset' => 0,
-    'limit' => 20,
-    'business_type' => 'MULTIUSE',
+    'offset'          => 0,
+    'limit'           => 20,
+    'business_type'   => 'MULTIUSE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -194,15 +194,15 @@ $instance->chain('v3/marketing/favor/users/{openid}/coupons')->getAsync([
 $instance['v3/marketing/favor/users/{openid}/coupons']->getAsync([
   'openid' => '',
   'query' => [
-    'appid' => '',
-    'stock_id' => '',
-    'status' => 'SENDED',
-    'creator_mchid' => '',
-    'sender_mchid' => '',
+    'appid'           => '',
+    'stock_id'        => '',
+    'status'          => 'SENDED',
+    'creator_mchid'   => '',
+    'sender_mchid'    => '',
     'available_mchid' => '',
-    'offset' => 0,
-    'limit' => 20,
-    'business_type' => 'MULTIUSE',
+    'offset'          => 0,
+    'limit'           => 20,
+    'business_type'   => 'MULTIUSE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -215,15 +215,15 @@ $instance['v3/marketing/favor/users/{openid}/coupons']->getAsync([
 $response = $instance->v3->marketing->favor->users->_openid_->coupons->get([
   'openid' => '',
   'query' => [
-    'appid' => '',
-    'stock_id' => '',
-    'status' => 'SENDED',
-    'creator_mchid' => '',
-    'sender_mchid' => '',
+    'appid'           => '',
+    'stock_id'        => '',
+    'status'          => 'SENDED',
+    'creator_mchid'   => '',
+    'sender_mchid'    => '',
     'available_mchid' => '',
-    'offset' => 0,
-    'limit' => 20,
-    'business_type' => 'MULTIUSE',
+    'offset'          => 0,
+    'limit'           => 20,
+    'business_type'   => 'MULTIUSE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -233,15 +233,15 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/favor/users/{openid}/coupons')->get([
   'openid' => '',
   'query' => [
-    'appid' => '',
-    'stock_id' => '',
-    'status' => 'SENDED',
-    'creator_mchid' => '',
-    'sender_mchid' => '',
+    'appid'           => '',
+    'stock_id'        => '',
+    'status'          => 'SENDED',
+    'creator_mchid'   => '',
+    'sender_mchid'    => '',
     'available_mchid' => '',
-    'offset' => 0,
-    'limit' => 20,
-    'business_type' => 'MULTIUSE',
+    'offset'          => 0,
+    'limit'           => 20,
+    'business_type'   => 'MULTIUSE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -251,15 +251,15 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/favor/users/{openid}/coupons']->get([
   'openid' => '',
   'query' => [
-    'appid' => '',
-    'stock_id' => '',
-    'status' => 'SENDED',
-    'creator_mchid' => '',
-    'sender_mchid' => '',
+    'appid'           => '',
+    'stock_id'        => '',
+    'status'          => 'SENDED',
+    'creator_mchid'   => '',
+    'sender_mchid'    => '',
     'available_mchid' => '',
-    'offset' => 0,
-    'limit' => 20,
-    'business_type' => 'MULTIUSE',
+    'offset'          => 0,
+    'limit'           => 20,
+    'business_type'   => 'MULTIUSE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

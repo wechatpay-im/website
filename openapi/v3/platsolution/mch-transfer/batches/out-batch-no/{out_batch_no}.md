@@ -25,11 +25,11 @@ description: 商家批次单号查单接口。商户可以通过该接口查询�
 $instance->v3->platsolution->mchTransfer->batches->outBatchNo->_out_batch_no_->getAsync([
   'out_batch_no' => 'sjzz20230223',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'ALL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'ALL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,11 +42,11 @@ $instance->v3->platsolution->mchTransfer->batches->outBatchNo->_out_batch_no_->g
 $instance->chain('v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}')->getAsync([
   'out_batch_no' => 'sjzz20230223',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'ALL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'ALL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,11 +59,11 @@ $instance->chain('v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_n
 $instance['v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}']->getAsync([
   'out_batch_no' => 'sjzz20230223',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'ALL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'ALL',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,11 +76,11 @@ $instance['v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}']->g
 $response = $instance->v3->platsolution->mchTransfer->batches->outBatchNo->_out_batch_no_->get([
   'out_batch_no' => 'sjzz20230223',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'ALL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'ALL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}')->get([
   'out_batch_no' => 'sjzz20230223',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'ALL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'ALL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,11 +104,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}']->get([
   'out_batch_no' => 'sjzz20230223',
   'query' => [
-    'sub_mchid' => '1900102208',
+    'sub_mchid'         => '1900102208',
     'need_query_detail' => true,
-    'offset' => 0,
-    'limit' => 20,
-    'detail_state' => 'ALL',
+    'offset'            => 0,
+    'limit'             => 20,
+    'detail_state'      => 'ALL',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

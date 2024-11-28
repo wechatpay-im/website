@@ -26,12 +26,12 @@ description: 商户在交易完结之后，可按结算日期查询已结算资�
 $instance->v3->global->settle->settlements->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'sub_mchid' => '1900000101',
-    'settle_state' => 'SETTLED',
+    'sub_mchid'         => '1900000101',
+    'settle_state'      => 'SETTLED',
     'settle_start_date' => '20091225',
-    'settle_end_date' => '20091226',
-    'limit' => 5,
-    'offset' => 10,
+    'settle_end_date'   => '20091226',
+    'limit'             => 5,
+    'offset'            => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,12 +44,12 @@ $instance->v3->global->settle->settlements->getAsync([
 $instance->chain('v3/global/settle/settlements')->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'sub_mchid' => '1900000101',
-    'settle_state' => 'SETTLED',
+    'sub_mchid'         => '1900000101',
+    'settle_state'      => 'SETTLED',
     'settle_start_date' => '20091225',
-    'settle_end_date' => '20091226',
-    'limit' => 5,
-    'offset' => 10,
+    'settle_end_date'   => '20091226',
+    'limit'             => 5,
+    'offset'            => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,12 +62,12 @@ $instance->chain('v3/global/settle/settlements')->getAsync([
 $instance['v3/global/settle/settlements']->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'sub_mchid' => '1900000101',
-    'settle_state' => 'SETTLED',
+    'sub_mchid'         => '1900000101',
+    'settle_state'      => 'SETTLED',
     'settle_start_date' => '20091225',
-    'settle_end_date' => '20091226',
-    'limit' => 5,
-    'offset' => 10,
+    'settle_end_date'   => '20091226',
+    'limit'             => 5,
+    'offset'            => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,12 +80,12 @@ $instance['v3/global/settle/settlements']->getAsync([
 $response = $instance->v3->global->settle->settlements->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'sub_mchid' => '1900000101',
-    'settle_state' => 'SETTLED',
+    'sub_mchid'         => '1900000101',
+    'settle_state'      => 'SETTLED',
     'settle_start_date' => '20091225',
-    'settle_end_date' => '20091226',
-    'limit' => 5,
-    'offset' => 10,
+    'settle_end_date'   => '20091226',
+    'limit'             => 5,
+    'offset'            => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -95,12 +95,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/settle/settlements')->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'sub_mchid' => '1900000101',
-    'settle_state' => 'SETTLED',
+    'sub_mchid'         => '1900000101',
+    'settle_state'      => 'SETTLED',
     'settle_start_date' => '20091225',
-    'settle_end_date' => '20091226',
-    'limit' => 5,
-    'offset' => 10,
+    'settle_end_date'   => '20091226',
+    'limit'             => 5,
+    'offset'            => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -110,12 +110,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/settle/settlements']->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
-    'sub_mchid' => '1900000101',
-    'settle_state' => 'SETTLED',
+    'sub_mchid'         => '1900000101',
+    'settle_state'      => 'SETTLED',
     'settle_start_date' => '20091225',
-    'settle_end_date' => '20091226',
-    'limit' => 5,
-    'offset' => 10,
+    'settle_end_date'   => '20091226',
+    'limit'             => 5,
+    'offset'            => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

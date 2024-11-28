@@ -203,12 +203,12 @@ $instance->v3->global->refunds->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'offset' => 0,
-    'count' => 10,
+    'out_trade_no'   => '',
+    'mchid'          => '1900000109',
+    'sub_mchid'      => '1900000109',
+    'sp_mchid'       => '1900000100',
+    'offset'         => 0,
+    'count'          => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -222,12 +222,12 @@ $instance->chain('v3/global/refunds')->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'offset' => 0,
-    'count' => 10,
+    'out_trade_no'   => '',
+    'mchid'          => '1900000109',
+    'sub_mchid'      => '1900000109',
+    'sp_mchid'       => '1900000100',
+    'offset'         => 0,
+    'count'          => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -241,12 +241,12 @@ $instance['v3/global/refunds']->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'offset' => 0,
-    'count' => 10,
+    'out_trade_no'   => '',
+    'mchid'          => '1900000109',
+    'sub_mchid'      => '1900000109',
+    'sp_mchid'       => '1900000100',
+    'offset'         => 0,
+    'count'          => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -260,12 +260,12 @@ $response = $instance->v3->global->refunds->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'offset' => 0,
-    'count' => 10,
+    'out_trade_no'   => '',
+    'mchid'          => '1900000109',
+    'sub_mchid'      => '1900000109',
+    'sp_mchid'       => '1900000100',
+    'offset'         => 0,
+    'count'          => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -276,12 +276,12 @@ $response = $instance->chain('v3/global/refunds')->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'offset' => 0,
-    'count' => 10,
+    'out_trade_no'   => '',
+    'mchid'          => '1900000109',
+    'sub_mchid'      => '1900000109',
+    'sp_mchid'       => '1900000100',
+    'offset'         => 0,
+    'count'          => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -292,12 +292,12 @@ $response = $instance['v3/global/refunds']->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'offset' => 0,
-    'count' => 10,
+    'out_trade_no'   => '',
+    'mchid'          => '1900000109',
+    'sub_mchid'      => '1900000109',
+    'sp_mchid'       => '1900000100',
+    'offset'         => 0,
+    'count'          => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

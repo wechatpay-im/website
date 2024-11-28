@@ -21,8 +21,8 @@ description: 商户调用本接口，检查用户是否已完成抬头填写，�
 ```php [异步纯链式]
 $instance->v3->newTaxControlFapiao->userTitle->getAsync([
   'query' => [
-    'sub_mchid' => '1900000109',
-    'scene' => 'WITH_WECHATPAY',
+    'sub_mchid'       => '1900000109',
+    'scene'           => 'WITH_WECHATPAY',
     'fapiao_apply_id' => '4200000444201910177461284488',
   ],
 ])
@@ -35,8 +35,8 @@ $instance->v3->newTaxControlFapiao->userTitle->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/new-tax-control-fapiao/user-title')->getAsync([
   'query' => [
-    'sub_mchid' => '1900000109',
-    'scene' => 'WITH_WECHATPAY',
+    'sub_mchid'       => '1900000109',
+    'scene'           => 'WITH_WECHATPAY',
     'fapiao_apply_id' => '4200000444201910177461284488',
   ],
 ])
@@ -49,8 +49,8 @@ $instance->chain('v3/new-tax-control-fapiao/user-title')->getAsync([
 ```php [异步属性式]
 $instance['v3/new-tax-control-fapiao/user-title']->getAsync([
   'query' => [
-    'sub_mchid' => '1900000109',
-    'scene' => 'WITH_WECHATPAY',
+    'sub_mchid'       => '1900000109',
+    'scene'           => 'WITH_WECHATPAY',
     'fapiao_apply_id' => '4200000444201910177461284488',
   ],
 ])
@@ -63,8 +63,8 @@ $instance['v3/new-tax-control-fapiao/user-title']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->newTaxControlFapiao->userTitle->get([
   'query' => [
-    'sub_mchid' => '1900000109',
-    'scene' => 'WITH_WECHATPAY',
+    'sub_mchid'       => '1900000109',
+    'scene'           => 'WITH_WECHATPAY',
     'fapiao_apply_id' => '4200000444201910177461284488',
   ],
 ]);
@@ -74,8 +74,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/new-tax-control-fapiao/user-title')->get([
   'query' => [
-    'sub_mchid' => '1900000109',
-    'scene' => 'WITH_WECHATPAY',
+    'sub_mchid'       => '1900000109',
+    'scene'           => 'WITH_WECHATPAY',
     'fapiao_apply_id' => '4200000444201910177461284488',
   ],
 ]);
@@ -85,8 +85,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/new-tax-control-fapiao/user-title']->get([
   'query' => [
-    'sub_mchid' => '1900000109',
-    'scene' => 'WITH_WECHATPAY',
+    'sub_mchid'       => '1900000109',
+    'scene'           => 'WITH_WECHATPAY',
     'fapiao_apply_id' => '4200000444201910177461284488',
   ],
 ]);

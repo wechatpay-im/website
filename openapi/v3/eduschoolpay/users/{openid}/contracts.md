@@ -24,10 +24,10 @@ description: 商户使用本接口来查询用户签约信息，返回用户在�
 $instance->v3->eduschoolpay->users->_openid_->contracts->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'plan_id' => '101164396123311331',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,10 +40,10 @@ $instance->v3->eduschoolpay->users->_openid_->contracts->getAsync([
 $instance->chain('v3/eduschoolpay/users/{openid}/contracts')->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'plan_id' => '101164396123311331',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,10 +56,10 @@ $instance->chain('v3/eduschoolpay/users/{openid}/contracts')->getAsync([
 $instance['v3/eduschoolpay/users/{openid}/contracts']->getAsync([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'plan_id' => '101164396123311331',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,10 +72,10 @@ $instance['v3/eduschoolpay/users/{openid}/contracts']->getAsync([
 $response = $instance->v3->eduschoolpay->users->_openid_->contracts->get([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'plan_id' => '101164396123311331',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -85,10 +85,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/eduschoolpay/users/{openid}/contracts')->get([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'plan_id' => '101164396123311331',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -98,10 +98,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/eduschoolpay/users/{openid}/contracts']->get([
   'openid' => 'oUpF8uMuAJOM2pxb1Q',
   'query' => [
-    'plan_id' => '101164396123311331',
+    'plan_id'         => '101164396123311331',
     'contract_status' => 'ADD',
-    'offset' => 0,
-    'limit' => 20,
+    'offset'          => 0,
+    'limit'           => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

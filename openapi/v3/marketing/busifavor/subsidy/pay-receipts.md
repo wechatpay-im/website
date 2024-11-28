@@ -163,8 +163,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->subsidy->payReceipts->getAsync([
   'query' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -177,8 +177,8 @@ $instance->v3->marketing->busifavor->subsidy->payReceipts->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/subsidy/pay-receipts')->getAsync([
   'query' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -191,8 +191,8 @@ $instance->chain('v3/marketing/busifavor/subsidy/pay-receipts')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/subsidy/pay-receipts']->getAsync([
   'query' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -205,8 +205,8 @@ $instance['v3/marketing/busifavor/subsidy/pay-receipts']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->subsidy->payReceipts->get([
   'query' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -216,8 +216,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/subsidy/pay-receipts')->get([
   'query' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -227,8 +227,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/subsidy/pay-receipts']->get([
   'query' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ]);

@@ -26,14 +26,14 @@ description: 查询指定用户指定日期微工卡核身记录，查询结果�
 ```php [异步纯链式]
 $instance->v3->payrollCard->authentications->getAsync([
   'query' => [
-    'openid' => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'authenticate_date' => '2020-12-25',
+    'openid'             => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
+    'appid'              => 'wxa1111111',
+    'sub_appid'          => 'wxa1111111',
+    'sub_mchid'          => '1111111',
+    'authenticate_date'  => '2020-12-25',
     'authenticate_state' => 'AUTHENTICATE_SUCCESS',
-    'offset' => 0,
-    'limit' => 10,
+    'offset'             => 0,
+    'limit'              => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,14 +45,14 @@ $instance->v3->payrollCard->authentications->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/payroll-card/authentications')->getAsync([
   'query' => [
-    'openid' => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'authenticate_date' => '2020-12-25',
+    'openid'             => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
+    'appid'              => 'wxa1111111',
+    'sub_appid'          => 'wxa1111111',
+    'sub_mchid'          => '1111111',
+    'authenticate_date'  => '2020-12-25',
     'authenticate_state' => 'AUTHENTICATE_SUCCESS',
-    'offset' => 0,
-    'limit' => 10,
+    'offset'             => 0,
+    'limit'              => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,14 +64,14 @@ $instance->chain('v3/payroll-card/authentications')->getAsync([
 ```php [异步属性式]
 $instance['v3/payroll-card/authentications']->getAsync([
   'query' => [
-    'openid' => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'authenticate_date' => '2020-12-25',
+    'openid'             => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
+    'appid'              => 'wxa1111111',
+    'sub_appid'          => 'wxa1111111',
+    'sub_mchid'          => '1111111',
+    'authenticate_date'  => '2020-12-25',
     'authenticate_state' => 'AUTHENTICATE_SUCCESS',
-    'offset' => 0,
-    'limit' => 10,
+    'offset'             => 0,
+    'limit'              => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -83,14 +83,14 @@ $instance['v3/payroll-card/authentications']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payrollCard->authentications->get([
   'query' => [
-    'openid' => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'authenticate_date' => '2020-12-25',
+    'openid'             => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
+    'appid'              => 'wxa1111111',
+    'sub_appid'          => 'wxa1111111',
+    'sub_mchid'          => '1111111',
+    'authenticate_date'  => '2020-12-25',
     'authenticate_state' => 'AUTHENTICATE_SUCCESS',
-    'offset' => 0,
-    'limit' => 10,
+    'offset'             => 0,
+    'limit'              => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -99,14 +99,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payroll-card/authentications')->get([
   'query' => [
-    'openid' => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'authenticate_date' => '2020-12-25',
+    'openid'             => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
+    'appid'              => 'wxa1111111',
+    'sub_appid'          => 'wxa1111111',
+    'sub_mchid'          => '1111111',
+    'authenticate_date'  => '2020-12-25',
     'authenticate_state' => 'AUTHENTICATE_SUCCESS',
-    'offset' => 0,
-    'limit' => 10,
+    'offset'             => 0,
+    'limit'              => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -115,14 +115,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payroll-card/authentications']->get([
   'query' => [
-    'openid' => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'authenticate_date' => '2020-12-25',
+    'openid'             => 'onqOjjmo8wmTOOtSKwXtGjg9Gb58',
+    'appid'              => 'wxa1111111',
+    'sub_appid'          => 'wxa1111111',
+    'sub_mchid'          => '1111111',
+    'authenticate_date'  => '2020-12-25',
     'authenticate_state' => 'AUTHENTICATE_SUCCESS',
-    'offset' => 0,
-    'limit' => 10,
+    'offset'             => 0,
+    'limit'              => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
