@@ -72,17 +72,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| website_state {data-required}| string | 子商户经营网址状态
-| domains {data-required}| string[] | H5支付域名
-| webiste_url {data-required}| string | 子商户H5经营网址
+| sub_mchid {data-required} | string | 子商户号
+| website_state {data-required} | string | 子商户经营网址状态
+| domains {data-required} | string[] | H5支付域名
+| webiste_url {data-required} | string | 子商户H5经营网址
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
-| applyment_id {data-required}| integer | 申请单号
+| applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
 | applyment_state | string | 申请单状态
 | notify_url | string | 商户提供的审核结果回调接口
-| out_applyment_id {data-required}| string | 商户申请单号
+| out_applyment_id {data-required} | string | 商户申请单号
 
 {.im-table #response}
 
@@ -112,11 +112,11 @@ $instance->v3->global->merchant->h5->permission->domain->applications->_applymen
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'applyment_id' => '100000',
   'json' => [
-    'domains' => ['string'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
+    'domains'                    => ['string'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
+    'website_homepage_pics'      => ['MediaId'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -130,11 +130,11 @@ $instance->chain('v3/global/merchant/h5/permission/domain/applications/{applymen
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'applyment_id' => '100000',
   'json' => [
-    'domains' => ['string'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
+    'domains'                    => ['string'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
+    'website_homepage_pics'      => ['MediaId'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -148,11 +148,11 @@ $instance['v3/global/merchant/h5/permission/domain/applications/{applyment_id}']
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'applyment_id' => '100000',
   'json' => [
-    'domains' => ['string'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
+    'domains'                    => ['string'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
+    'website_homepage_pics'      => ['MediaId'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -166,11 +166,11 @@ $response = $instance->v3->global->merchant->h5->permission->domain->application
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'applyment_id' => '100000',
   'json' => [
-    'domains' => ['string'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
+    'domains'                    => ['string'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
+    'website_homepage_pics'      => ['MediaId'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -181,11 +181,11 @@ $response = $instance->chain('v3/global/merchant/h5/permission/domain/applicatio
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'applyment_id' => '100000',
   'json' => [
-    'domains' => ['string'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
+    'domains'                    => ['string'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
+    'website_homepage_pics'      => ['MediaId'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -196,11 +196,11 @@ $response = $instance['v3/global/merchant/h5/permission/domain/applications/{app
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'applyment_id' => '100000',
   'json' => [
-    'domains' => ['string'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
+    'domains'                    => ['string'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
+    'website_homepage_pics'      => ['MediaId'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -210,17 +210,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| website_state {data-required}| string | 子商户经营网址状态
-| domains {data-required}| string[] | H5支付域名
-| webiste_url {data-required}| string | 子商户H5经营网址
+| sub_mchid {data-required} | string | 子商户号
+| website_state {data-required} | string | 子商户经营网址状态
+| domains {data-required} | string[] | H5支付域名
+| webiste_url {data-required} | string | 子商户H5经营网址
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
-| applyment_id {data-required}| integer | 申请单号
+| applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
 | applyment_state | string | 申请单状态
 | notify_url | string | 商户提供的审核结果回调接口
-| out_applyment_id {data-required}| string | 商户申请单号
+| out_applyment_id {data-required} | string | 商户申请单号
 
 {.im-table #response}
 

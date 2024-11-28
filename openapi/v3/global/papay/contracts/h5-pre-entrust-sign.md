@@ -33,19 +33,19 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 $instance->v3->global->papay->contracts->h5PreEntrustSign->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'return_appid' => 'wxcbda96de0b165484',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
-    'return_url' => 'https://pay.weixin.qq.com',
+    'return_appid'       => 'wxcbda96de0b165484',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,19 +58,19 @@ $instance->v3->global->papay->contracts->h5PreEntrustSign->postAsync([
 $instance->chain('v3/global/papay/contracts/h5-pre-entrust-sign')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'return_appid' => 'wxcbda96de0b165484',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
-    'return_url' => 'https://pay.weixin.qq.com',
+    'return_appid'       => 'wxcbda96de0b165484',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -83,19 +83,19 @@ $instance->chain('v3/global/papay/contracts/h5-pre-entrust-sign')->postAsync([
 $instance['v3/global/papay/contracts/h5-pre-entrust-sign']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'return_appid' => 'wxcbda96de0b165484',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
-    'return_url' => 'https://pay.weixin.qq.com',
+    'return_appid'       => 'wxcbda96de0b165484',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -108,19 +108,19 @@ $instance['v3/global/papay/contracts/h5-pre-entrust-sign']->postAsync([
 $response = $instance->v3->global->papay->contracts->h5PreEntrustSign->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'return_appid' => 'wxcbda96de0b165484',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
-    'return_url' => 'https://pay.weixin.qq.com',
+    'return_appid'       => 'wxcbda96de0b165484',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -130,19 +130,19 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/papay/contracts/h5-pre-entrust-sign')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'return_appid' => 'wxcbda96de0b165484',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
-    'return_url' => 'https://pay.weixin.qq.com',
+    'return_appid'       => 'wxcbda96de0b165484',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -152,19 +152,19 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/papay/contracts/h5-pre-entrust-sign']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'return_appid' => 'wxcbda96de0b165484',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
-    'return_url' => 'https://pay.weixin.qq.com',
+    'return_appid'       => 'wxcbda96de0b165484',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -174,7 +174,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sign_url {data-required}| string | 签约跳转URL
+| sign_url {data-required} | string | 签约跳转URL
 
 {.im-table #response}
 

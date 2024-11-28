@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| url {data-required}| string | 下载链接
+| url {data-required} | string | 下载链接
 
 {.im-table #response}
 

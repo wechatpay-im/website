@@ -29,15 +29,15 @@ description: 商户可通过调用此接口，提交回复内容。其中上传�
 $instance->v3->merchantService->complaintsV2->_complaint_id_->response->postAsync([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'complainted_mchid' => '1900012181',
-    'response_content' => '已与用户沟通解决',
-    'response_images' => ['MediaId'],
-    'jump_url' => 'https://www.xxx.com/notify',
-    'jump_url_text' => '查看订单详情',
+    'complainted_mchid'      => '1900012181',
+    'response_content'       => '已与用户沟通解决',
+    'response_images'        => ['MediaId'],
+    'jump_url'               => 'https://www.xxx.com/notify',
+    'jump_url_text'          => '查看订单详情',
     'mini_program_jump_info' => [
       'appid' => 'example_appid',
-      'path' => 'example_path',
-      'text' => 'example_text',
+      'path'  => 'example_path',
+      'text'  => 'example_text',
     ],
   ],
 ])
@@ -51,15 +51,15 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->response->postAsyn
 $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response')->postAsync([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'complainted_mchid' => '1900012181',
-    'response_content' => '已与用户沟通解决',
-    'response_images' => ['MediaId'],
-    'jump_url' => 'https://www.xxx.com/notify',
-    'jump_url_text' => '查看订单详情',
+    'complainted_mchid'      => '1900012181',
+    'response_content'       => '已与用户沟通解决',
+    'response_images'        => ['MediaId'],
+    'jump_url'               => 'https://www.xxx.com/notify',
+    'jump_url_text'          => '查看订单详情',
     'mini_program_jump_info' => [
       'appid' => 'example_appid',
-      'path' => 'example_path',
-      'text' => 'example_text',
+      'path'  => 'example_path',
+      'text'  => 'example_text',
     ],
   ],
 ])
@@ -73,15 +73,15 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response')->p
 $instance['v3/merchant-service/complaints-v2/{complaint_id}/response']->postAsync([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'complainted_mchid' => '1900012181',
-    'response_content' => '已与用户沟通解决',
-    'response_images' => ['MediaId'],
-    'jump_url' => 'https://www.xxx.com/notify',
-    'jump_url_text' => '查看订单详情',
+    'complainted_mchid'      => '1900012181',
+    'response_content'       => '已与用户沟通解决',
+    'response_images'        => ['MediaId'],
+    'jump_url'               => 'https://www.xxx.com/notify',
+    'jump_url_text'          => '查看订单详情',
     'mini_program_jump_info' => [
       'appid' => 'example_appid',
-      'path' => 'example_path',
-      'text' => 'example_text',
+      'path'  => 'example_path',
+      'text'  => 'example_text',
     ],
   ],
 ])
@@ -95,15 +95,15 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/response']->postAsyn
 $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->response->post([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'complainted_mchid' => '1900012181',
-    'response_content' => '已与用户沟通解决',
-    'response_images' => ['MediaId'],
-    'jump_url' => 'https://www.xxx.com/notify',
-    'jump_url_text' => '查看订单详情',
+    'complainted_mchid'      => '1900012181',
+    'response_content'       => '已与用户沟通解决',
+    'response_images'        => ['MediaId'],
+    'jump_url'               => 'https://www.xxx.com/notify',
+    'jump_url_text'          => '查看订单详情',
     'mini_program_jump_info' => [
       'appid' => 'example_appid',
-      'path' => 'example_path',
-      'text' => 'example_text',
+      'path'  => 'example_path',
+      'text'  => 'example_text',
     ],
   ],
 ]);
@@ -114,15 +114,15 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response')->post([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'complainted_mchid' => '1900012181',
-    'response_content' => '已与用户沟通解决',
-    'response_images' => ['MediaId'],
-    'jump_url' => 'https://www.xxx.com/notify',
-    'jump_url_text' => '查看订单详情',
+    'complainted_mchid'      => '1900012181',
+    'response_content'       => '已与用户沟通解决',
+    'response_images'        => ['MediaId'],
+    'jump_url'               => 'https://www.xxx.com/notify',
+    'jump_url_text'          => '查看订单详情',
     'mini_program_jump_info' => [
       'appid' => 'example_appid',
-      'path' => 'example_path',
-      'text' => 'example_text',
+      'path'  => 'example_path',
+      'text'  => 'example_text',
     ],
   ],
 ]);
@@ -133,15 +133,15 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/response']->post([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'complainted_mchid' => '1900012181',
-    'response_content' => '已与用户沟通解决',
-    'response_images' => ['MediaId'],
-    'jump_url' => 'https://www.xxx.com/notify',
-    'jump_url_text' => '查看订单详情',
+    'complainted_mchid'      => '1900012181',
+    'response_content'       => '已与用户沟通解决',
+    'response_images'        => ['MediaId'],
+    'jump_url'               => 'https://www.xxx.com/notify',
+    'jump_url_text'          => '查看订单详情',
     'mini_program_jump_info' => [
       'appid' => 'example_appid',
-      'path' => 'example_path',
-      'text' => 'example_text',
+      'path'  => 'example_path',
+      'text'  => 'example_text',
     ],
   ],
 ]);

@@ -83,8 +83,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| state {data-required}| string | 申请单状态
-| create_time {data-required}| string | 申请单创建时间
+| state {data-required} | string | 申请单状态
+| create_time {data-required} | string | 申请单创建时间
 
 {.im-table #response}
 

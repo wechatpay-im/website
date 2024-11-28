@@ -39,29 +39,29 @@ description: 一键绑卡不是支持所有银行卡，上线前请先测试是�
 ```php [异步纯链式]
 $instance->v3->offlineface->contracts->presign->postAsync([
   'json' => [
-    'business_name' => '',
-    'facepay_user' => [
-      'out_user_id' => '',
+    'business_name'   => '',
+    'facepay_user'    => [
+      'out_user_id'         => '',
       'identification_name' => '',
-      'organization_id' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'organization_id'     => '',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'phone' => '',
+      'phone'               => '',
     ],
     'limit_bank_card' => [
-      'bank_card_number' => '',
+      'bank_card_number'    => '',
       'identification_name' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'valid_thru' => '',
-      'bank_type' => '',
-      'phone' => '',
+      'valid_thru'          => '',
+      'bank_type'           => '',
+      'phone'               => '',
     ],
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'contract_mode'   => 'LIMIT_BANK_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -76,29 +76,29 @@ $instance->v3->offlineface->contracts->presign->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/offlineface/contracts/presign')->postAsync([
   'json' => [
-    'business_name' => '',
-    'facepay_user' => [
-      'out_user_id' => '',
+    'business_name'   => '',
+    'facepay_user'    => [
+      'out_user_id'         => '',
       'identification_name' => '',
-      'organization_id' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'organization_id'     => '',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'phone' => '',
+      'phone'               => '',
     ],
     'limit_bank_card' => [
-      'bank_card_number' => '',
+      'bank_card_number'    => '',
       'identification_name' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'valid_thru' => '',
-      'bank_type' => '',
-      'phone' => '',
+      'valid_thru'          => '',
+      'bank_type'           => '',
+      'phone'               => '',
     ],
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'contract_mode'   => 'LIMIT_BANK_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -113,29 +113,29 @@ $instance->chain('v3/offlineface/contracts/presign')->postAsync([
 ```php [异步属性式]
 $instance['v3/offlineface/contracts/presign']->postAsync([
   'json' => [
-    'business_name' => '',
-    'facepay_user' => [
-      'out_user_id' => '',
+    'business_name'   => '',
+    'facepay_user'    => [
+      'out_user_id'         => '',
       'identification_name' => '',
-      'organization_id' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'organization_id'     => '',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'phone' => '',
+      'phone'               => '',
     ],
     'limit_bank_card' => [
-      'bank_card_number' => '',
+      'bank_card_number'    => '',
       'identification_name' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'valid_thru' => '',
-      'bank_type' => '',
-      'phone' => '',
+      'valid_thru'          => '',
+      'bank_type'           => '',
+      'phone'               => '',
     ],
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'contract_mode'   => 'LIMIT_BANK_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -150,29 +150,29 @@ $instance['v3/offlineface/contracts/presign']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->offlineface->contracts->presign->post([
   'json' => [
-    'business_name' => '',
-    'facepay_user' => [
-      'out_user_id' => '',
+    'business_name'   => '',
+    'facepay_user'    => [
+      'out_user_id'         => '',
       'identification_name' => '',
-      'organization_id' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'organization_id'     => '',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'phone' => '',
+      'phone'               => '',
     ],
     'limit_bank_card' => [
-      'bank_card_number' => '',
+      'bank_card_number'    => '',
       'identification_name' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'valid_thru' => '',
-      'bank_type' => '',
-      'phone' => '',
+      'valid_thru'          => '',
+      'bank_type'           => '',
+      'phone'               => '',
     ],
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'contract_mode'   => 'LIMIT_BANK_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -184,29 +184,29 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/offlineface/contracts/presign')->post([
   'json' => [
-    'business_name' => '',
-    'facepay_user' => [
-      'out_user_id' => '',
+    'business_name'   => '',
+    'facepay_user'    => [
+      'out_user_id'         => '',
       'identification_name' => '',
-      'organization_id' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'organization_id'     => '',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'phone' => '',
+      'phone'               => '',
     ],
     'limit_bank_card' => [
-      'bank_card_number' => '',
+      'bank_card_number'    => '',
       'identification_name' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'valid_thru' => '',
-      'bank_type' => '',
-      'phone' => '',
+      'valid_thru'          => '',
+      'bank_type'           => '',
+      'phone'               => '',
     ],
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'contract_mode'   => 'LIMIT_BANK_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -218,29 +218,29 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/offlineface/contracts/presign']->post([
   'json' => [
-    'business_name' => '',
-    'facepay_user' => [
-      'out_user_id' => '',
+    'business_name'   => '',
+    'facepay_user'    => [
+      'out_user_id'         => '',
       'identification_name' => '',
-      'organization_id' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'organization_id'     => '',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'phone' => '',
+      'phone'               => '',
     ],
     'limit_bank_card' => [
-      'bank_card_number' => '',
+      'bank_card_number'    => '',
       'identification_name' => '',
-      'identification' => [
-        'identification_type' => 'IDCARD',
+      'identification'      => [
+        'identification_type'   => 'IDCARD',
         'identification_number' => '',
       ],
-      'valid_thru' => '',
-      'bank_type' => '',
-      'phone' => '',
+      'valid_thru'          => '',
+      'bank_type'           => '',
+      'phone'               => '',
     ],
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'contract_mode'   => 'LIMIT_BANK_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -253,7 +253,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| presign_token {data-required}| string | 会话ID
+| presign_token {data-required} | string | 会话ID
 
 {.im-table #response}
 

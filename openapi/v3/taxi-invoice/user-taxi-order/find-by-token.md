@@ -111,11 +111,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number {data-required}| string | 车牌号
-| driver_license {data-required}| string | 营运资格证号
-| up_time {data-required}| string | 上车时间
-| region_id {data-required}| integer | 行政区划代码
-| source {data-required}| string | 乘客行程单来源
+| plate_number {data-required} | string | 车牌号
+| driver_license {data-required} | string | 营运资格证号
+| up_time {data-required} | string | 上车时间
+| region_id {data-required} | integer | 行政区划代码
+| source {data-required} | string | 乘客行程单来源
 | pay_time | string | 面对面付款时间
 | pay_amount | integer | 面对面付款金额
 

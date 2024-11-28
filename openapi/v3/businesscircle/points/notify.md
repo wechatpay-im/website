@@ -27,15 +27,15 @@ description: 通过积分通知回调API，商圈商户/服务商可针对微信
 ```php [异步纯链式]
 $instance->v3->businesscircle->points->notify->postAsync([
   'json' => [
-    'sub_mchid' => '1234567890',
-    'transaction_id' => '1217752501201407033233368018',
-    'appid' => 'wx1234567890abcdef',
-    'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
-    'earn_points' => true,
-    'increased_points' => 100,
+    'sub_mchid'          => '1234567890',
+    'transaction_id'     => '1217752501201407033233368018',
+    'appid'              => 'wx1234567890abcdef',
+    'openid'             => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
+    'earn_points'        => true,
+    'increased_points'   => 100,
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
-    'no_points_remarks' => '商品不参与积分活动',
-    'total_points' => 888888,
+    'no_points_remarks'  => '商品不参与积分活动',
+    'total_points'       => 888888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,15 +47,15 @@ $instance->v3->businesscircle->points->notify->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/businesscircle/points/notify')->postAsync([
   'json' => [
-    'sub_mchid' => '1234567890',
-    'transaction_id' => '1217752501201407033233368018',
-    'appid' => 'wx1234567890abcdef',
-    'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
-    'earn_points' => true,
-    'increased_points' => 100,
+    'sub_mchid'          => '1234567890',
+    'transaction_id'     => '1217752501201407033233368018',
+    'appid'              => 'wx1234567890abcdef',
+    'openid'             => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
+    'earn_points'        => true,
+    'increased_points'   => 100,
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
-    'no_points_remarks' => '商品不参与积分活动',
-    'total_points' => 888888,
+    'no_points_remarks'  => '商品不参与积分活动',
+    'total_points'       => 888888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,15 +67,15 @@ $instance->chain('v3/businesscircle/points/notify')->postAsync([
 ```php [异步属性式]
 $instance['v3/businesscircle/points/notify']->postAsync([
   'json' => [
-    'sub_mchid' => '1234567890',
-    'transaction_id' => '1217752501201407033233368018',
-    'appid' => 'wx1234567890abcdef',
-    'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
-    'earn_points' => true,
-    'increased_points' => 100,
+    'sub_mchid'          => '1234567890',
+    'transaction_id'     => '1217752501201407033233368018',
+    'appid'              => 'wx1234567890abcdef',
+    'openid'             => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
+    'earn_points'        => true,
+    'increased_points'   => 100,
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
-    'no_points_remarks' => '商品不参与积分活动',
-    'total_points' => 888888,
+    'no_points_remarks'  => '商品不参与积分活动',
+    'total_points'       => 888888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -87,15 +87,15 @@ $instance['v3/businesscircle/points/notify']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->businesscircle->points->notify->post([
   'json' => [
-    'sub_mchid' => '1234567890',
-    'transaction_id' => '1217752501201407033233368018',
-    'appid' => 'wx1234567890abcdef',
-    'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
-    'earn_points' => true,
-    'increased_points' => 100,
+    'sub_mchid'          => '1234567890',
+    'transaction_id'     => '1217752501201407033233368018',
+    'appid'              => 'wx1234567890abcdef',
+    'openid'             => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
+    'earn_points'        => true,
+    'increased_points'   => 100,
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
-    'no_points_remarks' => '商品不参与积分活动',
-    'total_points' => 888888,
+    'no_points_remarks'  => '商品不参与积分活动',
+    'total_points'       => 888888,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -104,15 +104,15 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/businesscircle/points/notify')->post([
   'json' => [
-    'sub_mchid' => '1234567890',
-    'transaction_id' => '1217752501201407033233368018',
-    'appid' => 'wx1234567890abcdef',
-    'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
-    'earn_points' => true,
-    'increased_points' => 100,
+    'sub_mchid'          => '1234567890',
+    'transaction_id'     => '1217752501201407033233368018',
+    'appid'              => 'wx1234567890abcdef',
+    'openid'             => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
+    'earn_points'        => true,
+    'increased_points'   => 100,
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
-    'no_points_remarks' => '商品不参与积分活动',
-    'total_points' => 888888,
+    'no_points_remarks'  => '商品不参与积分活动',
+    'total_points'       => 888888,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -121,15 +121,15 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/businesscircle/points/notify']->post([
   'json' => [
-    'sub_mchid' => '1234567890',
-    'transaction_id' => '1217752501201407033233368018',
-    'appid' => 'wx1234567890abcdef',
-    'openid' => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
-    'earn_points' => true,
-    'increased_points' => 100,
+    'sub_mchid'          => '1234567890',
+    'transaction_id'     => '1217752501201407033233368018',
+    'appid'              => 'wx1234567890abcdef',
+    'openid'             => 'oWmnN4xxxxxxxxxxe92NHIGf1xd8',
+    'earn_points'        => true,
+    'increased_points'   => 100,
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
-    'no_points_remarks' => '商品不参与积分活动',
-    'total_points' => 888888,
+    'no_points_remarks'  => '商品不参与积分活动',
+    'total_points'       => 888888,
   ],
 ]);
 print_r($response->getStatusCode() === 204);

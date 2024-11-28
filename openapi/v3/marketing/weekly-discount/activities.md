@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 周周惠活动详情
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 周周惠活动详情
 | activity_id {data-indent=1} | string | 活动ID
 | activity_name {data-required data-indent=1} | string | 活动名称
 | activity_scene {data-required data-indent=1} | string | 活动投放场景
@@ -134,9 +134,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | activity_state {data-required data-indent=1} | string | 活动状态
 | activity_remark {data-indent=1} | string | 活动备注
 | activity_logo {data-required data-indent=1} | string | 活动logo
-| offset {data-required}| integer | 请求资源起始位置
-| limit {data-required}| integer | 最大资源条数
-| total_count {data-required}| integer | 资源总条数
+| offset {data-required} | integer | 请求资源起始位置
+| limit {data-required} | integer | 最大资源条数
+| total_count {data-required} | integer | 资源总条数
 
 {.im-table #response}
 

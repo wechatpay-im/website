@@ -18,11 +18,11 @@
 ```php [异步纯链式]
 $instance->v3->eduStar->orders->postAsync([
   'json' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'right_id' => 'qw3Da21QRCNt',
-    'create_time' => '2018-05-23T12:13:50+08:00',
+    'qq'            => '',
+    'right_id'      => 'qw3Da21QRCNt',
+    'create_time'   => '2018-05-23T12:13:50+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,11 +34,11 @@ $instance->v3->eduStar->orders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/edu-star/orders')->postAsync([
   'json' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'right_id' => 'qw3Da21QRCNt',
-    'create_time' => '2018-05-23T12:13:50+08:00',
+    'qq'            => '',
+    'right_id'      => 'qw3Da21QRCNt',
+    'create_time'   => '2018-05-23T12:13:50+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,11 +50,11 @@ $instance->chain('v3/edu-star/orders')->postAsync([
 ```php [异步属性式]
 $instance['v3/edu-star/orders']->postAsync([
   'json' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'right_id' => 'qw3Da21QRCNt',
-    'create_time' => '2018-05-23T12:13:50+08:00',
+    'qq'            => '',
+    'right_id'      => 'qw3Da21QRCNt',
+    'create_time'   => '2018-05-23T12:13:50+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -66,11 +66,11 @@ $instance['v3/edu-star/orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->eduStar->orders->post([
   'json' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'right_id' => 'qw3Da21QRCNt',
-    'create_time' => '2018-05-23T12:13:50+08:00',
+    'qq'            => '',
+    'right_id'      => 'qw3Da21QRCNt',
+    'create_time'   => '2018-05-23T12:13:50+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -79,11 +79,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/edu-star/orders')->post([
   'json' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'right_id' => 'qw3Da21QRCNt',
-    'create_time' => '2018-05-23T12:13:50+08:00',
+    'qq'            => '',
+    'right_id'      => 'qw3Da21QRCNt',
+    'create_time'   => '2018-05-23T12:13:50+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -92,11 +92,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/edu-star/orders']->post([
   'json' => [
-    'appid' => 'wx998877665544wx',
+    'appid'         => 'wx998877665544wx',
     'wechat_openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'qq' => '',
-    'right_id' => 'qw3Da21QRCNt',
-    'create_time' => '2018-05-23T12:13:50+08:00',
+    'qq'            => '',
+    'right_id'      => 'qw3Da21QRCNt',
+    'create_time'   => '2018-05-23T12:13:50+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -106,13 +106,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | appid
-| wechat_openid {data-required}| string | 用户在appid下的唯一标识
+| appid {data-required} | string | appid
+| wechat_openid {data-required} | string | 用户在appid下的唯一标识
 | qq | string | 用户QQ账号
-| right_id {data-required}| string | 权益ID
-| create_time {data-required}| string | 权益核销时间
-| order_state {data-required}| string | 订单状态
-| order_id {data-required}| string | 订单号
+| right_id {data-required} | string | 权益ID
+| create_time {data-required} | string | 权益核销时间
+| order_state {data-required} | string | 订单状态
+| order_id {data-required} | string | 订单号
 
 {.im-table #response}
 
@@ -226,7 +226,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 结果集
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 结果集
 | appid {data-required data-indent=1} | string | appid
 | wechat_openid {data-required data-indent=1} | string | 用户在appid下的唯一标识
 | qq {data-indent=1} | string | 用户QQ账号
@@ -234,7 +234,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | create_time {data-required data-indent=1} | string | 权益核销时间
 | order_state {data-required data-indent=1} | string | 订单状态
 | order_id {data-required data-indent=1} | string | 订单号
-| total_count {data-required}| integer | 总数量
+| total_count {data-required} | integer | 总数量
 | offset | integer | 分页页码
 | limit | integer | 分页大小
 

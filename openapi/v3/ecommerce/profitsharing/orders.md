@@ -23,17 +23,17 @@
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->orders->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'             => 'MERCHANT_ID',
       'receiver_account' => '1900000109',
-      'amount' => 190,
-      'description' => '分给商户1900000109',
+      'amount'           => 190,
+      'description'      => '分给商户1900000109',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,17 +45,17 @@ $instance->v3->ecommerce->profitsharing->orders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/orders')->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'             => 'MERCHANT_ID',
       'receiver_account' => '1900000109',
-      'amount' => 190,
-      'description' => '分给商户1900000109',
+      'amount'           => 190,
+      'description'      => '分给商户1900000109',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,17 +67,17 @@ $instance->chain('v3/ecommerce/profitsharing/orders')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/orders']->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'             => 'MERCHANT_ID',
       'receiver_account' => '1900000109',
-      'amount' => 190,
-      'description' => '分给商户1900000109',
+      'amount'           => 190,
+      'description'      => '分给商户1900000109',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -89,17 +89,17 @@ $instance['v3/ecommerce/profitsharing/orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->orders->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'             => 'MERCHANT_ID',
       'receiver_account' => '1900000109',
-      'amount' => 190,
-      'description' => '分给商户1900000109',
+      'amount'           => 190,
+      'description'      => '分给商户1900000109',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -108,17 +108,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/orders')->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'             => 'MERCHANT_ID',
       'receiver_account' => '1900000109',
-      'amount' => 190,
-      'description' => '分给商户1900000109',
+      'amount'           => 190,
+      'description'      => '分给商户1900000109',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -127,17 +127,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/orders']->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'             => 'MERCHANT_ID',
       'receiver_account' => '1900000109',
-      'amount' => 190,
-      'description' => '分给商户1900000109',
+      'amount'           => 190,
+      'description'      => '分给商户1900000109',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -147,10 +147,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| transaction_id {data-required}| string | 微信订单号
-| out_order_no {data-required}| string | 商户分账单号
-| order_id {data-required}| string | 微信分账单号
+| sub_mchid {data-required} | string | 二级商户号
+| transaction_id {data-required} | string | 微信订单号
+| out_order_no {data-required} | string | 商户分账单号
+| order_id {data-required} | string | 微信分账单号
 
 {.im-table #response}
 
@@ -250,10 +250,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| transaction_id {data-required}| string | 微信订单号
-| out_order_no {data-required}| string | 商户分账单号
-| order_id {data-required}| string | 微信分账单号
+| sub_mchid {data-required} | string | 二级商户号
+| transaction_id {data-required} | string | 微信订单号
+| out_order_no {data-required} | string | 商户分账单号
+| order_id {data-required} | string | 微信分账单号
 | status | string | 分账单状态
 | receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | receiver_mchid {data-required data-indent=1} | string | 分账接收商户号

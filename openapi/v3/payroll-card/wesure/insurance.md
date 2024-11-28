@@ -27,15 +27,15 @@ description: 生成投保结果
 ```php [异步纯链式]
 $instance->v3->payrollCard->wesure->insurance->postAsync([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'wesure_order_no' => '1900000109',
-    'token' => '5fds5345dfd',
+    'sp_mchid'                   => '1900000109',
+    'wesure_order_no'            => '1900000109',
+    'token'                      => '5fds5345dfd',
     'insurance_company_order_no' => '5fds5345dfd',
-    'openid' => '111111',
-    'insure_state' => 'INSURE_SUCCESS',
-    'insure_effect_time' => '2018-06-08T10:34:56+08:00',
-    'insure_invalid_time' => '2018-06-08T10:34:56+08:00',
-    'insurance_company_name' => '平安',
+    'openid'                     => '111111',
+    'insure_state'               => 'INSURE_SUCCESS',
+    'insure_effect_time'         => '2018-06-08T10:34:56+08:00',
+    'insure_invalid_time'        => '2018-06-08T10:34:56+08:00',
+    'insurance_company_name'     => '平安',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,15 +47,15 @@ $instance->v3->payrollCard->wesure->insurance->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payroll-card/wesure/insurance')->postAsync([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'wesure_order_no' => '1900000109',
-    'token' => '5fds5345dfd',
+    'sp_mchid'                   => '1900000109',
+    'wesure_order_no'            => '1900000109',
+    'token'                      => '5fds5345dfd',
     'insurance_company_order_no' => '5fds5345dfd',
-    'openid' => '111111',
-    'insure_state' => 'INSURE_SUCCESS',
-    'insure_effect_time' => '2018-06-08T10:34:56+08:00',
-    'insure_invalid_time' => '2018-06-08T10:34:56+08:00',
-    'insurance_company_name' => '平安',
+    'openid'                     => '111111',
+    'insure_state'               => 'INSURE_SUCCESS',
+    'insure_effect_time'         => '2018-06-08T10:34:56+08:00',
+    'insure_invalid_time'        => '2018-06-08T10:34:56+08:00',
+    'insurance_company_name'     => '平安',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,15 +67,15 @@ $instance->chain('v3/payroll-card/wesure/insurance')->postAsync([
 ```php [异步属性式]
 $instance['v3/payroll-card/wesure/insurance']->postAsync([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'wesure_order_no' => '1900000109',
-    'token' => '5fds5345dfd',
+    'sp_mchid'                   => '1900000109',
+    'wesure_order_no'            => '1900000109',
+    'token'                      => '5fds5345dfd',
     'insurance_company_order_no' => '5fds5345dfd',
-    'openid' => '111111',
-    'insure_state' => 'INSURE_SUCCESS',
-    'insure_effect_time' => '2018-06-08T10:34:56+08:00',
-    'insure_invalid_time' => '2018-06-08T10:34:56+08:00',
-    'insurance_company_name' => '平安',
+    'openid'                     => '111111',
+    'insure_state'               => 'INSURE_SUCCESS',
+    'insure_effect_time'         => '2018-06-08T10:34:56+08:00',
+    'insure_invalid_time'        => '2018-06-08T10:34:56+08:00',
+    'insurance_company_name'     => '平安',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -87,15 +87,15 @@ $instance['v3/payroll-card/wesure/insurance']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payrollCard->wesure->insurance->post([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'wesure_order_no' => '1900000109',
-    'token' => '5fds5345dfd',
+    'sp_mchid'                   => '1900000109',
+    'wesure_order_no'            => '1900000109',
+    'token'                      => '5fds5345dfd',
     'insurance_company_order_no' => '5fds5345dfd',
-    'openid' => '111111',
-    'insure_state' => 'INSURE_SUCCESS',
-    'insure_effect_time' => '2018-06-08T10:34:56+08:00',
-    'insure_invalid_time' => '2018-06-08T10:34:56+08:00',
-    'insurance_company_name' => '平安',
+    'openid'                     => '111111',
+    'insure_state'               => 'INSURE_SUCCESS',
+    'insure_effect_time'         => '2018-06-08T10:34:56+08:00',
+    'insure_invalid_time'        => '2018-06-08T10:34:56+08:00',
+    'insurance_company_name'     => '平安',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -104,15 +104,15 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/payroll-card/wesure/insurance')->post([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'wesure_order_no' => '1900000109',
-    'token' => '5fds5345dfd',
+    'sp_mchid'                   => '1900000109',
+    'wesure_order_no'            => '1900000109',
+    'token'                      => '5fds5345dfd',
     'insurance_company_order_no' => '5fds5345dfd',
-    'openid' => '111111',
-    'insure_state' => 'INSURE_SUCCESS',
-    'insure_effect_time' => '2018-06-08T10:34:56+08:00',
-    'insure_invalid_time' => '2018-06-08T10:34:56+08:00',
-    'insurance_company_name' => '平安',
+    'openid'                     => '111111',
+    'insure_state'               => 'INSURE_SUCCESS',
+    'insure_effect_time'         => '2018-06-08T10:34:56+08:00',
+    'insure_invalid_time'        => '2018-06-08T10:34:56+08:00',
+    'insurance_company_name'     => '平安',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -121,15 +121,15 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/payroll-card/wesure/insurance']->post([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'wesure_order_no' => '1900000109',
-    'token' => '5fds5345dfd',
+    'sp_mchid'                   => '1900000109',
+    'wesure_order_no'            => '1900000109',
+    'token'                      => '5fds5345dfd',
     'insurance_company_order_no' => '5fds5345dfd',
-    'openid' => '111111',
-    'insure_state' => 'INSURE_SUCCESS',
-    'insure_effect_time' => '2018-06-08T10:34:56+08:00',
-    'insure_invalid_time' => '2018-06-08T10:34:56+08:00',
-    'insurance_company_name' => '平安',
+    'openid'                     => '111111',
+    'insure_state'               => 'INSURE_SUCCESS',
+    'insure_effect_time'         => '2018-06-08T10:34:56+08:00',
+    'insure_invalid_time'        => '2018-06-08T10:34:56+08:00',
+    'insurance_company_name'     => '平安',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

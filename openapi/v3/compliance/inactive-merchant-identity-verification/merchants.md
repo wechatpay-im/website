@@ -83,7 +83,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| verification_id {data-required}| string | 核实单号
+| verification_id {data-required} | string | 核实单号
 
 {.im-table #response}
 

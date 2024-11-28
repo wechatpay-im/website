@@ -37,22 +37,22 @@ description: 可应用于定期扣款或需事后扣款以期提高效率的场�
 $instance->v3->global->papay->transactions->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_mchid'              => '1230000109',
+    'sub_appid'              => 'wxcbda96de0b165484',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'notify_url'             => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
     'merchant_category_code' => '1011',
-    'contract_id' => '100005698',
-    'amount' => [
-      'total' => 888,
+    'contract_id'            => '100005698',
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
+    'scene_info'             => [
       'device_id' => '013467007045764',
       'device_ip' => '128.0.0.1',
     ],
@@ -68,22 +68,22 @@ $instance->v3->global->papay->transactions->postAsync([
 $instance->chain('v3/global/papay/transactions')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_mchid'              => '1230000109',
+    'sub_appid'              => 'wxcbda96de0b165484',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'notify_url'             => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
     'merchant_category_code' => '1011',
-    'contract_id' => '100005698',
-    'amount' => [
-      'total' => 888,
+    'contract_id'            => '100005698',
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
+    'scene_info'             => [
       'device_id' => '013467007045764',
       'device_ip' => '128.0.0.1',
     ],
@@ -99,22 +99,22 @@ $instance->chain('v3/global/papay/transactions')->postAsync([
 $instance['v3/global/papay/transactions']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_mchid'              => '1230000109',
+    'sub_appid'              => 'wxcbda96de0b165484',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'notify_url'             => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
     'merchant_category_code' => '1011',
-    'contract_id' => '100005698',
-    'amount' => [
-      'total' => 888,
+    'contract_id'            => '100005698',
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
+    'scene_info'             => [
       'device_id' => '013467007045764',
       'device_ip' => '128.0.0.1',
     ],
@@ -130,22 +130,22 @@ $instance['v3/global/papay/transactions']->postAsync([
 $response = $instance->v3->global->papay->transactions->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_mchid'              => '1230000109',
+    'sub_appid'              => 'wxcbda96de0b165484',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'notify_url'             => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
     'merchant_category_code' => '1011',
-    'contract_id' => '100005698',
-    'amount' => [
-      'total' => 888,
+    'contract_id'            => '100005698',
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
+    'scene_info'             => [
       'device_id' => '013467007045764',
       'device_ip' => '128.0.0.1',
     ],
@@ -158,22 +158,22 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/papay/transactions')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_mchid'              => '1230000109',
+    'sub_appid'              => 'wxcbda96de0b165484',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'notify_url'             => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
     'merchant_category_code' => '1011',
-    'contract_id' => '100005698',
-    'amount' => [
-      'total' => 888,
+    'contract_id'            => '100005698',
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
+    'scene_info'             => [
       'device_id' => '013467007045764',
       'device_ip' => '128.0.0.1',
     ],
@@ -186,22 +186,22 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/papay/transactions']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_mchid'              => '1230000109',
+    'sub_appid'              => 'wxcbda96de0b165484',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'notify_url'             => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
     'merchant_category_code' => '1011',
-    'contract_id' => '100005698',
-    'amount' => [
-      'total' => 888,
+    'contract_id'            => '100005698',
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
+    'scene_info'             => [
       'device_id' => '013467007045764',
       'device_ip' => '128.0.0.1',
     ],

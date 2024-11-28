@@ -25,13 +25,13 @@ description: 如果订单已经分账，在退款时，可以先调此接口，�
 ```php [异步纯链式]
 $instance->v3->profitsharing->returnOrders->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => '',
+    'sub_mchid'     => '1900000109',
+    'order_id'      => '3008450740201411110007820472',
+    'out_order_no'  => '',
     'out_return_no' => 'R20190516001',
-    'return_mchid' => '86693852',
-    'amount' => 10,
-    'description' => '用户退款',
+    'return_mchid'  => '86693852',
+    'amount'        => 10,
+    'description'   => '用户退款',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->profitsharing->returnOrders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/profitsharing/return-orders')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => '',
+    'sub_mchid'     => '1900000109',
+    'order_id'      => '3008450740201411110007820472',
+    'out_order_no'  => '',
     'out_return_no' => 'R20190516001',
-    'return_mchid' => '86693852',
-    'amount' => 10,
-    'description' => '用户退款',
+    'return_mchid'  => '86693852',
+    'amount'        => 10,
+    'description'   => '用户退款',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/profitsharing/return-orders')->postAsync([
 ```php [异步属性式]
 $instance['v3/profitsharing/return-orders']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => '',
+    'sub_mchid'     => '1900000109',
+    'order_id'      => '3008450740201411110007820472',
+    'out_order_no'  => '',
     'out_return_no' => 'R20190516001',
-    'return_mchid' => '86693852',
-    'amount' => 10,
-    'description' => '用户退款',
+    'return_mchid'  => '86693852',
+    'amount'        => 10,
+    'description'   => '用户退款',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/profitsharing/return-orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->profitsharing->returnOrders->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => '',
+    'sub_mchid'     => '1900000109',
+    'order_id'      => '3008450740201411110007820472',
+    'out_order_no'  => '',
     'out_return_no' => 'R20190516001',
-    'return_mchid' => '86693852',
-    'amount' => 10,
-    'description' => '用户退款',
+    'return_mchid'  => '86693852',
+    'amount'        => 10,
+    'description'   => '用户退款',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,13 +94,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/profitsharing/return-orders')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => '',
+    'sub_mchid'     => '1900000109',
+    'order_id'      => '3008450740201411110007820472',
+    'out_order_no'  => '',
     'out_return_no' => 'R20190516001',
-    'return_mchid' => '86693852',
-    'amount' => 10,
-    'description' => '用户退款',
+    'return_mchid'  => '86693852',
+    'amount'        => 10,
+    'description'   => '用户退款',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,13 +109,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/profitsharing/return-orders']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'order_id' => '3008450740201411110007820472',
-    'out_order_no' => '',
+    'sub_mchid'     => '1900000109',
+    'order_id'      => '3008450740201411110007820472',
+    'out_order_no'  => '',
     'out_return_no' => 'R20190516001',
-    'return_mchid' => '86693852',
-    'amount' => 10,
-    'description' => '用户退款',
+    'return_mchid'  => '86693852',
+    'amount'        => 10,
+    'description'   => '用户退款',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -126,17 +126,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| order_id {data-required}| string | 微信分账单号
-| out_order_no {data-required}| string | 商户分账单号
-| out_return_no {data-required}| string | 商户回退单号
-| return_id {data-required}| string | 微信回退单号
-| return_mchid {data-required}| string | 回退商户号
-| amount {data-required}| integer | 回退金额
-| description {data-required}| string | 回退描述
-| result {data-required}| string | 回退结果
+| order_id {data-required} | string | 微信分账单号
+| out_order_no {data-required} | string | 商户分账单号
+| out_return_no {data-required} | string | 商户回退单号
+| return_id {data-required} | string | 微信回退单号
+| return_mchid {data-required} | string | 回退商户号
+| amount {data-required} | integer | 回退金额
+| description {data-required} | string | 回退描述
+| result {data-required} | string | 回退结果
 | fail_reason | string | 失败原因
-| create_time {data-required}| string | 创建时间
-| finish_time {data-required}| string | 完成时间
+| create_time {data-required} | string | 创建时间
+| finish_time {data-required} | string | 完成时间
 
 {.im-table #response}
 

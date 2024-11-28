@@ -28,11 +28,11 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->sync->postAsync(
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'type' => 'Order_Paid',
-    'detail' => [
-      'seq' => 1,
-      'paid_time' => '20091225091210',
+    'sub_mchid'  => '1900000109',
+    'type'       => 'Order_Paid',
+    'detail'     => [
+      'seq'         => 1,
+      'paid_time'   => '20091225091210',
       'paid_amount' => 1,
     ],
   ],
@@ -48,11 +48,11 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/sync')->postAs
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'type' => 'Order_Paid',
-    'detail' => [
-      'seq' => 1,
-      'paid_time' => '20091225091210',
+    'sub_mchid'  => '1900000109',
+    'type'       => 'Order_Paid',
+    'detail'     => [
+      'seq'         => 1,
+      'paid_time'   => '20091225091210',
       'paid_amount' => 1,
     ],
   ],
@@ -68,11 +68,11 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/sync']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'type' => 'Order_Paid',
-    'detail' => [
-      'seq' => 1,
-      'paid_time' => '20091225091210',
+    'sub_mchid'  => '1900000109',
+    'type'       => 'Order_Paid',
+    'detail'     => [
+      'seq'         => 1,
+      'paid_time'   => '20091225091210',
       'paid_amount' => 1,
     ],
   ],
@@ -88,11 +88,11 @@ $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->sync
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'type' => 'Order_Paid',
-    'detail' => [
-      'seq' => 1,
-      'paid_time' => '20091225091210',
+    'sub_mchid'  => '1900000109',
+    'type'       => 'Order_Paid',
+    'detail'     => [
+      'seq'         => 1,
+      'paid_time'   => '20091225091210',
       'paid_amount' => 1,
     ],
   ],
@@ -105,11 +105,11 @@ $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/sy
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'type' => 'Order_Paid',
-    'detail' => [
-      'seq' => 1,
-      'paid_time' => '20091225091210',
+    'sub_mchid'  => '1900000109',
+    'type'       => 'Order_Paid',
+    'detail'     => [
+      'seq'         => 1,
+      'paid_time'   => '20091225091210',
       'paid_amount' => 1,
     ],
   ],
@@ -122,11 +122,11 @@ $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/sync']->p
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'type' => 'Order_Paid',
-    'detail' => [
-      'seq' => 1,
-      'paid_time' => '20091225091210',
+    'sub_mchid'  => '1900000109',
+    'type'       => 'Order_Paid',
+    'detail'     => [
+      'seq'         => 1,
+      'paid_time'   => '20091225091210',
       'paid_amount' => 1,
     ],
   ],

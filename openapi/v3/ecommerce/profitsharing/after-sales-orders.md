@@ -19,12 +19,12 @@
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->afterSalesOrders->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '3008450740201411110007820472',
-    'amount' => 10,
-    'type' => 'SERVICE_FEE_INCOME',
-    'scene' => 'REFUND_TICKET',
-    'refund_id' => '',
+    'amount'         => 10,
+    'type'           => 'SERVICE_FEE_INCOME',
+    'scene'          => 'REFUND_TICKET',
+    'refund_id'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -36,12 +36,12 @@ $instance->v3->ecommerce->profitsharing->afterSalesOrders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/after-sales-orders')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '3008450740201411110007820472',
-    'amount' => 10,
-    'type' => 'SERVICE_FEE_INCOME',
-    'scene' => 'REFUND_TICKET',
-    'refund_id' => '',
+    'amount'         => 10,
+    'type'           => 'SERVICE_FEE_INCOME',
+    'scene'          => 'REFUND_TICKET',
+    'refund_id'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,12 +53,12 @@ $instance->chain('v3/ecommerce/profitsharing/after-sales-orders')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/after-sales-orders']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '3008450740201411110007820472',
-    'amount' => 10,
-    'type' => 'SERVICE_FEE_INCOME',
-    'scene' => 'REFUND_TICKET',
-    'refund_id' => '',
+    'amount'         => 10,
+    'type'           => 'SERVICE_FEE_INCOME',
+    'scene'          => 'REFUND_TICKET',
+    'refund_id'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,12 +70,12 @@ $instance['v3/ecommerce/profitsharing/after-sales-orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->afterSalesOrders->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '3008450740201411110007820472',
-    'amount' => 10,
-    'type' => 'SERVICE_FEE_INCOME',
-    'scene' => 'REFUND_TICKET',
-    'refund_id' => '',
+    'amount'         => 10,
+    'type'           => 'SERVICE_FEE_INCOME',
+    'scene'          => 'REFUND_TICKET',
+    'refund_id'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,12 +84,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/after-sales-orders')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '3008450740201411110007820472',
-    'amount' => 10,
-    'type' => 'SERVICE_FEE_INCOME',
-    'scene' => 'REFUND_TICKET',
-    'refund_id' => '',
+    'amount'         => 10,
+    'type'           => 'SERVICE_FEE_INCOME',
+    'scene'          => 'REFUND_TICKET',
+    'refund_id'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -98,12 +98,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/after-sales-orders']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '3008450740201411110007820472',
-    'amount' => 10,
-    'type' => 'SERVICE_FEE_INCOME',
-    'scene' => 'REFUND_TICKET',
-    'refund_id' => '',
+    'amount'         => 10,
+    'type'           => 'SERVICE_FEE_INCOME',
+    'scene'          => 'REFUND_TICKET',
+    'refund_id'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -113,9 +113,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| transaction_id {data-required}| string | 微信订单号
-| amount {data-required}| integer | 分账金额
+| sub_mchid {data-required} | string | 二级商户号
+| transaction_id {data-required} | string | 微信订单号
+| amount {data-required} | integer | 分账金额
 
 {.im-table #response}
 
@@ -208,12 +208,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| transaction_id {data-required}| string | 微信分账单号
-| amount {data-required}| integer | 分账金额
-| result {data-required}| string | 分账结果<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` 枚举值之一
+| sub_mchid {data-required} | string | 二级商户号
+| transaction_id {data-required} | string | 微信分账单号
+| amount {data-required} | integer | 分账金额
+| result {data-required} | string | 分账结果<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` 枚举值之一
 | fail_reason | string | 分账失败原因<br/>`ACCOUNT_ABNORMAL` \| `NO_RELATION` \| `RECEIVER_HIGH_RISK` 枚举值之一
-| finish_time {data-required}| string | 分账完成时间
+| finish_time {data-required} | string | 分账完成时间
 
 {.im-table #response}
 

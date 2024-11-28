@@ -97,9 +97,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| plan_id {data-required}| integer | 委托代扣协议模板Id
-| out_contract_code {data-required}| string | 商户签约协议号
+| mchid {data-required} | string | 商户号
+| plan_id {data-required} | integer | 委托代扣协议模板Id
+| out_contract_code {data-required} | string | 商户签约协议号
 
 {.im-table #response}
 

@@ -70,11 +70,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| complaint_id {data-required}| string | 投诉单号
-| complaint_time {data-required}| string | 投诉时间
-| complaint_detail {data-required}| string | 投诉详情
-| complaint_state {data-required}| string | 投诉单状态
-| complainted_mchid {data-required}| string | 被诉商户号
+| complaint_id {data-required} | string | 投诉单号
+| complaint_time {data-required} | string | 投诉时间
+| complaint_detail {data-required} | string | 投诉详情
+| complaint_state {data-required} | string | 投诉单状态
+| complainted_mchid {data-required} | string | 被诉商户号
 | payer_phone | string | 投诉人联系方式
 | payer_openid | string | 投诉人openid
 | complaint_media_list | object[] {data-tooltip="对应PHP的array"} | 投诉资料列表
@@ -88,10 +88,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | order_id {data-indent=1} | string | 微信支付服务订单号
 | out_order_no {data-indent=1} | string | 商户服务订单号
 | state {data-indent=1} | string | 支付分服务单状态
-| complaint_full_refunded {data-required}| boolean | 投诉单是否已全额退款
-| incoming_user_response {data-required}| boolean | 是否有待回复的用户留言
-| problem_description {data-required}| string | 问题描述
-| user_complaint_times {data-required}| integer | 用户投诉次数
+| complaint_full_refunded {data-required} | boolean | 投诉单是否已全额退款
+| incoming_user_response {data-required} | boolean | 是否有待回复的用户留言
+| problem_description {data-required} | string | 问题描述
+| user_complaint_times {data-required} | integer | 用户投诉次数
 | problem_type | string | 问题类型
 | apply_refund_amount | integer | 申请退款金额
 | user_tag_list | string[] | 用户标签列表

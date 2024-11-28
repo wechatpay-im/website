@@ -24,8 +24,8 @@ $instance->v3->payscore->partner->permissions->authorizationCode->_authorization
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/payscore/partner/permissions/authorization-code/{authorizat
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +54,8 @@ $instance['v3/payscore/partner/permissions/authorization-code/{authorization_cod
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,8 +69,8 @@ $response = $instance->v3->payscore->partner->permissions->authorizationCode->_a
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -81,8 +81,8 @@ $response = $instance->chain('v3/payscore/partner/permissions/authorization-code
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -93,8 +93,8 @@ $response = $instance['v3/payscore/partner/permissions/authorization-code/{autho
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

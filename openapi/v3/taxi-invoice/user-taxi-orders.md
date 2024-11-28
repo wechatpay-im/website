@@ -125,13 +125,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 乘客行程单详情
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 乘客行程单详情
 | plate_number {data-required data-indent=1} | string | 车牌号
 | driver_license {data-required data-indent=1} | string | 营运资格证号
 | up_time {data-required data-indent=1} | string | 上车时间
-| offset {data-required}| integer | 请求资源起始位置
-| limit {data-required}| integer | 最大资源条数
-| total_count {data-required}| integer | 资源总条数
+| offset {data-required} | integer | 请求资源起始位置
+| limit {data-required} | integer | 最大资源条数
+| total_count {data-required} | integer | 资源总条数
 | links | object {data-tooltip="对应PHP的array"} | 相关链接
 | next {data-indent=1} | string | 下一页链接
 | prev {data-indent=1} | string | 上一页链接

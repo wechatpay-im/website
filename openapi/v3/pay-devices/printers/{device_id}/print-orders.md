@@ -31,14 +31,14 @@ $instance->v3->payDevices->printers->_device_id_->printOrders->postAsync([
   'device_id' => 'WINCIE*EIXHRB',
   'json' => [
     'print_order_no' => 'wx8888888888888888',
-    'template_id' => 'pt_02583429616371386640209536',
-    'notify_url' => 'https://payapp.weixin.qq.com/callback',
-    'variable_list' => [[
-      'key' => '',
+    'template_id'    => 'pt_02583429616371386640209536',
+    'notify_url'     => 'https://payapp.weixin.qq.com/callback',
+    'variable_list'  => [[
+      'key'   => '',
       'value' => '',
     ],],
-    'table_list' => [[
-      'key' => '',
+    'table_list'     => [[
+      'key'      => '',
       'row_list' => [[
         'cell_list' => ['string'],
       ],],
@@ -56,14 +56,14 @@ $instance->chain('v3/pay-devices/printers/{device_id}/print-orders')->postAsync(
   'device_id' => 'WINCIE*EIXHRB',
   'json' => [
     'print_order_no' => 'wx8888888888888888',
-    'template_id' => 'pt_02583429616371386640209536',
-    'notify_url' => 'https://payapp.weixin.qq.com/callback',
-    'variable_list' => [[
-      'key' => '',
+    'template_id'    => 'pt_02583429616371386640209536',
+    'notify_url'     => 'https://payapp.weixin.qq.com/callback',
+    'variable_list'  => [[
+      'key'   => '',
       'value' => '',
     ],],
-    'table_list' => [[
-      'key' => '',
+    'table_list'     => [[
+      'key'      => '',
       'row_list' => [[
         'cell_list' => ['string'],
       ],],
@@ -81,14 +81,14 @@ $instance['v3/pay-devices/printers/{device_id}/print-orders']->postAsync([
   'device_id' => 'WINCIE*EIXHRB',
   'json' => [
     'print_order_no' => 'wx8888888888888888',
-    'template_id' => 'pt_02583429616371386640209536',
-    'notify_url' => 'https://payapp.weixin.qq.com/callback',
-    'variable_list' => [[
-      'key' => '',
+    'template_id'    => 'pt_02583429616371386640209536',
+    'notify_url'     => 'https://payapp.weixin.qq.com/callback',
+    'variable_list'  => [[
+      'key'   => '',
       'value' => '',
     ],],
-    'table_list' => [[
-      'key' => '',
+    'table_list'     => [[
+      'key'      => '',
       'row_list' => [[
         'cell_list' => ['string'],
       ],],
@@ -106,14 +106,14 @@ $response = $instance->v3->payDevices->printers->_device_id_->printOrders->post(
   'device_id' => 'WINCIE*EIXHRB',
   'json' => [
     'print_order_no' => 'wx8888888888888888',
-    'template_id' => 'pt_02583429616371386640209536',
-    'notify_url' => 'https://payapp.weixin.qq.com/callback',
-    'variable_list' => [[
-      'key' => '',
+    'template_id'    => 'pt_02583429616371386640209536',
+    'notify_url'     => 'https://payapp.weixin.qq.com/callback',
+    'variable_list'  => [[
+      'key'   => '',
       'value' => '',
     ],],
-    'table_list' => [[
-      'key' => '',
+    'table_list'     => [[
+      'key'      => '',
       'row_list' => [[
         'cell_list' => ['string'],
       ],],
@@ -128,14 +128,14 @@ $response = $instance->chain('v3/pay-devices/printers/{device_id}/print-orders')
   'device_id' => 'WINCIE*EIXHRB',
   'json' => [
     'print_order_no' => 'wx8888888888888888',
-    'template_id' => 'pt_02583429616371386640209536',
-    'notify_url' => 'https://payapp.weixin.qq.com/callback',
-    'variable_list' => [[
-      'key' => '',
+    'template_id'    => 'pt_02583429616371386640209536',
+    'notify_url'     => 'https://payapp.weixin.qq.com/callback',
+    'variable_list'  => [[
+      'key'   => '',
       'value' => '',
     ],],
-    'table_list' => [[
-      'key' => '',
+    'table_list'     => [[
+      'key'      => '',
       'row_list' => [[
         'cell_list' => ['string'],
       ],],
@@ -150,14 +150,14 @@ $response = $instance['v3/pay-devices/printers/{device_id}/print-orders']->post(
   'device_id' => 'WINCIE*EIXHRB',
   'json' => [
     'print_order_no' => 'wx8888888888888888',
-    'template_id' => 'pt_02583429616371386640209536',
-    'notify_url' => 'https://payapp.weixin.qq.com/callback',
-    'variable_list' => [[
-      'key' => '',
+    'template_id'    => 'pt_02583429616371386640209536',
+    'notify_url'     => 'https://payapp.weixin.qq.com/callback',
+    'variable_list'  => [[
+      'key'   => '',
       'value' => '',
     ],],
-    'table_list' => [[
-      'key' => '',
+    'table_list'     => [[
+      'key'      => '',
       'row_list' => [[
         'cell_list' => ['string'],
       ],],

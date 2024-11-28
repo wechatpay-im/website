@@ -23,7 +23,7 @@ $instance->v3->payscore->permissions->authorizationCode->_authorization_code_->t
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'reason' => '撤销原因',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/payscore/permissions/authorization-code/{authorization_code
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'reason' => '撤销原因',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/payscore/permissions/authorization-code/{authorization_code}/termi
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'reason' => '撤销原因',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->payscore->permissions->authorizationCode->_authorizat
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'reason' => '撤销原因',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/payscore/permissions/authorization-code/{author
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'reason' => '撤销原因',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -87,7 +87,7 @@ $response = $instance['v3/payscore/permissions/authorization-code/{authorization
   'authorization_code' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '500001',
-    'reason' => '撤销原因',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

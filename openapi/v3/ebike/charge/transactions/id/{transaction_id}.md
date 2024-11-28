@@ -96,28 +96,28 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
+| mchid {data-required} | string | 商户号
 | sub_mchid | string | 特约商户号
-| appid {data-required}| string | 服务商公众号ID
+| appid {data-required} | string | 服务商公众号ID
 | sub_appid | string | 特约商户公众号ID
-| out_trade_no {data-required}| string | 商户订单号
+| out_trade_no {data-required} | string | 商户订单号
 | transaction_id | string | 微信订单号
 | attach | string | 商户数据
-| trade_type {data-required}| string | 交易类型
+| trade_type {data-required} | string | 交易类型
 | bank_type | string | 银行类型
 | success_time | string | 成功时间
-| trade_state {data-required}| string | 交易状态
+| trade_state {data-required} | string | 交易状态
 | trade_state_des | string | 交易状态描述
-| contract_id {data-required}| string | 充电授权扣费协议号
+| contract_id {data-required} | string | 充电授权扣费协议号
 | payer | object {data-tooltip="对应PHP的array"} | 支付者信息
 | openid {data-indent=1} | string | 用户在服务商的标识
 | sub_openid {data-indent=1} | string | 用户在特约商户的标识
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额信息
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额信息
 | total {data-required data-indent=1} | integer | 订单金额
 | currency {data-indent=1} | string | 货币类型
 | payer_total {data-indent=1} | integer | 用户实际支付金额
 | discount_total {data-indent=1} | integer | 折扣
-| device_info {data-required}| object {data-tooltip="对应PHP的array"} | 设备信息
+| device_info {data-required} | object {data-tooltip="对应PHP的array"} | 设备信息
 | device_id {data-required data-indent=1} | string | 充电位设备号
 | device_ip {data-required data-indent=1} | string | 商户端设备ip
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠信息

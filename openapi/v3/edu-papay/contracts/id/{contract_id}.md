@@ -104,8 +104,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_mchid {data-required}| string | 服务商商户号
-| appid {data-required}| string | 服务商APPID
+| sp_mchid {data-required} | string | 服务商商户号
+| appid {data-required} | string | 服务商APPID
 | sub_mchid | string | 子商户号
 | sub_appid | string | 子商户APPID
 | openid | string | 服务商APPID下的用户标识

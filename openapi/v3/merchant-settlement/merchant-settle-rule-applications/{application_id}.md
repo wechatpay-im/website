@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id {data-required}| string | 申请单编号
+| application_id {data-required} | string | 申请单编号
 | application_process_info | string | 申请单处理信息
 | application_state | string | 申请单状态
 | update_time | string | 最后更新时间

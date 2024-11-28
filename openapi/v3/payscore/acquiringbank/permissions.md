@@ -25,13 +25,13 @@ description: 从业机构预授权
 ```php [异步纯链式]
 $instance->v3->payscore->acquiringbank->permissions->postAsync([
   'json' => [
-    'service_id' => 'service_id',
-    'channel_id' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
+    'service_id'         => 'service_id',
+    'channel_id'         => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
     'authorization_code' => '1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
+    'notify_url'         => 'http://www.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->payscore->acquiringbank->permissions->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/acquiringbank/permissions')->postAsync([
   'json' => [
-    'service_id' => 'service_id',
-    'channel_id' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
+    'service_id'         => 'service_id',
+    'channel_id'         => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
     'authorization_code' => '1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
+    'notify_url'         => 'http://www.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/payscore/acquiringbank/permissions')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/acquiringbank/permissions']->postAsync([
   'json' => [
-    'service_id' => 'service_id',
-    'channel_id' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
+    'service_id'         => 'service_id',
+    'channel_id'         => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
     'authorization_code' => '1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
+    'notify_url'         => 'http://www.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/payscore/acquiringbank/permissions']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->acquiringbank->permissions->post([
   'json' => [
-    'service_id' => 'service_id',
-    'channel_id' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
+    'service_id'         => 'service_id',
+    'channel_id'         => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
     'authorization_code' => '1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
+    'notify_url'         => 'http://www.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,13 +94,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/acquiringbank/permissions')->post([
   'json' => [
-    'service_id' => 'service_id',
-    'channel_id' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
+    'service_id'         => 'service_id',
+    'channel_id'         => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
     'authorization_code' => '1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
+    'notify_url'         => 'http://www.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,13 +109,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/acquiringbank/permissions']->post([
   'json' => [
-    'service_id' => 'service_id',
-    'channel_id' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
+    'service_id'         => 'service_id',
+    'channel_id'         => '1230000109',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
     'authorization_code' => '1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
+    'notify_url'         => 'http://www.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -125,7 +125,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| apply_permissions_token {data-required}| string | 预授权token
+| apply_permissions_token {data-required} | string | 预授权token
 
 {.im-table #response}
 

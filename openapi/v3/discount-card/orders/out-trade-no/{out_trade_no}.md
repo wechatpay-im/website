@@ -76,27 +76,27 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 先享卡订单号
-| discount_card_id {data-required}| string | 先享卡ID
-| out_trade_no {data-required}| string | 商户订单号
-| appid {data-required}| string | 公众账号ID
-| service_id {data-required}| string | 服务ID
-| order_id {data-required}| string | 微信支付服务订单号
+| out_order_no {data-required} | string | 先享卡订单号
+| discount_card_id {data-required} | string | 先享卡ID
+| out_trade_no {data-required} | string | 商户订单号
+| appid {data-required} | string | 公众账号ID
+| service_id {data-required} | string | 服务ID
+| order_id {data-required} | string | 微信支付服务订单号
 | transaction_id | string | 微信支付交易单号
-| openid {data-required}| string | 用户标识
-| card_begin_time {data-required}| string | 先享卡开始时间
-| card_end_time {data-required}| string | 先享卡结束时间
-| card_name {data-required}| string | 先享卡名称
-| objective_description {data-required}| string | 目标描述
-| reward_description {data-required}| string | 奖励描述
-| estimated_reward_amount {data-required}| integer | 预估奖励金额
+| openid {data-required} | string | 用户标识
+| card_begin_time {data-required} | string | 先享卡开始时间
+| card_end_time {data-required} | string | 先享卡结束时间
+| card_name {data-required} | string | 先享卡名称
+| objective_description {data-required} | string | 目标描述
+| reward_description {data-required} | string | 奖励描述
+| estimated_reward_amount {data-required} | integer | 预估奖励金额
 | online_instructions | string | 线上使用说明
 | offline_instructions | string | 线下使用说明
-| state {data-required}| string | 订单状态
+| state {data-required} | string | 订单状态
 | total_amount | integer | 总金额
 | deduction_amount | integer | 扣除金额
 | settlement_amount | integer | 结算金额
-| create_time {data-required}| string | 创建时间
+| create_time {data-required} | string | 创建时间
 | pay_time | string | 支付时间
 | objectives | object[] {data-tooltip="对应PHP的array"} | 目标达成明细列表
 | objective_serial_no {data-required data-indent=1} | string | 目标流水号

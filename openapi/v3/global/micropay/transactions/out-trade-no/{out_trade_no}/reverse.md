@@ -24,8 +24,8 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 $instance->v3->global->micropay->transactions->outTradeNo->_out_trade_no_->reverse->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
+    'mchid'     => '1900000109',
+    'sp_mchid'  => '1900000100',
     'sub_mchid' => '1900000109',
   ],
   'out_trade_no' => '1217752501201407033233368018',
@@ -40,8 +40,8 @@ $instance->v3->global->micropay->transactions->outTradeNo->_out_trade_no_->rever
 $instance->chain('v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
+    'mchid'     => '1900000109',
+    'sp_mchid'  => '1900000100',
     'sub_mchid' => '1900000109',
   ],
   'out_trade_no' => '1217752501201407033233368018',
@@ -56,8 +56,8 @@ $instance->chain('v3/global/micropay/transactions/out-trade-no/{out_trade_no}/re
 $instance['v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
+    'mchid'     => '1900000109',
+    'sp_mchid'  => '1900000100',
     'sub_mchid' => '1900000109',
   ],
   'out_trade_no' => '1217752501201407033233368018',
@@ -72,8 +72,8 @@ $instance['v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse']
 $response = $instance->v3->global->micropay->transactions->outTradeNo->_out_trade_no_->reverse->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
+    'mchid'     => '1900000109',
+    'sp_mchid'  => '1900000100',
     'sub_mchid' => '1900000109',
   ],
   'out_trade_no' => '1217752501201407033233368018',
@@ -85,8 +85,8 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
+    'mchid'     => '1900000109',
+    'sp_mchid'  => '1900000100',
     'sub_mchid' => '1900000109',
   ],
   'out_trade_no' => '1217752501201407033233368018',
@@ -98,8 +98,8 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
+    'mchid'     => '1900000109',
+    'sp_mchid'  => '1900000100',
     'sub_mchid' => '1900000109',
   ],
   'out_trade_no' => '1217752501201407033233368018',

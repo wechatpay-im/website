@@ -28,11 +28,11 @@ $instance->v3->marketing->goodsSubsidyActivity->activity->_activity_id_->apply->
   'activity_id' => '',
   'json' => [
     'caller_merchant_id' => '',
-    'apply_infos' => [[
-      'store_info' => [
-        'store_id' => '',
+    'apply_infos'        => [[
+      'store_info'           => [
+        'store_id'               => '',
         'accounting_merchant_id' => '',
-        'merchant_id' => '',
+        'merchant_id'            => '',
       ],
       'goods_original_price' => 0,
     ],],
@@ -49,11 +49,11 @@ $instance->chain('v3/marketing/goods-subsidy-activity/activity/{activity_id}/app
   'activity_id' => '',
   'json' => [
     'caller_merchant_id' => '',
-    'apply_infos' => [[
-      'store_info' => [
-        'store_id' => '',
+    'apply_infos'        => [[
+      'store_info'           => [
+        'store_id'               => '',
         'accounting_merchant_id' => '',
-        'merchant_id' => '',
+        'merchant_id'            => '',
       ],
       'goods_original_price' => 0,
     ],],
@@ -70,11 +70,11 @@ $instance['v3/marketing/goods-subsidy-activity/activity/{activity_id}/apply']->p
   'activity_id' => '',
   'json' => [
     'caller_merchant_id' => '',
-    'apply_infos' => [[
-      'store_info' => [
-        'store_id' => '',
+    'apply_infos'        => [[
+      'store_info'           => [
+        'store_id'               => '',
         'accounting_merchant_id' => '',
-        'merchant_id' => '',
+        'merchant_id'            => '',
       ],
       'goods_original_price' => 0,
     ],],
@@ -91,11 +91,11 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->activity->_activity_
   'activity_id' => '',
   'json' => [
     'caller_merchant_id' => '',
-    'apply_infos' => [[
-      'store_info' => [
-        'store_id' => '',
+    'apply_infos'        => [[
+      'store_info'           => [
+        'store_id'               => '',
         'accounting_merchant_id' => '',
-        'merchant_id' => '',
+        'merchant_id'            => '',
       ],
       'goods_original_price' => 0,
     ],],
@@ -109,11 +109,11 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/activity/{acti
   'activity_id' => '',
   'json' => [
     'caller_merchant_id' => '',
-    'apply_infos' => [[
-      'store_info' => [
-        'store_id' => '',
+    'apply_infos'        => [[
+      'store_info'           => [
+        'store_id'               => '',
         'accounting_merchant_id' => '',
-        'merchant_id' => '',
+        'merchant_id'            => '',
       ],
       'goods_original_price' => 0,
     ],],
@@ -127,11 +127,11 @@ $response = $instance['v3/marketing/goods-subsidy-activity/activity/{activity_id
   'activity_id' => '',
   'json' => [
     'caller_merchant_id' => '',
-    'apply_infos' => [[
-      'store_info' => [
-        'store_id' => '',
+    'apply_infos'        => [[
+      'store_info'           => [
+        'store_id'               => '',
         'accounting_merchant_id' => '',
-        'merchant_id' => '',
+        'merchant_id'            => '',
       ],
       'goods_original_price' => 0,
     ],],

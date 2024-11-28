@@ -39,25 +39,25 @@ description: 商户可调用接口预先指定转账的单次计划，预创建�
 ```php [异步纯链式]
 $instance->v3->platsolution->mchTransfer->reservation->apply->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_reservation_no' => 'plfk2020042013',
-    'transfer_scene_id' => '1000',
-    'estimated_date' => '2019-11-22',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_reservation_no'   => 'plfk2020042013',
+    'transfer_scene_id'    => '1000',
+    'estimated_date'       => '2019-11-22',
     'estimated_max_amount' => 400000,
-    'exact_amount' => 100000,
-    'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'user_real_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'reserve_remark' => '由于存在收益波动，实际到账资金可能不等于当前金额',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'scene_report_data' => [
+    'exact_amount'         => 100000,
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'user_real_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'reserve_remark'       => '由于存在收益波动，实际到账资金可能不等于当前金额',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_report_data'    => [
       'insurance_policy' => [
         'product_registration_no' => '40058541257',
-        'policy_no' => '202301011651',
-        'name' => '养老保险',
-        'withdrawal_no' => '202310410941',
-        'claim_no' => '202310410941',
+        'policy_no'               => '202301011651',
+        'name'                    => '养老保险',
+        'withdrawal_no'           => '202310410941',
+        'claim_no'                => '202310410941',
       ],
     ],
   ],
@@ -74,25 +74,25 @@ $instance->v3->platsolution->mchTransfer->reservation->apply->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/platsolution/mch-transfer/reservation/apply')->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_reservation_no' => 'plfk2020042013',
-    'transfer_scene_id' => '1000',
-    'estimated_date' => '2019-11-22',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_reservation_no'   => 'plfk2020042013',
+    'transfer_scene_id'    => '1000',
+    'estimated_date'       => '2019-11-22',
     'estimated_max_amount' => 400000,
-    'exact_amount' => 100000,
-    'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'user_real_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'reserve_remark' => '由于存在收益波动，实际到账资金可能不等于当前金额',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'scene_report_data' => [
+    'exact_amount'         => 100000,
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'user_real_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'reserve_remark'       => '由于存在收益波动，实际到账资金可能不等于当前金额',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_report_data'    => [
       'insurance_policy' => [
         'product_registration_no' => '40058541257',
-        'policy_no' => '202301011651',
-        'name' => '养老保险',
-        'withdrawal_no' => '202310410941',
-        'claim_no' => '202310410941',
+        'policy_no'               => '202301011651',
+        'name'                    => '养老保险',
+        'withdrawal_no'           => '202310410941',
+        'claim_no'                => '202310410941',
       ],
     ],
   ],
@@ -109,25 +109,25 @@ $instance->chain('v3/platsolution/mch-transfer/reservation/apply')->postAsync([
 ```php [异步属性式]
 $instance['v3/platsolution/mch-transfer/reservation/apply']->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_reservation_no' => 'plfk2020042013',
-    'transfer_scene_id' => '1000',
-    'estimated_date' => '2019-11-22',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_reservation_no'   => 'plfk2020042013',
+    'transfer_scene_id'    => '1000',
+    'estimated_date'       => '2019-11-22',
     'estimated_max_amount' => 400000,
-    'exact_amount' => 100000,
-    'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'user_real_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'reserve_remark' => '由于存在收益波动，实际到账资金可能不等于当前金额',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'scene_report_data' => [
+    'exact_amount'         => 100000,
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'user_real_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'reserve_remark'       => '由于存在收益波动，实际到账资金可能不等于当前金额',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_report_data'    => [
       'insurance_policy' => [
         'product_registration_no' => '40058541257',
-        'policy_no' => '202301011651',
-        'name' => '养老保险',
-        'withdrawal_no' => '202310410941',
-        'claim_no' => '202310410941',
+        'policy_no'               => '202301011651',
+        'name'                    => '养老保险',
+        'withdrawal_no'           => '202310410941',
+        'claim_no'                => '202310410941',
       ],
     ],
   ],
@@ -144,25 +144,25 @@ $instance['v3/platsolution/mch-transfer/reservation/apply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->platsolution->mchTransfer->reservation->apply->post([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_reservation_no' => 'plfk2020042013',
-    'transfer_scene_id' => '1000',
-    'estimated_date' => '2019-11-22',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_reservation_no'   => 'plfk2020042013',
+    'transfer_scene_id'    => '1000',
+    'estimated_date'       => '2019-11-22',
     'estimated_max_amount' => 400000,
-    'exact_amount' => 100000,
-    'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'user_real_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'reserve_remark' => '由于存在收益波动，实际到账资金可能不等于当前金额',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'scene_report_data' => [
+    'exact_amount'         => 100000,
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'user_real_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'reserve_remark'       => '由于存在收益波动，实际到账资金可能不等于当前金额',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_report_data'    => [
       'insurance_policy' => [
         'product_registration_no' => '40058541257',
-        'policy_no' => '202301011651',
-        'name' => '养老保险',
-        'withdrawal_no' => '202310410941',
-        'claim_no' => '202310410941',
+        'policy_no'               => '202301011651',
+        'name'                    => '养老保险',
+        'withdrawal_no'           => '202310410941',
+        'claim_no'                => '202310410941',
       ],
     ],
   ],
@@ -176,25 +176,25 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/platsolution/mch-transfer/reservation/apply')->post([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_reservation_no' => 'plfk2020042013',
-    'transfer_scene_id' => '1000',
-    'estimated_date' => '2019-11-22',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_reservation_no'   => 'plfk2020042013',
+    'transfer_scene_id'    => '1000',
+    'estimated_date'       => '2019-11-22',
     'estimated_max_amount' => 400000,
-    'exact_amount' => 100000,
-    'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'user_real_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'reserve_remark' => '由于存在收益波动，实际到账资金可能不等于当前金额',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'scene_report_data' => [
+    'exact_amount'         => 100000,
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'user_real_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'reserve_remark'       => '由于存在收益波动，实际到账资金可能不等于当前金额',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_report_data'    => [
       'insurance_policy' => [
         'product_registration_no' => '40058541257',
-        'policy_no' => '202301011651',
-        'name' => '养老保险',
-        'withdrawal_no' => '202310410941',
-        'claim_no' => '202310410941',
+        'policy_no'               => '202301011651',
+        'name'                    => '养老保险',
+        'withdrawal_no'           => '202310410941',
+        'claim_no'                => '202310410941',
       ],
     ],
   ],
@@ -208,25 +208,25 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/platsolution/mch-transfer/reservation/apply']->post([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_reservation_no' => 'plfk2020042013',
-    'transfer_scene_id' => '1000',
-    'estimated_date' => '2019-11-22',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_reservation_no'   => 'plfk2020042013',
+    'transfer_scene_id'    => '1000',
+    'estimated_date'       => '2019-11-22',
     'estimated_max_amount' => 400000,
-    'exact_amount' => 100000,
-    'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'user_real_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'reserve_remark' => '由于存在收益波动，实际到账资金可能不等于当前金额',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'scene_report_data' => [
+    'exact_amount'         => 100000,
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'user_real_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'reserve_remark'       => '由于存在收益波动，实际到账资金可能不等于当前金额',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_report_data'    => [
       'insurance_policy' => [
         'product_registration_no' => '40058541257',
-        'policy_no' => '202301011651',
-        'name' => '养老保险',
-        'withdrawal_no' => '202310410941',
-        'claim_no' => '202310410941',
+        'policy_no'               => '202301011651',
+        'name'                    => '养老保险',
+        'withdrawal_no'           => '202310410941',
+        'claim_no'                => '202310410941',
       ],
     ],
   ],
@@ -241,12 +241,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| out_reservation_no {data-required}| string | 商户预约单号
-| reservation_id {data-required}| string | 微信转账预约单号
-| accept_time {data-required}| string | 预约记录受理时间
-| state {data-required}| string | 预约记录状态<br/>`ACCEPTED` \| `CONFIRMED` \| `CLOSED` 枚举值之一
-| package_info {data-required}| string | 跳转微信支付用户确认预约页的package信息
+| sub_mchid {data-required} | string | 二级商户号
+| out_reservation_no {data-required} | string | 商户预约单号
+| reservation_id {data-required} | string | 微信转账预约单号
+| accept_time {data-required} | string | 预约记录受理时间
+| state {data-required} | string | 预约记录状态<br/>`ACCEPTED` \| `CONFIRMED` \| `CLOSED` 枚举值之一
+| package_info {data-required} | string | 跳转微信支付用户确认预约页的package信息
 
 {.im-table #response}
 

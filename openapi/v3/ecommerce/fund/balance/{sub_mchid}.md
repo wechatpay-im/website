@@ -90,9 +90,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 特约商户号
+| sub_mchid {data-required} | string | 特约商户号
 | account_type | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` \| `DEPOSIT` 枚举值之一
-| available_amount {data-required}| integer | 可用余额
+| available_amount {data-required} | integer | 可用余额
 | pending_amount | integer | 不可用余额
 
 {.im-table #response}

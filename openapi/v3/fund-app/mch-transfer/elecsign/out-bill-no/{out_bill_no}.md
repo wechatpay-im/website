@@ -70,9 +70,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| state {data-required}| string | 申请单状态
-| create_time {data-required}| string | 申请单创建时间
-| update_time {data-required}| string | 申请单更新时间
+| state {data-required} | string | 申请单状态
+| create_time {data-required} | string | 申请单创建时间
+| update_time {data-required} | string | 申请单更新时间
 | hash_type | string | 回单文件摘要类型
 | hash_value | string | 回单文件摘要值
 | download_url | string | 回单文件下载地址

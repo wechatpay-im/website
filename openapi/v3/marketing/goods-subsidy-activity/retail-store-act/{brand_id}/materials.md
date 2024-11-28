@@ -23,7 +23,7 @@ $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_brand_id_->mate
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'material_num' => 100,
+    'material_num'   => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'material_num' => 100,
+    'material_num'   => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/mater
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'material_num' => 100,
+    'material_num'   => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_bra
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'material_num' => 100,
+    'material_num'   => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-a
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'material_num' => 100,
+    'material_num'   => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{bra
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'material_num' => 100,
+    'material_num'   => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

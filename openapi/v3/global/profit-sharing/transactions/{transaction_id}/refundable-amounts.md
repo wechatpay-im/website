@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id {data-required}| string | 微信订单号
+| transaction_id {data-required} | string | 微信订单号
 | refundable_amount | integer | 订单剩余可退款金额
 | currency | string | 货币类型
 | funds_refundable_amount | integer | 订单剩余可使用垫付资金退款的金额

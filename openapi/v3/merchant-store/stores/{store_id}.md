@@ -90,16 +90,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_name {data-required data-indent=1} | string | 品牌名称
 | store_name {data-required data-indent=1} | string | 门店名称
 | branch_name {data-indent=1} | string | 分店名称
-| store_address {data-required}| object {data-tooltip="对应PHP的array"} | 门店地址信息
+| store_address {data-required} | object {data-tooltip="对应PHP的array"} | 门店地址信息
 | address_code {data-indent=1} | string | 门店省市编码
 | address_detail {data-required data-indent=1} | string | 门店地址
 | address_complements {data-indent=1} | string | 门店地址辅助描述
 | longitude {data-indent=1} | string | 门店经度
 | latitude {data-indent=1} | string | 门店纬度
-| store_business {data-required}| object {data-tooltip="对应PHP的array"} | 门店经营信息
+| store_business {data-required} | object {data-tooltip="对应PHP的array"} | 门店经营信息
 | service_phone {data-indent=1} | string | 门店服务电话
 | business_hours {data-indent=1} | string | 门店经营时间
-| store_recipient {data-required}| object[] {data-tooltip="对应PHP的array"} | 门店收款信息
+| store_recipient {data-required} | object[] {data-tooltip="对应PHP的array"} | 门店收款信息
 | mchid {data-required data-indent=1} | string | 门店收款商户号
 | company_name {data-indent=1} | string | 门店收款主体
 
@@ -137,22 +137,22 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->merchantStore->stores->_store_id_->patchAsync([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'      => '1900000109',
+    'store_basics'   => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'store_business' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'store_business'     => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'  => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
     'store_business' => [
-      'service_phone' => '0755-86013388',
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
   ],
@@ -167,22 +167,22 @@ $instance->v3->merchantStore->stores->_store_id_->patchAsync([
 $instance->chain('v3/merchant-store/stores/{store_id}')->patchAsync([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'      => '1900000109',
+    'store_basics'   => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'store_business' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'store_business'     => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'  => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
     'store_business' => [
-      'service_phone' => '0755-86013388',
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
   ],
@@ -197,22 +197,22 @@ $instance->chain('v3/merchant-store/stores/{store_id}')->patchAsync([
 $instance['v3/merchant-store/stores/{store_id}']->patchAsync([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'      => '1900000109',
+    'store_basics'   => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'store_business' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'store_business'     => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'  => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
     'store_business' => [
-      'service_phone' => '0755-86013388',
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
   ],
@@ -227,22 +227,22 @@ $instance['v3/merchant-store/stores/{store_id}']->patchAsync([
 $response = $instance->v3->merchantStore->stores->_store_id_->patch([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'      => '1900000109',
+    'store_basics'   => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'store_business' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'store_business'     => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'  => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
     'store_business' => [
-      'service_phone' => '0755-86013388',
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
   ],
@@ -254,22 +254,22 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/merchant-store/stores/{store_id}')->patch([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'      => '1900000109',
+    'store_basics'   => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'store_business' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'store_business'     => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'  => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
     'store_business' => [
-      'service_phone' => '0755-86013388',
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
   ],
@@ -281,22 +281,22 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/merchant-store/stores/{store_id}']->patch([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'      => '1900000109',
+    'store_basics'   => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'store_business' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'store_business'     => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'  => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
     'store_business' => [
-      'service_phone' => '0755-86013388',
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
   ],

@@ -27,14 +27,14 @@ description: 服务商从商户小程序拉起微信签约小程序发起签约�
 ```php [异步纯链式]
 $instance->v3->passwordExemptContract->contracts->serviceProvider->preEntrustSign->miniProgram->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
   ],
 ])
@@ -47,14 +47,14 @@ $instance->v3->passwordExemptContract->contracts->serviceProvider->preEntrustSig
 ```php [异步声明式]
 $instance->chain('v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program')->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
   ],
 ])
@@ -67,14 +67,14 @@ $instance->chain('v3/password-exempt-contract/contracts/service-provider/pre-ent
 ```php [异步属性式]
 $instance['v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program']->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
   ],
 ])
@@ -87,14 +87,14 @@ $instance['v3/password-exempt-contract/contracts/service-provider/pre-entrust-si
 ```php [同步纯链式]
 $response = $instance->v3->passwordExemptContract->contracts->serviceProvider->preEntrustSign->miniProgram->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
   ],
 ]);
@@ -104,14 +104,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program')->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
   ],
 ]);
@@ -121,14 +121,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program']->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
   ],
 ]);
@@ -139,13 +139,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| pre_entrustweb_id {data-required}| string | 预签约ID
-| mchid {data-required}| string | 商户号
-| sub_mchid {data-required}| string | 子商户号
-| service_id {data-required}| number | 免密支付服务ID
-| out_contract_code {data-required}| string | 商户签约协议号
-| sign_mp_appid {data-required}| string | 跳转签约的小程序AppID
-| sign_mp_path {data-required}| string | 跳转签约的小程序路径
+| pre_entrustweb_id {data-required} | string | 预签约ID
+| mchid {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 子商户号
+| service_id {data-required} | number | 免密支付服务ID
+| out_contract_code {data-required} | string | 商户签约协议号
+| sign_mp_appid {data-required} | string | 跳转签约的小程序AppID
+| sign_mp_path {data-required} | string | 跳转签约的小程序路径
 
 {.im-table #response}
 

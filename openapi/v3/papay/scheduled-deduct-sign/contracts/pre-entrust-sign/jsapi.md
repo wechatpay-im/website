@@ -31,20 +31,20 @@ description: 商户可调用本接口预先指定签约信息，生成预签约�
 ```php [异步纯链式]
 $instance->v3->papay->scheduledDeductSign->contracts->preEntrustSign->jsapi->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'openid'                   => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ])
@@ -57,20 +57,20 @@ $instance->v3->papay->scheduledDeductSign->contracts->preEntrustSign->jsapi->pos
 ```php [异步声明式]
 $instance->chain('v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi')->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'openid'                   => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ])
@@ -83,20 +83,20 @@ $instance->chain('v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsap
 ```php [异步属性式]
 $instance['v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi']->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'openid'                   => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ])
@@ -109,20 +109,20 @@ $instance['v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi']->po
 ```php [同步纯链式]
 $response = $instance->v3->papay->scheduledDeductSign->contracts->preEntrustSign->jsapi->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'openid'                   => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ]);
@@ -132,20 +132,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi')->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'openid'                   => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ]);
@@ -155,20 +155,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi']->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'openid'                   => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ]);
@@ -179,7 +179,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| redirect_url {data-required}| string | 跳转签约流程的URL
+| redirect_url {data-required} | string | 跳转签约流程的URL
 
 {.im-table #response}
 

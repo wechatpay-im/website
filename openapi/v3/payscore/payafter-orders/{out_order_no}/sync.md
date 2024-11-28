@@ -25,10 +25,10 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 $instance->v3->payscore->payafterOrders->_out_order_no_->sync->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091010',
     ],
   ],
@@ -43,10 +43,10 @@ $instance->v3->payscore->payafterOrders->_out_order_no_->sync->postAsync([
 $instance->chain('v3/payscore/payafter-orders/{out_order_no}/sync')->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091010',
     ],
   ],
@@ -61,10 +61,10 @@ $instance->chain('v3/payscore/payafter-orders/{out_order_no}/sync')->postAsync([
 $instance['v3/payscore/payafter-orders/{out_order_no}/sync']->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091010',
     ],
   ],
@@ -79,10 +79,10 @@ $instance['v3/payscore/payafter-orders/{out_order_no}/sync']->postAsync([
 $response = $instance->v3->payscore->payafterOrders->_out_order_no_->sync->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091010',
     ],
   ],
@@ -94,10 +94,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/payafter-orders/{out_order_no}/sync')->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091010',
     ],
   ],
@@ -109,10 +109,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/payafter-orders/{out_order_no}/sync']->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091010',
     ],
   ],
@@ -124,10 +124,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 公众账号ID
-| mchid {data-required}| string | 商户号
-| out_order_no {data-required}| string | 商户服务订单号
-| order_id {data-required}| string | 微信支付服务订单号
+| appid {data-required} | string | 公众账号ID
+| mchid {data-required} | string | 商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| order_id {data-required} | string | 微信支付服务订单号
 
 {.im-table #response}
 

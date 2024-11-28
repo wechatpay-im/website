@@ -20,7 +20,7 @@ description: 此接口为特约商户的点金计划页面开通广告展示功�
 ```php [异步纯链式]
 $instance->v3->goldplan->merchants->openAdvertisingShow->patchAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->goldplan->merchants->openAdvertisingShow->patchAsync([
 ```php [异步声明式]
 $instance->chain('v3/goldplan/merchants/open-advertising-show')->patchAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v3/goldplan/merchants/open-advertising-show')->patchAsync([
 ```php [异步属性式]
 $instance['v3/goldplan/merchants/open-advertising-show']->patchAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/goldplan/merchants/open-advertising-show']->patchAsync([
 ```php [同步纯链式]
 $response = $instance->v3->goldplan->merchants->openAdvertisingShow->patch([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ]);
@@ -69,7 +69,7 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/goldplan/merchants/open-advertising-show')->patch([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ]);
@@ -79,7 +79,7 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/goldplan/merchants/open-advertising-show']->patch([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ]);

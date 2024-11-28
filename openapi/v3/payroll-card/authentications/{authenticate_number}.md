@@ -90,16 +90,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| sub_mchid {data-required}| string | 子商户号
-| openid {data-required}| string | 用户标识
-| authenticate_scene {data-required}| string | 核身渠道
-| authenticate_source {data-required}| string | 核身渠道标识
-| project_name {data-required}| string | 项目名称
-| employer_name {data-required}| string | 单位名称
-| authenticate_state {data-required}| string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
-| authenticate_time {data-required}| string | 核身时间
-| authenticate_number {data-required}| string | 商家核身单号
+| mchid {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 子商户号
+| openid {data-required} | string | 用户标识
+| authenticate_scene {data-required} | string | 核身渠道
+| authenticate_source {data-required} | string | 核身渠道标识
+| project_name {data-required} | string | 项目名称
+| employer_name {data-required} | string | 单位名称
+| authenticate_state {data-required} | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
+| authenticate_time {data-required} | string | 核身时间
+| authenticate_number {data-required} | string | 商家核身单号
 | authenticate_failed_reason | string | 核身失败原因
 
 {.im-table #response}

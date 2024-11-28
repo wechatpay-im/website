@@ -35,25 +35,25 @@ description: 根据用户签约的计划和对应要服务的计划详情序号�
 ```php [异步纯链式]
 $instance->v3->payscore->signPlan->serviceorder->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sign_plan_id' => '01000033210000324638000000376258',
-    'plan_detail_no' => 2,
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'notify_url' => 'https://api.test.com',
+    'service_id'           => '2002000000000558128851361561536',
+    'sign_plan_id'         => '01000033210000324638000000376258',
+    'plan_detail_no'       => 2,
+    'appid'                => 'wxd678efh567hg6787',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'notify_url'           => 'https://api.test.com',
     'service_introduction' => '羽毛球课基础练习课程',
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'out_trade_no' => '1514323JSVDFE1243252',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'out_trade_no'         => '1514323JSVDFE1243252',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,25 +65,25 @@ $instance->v3->payscore->signPlan->serviceorder->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/sign-plan/serviceorder')->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sign_plan_id' => '01000033210000324638000000376258',
-    'plan_detail_no' => 2,
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'notify_url' => 'https://api.test.com',
+    'service_id'           => '2002000000000558128851361561536',
+    'sign_plan_id'         => '01000033210000324638000000376258',
+    'plan_detail_no'       => 2,
+    'appid'                => 'wxd678efh567hg6787',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'notify_url'           => 'https://api.test.com',
     'service_introduction' => '羽毛球课基础练习课程',
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'out_trade_no' => '1514323JSVDFE1243252',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'out_trade_no'         => '1514323JSVDFE1243252',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,25 +95,25 @@ $instance->chain('v3/payscore/sign-plan/serviceorder')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/sign-plan/serviceorder']->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sign_plan_id' => '01000033210000324638000000376258',
-    'plan_detail_no' => 2,
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'notify_url' => 'https://api.test.com',
+    'service_id'           => '2002000000000558128851361561536',
+    'sign_plan_id'         => '01000033210000324638000000376258',
+    'plan_detail_no'       => 2,
+    'appid'                => 'wxd678efh567hg6787',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'notify_url'           => 'https://api.test.com',
     'service_introduction' => '羽毛球课基础练习课程',
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'out_trade_no' => '1514323JSVDFE1243252',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'out_trade_no'         => '1514323JSVDFE1243252',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -125,25 +125,25 @@ $instance['v3/payscore/sign-plan/serviceorder']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->signPlan->serviceorder->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sign_plan_id' => '01000033210000324638000000376258',
-    'plan_detail_no' => 2,
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'notify_url' => 'https://api.test.com',
+    'service_id'           => '2002000000000558128851361561536',
+    'sign_plan_id'         => '01000033210000324638000000376258',
+    'plan_detail_no'       => 2,
+    'appid'                => 'wxd678efh567hg6787',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'notify_url'           => 'https://api.test.com',
     'service_introduction' => '羽毛球课基础练习课程',
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'out_trade_no' => '1514323JSVDFE1243252',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'out_trade_no'         => '1514323JSVDFE1243252',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -152,25 +152,25 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/sign-plan/serviceorder')->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sign_plan_id' => '01000033210000324638000000376258',
-    'plan_detail_no' => 2,
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'notify_url' => 'https://api.test.com',
+    'service_id'           => '2002000000000558128851361561536',
+    'sign_plan_id'         => '01000033210000324638000000376258',
+    'plan_detail_no'       => 2,
+    'appid'                => 'wxd678efh567hg6787',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'notify_url'           => 'https://api.test.com',
     'service_introduction' => '羽毛球课基础练习课程',
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'out_trade_no' => '1514323JSVDFE1243252',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'out_trade_no'         => '1514323JSVDFE1243252',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -179,25 +179,25 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/sign-plan/serviceorder']->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sign_plan_id' => '01000033210000324638000000376258',
-    'plan_detail_no' => 2,
-    'appid' => 'wxd678efh567hg6787',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'notify_url' => 'https://api.test.com',
+    'service_id'           => '2002000000000558128851361561536',
+    'sign_plan_id'         => '01000033210000324638000000376258',
+    'plan_detail_no'       => 2,
+    'appid'                => 'wxd678efh567hg6787',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'notify_url'           => 'https://api.test.com',
     'service_introduction' => '羽毛球课基础练习课程',
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'out_trade_no' => '1514323JSVDFE1243252',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'out_trade_no'         => '1514323JSVDFE1243252',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -207,12 +207,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 商户订单号
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 商户公众号ID
-| mchid {data-required}| string | 商户号
-| service_introduction {data-required}| string | 服务信息
-| state {data-required}| string | 服务订单状态
+| out_order_no {data-required} | string | 商户订单号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 商户公众号ID
+| mchid {data-required} | string | 商户号
+| service_introduction {data-required} | string | 服务信息
+| state {data-required} | string | 服务订单状态
 | state_description | string | 订单状态说明
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费名称

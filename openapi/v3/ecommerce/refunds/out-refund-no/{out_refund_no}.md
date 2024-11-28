@@ -10,8 +10,9 @@ description: 提交退款申请后，通过调用该接口查询退款状态。
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | out_refund_no {data-required} | string | 商户退款单号
-| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| individual_auth_id {data-indent=1} | string | 商品单个人收款方受理授权ID
+| sub_mchid {data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -21,6 +22,7 @@ description: 提交退款申请后，通过调用该接口查询退款状态。
 $instance->v3->ecommerce->refunds->outRefundNo->_out_refund_no_->getAsync([
   'out_refund_no' => '1217752501201407033233368018',
   'query' => [
+    'individual_auth_id' => '1900000109',
     'sub_mchid' => '1900000109',
   ],
 ])
@@ -34,6 +36,7 @@ $instance->v3->ecommerce->refunds->outRefundNo->_out_refund_no_->getAsync([
 $instance->chain('v3/ecommerce/refunds/out-refund-no/{out_refund_no}')->getAsync([
   'out_refund_no' => '1217752501201407033233368018',
   'query' => [
+    'individual_auth_id' => '1900000109',
     'sub_mchid' => '1900000109',
   ],
 ])
@@ -47,6 +50,7 @@ $instance->chain('v3/ecommerce/refunds/out-refund-no/{out_refund_no}')->getAsync
 $instance['v3/ecommerce/refunds/out-refund-no/{out_refund_no}']->getAsync([
   'out_refund_no' => '1217752501201407033233368018',
   'query' => [
+    'individual_auth_id' => '1900000109',
     'sub_mchid' => '1900000109',
   ],
 ])
@@ -60,6 +64,7 @@ $instance['v3/ecommerce/refunds/out-refund-no/{out_refund_no}']->getAsync([
 $response = $instance->v3->ecommerce->refunds->outRefundNo->_out_refund_no_->get([
   'out_refund_no' => '1217752501201407033233368018',
   'query' => [
+    'individual_auth_id' => '1900000109',
     'sub_mchid' => '1900000109',
   ],
 ]);
@@ -70,6 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/ecommerce/refunds/out-refund-no/{out_refund_no}')->get([
   'out_refund_no' => '1217752501201407033233368018',
   'query' => [
+    'individual_auth_id' => '1900000109',
     'sub_mchid' => '1900000109',
   ],
 ]);
@@ -80,6 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/ecommerce/refunds/out-refund-no/{out_refund_no}']->get([
   'out_refund_no' => '1217752501201407033233368018',
   'query' => [
+    'individual_auth_id' => '1900000109',
     'sub_mchid' => '1900000109',
   ],
 ]);
@@ -90,16 +97,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id {data-required}| string | 微信退款单号
-| out_refund_no {data-required}| string | 商户退款单号
-| transaction_id {data-required}| string | 微信订单号
-| out_trade_no {data-required}| string | 商户订单号
+| refund_id {data-required} | string | 微信退款单号
+| out_refund_no {data-required} | string | 商户退款单号
+| transaction_id {data-required} | string | 微信订单号
+| out_trade_no {data-required} | string | 商户订单号
 | channel | string | 退款渠道
 | user_received_account | string | 退款入账账户
 | success_time | string | 退款成功时间
-| create_time {data-required}| string | 退款创建时间
-| status {data-required}| string | 退款状态
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 退款金额信息
+| create_time {data-required} | string | 退款创建时间
+| status {data-required} | string | 退款状态
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 退款金额信息
 | refund {data-required data-indent=1} | integer | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
 | account {data-required data-indent=2} | string | 出资账户类型
@@ -114,9 +121,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-required data-indent=1} | string | 优惠类型
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | refund_amount {data-required data-indent=1} | integer | 优惠退款金额
-| refund_account | string | 退款出资商户
-| funds_account | string | 资金账户
+| refund_account | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
+| funds_account | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/query-refund-by-out-refund-no.html)
+参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/query-refund-by-out-refund-no.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/query-refund-by-out-refund-no.html)

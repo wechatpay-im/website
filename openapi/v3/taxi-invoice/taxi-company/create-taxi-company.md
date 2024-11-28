@@ -29,16 +29,16 @@ description: 新增出租车公司，主要用于服务商绑定特约商户，�
 ```php [异步纯链式]
 $instance->v3->taxiInvoice->taxiCompany->createTaxiCompany->postAsync([
   'json' => [
-    'company_name' => '深圳市未来有限公司',
-    'tax_id' => '12345678901234567J',
-    'address' => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
-    'phone' => '075586013388',
-    'bank_name' => '中国工商银行南山支行',
-    'bank_account' => '12345678901234',
-    'invoice_mode' => 'JIAO_WEI',
-    'legal_person' => '张三',
-    'short_name' => '深圳未来',
-    'region_id' => 510100,
+    'company_name'    => '深圳市未来有限公司',
+    'tax_id'          => '12345678901234567J',
+    'address'         => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
+    'phone'           => '075586013388',
+    'bank_name'       => '中国工商银行南山支行',
+    'bank_account'    => '12345678901234',
+    'invoice_mode'    => 'JIAO_WEI',
+    'legal_person'    => '张三',
+    'short_name'      => '深圳未来',
+    'region_id'       => 510100,
     'enterprise_type' => 'ENTERPRISE',
   ],
 ])
@@ -51,16 +51,16 @@ $instance->v3->taxiInvoice->taxiCompany->createTaxiCompany->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/taxi-invoice/taxi-company/create-taxi-company')->postAsync([
   'json' => [
-    'company_name' => '深圳市未来有限公司',
-    'tax_id' => '12345678901234567J',
-    'address' => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
-    'phone' => '075586013388',
-    'bank_name' => '中国工商银行南山支行',
-    'bank_account' => '12345678901234',
-    'invoice_mode' => 'JIAO_WEI',
-    'legal_person' => '张三',
-    'short_name' => '深圳未来',
-    'region_id' => 510100,
+    'company_name'    => '深圳市未来有限公司',
+    'tax_id'          => '12345678901234567J',
+    'address'         => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
+    'phone'           => '075586013388',
+    'bank_name'       => '中国工商银行南山支行',
+    'bank_account'    => '12345678901234',
+    'invoice_mode'    => 'JIAO_WEI',
+    'legal_person'    => '张三',
+    'short_name'      => '深圳未来',
+    'region_id'       => 510100,
     'enterprise_type' => 'ENTERPRISE',
   ],
 ])
@@ -73,16 +73,16 @@ $instance->chain('v3/taxi-invoice/taxi-company/create-taxi-company')->postAsync(
 ```php [异步属性式]
 $instance['v3/taxi-invoice/taxi-company/create-taxi-company']->postAsync([
   'json' => [
-    'company_name' => '深圳市未来有限公司',
-    'tax_id' => '12345678901234567J',
-    'address' => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
-    'phone' => '075586013388',
-    'bank_name' => '中国工商银行南山支行',
-    'bank_account' => '12345678901234',
-    'invoice_mode' => 'JIAO_WEI',
-    'legal_person' => '张三',
-    'short_name' => '深圳未来',
-    'region_id' => 510100,
+    'company_name'    => '深圳市未来有限公司',
+    'tax_id'          => '12345678901234567J',
+    'address'         => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
+    'phone'           => '075586013388',
+    'bank_name'       => '中国工商银行南山支行',
+    'bank_account'    => '12345678901234',
+    'invoice_mode'    => 'JIAO_WEI',
+    'legal_person'    => '张三',
+    'short_name'      => '深圳未来',
+    'region_id'       => 510100,
     'enterprise_type' => 'ENTERPRISE',
   ],
 ])
@@ -95,16 +95,16 @@ $instance['v3/taxi-invoice/taxi-company/create-taxi-company']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->taxiInvoice->taxiCompany->createTaxiCompany->post([
   'json' => [
-    'company_name' => '深圳市未来有限公司',
-    'tax_id' => '12345678901234567J',
-    'address' => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
-    'phone' => '075586013388',
-    'bank_name' => '中国工商银行南山支行',
-    'bank_account' => '12345678901234',
-    'invoice_mode' => 'JIAO_WEI',
-    'legal_person' => '张三',
-    'short_name' => '深圳未来',
-    'region_id' => 510100,
+    'company_name'    => '深圳市未来有限公司',
+    'tax_id'          => '12345678901234567J',
+    'address'         => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
+    'phone'           => '075586013388',
+    'bank_name'       => '中国工商银行南山支行',
+    'bank_account'    => '12345678901234',
+    'invoice_mode'    => 'JIAO_WEI',
+    'legal_person'    => '张三',
+    'short_name'      => '深圳未来',
+    'region_id'       => 510100,
     'enterprise_type' => 'ENTERPRISE',
   ],
 ]);
@@ -114,16 +114,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/taxi-invoice/taxi-company/create-taxi-company')->post([
   'json' => [
-    'company_name' => '深圳市未来有限公司',
-    'tax_id' => '12345678901234567J',
-    'address' => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
-    'phone' => '075586013388',
-    'bank_name' => '中国工商银行南山支行',
-    'bank_account' => '12345678901234',
-    'invoice_mode' => 'JIAO_WEI',
-    'legal_person' => '张三',
-    'short_name' => '深圳未来',
-    'region_id' => 510100,
+    'company_name'    => '深圳市未来有限公司',
+    'tax_id'          => '12345678901234567J',
+    'address'         => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
+    'phone'           => '075586013388',
+    'bank_name'       => '中国工商银行南山支行',
+    'bank_account'    => '12345678901234',
+    'invoice_mode'    => 'JIAO_WEI',
+    'legal_person'    => '张三',
+    'short_name'      => '深圳未来',
+    'region_id'       => 510100,
     'enterprise_type' => 'ENTERPRISE',
   ],
 ]);
@@ -133,16 +133,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/taxi-invoice/taxi-company/create-taxi-company']->post([
   'json' => [
-    'company_name' => '深圳市未来有限公司',
-    'tax_id' => '12345678901234567J',
-    'address' => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
-    'phone' => '075586013388',
-    'bank_name' => '中国工商银行南山支行',
-    'bank_account' => '12345678901234',
-    'invoice_mode' => 'JIAO_WEI',
-    'legal_person' => '张三',
-    'short_name' => '深圳未来',
-    'region_id' => 510100,
+    'company_name'    => '深圳市未来有限公司',
+    'tax_id'          => '12345678901234567J',
+    'address'         => '广东省深圳市南山区高新科技园科技中一路腾讯大厦',
+    'phone'           => '075586013388',
+    'bank_name'       => '中国工商银行南山支行',
+    'bank_account'    => '12345678901234',
+    'invoice_mode'    => 'JIAO_WEI',
+    'legal_person'    => '张三',
+    'short_name'      => '深圳未来',
+    'region_id'       => 510100,
     'enterprise_type' => 'ENTERPRISE',
   ],
 ]);
@@ -153,7 +153,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
+| mchid {data-required} | string | 商户号
 | company_name | string | 公司名称
 
 {.im-table #response}

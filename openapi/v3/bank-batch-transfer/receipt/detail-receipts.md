@@ -15,7 +15,7 @@
 ```php [异步纯链式]
 $instance->v3->bankBatchTransfer->receipt->detailReceipts->postAsync([
   'json' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -28,7 +28,7 @@ $instance->v3->bankBatchTransfer->receipt->detailReceipts->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/bank-batch-transfer/receipt/detail-receipts')->postAsync([
   'json' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -41,7 +41,7 @@ $instance->chain('v3/bank-batch-transfer/receipt/detail-receipts')->postAsync([
 ```php [异步属性式]
 $instance['v3/bank-batch-transfer/receipt/detail-receipts']->postAsync([
   'json' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/bank-batch-transfer/receipt/detail-receipts']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->bankBatchTransfer->receipt->detailReceipts->post([
   'json' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -64,7 +64,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/bank-batch-transfer/receipt/detail-receipts')->post([
   'json' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -74,7 +74,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/bank-batch-transfer/receipt/detail-receipts']->post([
   'json' => [
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -85,9 +85,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no {data-required}| string | 银行转账批次单号
-| out_detail_no {data-required}| string | 银行转账明细单号
-| receipt_no {data-required}| string | 电子回单受理单号
+| out_batch_no {data-required} | string | 银行转账批次单号
+| out_detail_no {data-required} | string | 银行转账明细单号
+| receipt_no {data-required} | string | 电子回单受理单号
 | receipt_state | string | 电子回单状态
 | hash_type | string | 电子回单文件的Hash方法
 | hash_value | string | 电子回单文件的Hash值
@@ -184,9 +184,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no {data-required}| string | 银行转账批次单号
-| out_detail_no {data-required}| string | 银行转账明细单号
-| receipt_no {data-required}| string | 电子回单受理单号
+| out_batch_no {data-required} | string | 银行转账批次单号
+| out_detail_no {data-required} | string | 银行转账明细单号
+| receipt_no {data-required} | string | 电子回单受理单号
 | receipt_state | string | 电子回单状态
 | hash_type | string | 电子回单文件的Hash方法
 | hash_value | string | 电子回单文件的Hash值

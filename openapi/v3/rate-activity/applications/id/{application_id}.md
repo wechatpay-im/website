@@ -65,8 +65,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_state {data-required}| string | 申请单状态
-| sub_mchid {data-required}| string | 从业机构特约商户号
+| application_state {data-required} | string | 申请单状态
+| sub_mchid {data-required} | string | 从业机构特约商户号
 | reject_parameter | string | 驳回参数
 | reject_reason | string | 驳回原因
 | pass_time | string | 活动审核通过时间
@@ -101,14 +101,14 @@ $instance->v3->rateActivity->applications->id->_application_id_->patchAsync([
   'application_id' => '20000011111',
   'json' => [
     'activity_detail_modification' => [
-      'activity_rate' => '0.6',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROOF',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROOF',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
-    'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+    'additional_information'       => [
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -124,14 +124,14 @@ $instance->chain('v3/rate-activity/applications/id/{application_id}')->patchAsyn
   'application_id' => '20000011111',
   'json' => [
     'activity_detail_modification' => [
-      'activity_rate' => '0.6',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROOF',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROOF',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
-    'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+    'additional_information'       => [
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -147,14 +147,14 @@ $instance['v3/rate-activity/applications/id/{application_id}']->patchAsync([
   'application_id' => '20000011111',
   'json' => [
     'activity_detail_modification' => [
-      'activity_rate' => '0.6',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROOF',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROOF',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
-    'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+    'additional_information'       => [
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -170,14 +170,14 @@ $response = $instance->v3->rateActivity->applications->id->_application_id_->pat
   'application_id' => '20000011111',
   'json' => [
     'activity_detail_modification' => [
-      'activity_rate' => '0.6',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROOF',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROOF',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
-    'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+    'additional_information'       => [
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -190,14 +190,14 @@ $response = $instance->chain('v3/rate-activity/applications/id/{application_id}'
   'application_id' => '20000011111',
   'json' => [
     'activity_detail_modification' => [
-      'activity_rate' => '0.6',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROOF',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROOF',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
-    'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+    'additional_information'       => [
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -210,14 +210,14 @@ $response = $instance['v3/rate-activity/applications/id/{application_id}']->patc
   'application_id' => '20000011111',
   'json' => [
     'activity_detail_modification' => [
-      'activity_rate' => '0.6',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROOF',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROOF',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
-    'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+    'additional_information'       => [
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -229,7 +229,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id {data-required}| string | 申请单编号
+| application_id {data-required} | string | 申请单编号
 
 {.im-table #response}
 

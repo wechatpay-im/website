@@ -29,13 +29,13 @@ description: 商户平台/API完成制券/消费金后，可使用发放代金�
 $instance->v3->multiuse->users->_openid_->coupons->postAsync([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
+    'stock_id'       => '9856000',
     'out_request_no' => '8956000202407191254642',
-    'user_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'user_name'      => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'id_card_number' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'amount' => 10000,
-    'appid' => 'wx233544546545989',
-    'card_type' => 'ID_CARD',
+    'amount'         => 10000,
+    'appid'          => 'wx233544546545989',
+    'card_type'      => 'ID_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -51,13 +51,13 @@ $instance->v3->multiuse->users->_openid_->coupons->postAsync([
 $instance->chain('v3/multiuse/users/{openid}/coupons')->postAsync([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
+    'stock_id'       => '9856000',
     'out_request_no' => '8956000202407191254642',
-    'user_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'user_name'      => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'id_card_number' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'amount' => 10000,
-    'appid' => 'wx233544546545989',
-    'card_type' => 'ID_CARD',
+    'amount'         => 10000,
+    'appid'          => 'wx233544546545989',
+    'card_type'      => 'ID_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -73,13 +73,13 @@ $instance->chain('v3/multiuse/users/{openid}/coupons')->postAsync([
 $instance['v3/multiuse/users/{openid}/coupons']->postAsync([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
+    'stock_id'       => '9856000',
     'out_request_no' => '8956000202407191254642',
-    'user_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'user_name'      => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'id_card_number' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'amount' => 10000,
-    'appid' => 'wx233544546545989',
-    'card_type' => 'ID_CARD',
+    'amount'         => 10000,
+    'appid'          => 'wx233544546545989',
+    'card_type'      => 'ID_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -95,13 +95,13 @@ $instance['v3/multiuse/users/{openid}/coupons']->postAsync([
 $response = $instance->v3->multiuse->users->_openid_->coupons->post([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
+    'stock_id'       => '9856000',
     'out_request_no' => '8956000202407191254642',
-    'user_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'user_name'      => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'id_card_number' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'amount' => 10000,
-    'appid' => 'wx233544546545989',
-    'card_type' => 'ID_CARD',
+    'amount'         => 10000,
+    'appid'          => 'wx233544546545989',
+    'card_type'      => 'ID_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -114,13 +114,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/multiuse/users/{openid}/coupons')->post([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
+    'stock_id'       => '9856000',
     'out_request_no' => '8956000202407191254642',
-    'user_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'user_name'      => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'id_card_number' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'amount' => 10000,
-    'appid' => 'wx233544546545989',
-    'card_type' => 'ID_CARD',
+    'amount'         => 10000,
+    'appid'          => 'wx233544546545989',
+    'card_type'      => 'ID_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -133,13 +133,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/multiuse/users/{openid}/coupons']->post([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
+    'stock_id'       => '9856000',
     'out_request_no' => '8956000202407191254642',
-    'user_name' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
+    'user_name'      => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'id_card_number' => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-    'amount' => 10000,
-    'appid' => 'wx233544546545989',
-    'card_type' => 'ID_CARD',
+    'amount'         => 10000,
+    'appid'          => 'wx233544546545989',
+    'card_type'      => 'ID_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -152,7 +152,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| coupon_id {data-required}| string | 消费金ID
+| coupon_id {data-required} | string | 消费金ID
 
 {.im-table #response}
 

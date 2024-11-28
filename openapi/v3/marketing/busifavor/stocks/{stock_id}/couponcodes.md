@@ -17,7 +17,7 @@
 $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->postAsync([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list' => ['string'],
+    'coupon_code_list'  => ['string'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -31,7 +31,7 @@ $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->postAsync(
 $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->postAsync([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list' => ['string'],
+    'coupon_code_list'  => ['string'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -45,7 +45,7 @@ $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->postAs
 $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->postAsync([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list' => ['string'],
+    'coupon_code_list'  => ['string'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->postAsync([
 $response = $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->post([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list' => ['string'],
+    'coupon_code_list'  => ['string'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->post([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list' => ['string'],
+    'coupon_code_list'  => ['string'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -81,7 +81,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->post([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list' => ['string'],
+    'coupon_code_list'  => ['string'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -92,11 +92,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id {data-required}| string | 批次号
-| total_count {data-required}| integer | 去重后上传code总数
-| success_count {data-required}| integer | 上传成功code个数
+| stock_id {data-required} | string | 批次号
+| total_count {data-required} | integer | 去重后上传code总数
+| success_count {data-required} | integer | 上传成功code个数
 | success_codes | string[] | 上传成功的code列表
-| success_time {data-required}| string | 上传成功时间
+| success_time {data-required} | string | 上传成功时间
 | fail_count | integer | 上传失败code个数
 | fail_codes | object[] {data-tooltip="对应PHP的array"} | 上传失败的code及原因
 | coupon_code {data-required data-indent=1} | string | 上传失败的券code
@@ -217,10 +217,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id {data-required}| string | 批次号
-| total_count {data-required}| integer | 批次总数
-| limit {data-required}| integer | 分页大小
-| offset {data-required}| integer | 分页页码
+| stock_id {data-required} | string | 批次号
+| total_count {data-required} | integer | 批次总数
+| limit {data-required} | integer | 分页大小
+| offset {data-required} | integer | 分页页码
 | data | object[] {data-tooltip="对应PHP的array"} | 券code信息
 | code {data-indent=1} | string | 商户上传code
 | code_status {data-indent=1} | string | 商户上传code分配状态

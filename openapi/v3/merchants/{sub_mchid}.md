@@ -104,12 +104,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| name {data-required}| string | 子商户全称
-| shortname {data-required}| string | 子商户简称
-| office_phone {data-required}| string | 公司联系方式
-| merchant_country_code {data-required}| string | 册国家或区域
-| business_category {data-required}| integer | 类目
+| sub_mchid {data-required} | string | 子商户号
+| name {data-required} | string | 子商户全称
+| shortname {data-required} | string | 子商户简称
+| office_phone {data-required} | string | 公司联系方式
+| merchant_country_code {data-required} | string | 册国家或区域
+| business_category {data-required} | integer | 类目
 | contact | object {data-tooltip="对应PHP的array"} | 联系人信息
 | name {data-indent=1} | string | 联系人名称
 | phone {data-indent=1} | string | 联系人电话

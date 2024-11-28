@@ -23,7 +23,7 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->upgrade->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'    => 'wxea9c30890f48d5ae',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/upgrade')->postAs
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'    => 'wxea9c30890f48d5ae',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/upgrade']->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'    => 'wxea9c30890f48d5ae',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->upgrade-
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'    => 'wxea9c30890f48d5ae',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/upgra
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'    => 'wxea9c30890f48d5ae',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/upgrade']->p
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'brand_id' => '1001622624',
-    'appid' => 'wxea9c30890f48d5ae',
+    'appid'    => 'wxea9c30890f48d5ae',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

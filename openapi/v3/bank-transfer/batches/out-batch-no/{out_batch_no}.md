@@ -111,30 +111,30 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| bank_sp_mchid {data-required}| string | 银行服务商号
-| platform_mchid {data-required}| string | 服务平台商户号
-| specialized_payment_mchid {data-required}| string | 付款企业商户号
-| sponsor_mchid {data-required}| string | 实际出资商户号
-| user_authorized_mchid {data-required}| string | 用户授权商户号
-| user_authorized_appid {data-required}| string | 用户授权appid
-| out_batch_no {data-required}| string | 银行批次单号
-| batch_id {data-required}| string | 微信支付批次单号
-| transfer_scene {data-required}| string | 转账场景
-| batch_name {data-required}| string | 批次名称
-| batch_remark {data-required}| string | 批次备注
+| bank_sp_mchid {data-required} | string | 银行服务商号
+| platform_mchid {data-required} | string | 服务平台商户号
+| specialized_payment_mchid {data-required} | string | 付款企业商户号
+| sponsor_mchid {data-required} | string | 实际出资商户号
+| user_authorized_mchid {data-required} | string | 用户授权商户号
+| user_authorized_appid {data-required} | string | 用户授权appid
+| out_batch_no {data-required} | string | 银行批次单号
+| batch_id {data-required} | string | 微信支付批次单号
+| transfer_scene {data-required} | string | 转账场景
+| batch_name {data-required} | string | 批次名称
+| batch_remark {data-required} | string | 批次备注
 | attach_remark | string | 附加信息
-| transfer_purpose {data-required}| string | 批量转账用途
-| batch_state {data-required}| string | 批次状态
+| transfer_purpose {data-required} | string | 批量转账用途
+| batch_state {data-required} | string | 批次状态
 | close_reason | string | 批次关闭原因
-| total_amount {data-required}| integer | 转账总金额
-| total_count {data-required}| integer | 转账总笔数
+| total_amount {data-required} | integer | 转账总金额
+| total_count {data-required} | integer | 转账总笔数
 | create_time | string | 批次创建时间
 | update_time | string | 批次更新时间
 | success_amount | integer | 转账成功金额
 | success_count | integer | 转账成功笔数
 | fail_amount | integer | 转账失败金额
 | fail_count | integer | 转账失败笔数
-| transfer_detail_list {data-required}| object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
+| transfer_detail_list {data-required} | object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
 | detail_id {data-required data-indent=1} | string | 微信支付明细单号
 | out_detail_no {data-required data-indent=1} | string | 银行明细单号
 | detail_state {data-required data-indent=1} | string | 明细状态

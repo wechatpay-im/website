@@ -24,9 +24,9 @@ description:
 $instance->v3->merchantStore->stores->_store_id_->recipients->unbind->postAsync([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -41,9 +41,9 @@ $instance->v3->merchantStore->stores->_store_id_->recipients->unbind->postAsync(
 $instance->chain('v3/merchant-store/stores/{store_id}/recipients/unbind')->postAsync([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -58,9 +58,9 @@ $instance->chain('v3/merchant-store/stores/{store_id}/recipients/unbind')->postA
 $instance['v3/merchant-store/stores/{store_id}/recipients/unbind']->postAsync([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -75,9 +75,9 @@ $instance['v3/merchant-store/stores/{store_id}/recipients/unbind']->postAsync([
 $response = $instance->v3->merchantStore->stores->_store_id_->recipients->unbind->post([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -89,9 +89,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/merchant-store/stores/{store_id}/recipients/unbind')->post([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -103,9 +103,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/merchant-store/stores/{store_id}/recipients/unbind']->post([
   'store_id' => '20488000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],

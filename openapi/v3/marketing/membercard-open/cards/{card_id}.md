@@ -65,31 +65,31 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id {data-required}| string | 会员卡id
+| card_id {data-required} | string | 会员卡id
 | create_time | string | 创建时间
 | update_time | string | 更新时间
 | remain_quantity | integer | 剩余库存
 | status | string | 会员卡状态<br/>`NOT_APPROVE` \| `APPROVE_FAIL` \| `APPROVED` \| `DELETED` 枚举值之一
-| brand {data-required}| object {data-tooltip="对应PHP的array"} | 品牌信息
+| brand {data-required} | object {data-tooltip="对应PHP的array"} | 品牌信息
 | brand_id {data-required data-indent=1} | string | 品牌id
 | display_name {data-required data-indent=1} | string | 品牌展示名称
-| appid {data-required}| string | 商户AppId
-| logo_url {data-required}| string | 会员卡logo
-| title {data-required}| string | 卡名称
-| background_picture_url {data-required}| string | 会员卡背景图
-| description {data-required}| string | 使用须知
+| appid {data-required} | string | 商户AppId
+| logo_url {data-required} | string | 会员卡logo
+| title {data-required} | string | 卡名称
+| background_picture_url {data-required} | string | 会员卡背景图
+| description {data-required} | string | 使用须知
 | service_phone | string | 服务电话
-| code_type {data-required}| string | 会员码型<br/>`BAR_CODE` \| `QRCODE` \| `BAR_CODE_AND_QRCODE` \| `NONE_CODE` 枚举值之一
+| code_type {data-required} | string | 会员码型<br/>`BAR_CODE` \| `QRCODE` \| `BAR_CODE_AND_QRCODE` \| `NONE_CODE` 枚举值之一
 | total_quantity | integer | 会员卡总库存
-| date_information {data-required}| object {data-tooltip="对应PHP的array"} | 有效期
+| date_information {data-required} | object {data-tooltip="对应PHP的array"} | 有效期
 | type {data-required data-indent=1} | string | 有效期类型<br/>`FIX_TIME_RANGE` \| `FIX_TERM` \| `PERMANENT` 枚举值之一
 | available_begin_time {data-indent=1} | string | 有效期开始时间
 | available_end_time {data-indent=1} | string | 有效期结束时间
 | available_day_after_receive {data-indent=1} | integer | 生效后N天内有效
-| code_mode {data-required}| string | 会员卡code分配类型<br/>`SYSTEM_ALLOCATE` \| `MERCHANT_DEPOSIT` \| `REAL_TIME` 枚举值之一
+| code_mode {data-required} | string | 会员卡code分配类型<br/>`SYSTEM_ALLOCATE` \| `MERCHANT_DEPOSIT` \| `REAL_TIME` 枚举值之一
 | need_display_level | boolean | 是否展示会员等级
 | init_level | string | 会员初始等级
-| out_request_no {data-required}| string | 商户请求单号
+| out_request_no {data-required} | string | 商户请求单号
 | balance_information | object {data-tooltip="对应PHP的array"} | 储值信息
 | need_balance {data-indent=1} | boolean | 是否支持储值
 | balance_appid {data-indent=1} | string | 储值小程序appid
@@ -159,41 +159,41 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->membercardOpen->cards->_card_id_->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'appid' => 'wxea9c30890f48d5ae',
-    'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'title' => '微信支付测试卡',
+    'appid'                  => 'wxea9c30890f48d5ae',
+    'logo_url'               => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'title'                  => '微信支付测试卡',
     'background_picture_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'description' => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
-    'service_phone' => '010-8877xxxx',
-    'total_quantity' => 5000000,
-    'date_information' => [
-      'type' => 'FIX_TIME_RANGE',
-      'available_end_time' => '2030-05-20T13:29:35.120+08:00',
+    'description'            => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
+    'service_phone'          => '010-8877xxxx',
+    'total_quantity'         => 5000000,
+    'date_information'       => [
+      'type'                        => 'FIX_TIME_RANGE',
+      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
-      'wait_days_after_receive' => 2,
+      'wait_days_after_receive'     => 2,
     ],
-    'need_display_level' => true,
-    'init_level' => '白银会员',
-    'balance_information' => [
-      'need_balance' => true,
+    'need_display_level'     => true,
+    'init_level'             => '白银会员',
+    'balance_information'    => [
+      'need_balance'  => true,
       'balance_appid' => 'wxea9c30890f48d5ae',
-      'balance_path' => 'pages/balance/balance',
-      'balance_url' => 'https://xxx.com',
+      'balance_path'  => 'pages/balance/balance',
+      'balance_url'   => 'https://xxx.com',
     ],
-    'user_information_form' => [
+    'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list' => ['string'],
-      'custom_field_list' => [[
-        'type' => 'TEXT',
-        'name' => '喜欢的运动',
+      'common_field_list'         => ['string'],
+      'custom_field_list'         => [[
+        'type'   => 'TEXT',
+        'name'   => '喜欢的运动',
         'values' => ['string'],
       ],],
     ],
-    'additional_statement' => [
+    'additional_statement'   => [
       'title' => 'xxx会员卡使用须知',
-      'url' => 'https://xxx.111.com',
+      'url'   => 'https://xxx.111.com',
       'appid' => 'wxea9c30890f48d5ae',
-      'path' => 'pages/statement/statement',
+      'path'  => 'pages/statement/statement',
     ],
   ],
 ])
@@ -207,41 +207,41 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->patchAsync([
 $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'appid' => 'wxea9c30890f48d5ae',
-    'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'title' => '微信支付测试卡',
+    'appid'                  => 'wxea9c30890f48d5ae',
+    'logo_url'               => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'title'                  => '微信支付测试卡',
     'background_picture_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'description' => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
-    'service_phone' => '010-8877xxxx',
-    'total_quantity' => 5000000,
-    'date_information' => [
-      'type' => 'FIX_TIME_RANGE',
-      'available_end_time' => '2030-05-20T13:29:35.120+08:00',
+    'description'            => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
+    'service_phone'          => '010-8877xxxx',
+    'total_quantity'         => 5000000,
+    'date_information'       => [
+      'type'                        => 'FIX_TIME_RANGE',
+      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
-      'wait_days_after_receive' => 2,
+      'wait_days_after_receive'     => 2,
     ],
-    'need_display_level' => true,
-    'init_level' => '白银会员',
-    'balance_information' => [
-      'need_balance' => true,
+    'need_display_level'     => true,
+    'init_level'             => '白银会员',
+    'balance_information'    => [
+      'need_balance'  => true,
       'balance_appid' => 'wxea9c30890f48d5ae',
-      'balance_path' => 'pages/balance/balance',
-      'balance_url' => 'https://xxx.com',
+      'balance_path'  => 'pages/balance/balance',
+      'balance_url'   => 'https://xxx.com',
     ],
-    'user_information_form' => [
+    'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list' => ['string'],
-      'custom_field_list' => [[
-        'type' => 'TEXT',
-        'name' => '喜欢的运动',
+      'common_field_list'         => ['string'],
+      'custom_field_list'         => [[
+        'type'   => 'TEXT',
+        'name'   => '喜欢的运动',
         'values' => ['string'],
       ],],
     ],
-    'additional_statement' => [
+    'additional_statement'   => [
       'title' => 'xxx会员卡使用须知',
-      'url' => 'https://xxx.111.com',
+      'url'   => 'https://xxx.111.com',
       'appid' => 'wxea9c30890f48d5ae',
-      'path' => 'pages/statement/statement',
+      'path'  => 'pages/statement/statement',
     ],
   ],
 ])
@@ -255,41 +255,41 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patchAsync([
 $instance['v3/marketing/membercard-open/cards/{card_id}']->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'appid' => 'wxea9c30890f48d5ae',
-    'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'title' => '微信支付测试卡',
+    'appid'                  => 'wxea9c30890f48d5ae',
+    'logo_url'               => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'title'                  => '微信支付测试卡',
     'background_picture_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'description' => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
-    'service_phone' => '010-8877xxxx',
-    'total_quantity' => 5000000,
-    'date_information' => [
-      'type' => 'FIX_TIME_RANGE',
-      'available_end_time' => '2030-05-20T13:29:35.120+08:00',
+    'description'            => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
+    'service_phone'          => '010-8877xxxx',
+    'total_quantity'         => 5000000,
+    'date_information'       => [
+      'type'                        => 'FIX_TIME_RANGE',
+      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
-      'wait_days_after_receive' => 2,
+      'wait_days_after_receive'     => 2,
     ],
-    'need_display_level' => true,
-    'init_level' => '白银会员',
-    'balance_information' => [
-      'need_balance' => true,
+    'need_display_level'     => true,
+    'init_level'             => '白银会员',
+    'balance_information'    => [
+      'need_balance'  => true,
       'balance_appid' => 'wxea9c30890f48d5ae',
-      'balance_path' => 'pages/balance/balance',
-      'balance_url' => 'https://xxx.com',
+      'balance_path'  => 'pages/balance/balance',
+      'balance_url'   => 'https://xxx.com',
     ],
-    'user_information_form' => [
+    'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list' => ['string'],
-      'custom_field_list' => [[
-        'type' => 'TEXT',
-        'name' => '喜欢的运动',
+      'common_field_list'         => ['string'],
+      'custom_field_list'         => [[
+        'type'   => 'TEXT',
+        'name'   => '喜欢的运动',
         'values' => ['string'],
       ],],
     ],
-    'additional_statement' => [
+    'additional_statement'   => [
       'title' => 'xxx会员卡使用须知',
-      'url' => 'https://xxx.111.com',
+      'url'   => 'https://xxx.111.com',
       'appid' => 'wxea9c30890f48d5ae',
-      'path' => 'pages/statement/statement',
+      'path'  => 'pages/statement/statement',
     ],
   ],
 ])
@@ -303,41 +303,41 @@ $instance['v3/marketing/membercard-open/cards/{card_id}']->patchAsync([
 $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'appid' => 'wxea9c30890f48d5ae',
-    'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'title' => '微信支付测试卡',
+    'appid'                  => 'wxea9c30890f48d5ae',
+    'logo_url'               => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'title'                  => '微信支付测试卡',
     'background_picture_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'description' => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
-    'service_phone' => '010-8877xxxx',
-    'total_quantity' => 5000000,
-    'date_information' => [
-      'type' => 'FIX_TIME_RANGE',
-      'available_end_time' => '2030-05-20T13:29:35.120+08:00',
+    'description'            => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
+    'service_phone'          => '010-8877xxxx',
+    'total_quantity'         => 5000000,
+    'date_information'       => [
+      'type'                        => 'FIX_TIME_RANGE',
+      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
-      'wait_days_after_receive' => 2,
+      'wait_days_after_receive'     => 2,
     ],
-    'need_display_level' => true,
-    'init_level' => '白银会员',
-    'balance_information' => [
-      'need_balance' => true,
+    'need_display_level'     => true,
+    'init_level'             => '白银会员',
+    'balance_information'    => [
+      'need_balance'  => true,
       'balance_appid' => 'wxea9c30890f48d5ae',
-      'balance_path' => 'pages/balance/balance',
-      'balance_url' => 'https://xxx.com',
+      'balance_path'  => 'pages/balance/balance',
+      'balance_url'   => 'https://xxx.com',
     ],
-    'user_information_form' => [
+    'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list' => ['string'],
-      'custom_field_list' => [[
-        'type' => 'TEXT',
-        'name' => '喜欢的运动',
+      'common_field_list'         => ['string'],
+      'custom_field_list'         => [[
+        'type'   => 'TEXT',
+        'name'   => '喜欢的运动',
         'values' => ['string'],
       ],],
     ],
-    'additional_statement' => [
+    'additional_statement'   => [
       'title' => 'xxx会员卡使用须知',
-      'url' => 'https://xxx.111.com',
+      'url'   => 'https://xxx.111.com',
       'appid' => 'wxea9c30890f48d5ae',
-      'path' => 'pages/statement/statement',
+      'path'  => 'pages/statement/statement',
     ],
   ],
 ]);
@@ -348,41 +348,41 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'appid' => 'wxea9c30890f48d5ae',
-    'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'title' => '微信支付测试卡',
+    'appid'                  => 'wxea9c30890f48d5ae',
+    'logo_url'               => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'title'                  => '微信支付测试卡',
     'background_picture_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'description' => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
-    'service_phone' => '010-8877xxxx',
-    'total_quantity' => 5000000,
-    'date_information' => [
-      'type' => 'FIX_TIME_RANGE',
-      'available_end_time' => '2030-05-20T13:29:35.120+08:00',
+    'description'            => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
+    'service_phone'          => '010-8877xxxx',
+    'total_quantity'         => 5000000,
+    'date_information'       => [
+      'type'                        => 'FIX_TIME_RANGE',
+      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
-      'wait_days_after_receive' => 2,
+      'wait_days_after_receive'     => 2,
     ],
-    'need_display_level' => true,
-    'init_level' => '白银会员',
-    'balance_information' => [
-      'need_balance' => true,
+    'need_display_level'     => true,
+    'init_level'             => '白银会员',
+    'balance_information'    => [
+      'need_balance'  => true,
       'balance_appid' => 'wxea9c30890f48d5ae',
-      'balance_path' => 'pages/balance/balance',
-      'balance_url' => 'https://xxx.com',
+      'balance_path'  => 'pages/balance/balance',
+      'balance_url'   => 'https://xxx.com',
     ],
-    'user_information_form' => [
+    'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list' => ['string'],
-      'custom_field_list' => [[
-        'type' => 'TEXT',
-        'name' => '喜欢的运动',
+      'common_field_list'         => ['string'],
+      'custom_field_list'         => [[
+        'type'   => 'TEXT',
+        'name'   => '喜欢的运动',
         'values' => ['string'],
       ],],
     ],
-    'additional_statement' => [
+    'additional_statement'   => [
       'title' => 'xxx会员卡使用须知',
-      'url' => 'https://xxx.111.com',
+      'url'   => 'https://xxx.111.com',
       'appid' => 'wxea9c30890f48d5ae',
-      'path' => 'pages/statement/statement',
+      'path'  => 'pages/statement/statement',
     ],
   ],
 ]);
@@ -393,41 +393,41 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/marketing/membercard-open/cards/{card_id}']->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'appid' => 'wxea9c30890f48d5ae',
-    'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'title' => '微信支付测试卡',
+    'appid'                  => 'wxea9c30890f48d5ae',
+    'logo_url'               => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'title'                  => '微信支付测试卡',
     'background_picture_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'description' => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
-    'service_phone' => '010-8877xxxx',
-    'total_quantity' => 5000000,
-    'date_information' => [
-      'type' => 'FIX_TIME_RANGE',
-      'available_end_time' => '2030-05-20T13:29:35.120+08:00',
+    'description'            => '使用本会员卡表示你同意xxx公司的协议，最终解释权归xxx公司所有',
+    'service_phone'          => '010-8877xxxx',
+    'total_quantity'         => 5000000,
+    'date_information'       => [
+      'type'                        => 'FIX_TIME_RANGE',
+      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
-      'wait_days_after_receive' => 2,
+      'wait_days_after_receive'     => 2,
     ],
-    'need_display_level' => true,
-    'init_level' => '白银会员',
-    'balance_information' => [
-      'need_balance' => true,
+    'need_display_level'     => true,
+    'init_level'             => '白银会员',
+    'balance_information'    => [
+      'need_balance'  => true,
       'balance_appid' => 'wxea9c30890f48d5ae',
-      'balance_path' => 'pages/balance/balance',
-      'balance_url' => 'https://xxx.com',
+      'balance_path'  => 'pages/balance/balance',
+      'balance_url'   => 'https://xxx.com',
     ],
-    'user_information_form' => [
+    'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list' => ['string'],
-      'custom_field_list' => [[
-        'type' => 'TEXT',
-        'name' => '喜欢的运动',
+      'common_field_list'         => ['string'],
+      'custom_field_list'         => [[
+        'type'   => 'TEXT',
+        'name'   => '喜欢的运动',
         'values' => ['string'],
       ],],
     ],
-    'additional_statement' => [
+    'additional_statement'   => [
       'title' => 'xxx会员卡使用须知',
-      'url' => 'https://xxx.111.com',
+      'url'   => 'https://xxx.111.com',
       'appid' => 'wxea9c30890f48d5ae',
-      'path' => 'pages/statement/statement',
+      'path'  => 'pages/statement/statement',
     ],
   ],
 ]);

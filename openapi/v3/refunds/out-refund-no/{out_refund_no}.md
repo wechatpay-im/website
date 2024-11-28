@@ -111,17 +111,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| id {data-required}| string | 微信支付退款订单号
-| out_refund_no {data-required}| string | 商户退款单号
-| transaction_id {data-required}| string | 微信支付交易订单号
-| out_trade_no {data-required}| string | 商户原交易订单号
+| id {data-required} | string | 微信支付退款订单号
+| out_refund_no {data-required} | string | 商户退款单号
+| transaction_id {data-required} | string | 微信支付交易订单号
+| out_trade_no {data-required} | string | 商户原交易订单号
 | channel | string | 退款渠道
 | recv_account | string | 退款入账账户
 | fund_source | string | 退款资金来源
 | success_time | string | 退款成功时间
-| create_time {data-required}| string | 退款创建时间
-| status {data-required}| string | 退款状态
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 退款金额
+| create_time {data-required} | string | 退款创建时间
+| status {data-required} | string | 退款状态
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 退款金额
 | refund {data-required data-indent=1} | integer | 退款金额
 | currency {data-indent=1} | string | 货币类型
 | payer_refund {data-required data-indent=1} | integer | 用户退款金额

@@ -31,17 +31,17 @@ description: 商户可以通过调用此接口为子商户申请H5支付权限�
 $instance->v3->global->merchant->h5->permission->applications->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'business_description' => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'company_register_cert' => '6uqyGjvHzOhsLleGFQVRF',
-    'transaction_limit_type' => 'UN_LAUNCHED_WEBSITE_LIMIT',
+    'business_description'       => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'company_register_cert'      => '6uqyGjvHzOhsLleGFQVRF',
+    'transaction_limit_type'     => 'UN_LAUNCHED_WEBSITE_LIMIT',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'applyment_type' => 'APPLY_FOR_PAYMENT_AUTHORITY',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'applyment_type'             => 'APPLY_FOR_PAYMENT_AUTHORITY',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,17 +54,17 @@ $instance->v3->global->merchant->h5->permission->applications->postAsync([
 $instance->chain('v3/global/merchant/h5/permission/applications')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'business_description' => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'company_register_cert' => '6uqyGjvHzOhsLleGFQVRF',
-    'transaction_limit_type' => 'UN_LAUNCHED_WEBSITE_LIMIT',
+    'business_description'       => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'company_register_cert'      => '6uqyGjvHzOhsLleGFQVRF',
+    'transaction_limit_type'     => 'UN_LAUNCHED_WEBSITE_LIMIT',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'applyment_type' => 'APPLY_FOR_PAYMENT_AUTHORITY',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'applyment_type'             => 'APPLY_FOR_PAYMENT_AUTHORITY',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -77,17 +77,17 @@ $instance->chain('v3/global/merchant/h5/permission/applications')->postAsync([
 $instance['v3/global/merchant/h5/permission/applications']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'business_description' => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'company_register_cert' => '6uqyGjvHzOhsLleGFQVRF',
-    'transaction_limit_type' => 'UN_LAUNCHED_WEBSITE_LIMIT',
+    'business_description'       => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'company_register_cert'      => '6uqyGjvHzOhsLleGFQVRF',
+    'transaction_limit_type'     => 'UN_LAUNCHED_WEBSITE_LIMIT',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'applyment_type' => 'APPLY_FOR_PAYMENT_AUTHORITY',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'applyment_type'             => 'APPLY_FOR_PAYMENT_AUTHORITY',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -100,17 +100,17 @@ $instance['v3/global/merchant/h5/permission/applications']->postAsync([
 $response = $instance->v3->global->merchant->h5->permission->applications->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'business_description' => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'company_register_cert' => '6uqyGjvHzOhsLleGFQVRF',
-    'transaction_limit_type' => 'UN_LAUNCHED_WEBSITE_LIMIT',
+    'business_description'       => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'company_register_cert'      => '6uqyGjvHzOhsLleGFQVRF',
+    'transaction_limit_type'     => 'UN_LAUNCHED_WEBSITE_LIMIT',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'applyment_type' => 'APPLY_FOR_PAYMENT_AUTHORITY',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'applyment_type'             => 'APPLY_FOR_PAYMENT_AUTHORITY',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -120,17 +120,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/merchant/h5/permission/applications')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'business_description' => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'company_register_cert' => '6uqyGjvHzOhsLleGFQVRF',
-    'transaction_limit_type' => 'UN_LAUNCHED_WEBSITE_LIMIT',
+    'business_description'       => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'company_register_cert'      => '6uqyGjvHzOhsLleGFQVRF',
+    'transaction_limit_type'     => 'UN_LAUNCHED_WEBSITE_LIMIT',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'applyment_type' => 'APPLY_FOR_PAYMENT_AUTHORITY',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'applyment_type'             => 'APPLY_FOR_PAYMENT_AUTHORITY',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -140,17 +140,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/merchant/h5/permission/applications']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'business_description' => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'company_register_cert' => '6uqyGjvHzOhsLleGFQVRF',
-    'transaction_limit_type' => 'UN_LAUNCHED_WEBSITE_LIMIT',
+    'business_description'       => '腾讯于1998年11月成立，是一家互联网公司，通过技术丰富互联网用户的生活，助力企业数字化升级。我们的使命是“用户为本 科技向善”',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'company_register_cert'      => '6uqyGjvHzOhsLleGFQVRF',
+    'transaction_limit_type'     => 'UN_LAUNCHED_WEBSITE_LIMIT',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'website_url' => 'https://qq.com',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'applyment_type' => 'APPLY_FOR_PAYMENT_AUTHORITY',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'website_url'                => 'https://qq.com',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'applyment_type'             => 'APPLY_FOR_PAYMENT_AUTHORITY',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -160,19 +160,19 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| domains {data-required}| string[] | H5支付域名
+| sub_mchid {data-required} | string | 子商户号
+| domains {data-required} | string[] | H5支付域名
 | business_description | string | 公司介绍和业务描述
-| transaction_limit_type {data-required}| string | 限额类型<br/>`UN_LAUNCHED_WEBSITE_LIMIT` \| `NORMAL_LIMIT` \| `NO_LIMIT` 枚举值之一
+| transaction_limit_type {data-required} | string | 限额类型<br/>`UN_LAUNCHED_WEBSITE_LIMIT` \| `NORMAL_LIMIT` \| `NO_LIMIT` 枚举值之一
 | company_register_cert | string | 公司注册资质证书
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
-| website_state {data-required}| string | 子商户经营网址状态
-| website_url {data-required}| string | 子商户H5经营网址
-| applyment_id {data-required}| integer | 申请单号
+| website_state {data-required} | string | 子商户经营网址状态
+| website_url {data-required} | string | 子商户H5经营网址
+| applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
-| applyment_state {data-required}| string | 申请单状态
-| applyment_type {data-required}| string | 申请单类型
+| applyment_state {data-required} | string | 申请单状态
+| applyment_type {data-required} | string | 申请单类型
 | notify_url | string | 商户提供的审核结果回调接口
 
 {.im-table #response}

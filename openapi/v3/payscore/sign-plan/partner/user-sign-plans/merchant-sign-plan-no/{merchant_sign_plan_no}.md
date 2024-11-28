@@ -90,27 +90,27 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sign_plan_id {data-required}| string | 计划签约ID
+| sign_plan_id {data-required} | string | 计划签约ID
 | openid | string | 签约计划用户服务商应用下的OpenID
 | sub_openid | string | 签约计划用户子商户应用下的OpenID
-| service_id {data-required}| string | 计划所属服务
-| mchid {data-required}| string | 服务商商户号
-| sub_mchid {data-required}| string | 子商户商户号
-| appid {data-required}| string | 服务商AppID
+| service_id {data-required} | string | 计划所属服务
+| mchid {data-required} | string | 服务商商户号
+| sub_mchid {data-required} | string | 子商户商户号
+| appid {data-required} | string | 服务商AppID
 | sub_appid | string | 子商户AppID
-| merchant_sign_plan_no {data-required}| string | 商户侧签约计划号
-| merchant_callback_url {data-required}| string | 商户回调地址
-| plan_id {data-required}| string | 签约所属计划ID
-| going_detail_no {data-required}| number | 目前用户进行到的计划详情序号
-| sign_state {data-required}| string | 计划签约状态
+| merchant_sign_plan_no {data-required} | string | 商户侧签约计划号
+| merchant_callback_url {data-required} | string | 商户回调地址
+| plan_id {data-required} | string | 签约所属计划ID
+| going_detail_no {data-required} | number | 目前用户进行到的计划详情序号
+| sign_state {data-required} | string | 计划签约状态
 | cancel_sign_time | string | 签约计划取消时间
 | cancel_sign_type | string | 签约计划取消类型
 | cancel_reason | string | 签约计划取消原因
-| plan_name {data-required}| string | 签约计划的名称
-| plan_over_time {data-required}| string | 签约计划的过期时间
-| total_origin_price {data-required}| number | 签约计划原总金额(单位分)
-| deduction_quantity {data-required}| number | 签约计划扣费次数
-| total_actual_price {data-required}| number | 签约计划实际总金额（单位分）
+| plan_name {data-required} | string | 签约计划的名称
+| plan_over_time {data-required} | string | 签约计划的过期时间
+| total_origin_price {data-required} | number | 签约计划原总金额(单位分)
+| deduction_quantity {data-required} | number | 签约计划扣费次数
+| total_actual_price {data-required} | number | 签约计划实际总金额（单位分）
 | signed_detail_list | object[] {data-tooltip="对应PHP的array"} | 签约计划明细列表
 | plan_detail_no {data-required data-indent=1} | number | 计划明细序号
 | original_price {data-required data-indent=1} | number | 计划明细原支付金额（单位分）

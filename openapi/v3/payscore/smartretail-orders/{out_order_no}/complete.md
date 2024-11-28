@@ -39,27 +39,27 @@ description:
 $instance->v3->payscore->smartretailOrders->_out_order_no_->complete->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'finish_type' => 0,
-    'cancel_reason' => '',
-    'real_service_start_time' => '',
-    'real_service_end_time' => '',
+    'appid'                     => 'wxd678efh567hg6787',
+    'service_id'                => '500001',
+    'finish_type'               => 0,
+    'cancel_reason'             => '',
+    'real_service_start_time'   => '',
+    'real_service_end_time'     => '',
     'real_service_end_location' => '',
-    'fees' => [[
-      'fee_name' => '',
-      'fee_count' => 0,
+    'fees'                      => [[
+      'fee_name'   => '',
+      'fee_count'  => 0,
       'fee_amount' => 0,
-      'fee_desc' => '',
+      'fee_desc'   => '',
     ],],
-    'discounts' => [[
-      'discount_name' => '满20减1元',
+    'discounts'                 => [[
+      'discount_name'   => '满20减1元',
       'discount_amount' => 0,
-      'discount_desc' => '不与其他优惠叠加',
+      'discount_desc'   => '不与其他优惠叠加',
     ],],
-    'total_amount' => 0,
-    'finish_ticket' => '',
-    'profit_sharing' => true,
+    'total_amount'              => 0,
+    'finish_ticket'             => '',
+    'profit_sharing'            => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,27 +72,27 @@ $instance->v3->payscore->smartretailOrders->_out_order_no_->complete->postAsync(
 $instance->chain('v3/payscore/smartretail-orders/{out_order_no}/complete')->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'finish_type' => 0,
-    'cancel_reason' => '',
-    'real_service_start_time' => '',
-    'real_service_end_time' => '',
+    'appid'                     => 'wxd678efh567hg6787',
+    'service_id'                => '500001',
+    'finish_type'               => 0,
+    'cancel_reason'             => '',
+    'real_service_start_time'   => '',
+    'real_service_end_time'     => '',
     'real_service_end_location' => '',
-    'fees' => [[
-      'fee_name' => '',
-      'fee_count' => 0,
+    'fees'                      => [[
+      'fee_name'   => '',
+      'fee_count'  => 0,
       'fee_amount' => 0,
-      'fee_desc' => '',
+      'fee_desc'   => '',
     ],],
-    'discounts' => [[
-      'discount_name' => '满20减1元',
+    'discounts'                 => [[
+      'discount_name'   => '满20减1元',
       'discount_amount' => 0,
-      'discount_desc' => '不与其他优惠叠加',
+      'discount_desc'   => '不与其他优惠叠加',
     ],],
-    'total_amount' => 0,
-    'finish_ticket' => '',
-    'profit_sharing' => true,
+    'total_amount'              => 0,
+    'finish_ticket'             => '',
+    'profit_sharing'            => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -105,27 +105,27 @@ $instance->chain('v3/payscore/smartretail-orders/{out_order_no}/complete')->post
 $instance['v3/payscore/smartretail-orders/{out_order_no}/complete']->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'finish_type' => 0,
-    'cancel_reason' => '',
-    'real_service_start_time' => '',
-    'real_service_end_time' => '',
+    'appid'                     => 'wxd678efh567hg6787',
+    'service_id'                => '500001',
+    'finish_type'               => 0,
+    'cancel_reason'             => '',
+    'real_service_start_time'   => '',
+    'real_service_end_time'     => '',
     'real_service_end_location' => '',
-    'fees' => [[
-      'fee_name' => '',
-      'fee_count' => 0,
+    'fees'                      => [[
+      'fee_name'   => '',
+      'fee_count'  => 0,
       'fee_amount' => 0,
-      'fee_desc' => '',
+      'fee_desc'   => '',
     ],],
-    'discounts' => [[
-      'discount_name' => '满20减1元',
+    'discounts'                 => [[
+      'discount_name'   => '满20减1元',
       'discount_amount' => 0,
-      'discount_desc' => '不与其他优惠叠加',
+      'discount_desc'   => '不与其他优惠叠加',
     ],],
-    'total_amount' => 0,
-    'finish_ticket' => '',
-    'profit_sharing' => true,
+    'total_amount'              => 0,
+    'finish_ticket'             => '',
+    'profit_sharing'            => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -138,27 +138,27 @@ $instance['v3/payscore/smartretail-orders/{out_order_no}/complete']->postAsync([
 $response = $instance->v3->payscore->smartretailOrders->_out_order_no_->complete->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'finish_type' => 0,
-    'cancel_reason' => '',
-    'real_service_start_time' => '',
-    'real_service_end_time' => '',
+    'appid'                     => 'wxd678efh567hg6787',
+    'service_id'                => '500001',
+    'finish_type'               => 0,
+    'cancel_reason'             => '',
+    'real_service_start_time'   => '',
+    'real_service_end_time'     => '',
     'real_service_end_location' => '',
-    'fees' => [[
-      'fee_name' => '',
-      'fee_count' => 0,
+    'fees'                      => [[
+      'fee_name'   => '',
+      'fee_count'  => 0,
       'fee_amount' => 0,
-      'fee_desc' => '',
+      'fee_desc'   => '',
     ],],
-    'discounts' => [[
-      'discount_name' => '满20减1元',
+    'discounts'                 => [[
+      'discount_name'   => '满20减1元',
       'discount_amount' => 0,
-      'discount_desc' => '不与其他优惠叠加',
+      'discount_desc'   => '不与其他优惠叠加',
     ],],
-    'total_amount' => 0,
-    'finish_ticket' => '',
-    'profit_sharing' => true,
+    'total_amount'              => 0,
+    'finish_ticket'             => '',
+    'profit_sharing'            => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -168,27 +168,27 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/smartretail-orders/{out_order_no}/complete')->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'finish_type' => 0,
-    'cancel_reason' => '',
-    'real_service_start_time' => '',
-    'real_service_end_time' => '',
+    'appid'                     => 'wxd678efh567hg6787',
+    'service_id'                => '500001',
+    'finish_type'               => 0,
+    'cancel_reason'             => '',
+    'real_service_start_time'   => '',
+    'real_service_end_time'     => '',
     'real_service_end_location' => '',
-    'fees' => [[
-      'fee_name' => '',
-      'fee_count' => 0,
+    'fees'                      => [[
+      'fee_name'   => '',
+      'fee_count'  => 0,
       'fee_amount' => 0,
-      'fee_desc' => '',
+      'fee_desc'   => '',
     ],],
-    'discounts' => [[
-      'discount_name' => '满20减1元',
+    'discounts'                 => [[
+      'discount_name'   => '满20减1元',
       'discount_amount' => 0,
-      'discount_desc' => '不与其他优惠叠加',
+      'discount_desc'   => '不与其他优惠叠加',
     ],],
-    'total_amount' => 0,
-    'finish_ticket' => '',
-    'profit_sharing' => true,
+    'total_amount'              => 0,
+    'finish_ticket'             => '',
+    'profit_sharing'            => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -198,27 +198,27 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/smartretail-orders/{out_order_no}/complete']->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'finish_type' => 0,
-    'cancel_reason' => '',
-    'real_service_start_time' => '',
-    'real_service_end_time' => '',
+    'appid'                     => 'wxd678efh567hg6787',
+    'service_id'                => '500001',
+    'finish_type'               => 0,
+    'cancel_reason'             => '',
+    'real_service_start_time'   => '',
+    'real_service_end_time'     => '',
     'real_service_end_location' => '',
-    'fees' => [[
-      'fee_name' => '',
-      'fee_count' => 0,
+    'fees'                      => [[
+      'fee_name'   => '',
+      'fee_count'  => 0,
       'fee_amount' => 0,
-      'fee_desc' => '',
+      'fee_desc'   => '',
     ],],
-    'discounts' => [[
-      'discount_name' => '满20减1元',
+    'discounts'                 => [[
+      'discount_name'   => '满20减1元',
       'discount_amount' => 0,
-      'discount_desc' => '不与其他优惠叠加',
+      'discount_desc'   => '不与其他优惠叠加',
     ],],
-    'total_amount' => 0,
-    'finish_ticket' => '',
-    'profit_sharing' => true,
+    'total_amount'              => 0,
+    'finish_ticket'             => '',
+    'profit_sharing'            => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -228,11 +228,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 公众账号ID
-| mchid {data-required}| string | 商户号
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| order_id {data-required}| string | 微信支付服务订单号
+| appid {data-required} | string | 公众账号ID
+| mchid {data-required} | string | 商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| order_id {data-required} | string | 微信支付服务订单号
 
 {.im-table #response}
 

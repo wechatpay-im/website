@@ -77,8 +77,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| authorization_state {data-required}| string | H5支付权限状态
+| sub_mchid {data-required} | string | 子商户号
+| authorization_state {data-required} | string | H5支付权限状态
 
 {.im-table #response}
 

@@ -25,10 +25,10 @@ description: 商户系统须通过调用此接口获取银行转账账号，随�
 $instance->v3->recharge->bankTransferRecharges->apply->postAsync([
   'json' => [
     'out_recharge_no' => 'cz202407181234',
-    'recharge_scene' => 'NORMAL_BANK_TRANSFER',
-    'account_type' => 'BASIC',
+    'recharge_scene'  => 'NORMAL_BANK_TRANSFER',
+    'account_type'    => 'BASIC',
     'recharge_amount' => [
-      'amount' => 500000,
+      'amount'   => 500000,
       'currency' => 'CNY',
     ],
   ],
@@ -43,10 +43,10 @@ $instance->v3->recharge->bankTransferRecharges->apply->postAsync([
 $instance->chain('v3/recharge/bank-transfer-recharges/apply')->postAsync([
   'json' => [
     'out_recharge_no' => 'cz202407181234',
-    'recharge_scene' => 'NORMAL_BANK_TRANSFER',
-    'account_type' => 'BASIC',
+    'recharge_scene'  => 'NORMAL_BANK_TRANSFER',
+    'account_type'    => 'BASIC',
     'recharge_amount' => [
-      'amount' => 500000,
+      'amount'   => 500000,
       'currency' => 'CNY',
     ],
   ],
@@ -61,10 +61,10 @@ $instance->chain('v3/recharge/bank-transfer-recharges/apply')->postAsync([
 $instance['v3/recharge/bank-transfer-recharges/apply']->postAsync([
   'json' => [
     'out_recharge_no' => 'cz202407181234',
-    'recharge_scene' => 'NORMAL_BANK_TRANSFER',
-    'account_type' => 'BASIC',
+    'recharge_scene'  => 'NORMAL_BANK_TRANSFER',
+    'account_type'    => 'BASIC',
     'recharge_amount' => [
-      'amount' => 500000,
+      'amount'   => 500000,
       'currency' => 'CNY',
     ],
   ],
@@ -79,10 +79,10 @@ $instance['v3/recharge/bank-transfer-recharges/apply']->postAsync([
 $response = $instance->v3->recharge->bankTransferRecharges->apply->post([
   'json' => [
     'out_recharge_no' => 'cz202407181234',
-    'recharge_scene' => 'NORMAL_BANK_TRANSFER',
-    'account_type' => 'BASIC',
+    'recharge_scene'  => 'NORMAL_BANK_TRANSFER',
+    'account_type'    => 'BASIC',
     'recharge_amount' => [
-      'amount' => 500000,
+      'amount'   => 500000,
       'currency' => 'CNY',
     ],
   ],
@@ -94,10 +94,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/recharge/bank-transfer-recharges/apply')->post([
   'json' => [
     'out_recharge_no' => 'cz202407181234',
-    'recharge_scene' => 'NORMAL_BANK_TRANSFER',
-    'account_type' => 'BASIC',
+    'recharge_scene'  => 'NORMAL_BANK_TRANSFER',
+    'account_type'    => 'BASIC',
     'recharge_amount' => [
-      'amount' => 500000,
+      'amount'   => 500000,
       'currency' => 'CNY',
     ],
   ],
@@ -109,10 +109,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/recharge/bank-transfer-recharges/apply']->post([
   'json' => [
     'out_recharge_no' => 'cz202407181234',
-    'recharge_scene' => 'NORMAL_BANK_TRANSFER',
-    'account_type' => 'BASIC',
+    'recharge_scene'  => 'NORMAL_BANK_TRANSFER',
+    'account_type'    => 'BASIC',
     'recharge_amount' => [
-      'amount' => 500000,
+      'amount'   => 500000,
       'currency' => 'CNY',
     ],
   ],
@@ -124,9 +124,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| recharge_id {data-required}| string | 微信支付充值单号
-| out_recharge_no {data-required}| string | 商户充值单号
-| transfer_in_account {data-required}| object {data-tooltip="对应PHP的array"} | 银行账户
+| recharge_id {data-required} | string | 微信支付充值单号
+| out_recharge_no {data-required} | string | 商户充值单号
+| transfer_in_account {data-required} | object {data-tooltip="对应PHP的array"} | 银行账户
 | bank_name {data-indent=1} | string | 开户银行名称
 | bank_address_code {data-indent=1} | string | 开户银行省市编码
 | bank_code {data-indent=1} | string | 开户银行行号

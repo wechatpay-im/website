@@ -23,7 +23,7 @@ $instance->v3->marketing->weeklyDiscount->activities->_activity_id_->apply->post
   'activity_id' => '11111',
   'json' => [
     'applying_merchant_id' => 10000098,
-    'store_id' => 111111,
+    'store_id'             => 111111,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/weekly-discount/activities/{activity_id}/apply')-
   'activity_id' => '11111',
   'json' => [
     'applying_merchant_id' => 10000098,
-    'store_id' => 111111,
+    'store_id'             => 111111,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/weekly-discount/activities/{activity_id}/apply']->postAs
   'activity_id' => '11111',
   'json' => [
     'applying_merchant_id' => 10000098,
-    'store_id' => 111111,
+    'store_id'             => 111111,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->weeklyDiscount->activities->_activity_id_-
   'activity_id' => '11111',
   'json' => [
     'applying_merchant_id' => 10000098,
-    'store_id' => 111111,
+    'store_id'             => 111111,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/weekly-discount/activities/{activity_
   'activity_id' => '11111',
   'json' => [
     'applying_merchant_id' => 10000098,
-    'store_id' => 111111,
+    'store_id'             => 111111,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/weekly-discount/activities/{activity_id}/app
   'activity_id' => '11111',
   'json' => [
     'applying_merchant_id' => 10000098,
-    'store_id' => 111111,
+    'store_id'             => 111111,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| integer | 报名成功的活动ID
-| success_time {data-required}| string | 报名成功时间
+| activity_id {data-required} | integer | 报名成功的活动ID
+| success_time {data-required} | string | 报名成功时间
 
 {.im-table #response}
 

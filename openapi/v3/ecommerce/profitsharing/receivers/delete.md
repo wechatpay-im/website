@@ -21,8 +21,8 @@ description: 电商平台发起删除分账接收方请求。删除后，不支�
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->receivers->delete->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'type' => 'MERCHANT_ID',
+    'appid'   => 'wx8888888888888888',
+    'type'    => 'MERCHANT_ID',
     'account' => '190001001',
   ],
 ])
@@ -35,8 +35,8 @@ $instance->v3->ecommerce->profitsharing->receivers->delete->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/receivers/delete')->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'type' => 'MERCHANT_ID',
+    'appid'   => 'wx8888888888888888',
+    'type'    => 'MERCHANT_ID',
     'account' => '190001001',
   ],
 ])
@@ -49,8 +49,8 @@ $instance->chain('v3/ecommerce/profitsharing/receivers/delete')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/receivers/delete']->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'type' => 'MERCHANT_ID',
+    'appid'   => 'wx8888888888888888',
+    'type'    => 'MERCHANT_ID',
     'account' => '190001001',
   ],
 ])
@@ -63,8 +63,8 @@ $instance['v3/ecommerce/profitsharing/receivers/delete']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->receivers->delete->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'type' => 'MERCHANT_ID',
+    'appid'   => 'wx8888888888888888',
+    'type'    => 'MERCHANT_ID',
     'account' => '190001001',
   ],
 ]);
@@ -74,8 +74,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/receivers/delete')->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'type' => 'MERCHANT_ID',
+    'appid'   => 'wx8888888888888888',
+    'type'    => 'MERCHANT_ID',
     'account' => '190001001',
   ],
 ]);
@@ -85,8 +85,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/receivers/delete']->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'type' => 'MERCHANT_ID',
+    'appid'   => 'wx8888888888888888',
+    'type'    => 'MERCHANT_ID',
     'account' => '190001001',
   ],
 ]);
@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type {data-required}| string | 接收方类型
-| account {data-required}| string | 接收方账号
+| type {data-required} | string | 接收方类型
+| account {data-required} | string | 接收方账号
 
 {.im-table #response}
 

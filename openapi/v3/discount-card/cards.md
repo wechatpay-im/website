@@ -22,10 +22,10 @@ description: 商户在引导用户跳转先享卡领卡前，需要请求先享�
 ```php [异步纯链式]
 $instance->v3->discountCard->cards->postAsync([
   'json' => [
-    'out_card_code' => '6e8369071cd942c0476613f9d1ce9ca3',
+    'out_card_code'    => '6e8369071cd942c0476613f9d1ce9ca3',
     'card_template_id' => '87789b2f25177433bcbf407e8e471f95',
-    'appid' => 'wxd678efh567hg6787',
-    'notify_url' => 'https://api.test.com',
+    'appid'            => 'wxd678efh567hg6787',
+    'notify_url'       => 'https://api.test.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +37,10 @@ $instance->v3->discountCard->cards->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/discount-card/cards')->postAsync([
   'json' => [
-    'out_card_code' => '6e8369071cd942c0476613f9d1ce9ca3',
+    'out_card_code'    => '6e8369071cd942c0476613f9d1ce9ca3',
     'card_template_id' => '87789b2f25177433bcbf407e8e471f95',
-    'appid' => 'wxd678efh567hg6787',
-    'notify_url' => 'https://api.test.com',
+    'appid'            => 'wxd678efh567hg6787',
+    'notify_url'       => 'https://api.test.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +52,10 @@ $instance->chain('v3/discount-card/cards')->postAsync([
 ```php [异步属性式]
 $instance['v3/discount-card/cards']->postAsync([
   'json' => [
-    'out_card_code' => '6e8369071cd942c0476613f9d1ce9ca3',
+    'out_card_code'    => '6e8369071cd942c0476613f9d1ce9ca3',
     'card_template_id' => '87789b2f25177433bcbf407e8e471f95',
-    'appid' => 'wxd678efh567hg6787',
-    'notify_url' => 'https://api.test.com',
+    'appid'            => 'wxd678efh567hg6787',
+    'notify_url'       => 'https://api.test.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +67,10 @@ $instance['v3/discount-card/cards']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->discountCard->cards->post([
   'json' => [
-    'out_card_code' => '6e8369071cd942c0476613f9d1ce9ca3',
+    'out_card_code'    => '6e8369071cd942c0476613f9d1ce9ca3',
     'card_template_id' => '87789b2f25177433bcbf407e8e471f95',
-    'appid' => 'wxd678efh567hg6787',
-    'notify_url' => 'https://api.test.com',
+    'appid'            => 'wxd678efh567hg6787',
+    'notify_url'       => 'https://api.test.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -79,10 +79,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/discount-card/cards')->post([
   'json' => [
-    'out_card_code' => '6e8369071cd942c0476613f9d1ce9ca3',
+    'out_card_code'    => '6e8369071cd942c0476613f9d1ce9ca3',
     'card_template_id' => '87789b2f25177433bcbf407e8e471f95',
-    'appid' => 'wxd678efh567hg6787',
-    'notify_url' => 'https://api.test.com',
+    'appid'            => 'wxd678efh567hg6787',
+    'notify_url'       => 'https://api.test.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -91,10 +91,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/discount-card/cards']->post([
   'json' => [
-    'out_card_code' => '6e8369071cd942c0476613f9d1ce9ca3',
+    'out_card_code'    => '6e8369071cd942c0476613f9d1ce9ca3',
     'card_template_id' => '87789b2f25177433bcbf407e8e471f95',
-    'appid' => 'wxd678efh567hg6787',
-    'notify_url' => 'https://api.test.com',
+    'appid'            => 'wxd678efh567hg6787',
+    'notify_url'       => 'https://api.test.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| prepare_card_token {data-required}| string | 预领卡请求token
+| prepare_card_token {data-required} | string | 预领卡请求token
 
 {.im-table #response}
 

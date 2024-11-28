@@ -24,10 +24,10 @@ description: 服务商发起删除分账接收方请求。删除后，不再支�
 $instance->v3->brand->profitsharing->receivers->delete->postAsync([
   'json' => [
     'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
+    'appid'       => 'wx8888888888888888',
+    'sub_appid'   => 'wx8888888888888889',
+    'type'        => 'MERCHANT_ID',
+    'account'     => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,10 +40,10 @@ $instance->v3->brand->profitsharing->receivers->delete->postAsync([
 $instance->chain('v3/brand/profitsharing/receivers/delete')->postAsync([
   'json' => [
     'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
+    'appid'       => 'wx8888888888888888',
+    'sub_appid'   => 'wx8888888888888889',
+    'type'        => 'MERCHANT_ID',
+    'account'     => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,10 +56,10 @@ $instance->chain('v3/brand/profitsharing/receivers/delete')->postAsync([
 $instance['v3/brand/profitsharing/receivers/delete']->postAsync([
   'json' => [
     'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
+    'appid'       => 'wx8888888888888888',
+    'sub_appid'   => 'wx8888888888888889',
+    'type'        => 'MERCHANT_ID',
+    'account'     => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,10 +72,10 @@ $instance['v3/brand/profitsharing/receivers/delete']->postAsync([
 $response = $instance->v3->brand->profitsharing->receivers->delete->post([
   'json' => [
     'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
+    'appid'       => 'wx8888888888888888',
+    'sub_appid'   => 'wx8888888888888889',
+    'type'        => 'MERCHANT_ID',
+    'account'     => '1900000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -85,10 +85,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/brand/profitsharing/receivers/delete')->post([
   'json' => [
     'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
+    'appid'       => 'wx8888888888888888',
+    'sub_appid'   => 'wx8888888888888889',
+    'type'        => 'MERCHANT_ID',
+    'account'     => '1900000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -98,10 +98,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/brand/profitsharing/receivers/delete']->post([
   'json' => [
     'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
+    'appid'       => 'wx8888888888888888',
+    'sub_appid'   => 'wx8888888888888889',
+    'type'        => 'MERCHANT_ID',
+    'account'     => '1900000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,9 +111,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_mchid {data-required}| string | 品牌主商户号
-| type {data-required}| string | 分账接收方类型
-| account {data-required}| string | 分账接收方账号
+| brand_mchid {data-required} | string | 品牌主商户号
+| type {data-required} | string | 分账接收方类型
+| account {data-required} | string | 分账接收方账号
 
 {.im-table #response}
 

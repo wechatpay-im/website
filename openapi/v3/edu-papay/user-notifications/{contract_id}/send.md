@@ -23,7 +23,7 @@ description: 给用户发送扣款预通知
 $instance->v3->eduPapay->userNotifications->_contract_id_->send->postAsync([
   'contract_id' => 'wx8888888888888888',
   'json' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -38,7 +38,7 @@ $instance->v3->eduPapay->userNotifications->_contract_id_->send->postAsync([
 $instance->chain('v3/edu-papay/user-notifications/{contract_id}/send')->postAsync([
   'contract_id' => 'wx8888888888888888',
   'json' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -53,7 +53,7 @@ $instance->chain('v3/edu-papay/user-notifications/{contract_id}/send')->postAsyn
 $instance['v3/edu-papay/user-notifications/{contract_id}/send']->postAsync([
   'contract_id' => 'wx8888888888888888',
   'json' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -68,7 +68,7 @@ $instance['v3/edu-papay/user-notifications/{contract_id}/send']->postAsync([
 $response = $instance->v3->eduPapay->userNotifications->_contract_id_->send->post([
   'contract_id' => 'wx8888888888888888',
   'json' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -80,7 +80,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/edu-papay/user-notifications/{contract_id}/send')->post([
   'contract_id' => 'wx8888888888888888',
   'json' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],
@@ -92,7 +92,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/edu-papay/user-notifications/{contract_id}/send']->post([
   'contract_id' => 'wx8888888888888888',
   'json' => [
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_mchid' => '1900000109',
     'sub_appid' => 'wx8888888888888888',
   ],

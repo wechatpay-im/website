@@ -24,8 +24,8 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->phoneMembercard->imp
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'code' => '478515832665',
-    'out_request_no' => '100002322019090134234sfdf',
+    'code'                   => '478515832665',
+    'out_request_no'         => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/phone-membercard/
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'code' => '478515832665',
-    'out_request_no' => '100002322019090134234sfdf',
+    'code'                   => '478515832665',
+    'out_request_no'         => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +54,8 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/phone-membercard/import'
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'code' => '478515832665',
-    'out_request_no' => '100002322019090134234sfdf',
+    'code'                   => '478515832665',
+    'out_request_no'         => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,8 +69,8 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->phoneMem
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'code' => '478515832665',
-    'out_request_no' => '100002322019090134234sfdf',
+    'code'                   => '478515832665',
+    'out_request_no'         => '100002322019090134234sfdf',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -81,8 +81,8 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/phone
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'code' => '478515832665',
-    'out_request_no' => '100002322019090134234sfdf',
+    'code'                   => '478515832665',
+    'out_request_no'         => '100002322019090134234sfdf',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -93,8 +93,8 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/phone-member
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'code' => '478515832665',
-    'out_request_no' => '100002322019090134234sfdf',
+    'code'                   => '478515832665',
+    'out_request_no'         => '100002322019090134234sfdf',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code {data-required}| string | 会员卡code
+| code {data-required} | string | 会员卡code
 
 {.im-table #response}
 

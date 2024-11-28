@@ -24,8 +24,8 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->reverse->postAsync([
   'out_trade_no' => '1217752501201407033233368018',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
     'sub_appid' => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
   ],
@@ -40,8 +40,8 @@ $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->reverse->
 $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/reverse')->postAsync([
   'out_trade_no' => '1217752501201407033233368018',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
     'sub_appid' => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
   ],
@@ -56,8 +56,8 @@ $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/revers
 $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/reverse']->postAsync([
   'out_trade_no' => '1217752501201407033233368018',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
     'sub_appid' => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
   ],
@@ -72,8 +72,8 @@ $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/reverse']->po
 $response = $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->reverse->post([
   'out_trade_no' => '1217752501201407033233368018',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
     'sub_appid' => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
   ],
@@ -85,8 +85,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/reverse')->post([
   'out_trade_no' => '1217752501201407033233368018',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
     'sub_appid' => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
   ],
@@ -98,8 +98,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/reverse']->post([
   'out_trade_no' => '1217752501201407033233368018',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
     'sub_appid' => 'wxd678efh567hg6787',
     'sub_mchid' => '1230000109',
   ],
@@ -112,10 +112,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sp_appid | string | 合作伙伴应用AppID
-| sp_mchid {data-required}| string | 合作伙伴商户号
+| sp_mchid {data-required} | string | 合作伙伴商户号
 | sub_appid | string | 特约商户应用AppID
-| sub_mchid {data-required}| string | 特约商户商户号
-| out_trade_no {data-required}| string | 商户订单号
+| sub_mchid {data-required} | string | 特约商户商户号
+| out_trade_no {data-required} | string | 商户订单号
 
 {.im-table #response}
 

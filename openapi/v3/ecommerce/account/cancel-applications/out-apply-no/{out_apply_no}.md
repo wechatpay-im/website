@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_apply_no {data-required}| string | 商户注销申请单号
-| sub_mchid {data-required}| string | 二级商户号
+| out_apply_no {data-required} | string | 商户注销申请单号
+| sub_mchid {data-required} | string | 二级商户号
 | reject_reason | string | 受理失败原因
 | cancel_state | string | 注销状态<br/>`REVIEWING` \| `REJECTED` \| `CANCEL_SUCCESS` 枚举值之一
 | update_time | string | 最后更新时间

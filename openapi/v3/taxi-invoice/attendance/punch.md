@@ -23,11 +23,11 @@ description: 签到签退数据主要用于控制微信支付凭证是否包含�
 ```php [异步纯链式]
 $instance->v3->taxiInvoice->attendance->punch->postAsync([
   'json' => [
-    'plate_number' => '粤B12345',
+    'plate_number'   => '粤B12345',
     'driver_license' => '6298416',
-    'event_time' => '2019-12-01T12:00:00.000+08:00',
-    'event_type' => 'SIGN_IN',
-    'region_id' => 510100,
+    'event_time'     => '2019-12-01T12:00:00.000+08:00',
+    'event_type'     => 'SIGN_IN',
+    'region_id'      => 510100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v3->taxiInvoice->attendance->punch->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/taxi-invoice/attendance/punch')->postAsync([
   'json' => [
-    'plate_number' => '粤B12345',
+    'plate_number'   => '粤B12345',
     'driver_license' => '6298416',
-    'event_time' => '2019-12-01T12:00:00.000+08:00',
-    'event_type' => 'SIGN_IN',
-    'region_id' => 510100,
+    'event_time'     => '2019-12-01T12:00:00.000+08:00',
+    'event_type'     => 'SIGN_IN',
+    'region_id'      => 510100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v3/taxi-invoice/attendance/punch')->postAsync([
 ```php [异步属性式]
 $instance['v3/taxi-invoice/attendance/punch']->postAsync([
   'json' => [
-    'plate_number' => '粤B12345',
+    'plate_number'   => '粤B12345',
     'driver_license' => '6298416',
-    'event_time' => '2019-12-01T12:00:00.000+08:00',
-    'event_type' => 'SIGN_IN',
-    'region_id' => 510100,
+    'event_time'     => '2019-12-01T12:00:00.000+08:00',
+    'event_type'     => 'SIGN_IN',
+    'region_id'      => 510100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v3/taxi-invoice/attendance/punch']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->taxiInvoice->attendance->punch->post([
   'json' => [
-    'plate_number' => '粤B12345',
+    'plate_number'   => '粤B12345',
     'driver_license' => '6298416',
-    'event_time' => '2019-12-01T12:00:00.000+08:00',
-    'event_type' => 'SIGN_IN',
-    'region_id' => 510100,
+    'event_time'     => '2019-12-01T12:00:00.000+08:00',
+    'event_type'     => 'SIGN_IN',
+    'region_id'      => 510100,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -84,11 +84,11 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/taxi-invoice/attendance/punch')->post([
   'json' => [
-    'plate_number' => '粤B12345',
+    'plate_number'   => '粤B12345',
     'driver_license' => '6298416',
-    'event_time' => '2019-12-01T12:00:00.000+08:00',
-    'event_type' => 'SIGN_IN',
-    'region_id' => 510100,
+    'event_time'     => '2019-12-01T12:00:00.000+08:00',
+    'event_type'     => 'SIGN_IN',
+    'region_id'      => 510100,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -97,11 +97,11 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/taxi-invoice/attendance/punch']->post([
   'json' => [
-    'plate_number' => '粤B12345',
+    'plate_number'   => '粤B12345',
     'driver_license' => '6298416',
-    'event_time' => '2019-12-01T12:00:00.000+08:00',
-    'event_type' => 'SIGN_IN',
-    'region_id' => 510100,
+    'event_time'     => '2019-12-01T12:00:00.000+08:00',
+    'event_type'     => 'SIGN_IN',
+    'region_id'      => 510100,
   ],
 ]);
 print_r($response->getStatusCode() === 204);

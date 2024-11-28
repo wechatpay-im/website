@@ -56,46 +56,46 @@ description: 通过本接口提交微信支付付款码支付订单。
 $instance->v3->global->micropay->transactions->pay->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'MICROPAY',
-    'limit_pay' => 'no_credit',
+    'mchid'                  => '1900000109',
+    'appid'                  => 'wx8888888888888888',
+    'sub_mchid'              => '1900000109',
+    'sp_mchid'               => '1900000100',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
+    'trade_type'             => 'MICROPAY',
+    'limit_pay'              => 'no_credit',
     'merchant_category_code' => '1011',
-    'payer' => [
+    'payer'                  => [
       'auth_code' => '120061098828009406',
     ],
-    'amount' => [
-      'total' => 888,
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'             => [
+      'device_id'       => '013467007045764',
+      'device_ip'       => '128.0.0.1',
       'payer_client_ip' => '128.0.0.1',
-      'operator_id' => '123145',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'operator_id'     => '123145',
+      'store_info'      => [
+        'id'      => '0001',
+        'name'    => '腾讯大厦分店',
         'address' => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'detail' => [[
-      'cost_price' => 608800,
-      'receipt_id' => 'wx123',
+    'detail'                 => [[
+      'cost_price'   => 608800,
+      'receipt_id'   => 'wx123',
       'goods_detail' => [[
-        'goods_id' => '商品编码',
+        'goods_id'       => '商品编码',
         'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'price' => 528800,
+        'goods_name'     => 'iPhone6s 16G',
+        'quantity'       => 1,
+        'price'          => 528800,
       ],],
     ],],
   ],
@@ -110,46 +110,46 @@ $instance->v3->global->micropay->transactions->pay->postAsync([
 $instance->chain('v3/global/micropay/transactions/pay')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'MICROPAY',
-    'limit_pay' => 'no_credit',
+    'mchid'                  => '1900000109',
+    'appid'                  => 'wx8888888888888888',
+    'sub_mchid'              => '1900000109',
+    'sp_mchid'               => '1900000100',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
+    'trade_type'             => 'MICROPAY',
+    'limit_pay'              => 'no_credit',
     'merchant_category_code' => '1011',
-    'payer' => [
+    'payer'                  => [
       'auth_code' => '120061098828009406',
     ],
-    'amount' => [
-      'total' => 888,
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'             => [
+      'device_id'       => '013467007045764',
+      'device_ip'       => '128.0.0.1',
       'payer_client_ip' => '128.0.0.1',
-      'operator_id' => '123145',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'operator_id'     => '123145',
+      'store_info'      => [
+        'id'      => '0001',
+        'name'    => '腾讯大厦分店',
         'address' => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'detail' => [[
-      'cost_price' => 608800,
-      'receipt_id' => 'wx123',
+    'detail'                 => [[
+      'cost_price'   => 608800,
+      'receipt_id'   => 'wx123',
       'goods_detail' => [[
-        'goods_id' => '商品编码',
+        'goods_id'       => '商品编码',
         'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'price' => 528800,
+        'goods_name'     => 'iPhone6s 16G',
+        'quantity'       => 1,
+        'price'          => 528800,
       ],],
     ],],
   ],
@@ -164,46 +164,46 @@ $instance->chain('v3/global/micropay/transactions/pay')->postAsync([
 $instance['v3/global/micropay/transactions/pay']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'MICROPAY',
-    'limit_pay' => 'no_credit',
+    'mchid'                  => '1900000109',
+    'appid'                  => 'wx8888888888888888',
+    'sub_mchid'              => '1900000109',
+    'sp_mchid'               => '1900000100',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
+    'trade_type'             => 'MICROPAY',
+    'limit_pay'              => 'no_credit',
     'merchant_category_code' => '1011',
-    'payer' => [
+    'payer'                  => [
       'auth_code' => '120061098828009406',
     ],
-    'amount' => [
-      'total' => 888,
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'             => [
+      'device_id'       => '013467007045764',
+      'device_ip'       => '128.0.0.1',
       'payer_client_ip' => '128.0.0.1',
-      'operator_id' => '123145',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'operator_id'     => '123145',
+      'store_info'      => [
+        'id'      => '0001',
+        'name'    => '腾讯大厦分店',
         'address' => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'detail' => [[
-      'cost_price' => 608800,
-      'receipt_id' => 'wx123',
+    'detail'                 => [[
+      'cost_price'   => 608800,
+      'receipt_id'   => 'wx123',
       'goods_detail' => [[
-        'goods_id' => '商品编码',
+        'goods_id'       => '商品编码',
         'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'price' => 528800,
+        'goods_name'     => 'iPhone6s 16G',
+        'quantity'       => 1,
+        'price'          => 528800,
       ],],
     ],],
   ],
@@ -218,46 +218,46 @@ $instance['v3/global/micropay/transactions/pay']->postAsync([
 $response = $instance->v3->global->micropay->transactions->pay->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'MICROPAY',
-    'limit_pay' => 'no_credit',
+    'mchid'                  => '1900000109',
+    'appid'                  => 'wx8888888888888888',
+    'sub_mchid'              => '1900000109',
+    'sp_mchid'               => '1900000100',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
+    'trade_type'             => 'MICROPAY',
+    'limit_pay'              => 'no_credit',
     'merchant_category_code' => '1011',
-    'payer' => [
+    'payer'                  => [
       'auth_code' => '120061098828009406',
     ],
-    'amount' => [
-      'total' => 888,
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'             => [
+      'device_id'       => '013467007045764',
+      'device_ip'       => '128.0.0.1',
       'payer_client_ip' => '128.0.0.1',
-      'operator_id' => '123145',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'operator_id'     => '123145',
+      'store_info'      => [
+        'id'      => '0001',
+        'name'    => '腾讯大厦分店',
         'address' => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'detail' => [[
-      'cost_price' => 608800,
-      'receipt_id' => 'wx123',
+    'detail'                 => [[
+      'cost_price'   => 608800,
+      'receipt_id'   => 'wx123',
       'goods_detail' => [[
-        'goods_id' => '商品编码',
+        'goods_id'       => '商品编码',
         'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'price' => 528800,
+        'goods_name'     => 'iPhone6s 16G',
+        'quantity'       => 1,
+        'price'          => 528800,
       ],],
     ],],
   ],
@@ -269,46 +269,46 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/micropay/transactions/pay')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'MICROPAY',
-    'limit_pay' => 'no_credit',
+    'mchid'                  => '1900000109',
+    'appid'                  => 'wx8888888888888888',
+    'sub_mchid'              => '1900000109',
+    'sp_mchid'               => '1900000100',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
+    'trade_type'             => 'MICROPAY',
+    'limit_pay'              => 'no_credit',
     'merchant_category_code' => '1011',
-    'payer' => [
+    'payer'                  => [
       'auth_code' => '120061098828009406',
     ],
-    'amount' => [
-      'total' => 888,
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'             => [
+      'device_id'       => '013467007045764',
+      'device_ip'       => '128.0.0.1',
       'payer_client_ip' => '128.0.0.1',
-      'operator_id' => '123145',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'operator_id'     => '123145',
+      'store_info'      => [
+        'id'      => '0001',
+        'name'    => '腾讯大厦分店',
         'address' => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'detail' => [[
-      'cost_price' => 608800,
-      'receipt_id' => 'wx123',
+    'detail'                 => [[
+      'cost_price'   => 608800,
+      'receipt_id'   => 'wx123',
       'goods_detail' => [[
-        'goods_id' => '商品编码',
+        'goods_id'       => '商品编码',
         'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'price' => 528800,
+        'goods_name'     => 'iPhone6s 16G',
+        'quantity'       => 1,
+        'price'          => 528800,
       ],],
     ],],
   ],
@@ -320,46 +320,46 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/micropay/transactions/pay']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sp_mchid' => '1900000100',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => 'image形象店-深圳腾大- QQ公仔',
-    'attach' => '自定义数据',
-    'out_trade_no' => '1217752501201407033233368018',
-    'goods_tag' => 'WXG',
-    'trade_type' => 'MICROPAY',
-    'limit_pay' => 'no_credit',
+    'mchid'                  => '1900000109',
+    'appid'                  => 'wx8888888888888888',
+    'sub_mchid'              => '1900000109',
+    'sp_mchid'               => '1900000100',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'description'            => 'image形象店-深圳腾大- QQ公仔',
+    'attach'                 => '自定义数据',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'goods_tag'              => 'WXG',
+    'trade_type'             => 'MICROPAY',
+    'limit_pay'              => 'no_credit',
     'merchant_category_code' => '1011',
-    'payer' => [
+    'payer'                  => [
       'auth_code' => '120061098828009406',
     ],
-    'amount' => [
-      'total' => 888,
+    'amount'                 => [
+      'total'    => 888,
       'currency' => 'HKD',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'             => [
+      'device_id'       => '013467007045764',
+      'device_ip'       => '128.0.0.1',
       'payer_client_ip' => '128.0.0.1',
-      'operator_id' => '123145',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'operator_id'     => '123145',
+      'store_info'      => [
+        'id'      => '0001',
+        'name'    => '腾讯大厦分店',
         'address' => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'detail' => [[
-      'cost_price' => 608800,
-      'receipt_id' => 'wx123',
+    'detail'                 => [[
+      'cost_price'   => 608800,
+      'receipt_id'   => 'wx123',
       'goods_detail' => [[
-        'goods_id' => '商品编码',
+        'goods_id'       => '商品编码',
         'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'price' => 528800,
+        'goods_name'     => 'iPhone6s 16G',
+        'quantity'       => 1,
+        'price'          => 528800,
       ],],
     ],],
   ],
@@ -371,25 +371,25 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| id {data-required}| string | 微信支付订单号
-| mchid {data-required}| string | 商户号
-| appid {data-required}| string | APPID
-| sub_mchid {data-required}| string | 子商户号
-| sp_mchid {data-required}| string | 机构商户号
-| sp_appid {data-required}| string | 机构APPID
+| id {data-required} | string | 微信支付订单号
+| mchid {data-required} | string | 商户号
+| appid {data-required} | string | APPID
+| sub_mchid {data-required} | string | 子商户号
+| sp_mchid {data-required} | string | 机构商户号
+| sp_appid {data-required} | string | 机构APPID
 | sub_appid | string | 子商户APPID
-| out_trade_no {data-required}| string | 商户订单号
-| trade_type {data-required}| string | 交易类型
-| trade_state {data-required}| string | 交易状态
-| trade_state_desc {data-required}| string | 交易状态描述
-| bank_type {data-required}| string | 付款银行
+| out_trade_no {data-required} | string | 商户订单号
+| trade_type {data-required} | string | 交易类型
+| trade_state {data-required} | string | 交易状态
+| trade_state_desc {data-required} | string | 交易状态描述
+| bank_type {data-required} | string | 付款银行
 | attach | string | 商户数据
-| success_time {data-required}| string | 支付完成时间
+| success_time {data-required} | string | 支付完成时间
 | payer | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=1} | string | 用户标识
 | sp_openid {data-indent=1} | string | 用户标识（机构）
 | sub_openid {data-indent=1} | string | 用户标识（特约商户）
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=1} | integer | 订单金额
 | currency {data-indent=1} | string | 货币类型
 | payer_total {data-required data-indent=1} | integer | 用户支付金额

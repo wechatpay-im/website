@@ -25,13 +25,13 @@ description: 商户可通过调用该接口新增、更新出租车信息，出�
 ```php [异步纯链式]
 $instance->v3->taxiInvoice->taxi->updateTaxi->postAsync([
   'json' => [
-    'plate_number' => '粤B12345',
-    'company_name' => '深圳市未来有限公司',
-    'mchid' => '1900000109',
-    'main_license' => '6298416',
+    'plate_number'   => '粤B12345',
+    'company_name'   => '深圳市未来有限公司',
+    'mchid'          => '1900000109',
+    'main_license'   => '6298416',
     'deputy_license' => '6298416',
-    'region_id' => 510100,
-    'invoice_flag' => 'INVOICE',
+    'region_id'      => 510100,
+    'invoice_flag'   => 'INVOICE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->taxiInvoice->taxi->updateTaxi->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/taxi-invoice/taxi/update-taxi')->postAsync([
   'json' => [
-    'plate_number' => '粤B12345',
-    'company_name' => '深圳市未来有限公司',
-    'mchid' => '1900000109',
-    'main_license' => '6298416',
+    'plate_number'   => '粤B12345',
+    'company_name'   => '深圳市未来有限公司',
+    'mchid'          => '1900000109',
+    'main_license'   => '6298416',
     'deputy_license' => '6298416',
-    'region_id' => 510100,
-    'invoice_flag' => 'INVOICE',
+    'region_id'      => 510100,
+    'invoice_flag'   => 'INVOICE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/taxi-invoice/taxi/update-taxi')->postAsync([
 ```php [异步属性式]
 $instance['v3/taxi-invoice/taxi/update-taxi']->postAsync([
   'json' => [
-    'plate_number' => '粤B12345',
-    'company_name' => '深圳市未来有限公司',
-    'mchid' => '1900000109',
-    'main_license' => '6298416',
+    'plate_number'   => '粤B12345',
+    'company_name'   => '深圳市未来有限公司',
+    'mchid'          => '1900000109',
+    'main_license'   => '6298416',
     'deputy_license' => '6298416',
-    'region_id' => 510100,
-    'invoice_flag' => 'INVOICE',
+    'region_id'      => 510100,
+    'invoice_flag'   => 'INVOICE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/taxi-invoice/taxi/update-taxi']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->taxiInvoice->taxi->updateTaxi->post([
   'json' => [
-    'plate_number' => '粤B12345',
-    'company_name' => '深圳市未来有限公司',
-    'mchid' => '1900000109',
-    'main_license' => '6298416',
+    'plate_number'   => '粤B12345',
+    'company_name'   => '深圳市未来有限公司',
+    'mchid'          => '1900000109',
+    'main_license'   => '6298416',
     'deputy_license' => '6298416',
-    'region_id' => 510100,
-    'invoice_flag' => 'INVOICE',
+    'region_id'      => 510100,
+    'invoice_flag'   => 'INVOICE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,13 +94,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/taxi-invoice/taxi/update-taxi')->post([
   'json' => [
-    'plate_number' => '粤B12345',
-    'company_name' => '深圳市未来有限公司',
-    'mchid' => '1900000109',
-    'main_license' => '6298416',
+    'plate_number'   => '粤B12345',
+    'company_name'   => '深圳市未来有限公司',
+    'mchid'          => '1900000109',
+    'main_license'   => '6298416',
     'deputy_license' => '6298416',
-    'region_id' => 510100,
-    'invoice_flag' => 'INVOICE',
+    'region_id'      => 510100,
+    'invoice_flag'   => 'INVOICE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,13 +109,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/taxi-invoice/taxi/update-taxi']->post([
   'json' => [
-    'plate_number' => '粤B12345',
-    'company_name' => '深圳市未来有限公司',
-    'mchid' => '1900000109',
-    'main_license' => '6298416',
+    'plate_number'   => '粤B12345',
+    'company_name'   => '深圳市未来有限公司',
+    'mchid'          => '1900000109',
+    'main_license'   => '6298416',
     'deputy_license' => '6298416',
-    'region_id' => 510100,
-    'invoice_flag' => 'INVOICE',
+    'region_id'      => 510100,
+    'invoice_flag'   => 'INVOICE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -125,12 +125,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number {data-required}| string | 车牌号
-| company_name {data-required}| string | 公司名称
+| plate_number {data-required} | string | 车牌号
+| company_name {data-required} | string | 公司名称
 | mchid | string | 商户号
-| main_license {data-required}| string | 主班司机资格证号
+| main_license {data-required} | string | 主班司机资格证号
 | deputy_license | string | 副班司机资格证号
-| region_id {data-required}| integer | 行政区划ID
+| region_id {data-required} | integer | 行政区划ID
 
 {.im-table #response}
 

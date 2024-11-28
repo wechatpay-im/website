@@ -90,9 +90,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| hash_type {data-required}| string | 哈希类型
-| hash_value {data-required}| string | 哈希值
-| download_url {data-required}| string | 下载地址
+| hash_type {data-required} | string | 哈希类型
+| hash_value {data-required} | string | 哈希值
+| download_url {data-required} | string | 下载地址
 
 {.im-table #response}
 

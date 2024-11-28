@@ -29,17 +29,17 @@ description: 为商户创建电子发票的卡券模板，该卡券模板在开�
 ```php [异步纯链式]
 $instance->v3->newTaxControlFapiao->cardTemplate->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'card_appid' => 'wxb1170446a4c0a5a2',
+    'sub_mchid'                 => '1900000109',
+    'card_appid'                => 'wxb1170446a4c0a5a2',
     'card_template_information' => [
-      'payee_name' => '某公司',
-      'logo_url' => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
+      'payee_name'  => '某公司',
+      'logo_url'    => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
       'custom_cell' => [
-        'words' => '电子发票',
-        'description' => '查看发票',
-        'jump_url' => 'http://www.qq.com',
+        'words'                 => '电子发票',
+        'description'           => '查看发票',
+        'jump_url'              => 'http://www.qq.com',
         'miniprogram_user_name' => 'gh_86a091e50ad4@app',
-        'miniprogram_path' => 'pages/xxxPage',
+        'miniprogram_path'      => 'pages/xxxPage',
       ],
     ],
   ],
@@ -53,17 +53,17 @@ $instance->v3->newTaxControlFapiao->cardTemplate->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/new-tax-control-fapiao/card-template')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'card_appid' => 'wxb1170446a4c0a5a2',
+    'sub_mchid'                 => '1900000109',
+    'card_appid'                => 'wxb1170446a4c0a5a2',
     'card_template_information' => [
-      'payee_name' => '某公司',
-      'logo_url' => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
+      'payee_name'  => '某公司',
+      'logo_url'    => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
       'custom_cell' => [
-        'words' => '电子发票',
-        'description' => '查看发票',
-        'jump_url' => 'http://www.qq.com',
+        'words'                 => '电子发票',
+        'description'           => '查看发票',
+        'jump_url'              => 'http://www.qq.com',
         'miniprogram_user_name' => 'gh_86a091e50ad4@app',
-        'miniprogram_path' => 'pages/xxxPage',
+        'miniprogram_path'      => 'pages/xxxPage',
       ],
     ],
   ],
@@ -77,17 +77,17 @@ $instance->chain('v3/new-tax-control-fapiao/card-template')->postAsync([
 ```php [异步属性式]
 $instance['v3/new-tax-control-fapiao/card-template']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'card_appid' => 'wxb1170446a4c0a5a2',
+    'sub_mchid'                 => '1900000109',
+    'card_appid'                => 'wxb1170446a4c0a5a2',
     'card_template_information' => [
-      'payee_name' => '某公司',
-      'logo_url' => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
+      'payee_name'  => '某公司',
+      'logo_url'    => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
       'custom_cell' => [
-        'words' => '电子发票',
-        'description' => '查看发票',
-        'jump_url' => 'http://www.qq.com',
+        'words'                 => '电子发票',
+        'description'           => '查看发票',
+        'jump_url'              => 'http://www.qq.com',
         'miniprogram_user_name' => 'gh_86a091e50ad4@app',
-        'miniprogram_path' => 'pages/xxxPage',
+        'miniprogram_path'      => 'pages/xxxPage',
       ],
     ],
   ],
@@ -101,17 +101,17 @@ $instance['v3/new-tax-control-fapiao/card-template']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->newTaxControlFapiao->cardTemplate->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'card_appid' => 'wxb1170446a4c0a5a2',
+    'sub_mchid'                 => '1900000109',
+    'card_appid'                => 'wxb1170446a4c0a5a2',
     'card_template_information' => [
-      'payee_name' => '某公司',
-      'logo_url' => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
+      'payee_name'  => '某公司',
+      'logo_url'    => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
       'custom_cell' => [
-        'words' => '电子发票',
-        'description' => '查看发票',
-        'jump_url' => 'http://www.qq.com',
+        'words'                 => '电子发票',
+        'description'           => '查看发票',
+        'jump_url'              => 'http://www.qq.com',
         'miniprogram_user_name' => 'gh_86a091e50ad4@app',
-        'miniprogram_path' => 'pages/xxxPage',
+        'miniprogram_path'      => 'pages/xxxPage',
       ],
     ],
   ],
@@ -122,17 +122,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/new-tax-control-fapiao/card-template')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'card_appid' => 'wxb1170446a4c0a5a2',
+    'sub_mchid'                 => '1900000109',
+    'card_appid'                => 'wxb1170446a4c0a5a2',
     'card_template_information' => [
-      'payee_name' => '某公司',
-      'logo_url' => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
+      'payee_name'  => '某公司',
+      'logo_url'    => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
       'custom_cell' => [
-        'words' => '电子发票',
-        'description' => '查看发票',
-        'jump_url' => 'http://www.qq.com',
+        'words'                 => '电子发票',
+        'description'           => '查看发票',
+        'jump_url'              => 'http://www.qq.com',
         'miniprogram_user_name' => 'gh_86a091e50ad4@app',
-        'miniprogram_path' => 'pages/xxxPage',
+        'miniprogram_path'      => 'pages/xxxPage',
       ],
     ],
   ],
@@ -143,17 +143,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/new-tax-control-fapiao/card-template']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'card_appid' => 'wxb1170446a4c0a5a2',
+    'sub_mchid'                 => '1900000109',
+    'card_appid'                => 'wxb1170446a4c0a5a2',
     'card_template_information' => [
-      'payee_name' => '某公司',
-      'logo_url' => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
+      'payee_name'  => '某公司',
+      'logo_url'    => 'http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0',
       'custom_cell' => [
-        'words' => '电子发票',
-        'description' => '查看发票',
-        'jump_url' => 'http://www.qq.com',
+        'words'                 => '电子发票',
+        'description'           => '查看发票',
+        'jump_url'              => 'http://www.qq.com',
         'miniprogram_user_name' => 'gh_86a091e50ad4@app',
-        'miniprogram_path' => 'pages/xxxPage',
+        'miniprogram_path'      => 'pages/xxxPage',
       ],
     ],
   ],
@@ -165,8 +165,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_appid {data-required}| string | 插卡公众号AppID
-| card_id {data-required}| string | 卡券模板id
+| card_appid {data-required} | string | 插卡公众号AppID
+| card_id {data-required} | string | 卡券模板id
 
 {.im-table #response}
 

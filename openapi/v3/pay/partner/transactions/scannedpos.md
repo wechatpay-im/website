@@ -52,45 +52,45 @@ description: 合作伙伴系统先调用该接口在微信支付服务后台生�
 ```php [异步纯链式]
 $instance->v3->pay->partner->transactions->scannedpos->postAsync([
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wx8888888888888888',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'sub_mchid'      => '1900000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'payer' => [
-      'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'payer'          => [
+      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 1,
-      'invoice_id' => 'wx123',
+    'detail'         => [
+      'cost_price'   => 1,
+      'invoice_id'   => 'wx123',
       'goods_detail' => [[
-        'merchant_goods_id' => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
+        'merchant_goods_id'  => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
         'wechatpay_goods_id' => '微信支付定义的统一商品编号（没有可不传）',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhone6s 16G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'     => '0001',
         'out_id' => 'example_out_id',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -104,45 +104,45 @@ $instance->v3->pay->partner->transactions->scannedpos->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/pay/partner/transactions/scannedpos')->postAsync([
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wx8888888888888888',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'sub_mchid'      => '1900000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'payer' => [
-      'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'payer'          => [
+      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 1,
-      'invoice_id' => 'wx123',
+    'detail'         => [
+      'cost_price'   => 1,
+      'invoice_id'   => 'wx123',
       'goods_detail' => [[
-        'merchant_goods_id' => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
+        'merchant_goods_id'  => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
         'wechatpay_goods_id' => '微信支付定义的统一商品编号（没有可不传）',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhone6s 16G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'     => '0001',
         'out_id' => 'example_out_id',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -156,45 +156,45 @@ $instance->chain('v3/pay/partner/transactions/scannedpos')->postAsync([
 ```php [异步属性式]
 $instance['v3/pay/partner/transactions/scannedpos']->postAsync([
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wx8888888888888888',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'sub_mchid'      => '1900000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'payer' => [
-      'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'payer'          => [
+      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 1,
-      'invoice_id' => 'wx123',
+    'detail'         => [
+      'cost_price'   => 1,
+      'invoice_id'   => 'wx123',
       'goods_detail' => [[
-        'merchant_goods_id' => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
+        'merchant_goods_id'  => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
         'wechatpay_goods_id' => '微信支付定义的统一商品编号（没有可不传）',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhone6s 16G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'     => '0001',
         'out_id' => 'example_out_id',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -208,45 +208,45 @@ $instance['v3/pay/partner/transactions/scannedpos']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->pay->partner->transactions->scannedpos->post([
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wx8888888888888888',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'sub_mchid'      => '1900000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'payer' => [
-      'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'payer'          => [
+      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 1,
-      'invoice_id' => 'wx123',
+    'detail'         => [
+      'cost_price'   => 1,
+      'invoice_id'   => 'wx123',
       'goods_detail' => [[
-        'merchant_goods_id' => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
+        'merchant_goods_id'  => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
         'wechatpay_goods_id' => '微信支付定义的统一商品编号（没有可不传）',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhone6s 16G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'     => '0001',
         'out_id' => 'example_out_id',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -257,45 +257,45 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/pay/partner/transactions/scannedpos')->post([
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wx8888888888888888',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'sub_mchid'      => '1900000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'payer' => [
-      'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'payer'          => [
+      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 1,
-      'invoice_id' => 'wx123',
+    'detail'         => [
+      'cost_price'   => 1,
+      'invoice_id'   => 'wx123',
       'goods_detail' => [[
-        'merchant_goods_id' => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
+        'merchant_goods_id'  => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
         'wechatpay_goods_id' => '微信支付定义的统一商品编号（没有可不传）',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhone6s 16G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'     => '0001',
         'out_id' => 'example_out_id',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -306,45 +306,45 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/pay/partner/transactions/scannedpos']->post([
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wx8888888888888888',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'sub_mchid'      => '1900000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'payer' => [
-      'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'payer'          => [
+      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 1,
-      'invoice_id' => 'wx123',
+    'detail'         => [
+      'cost_price'   => 1,
+      'invoice_id'   => 'wx123',
       'goods_detail' => [[
-        'merchant_goods_id' => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
+        'merchant_goods_id'  => '由半角的大小写字母、数字、中划线、下划线中的一种或几种组成',
         'wechatpay_goods_id' => '微信支付定义的统一商品编号（没有可不传）',
-        'goods_name' => 'iPhone6s 16G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhone6s 16G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'     => '0001',
         'out_id' => 'example_out_id',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -356,7 +356,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| prepay_id {data-required}| string | 预支付交易会话标识
+| prepay_id {data-required} | string | 预支付交易会话标识
 
 {.im-table #response}
 

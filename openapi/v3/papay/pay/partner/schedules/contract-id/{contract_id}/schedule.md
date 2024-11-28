@@ -26,11 +26,11 @@ description: 商户在进行委托代扣费前，需要提前在微信支付系�
 $instance->v3->papay->pay->partner->schedules->contractId->_contract_id_->schedule->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sp_appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wxd678efh567hg6787',
     'schedule_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -45,11 +45,11 @@ $instance->v3->papay->pay->partner->schedules->contractId->_contract_id_->schedu
 $instance->chain('v3/papay/pay/partner/schedules/contract-id/{contract_id}/schedule')->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sp_appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wxd678efh567hg6787',
     'schedule_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -64,11 +64,11 @@ $instance->chain('v3/papay/pay/partner/schedules/contract-id/{contract_id}/sched
 $instance['v3/papay/pay/partner/schedules/contract-id/{contract_id}/schedule']->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sp_appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wxd678efh567hg6787',
     'schedule_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -83,11 +83,11 @@ $instance['v3/papay/pay/partner/schedules/contract-id/{contract_id}/schedule']->
 $response = $instance->v3->papay->pay->partner->schedules->contractId->_contract_id_->schedule->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sp_appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wxd678efh567hg6787',
     'schedule_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -99,11 +99,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/papay/pay/partner/schedules/contract-id/{contract_id}/schedule')->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sp_appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wxd678efh567hg6787',
     'schedule_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -115,11 +115,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/papay/pay/partner/schedules/contract-id/{contract_id}/schedule']->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'sp_appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'       => '1900000109',
+    'sub_appid'       => 'wxd678efh567hg6787',
     'schedule_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -131,7 +131,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| schedule_state {data-required}| string | 扣费预约的状态
+| schedule_state {data-required} | string | 扣费预约的状态
 | deduct_start_date | string | 可扣费开始日期
 | deduct_end_date | string | 可扣费结束日期
 | scheduled_amount | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息

@@ -104,20 +104,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 查询数据总条数
-| count {data-required}| integer | 本次查询条数
+| total_count {data-required} | integer | 查询数据总条数
+| count {data-required} | integer | 本次查询条数
 | data | object[] {data-tooltip="对应PHP的array"} | 支行列表
 | bank_branch_name {data-required data-indent=1} | string | 开户银行支行名称
 | bank_branch_id {data-required data-indent=1} | string | 开户银行支行联行号
-| offset {data-required}| integer | 本次查询偏移量
-| links {data-required}| object {data-tooltip="对应PHP的array"} | 分页链接
+| offset {data-required} | integer | 本次查询偏移量
+| links {data-required} | object {data-tooltip="对应PHP的array"} | 分页链接
 | next {data-indent=1} | string | 下一页链接
 | prev {data-indent=1} | string | 上一页链接
 | self {data-indent=1} | string | 当前链接
-| account_bank {data-required}| string | 开户银行
-| account_bank_code {data-required}| integer | 开户银行编码
-| bank_alias {data-required}| string | 银行别名
-| bank_alias_code {data-required}| string | 银行别名编码
+| account_bank {data-required} | string | 开户银行
+| account_bank_code {data-required} | integer | 开户银行编码
+| bank_alias {data-required} | string | 银行别名
+| bank_alias_code {data-required} | string | 银行别名编码
 
 {.im-table #response}
 

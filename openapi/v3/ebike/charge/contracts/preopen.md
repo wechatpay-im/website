@@ -29,11 +29,11 @@ description: 商户通过该接口获取preopenid，跳转到签约小程序后�
 ```php [异步纯链式]
 $instance->v3->ebike->charge->contracts->preopen->postAsync([
   'json' => [
-    'sub_mchid' => '1510770601',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1510770601',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'trade_scene' => 'CHARGE',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'openid'      => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,11 +45,11 @@ $instance->v3->ebike->charge->contracts->preopen->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ebike/charge/contracts/preopen')->postAsync([
   'json' => [
-    'sub_mchid' => '1510770601',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1510770601',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'trade_scene' => 'CHARGE',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'openid'      => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,11 +61,11 @@ $instance->chain('v3/ebike/charge/contracts/preopen')->postAsync([
 ```php [异步属性式]
 $instance['v3/ebike/charge/contracts/preopen']->postAsync([
   'json' => [
-    'sub_mchid' => '1510770601',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1510770601',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'trade_scene' => 'CHARGE',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'openid'      => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -77,11 +77,11 @@ $instance['v3/ebike/charge/contracts/preopen']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ebike->charge->contracts->preopen->post([
   'json' => [
-    'sub_mchid' => '1510770601',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1510770601',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'trade_scene' => 'CHARGE',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'openid'      => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ebike/charge/contracts/preopen')->post([
   'json' => [
-    'sub_mchid' => '1510770601',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1510770601',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'trade_scene' => 'CHARGE',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'openid'      => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ebike/charge/contracts/preopen']->post([
   'json' => [
-    'sub_mchid' => '1510770601',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1510770601',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'trade_scene' => 'CHARGE',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'openid'      => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -117,7 +117,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| preopen_id {data-required}| string | 预开通ID
+| preopen_id {data-required} | string | 预开通ID
 
 {.im-table #response}
 

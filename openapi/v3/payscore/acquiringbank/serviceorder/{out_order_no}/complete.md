@@ -45,35 +45,35 @@ description: 前置条件：服务订单状态为“进行中”且订单状态�
 $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'channel_id'     => '1230000109',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'       => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'complete_time' => '2019-11-11T16:24:05+08:00',
-    'goods_tag' => 'goods_tag',
+    'complete_time'  => '2019-11-11T16:24:05+08:00',
+    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,35 +86,35 @@ $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->
 $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete')->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'channel_id'     => '1230000109',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'       => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'complete_time' => '2019-11-11T16:24:05+08:00',
-    'goods_tag' => 'goods_tag',
+    'complete_time'  => '2019-11-11T16:24:05+08:00',
+    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -127,35 +127,35 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete
 $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'channel_id'     => '1230000109',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'       => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'complete_time' => '2019-11-11T16:24:05+08:00',
-    'goods_tag' => 'goods_tag',
+    'complete_time'  => '2019-11-11T16:24:05+08:00',
+    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -168,35 +168,35 @@ $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->pos
 $response = $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'channel_id'     => '1230000109',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'       => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'complete_time' => '2019-11-11T16:24:05+08:00',
-    'goods_tag' => 'goods_tag',
+    'complete_time'  => '2019-11-11T16:24:05+08:00',
+    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -206,35 +206,35 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete')->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'channel_id'     => '1230000109',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'       => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'complete_time' => '2019-11-11T16:24:05+08:00',
-    'goods_tag' => 'goods_tag',
+    'complete_time'  => '2019-11-11T16:24:05+08:00',
+    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -244,35 +244,35 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'channel_id'     => '1230000109',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'       => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'complete_time' => '2019-11-11T16:24:05+08:00',
-    'goods_tag' => 'goods_tag',
+    'complete_time'  => '2019-11-11T16:24:05+08:00',
+    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

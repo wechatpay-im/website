@@ -41,30 +41,30 @@ description: 使用签约协议号发起扣款，本接口支持两种模式，�
 ```php [异步纯链式]
 $instance->v3->eduschoolpay->transactions->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => '中山大学-第二食堂-海鲜炒饭',
-    'attach' => '自定义数据',
+    'appid'        => 'wx8888888888888888',
+    'sub_mchid'    => '1900000109',
+    'sub_appid'    => 'wx8888888888888888',
+    'description'  => '中山大学-第二食堂-海鲜炒饭',
+    'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => '2045011120563805041758214605',
-    'user_id' => '20200330tony',
-    'amount' => [
-      'total' => 888,
+    'goods_tag'    => 'test',
+    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'  => '2045011120563805041758214605',
+    'user_id'      => '20200330tony',
+    'amount'       => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'start_time' => '2017-08-26T09:43:39+08:00',
-      'school_id' => '18260256813396',
+      'school_id'  => '18260256813396',
       'scene_type' => 'CANTEEN',
     ],
-    'device_info' => [
+    'device_info'  => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
-    'settle_info' => [
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'payment_mode' => 'SYNC',
@@ -79,30 +79,30 @@ $instance->v3->eduschoolpay->transactions->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/eduschoolpay/transactions')->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => '中山大学-第二食堂-海鲜炒饭',
-    'attach' => '自定义数据',
+    'appid'        => 'wx8888888888888888',
+    'sub_mchid'    => '1900000109',
+    'sub_appid'    => 'wx8888888888888888',
+    'description'  => '中山大学-第二食堂-海鲜炒饭',
+    'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => '2045011120563805041758214605',
-    'user_id' => '20200330tony',
-    'amount' => [
-      'total' => 888,
+    'goods_tag'    => 'test',
+    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'  => '2045011120563805041758214605',
+    'user_id'      => '20200330tony',
+    'amount'       => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'start_time' => '2017-08-26T09:43:39+08:00',
-      'school_id' => '18260256813396',
+      'school_id'  => '18260256813396',
       'scene_type' => 'CANTEEN',
     ],
-    'device_info' => [
+    'device_info'  => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
-    'settle_info' => [
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'payment_mode' => 'SYNC',
@@ -117,30 +117,30 @@ $instance->chain('v3/eduschoolpay/transactions')->postAsync([
 ```php [异步属性式]
 $instance['v3/eduschoolpay/transactions']->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => '中山大学-第二食堂-海鲜炒饭',
-    'attach' => '自定义数据',
+    'appid'        => 'wx8888888888888888',
+    'sub_mchid'    => '1900000109',
+    'sub_appid'    => 'wx8888888888888888',
+    'description'  => '中山大学-第二食堂-海鲜炒饭',
+    'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => '2045011120563805041758214605',
-    'user_id' => '20200330tony',
-    'amount' => [
-      'total' => 888,
+    'goods_tag'    => 'test',
+    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'  => '2045011120563805041758214605',
+    'user_id'      => '20200330tony',
+    'amount'       => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'start_time' => '2017-08-26T09:43:39+08:00',
-      'school_id' => '18260256813396',
+      'school_id'  => '18260256813396',
       'scene_type' => 'CANTEEN',
     ],
-    'device_info' => [
+    'device_info'  => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
-    'settle_info' => [
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'payment_mode' => 'SYNC',
@@ -155,30 +155,30 @@ $instance['v3/eduschoolpay/transactions']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->eduschoolpay->transactions->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => '中山大学-第二食堂-海鲜炒饭',
-    'attach' => '自定义数据',
+    'appid'        => 'wx8888888888888888',
+    'sub_mchid'    => '1900000109',
+    'sub_appid'    => 'wx8888888888888888',
+    'description'  => '中山大学-第二食堂-海鲜炒饭',
+    'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => '2045011120563805041758214605',
-    'user_id' => '20200330tony',
-    'amount' => [
-      'total' => 888,
+    'goods_tag'    => 'test',
+    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'  => '2045011120563805041758214605',
+    'user_id'      => '20200330tony',
+    'amount'       => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'start_time' => '2017-08-26T09:43:39+08:00',
-      'school_id' => '18260256813396',
+      'school_id'  => '18260256813396',
       'scene_type' => 'CANTEEN',
     ],
-    'device_info' => [
+    'device_info'  => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
-    'settle_info' => [
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'payment_mode' => 'SYNC',
@@ -190,30 +190,30 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/eduschoolpay/transactions')->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => '中山大学-第二食堂-海鲜炒饭',
-    'attach' => '自定义数据',
+    'appid'        => 'wx8888888888888888',
+    'sub_mchid'    => '1900000109',
+    'sub_appid'    => 'wx8888888888888888',
+    'description'  => '中山大学-第二食堂-海鲜炒饭',
+    'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => '2045011120563805041758214605',
-    'user_id' => '20200330tony',
-    'amount' => [
-      'total' => 888,
+    'goods_tag'    => 'test',
+    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'  => '2045011120563805041758214605',
+    'user_id'      => '20200330tony',
+    'amount'       => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'start_time' => '2017-08-26T09:43:39+08:00',
-      'school_id' => '18260256813396',
+      'school_id'  => '18260256813396',
       'scene_type' => 'CANTEEN',
     ],
-    'device_info' => [
+    'device_info'  => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
-    'settle_info' => [
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'payment_mode' => 'SYNC',
@@ -225,30 +225,30 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/eduschoolpay/transactions']->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'description' => '中山大学-第二食堂-海鲜炒饭',
-    'attach' => '自定义数据',
+    'appid'        => 'wx8888888888888888',
+    'sub_mchid'    => '1900000109',
+    'sub_appid'    => 'wx8888888888888888',
+    'description'  => '中山大学-第二食堂-海鲜炒饭',
+    'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => '2045011120563805041758214605',
-    'user_id' => '20200330tony',
-    'amount' => [
-      'total' => 888,
+    'goods_tag'    => 'test',
+    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'  => '2045011120563805041758214605',
+    'user_id'      => '20200330tony',
+    'amount'       => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'start_time' => '2017-08-26T09:43:39+08:00',
-      'school_id' => '18260256813396',
+      'school_id'  => '18260256813396',
       'scene_type' => 'CANTEEN',
     ],
-    'device_info' => [
+    'device_info'  => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
-    'settle_info' => [
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'payment_mode' => 'SYNC',
@@ -261,14 +261,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| appid {data-required}| string | 商户AppID
+| mchid {data-required} | string | 商户号
+| appid {data-required} | string | 商户AppID
 | sub_mchid | string | 子商户号
 | sub_appid | string | 子商户AppID
-| out_trade_no {data-required}| string | 商户订单号
+| out_trade_no {data-required} | string | 商户订单号
 | transaction_id | string | 微信支付订单号
 | trade_type | string | 交易类型
-| trade_state {data-required}| string | 交易状态
+| trade_state {data-required} | string | 交易状态
 | trade_state_desc | string | 交易状态描述
 | bank_type | string | 付款银行
 | attach | string | 商户数据
@@ -276,12 +276,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | payer | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=1} | string | 商户AppID下的用户标识
 | sub_openid {data-indent=1} | string | 子商户AppID下的用户标识
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=1} | number | 订单金额
 | payer_total {data-indent=1} | number | 用户支付金额
 | discount_total {data-indent=1} | number | 折扣
 | currency {data-indent=1} | string | 货币类型
-| device_info {data-required}| object {data-tooltip="对应PHP的array"} | 设备信息
+| device_info {data-required} | object {data-tooltip="对应PHP的array"} | 设备信息
 | device_id {data-indent=1} | string | 设备号
 | device_ip {data-required data-indent=1} | string | 商户端设备IP
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠详情

@@ -22,9 +22,9 @@ description: 指定银行卡签约，用户签约时携带的token请使用预�
 ```php [异步纯链式]
 $instance->v3->offlinefacemch->tokens->postAsync([
   'json' => [
-    'scene' => 'WEBSESSION',
+    'scene'         => 'WEBSESSION',
     'web_init_data' => [
-      'out_user_id' => '',
+      'out_user_id'     => '',
       'organization_id' => '',
     ],
   ],
@@ -38,9 +38,9 @@ $instance->v3->offlinefacemch->tokens->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/offlinefacemch/tokens')->postAsync([
   'json' => [
-    'scene' => 'WEBSESSION',
+    'scene'         => 'WEBSESSION',
     'web_init_data' => [
-      'out_user_id' => '',
+      'out_user_id'     => '',
       'organization_id' => '',
     ],
   ],
@@ -54,9 +54,9 @@ $instance->chain('v3/offlinefacemch/tokens')->postAsync([
 ```php [异步属性式]
 $instance['v3/offlinefacemch/tokens']->postAsync([
   'json' => [
-    'scene' => 'WEBSESSION',
+    'scene'         => 'WEBSESSION',
     'web_init_data' => [
-      'out_user_id' => '',
+      'out_user_id'     => '',
       'organization_id' => '',
     ],
   ],
@@ -70,9 +70,9 @@ $instance['v3/offlinefacemch/tokens']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->offlinefacemch->tokens->post([
   'json' => [
-    'scene' => 'WEBSESSION',
+    'scene'         => 'WEBSESSION',
     'web_init_data' => [
-      'out_user_id' => '',
+      'out_user_id'     => '',
       'organization_id' => '',
     ],
   ],
@@ -83,9 +83,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/offlinefacemch/tokens')->post([
   'json' => [
-    'scene' => 'WEBSESSION',
+    'scene'         => 'WEBSESSION',
     'web_init_data' => [
-      'out_user_id' => '',
+      'out_user_id'     => '',
       'organization_id' => '',
     ],
   ],
@@ -96,9 +96,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/offlinefacemch/tokens']->post([
   'json' => [
-    'scene' => 'WEBSESSION',
+    'scene'         => 'WEBSESSION',
     'web_init_data' => [
-      'out_user_id' => '',
+      'out_user_id'     => '',
       'organization_id' => '',
     ],
   ],

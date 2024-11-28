@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authorize_state {data-required}| string | 授权状态<br/>`AUTHORIZE_STATE_UNAUTHORIZED` \| `AUTHORIZE_STATE_AUTHORIZED` 枚举值之一
+| authorize_state {data-required} | string | 授权状态<br/>`AUTHORIZE_STATE_UNAUTHORIZED` \| `AUTHORIZE_STATE_AUTHORIZED` 枚举值之一
 
 {.im-table #response}
 

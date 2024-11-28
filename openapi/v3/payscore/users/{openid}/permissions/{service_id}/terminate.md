@@ -23,7 +23,7 @@ description: 商户通过调用该接口，可主动与用户解除此前授权�
 ```php [异步纯链式]
 $instance->v3->payscore->users->_openid_->permissions->_service_id_->terminate->postAsync([
   'json' => [
-    'appid' => '',
+    'appid'  => '',
     'reason' => '',
   ],
   'query' => [
@@ -40,7 +40,7 @@ $instance->v3->payscore->users->_openid_->permissions->_service_id_->terminate->
 ```php [异步声明式]
 $instance->chain('v3/payscore/users/{openid}/permissions/{service_id}/terminate')->postAsync([
   'json' => [
-    'appid' => '',
+    'appid'  => '',
     'reason' => '',
   ],
   'query' => [
@@ -57,7 +57,7 @@ $instance->chain('v3/payscore/users/{openid}/permissions/{service_id}/terminate'
 ```php [异步属性式]
 $instance['v3/payscore/users/{openid}/permissions/{service_id}/terminate']->postAsync([
   'json' => [
-    'appid' => '',
+    'appid'  => '',
     'reason' => '',
   ],
   'query' => [
@@ -74,7 +74,7 @@ $instance['v3/payscore/users/{openid}/permissions/{service_id}/terminate']->post
 ```php [同步纯链式]
 $response = $instance->v3->payscore->users->_openid_->permissions->_service_id_->terminate->post([
   'json' => [
-    'appid' => '',
+    'appid'  => '',
     'reason' => '',
   ],
   'query' => [
@@ -88,7 +88,7 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/users/{openid}/permissions/{service_id}/terminate')->post([
   'json' => [
-    'appid' => '',
+    'appid'  => '',
     'reason' => '',
   ],
   'query' => [
@@ -102,7 +102,7 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/payscore/users/{openid}/permissions/{service_id}/terminate']->post([
   'json' => [
-    'appid' => '',
+    'appid'  => '',
     'reason' => '',
   ],
   'query' => [

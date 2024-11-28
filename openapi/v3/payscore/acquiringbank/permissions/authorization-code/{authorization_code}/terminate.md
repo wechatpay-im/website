@@ -26,8 +26,8 @@ $instance->v3->payscore->acquiringbank->permissions->authorizationCode->_authori
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,8 +42,8 @@ $instance->chain('v3/payscore/acquiringbank/permissions/authorization-code/{auth
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,8 +58,8 @@ $instance['v3/payscore/acquiringbank/permissions/authorization-code/{authorizati
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,8 +74,8 @@ $response = $instance->v3->payscore->acquiringbank->permissions->authorizationCo
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -87,8 +87,8 @@ $response = $instance->chain('v3/payscore/acquiringbank/permissions/authorizatio
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -100,8 +100,8 @@ $response = $instance['v3/payscore/acquiringbank/permissions/authorization-code/
   'json' => [
     'service_id' => '500001',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1230000109',
-    'reason' => '撤销原因',
+    'sub_mchid'  => '1230000109',
+    'reason'     => '撤销原因',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

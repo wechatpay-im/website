@@ -77,17 +77,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| contract_id {data-required}| string | 免密支付协议ID
-| appid {data-required}| string | 商户AppID
-| openid {data-required}| string | 用户标识
+| mchid {data-required} | string | 商户号
+| contract_id {data-required} | string | 免密支付协议ID
+| appid {data-required} | string | 商户AppID
+| openid {data-required} | string | 用户标识
 | sub_appid | string | 子商户AppID
 | sub_openid | string | 用户标识
-| service_id {data-required}| number | 免密支付服务ID
-| out_contract_code {data-required}| string | 商户签约协议号
+| service_id {data-required} | number | 免密支付服务ID
+| out_contract_code {data-required} | string | 商户签约协议号
 | contract_display_account | string | 用户账户展示名称
-| contract_state {data-required}| string | 委托代扣协议状态
-| contract_signed_time {data-required}| string | 协议签署时间
+| contract_state {data-required} | string | 委托代扣协议状态
+| contract_signed_time {data-required} | string | 协议签署时间
 | contract_terminate_info | object {data-tooltip="对应PHP的array"} | 协议解约信息
 | contract_termination_mode {data-required data-indent=1} | string | 协议解约方式
 | contract_terminated_time {data-indent=1} | string | 协议解约时间

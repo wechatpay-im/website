@@ -20,7 +20,7 @@ description: 用于服务商/服务商为特约商户开通或关闭点金计划
 ```php [异步纯链式]
 $instance->v3->goldplan->merchants->changegoldplanstatus->postAsync([
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'      => '1234567890',
     'operation_type' => 'OPEN',
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->goldplan->merchants->changegoldplanstatus->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/goldplan/merchants/changegoldplanstatus')->postAsync([
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'      => '1234567890',
     'operation_type' => 'OPEN',
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v3/goldplan/merchants/changegoldplanstatus')->postAsync([
 ```php [异步属性式]
 $instance['v3/goldplan/merchants/changegoldplanstatus']->postAsync([
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'      => '1234567890',
     'operation_type' => 'OPEN',
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/goldplan/merchants/changegoldplanstatus']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->goldplan->merchants->changegoldplanstatus->post([
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'      => '1234567890',
     'operation_type' => 'OPEN',
   ],
 ]);
@@ -69,7 +69,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/goldplan/merchants/changegoldplanstatus')->post([
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'      => '1234567890',
     'operation_type' => 'OPEN',
   ],
 ]);
@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/goldplan/merchants/changegoldplanstatus']->post([
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'      => '1234567890',
     'operation_type' => 'OPEN',
   ],
 ]);
@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户ID
+| sub_mchid {data-required} | string | 子商户ID
 
 {.im-table #response}
 

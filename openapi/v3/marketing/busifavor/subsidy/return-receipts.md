@@ -27,14 +27,14 @@ description: 商户通过该接口可回退补差款
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->subsidy->returnReceipts->postAsync([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
-    'transaction_id' => '4200000913202101152566792388',
-    'refund_id' => '50100506732021010105138718375',
-    'payer_merchant' => '1900000001',
-    'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'stock_id'              => '128888000000001',
+    'coupon_code'           => 'ABCD12345678',
+    'transaction_id'        => '4200000913202101152566792388',
+    'refund_id'             => '50100506732021010105138718375',
+    'payer_merchant'        => '1900000001',
+    'payee_merchant'        => '1900000002',
+    'amount'                => 100,
+    'description'           => '20210115DESCRIPTION',
     'out_subsidy_return_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -47,14 +47,14 @@ $instance->v3->marketing->busifavor->subsidy->returnReceipts->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/subsidy/return-receipts')->postAsync([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
-    'transaction_id' => '4200000913202101152566792388',
-    'refund_id' => '50100506732021010105138718375',
-    'payer_merchant' => '1900000001',
-    'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'stock_id'              => '128888000000001',
+    'coupon_code'           => 'ABCD12345678',
+    'transaction_id'        => '4200000913202101152566792388',
+    'refund_id'             => '50100506732021010105138718375',
+    'payer_merchant'        => '1900000001',
+    'payee_merchant'        => '1900000002',
+    'amount'                => 100,
+    'description'           => '20210115DESCRIPTION',
     'out_subsidy_return_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -67,14 +67,14 @@ $instance->chain('v3/marketing/busifavor/subsidy/return-receipts')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/subsidy/return-receipts']->postAsync([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
-    'transaction_id' => '4200000913202101152566792388',
-    'refund_id' => '50100506732021010105138718375',
-    'payer_merchant' => '1900000001',
-    'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'stock_id'              => '128888000000001',
+    'coupon_code'           => 'ABCD12345678',
+    'transaction_id'        => '4200000913202101152566792388',
+    'refund_id'             => '50100506732021010105138718375',
+    'payer_merchant'        => '1900000001',
+    'payee_merchant'        => '1900000002',
+    'amount'                => 100,
+    'description'           => '20210115DESCRIPTION',
     'out_subsidy_return_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -87,14 +87,14 @@ $instance['v3/marketing/busifavor/subsidy/return-receipts']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->subsidy->returnReceipts->post([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
-    'transaction_id' => '4200000913202101152566792388',
-    'refund_id' => '50100506732021010105138718375',
-    'payer_merchant' => '1900000001',
-    'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'stock_id'              => '128888000000001',
+    'coupon_code'           => 'ABCD12345678',
+    'transaction_id'        => '4200000913202101152566792388',
+    'refund_id'             => '50100506732021010105138718375',
+    'payer_merchant'        => '1900000001',
+    'payee_merchant'        => '1900000002',
+    'amount'                => 100,
+    'description'           => '20210115DESCRIPTION',
     'out_subsidy_return_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -104,14 +104,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/subsidy/return-receipts')->post([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
-    'transaction_id' => '4200000913202101152566792388',
-    'refund_id' => '50100506732021010105138718375',
-    'payer_merchant' => '1900000001',
-    'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'stock_id'              => '128888000000001',
+    'coupon_code'           => 'ABCD12345678',
+    'transaction_id'        => '4200000913202101152566792388',
+    'refund_id'             => '50100506732021010105138718375',
+    'payer_merchant'        => '1900000001',
+    'payee_merchant'        => '1900000002',
+    'amount'                => 100,
+    'description'           => '20210115DESCRIPTION',
     'out_subsidy_return_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -121,14 +121,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/subsidy/return-receipts']->post([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
-    'transaction_id' => '4200000913202101152566792388',
-    'refund_id' => '50100506732021010105138718375',
-    'payer_merchant' => '1900000001',
-    'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'stock_id'              => '128888000000001',
+    'coupon_code'           => 'ABCD12345678',
+    'transaction_id'        => '4200000913202101152566792388',
+    'refund_id'             => '50100506732021010105138718375',
+    'payer_merchant'        => '1900000001',
+    'payee_merchant'        => '1900000002',
+    'amount'                => 100,
+    'description'           => '20210115DESCRIPTION',
     'out_subsidy_return_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -140,19 +140,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | subsidy_return_receipt_id | string | 补差回退单号
-| stock_id {data-required}| string | 商家券批次号
-| coupon_code {data-required}| string | 商家券Code
-| transaction_id {data-required}| string | 微信支付订单号
-| refund_id {data-required}| string | 微信支付退款单号
-| payer_merchant {data-required}| string | 原营销补差扣款商户号
-| payee_merchant {data-required}| string | 原营销补差入账商户号
-| amount {data-required}| integer | 补差回退金额
-| description {data-required}| string | 补差回退描述
-| status {data-required}| string | 补差回退单据状态
+| stock_id {data-required} | string | 商家券批次号
+| coupon_code {data-required} | string | 商家券Code
+| transaction_id {data-required} | string | 微信支付订单号
+| refund_id {data-required} | string | 微信支付退款单号
+| payer_merchant {data-required} | string | 原营销补差扣款商户号
+| payee_merchant {data-required} | string | 原营销补差入账商户号
+| amount {data-required} | integer | 补差回退金额
+| description {data-required} | string | 补差回退描述
+| status {data-required} | string | 补差回退单据状态
 | fail_reason | string | 补差回退失败原因
 | return_done_time | string | 补差回退完成时间
-| subsidy_receipt_id {data-required}| string | 补差付款单号
-| out_subsidy_return_no {data-required}| string | 业务请求唯一单号
+| subsidy_receipt_id {data-required} | string | 补差付款单号
+| out_subsidy_return_no {data-required} | string | 业务请求唯一单号
 | return_create_time | string | 补差回退发起时间
 
 {.im-table #response}

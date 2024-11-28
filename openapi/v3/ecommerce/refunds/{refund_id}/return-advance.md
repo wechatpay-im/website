@@ -85,14 +85,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id {data-required}| string | 微信退款单号
-| advance_return_id {data-required}| string | 微信回补单号
-| return_amount {data-required}| integer | 垫付回补金额
-| payer_mchid {data-required}| string | 出款方商户号
-| payer_account {data-required}| string | 出款方账户
-| payee_mchid {data-required}| string | 入账方商户号
-| payee_account {data-required}| string | 入账方账户
-| result {data-required}| string | 垫付回补结果
+| refund_id {data-required} | string | 微信退款单号
+| advance_return_id {data-required} | string | 微信回补单号
+| return_amount {data-required} | integer | 垫付回补金额
+| payer_mchid {data-required} | string | 出款方商户号
+| payer_account {data-required} | string | 出款方账户
+| payee_mchid {data-required} | string | 入账方商户号
+| payee_account {data-required} | string | 入账方账户
+| result {data-required} | string | 垫付回补结果
 | success_time | string | 垫付回补完成时间
 
 {.im-table #response}
@@ -186,14 +186,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id {data-required}| string | 微信退款单号
-| advance_return_id {data-required}| string | 微信回补单号
-| return_amount {data-required}| integer | 垫付回补金额
-| payer_mchid {data-required}| string | 出款方商户号
-| payer_account {data-required}| string | 出款方账户
-| payee_mchid {data-required}| string | 入账方商户号
-| payee_account {data-required}| string | 入账方账户
-| result {data-required}| string | 垫付回补结果
+| refund_id {data-required} | string | 微信退款单号
+| advance_return_id {data-required} | string | 微信回补单号
+| return_amount {data-required} | integer | 垫付回补金额
+| payer_mchid {data-required} | string | 出款方商户号
+| payer_account {data-required} | string | 出款方账户
+| payee_mchid {data-required} | string | 入账方商户号
+| payee_account {data-required} | string | 入账方账户
+| result {data-required} | string | 垫付回补结果
 | success_time | string | 垫付回补完成时间
 
 {.im-table #response}

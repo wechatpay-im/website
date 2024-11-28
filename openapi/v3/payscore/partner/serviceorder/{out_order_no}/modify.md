@@ -34,22 +34,22 @@ description: 完结订单总金额与实际金额不符时，且当服务订单�
 $instance->v3->payscore->partner->serviceorder->_out_order_no_->modify->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'reason' => '用户投诉',
+    'total_amount'   => 50000,
+    'reason'         => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,22 +62,22 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->modify->postAsyn
 $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/modify')->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'reason' => '用户投诉',
+    'total_amount'   => 50000,
+    'reason'         => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -90,22 +90,22 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/modify')->post
 $instance['v3/payscore/partner/serviceorder/{out_order_no}/modify']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'reason' => '用户投诉',
+    'total_amount'   => 50000,
+    'reason'         => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -118,22 +118,22 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/modify']->postAsync([
 $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->modify->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'reason' => '用户投诉',
+    'total_amount'   => 50000,
+    'reason'         => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -143,22 +143,22 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/modify')->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'reason' => '用户投诉',
+    'total_amount'   => 50000,
+    'reason'         => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -168,22 +168,22 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/modify']->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'reason' => '用户投诉',
+    'total_amount'   => 50000,
+    'reason'         => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

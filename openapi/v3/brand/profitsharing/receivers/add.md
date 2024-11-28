@@ -25,12 +25,12 @@ description: 服务商可通过此接口添加分账接收方，建立分账接�
 ```php [异步纯链式]
 $instance->v3->brand->profitsharing->receivers->add->postAsync([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
-    'name' => '张三网络公司',
+    'brand_mchid'   => '1900000108',
+    'appid'         => 'wx8888888888888888',
+    'sub_appid'     => 'wx8888888888888889',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '1900000109',
+    'name'          => '张三网络公司',
     'relation_type' => 'SUPPLIER',
   ],
 ])
@@ -43,12 +43,12 @@ $instance->v3->brand->profitsharing->receivers->add->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/brand/profitsharing/receivers/add')->postAsync([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
-    'name' => '张三网络公司',
+    'brand_mchid'   => '1900000108',
+    'appid'         => 'wx8888888888888888',
+    'sub_appid'     => 'wx8888888888888889',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '1900000109',
+    'name'          => '张三网络公司',
     'relation_type' => 'SUPPLIER',
   ],
 ])
@@ -61,12 +61,12 @@ $instance->chain('v3/brand/profitsharing/receivers/add')->postAsync([
 ```php [异步属性式]
 $instance['v3/brand/profitsharing/receivers/add']->postAsync([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
-    'name' => '张三网络公司',
+    'brand_mchid'   => '1900000108',
+    'appid'         => 'wx8888888888888888',
+    'sub_appid'     => 'wx8888888888888889',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '1900000109',
+    'name'          => '张三网络公司',
     'relation_type' => 'SUPPLIER',
   ],
 ])
@@ -79,12 +79,12 @@ $instance['v3/brand/profitsharing/receivers/add']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->brand->profitsharing->receivers->add->post([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
-    'name' => '张三网络公司',
+    'brand_mchid'   => '1900000108',
+    'appid'         => 'wx8888888888888888',
+    'sub_appid'     => 'wx8888888888888889',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '1900000109',
+    'name'          => '张三网络公司',
     'relation_type' => 'SUPPLIER',
   ],
 ]);
@@ -94,12 +94,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/profitsharing/receivers/add')->post([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
-    'name' => '张三网络公司',
+    'brand_mchid'   => '1900000108',
+    'appid'         => 'wx8888888888888888',
+    'sub_appid'     => 'wx8888888888888889',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '1900000109',
+    'name'          => '张三网络公司',
     'relation_type' => 'SUPPLIER',
   ],
 ]);
@@ -109,12 +109,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/brand/profitsharing/receivers/add']->post([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '1900000109',
-    'name' => '张三网络公司',
+    'brand_mchid'   => '1900000108',
+    'appid'         => 'wx8888888888888888',
+    'sub_appid'     => 'wx8888888888888889',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '1900000109',
+    'name'          => '张三网络公司',
     'relation_type' => 'SUPPLIER',
   ],
 ]);
@@ -125,9 +125,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_mchid {data-required}| string | 品牌主商户号
-| type {data-required}| string | 分账接收方类型
-| account {data-required}| string | 分账接收方账号
+| brand_mchid {data-required} | string | 品牌主商户号
+| type {data-required} | string | 分账接收方类型
+| account {data-required} | string | 分账接收方账号
 
 {.im-table #response}
 

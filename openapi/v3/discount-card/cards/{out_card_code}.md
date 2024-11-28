@@ -70,15 +70,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_id {data-required}| string | 先享卡ID
-| card_template_id {data-required}| string | 先享卡模板ID
-| out_card_code {data-required}| string | 商户领卡号
-| appid {data-required}| string | 公众账号ID
-| mchid {data-required}| string | 商户号
-| time_range {data-required}| object {data-tooltip="对应PHP的array"} | 约定时间期限
+| card_id {data-required} | string | 先享卡ID
+| card_template_id {data-required} | string | 先享卡模板ID
+| out_card_code {data-required} | string | 商户领卡号
+| appid {data-required} | string | 公众账号ID
+| mchid {data-required} | string | 商户号
+| time_range {data-required} | object {data-tooltip="对应PHP的array"} | 约定时间期限
 | begin_time {data-required data-indent=1} | string | 约定开始时间
 | end_time {data-required data-indent=1} | string | 约定结束时间
-| state {data-required}| string | 状态
+| state {data-required} | string | 状态
 | unfinished_reason | string | 未完成约定原因
 | total_amount | integer | 享受优惠总金额
 | pay_information | object {data-tooltip="对应PHP的array"} | 用户退回优惠的付款信息
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | pay_state {data-required data-indent=1} | string | 付款状态
 | transaction_id {data-indent=1} | string | 微信支付订单号
 | pay_time {data-indent=1} | string | 支付时间
-| create_time {data-required}| string | 创卡时间
+| create_time {data-required} | string | 创卡时间
 | objectives | object[] {data-tooltip="对应PHP的array"} | 目标列表
 | objective_id {data-required data-indent=1} | string | 目标ID
 | name {data-required data-indent=1} | string | 目标名称

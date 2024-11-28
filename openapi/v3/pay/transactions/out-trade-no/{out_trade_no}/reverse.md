@@ -98,8 +98,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | appid | string | 应用AppID
-| mchid {data-required}| string | 直连商户号
-| out_trade_no {data-required}| string | 商户订单号
+| mchid {data-required} | string | 直连商户号
+| out_trade_no {data-required} | string | 商户订单号
 
 {.im-table #response}
 

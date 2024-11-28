@@ -15,7 +15,7 @@
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->callbacks->postAsync([
   'json' => [
-    'mchid' => '10000098',
+    'mchid'      => '10000098',
     'notify_url' => 'https://pay.weixin.qq.com',
   ],
 ])
@@ -28,7 +28,7 @@ $instance->v3->marketing->busifavor->callbacks->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/callbacks')->postAsync([
   'json' => [
-    'mchid' => '10000098',
+    'mchid'      => '10000098',
     'notify_url' => 'https://pay.weixin.qq.com',
   ],
 ])
@@ -41,7 +41,7 @@ $instance->chain('v3/marketing/busifavor/callbacks')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/callbacks']->postAsync([
   'json' => [
-    'mchid' => '10000098',
+    'mchid'      => '10000098',
     'notify_url' => 'https://pay.weixin.qq.com',
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/marketing/busifavor/callbacks']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->callbacks->post([
   'json' => [
-    'mchid' => '10000098',
+    'mchid'      => '10000098',
     'notify_url' => 'https://pay.weixin.qq.com',
   ],
 ]);
@@ -64,7 +64,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/callbacks')->post([
   'json' => [
-    'mchid' => '10000098',
+    'mchid'      => '10000098',
     'notify_url' => 'https://pay.weixin.qq.com',
   ],
 ]);
@@ -74,7 +74,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/callbacks']->post([
   'json' => [
-    'mchid' => '10000098',
+    'mchid'      => '10000098',
     'notify_url' => 'https://pay.weixin.qq.com',
   ],
 ]);
@@ -86,8 +86,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | update_time | string | 修改时间
-| notify_url {data-required}| string | 通知URL地址
-| mchid {data-required}| string | 商户号
+| notify_url {data-required} | string | 通知URL地址
+| mchid {data-required} | string | 商户号
 
 {.im-table #response}
 
@@ -173,8 +173,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| notify_url {data-required}| string | 通知URL地址
-| mchid {data-required}| string | 商户号
+| notify_url {data-required} | string | 通知URL地址
+| mchid {data-required} | string | 商户号
 
 {.im-table #response}
 

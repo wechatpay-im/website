@@ -111,26 +111,26 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_mchid {data-required}| string | 服务商商户号
-| sub_mchid {data-required}| string | 特约商户号
-| out_batch_no {data-required}| string | 商家批次单号
-| batch_id {data-required}| string | 微信支付批次单号
+| sp_mchid {data-required} | string | 服务商商户号
+| sub_mchid {data-required} | string | 特约商户号
+| out_batch_no {data-required} | string | 商家批次单号
+| batch_id {data-required} | string | 微信支付批次单号
 | sub_appid | string | 特约商户appid
-| batch_status {data-required}| string | 批次状态
-| batch_type {data-required}| string | 批次类型
-| authorization_type {data-required}| string | 特约商户授权类型
-| batch_name {data-required}| string | 批次名称
-| batch_remark {data-required}| string | 批次备注
+| batch_status {data-required} | string | 批次状态
+| batch_type {data-required} | string | 批次类型
+| authorization_type {data-required} | string | 特约商户授权类型
+| batch_name {data-required} | string | 批次名称
+| batch_remark {data-required} | string | 批次备注
 | close_reason | string | 批次关闭原因
-| total_amount {data-required}| integer | 转账总金额
-| total_num {data-required}| integer | 转账总笔数
+| total_amount {data-required} | integer | 转账总金额
+| total_num {data-required} | integer | 转账总笔数
 | create_time | string | 批次创建时间
 | update_time | string | 批次更新时间
 | success_amount | integer | 转账成功金额
 | success_num | integer | 转账成功笔数
 | fail_amount | integer | 转账失败金额
 | fail_num | integer | 转账失败笔数
-| transfer_detail_list {data-required}| object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
+| transfer_detail_list {data-required} | object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
 | detail_id {data-required data-indent=1} | string | 微信支付明细单号
 | out_detail_no {data-required data-indent=1} | string | 商家明细单号
 | detail_status {data-required data-indent=1} | string | 明细状态

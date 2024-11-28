@@ -25,7 +25,7 @@ description: 部分微信支付境外业务指定商户需要上传文件资料�
 $media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
 $media->setMeta(\json_encode([
   'filename' => 'image.jpg',
-  'digest' => 'your_image_file_sha256_string'
+  'digest'   => 'your_image_file_sha256_string'
 ]));
 
 $instance->v3->global->merchantStorage->file->upload->postAsync([
@@ -45,7 +45,7 @@ $instance->v3->global->merchantStorage->file->upload->postAsync([
 $media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
 $media->setMeta(\json_encode([
   'filename' => 'image.jpg',
-  'digest' => 'your_image_file_sha256_string'
+  'digest'   => 'your_image_file_sha256_string'
 ]));
 
 $instance->chain('v3/global/merchant-storage/file/upload')->postAsync([
@@ -65,7 +65,7 @@ $instance->chain('v3/global/merchant-storage/file/upload')->postAsync([
 $media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
 $media->setMeta(\json_encode([
   'filename' => 'image.jpg',
-  'digest' => 'your_image_file_sha256_string'
+  'digest'   => 'your_image_file_sha256_string'
 ]));
 
 $instance['v3/global/merchant-storage/file/upload']->postAsync([
@@ -85,7 +85,7 @@ $instance['v3/global/merchant-storage/file/upload']->postAsync([
 $media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
 $media->setMeta(\json_encode([
   'filename' => 'image.jpg',
-  'digest' => 'your_image_file_sha256_string'
+  'digest'   => 'your_image_file_sha256_string'
 ]));
 
 $response = $instance->v3->global->merchantStorage->file->upload->post([
@@ -102,7 +102,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
 $media->setMeta(\json_encode([
   'filename' => 'image.jpg',
-  'digest' => 'your_image_file_sha256_string'
+  'digest'   => 'your_image_file_sha256_string'
 ]));
 
 $response = $instance->chain('v3/global/merchant-storage/file/upload')->post([
@@ -119,7 +119,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $media = new \WeChatPay\Util\MediaUtil('file:///path/to/image.jpg');
 $media->setMeta(\json_encode([
   'filename' => 'image.jpg',
-  'digest' => 'your_image_file_sha256_string'
+  'digest'   => 'your_image_file_sha256_string'
 ]));
 
 $response = $instance['v3/global/merchant-storage/file/upload']->post([

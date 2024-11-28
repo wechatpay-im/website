@@ -143,9 +143,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | authenticate_state {data-required data-indent=1} | string | 核身状态<br/>`AUTHENTICATE_PROCESSING` \| `AUTHENTICATE_SUCCESS` \| `AUTHENTICATE_FAILED` 枚举值之一
 | authenticate_time {data-required data-indent=1} | string | 核身时间
 | authenticate_number {data-required data-indent=1} | string | 商家核身单号
-| total_count {data-required}| integer | 总记录条数
-| offset {data-required}| integer | 记录起始位置
-| limit {data-required}| integer | 本次返回条数
+| total_count {data-required} | integer | 总记录条数
+| offset {data-required} | integer | 记录起始位置
+| limit {data-required} | integer | 本次返回条数
 
 {.im-table #response}
 

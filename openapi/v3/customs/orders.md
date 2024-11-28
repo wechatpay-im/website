@@ -27,18 +27,18 @@
 $instance->v3->customs->orders->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'sub_order_no' => '20150806125346',
-    'fee_type' => 'CNY',
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'sub_order_no'        => '20150806125346',
+    'fee_type'            => 'CNY',
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,18 +51,18 @@ $instance->v3->customs->orders->postAsync([
 $instance->chain('v3/customs/orders')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'sub_order_no' => '20150806125346',
-    'fee_type' => 'CNY',
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'sub_order_no'        => '20150806125346',
+    'fee_type'            => 'CNY',
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,18 +75,18 @@ $instance->chain('v3/customs/orders')->postAsync([
 $instance['v3/customs/orders']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'sub_order_no' => '20150806125346',
-    'fee_type' => 'CNY',
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'sub_order_no'        => '20150806125346',
+    'fee_type'            => 'CNY',
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -99,18 +99,18 @@ $instance['v3/customs/orders']->postAsync([
 $response = $instance->v3->customs->orders->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'sub_order_no' => '20150806125346',
-    'fee_type' => 'CNY',
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'sub_order_no'        => '20150806125346',
+    'fee_type'            => 'CNY',
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -120,18 +120,18 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/customs/orders')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'sub_order_no' => '20150806125346',
-    'fee_type' => 'CNY',
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'sub_order_no'        => '20150806125346',
+    'fee_type'            => 'CNY',
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -141,18 +141,18 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/customs/orders']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'sub_order_no' => '20150806125346',
-    'fee_type' => 'CNY',
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'sub_order_no'        => '20150806125346',
+    'fee_type'            => 'CNY',
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -162,15 +162,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 机构APPID
-| mchid {data-required}| string | 商户号
-| state {data-required}| string | 报关状态
-| out_trade_no {data-required}| string | 商户订单号
-| transaction_id {data-required}| string | 微信订单号
+| appid {data-required} | string | 机构APPID
+| mchid {data-required} | string | 商户号
+| state {data-required} | string | 报关状态
+| out_trade_no {data-required} | string | 商户订单号
+| transaction_id {data-required} | string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| verify_department {data-required}| string | 核验机构
-| verify_department_trade_id {data-required}| string | 核验机构交易流水号
+| verify_department {data-required} | string | 核验机构
+| verify_department_trade_id {data-required} | string | 核验机构交易流水号
 
 {.im-table #response}
 
@@ -305,15 +305,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 机构APPID
-| mchid {data-required}| string | 商户号
-| transaction_id {data-required}| string | 微信订单号
-| verify_department {data-required}| string | 核验机构
-| verify_department_trade_id {data-required}| string | 核验机构流水号
-| offset {data-required}| integer | 偏移量
-| limit {data-required}| integer | 请求最大记录条数
-| total_count {data-required}| integer | 查询结果总条数
-| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 报关数据包
+| appid {data-required} | string | 机构APPID
+| mchid {data-required} | string | 商户号
+| transaction_id {data-required} | string | 微信订单号
+| verify_department {data-required} | string | 核验机构
+| verify_department_trade_id {data-required} | string | 核验机构流水号
+| offset {data-required} | integer | 偏移量
+| limit {data-required} | integer | 请求最大记录条数
+| total_count {data-required} | integer | 查询结果总条数
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 报关数据包
 | sub_order_no {data-indent=1} | string | 商户子单号
 | sub_order_id {data-indent=1} | string | 微信子单号
 | mch_customs_no {data-indent=1} | string | 商户海关备案号
@@ -359,17 +359,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->customs->orders->patchAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -382,17 +382,17 @@ $instance->v3->customs->orders->patchAsync([
 $instance->chain('v3/customs/orders')->patchAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -405,17 +405,17 @@ $instance->chain('v3/customs/orders')->patchAsync([
 $instance['v3/customs/orders']->patchAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -428,17 +428,17 @@ $instance['v3/customs/orders']->patchAsync([
 $response = $instance->v3->customs->orders->patch([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -448,17 +448,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/customs/orders')->patch([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -468,17 +468,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/customs/orders']->patch([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'duty' => 888,
-    'order_fee' => 888,
-    'transport_fee' => 888,
-    'product_fee' => 888,
+    'duty'                => 888,
+    'order_fee'           => 888,
+    'transport_fee'       => 888,
+    'product_fee'         => 888,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -488,16 +488,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 机构APPID
-| mchid {data-required}| string | 商户号
-| state {data-required}| string | 报关状态
-| out_trade_no {data-required}| string | 商户订单号
-| transaction_id {data-required}| string | 微信订单号
+| appid {data-required} | string | 机构APPID
+| mchid {data-required} | string | 商户号
+| state {data-required} | string | 报关状态
+| out_trade_no {data-required} | string | 商户订单号
+| transaction_id {data-required} | string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| modify_time {data-required}| string | 最后更新时间
-| verify_department {data-required}| string | 核验机构
-| verify_department_trade_id {data-required}| string | 核验机构流水号
+| modify_time {data-required} | string | 最后更新时间
+| verify_department {data-required} | string | 核验机构
+| verify_department_trade_id {data-required} | string | 核验机构流水号
 
 {.im-table #response}
 

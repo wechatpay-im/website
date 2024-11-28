@@ -90,10 +90,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| merchant_code {data-required}| string | 微信支付商户号
-| apply_id {data-required}| string | 申请单号
-| out_request_no {data-required}| string | 业务申请编号
-| state {data-required}| string | 申请单状态
+| merchant_code {data-required} | string | 微信支付商户号
+| apply_id {data-required} | string | 申请单号
+| out_request_no {data-required} | string | 业务申请编号
+| state {data-required} | string | 申请单状态
 | audit_reject_reason | string | 总体驳回原因
 | audit_reject_detail | object[] {data-tooltip="对应PHP的array"} | 驳回原因详情
 | param_name {data-indent=1} | string | 参数名称

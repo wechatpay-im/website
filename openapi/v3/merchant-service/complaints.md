@@ -117,8 +117,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| offset {data-required}| integer | 
-| limit {data-required}| integer | 
+| offset {data-required} | integer | 
+| limit {data-required} | integer | 
 | total_count | integer | 
 | data | object[] {data-tooltip="对应PHP的array"} | 
 | out_trade_no {data-required data-indent=1} | string | 

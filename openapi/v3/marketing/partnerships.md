@@ -116,8 +116,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | terminate_time {data-indent=1} | string | 终止合作关系时间
 | create_time {data-required data-indent=1} | string | 创建时间
 | update_time {data-required data-indent=1} | string | 更新时间
-| limit {data-required}| integer | 分页大小
-| offset {data-required}| integer | 分页页码
+| limit {data-required} | integer | 分页大小
+| offset {data-required} | integer | 分页页码
 | total_count | integer | 总数量
 
 {.im-table #response}

@@ -118,16 +118,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 应用ID
-| mchid {data-required}| string | 商户号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 应用ID
+| mchid {data-required} | string | 商户号
 | openid | string | 服务商公众号下的用户标识
 | authorization_code | string | 授权协议号
-| authorization_state {data-required}| string | 授权状态
+| authorization_state {data-required} | string | 授权状态
 | notify_url | string | 授权通知地址
 | cancel_authorization_time | string | 最近一次解除授权时间
-| authorization_success_time {data-required}| string | 最近一次授权成功时间
-| sub_mchid {data-required}| string | 子商户号
+| authorization_success_time {data-required} | string | 最近一次授权成功时间
+| sub_mchid {data-required} | string | 子商户号
 | sub_appid | string | 子商户应用ID
 | sub_openid | string | 子商户公众号下的用户标识
 | user_risk_level | number | 用户分层

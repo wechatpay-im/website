@@ -44,24 +44,27 @@ description: 退款状态改变后，微信会把相关退款结果发送给商�
 | refund_id {data-required data-indent=3} | string | 微信退款单号
 | refund_status {data-required data-indent=3} | string | 退款状态<br/>`SUCCESS` \| `CLOSED` \| `ABNORMAL` 枚举值之一
 | success_time {data-indent=3} | string | 1、退款成功时间
-| user_received_account {data-indent=3} | string | 取当前退款单的退款入账方。<br/>1、退回银行卡：{银行名称}{卡类型}{卡尾号}<br/>2、退回支付用户零钱: 支付用户零钱<br/>3、退还商户: 商户基本账户、商户结算银行账户<br/>4、退回支付用户零钱通：支付用户零钱通<br/>5、退回用户经营账户：用户经营账户<br/>6、退回支付用户银行电子账户：支付用户银行电子账户<br/>7、退回支付用户零花钱：支付用户零花钱<br/>8、退回支付用户来华零钱包：支付用户来华零钱包<br/>9、退回企业支付商户：企业支付商户
-| amount {data-indent=3} | object | 金额信息
-| total {data-indent=4} | number | 订单总金额，单位为分，只能为整数
-| currency {data-indent=4} | string | 货币类型
-| refund {data-indent=4} | number | 退款金额，币种的最小单位，只能为整数，不能超过原订单支付金额，如果有使用券，后台会按比例退。
-| payer_total {data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
-| payer_currency {data-indent=4} | string | 用户支付币种
-| payer_refund {data-indent=4} | number | 退款给用户的金额，不包含所有优惠券金额
+| user_received_account {data-required data-indent=3} | string | 取当前退款单的退款入账方。<br/>1、退回银行卡：{银行名称}{卡类型}{卡尾号}<br/>2、退回支付用户零钱: 支付用户零钱<br/>3、退还商户: 商户基本账户、商户结算银行账户<br/>4、退回支付用户零钱通：支付用户零钱通<br/>5、退回用户经营账户：用户经营账户<br/>6、退回支付用户银行电子账户：支付用户银行电子账户<br/>7、退回支付用户零花钱：支付用户零花钱<br/>8、退回支付用户来华零钱包：支付用户来华零钱包<br/>9、退回企业支付商户：企业支付商户
+| amount {data-required data-indent=3} | object | 金额信息
+| total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数
+| currency {data-required data-indent=4} | string | 货币类型
+| refund {data-required data-indent=4} | number | 退款金额，币种的最小单位，只能为整数，不能超过原订单支付金额，如果有使用券，后台会按比例退。
+| payer_total {data-required data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
+| payer_currency {data-required data-indent=4} | string | 用户支付币种
+| payer_refund {data-required data-indent=4} | number | 退款给用户的金额，不包含所有优惠券金额
 | exchange_rate {data-indent=4} | object | 汇率信息
 | type {data-indent=5} | string | 汇率类型
 | rate {data-indent=5} | integer | 汇率值
 | sp_mchid {data-indent=3} | string | 服务商户号，由微信支付生成并下发 。
 | sub_mchid {data-indent=3} | string | 子商户的商户号，由微信支付生成并下发。
 | refund_account {data-indent=3} | string | 电商平台垫资退款专用参数<br/>`REFUND_SOURCE_PARTNER_ADVANCE` \| `REFUND_SOURCE_SUB_MERCHANT` 枚举值之一
+| individual_auth_id {data-indent=3} | string | 个人收款的微信支付账户，微信用户在该平台的标志
 
 {.im-table #request}
 
 1. 跨境/全球会返回**exchange_rate**字典 {#GLOBAL}
+
+1. 平台收付通-个人收款场景会返回**individual_auth_id**字典 {#INDIVIDUAL}
 
 ::: code-group
 
@@ -176,3 +179,4 @@ $json = \json_encode([
 - [官方文档](https://pay.weixin.qq.com/docs/partner/apis/wexin-pay-score-parking/refund-notification.html)
 - [退款结果通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_3.shtml)
 - [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter3_2_9.shtml)
+- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/refund-result.html)

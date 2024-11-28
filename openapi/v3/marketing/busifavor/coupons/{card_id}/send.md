@@ -24,10 +24,10 @@ description: 商户通过调用本接口向用户发放消费卡，用户领到�
 $instance->v3->marketing->busifavor->coupons->_card_id_->send->postAsync([
   'card_id' => '',
   'json' => [
-    'appid' => '',
-    'openid' => '',
+    'appid'          => '',
+    'openid'         => '',
     'out_request_no' => '',
-    'send_time' => '',
+    'send_time'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,10 +40,10 @@ $instance->v3->marketing->busifavor->coupons->_card_id_->send->postAsync([
 $instance->chain('v3/marketing/busifavor/coupons/{card_id}/send')->postAsync([
   'card_id' => '',
   'json' => [
-    'appid' => '',
-    'openid' => '',
+    'appid'          => '',
+    'openid'         => '',
     'out_request_no' => '',
-    'send_time' => '',
+    'send_time'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,10 +56,10 @@ $instance->chain('v3/marketing/busifavor/coupons/{card_id}/send')->postAsync([
 $instance['v3/marketing/busifavor/coupons/{card_id}/send']->postAsync([
   'card_id' => '',
   'json' => [
-    'appid' => '',
-    'openid' => '',
+    'appid'          => '',
+    'openid'         => '',
     'out_request_no' => '',
-    'send_time' => '',
+    'send_time'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,10 +72,10 @@ $instance['v3/marketing/busifavor/coupons/{card_id}/send']->postAsync([
 $response = $instance->v3->marketing->busifavor->coupons->_card_id_->send->post([
   'card_id' => '',
   'json' => [
-    'appid' => '',
-    'openid' => '',
+    'appid'          => '',
+    'openid'         => '',
     'out_request_no' => '',
-    'send_time' => '',
+    'send_time'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -85,10 +85,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/busifavor/coupons/{card_id}/send')->post([
   'card_id' => '',
   'json' => [
-    'appid' => '',
-    'openid' => '',
+    'appid'          => '',
+    'openid'         => '',
     'out_request_no' => '',
-    'send_time' => '',
+    'send_time'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -98,10 +98,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/busifavor/coupons/{card_id}/send']->post([
   'card_id' => '',
   'json' => [
-    'appid' => '',
-    'openid' => '',
+    'appid'          => '',
+    'openid'         => '',
     'out_request_no' => '',
-    'send_time' => '',
+    'send_time'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,7 +111,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_code {data-required}| string | 消费卡code
+| card_code {data-required} | string | 消费卡code
 
 {.im-table #response}
 

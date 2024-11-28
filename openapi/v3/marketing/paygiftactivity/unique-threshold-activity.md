@@ -56,50 +56,50 @@ description: 商户可以创建满额送活动，用户支付后送全场券，�
 $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->postAsync([
   'json' => [
     'activity_base_info' => [
-      'activity_name' => '',
+      'activity_name'         => '',
       'activity_second_title' => '',
-      'merchant_logo_url' => '',
-      'background_color' => 'Color010',
-      'begin_time' => '',
-      'end_time' => '',
-      'available_periods' => [
-        'available_time' => [[
+      'merchant_logo_url'     => '',
+      'background_color'      => 'Color010',
+      'begin_time'            => '',
+      'end_time'              => '',
+      'available_periods'     => [
+        'available_time'     => [[
           'begin_time' => '',
-          'end_time' => '',
+          'end_time'   => '',
         ],],
         'available_day_time' => [[
           'begin_day_time' => '',
-          'end_day_time' => '',
+          'end_day_time'   => '',
         ],],
       ],
-      'out_request_no' => '',
-      'delivery_purpose' => 'OFF_LINE_PAY',
-      'mini_programs_appid' => '',
-      'mini_programs_path' => '',
+      'out_request_no'        => '',
+      'delivery_purpose'      => 'OFF_LINE_PAY',
+      'mini_programs_appid'   => '',
+      'mini_programs_path'    => '',
     ],
-    'advanced_setting' => [
+    'advanced_setting'   => [
       'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid' => '',
-      'payment_mode' => [
-        'payment_scene_list' => ['string'],
+      'merchant_member_appid'  => '',
+      'payment_mode'           => [
+        'payment_scene_list'         => ['string'],
         'payment_method_information' => [
-          'payment_method' => '',
+          'payment_method'    => '',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags' => ['string'],
+      'goods_tags'             => ['string'],
     ],
-    'award_send_rule' => [
-      'award_type' => 'BUSIFAVOR',
-      'merchant_option' => 'IN_SEVICE_COUPON_MERCHANT',
+    'award_send_rule'    => [
+      'award_type'                 => 'BUSIFAVOR',
+      'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
       'transaction_amount_minimum' => 0,
-      'send_content' => 'SINGLE_COUPON',
-      'award_list' => [[
-        'stock_id' => '',
+      'send_content'               => 'SINGLE_COUPON',
+      'award_list'                 => [[
+        'stock_id'           => '',
         'original_image_url' => '',
-        'thumbnail_url' => '',
+        'thumbnail_url'      => '',
       ],],
-      'merchant_id_list' => ['string'],
+      'merchant_id_list'           => ['string'],
     ],
   ],
 ])
@@ -113,50 +113,50 @@ $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->postAsync([
 $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->postAsync([
   'json' => [
     'activity_base_info' => [
-      'activity_name' => '',
+      'activity_name'         => '',
       'activity_second_title' => '',
-      'merchant_logo_url' => '',
-      'background_color' => 'Color010',
-      'begin_time' => '',
-      'end_time' => '',
-      'available_periods' => [
-        'available_time' => [[
+      'merchant_logo_url'     => '',
+      'background_color'      => 'Color010',
+      'begin_time'            => '',
+      'end_time'              => '',
+      'available_periods'     => [
+        'available_time'     => [[
           'begin_time' => '',
-          'end_time' => '',
+          'end_time'   => '',
         ],],
         'available_day_time' => [[
           'begin_day_time' => '',
-          'end_day_time' => '',
+          'end_day_time'   => '',
         ],],
       ],
-      'out_request_no' => '',
-      'delivery_purpose' => 'OFF_LINE_PAY',
-      'mini_programs_appid' => '',
-      'mini_programs_path' => '',
+      'out_request_no'        => '',
+      'delivery_purpose'      => 'OFF_LINE_PAY',
+      'mini_programs_appid'   => '',
+      'mini_programs_path'    => '',
     ],
-    'advanced_setting' => [
+    'advanced_setting'   => [
       'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid' => '',
-      'payment_mode' => [
-        'payment_scene_list' => ['string'],
+      'merchant_member_appid'  => '',
+      'payment_mode'           => [
+        'payment_scene_list'         => ['string'],
         'payment_method_information' => [
-          'payment_method' => '',
+          'payment_method'    => '',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags' => ['string'],
+      'goods_tags'             => ['string'],
     ],
-    'award_send_rule' => [
-      'award_type' => 'BUSIFAVOR',
-      'merchant_option' => 'IN_SEVICE_COUPON_MERCHANT',
+    'award_send_rule'    => [
+      'award_type'                 => 'BUSIFAVOR',
+      'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
       'transaction_amount_minimum' => 0,
-      'send_content' => 'SINGLE_COUPON',
-      'award_list' => [[
-        'stock_id' => '',
+      'send_content'               => 'SINGLE_COUPON',
+      'award_list'                 => [[
+        'stock_id'           => '',
         'original_image_url' => '',
-        'thumbnail_url' => '',
+        'thumbnail_url'      => '',
       ],],
-      'merchant_id_list' => ['string'],
+      'merchant_id_list'           => ['string'],
     ],
   ],
 ])
@@ -170,50 +170,50 @@ $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->post
 $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->postAsync([
   'json' => [
     'activity_base_info' => [
-      'activity_name' => '',
+      'activity_name'         => '',
       'activity_second_title' => '',
-      'merchant_logo_url' => '',
-      'background_color' => 'Color010',
-      'begin_time' => '',
-      'end_time' => '',
-      'available_periods' => [
-        'available_time' => [[
+      'merchant_logo_url'     => '',
+      'background_color'      => 'Color010',
+      'begin_time'            => '',
+      'end_time'              => '',
+      'available_periods'     => [
+        'available_time'     => [[
           'begin_time' => '',
-          'end_time' => '',
+          'end_time'   => '',
         ],],
         'available_day_time' => [[
           'begin_day_time' => '',
-          'end_day_time' => '',
+          'end_day_time'   => '',
         ],],
       ],
-      'out_request_no' => '',
-      'delivery_purpose' => 'OFF_LINE_PAY',
-      'mini_programs_appid' => '',
-      'mini_programs_path' => '',
+      'out_request_no'        => '',
+      'delivery_purpose'      => 'OFF_LINE_PAY',
+      'mini_programs_appid'   => '',
+      'mini_programs_path'    => '',
     ],
-    'advanced_setting' => [
+    'advanced_setting'   => [
       'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid' => '',
-      'payment_mode' => [
-        'payment_scene_list' => ['string'],
+      'merchant_member_appid'  => '',
+      'payment_mode'           => [
+        'payment_scene_list'         => ['string'],
         'payment_method_information' => [
-          'payment_method' => '',
+          'payment_method'    => '',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags' => ['string'],
+      'goods_tags'             => ['string'],
     ],
-    'award_send_rule' => [
-      'award_type' => 'BUSIFAVOR',
-      'merchant_option' => 'IN_SEVICE_COUPON_MERCHANT',
+    'award_send_rule'    => [
+      'award_type'                 => 'BUSIFAVOR',
+      'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
       'transaction_amount_minimum' => 0,
-      'send_content' => 'SINGLE_COUPON',
-      'award_list' => [[
-        'stock_id' => '',
+      'send_content'               => 'SINGLE_COUPON',
+      'award_list'                 => [[
+        'stock_id'           => '',
         'original_image_url' => '',
-        'thumbnail_url' => '',
+        'thumbnail_url'      => '',
       ],],
-      'merchant_id_list' => ['string'],
+      'merchant_id_list'           => ['string'],
     ],
   ],
 ])
@@ -227,50 +227,50 @@ $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->postAsync([
 $response = $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->post([
   'json' => [
     'activity_base_info' => [
-      'activity_name' => '',
+      'activity_name'         => '',
       'activity_second_title' => '',
-      'merchant_logo_url' => '',
-      'background_color' => 'Color010',
-      'begin_time' => '',
-      'end_time' => '',
-      'available_periods' => [
-        'available_time' => [[
+      'merchant_logo_url'     => '',
+      'background_color'      => 'Color010',
+      'begin_time'            => '',
+      'end_time'              => '',
+      'available_periods'     => [
+        'available_time'     => [[
           'begin_time' => '',
-          'end_time' => '',
+          'end_time'   => '',
         ],],
         'available_day_time' => [[
           'begin_day_time' => '',
-          'end_day_time' => '',
+          'end_day_time'   => '',
         ],],
       ],
-      'out_request_no' => '',
-      'delivery_purpose' => 'OFF_LINE_PAY',
-      'mini_programs_appid' => '',
-      'mini_programs_path' => '',
+      'out_request_no'        => '',
+      'delivery_purpose'      => 'OFF_LINE_PAY',
+      'mini_programs_appid'   => '',
+      'mini_programs_path'    => '',
     ],
-    'advanced_setting' => [
+    'advanced_setting'   => [
       'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid' => '',
-      'payment_mode' => [
-        'payment_scene_list' => ['string'],
+      'merchant_member_appid'  => '',
+      'payment_mode'           => [
+        'payment_scene_list'         => ['string'],
         'payment_method_information' => [
-          'payment_method' => '',
+          'payment_method'    => '',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags' => ['string'],
+      'goods_tags'             => ['string'],
     ],
-    'award_send_rule' => [
-      'award_type' => 'BUSIFAVOR',
-      'merchant_option' => 'IN_SEVICE_COUPON_MERCHANT',
+    'award_send_rule'    => [
+      'award_type'                 => 'BUSIFAVOR',
+      'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
       'transaction_amount_minimum' => 0,
-      'send_content' => 'SINGLE_COUPON',
-      'award_list' => [[
-        'stock_id' => '',
+      'send_content'               => 'SINGLE_COUPON',
+      'award_list'                 => [[
+        'stock_id'           => '',
         'original_image_url' => '',
-        'thumbnail_url' => '',
+        'thumbnail_url'      => '',
       ],],
-      'merchant_id_list' => ['string'],
+      'merchant_id_list'           => ['string'],
     ],
   ],
 ]);
@@ -281,50 +281,50 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->post([
   'json' => [
     'activity_base_info' => [
-      'activity_name' => '',
+      'activity_name'         => '',
       'activity_second_title' => '',
-      'merchant_logo_url' => '',
-      'background_color' => 'Color010',
-      'begin_time' => '',
-      'end_time' => '',
-      'available_periods' => [
-        'available_time' => [[
+      'merchant_logo_url'     => '',
+      'background_color'      => 'Color010',
+      'begin_time'            => '',
+      'end_time'              => '',
+      'available_periods'     => [
+        'available_time'     => [[
           'begin_time' => '',
-          'end_time' => '',
+          'end_time'   => '',
         ],],
         'available_day_time' => [[
           'begin_day_time' => '',
-          'end_day_time' => '',
+          'end_day_time'   => '',
         ],],
       ],
-      'out_request_no' => '',
-      'delivery_purpose' => 'OFF_LINE_PAY',
-      'mini_programs_appid' => '',
-      'mini_programs_path' => '',
+      'out_request_no'        => '',
+      'delivery_purpose'      => 'OFF_LINE_PAY',
+      'mini_programs_appid'   => '',
+      'mini_programs_path'    => '',
     ],
-    'advanced_setting' => [
+    'advanced_setting'   => [
       'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid' => '',
-      'payment_mode' => [
-        'payment_scene_list' => ['string'],
+      'merchant_member_appid'  => '',
+      'payment_mode'           => [
+        'payment_scene_list'         => ['string'],
         'payment_method_information' => [
-          'payment_method' => '',
+          'payment_method'    => '',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags' => ['string'],
+      'goods_tags'             => ['string'],
     ],
-    'award_send_rule' => [
-      'award_type' => 'BUSIFAVOR',
-      'merchant_option' => 'IN_SEVICE_COUPON_MERCHANT',
+    'award_send_rule'    => [
+      'award_type'                 => 'BUSIFAVOR',
+      'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
       'transaction_amount_minimum' => 0,
-      'send_content' => 'SINGLE_COUPON',
-      'award_list' => [[
-        'stock_id' => '',
+      'send_content'               => 'SINGLE_COUPON',
+      'award_list'                 => [[
+        'stock_id'           => '',
         'original_image_url' => '',
-        'thumbnail_url' => '',
+        'thumbnail_url'      => '',
       ],],
-      'merchant_id_list' => ['string'],
+      'merchant_id_list'           => ['string'],
     ],
   ],
 ]);
@@ -335,50 +335,50 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->post([
   'json' => [
     'activity_base_info' => [
-      'activity_name' => '',
+      'activity_name'         => '',
       'activity_second_title' => '',
-      'merchant_logo_url' => '',
-      'background_color' => 'Color010',
-      'begin_time' => '',
-      'end_time' => '',
-      'available_periods' => [
-        'available_time' => [[
+      'merchant_logo_url'     => '',
+      'background_color'      => 'Color010',
+      'begin_time'            => '',
+      'end_time'              => '',
+      'available_periods'     => [
+        'available_time'     => [[
           'begin_time' => '',
-          'end_time' => '',
+          'end_time'   => '',
         ],],
         'available_day_time' => [[
           'begin_day_time' => '',
-          'end_day_time' => '',
+          'end_day_time'   => '',
         ],],
       ],
-      'out_request_no' => '',
-      'delivery_purpose' => 'OFF_LINE_PAY',
-      'mini_programs_appid' => '',
-      'mini_programs_path' => '',
+      'out_request_no'        => '',
+      'delivery_purpose'      => 'OFF_LINE_PAY',
+      'mini_programs_appid'   => '',
+      'mini_programs_path'    => '',
     ],
-    'advanced_setting' => [
+    'advanced_setting'   => [
       'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid' => '',
-      'payment_mode' => [
-        'payment_scene_list' => ['string'],
+      'merchant_member_appid'  => '',
+      'payment_mode'           => [
+        'payment_scene_list'         => ['string'],
         'payment_method_information' => [
-          'payment_method' => '',
+          'payment_method'    => '',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags' => ['string'],
+      'goods_tags'             => ['string'],
     ],
-    'award_send_rule' => [
-      'award_type' => 'BUSIFAVOR',
-      'merchant_option' => 'IN_SEVICE_COUPON_MERCHANT',
+    'award_send_rule'    => [
+      'award_type'                 => 'BUSIFAVOR',
+      'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
       'transaction_amount_minimum' => 0,
-      'send_content' => 'SINGLE_COUPON',
-      'award_list' => [[
-        'stock_id' => '',
+      'send_content'               => 'SINGLE_COUPON',
+      'award_list'                 => [[
+        'stock_id'           => '',
         'original_image_url' => '',
-        'thumbnail_url' => '',
+        'thumbnail_url'      => '',
       ],],
-      'merchant_id_list' => ['string'],
+      'merchant_id_list'           => ['string'],
     ],
   ],
 ]);
@@ -389,8 +389,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| string | 
-| create_time {data-required}| string | 
+| activity_id {data-required} | string | 
+| create_time {data-required} | string | 
 
 {.im-table #response}
 

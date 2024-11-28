@@ -22,9 +22,9 @@ description: 商户在拉起快捷切卡小程序前，需要先调用本接口�
 ```php [异步纯链式]
 $instance->v3->industryCoupon->tokens->postAsync([
   'json' => [
-    'open_id' => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
+    'open_id'     => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
     'coupon_list' => [[
-      'stock_id' => 16474341,
+      'stock_id'  => 16474341,
       'coupon_id' => '11004999626',
     ],],
   ],
@@ -38,9 +38,9 @@ $instance->v3->industryCoupon->tokens->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/industry-coupon/tokens')->postAsync([
   'json' => [
-    'open_id' => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
+    'open_id'     => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
     'coupon_list' => [[
-      'stock_id' => 16474341,
+      'stock_id'  => 16474341,
       'coupon_id' => '11004999626',
     ],],
   ],
@@ -54,9 +54,9 @@ $instance->chain('v3/industry-coupon/tokens')->postAsync([
 ```php [异步属性式]
 $instance['v3/industry-coupon/tokens']->postAsync([
   'json' => [
-    'open_id' => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
+    'open_id'     => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
     'coupon_list' => [[
-      'stock_id' => 16474341,
+      'stock_id'  => 16474341,
       'coupon_id' => '11004999626',
     ],],
   ],
@@ -70,9 +70,9 @@ $instance['v3/industry-coupon/tokens']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->industryCoupon->tokens->post([
   'json' => [
-    'open_id' => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
+    'open_id'     => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
     'coupon_list' => [[
-      'stock_id' => 16474341,
+      'stock_id'  => 16474341,
       'coupon_id' => '11004999626',
     ],],
   ],
@@ -83,9 +83,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/industry-coupon/tokens')->post([
   'json' => [
-    'open_id' => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
+    'open_id'     => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
     'coupon_list' => [[
-      'stock_id' => 16474341,
+      'stock_id'  => 16474341,
       'coupon_id' => '11004999626',
     ],],
   ],
@@ -96,9 +96,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/industry-coupon/tokens']->post([
   'json' => [
-    'open_id' => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
+    'open_id'     => 'obLatjrR8kUDlj4-nofQsPAJAAFI',
     'coupon_list' => [[
-      'stock_id' => 16474341,
+      'stock_id'  => 16474341,
       'coupon_id' => '11004999626',
     ],],
   ],

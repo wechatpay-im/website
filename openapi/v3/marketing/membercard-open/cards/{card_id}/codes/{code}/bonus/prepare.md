@@ -27,9 +27,9 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_code_->bonus
   'code' => '478515832665',
   'json' => [
     'out_trade_no' => '1217752501201407033233368018',
-    'mchid' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'bonus_value' => 30,
+    'mchid'        => '1230000109',
+    'sub_mchid'    => '1900000109',
+    'bonus_value'  => 30,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,9 +44,9 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonu
   'code' => '478515832665',
   'json' => [
     'out_trade_no' => '1217752501201407033233368018',
-    'mchid' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'bonus_value' => 30,
+    'mchid'        => '1230000109',
+    'sub_mchid'    => '1900000109',
+    'bonus_value'  => 30,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,9 +61,9 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/prepa
   'code' => '478515832665',
   'json' => [
     'out_trade_no' => '1217752501201407033233368018',
-    'mchid' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'bonus_value' => 30,
+    'mchid'        => '1230000109',
+    'sub_mchid'    => '1900000109',
+    'bonus_value'  => 30,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,9 +78,9 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_
   'code' => '478515832665',
   'json' => [
     'out_trade_no' => '1217752501201407033233368018',
-    'mchid' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'bonus_value' => 30,
+    'mchid'        => '1230000109',
+    'sub_mchid'    => '1900000109',
+    'bonus_value'  => 30,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -92,9 +92,9 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes
   'code' => '478515832665',
   'json' => [
     'out_trade_no' => '1217752501201407033233368018',
-    'mchid' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'bonus_value' => 30,
+    'mchid'        => '1230000109',
+    'sub_mchid'    => '1900000109',
+    'bonus_value'  => 30,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -106,9 +106,9 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}
   'code' => '478515832665',
   'json' => [
     'out_trade_no' => '1217752501201407033233368018',
-    'mchid' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'bonus_value' => 30,
+    'mchid'        => '1230000109',
+    'sub_mchid'    => '1900000109',
+    'bonus_value'  => 30,
   ],
 ]);
 print_r($response->getStatusCode() === 204);

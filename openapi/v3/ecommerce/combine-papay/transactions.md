@@ -35,22 +35,22 @@ description: 商户可以通过该接口发起免密的合单支付
 ```php [异步纯链式]
 $instance->v3->ecommerce->combinePapay->transactions->postAsync([
   'json' => [
-    'combine_appid' => 'wxd678efh567hg6787',
-    'combine_mchid' => '1900000109',
+    'combine_appid'        => 'wxd678efh567hg6787',
+    'combine_mchid'        => '1900000109',
     'combine_out_trade_no' => 'P20150806125346',
-    'contract_id' => '123124412412423431',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'attach' => '深圳分店',
-      'amount' => [
+    'contract_id'          => '123124412412423431',
+    'sub_orders'           => [[
+      'mchid'        => '1900000109',
+      'attach'       => '深圳分店',
+      'amount'       => [
         'total_amount' => 100,
-        'currency' => 'CNY',
+        'currency'     => 'CNY',
       ],
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
-      'description' => '腾讯充值中心-QQ会员充值',
-      'settle_info' => [
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
+      'description'  => '腾讯充值中心-QQ会员充值',
+      'settle_info'  => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
@@ -66,22 +66,22 @@ $instance->v3->ecommerce->combinePapay->transactions->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/combine-papay/transactions')->postAsync([
   'json' => [
-    'combine_appid' => 'wxd678efh567hg6787',
-    'combine_mchid' => '1900000109',
+    'combine_appid'        => 'wxd678efh567hg6787',
+    'combine_mchid'        => '1900000109',
     'combine_out_trade_no' => 'P20150806125346',
-    'contract_id' => '123124412412423431',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'attach' => '深圳分店',
-      'amount' => [
+    'contract_id'          => '123124412412423431',
+    'sub_orders'           => [[
+      'mchid'        => '1900000109',
+      'attach'       => '深圳分店',
+      'amount'       => [
         'total_amount' => 100,
-        'currency' => 'CNY',
+        'currency'     => 'CNY',
       ],
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
-      'description' => '腾讯充值中心-QQ会员充值',
-      'settle_info' => [
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
+      'description'  => '腾讯充值中心-QQ会员充值',
+      'settle_info'  => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
@@ -97,22 +97,22 @@ $instance->chain('v3/ecommerce/combine-papay/transactions')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/combine-papay/transactions']->postAsync([
   'json' => [
-    'combine_appid' => 'wxd678efh567hg6787',
-    'combine_mchid' => '1900000109',
+    'combine_appid'        => 'wxd678efh567hg6787',
+    'combine_mchid'        => '1900000109',
     'combine_out_trade_no' => 'P20150806125346',
-    'contract_id' => '123124412412423431',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'attach' => '深圳分店',
-      'amount' => [
+    'contract_id'          => '123124412412423431',
+    'sub_orders'           => [[
+      'mchid'        => '1900000109',
+      'attach'       => '深圳分店',
+      'amount'       => [
         'total_amount' => 100,
-        'currency' => 'CNY',
+        'currency'     => 'CNY',
       ],
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
-      'description' => '腾讯充值中心-QQ会员充值',
-      'settle_info' => [
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
+      'description'  => '腾讯充值中心-QQ会员充值',
+      'settle_info'  => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
@@ -128,22 +128,22 @@ $instance['v3/ecommerce/combine-papay/transactions']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->combinePapay->transactions->post([
   'json' => [
-    'combine_appid' => 'wxd678efh567hg6787',
-    'combine_mchid' => '1900000109',
+    'combine_appid'        => 'wxd678efh567hg6787',
+    'combine_mchid'        => '1900000109',
     'combine_out_trade_no' => 'P20150806125346',
-    'contract_id' => '123124412412423431',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'attach' => '深圳分店',
-      'amount' => [
+    'contract_id'          => '123124412412423431',
+    'sub_orders'           => [[
+      'mchid'        => '1900000109',
+      'attach'       => '深圳分店',
+      'amount'       => [
         'total_amount' => 100,
-        'currency' => 'CNY',
+        'currency'     => 'CNY',
       ],
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
-      'description' => '腾讯充值中心-QQ会员充值',
-      'settle_info' => [
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
+      'description'  => '腾讯充值中心-QQ会员充值',
+      'settle_info'  => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
@@ -156,22 +156,22 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/combine-papay/transactions')->post([
   'json' => [
-    'combine_appid' => 'wxd678efh567hg6787',
-    'combine_mchid' => '1900000109',
+    'combine_appid'        => 'wxd678efh567hg6787',
+    'combine_mchid'        => '1900000109',
     'combine_out_trade_no' => 'P20150806125346',
-    'contract_id' => '123124412412423431',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'attach' => '深圳分店',
-      'amount' => [
+    'contract_id'          => '123124412412423431',
+    'sub_orders'           => [[
+      'mchid'        => '1900000109',
+      'attach'       => '深圳分店',
+      'amount'       => [
         'total_amount' => 100,
-        'currency' => 'CNY',
+        'currency'     => 'CNY',
       ],
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
-      'description' => '腾讯充值中心-QQ会员充值',
-      'settle_info' => [
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
+      'description'  => '腾讯充值中心-QQ会员充值',
+      'settle_info'  => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
@@ -184,22 +184,22 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/combine-papay/transactions']->post([
   'json' => [
-    'combine_appid' => 'wxd678efh567hg6787',
-    'combine_mchid' => '1900000109',
+    'combine_appid'        => 'wxd678efh567hg6787',
+    'combine_mchid'        => '1900000109',
     'combine_out_trade_no' => 'P20150806125346',
-    'contract_id' => '123124412412423431',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'attach' => '深圳分店',
-      'amount' => [
+    'contract_id'          => '123124412412423431',
+    'sub_orders'           => [[
+      'mchid'        => '1900000109',
+      'attach'       => '深圳分店',
+      'amount'       => [
         'total_amount' => 100,
-        'currency' => 'CNY',
+        'currency'     => 'CNY',
       ],
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
-      'description' => '腾讯充值中心-QQ会员充值',
-      'settle_info' => [
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
+      'description'  => '腾讯充值中心-QQ会员充值',
+      'settle_info'  => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
@@ -213,9 +213,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| combine_appid {data-required}| string | 合单商户APPID
-| combine_mchid {data-required}| string | 合单商户号
-| combine_out_trade_no {data-required}| string | 合单商户订单号
+| combine_appid {data-required} | string | 合单商户APPID
+| combine_mchid {data-required} | string | 合单商户号
+| combine_out_trade_no {data-required} | string | 合单商户订单号
 | sub_orders | object[] {data-tooltip="对应PHP的array"} | 子单信息
 | mchid {data-required data-indent=1} | string | 子单商户号
 | trade_type {data-required data-indent=1} | string | 交易类型

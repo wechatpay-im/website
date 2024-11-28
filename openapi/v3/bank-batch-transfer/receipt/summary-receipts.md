@@ -78,8 +78,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no {data-required}| string | 银行转账批次单号
-| receipt_no {data-required}| string | 电子回单申请单号
+| out_batch_no {data-required} | string | 银行转账批次单号
+| receipt_no {data-required} | string | 电子回单申请单号
 | receipt_state | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值
@@ -171,8 +171,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no {data-required}| string | 银行转账批次单号
-| receipt_no {data-required}| string | 电子回单申请单号
+| out_batch_no {data-required} | string | 银行转账批次单号
+| receipt_no {data-required} | string | 电子回单申请单号
 | receipt_state | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值

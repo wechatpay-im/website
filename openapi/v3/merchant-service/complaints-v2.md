@@ -147,8 +147,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | is_returned_to_same_machine {data-indent=3} | boolean | 是否归还同一柜机
 | in_platform_service {data-indent=1} | boolean | 是否在平台协助中
 | need_immediate_service {data-indent=1} | boolean | 是否需即时服务用户
-| limit {data-required}| integer | 分页大小
-| offset {data-required}| integer | 分页开始位置
+| limit {data-required} | integer | 分页大小
+| offset {data-required} | integer | 分页开始位置
 | total_count | integer | 投诉总条数
 
 {.im-table #response}

@@ -16,8 +16,8 @@
 ```php [异步纯链式]
 $instance->v3->newTaxControlFapiao->merchant->developmentConfig->patchAsync([
   'json' => [
-    'callback_url' => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code' => '1900000109',
+    'callback_url'     => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'     => '1900000109',
     'show_fapiao_cell' => true,
   ],
 ])
@@ -30,8 +30,8 @@ $instance->v3->newTaxControlFapiao->merchant->developmentConfig->patchAsync([
 ```php [异步声明式]
 $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->patchAsync([
   'json' => [
-    'callback_url' => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code' => '1900000109',
+    'callback_url'     => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'     => '1900000109',
     'show_fapiao_cell' => true,
   ],
 ])
@@ -44,8 +44,8 @@ $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->patch
 ```php [异步属性式]
 $instance['v3/new-tax-control-fapiao/merchant/development-config']->patchAsync([
   'json' => [
-    'callback_url' => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code' => '1900000109',
+    'callback_url'     => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'     => '1900000109',
     'show_fapiao_cell' => true,
   ],
 ])
@@ -58,8 +58,8 @@ $instance['v3/new-tax-control-fapiao/merchant/development-config']->patchAsync([
 ```php [同步纯链式]
 $response = $instance->v3->newTaxControlFapiao->merchant->developmentConfig->patch([
   'json' => [
-    'callback_url' => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code' => '1900000109',
+    'callback_url'     => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'     => '1900000109',
     'show_fapiao_cell' => true,
   ],
 ]);
@@ -69,8 +69,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->patch([
   'json' => [
-    'callback_url' => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code' => '1900000109',
+    'callback_url'     => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'     => '1900000109',
     'show_fapiao_cell' => true,
   ],
 ]);
@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/new-tax-control-fapiao/merchant/development-config']->patch([
   'json' => [
-    'callback_url' => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code' => '1900000109',
+    'callback_url'     => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'     => '1900000109',
     'show_fapiao_cell' => true,
   ],
 ]);
@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| callback_url {data-required}| string | 商户回调地址
+| callback_url {data-required} | string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
 
 {.im-table #response}
@@ -153,7 +153,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| callback_url {data-required}| string | 商户回调地址
+| callback_url {data-required} | string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
 
 {.im-table #response}

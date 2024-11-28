@@ -90,16 +90,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id {data-required}| string | 签约ID
-| mchid {data-required}| string | 商户号
-| organization_id {data-required}| string | 机构ID
+| contract_id {data-required} | string | 签约ID
+| mchid {data-required} | string | 商户号
+| organization_id {data-required} | string | 机构ID
 | use_id | string | 用户ID
 | openid | string | 签约用户openid
-| contract_state {data-required}| string | 签约状态<br/>`NOT_CONTRACTED` \| `TERMINATED` \| `CONTRACTED` 枚举值之一
-| contract_signed_time {data-required}| string | 签约时间
+| contract_state {data-required} | string | 签约状态<br/>`NOT_CONTRACTED` \| `TERMINATED` \| `CONTRACTED` 枚举值之一
+| contract_signed_time {data-required} | string | 签约时间
 | contract_terminated_time | string | 解约时间
-| contract_mode {data-required}| string | 签约模式<br/>`LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
-| contract_bank_card_from {data-required}| string | 签约卡来源<br/>`MERCHANT_LIMITED_BANK_CARD` \| `USER_SELECT_FREE` 枚举值之一
+| contract_mode {data-required} | string | 签约模式<br/>`LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
+| contract_bank_card_from {data-required} | string | 签约卡来源<br/>`MERCHANT_LIMITED_BANK_CARD` \| `USER_SELECT_FREE` 枚举值之一
 
 {.im-table #response}
 

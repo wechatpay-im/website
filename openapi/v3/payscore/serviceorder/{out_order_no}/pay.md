@@ -22,7 +22,7 @@ description: 当微信支付分订单支付状态处于“待支付”时，商�
 $instance->v3->payscore->serviceorder->_out_order_no_->pay->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->payscore->serviceorder->_out_order_no_->pay->postAsync([
 $instance->chain('v3/payscore/serviceorder/{out_order_no}/pay')->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/payscore/serviceorder/{out_order_no}/pay')->postAsync([
 $instance['v3/payscore/serviceorder/{out_order_no}/pay']->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/payscore/serviceorder/{out_order_no}/pay']->postAsync([
 $response = $instance->v3->payscore->serviceorder->_out_order_no_->pay->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/serviceorder/{out_order_no}/pay')->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/serviceorder/{out_order_no}/pay']->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
   ],
 ]);
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 公众账号ID
+| appid {data-required} | string | 公众账号ID
 | mchid | string | 商户号
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| order_id {data-required}| string | 微信支付服务订单号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| order_id {data-required} | string | 微信支付服务订单号
 
 {.im-table #response}
 

@@ -29,13 +29,13 @@ description: 提交退款申请后，查询退款确认状态为退款异常，�
 $instance->v3->ecommerce->refunds->_refund_id_->applyAbnormalRefund->postAsync([
   'refund_id' => '50000000382019052709732678859',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
     'individual_auth_id' => '1900000109',
-    'out_refund_no' => '1217752501201407033233368018',
-    'type' => 'USER_BANK_CARD',
-    'bank_type' => 'ICBC_DEBIT',
-    'bank_account' => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
-    'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
+    'out_refund_no'      => '1217752501201407033233368018',
+    'type'               => 'USER_BANK_CARD',
+    'bank_type'          => 'ICBC_DEBIT',
+    'bank_account'       => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
+    'real_name'          => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -51,13 +51,13 @@ $instance->v3->ecommerce->refunds->_refund_id_->applyAbnormalRefund->postAsync([
 $instance->chain('v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund')->postAsync([
   'refund_id' => '50000000382019052709732678859',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
     'individual_auth_id' => '1900000109',
-    'out_refund_no' => '1217752501201407033233368018',
-    'type' => 'USER_BANK_CARD',
-    'bank_type' => 'ICBC_DEBIT',
-    'bank_account' => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
-    'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
+    'out_refund_no'      => '1217752501201407033233368018',
+    'type'               => 'USER_BANK_CARD',
+    'bank_type'          => 'ICBC_DEBIT',
+    'bank_account'       => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
+    'real_name'          => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -73,13 +73,13 @@ $instance->chain('v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund')->post
 $instance['v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund']->postAsync([
   'refund_id' => '50000000382019052709732678859',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
     'individual_auth_id' => '1900000109',
-    'out_refund_no' => '1217752501201407033233368018',
-    'type' => 'USER_BANK_CARD',
-    'bank_type' => 'ICBC_DEBIT',
-    'bank_account' => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
-    'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
+    'out_refund_no'      => '1217752501201407033233368018',
+    'type'               => 'USER_BANK_CARD',
+    'bank_type'          => 'ICBC_DEBIT',
+    'bank_account'       => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
+    'real_name'          => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -95,13 +95,13 @@ $instance['v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund']->postAsync([
 $response = $instance->v3->ecommerce->refunds->_refund_id_->applyAbnormalRefund->post([
   'refund_id' => '50000000382019052709732678859',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
     'individual_auth_id' => '1900000109',
-    'out_refund_no' => '1217752501201407033233368018',
-    'type' => 'USER_BANK_CARD',
-    'bank_type' => 'ICBC_DEBIT',
-    'bank_account' => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
-    'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
+    'out_refund_no'      => '1217752501201407033233368018',
+    'type'               => 'USER_BANK_CARD',
+    'bank_type'          => 'ICBC_DEBIT',
+    'bank_account'       => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
+    'real_name'          => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -114,13 +114,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund')->post([
   'refund_id' => '50000000382019052709732678859',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
     'individual_auth_id' => '1900000109',
-    'out_refund_no' => '1217752501201407033233368018',
-    'type' => 'USER_BANK_CARD',
-    'bank_type' => 'ICBC_DEBIT',
-    'bank_account' => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
-    'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
+    'out_refund_no'      => '1217752501201407033233368018',
+    'type'               => 'USER_BANK_CARD',
+    'bank_type'          => 'ICBC_DEBIT',
+    'bank_account'       => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
+    'real_name'          => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -133,13 +133,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund']->post([
   'refund_id' => '50000000382019052709732678859',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'          => '1900000109',
     'individual_auth_id' => '1900000109',
-    'out_refund_no' => '1217752501201407033233368018',
-    'type' => 'USER_BANK_CARD',
-    'bank_type' => 'ICBC_DEBIT',
-    'bank_account' => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
-    'real_name' => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
+    'out_refund_no'      => '1217752501201407033233368018',
+    'type'               => 'USER_BANK_CARD',
+    'bank_type'          => 'ICBC_DEBIT',
+    'bank_account'       => 'd+xT+MQCvrLHUVDWv/8MR/dB7TkXLVfSrUxMPZy6jWWYzpRrEEaYQE8ZRGYoeorwC+w==',
+    'real_name'          => 'UPgQcZSdq3zOayJwZ5XLrHY2dZU1W2Cd',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -152,17 +152,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id {data-required}| string | 微信支付退款号
-| out_refund_no {data-required}| string | 商户退款单号
-| transaction_id {data-required}| string | 微信支付订单号
-| out_trade_no {data-required}| string | 商户订单号
-| channel {data-required}| string | 退款渠道
-| user_received_account {data-required}| string | 退款入账账户
+| refund_id {data-required} | string | 微信支付退款号
+| out_refund_no {data-required} | string | 商户退款单号
+| transaction_id {data-required} | string | 微信支付订单号
+| out_trade_no {data-required} | string | 商户订单号
+| channel | string | 退款渠道
+| user_received_account | string | 退款入账账户
 | success_time | string | 退款成功时间
-| create_time {data-required}| string | 退款创建时间
-| status {data-required}| string | 退款状态
-| funds_account | string | 资金账户
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 金额信息
+| create_time {data-required} | string | 退款创建时间
+| status {data-required} | string | 退款状态
+| funds_account | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` 枚举值之一
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 金额信息
 | refund {data-required data-indent=1} | number | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
 | account {data-required data-indent=2} | string | 出资账户类型

@@ -32,18 +32,18 @@ description: 商户后台通过请求此接口获取到签约会话id，然后�
 $instance->v3->global->papay->contracts->miniprogramPreEntrustSign->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'openid' => 'ouFhd5X9s9WteC3eWRjXV3lea123',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
+    'openid'             => 'ouFhd5X9s9WteC3eWRjXV3lea123',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,18 +56,18 @@ $instance->v3->global->papay->contracts->miniprogramPreEntrustSign->postAsync([
 $instance->chain('v3/global/papay/contracts/miniprogram-pre-entrust-sign')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'openid' => 'ouFhd5X9s9WteC3eWRjXV3lea123',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
+    'openid'             => 'ouFhd5X9s9WteC3eWRjXV3lea123',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,18 +80,18 @@ $instance->chain('v3/global/papay/contracts/miniprogram-pre-entrust-sign')->post
 $instance['v3/global/papay/contracts/miniprogram-pre-entrust-sign']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'openid' => 'ouFhd5X9s9WteC3eWRjXV3lea123',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
+    'openid'             => 'ouFhd5X9s9WteC3eWRjXV3lea123',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -104,18 +104,18 @@ $instance['v3/global/papay/contracts/miniprogram-pre-entrust-sign']->postAsync([
 $response = $instance->v3->global->papay->contracts->miniprogramPreEntrustSign->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'openid' => 'ouFhd5X9s9WteC3eWRjXV3lea123',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
+    'openid'             => 'ouFhd5X9s9WteC3eWRjXV3lea123',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -125,18 +125,18 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/papay/contracts/miniprogram-pre-entrust-sign')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'openid' => 'ouFhd5X9s9WteC3eWRjXV3lea123',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
+    'openid'             => 'ouFhd5X9s9WteC3eWRjXV3lea123',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -146,18 +146,18 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/papay/contracts/miniprogram-pre-entrust-sign']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'sub_appid' => 'wxcbda96de0b165484',
-    'plan_id' => 123,
-    'out_contract_code' => '100001256',
-    'user_display_name' => '张三',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'          => '1230000109',
+    'sp_appid'           => 'wx8888888888888888',
+    'sp_mchid'           => '3200000001',
+    'sub_appid'          => 'wxcbda96de0b165484',
+    'plan_id'            => 123,
+    'out_contract_code'  => '100001256',
+    'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
-    'openid' => 'ouFhd5X9s9WteC3eWRjXV3lea123',
-    'user_client_ip' => '119.145.83.6',
-    'expired_time' => '2021-11-20T13:29:35+08:00',
+    'openid'             => 'ouFhd5X9s9WteC3eWRjXV3lea123',
+    'user_client_ip'     => '119.145.83.6',
+    'expired_time'       => '2021-11-20T13:29:35+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -167,7 +167,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| session_id {data-required}| string | 委托代扣签约会话id
+| session_id {data-required} | string | 委托代扣签约会话id
 
 {.im-table #response}
 

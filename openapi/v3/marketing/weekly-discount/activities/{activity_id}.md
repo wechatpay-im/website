@@ -71,20 +71,20 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | activity_id | string | 活动ID
-| activity_name {data-required}| string | 活动名称
-| activity_scene {data-required}| string | 活动投放场景
-| activity_area_code {data-required}| string[] | 活动投放区域编码
+| activity_name {data-required} | string | 活动名称
+| activity_scene {data-required} | string | 活动投放场景
+| activity_area_code {data-required} | string[] | 活动投放区域编码
 | activity_limit_pay | string | 活动指定付款方式
-| activity_transaction_minimum_amount {data-required}| integer | 活动优惠门槛
-| activity_coupon_amount {data-required}| integer | 活动优惠金额
-| activity_available_week {data-required}| string[] | 活动可使用周期
-| activity_max_amount {data-required}| integer | 活动预算
+| activity_transaction_minimum_amount {data-required} | integer | 活动优惠门槛
+| activity_coupon_amount {data-required} | integer | 活动优惠金额
+| activity_available_week {data-required} | string[] | 活动可使用周期
+| activity_max_amount {data-required} | integer | 活动预算
 | activity_max_amount_per_day | integer | 活动单天预算
-| activity_available_begin_time {data-required}| string | 活动开始时间
-| activity_available_end_time {data-required}| string | 活动结束时间
-| activity_state {data-required}| string | 活动状态
+| activity_available_begin_time {data-required} | string | 活动开始时间
+| activity_available_end_time {data-required} | string | 活动结束时间
+| activity_state {data-required} | string | 活动状态
 | activity_remark | string | 活动备注
-| activity_logo {data-required}| string | 活动logo
+| activity_logo {data-required} | string | 活动logo
 
 {.im-table #response}
 

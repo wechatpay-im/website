@@ -23,7 +23,7 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->pay->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'  => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/pay')->postAsy
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'  => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/pay']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'  => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->pay-
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'  => '1900000109',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/pa
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'  => '1900000109',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -87,7 +87,7 @@ $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/pay']->po
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
+    'sub_mchid'  => '1900000109',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

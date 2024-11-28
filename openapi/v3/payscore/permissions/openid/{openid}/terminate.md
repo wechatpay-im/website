@@ -24,8 +24,8 @@ $instance->v3->payscore->permissions->openid->_openid_->terminate->postAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'reason'     => 'reason',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/payscore/permissions/openid/{openid}/terminate')->postAsync
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'reason'     => 'reason',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +54,8 @@ $instance['v3/payscore/permissions/openid/{openid}/terminate']->postAsync([
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'reason'     => 'reason',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,8 +69,8 @@ $response = $instance->v3->payscore->permissions->openid->_openid_->terminate->p
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'reason'     => 'reason',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -81,8 +81,8 @@ $response = $instance->chain('v3/payscore/permissions/openid/{openid}/terminate'
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'reason'     => 'reason',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -93,8 +93,8 @@ $response = $instance['v3/payscore/permissions/openid/{openid}/terminate']->post
   'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'reason'     => 'reason',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

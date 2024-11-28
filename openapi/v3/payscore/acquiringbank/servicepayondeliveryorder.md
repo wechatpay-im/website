@@ -64,58 +64,58 @@ description: 创建微信支付分先用后付订单
 ```php [异步纯链式]
 $instance->v3->payscore->acquiringbank->servicepayondeliveryorder->postAsync([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'channel_id' => '1230000109',
-    'service_id' => '500001',
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'channel_id'           => '1230000109',
+    'service_id'           => '500001',
     'service_introduction' => '某某酒店',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '备注1',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '备注2',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'mchid' => '1230000109',
-    'shopping_info' => [
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'mchid'                => '1230000109',
+    'shopping_info'        => [
       'real_merchant_appid' => 'wxd678efh567hg6787',
-      'jump_link' => [
+      'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid' => '',
-        'path' => '',
+        'appid'          => '',
+        'path'           => '',
       ],
-      'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+      'goods'               => [[
+        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
         'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 40000,
-        'count' => 4,
+        'amount'  => 40000,
+        'count'   => 4,
       ],],
     ],
   ],
@@ -129,58 +129,58 @@ $instance->v3->payscore->acquiringbank->servicepayondeliveryorder->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/acquiringbank/servicepayondeliveryorder')->postAsync([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'channel_id' => '1230000109',
-    'service_id' => '500001',
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'channel_id'           => '1230000109',
+    'service_id'           => '500001',
     'service_introduction' => '某某酒店',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '备注1',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '备注2',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'mchid' => '1230000109',
-    'shopping_info' => [
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'mchid'                => '1230000109',
+    'shopping_info'        => [
       'real_merchant_appid' => 'wxd678efh567hg6787',
-      'jump_link' => [
+      'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid' => '',
-        'path' => '',
+        'appid'          => '',
+        'path'           => '',
       ],
-      'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+      'goods'               => [[
+        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
         'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 40000,
-        'count' => 4,
+        'amount'  => 40000,
+        'count'   => 4,
       ],],
     ],
   ],
@@ -194,58 +194,58 @@ $instance->chain('v3/payscore/acquiringbank/servicepayondeliveryorder')->postAsy
 ```php [异步属性式]
 $instance['v3/payscore/acquiringbank/servicepayondeliveryorder']->postAsync([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'channel_id' => '1230000109',
-    'service_id' => '500001',
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'channel_id'           => '1230000109',
+    'service_id'           => '500001',
     'service_introduction' => '某某酒店',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '备注1',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '备注2',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'mchid' => '1230000109',
-    'shopping_info' => [
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'mchid'                => '1230000109',
+    'shopping_info'        => [
       'real_merchant_appid' => 'wxd678efh567hg6787',
-      'jump_link' => [
+      'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid' => '',
-        'path' => '',
+        'appid'          => '',
+        'path'           => '',
       ],
-      'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+      'goods'               => [[
+        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
         'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 40000,
-        'count' => 4,
+        'amount'  => 40000,
+        'count'   => 4,
       ],],
     ],
   ],
@@ -259,58 +259,58 @@ $instance['v3/payscore/acquiringbank/servicepayondeliveryorder']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->acquiringbank->servicepayondeliveryorder->post([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'channel_id' => '1230000109',
-    'service_id' => '500001',
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'channel_id'           => '1230000109',
+    'service_id'           => '500001',
     'service_introduction' => '某某酒店',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '备注1',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '备注2',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'mchid' => '1230000109',
-    'shopping_info' => [
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'mchid'                => '1230000109',
+    'shopping_info'        => [
       'real_merchant_appid' => 'wxd678efh567hg6787',
-      'jump_link' => [
+      'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid' => '',
-        'path' => '',
+        'appid'          => '',
+        'path'           => '',
       ],
-      'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+      'goods'               => [[
+        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
         'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 40000,
-        'count' => 4,
+        'amount'  => 40000,
+        'count'   => 4,
       ],],
     ],
   ],
@@ -321,58 +321,58 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/acquiringbank/servicepayondeliveryorder')->post([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'channel_id' => '1230000109',
-    'service_id' => '500001',
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'channel_id'           => '1230000109',
+    'service_id'           => '500001',
     'service_introduction' => '某某酒店',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '备注1',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '备注2',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'mchid' => '1230000109',
-    'shopping_info' => [
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'mchid'                => '1230000109',
+    'shopping_info'        => [
       'real_merchant_appid' => 'wxd678efh567hg6787',
-      'jump_link' => [
+      'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid' => '',
-        'path' => '',
+        'appid'          => '',
+        'path'           => '',
       ],
-      'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+      'goods'               => [[
+        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
         'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 40000,
-        'count' => 4,
+        'amount'  => 40000,
+        'count'   => 4,
       ],],
     ],
   ],
@@ -383,58 +383,58 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/acquiringbank/servicepayondeliveryorder']->post([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'channel_id' => '1230000109',
-    'service_id' => '500001',
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'channel_id'           => '1230000109',
+    'service_id'           => '500001',
     'service_introduction' => '某某酒店',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '备注1',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '备注2',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'mchid' => '1230000109',
-    'shopping_info' => [
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'mchid'                => '1230000109',
+    'shopping_info'        => [
       'real_merchant_appid' => 'wxd678efh567hg6787',
-      'jump_link' => [
+      'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid' => '',
-        'path' => '',
+        'appid'          => '',
+        'path'           => '',
       ],
-      'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+      'goods'               => [[
+        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
         'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 40000,
-        'count' => 4,
+        'amount'  => 40000,
+        'count'   => 4,
       ],],
     ],
   ],
@@ -446,14 +446,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 商户订单号
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 服务商公众号ID
-| mchid {data-required}| string | 服务商商户号
+| out_order_no {data-required} | string | 商户订单号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 服务商公众号ID
+| mchid {data-required} | string | 服务商商户号
 | sub_appid | string | 子商户公众号ID
-| sub_mchid {data-required}| string | 子商户商户号
-| service_introduction {data-required}| string | 服务信息
-| state {data-required}| string | 服务订单状态
+| sub_mchid {data-required} | string | 子商户商户号
+| service_introduction {data-required} | string | 服务信息
+| state {data-required} | string | 服务订单状态
 | state_description | string | 订单状态说明
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费名称

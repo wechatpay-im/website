@@ -85,6 +85,31 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 | activity_id {data-indent=4} | string | 在微信商户后台配置的批次ID。
 | currency {data-indent=4} | string | `CNY`：人民币，境内商户号仅支持人民币。
 | sub_appid {data-required data-indent=3} | string | 调用接口提交的子商户应用ID
+| combine_appid {data-indent=3} | string | 合单应用程序APPID
+| combine_mchid {data-indent=3} | string | 交易单发起方的商户号
+| combine_out_trade_no {data-indent=3} | string | 商户系统内部对交易单定义的订单号
+| combine_transaction_id {data-indent=3} | string | 微信支付系统生成的订单号
+| scene_info {data-indent=3} | object | 支付场景信息描述
+| device_id {data-required data-indent=4} | string | 终端设备号（门店号或收银设备ID）
+| sub_orders {data-indent=4} | object | 商品单列表
+| mchid {data-required data-indent=5} | string | 商品单发起商户号
+| individual_auth_id {data-indent=5} | string | 商品单个人收款方受理授权ID
+| individual_name {data-indent=5} | string | 商品单个人收款方平台昵称
+| trade_type {data-indent=5} | string | 交易类型
+| trade_state {data-required data-indent=5} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` 枚举值之一
+| bank_type {data-indent=5} | string | 付款银行
+| attach {data-indent=5} | string | 附加数据
+| amount {data-indent=5} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total_amount {data-required data-indent=6} | number | 标价金额
+| payer_amount {data-required data-indent=6} | number | 现金支付金额
+| currency {data-required data-indent=6} | string | 标价币种
+| payer_currency {data-required data-indent=6} | string | 现金支付币种
+| settlement_rate {data-indent=6} | number | 结算汇率
+| success_time {data-indent=5} | string | 支付完成时间
+| transaction_id {data-indent=5} | string | 微信支付订单号
+| out_trade_no {data-required data-indent=5} | string | 商品单订单号
+| combine_payer_info {data-indent=4} | object | 支付者信息
+| openid {data-required data-indent=5} | string | 用户标识
 
 {.im-table #request}
 
@@ -101,6 +126,8 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 1. 分账动帐通知(**original_type**)为"**profitsharing**" {#PROFITSHARING}
 
 1. 跨境/全球会返回**exchange_rate**字典 {#GLOBAL}
+
+1. 平台收付通-个人收款场景会返回**individual_auth_id**字典 {#INDIVIDUAL}
 
 ::: code-group
 
@@ -200,3 +227,4 @@ $json = \json_encode([
 - [保险商户委托代扣成功通过](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/deduct-result-notify.html) 
 - [合单支付成功通知](https://pay.weixin.qq.com/docs/partner/apis/combine-payment/orders/payment-notice.html)
 - [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter3_2_11.shtml)
+- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/payment-notice.html)

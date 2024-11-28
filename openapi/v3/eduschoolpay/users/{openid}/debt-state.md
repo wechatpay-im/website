@@ -70,11 +70,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 商户appid
-| openid {data-required}| string | 商户appid下的用户标识
-| state {data-required}| string | 用户状态
-| debt_count {data-required}| integer | 当前用户欠款笔数
-| update_time {data-required}| string | 用户欠款状态更新时间
+| appid {data-required} | string | 商户appid
+| openid {data-required} | string | 商户appid下的用户标识
+| state {data-required} | string | 用户状态
+| debt_count {data-required} | integer | 当前用户欠款笔数
+| update_time {data-required} | string | 用户欠款状态更新时间
 
 {.im-table #response}
 

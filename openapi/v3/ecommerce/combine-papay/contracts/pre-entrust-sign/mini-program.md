@@ -23,11 +23,11 @@ description: 电商服务商从商户小程序拉起微信签约小程序发起�
 ```php [异步纯链式]
 $instance->v3->ecommerce->combinePapay->contracts->preEntrustSign->miniProgram->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'notify_url' => 'https://yourapp.com/notify',
+    'notify_url'               => 'https://yourapp.com/notify',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v3->ecommerce->combinePapay->contracts->preEntrustSign->miniProgram->
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program')->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'notify_url' => 'https://yourapp.com/notify',
+    'notify_url'               => 'https://yourapp.com/notify',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-pro
 ```php [异步属性式]
 $instance['v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program']->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'notify_url' => 'https://yourapp.com/notify',
+    'notify_url'               => 'https://yourapp.com/notify',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program']-
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->combinePapay->contracts->preEntrustSign->miniProgram->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'notify_url' => 'https://yourapp.com/notify',
+    'notify_url'               => 'https://yourapp.com/notify',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,11 +84,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program')->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'notify_url' => 'https://yourapp.com/notify',
+    'notify_url'               => 'https://yourapp.com/notify',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program']->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'appid'                    => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'notify_url' => 'https://yourapp.com/notify',
+    'notify_url'               => 'https://yourapp.com/notify',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,10 +111,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| pre_entrustweb_id {data-required}| string | 预签约ID
-| mchid {data-required}| string | 商户号
-| plan_id {data-required}| integer | 委托代扣协议模板ID
-| out_contract_code {data-required}| string | 商户签约协议号
+| pre_entrustweb_id {data-required} | string | 预签约ID
+| mchid {data-required} | string | 商户号
+| plan_id {data-required} | integer | 委托代扣协议模板ID
+| out_contract_code {data-required} | string | 商户签约协议号
 
 {.im-table #response}
 

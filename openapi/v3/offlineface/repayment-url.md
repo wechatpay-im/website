@@ -20,7 +20,7 @@ description: 建议authinfo每1小时内获取一次，否则当设备断网且�
 ```php [异步纯链式]
 $instance->v3->offlineface->repaymentUrl->postAsync([
   'json' => [
-    'out_user_id' => '',
+    'out_user_id'     => '',
     'organization_id' => '',
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->offlineface->repaymentUrl->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/offlineface/repayment-url')->postAsync([
   'json' => [
-    'out_user_id' => '',
+    'out_user_id'     => '',
     'organization_id' => '',
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v3/offlineface/repayment-url')->postAsync([
 ```php [异步属性式]
 $instance['v3/offlineface/repayment-url']->postAsync([
   'json' => [
-    'out_user_id' => '',
+    'out_user_id'     => '',
     'organization_id' => '',
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/offlineface/repayment-url']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->offlineface->repaymentUrl->post([
   'json' => [
-    'out_user_id' => '',
+    'out_user_id'     => '',
     'organization_id' => '',
   ],
 ]);
@@ -69,7 +69,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/offlineface/repayment-url')->post([
   'json' => [
-    'out_user_id' => '',
+    'out_user_id'     => '',
     'organization_id' => '',
   ],
 ]);
@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/offlineface/repayment-url']->post([
   'json' => [
-    'out_user_id' => '',
+    'out_user_id'     => '',
     'organization_id' => '',
   ],
 ]);
@@ -90,8 +90,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| repayment_url {data-required}| string | 还款链接
-| expire_at {data-required}| string | 链接过期时间
+| repayment_url {data-required} | string | 还款链接
+| expire_at {data-required} | string | 链接过期时间
 
 {.im-table #response}
 

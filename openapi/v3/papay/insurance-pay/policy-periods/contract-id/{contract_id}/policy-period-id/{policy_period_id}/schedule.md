@@ -26,9 +26,9 @@ $instance->v3->papay->insurancePay->policyPeriods->contractId->_contract_id_->po
   'policy_period_id' => '1',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'            => 'wxd678efh567hg6787',
     'scheduled_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -44,9 +44,9 @@ $instance->chain('v3/papay/insurance-pay/policy-periods/contract-id/{contract_id
   'policy_period_id' => '1',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'            => 'wxd678efh567hg6787',
     'scheduled_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -62,9 +62,9 @@ $instance['v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/polic
   'policy_period_id' => '1',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'            => 'wxd678efh567hg6787',
     'scheduled_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -80,9 +80,9 @@ $response = $instance->v3->papay->insurancePay->policyPeriods->contractId->_cont
   'policy_period_id' => '1',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'            => 'wxd678efh567hg6787',
     'scheduled_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -95,9 +95,9 @@ $response = $instance->chain('v3/papay/insurance-pay/policy-periods/contract-id/
   'policy_period_id' => '1',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'            => 'wxd678efh567hg6787',
     'scheduled_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -110,9 +110,9 @@ $response = $instance['v3/papay/insurance-pay/policy-periods/contract-id/{contra
   'policy_period_id' => '1',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'            => 'wxd678efh567hg6787',
     'scheduled_amount' => [
-      'total' => 1,
+      'total'    => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -124,8 +124,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| policy_period_id {data-required}| number | 保单的扣费周期编号
-| policy_period_state {data-required}| string | 当前扣费周期的状态
+| policy_period_id {data-required} | number | 保单的扣费周期编号
+| policy_period_state {data-required} | string | 当前扣费周期的状态
 | deduct_start_date | string | 可扣费开始日期
 | deduct_end_date | string | 可扣费结束日期
 | scheduled_amount | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息

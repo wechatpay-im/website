@@ -23,9 +23,9 @@ description:
 $instance->v3->payscore->payafterOrders->_out_order_no_->cancel->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'reason' => '用户投诉',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,9 +38,9 @@ $instance->v3->payscore->payafterOrders->_out_order_no_->cancel->postAsync([
 $instance->chain('v3/payscore/payafter-orders/{out_order_no}/cancel')->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'reason' => '用户投诉',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +53,9 @@ $instance->chain('v3/payscore/payafter-orders/{out_order_no}/cancel')->postAsync
 $instance['v3/payscore/payafter-orders/{out_order_no}/cancel']->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'reason' => '用户投诉',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +68,9 @@ $instance['v3/payscore/payafter-orders/{out_order_no}/cancel']->postAsync([
 $response = $instance->v3->payscore->payafterOrders->_out_order_no_->cancel->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'reason' => '用户投诉',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,9 +80,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/payafter-orders/{out_order_no}/cancel')->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'reason' => '用户投诉',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -92,9 +92,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/payafter-orders/{out_order_no}/cancel']->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'reason' => '用户投诉',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,11 +104,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 公众账号ID
-| mchid {data-required}| string | 商户号
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| order_id {data-required}| string | 微信支付服务订单号
+| appid {data-required} | string | 公众账号ID
+| mchid {data-required} | string | 商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| order_id {data-required} | string | 微信支付服务订单号
 
 {.im-table #response}
 

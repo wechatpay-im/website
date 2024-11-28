@@ -22,7 +22,7 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->close->postAsync([
   'out_trade_no' => '',
   'json' => [
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->close->po
 $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close')->postAsync([
   'out_trade_no' => '',
   'json' => [
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'
 $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close']->postAsync([
   'out_trade_no' => '',
   'json' => [
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close']->post
 $response = $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->close->post([
   'out_trade_no' => '',
   'json' => [
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close')->post([
   'out_trade_no' => '',
   'json' => [
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close']->post([
   'out_trade_no' => '',
   'json' => [
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
   ],
 ]);

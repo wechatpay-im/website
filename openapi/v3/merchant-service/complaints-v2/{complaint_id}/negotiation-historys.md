@@ -109,8 +109,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | image_list {data-indent=1} | string[] | 图片凭证
 | user_appy_platform_service_reason {data-indent=1} | string | 用户申请平台协助原因
 | user_appy_platform_service_reason_description {data-indent=1} | string | 用户申请平台协助原因描述
-| limit {data-required}| integer | 分页大小
-| offset {data-required}| integer | 分页开始位置
+| limit {data-required} | integer | 分页大小
+| offset {data-required} | integer | 分页开始位置
 | total_count | integer | 投诉协商历史总条数
 
 {.im-table #response}

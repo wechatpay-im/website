@@ -25,13 +25,13 @@ description: 通过openid，服务商帮子商户解除用户授权关系
 ```php [异步纯链式]
 $instance->v3->payscore->partner->permissions->terminate->postAsync([
   'json' => [
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => '',
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'reason'     => 'reason',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->payscore->partner->permissions->terminate->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/partner/permissions/terminate')->postAsync([
   'json' => [
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => '',
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'reason'     => 'reason',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/payscore/partner/permissions/terminate')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/partner/permissions/terminate']->postAsync([
   'json' => [
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => '',
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'reason'     => 'reason',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/payscore/partner/permissions/terminate']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->partner->permissions->terminate->post([
   'json' => [
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => '',
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'reason'     => 'reason',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -94,13 +94,13 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/partner/permissions/terminate')->post([
   'json' => [
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => '',
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'reason'     => 'reason',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -109,13 +109,13 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/payscore/partner/permissions/terminate']->post([
   'json' => [
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid' => '',
     'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'reason' => 'reason',
+    'appid'      => 'wxd678efh567hg6787',
+    'sub_appid'  => 'wxd678efh567hg6787',
+    'sub_mchid'  => '1230000109',
+    'reason'     => 'reason',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

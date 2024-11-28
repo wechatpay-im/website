@@ -30,17 +30,17 @@ description: 商户通过此接口基于商户已创建且正常进行中的支�
 ```php [异步纯链式]
 $instance->v3->payscore->signPlan->partner->userSignPlans->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'plan_id' => '01000033210000324638000000376258',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'service_id'            => '2002000000000558128851361561536',
+    'plan_id'               => '01000033210000324638000000376258',
+    'appid'                 => 'wxd678efh567hg6787',
+    'sub_mchid'             => '1900000109',
+    'sub_appid'             => 'wxd678efh567hg6999',
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'            => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'merchant_sign_plan_no' => '1234323JKHDFE1243252',
-    'notify_url' => 'https://api.test.com',
-    'sign_plan_detail' => [[
-      'plan_detail_no' => 1,
+    'notify_url'            => 'https://api.test.com',
+    'sign_plan_detail'      => [[
+      'plan_detail_no'          => 1,
       'merchant_plan_detail_no' => '1234323JKHDFE1243252',
     ],],
   ],
@@ -54,17 +54,17 @@ $instance->v3->payscore->signPlan->partner->userSignPlans->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/sign-plan/partner/user-sign-plans')->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'plan_id' => '01000033210000324638000000376258',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'service_id'            => '2002000000000558128851361561536',
+    'plan_id'               => '01000033210000324638000000376258',
+    'appid'                 => 'wxd678efh567hg6787',
+    'sub_mchid'             => '1900000109',
+    'sub_appid'             => 'wxd678efh567hg6999',
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'            => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'merchant_sign_plan_no' => '1234323JKHDFE1243252',
-    'notify_url' => 'https://api.test.com',
-    'sign_plan_detail' => [[
-      'plan_detail_no' => 1,
+    'notify_url'            => 'https://api.test.com',
+    'sign_plan_detail'      => [[
+      'plan_detail_no'          => 1,
       'merchant_plan_detail_no' => '1234323JKHDFE1243252',
     ],],
   ],
@@ -78,17 +78,17 @@ $instance->chain('v3/payscore/sign-plan/partner/user-sign-plans')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/sign-plan/partner/user-sign-plans']->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'plan_id' => '01000033210000324638000000376258',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'service_id'            => '2002000000000558128851361561536',
+    'plan_id'               => '01000033210000324638000000376258',
+    'appid'                 => 'wxd678efh567hg6787',
+    'sub_mchid'             => '1900000109',
+    'sub_appid'             => 'wxd678efh567hg6999',
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'            => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'merchant_sign_plan_no' => '1234323JKHDFE1243252',
-    'notify_url' => 'https://api.test.com',
-    'sign_plan_detail' => [[
-      'plan_detail_no' => 1,
+    'notify_url'            => 'https://api.test.com',
+    'sign_plan_detail'      => [[
+      'plan_detail_no'          => 1,
       'merchant_plan_detail_no' => '1234323JKHDFE1243252',
     ],],
   ],
@@ -102,17 +102,17 @@ $instance['v3/payscore/sign-plan/partner/user-sign-plans']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->signPlan->partner->userSignPlans->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'plan_id' => '01000033210000324638000000376258',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'service_id'            => '2002000000000558128851361561536',
+    'plan_id'               => '01000033210000324638000000376258',
+    'appid'                 => 'wxd678efh567hg6787',
+    'sub_mchid'             => '1900000109',
+    'sub_appid'             => 'wxd678efh567hg6999',
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'            => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'merchant_sign_plan_no' => '1234323JKHDFE1243252',
-    'notify_url' => 'https://api.test.com',
-    'sign_plan_detail' => [[
-      'plan_detail_no' => 1,
+    'notify_url'            => 'https://api.test.com',
+    'sign_plan_detail'      => [[
+      'plan_detail_no'          => 1,
       'merchant_plan_detail_no' => '1234323JKHDFE1243252',
     ],],
   ],
@@ -123,17 +123,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/sign-plan/partner/user-sign-plans')->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'plan_id' => '01000033210000324638000000376258',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'service_id'            => '2002000000000558128851361561536',
+    'plan_id'               => '01000033210000324638000000376258',
+    'appid'                 => 'wxd678efh567hg6787',
+    'sub_mchid'             => '1900000109',
+    'sub_appid'             => 'wxd678efh567hg6999',
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'            => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'merchant_sign_plan_no' => '1234323JKHDFE1243252',
-    'notify_url' => 'https://api.test.com',
-    'sign_plan_detail' => [[
-      'plan_detail_no' => 1,
+    'notify_url'            => 'https://api.test.com',
+    'sign_plan_detail'      => [[
+      'plan_detail_no'          => 1,
       'merchant_plan_detail_no' => '1234323JKHDFE1243252',
     ],],
   ],
@@ -144,17 +144,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/sign-plan/partner/user-sign-plans']->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'plan_id' => '01000033210000324638000000376258',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'service_id'            => '2002000000000558128851361561536',
+    'plan_id'               => '01000033210000324638000000376258',
+    'appid'                 => 'wxd678efh567hg6787',
+    'sub_mchid'             => '1900000109',
+    'sub_appid'             => 'wxd678efh567hg6999',
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'            => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'merchant_sign_plan_no' => '1234323JKHDFE1243252',
-    'notify_url' => 'https://api.test.com',
-    'sign_plan_detail' => [[
-      'plan_detail_no' => 1,
+    'notify_url'            => 'https://api.test.com',
+    'sign_plan_detail'      => [[
+      'plan_detail_no'          => 1,
       'merchant_plan_detail_no' => '1234323JKHDFE1243252',
     ],],
   ],
@@ -166,7 +166,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sign_plan {data-required}| object {data-tooltip="对应PHP的array"} | 用户的签约计划
+| sign_plan {data-required} | object {data-tooltip="对应PHP的array"} | 用户的签约计划
 | sign_plan_id {data-required data-indent=1} | string | 计划签约ID
 | openid {data-indent=1} | string | 签约计划用户服务商应用下的OpenID
 | sub_openid {data-indent=1} | string | 签约计划用户子商户应用下的OpenID
@@ -202,7 +202,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | complete_time {data-indent=2} | string | 详情完成时间
 | cancel_time {data-indent=2} | string | 详情取消时间
 | sign_time {data-indent=1} | string | 签约时间
-| package {data-required}| string | 跳转微信侧确认签约小程序的数据
+| package {data-required} | string | 跳转微信侧确认签约小程序的数据
 
 {.im-table #response}
 

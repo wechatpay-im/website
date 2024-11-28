@@ -97,10 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 公众账号ID
-| service_id {data-required}| string | 服务ID
+| appid {data-required} | string | 公众账号ID
+| service_id {data-required} | string | 服务ID
 | openid | string | 用户标识
-| use_service_state {data-required}| string | 用户授权服务情况<br/>`UNAVAILABLE` \| `AVAILABLE` 枚举值之一
+| use_service_state {data-required} | string | 用户授权服务情况<br/>`UNAVAILABLE` \| `AVAILABLE` 枚举值之一
 
 {.im-table #response}
 

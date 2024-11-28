@@ -27,15 +27,15 @@ description: 商户通过调用该接口可获取预签约号（“presign_token
 ```php [异步纯链式]
 $instance->v3->eduPapay->contracts->presign->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb2W',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
+    'appid'             => 'wx8888888888888888',
+    'sub_mchid'         => '1900000109',
+    'sub_appid'         => 'wx8888888888888888',
+    'openid'            => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_openid'        => 'oUpF8uMuAJOM2pxb2W',
+    'plan_id'           => '101164396123311331',
+    'user_id'           => '20200330tony',
     'period_start_date' => '2020-03-19',
-    'trade_scene' => 'EDUCATION_PERIOD',
+    'trade_scene'       => 'EDUCATION_PERIOD',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,15 +47,15 @@ $instance->v3->eduPapay->contracts->presign->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/edu-papay/contracts/presign')->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb2W',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
+    'appid'             => 'wx8888888888888888',
+    'sub_mchid'         => '1900000109',
+    'sub_appid'         => 'wx8888888888888888',
+    'openid'            => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_openid'        => 'oUpF8uMuAJOM2pxb2W',
+    'plan_id'           => '101164396123311331',
+    'user_id'           => '20200330tony',
     'period_start_date' => '2020-03-19',
-    'trade_scene' => 'EDUCATION_PERIOD',
+    'trade_scene'       => 'EDUCATION_PERIOD',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,15 +67,15 @@ $instance->chain('v3/edu-papay/contracts/presign')->postAsync([
 ```php [异步属性式]
 $instance['v3/edu-papay/contracts/presign']->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb2W',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
+    'appid'             => 'wx8888888888888888',
+    'sub_mchid'         => '1900000109',
+    'sub_appid'         => 'wx8888888888888888',
+    'openid'            => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_openid'        => 'oUpF8uMuAJOM2pxb2W',
+    'plan_id'           => '101164396123311331',
+    'user_id'           => '20200330tony',
     'period_start_date' => '2020-03-19',
-    'trade_scene' => 'EDUCATION_PERIOD',
+    'trade_scene'       => 'EDUCATION_PERIOD',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -87,15 +87,15 @@ $instance['v3/edu-papay/contracts/presign']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->eduPapay->contracts->presign->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb2W',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
+    'appid'             => 'wx8888888888888888',
+    'sub_mchid'         => '1900000109',
+    'sub_appid'         => 'wx8888888888888888',
+    'openid'            => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_openid'        => 'oUpF8uMuAJOM2pxb2W',
+    'plan_id'           => '101164396123311331',
+    'user_id'           => '20200330tony',
     'period_start_date' => '2020-03-19',
-    'trade_scene' => 'EDUCATION_PERIOD',
+    'trade_scene'       => 'EDUCATION_PERIOD',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,15 +104,15 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/edu-papay/contracts/presign')->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb2W',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
+    'appid'             => 'wx8888888888888888',
+    'sub_mchid'         => '1900000109',
+    'sub_appid'         => 'wx8888888888888888',
+    'openid'            => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_openid'        => 'oUpF8uMuAJOM2pxb2W',
+    'plan_id'           => '101164396123311331',
+    'user_id'           => '20200330tony',
     'period_start_date' => '2020-03-19',
-    'trade_scene' => 'EDUCATION_PERIOD',
+    'trade_scene'       => 'EDUCATION_PERIOD',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -121,15 +121,15 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/edu-papay/contracts/presign']->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'sub_openid' => 'oUpF8uMuAJOM2pxb2W',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
+    'appid'             => 'wx8888888888888888',
+    'sub_mchid'         => '1900000109',
+    'sub_appid'         => 'wx8888888888888888',
+    'openid'            => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_openid'        => 'oUpF8uMuAJOM2pxb2W',
+    'plan_id'           => '101164396123311331',
+    'user_id'           => '20200330tony',
     'period_start_date' => '2020-03-19',
-    'trade_scene' => 'EDUCATION_PERIOD',
+    'trade_scene'       => 'EDUCATION_PERIOD',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -139,7 +139,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| presign_token {data-required}| string | 预签约号
+| presign_token {data-required} | string | 预签约号
 
 {.im-table #response}
 

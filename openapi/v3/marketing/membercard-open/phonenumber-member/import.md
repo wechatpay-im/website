@@ -27,14 +27,14 @@ description: 如商户有存量注册会员未领取会员卡，可导入最近�
 ```php [异步纯链式]
 $instance->v3->marketing->membercardOpen->phonenumberMember->import->postAsync([
   'json' => [
-    'member_information' => [
-      'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-      'code' => '478515832665',
+    'member_information'     => [
+      'card_id'           => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+      'code'              => '478515832665',
       'membership_number' => '316510891298',
       'registration_time' => '2015-05-20T13:29:35.120+08:00',
     ],
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzqSyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'outer_str' => 'my_card_CARD',
+    'outer_str'              => 'my_card_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -49,14 +49,14 @@ $instance->v3->marketing->membercardOpen->phonenumberMember->import->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/membercard-open/phonenumber-member/import')->postAsync([
   'json' => [
-    'member_information' => [
-      'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-      'code' => '478515832665',
+    'member_information'     => [
+      'card_id'           => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+      'code'              => '478515832665',
       'membership_number' => '316510891298',
       'registration_time' => '2015-05-20T13:29:35.120+08:00',
     ],
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzqSyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'outer_str' => 'my_card_CARD',
+    'outer_str'              => 'my_card_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -71,14 +71,14 @@ $instance->chain('v3/marketing/membercard-open/phonenumber-member/import')->post
 ```php [异步属性式]
 $instance['v3/marketing/membercard-open/phonenumber-member/import']->postAsync([
   'json' => [
-    'member_information' => [
-      'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-      'code' => '478515832665',
+    'member_information'     => [
+      'card_id'           => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+      'code'              => '478515832665',
       'membership_number' => '316510891298',
       'registration_time' => '2015-05-20T13:29:35.120+08:00',
     ],
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzqSyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'outer_str' => 'my_card_CARD',
+    'outer_str'              => 'my_card_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -93,14 +93,14 @@ $instance['v3/marketing/membercard-open/phonenumber-member/import']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->membercardOpen->phonenumberMember->import->post([
   'json' => [
-    'member_information' => [
-      'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-      'code' => '478515832665',
+    'member_information'     => [
+      'card_id'           => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+      'code'              => '478515832665',
       'membership_number' => '316510891298',
       'registration_time' => '2015-05-20T13:29:35.120+08:00',
     ],
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzqSyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'outer_str' => 'my_card_CARD',
+    'outer_str'              => 'my_card_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -112,14 +112,14 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/membercard-open/phonenumber-member/import')->post([
   'json' => [
-    'member_information' => [
-      'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-      'code' => '478515832665',
+    'member_information'     => [
+      'card_id'           => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+      'code'              => '478515832665',
       'membership_number' => '316510891298',
       'registration_time' => '2015-05-20T13:29:35.120+08:00',
     ],
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzqSyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'outer_str' => 'my_card_CARD',
+    'outer_str'              => 'my_card_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -131,14 +131,14 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/marketing/membercard-open/phonenumber-member/import']->post([
   'json' => [
-    'member_information' => [
-      'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-      'code' => '478515832665',
+    'member_information'     => [
+      'card_id'           => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+      'code'              => '478515832665',
       'membership_number' => '316510891298',
       'registration_time' => '2015-05-20T13:29:35.120+08:00',
     ],
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWYSs2bLtG9tj+bdJn4WSCPzqSyXnFbzaaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
-    'outer_str' => 'my_card_CARD',
+    'outer_str'              => 'my_card_CARD',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

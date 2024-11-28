@@ -25,13 +25,13 @@ description: 通过此API，商圈商户/服务商可将会员的停车状态同
 ```php [异步纯链式]
 $instance->v3->businesscircle->parkings->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_mchid'    => '1900000109',
+    'brandid'      => 1000,
+    'appid'        => 'wx931386123456789e',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
     'plate_number' => '粤B888888',
-    'state' => 'IN',
-    'time' => '2022-06-01T10:43:39+08:00',
+    'state'        => 'IN',
+    'time'         => '2022-06-01T10:43:39+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->businesscircle->parkings->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/businesscircle/parkings')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_mchid'    => '1900000109',
+    'brandid'      => 1000,
+    'appid'        => 'wx931386123456789e',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
     'plate_number' => '粤B888888',
-    'state' => 'IN',
-    'time' => '2022-06-01T10:43:39+08:00',
+    'state'        => 'IN',
+    'time'         => '2022-06-01T10:43:39+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/businesscircle/parkings')->postAsync([
 ```php [异步属性式]
 $instance['v3/businesscircle/parkings']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_mchid'    => '1900000109',
+    'brandid'      => 1000,
+    'appid'        => 'wx931386123456789e',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
     'plate_number' => '粤B888888',
-    'state' => 'IN',
-    'time' => '2022-06-01T10:43:39+08:00',
+    'state'        => 'IN',
+    'time'         => '2022-06-01T10:43:39+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/businesscircle/parkings']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->businesscircle->parkings->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_mchid'    => '1900000109',
+    'brandid'      => 1000,
+    'appid'        => 'wx931386123456789e',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
     'plate_number' => '粤B888888',
-    'state' => 'IN',
-    'time' => '2022-06-01T10:43:39+08:00',
+    'state'        => 'IN',
+    'time'         => '2022-06-01T10:43:39+08:00',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -94,13 +94,13 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/businesscircle/parkings')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_mchid'    => '1900000109',
+    'brandid'      => 1000,
+    'appid'        => 'wx931386123456789e',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
     'plate_number' => '粤B888888',
-    'state' => 'IN',
-    'time' => '2022-06-01T10:43:39+08:00',
+    'state'        => 'IN',
+    'time'         => '2022-06-01T10:43:39+08:00',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -109,13 +109,13 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/businesscircle/parkings']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'brandid' => 1000,
-    'appid' => 'wx931386123456789e',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
+    'sub_mchid'    => '1900000109',
+    'brandid'      => 1000,
+    'appid'        => 'wx931386123456789e',
+    'openid'       => 'oUpF8uMuAJOM2pxb1Q',
     'plate_number' => '粤B888888',
-    'state' => 'IN',
-    'time' => '2022-06-01T10:43:39+08:00',
+    'state'        => 'IN',
+    'time'         => '2022-06-01T10:43:39+08:00',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

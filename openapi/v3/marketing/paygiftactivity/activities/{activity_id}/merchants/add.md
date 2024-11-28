@@ -23,7 +23,7 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants-
   'activity_id' => '',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no' => '',
+    'add_request_no'   => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchant
   'activity_id' => '',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no' => '',
+    'add_request_no'   => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add']
   'activity_id' => '',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no' => '',
+    'add_request_no'   => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_
   'activity_id' => '',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no' => '',
+    'add_request_no'   => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_
   'activity_id' => '',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no' => '',
+    'add_request_no'   => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}/mer
   'activity_id' => '',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no' => '',
+    'add_request_no'   => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

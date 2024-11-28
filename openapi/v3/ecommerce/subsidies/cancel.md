@@ -21,9 +21,9 @@ description: 对带有补差标识的订单，如果不需要补差，可在发�
 ```php [异步纯链式]
 $instance->v3->ecommerce->subsidies->cancel->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'description' => '订单退款',
+    'description'    => '订单退款',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -35,9 +35,9 @@ $instance->v3->ecommerce->subsidies->cancel->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/subsidies/cancel')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'description' => '订单退款',
+    'description'    => '订单退款',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -49,9 +49,9 @@ $instance->chain('v3/ecommerce/subsidies/cancel')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/subsidies/cancel']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'description' => '订单退款',
+    'description'    => '订单退款',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,9 +63,9 @@ $instance['v3/ecommerce/subsidies/cancel']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->subsidies->cancel->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'description' => '订单退款',
+    'description'    => '订单退款',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -74,9 +74,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/subsidies/cancel')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'description' => '订单退款',
+    'description'    => '订单退款',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -85,9 +85,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/subsidies/cancel']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '4208450740201411110007820472',
-    'description' => '订单退款',
+    'description'    => '订单退款',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,10 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| transaction_id {data-required}| string | 微信订单号
-| result {data-required}| string | 取消补差结果
-| description {data-required}| string | 取消补差描述
+| sub_mchid {data-required} | string | 二级商户号
+| transaction_id {data-required} | string | 微信订单号
+| result {data-required} | string | 取消补差结果
+| description {data-required} | string | 取消补差描述
 
 {.im-table #response}
 

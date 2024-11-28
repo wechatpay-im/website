@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code {data-required}| string | 会员卡code
+| code {data-required} | string | 会员卡code
 
 {.im-table #response}
 

@@ -90,22 +90,22 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_name {data-required}| string | 批次名称
-| available_begin_time {data-required}| string | 开始时间
-| available_end_time {data-required}| string | 结束时间
-| stock_use_rule {data-required}| object {data-tooltip="对应PHP的array"} | 发放规则
+| stock_name {data-required} | string | 批次名称
+| available_begin_time {data-required} | string | 开始时间
+| available_end_time {data-required} | string | 结束时间
+| stock_use_rule {data-required} | object {data-tooltip="对应PHP的array"} | 发放规则
 | max_coupons {data-required data-indent=1} | integer | 发放总上限
 | max_amount {data-required data-indent=1} | integer | 总预算
 | max_amount_by_day {data-indent=1} | integer | 单天发放上限金额
 | max_coupons_per_user {data-required data-indent=1} | integer | 单个用户可领个数
 | natural_person_limit {data-required data-indent=1} | boolean | 是否开启自然人限制
 | prevent_api_abuse {data-required data-indent=1} | boolean | api发券防刷
-| no_cash {data-required}| boolean | 是否无资金流
-| stock_type {data-required}| string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
+| no_cash {data-required} | boolean | 是否无资金流
+| stock_type {data-required} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
 | stock_id | string | 批次号
 | stock_creator_mchid | string | 创建批次的商户号
 | status | string | 批次状态<br/>`unactivated` \| `audit` \| `running` \| `stoped` \| `paused` 枚举值之一
-| description {data-required}| string | 使用说明
+| description {data-required} | string | 使用说明
 | create_time | string | 创建时间
 | start_time | string | 激活批次的时间
 | stop_time | string | 终止批次的时间

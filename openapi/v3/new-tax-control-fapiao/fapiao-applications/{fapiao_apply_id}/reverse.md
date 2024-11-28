@@ -26,11 +26,11 @@ description: 商户对已开具的电子发票进行冲红（开具红票），�
 $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_apply_id_->reverse->postAsync([
   'fapiao_apply_id' => '4200000444201910177461284488',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'reverse_reason' => '退款',
+    'sub_mchid'          => '1900000109',
+    'reverse_reason'     => '退款',
     'fapiao_information' => [[
-      'fapiao_id' => '20200701123456',
-      'fapiao_code' => '044001911211',
+      'fapiao_id'     => '20200701123456',
+      'fapiao_code'   => '044001911211',
       'fapiao_number' => '12897794',
     ],],
   ],
@@ -45,11 +45,11 @@ $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_apply_id_->rever
 $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/reverse')->postAsync([
   'fapiao_apply_id' => '4200000444201910177461284488',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'reverse_reason' => '退款',
+    'sub_mchid'          => '1900000109',
+    'reverse_reason'     => '退款',
     'fapiao_information' => [[
-      'fapiao_id' => '20200701123456',
-      'fapiao_code' => '044001911211',
+      'fapiao_id'     => '20200701123456',
+      'fapiao_code'   => '044001911211',
       'fapiao_number' => '12897794',
     ],],
   ],
@@ -64,11 +64,11 @@ $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id
 $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/reverse']->postAsync([
   'fapiao_apply_id' => '4200000444201910177461284488',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'reverse_reason' => '退款',
+    'sub_mchid'          => '1900000109',
+    'reverse_reason'     => '退款',
     'fapiao_information' => [[
-      'fapiao_id' => '20200701123456',
-      'fapiao_code' => '044001911211',
+      'fapiao_id'     => '20200701123456',
+      'fapiao_code'   => '044001911211',
       'fapiao_number' => '12897794',
     ],],
   ],
@@ -83,11 +83,11 @@ $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/rever
 $response = $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_apply_id_->reverse->post([
   'fapiao_apply_id' => '4200000444201910177461284488',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'reverse_reason' => '退款',
+    'sub_mchid'          => '1900000109',
+    'reverse_reason'     => '退款',
     'fapiao_information' => [[
-      'fapiao_id' => '20200701123456',
-      'fapiao_code' => '044001911211',
+      'fapiao_id'     => '20200701123456',
+      'fapiao_code'   => '044001911211',
       'fapiao_number' => '12897794',
     ],],
   ],
@@ -99,11 +99,11 @@ print_r($response->getStatusCode() === 202);
 $response = $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/reverse')->post([
   'fapiao_apply_id' => '4200000444201910177461284488',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'reverse_reason' => '退款',
+    'sub_mchid'          => '1900000109',
+    'reverse_reason'     => '退款',
     'fapiao_information' => [[
-      'fapiao_id' => '20200701123456',
-      'fapiao_code' => '044001911211',
+      'fapiao_id'     => '20200701123456',
+      'fapiao_code'   => '044001911211',
       'fapiao_number' => '12897794',
     ],],
   ],
@@ -115,11 +115,11 @@ print_r($response->getStatusCode() === 202);
 $response = $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/reverse']->post([
   'fapiao_apply_id' => '4200000444201910177461284488',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'reverse_reason' => '退款',
+    'sub_mchid'          => '1900000109',
+    'reverse_reason'     => '退款',
     'fapiao_information' => [[
-      'fapiao_id' => '20200701123456',
-      'fapiao_code' => '044001911211',
+      'fapiao_id'     => '20200701123456',
+      'fapiao_code'   => '044001911211',
       'fapiao_number' => '12897794',
     ],],
   ],

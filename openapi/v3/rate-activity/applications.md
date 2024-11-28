@@ -30,19 +30,19 @@ description: 从业机构可调用该接口帮助已完成开户意愿确认的�
 ```php [异步纯链式]
 $instance->v3->rateActivity->applications->postAsync([
   'json' => [
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'activity_detail' => [
-      'activity_id' => 'schoolcanteen_001',
-      'activity_rate' => '0.6',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '20001111',
+    'sub_mchid'              => '1346578',
+    'activity_detail'        => [
+      'activity_id'                => 'schoolcanteen_001',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROVEMENT',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
     'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -56,19 +56,19 @@ $instance->v3->rateActivity->applications->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/rate-activity/applications')->postAsync([
   'json' => [
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'activity_detail' => [
-      'activity_id' => 'schoolcanteen_001',
-      'activity_rate' => '0.6',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '20001111',
+    'sub_mchid'              => '1346578',
+    'activity_detail'        => [
+      'activity_id'                => 'schoolcanteen_001',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROVEMENT',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
     'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -82,19 +82,19 @@ $instance->chain('v3/rate-activity/applications')->postAsync([
 ```php [异步属性式]
 $instance['v3/rate-activity/applications']->postAsync([
   'json' => [
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'activity_detail' => [
-      'activity_id' => 'schoolcanteen_001',
-      'activity_rate' => '0.6',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '20001111',
+    'sub_mchid'              => '1346578',
+    'activity_detail'        => [
+      'activity_id'                => 'schoolcanteen_001',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROVEMENT',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
     'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -108,19 +108,19 @@ $instance['v3/rate-activity/applications']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->rateActivity->applications->post([
   'json' => [
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'activity_detail' => [
-      'activity_id' => 'schoolcanteen_001',
-      'activity_rate' => '0.6',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '20001111',
+    'sub_mchid'              => '1346578',
+    'activity_detail'        => [
+      'activity_id'                => 'schoolcanteen_001',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROVEMENT',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
     'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -131,19 +131,19 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/rate-activity/applications')->post([
   'json' => [
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'activity_detail' => [
-      'activity_id' => 'schoolcanteen_001',
-      'activity_rate' => '0.6',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '20001111',
+    'sub_mchid'              => '1346578',
+    'activity_detail'        => [
+      'activity_id'                => 'schoolcanteen_001',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROVEMENT',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
     'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -154,19 +154,19 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/rate-activity/applications']->post([
   'json' => [
-    'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'activity_detail' => [
-      'activity_id' => 'schoolcanteen_001',
-      'activity_rate' => '0.6',
+    'acquiring_bank_id'      => '1356485',
+    'channel_id'             => '20001111',
+    'sub_mchid'              => '1346578',
+    'activity_detail'        => [
+      'activity_id'                => 'schoolcanteen_001',
+      'activity_rate'              => '0.6',
       'activity_apply_information' => [[
-        'apply_material_id' => 'SCHOOL_QUALIFICATION_PROVEMENT',
+        'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
         'apply_material_information' => ['MediaId'],
       ],],
     ],
     'additional_information' => [
-      'additional_message' => '特殊情况，说明原因',
+      'additional_message'  => '特殊情况，说明原因',
       'additional_material' => ['MediaId'],
     ],
   ],
@@ -178,7 +178,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id {data-required}| string | 申请单编号
+| application_id {data-required} | string | 申请单编号
 
 {.im-table #response}
 

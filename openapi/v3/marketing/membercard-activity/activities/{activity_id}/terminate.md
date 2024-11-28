@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| string | 活动ID
+| activity_id {data-required} | string | 活动ID
 | terminate_time | string | 终止时间
 
 {.im-table #response}

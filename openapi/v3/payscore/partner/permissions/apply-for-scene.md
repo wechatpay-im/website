@@ -28,15 +28,15 @@ description: 服务商场景中预授权
 ```php [异步纯链式]
 $instance->v3->payscore->partner->permissions->applyForScene->postAsync([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'authorization_code' => '实例1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
-    'scene' => 'TRANSACTION',
+    'service_id'             => '500001',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1230000109',
+    'authorization_code'     => '实例1234323JKHDFE1243252',
+    'notify_url'             => 'http://www.qq.com',
+    'scene'                  => 'TRANSACTION',
     'transaction_scene_info' => [
-      'mchid' => '1230000109',
+      'mchid'     => '1230000109',
       'sub_mchid' => '1230000109',
     ],
   ],
@@ -50,15 +50,15 @@ $instance->v3->payscore->partner->permissions->applyForScene->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/partner/permissions/apply-for-scene')->postAsync([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'authorization_code' => '实例1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
-    'scene' => 'TRANSACTION',
+    'service_id'             => '500001',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1230000109',
+    'authorization_code'     => '实例1234323JKHDFE1243252',
+    'notify_url'             => 'http://www.qq.com',
+    'scene'                  => 'TRANSACTION',
     'transaction_scene_info' => [
-      'mchid' => '1230000109',
+      'mchid'     => '1230000109',
       'sub_mchid' => '1230000109',
     ],
   ],
@@ -72,15 +72,15 @@ $instance->chain('v3/payscore/partner/permissions/apply-for-scene')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/partner/permissions/apply-for-scene']->postAsync([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'authorization_code' => '实例1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
-    'scene' => 'TRANSACTION',
+    'service_id'             => '500001',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1230000109',
+    'authorization_code'     => '实例1234323JKHDFE1243252',
+    'notify_url'             => 'http://www.qq.com',
+    'scene'                  => 'TRANSACTION',
     'transaction_scene_info' => [
-      'mchid' => '1230000109',
+      'mchid'     => '1230000109',
       'sub_mchid' => '1230000109',
     ],
   ],
@@ -94,15 +94,15 @@ $instance['v3/payscore/partner/permissions/apply-for-scene']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->partner->permissions->applyForScene->post([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'authorization_code' => '实例1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
-    'scene' => 'TRANSACTION',
+    'service_id'             => '500001',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1230000109',
+    'authorization_code'     => '实例1234323JKHDFE1243252',
+    'notify_url'             => 'http://www.qq.com',
+    'scene'                  => 'TRANSACTION',
     'transaction_scene_info' => [
-      'mchid' => '1230000109',
+      'mchid'     => '1230000109',
       'sub_mchid' => '1230000109',
     ],
   ],
@@ -113,15 +113,15 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/partner/permissions/apply-for-scene')->post([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'authorization_code' => '实例1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
-    'scene' => 'TRANSACTION',
+    'service_id'             => '500001',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1230000109',
+    'authorization_code'     => '实例1234323JKHDFE1243252',
+    'notify_url'             => 'http://www.qq.com',
+    'scene'                  => 'TRANSACTION',
     'transaction_scene_info' => [
-      'mchid' => '1230000109',
+      'mchid'     => '1230000109',
       'sub_mchid' => '1230000109',
     ],
   ],
@@ -132,15 +132,15 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/partner/permissions/apply-for-scene']->post([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'authorization_code' => '实例1234323JKHDFE1243252',
-    'notify_url' => 'http://www.qq.com',
-    'scene' => 'TRANSACTION',
+    'service_id'             => '500001',
+    'appid'                  => 'wxd678efh567hg6787',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1230000109',
+    'authorization_code'     => '实例1234323JKHDFE1243252',
+    'notify_url'             => 'http://www.qq.com',
+    'scene'                  => 'TRANSACTION',
     'transaction_scene_info' => [
-      'mchid' => '1230000109',
+      'mchid'     => '1230000109',
       'sub_mchid' => '1230000109',
     ],
   ],
@@ -152,7 +152,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| scene {data-required}| string | 授权场景, 与输入中一致
+| scene {data-required} | string | 授权场景, 与输入中一致
 | transaction_permissions_token | string | 微信支付交易中授权token
 
 {.im-table #response}

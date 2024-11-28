@@ -70,18 +70,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mch_id {data-required}| string | 商户号
-| out_bill_no {data-required}| string | 商户单号
-| transfer_bill_no {data-required}| string | 商家转账订单号
-| appid {data-required}| string | 商户AppID
-| state {data-required}| string | 单据状态
-| transfer_amount {data-required}| number | 转账金额
-| transfer_remark {data-required}| string | 转账备注
+| mch_id {data-required} | string | 商户号
+| out_bill_no {data-required} | string | 商户单号
+| transfer_bill_no {data-required} | string | 商家转账订单号
+| appid {data-required} | string | 商户AppID
+| state {data-required} | string | 单据状态
+| transfer_amount {data-required} | number | 转账金额
+| transfer_remark {data-required} | string | 转账备注
 | fail_reason | string | 失败原因
 | openid | string | 收款用户OpenID
 | user_name | string | 收款用户姓名
-| create_time {data-required}| string | 单据创建时间
-| update_time {data-required}| string | 最后一次状态变更时间
+| create_time {data-required} | string | 单据创建时间
+| update_time {data-required} | string | 最后一次状态变更时间
 
 {.im-table #response}
 

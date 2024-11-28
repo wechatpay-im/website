@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transaction_id {data-required}| string | 微信订单号
-| unsplit_amount {data-required}| integer | 订单剩余待分金额
+| transaction_id {data-required} | string | 微信订单号
+| unsplit_amount {data-required} | integer | 订单剩余待分金额
 
 {.im-table #response}
 

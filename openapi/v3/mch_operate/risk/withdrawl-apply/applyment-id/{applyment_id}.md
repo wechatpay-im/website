@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| withdrawl_apply {data-required}| object {data-tooltip="对应PHP的array"} | 提现申请单信息
+| withdrawl_apply {data-required} | object {data-tooltip="对应PHP的array"} | 提现申请单信息
 | applyment_id {data-required data-indent=1} | string | 微信支付提现申请单号
 | out_request_no {data-required data-indent=1} | string | 商户提现申请单号
 | state {data-required data-indent=1} | string | 申请单状态

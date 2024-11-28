@@ -24,12 +24,12 @@ description: 申请二级商户商家转账授权。
 ```php [异步纯链式]
 $instance->v3->ecommerce->mchTransfer->authorizations->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
+    'sub_mchid'      => '1900001109',
     'agreement_list' => [[
-      'agreement_code' => '1',
+      'agreement_code'    => '1',
       'agreement_version' => '20230101',
       'sign_organization' => '示例有限责任公司',
-      'sign_time' => '2015-05-20T13:29:35.120+08:00',
+      'sign_time'         => '2015-05-20T13:29:35.120+08:00',
     ],],
   ],
 ])
@@ -42,12 +42,12 @@ $instance->v3->ecommerce->mchTransfer->authorizations->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/mch-transfer/authorizations')->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
+    'sub_mchid'      => '1900001109',
     'agreement_list' => [[
-      'agreement_code' => '1',
+      'agreement_code'    => '1',
       'agreement_version' => '20230101',
       'sign_organization' => '示例有限责任公司',
-      'sign_time' => '2015-05-20T13:29:35.120+08:00',
+      'sign_time'         => '2015-05-20T13:29:35.120+08:00',
     ],],
   ],
 ])
@@ -60,12 +60,12 @@ $instance->chain('v3/ecommerce/mch-transfer/authorizations')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/mch-transfer/authorizations']->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
+    'sub_mchid'      => '1900001109',
     'agreement_list' => [[
-      'agreement_code' => '1',
+      'agreement_code'    => '1',
       'agreement_version' => '20230101',
       'sign_organization' => '示例有限责任公司',
-      'sign_time' => '2015-05-20T13:29:35.120+08:00',
+      'sign_time'         => '2015-05-20T13:29:35.120+08:00',
     ],],
   ],
 ])
@@ -78,12 +78,12 @@ $instance['v3/ecommerce/mch-transfer/authorizations']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->mchTransfer->authorizations->post([
   'json' => [
-    'sub_mchid' => '1900001109',
+    'sub_mchid'      => '1900001109',
     'agreement_list' => [[
-      'agreement_code' => '1',
+      'agreement_code'    => '1',
       'agreement_version' => '20230101',
       'sign_organization' => '示例有限责任公司',
-      'sign_time' => '2015-05-20T13:29:35.120+08:00',
+      'sign_time'         => '2015-05-20T13:29:35.120+08:00',
     ],],
   ],
 ]);
@@ -93,12 +93,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/mch-transfer/authorizations')->post([
   'json' => [
-    'sub_mchid' => '1900001109',
+    'sub_mchid'      => '1900001109',
     'agreement_list' => [[
-      'agreement_code' => '1',
+      'agreement_code'    => '1',
       'agreement_version' => '20230101',
       'sign_organization' => '示例有限责任公司',
-      'sign_time' => '2015-05-20T13:29:35.120+08:00',
+      'sign_time'         => '2015-05-20T13:29:35.120+08:00',
     ],],
   ],
 ]);
@@ -108,12 +108,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/mch-transfer/authorizations']->post([
   'json' => [
-    'sub_mchid' => '1900001109',
+    'sub_mchid'      => '1900001109',
     'agreement_list' => [[
-      'agreement_code' => '1',
+      'agreement_code'    => '1',
       'agreement_version' => '20230101',
       'sign_organization' => '示例有限责任公司',
-      'sign_time' => '2015-05-20T13:29:35.120+08:00',
+      'sign_time'         => '2015-05-20T13:29:35.120+08:00',
     ],],
   ],
 ]);
@@ -124,9 +124,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| authorization_state {data-required}| string | 授权状态
-| accept_time {data-required}| string | 授权申请受理时间
+| sub_mchid {data-required} | string | 二级商户号
+| authorization_state {data-required} | string | 授权状态
+| accept_time {data-required} | string | 授权申请受理时间
 | authorize_time | string | 授权时间
 
 {.im-table #response}

@@ -91,11 +91,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 二级商户号
-| sp_mchid {data-required}| string | 电商平台商户号
-| status {data-required}| string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
-| withdraw_id {data-required}| string | 微信支付提现单号
-| out_request_no {data-required}| string | 商户提现单号
-| amount {data-required}| integer | 提现金额
+| sp_mchid {data-required} | string | 电商平台商户号
+| status {data-required} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
+| withdraw_id {data-required} | string | 微信支付提现单号
+| out_request_no {data-required} | string | 商户提现单号
+| amount {data-required} | integer | 提现金额
 | create_time | string | 发起提现时间
 | update_time | string | 提现状态更新时间
 | reason | string | 失败原因

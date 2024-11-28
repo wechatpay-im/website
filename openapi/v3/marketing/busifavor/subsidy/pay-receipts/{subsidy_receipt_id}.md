@@ -70,18 +70,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| subsidy_receipt_id {data-required}| string | 补差付款单号
-| stock_id {data-required}| string | 商家券批次号
-| coupon_code {data-required}| string | 商家券Code
-| transaction_id {data-required}| string | 微信支付订单号
-| payer_merchant {data-required}| string | 营销补差扣款商户号
-| payee_merchant {data-required}| string | 营销补差入账商户号
-| amount {data-required}| integer | 补差付款金额
-| description {data-required}| string | 补差付款描述
-| status {data-required}| string | 补差付款单据状态
+| subsidy_receipt_id {data-required} | string | 补差付款单号
+| stock_id {data-required} | string | 商家券批次号
+| coupon_code {data-required} | string | 商家券Code
+| transaction_id {data-required} | string | 微信支付订单号
+| payer_merchant {data-required} | string | 营销补差扣款商户号
+| payee_merchant {data-required} | string | 营销补差入账商户号
+| amount {data-required} | integer | 补差付款金额
+| description {data-required} | string | 补差付款描述
+| status {data-required} | string | 补差付款单据状态
 | fail_reason | string | 补差付款失败原因
 | success_time | string | 补差付款完成时间
-| out_subsidy_no {data-required}| string | 业务请求唯一单号
+| out_subsidy_no {data-required} | string | 业务请求唯一单号
 | create_time | string | 补差付款发起时间
 
 {.im-table #response}

@@ -126,10 +126,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| type {data-required}| string | 分账接收方类型
-| account {data-required}| string | 分账接收方账号
+| type {data-required} | string | 分账接收方类型
+| account {data-required} | string | 分账接收方账号
 | name | string | 分账接收方全称
-| relation_type {data-required}| string | 与分账方的关系类型
+| relation_type {data-required} | string | 与分账方的关系类型
 | custom_relation | string | 自定义的分账关系
 | scene | string | 分账场景详细描述
 | major_service | string | 接收方商户的主营业务范围

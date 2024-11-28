@@ -25,9 +25,9 @@ $instance->v3->global->transactions->id->_transaction_id_->close->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'transaction_id' => '1217752501201407033233368018',
   'json' => [
-    'mchid' => '1230000109',
+    'mchid'     => '1230000109',
     'sub_mchid' => '1230000109',
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,9 +41,9 @@ $instance->chain('v3/global/transactions/id/{transaction_id}/close')->postAsync(
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'transaction_id' => '1217752501201407033233368018',
   'json' => [
-    'mchid' => '1230000109',
+    'mchid'     => '1230000109',
     'sub_mchid' => '1230000109',
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,9 +57,9 @@ $instance['v3/global/transactions/id/{transaction_id}/close']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'transaction_id' => '1217752501201407033233368018',
   'json' => [
-    'mchid' => '1230000109',
+    'mchid'     => '1230000109',
     'sub_mchid' => '1230000109',
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -73,9 +73,9 @@ $response = $instance->v3->global->transactions->id->_transaction_id_->close->po
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'transaction_id' => '1217752501201407033233368018',
   'json' => [
-    'mchid' => '1230000109',
+    'mchid'     => '1230000109',
     'sub_mchid' => '1230000109',
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -86,9 +86,9 @@ $response = $instance->chain('v3/global/transactions/id/{transaction_id}/close')
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'transaction_id' => '1217752501201407033233368018',
   'json' => [
-    'mchid' => '1230000109',
+    'mchid'     => '1230000109',
     'sub_mchid' => '1230000109',
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -99,9 +99,9 @@ $response = $instance['v3/global/transactions/id/{transaction_id}/close']->post(
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'transaction_id' => '1217752501201407033233368018',
   'json' => [
-    'mchid' => '1230000109',
+    'mchid'     => '1230000109',
     'sub_mchid' => '1230000109',
-    'sp_mchid' => '1230000109',
+    'sp_mchid'  => '1230000109',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

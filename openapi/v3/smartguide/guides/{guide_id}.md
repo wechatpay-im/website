@@ -28,10 +28,10 @@ $instance->v3->smartguide->guides->_guide_id_->patchAsync([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid' => '1234567890',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -48,10 +48,10 @@ $instance->chain('v3/smartguide/guides/{guide_id}')->patchAsync([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid' => '1234567890',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -68,10 +68,10 @@ $instance['v3/smartguide/guides/{guide_id}']->patchAsync([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid' => '1234567890',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -88,10 +88,10 @@ $response = $instance->v3->smartguide->guides->_guide_id_->patch([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid' => '1234567890',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -105,10 +105,10 @@ $response = $instance->chain('v3/smartguide/guides/{guide_id}')->patch([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid' => '1234567890',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -122,10 +122,10 @@ $response = $instance['v3/smartguide/guides/{guide_id}']->patch([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid' => '1234567890',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

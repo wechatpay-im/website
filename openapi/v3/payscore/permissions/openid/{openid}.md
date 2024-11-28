@@ -97,12 +97,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| service_id {data-required}| string | 服务id
-| appid {data-required}| string | 公众号id
-| mchid {data-required}| string | 商户号
+| service_id {data-required} | string | 服务id
+| appid {data-required} | string | 公众号id
+| mchid {data-required} | string | 商户号
 | openid | string | 用户标识
 | authorization_code | string | 授权协议号
-| authorization_state {data-required}| string | 授权状态<br/>`UNAVAILABLE` \| `AVAILABLE` \| `UNBINDUSER` 枚举值之一
+| authorization_state {data-required} | string | 授权状态<br/>`UNAVAILABLE` \| `AVAILABLE` \| `UNBINDUSER` 枚举值之一
 | cancel_authorization_time | string | 最近一次解除授权时间
 | authorization_success_time | string | 最近一次授权成功时间
 | user_risk_level | number | 用户分层

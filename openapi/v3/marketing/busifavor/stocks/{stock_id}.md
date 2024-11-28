@@ -65,12 +65,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_name {data-required}| string | 商家券批次名称
-| belong_merchant {data-required}| string | 批次归属商户号
+| stock_name {data-required} | string | 商家券批次名称
+| belong_merchant {data-required} | string | 批次归属商户号
 | comment | string | 批次备注
-| goods_name {data-required}| string | 适用商品范围
-| stock_type {data-required}| string | 批次类型
-| coupon_use_rule {data-required}| object {data-tooltip="对应PHP的array"} | 核销规则
+| goods_name {data-required} | string | 适用商品范围
+| stock_type {data-required} | string | 批次类型
+| coupon_use_rule {data-required} | object {data-tooltip="对应PHP的array"} | 核销规则
 | coupon_available_time {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 券可核销时间
 | available_begin_time {data-required data-indent=2} | string | 开始时间
 | available_end_time {data-required data-indent=2} | string | 结束时间
@@ -96,7 +96,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | use_method {data-required data-indent=1} | string | 核销方式
 | mini_programs_appid {data-indent=1} | string | 小程序appid
 | mini_programs_path {data-indent=1} | string | 小程序path
-| stock_send_rule {data-required}| object {data-tooltip="对应PHP的array"} | 发放规则
+| stock_send_rule {data-required} | object {data-tooltip="对应PHP的array"} | 发放规则
 | max_amount {data-required data-indent=1} | integer | 批次总预算
 | max_coupons {data-indent=1} | integer | 批次最大发放个数
 | max_coupons_per_user {data-required data-indent=1} | integer | 用户最大可领个数
@@ -126,9 +126,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | finder_id {data-required data-indent=2} | string | 视频号ID
 | finder_video_id {data-required data-indent=2} | string | 视频号视频ID
 | finder_video_cover_image_url {data-required data-indent=2} | string | 视频号封面图
-| stock_state {data-required}| string | 批次状态
-| coupon_code_mode {data-required}| string | 券code模式
-| stock_id {data-required}| string | 批次号
+| stock_state {data-required} | string | 批次状态
+| coupon_code_mode {data-required} | string | 券code模式
+| stock_id {data-required} | string | 批次号
 | coupon_code_count | object {data-tooltip="对应PHP的array"} | 券code数量
 | total_count {data-required data-indent=1} | integer | 该批次总共已上传的code总数
 | available_count {data-required data-indent=1} | integer | 该批次当前可用的code数
@@ -195,46 +195,46 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->busifavor->stocks->_stock_id_->patchAsync([
   'stock_id' => '101156451224',
   'json' => [
-    'custom_entrance' => [
+    'custom_entrance'      => [
       'mini_programs_info' => [
         'mini_programs_appid' => 'wx234545656765876',
-        'mini_programs_path' => '/path/index/index',
-        'entrance_words' => '欢迎选购',
-        'guiding_words' => '获取更多优惠',
+        'mini_programs_path'  => '/path/index/index',
+        'entrance_words'      => '欢迎选购',
+        'guiding_words'       => '获取更多优惠',
       ],
-      'appid' => 'wx324345hgfhfghfg',
-      'hall_id' => '233455656',
-      'code_display_mode' => 'BARCODE',
+      'appid'              => 'wx324345hgfhfghfg',
+      'hall_id'            => '233455656',
+      'code_display_mode'  => 'BARCODE',
     ],
-    'stock_name' => '8月1日活动券',
-    'comment' => '活动使用',
-    'goods_name' => 'xxx商品使用',
-    'out_request_no' => '6122352020010133287985742',
+    'stock_name'           => '8月1日活动券',
+    'comment'              => '活动使用',
+    'goods_name'           => 'xxx商品使用',
+    'out_request_no'       => '6122352020010133287985742',
     'display_pattern_info' => [
-      'description' => 'xxx门店可用',
+      'description'       => 'xxx门店可用',
       'merchant_logo_url' => 'https://xxx',
-      'merchant_name' => '微信支付',
-      'background_color' => 'Color020',
-      'coupon_image_url' => 'https://qpic.cn/xxx',
-      'finder_info' => [
-        'finder_id' => 'sph6Rngt2T4RlUf',
-        'finder_video_id' => 'sph6Rngt2T4RlUf',
+      'merchant_name'     => '微信支付',
+      'background_color'  => 'Color020',
+      'coupon_image_url'  => 'https://qpic.cn/xxx',
+      'finder_info'       => [
+        'finder_id'                    => 'sph6Rngt2T4RlUf',
+        'finder_video_id'              => 'sph6Rngt2T4RlUf',
         'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/xxx',
       ],
     ],
-    'coupon_use_rule' => [
-      'use_method' => 'OFF_LINE',
+    'coupon_use_rule'      => [
+      'use_method'          => 'OFF_LINE',
       'mini_programs_appid' => 'wx23232232323',
-      'mini_programs_path' => '/path/index/index',
+      'mini_programs_path'  => '/path/index/index',
     ],
-    'stock_send_rule' => [
+    'stock_send_rule'      => [
       'natural_person_limit' => true,
-      'prevent_api_abuse' => true,
+      'prevent_api_abuse'    => true,
     ],
-    'notify_config' => [
+    'notify_config'        => [
       'notify_appid' => 'wx23232232323',
     ],
-    'subsidy' => true,
+    'subsidy'              => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -247,46 +247,46 @@ $instance->v3->marketing->busifavor->stocks->_stock_id_->patchAsync([
 $instance->chain('v3/marketing/busifavor/stocks/{stock_id}')->patchAsync([
   'stock_id' => '101156451224',
   'json' => [
-    'custom_entrance' => [
+    'custom_entrance'      => [
       'mini_programs_info' => [
         'mini_programs_appid' => 'wx234545656765876',
-        'mini_programs_path' => '/path/index/index',
-        'entrance_words' => '欢迎选购',
-        'guiding_words' => '获取更多优惠',
+        'mini_programs_path'  => '/path/index/index',
+        'entrance_words'      => '欢迎选购',
+        'guiding_words'       => '获取更多优惠',
       ],
-      'appid' => 'wx324345hgfhfghfg',
-      'hall_id' => '233455656',
-      'code_display_mode' => 'BARCODE',
+      'appid'              => 'wx324345hgfhfghfg',
+      'hall_id'            => '233455656',
+      'code_display_mode'  => 'BARCODE',
     ],
-    'stock_name' => '8月1日活动券',
-    'comment' => '活动使用',
-    'goods_name' => 'xxx商品使用',
-    'out_request_no' => '6122352020010133287985742',
+    'stock_name'           => '8月1日活动券',
+    'comment'              => '活动使用',
+    'goods_name'           => 'xxx商品使用',
+    'out_request_no'       => '6122352020010133287985742',
     'display_pattern_info' => [
-      'description' => 'xxx门店可用',
+      'description'       => 'xxx门店可用',
       'merchant_logo_url' => 'https://xxx',
-      'merchant_name' => '微信支付',
-      'background_color' => 'Color020',
-      'coupon_image_url' => 'https://qpic.cn/xxx',
-      'finder_info' => [
-        'finder_id' => 'sph6Rngt2T4RlUf',
-        'finder_video_id' => 'sph6Rngt2T4RlUf',
+      'merchant_name'     => '微信支付',
+      'background_color'  => 'Color020',
+      'coupon_image_url'  => 'https://qpic.cn/xxx',
+      'finder_info'       => [
+        'finder_id'                    => 'sph6Rngt2T4RlUf',
+        'finder_video_id'              => 'sph6Rngt2T4RlUf',
         'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/xxx',
       ],
     ],
-    'coupon_use_rule' => [
-      'use_method' => 'OFF_LINE',
+    'coupon_use_rule'      => [
+      'use_method'          => 'OFF_LINE',
       'mini_programs_appid' => 'wx23232232323',
-      'mini_programs_path' => '/path/index/index',
+      'mini_programs_path'  => '/path/index/index',
     ],
-    'stock_send_rule' => [
+    'stock_send_rule'      => [
       'natural_person_limit' => true,
-      'prevent_api_abuse' => true,
+      'prevent_api_abuse'    => true,
     ],
-    'notify_config' => [
+    'notify_config'        => [
       'notify_appid' => 'wx23232232323',
     ],
-    'subsidy' => true,
+    'subsidy'              => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -299,46 +299,46 @@ $instance->chain('v3/marketing/busifavor/stocks/{stock_id}')->patchAsync([
 $instance['v3/marketing/busifavor/stocks/{stock_id}']->patchAsync([
   'stock_id' => '101156451224',
   'json' => [
-    'custom_entrance' => [
+    'custom_entrance'      => [
       'mini_programs_info' => [
         'mini_programs_appid' => 'wx234545656765876',
-        'mini_programs_path' => '/path/index/index',
-        'entrance_words' => '欢迎选购',
-        'guiding_words' => '获取更多优惠',
+        'mini_programs_path'  => '/path/index/index',
+        'entrance_words'      => '欢迎选购',
+        'guiding_words'       => '获取更多优惠',
       ],
-      'appid' => 'wx324345hgfhfghfg',
-      'hall_id' => '233455656',
-      'code_display_mode' => 'BARCODE',
+      'appid'              => 'wx324345hgfhfghfg',
+      'hall_id'            => '233455656',
+      'code_display_mode'  => 'BARCODE',
     ],
-    'stock_name' => '8月1日活动券',
-    'comment' => '活动使用',
-    'goods_name' => 'xxx商品使用',
-    'out_request_no' => '6122352020010133287985742',
+    'stock_name'           => '8月1日活动券',
+    'comment'              => '活动使用',
+    'goods_name'           => 'xxx商品使用',
+    'out_request_no'       => '6122352020010133287985742',
     'display_pattern_info' => [
-      'description' => 'xxx门店可用',
+      'description'       => 'xxx门店可用',
       'merchant_logo_url' => 'https://xxx',
-      'merchant_name' => '微信支付',
-      'background_color' => 'Color020',
-      'coupon_image_url' => 'https://qpic.cn/xxx',
-      'finder_info' => [
-        'finder_id' => 'sph6Rngt2T4RlUf',
-        'finder_video_id' => 'sph6Rngt2T4RlUf',
+      'merchant_name'     => '微信支付',
+      'background_color'  => 'Color020',
+      'coupon_image_url'  => 'https://qpic.cn/xxx',
+      'finder_info'       => [
+        'finder_id'                    => 'sph6Rngt2T4RlUf',
+        'finder_video_id'              => 'sph6Rngt2T4RlUf',
         'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/xxx',
       ],
     ],
-    'coupon_use_rule' => [
-      'use_method' => 'OFF_LINE',
+    'coupon_use_rule'      => [
+      'use_method'          => 'OFF_LINE',
       'mini_programs_appid' => 'wx23232232323',
-      'mini_programs_path' => '/path/index/index',
+      'mini_programs_path'  => '/path/index/index',
     ],
-    'stock_send_rule' => [
+    'stock_send_rule'      => [
       'natural_person_limit' => true,
-      'prevent_api_abuse' => true,
+      'prevent_api_abuse'    => true,
     ],
-    'notify_config' => [
+    'notify_config'        => [
       'notify_appid' => 'wx23232232323',
     ],
-    'subsidy' => true,
+    'subsidy'              => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -351,46 +351,46 @@ $instance['v3/marketing/busifavor/stocks/{stock_id}']->patchAsync([
 $response = $instance->v3->marketing->busifavor->stocks->_stock_id_->patch([
   'stock_id' => '101156451224',
   'json' => [
-    'custom_entrance' => [
+    'custom_entrance'      => [
       'mini_programs_info' => [
         'mini_programs_appid' => 'wx234545656765876',
-        'mini_programs_path' => '/path/index/index',
-        'entrance_words' => '欢迎选购',
-        'guiding_words' => '获取更多优惠',
+        'mini_programs_path'  => '/path/index/index',
+        'entrance_words'      => '欢迎选购',
+        'guiding_words'       => '获取更多优惠',
       ],
-      'appid' => 'wx324345hgfhfghfg',
-      'hall_id' => '233455656',
-      'code_display_mode' => 'BARCODE',
+      'appid'              => 'wx324345hgfhfghfg',
+      'hall_id'            => '233455656',
+      'code_display_mode'  => 'BARCODE',
     ],
-    'stock_name' => '8月1日活动券',
-    'comment' => '活动使用',
-    'goods_name' => 'xxx商品使用',
-    'out_request_no' => '6122352020010133287985742',
+    'stock_name'           => '8月1日活动券',
+    'comment'              => '活动使用',
+    'goods_name'           => 'xxx商品使用',
+    'out_request_no'       => '6122352020010133287985742',
     'display_pattern_info' => [
-      'description' => 'xxx门店可用',
+      'description'       => 'xxx门店可用',
       'merchant_logo_url' => 'https://xxx',
-      'merchant_name' => '微信支付',
-      'background_color' => 'Color020',
-      'coupon_image_url' => 'https://qpic.cn/xxx',
-      'finder_info' => [
-        'finder_id' => 'sph6Rngt2T4RlUf',
-        'finder_video_id' => 'sph6Rngt2T4RlUf',
+      'merchant_name'     => '微信支付',
+      'background_color'  => 'Color020',
+      'coupon_image_url'  => 'https://qpic.cn/xxx',
+      'finder_info'       => [
+        'finder_id'                    => 'sph6Rngt2T4RlUf',
+        'finder_video_id'              => 'sph6Rngt2T4RlUf',
         'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/xxx',
       ],
     ],
-    'coupon_use_rule' => [
-      'use_method' => 'OFF_LINE',
+    'coupon_use_rule'      => [
+      'use_method'          => 'OFF_LINE',
       'mini_programs_appid' => 'wx23232232323',
-      'mini_programs_path' => '/path/index/index',
+      'mini_programs_path'  => '/path/index/index',
     ],
-    'stock_send_rule' => [
+    'stock_send_rule'      => [
       'natural_person_limit' => true,
-      'prevent_api_abuse' => true,
+      'prevent_api_abuse'    => true,
     ],
-    'notify_config' => [
+    'notify_config'        => [
       'notify_appid' => 'wx23232232323',
     ],
-    'subsidy' => true,
+    'subsidy'              => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -400,46 +400,46 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/marketing/busifavor/stocks/{stock_id}')->patch([
   'stock_id' => '101156451224',
   'json' => [
-    'custom_entrance' => [
+    'custom_entrance'      => [
       'mini_programs_info' => [
         'mini_programs_appid' => 'wx234545656765876',
-        'mini_programs_path' => '/path/index/index',
-        'entrance_words' => '欢迎选购',
-        'guiding_words' => '获取更多优惠',
+        'mini_programs_path'  => '/path/index/index',
+        'entrance_words'      => '欢迎选购',
+        'guiding_words'       => '获取更多优惠',
       ],
-      'appid' => 'wx324345hgfhfghfg',
-      'hall_id' => '233455656',
-      'code_display_mode' => 'BARCODE',
+      'appid'              => 'wx324345hgfhfghfg',
+      'hall_id'            => '233455656',
+      'code_display_mode'  => 'BARCODE',
     ],
-    'stock_name' => '8月1日活动券',
-    'comment' => '活动使用',
-    'goods_name' => 'xxx商品使用',
-    'out_request_no' => '6122352020010133287985742',
+    'stock_name'           => '8月1日活动券',
+    'comment'              => '活动使用',
+    'goods_name'           => 'xxx商品使用',
+    'out_request_no'       => '6122352020010133287985742',
     'display_pattern_info' => [
-      'description' => 'xxx门店可用',
+      'description'       => 'xxx门店可用',
       'merchant_logo_url' => 'https://xxx',
-      'merchant_name' => '微信支付',
-      'background_color' => 'Color020',
-      'coupon_image_url' => 'https://qpic.cn/xxx',
-      'finder_info' => [
-        'finder_id' => 'sph6Rngt2T4RlUf',
-        'finder_video_id' => 'sph6Rngt2T4RlUf',
+      'merchant_name'     => '微信支付',
+      'background_color'  => 'Color020',
+      'coupon_image_url'  => 'https://qpic.cn/xxx',
+      'finder_info'       => [
+        'finder_id'                    => 'sph6Rngt2T4RlUf',
+        'finder_video_id'              => 'sph6Rngt2T4RlUf',
         'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/xxx',
       ],
     ],
-    'coupon_use_rule' => [
-      'use_method' => 'OFF_LINE',
+    'coupon_use_rule'      => [
+      'use_method'          => 'OFF_LINE',
       'mini_programs_appid' => 'wx23232232323',
-      'mini_programs_path' => '/path/index/index',
+      'mini_programs_path'  => '/path/index/index',
     ],
-    'stock_send_rule' => [
+    'stock_send_rule'      => [
       'natural_person_limit' => true,
-      'prevent_api_abuse' => true,
+      'prevent_api_abuse'    => true,
     ],
-    'notify_config' => [
+    'notify_config'        => [
       'notify_appid' => 'wx23232232323',
     ],
-    'subsidy' => true,
+    'subsidy'              => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -449,46 +449,46 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/marketing/busifavor/stocks/{stock_id}']->patch([
   'stock_id' => '101156451224',
   'json' => [
-    'custom_entrance' => [
+    'custom_entrance'      => [
       'mini_programs_info' => [
         'mini_programs_appid' => 'wx234545656765876',
-        'mini_programs_path' => '/path/index/index',
-        'entrance_words' => '欢迎选购',
-        'guiding_words' => '获取更多优惠',
+        'mini_programs_path'  => '/path/index/index',
+        'entrance_words'      => '欢迎选购',
+        'guiding_words'       => '获取更多优惠',
       ],
-      'appid' => 'wx324345hgfhfghfg',
-      'hall_id' => '233455656',
-      'code_display_mode' => 'BARCODE',
+      'appid'              => 'wx324345hgfhfghfg',
+      'hall_id'            => '233455656',
+      'code_display_mode'  => 'BARCODE',
     ],
-    'stock_name' => '8月1日活动券',
-    'comment' => '活动使用',
-    'goods_name' => 'xxx商品使用',
-    'out_request_no' => '6122352020010133287985742',
+    'stock_name'           => '8月1日活动券',
+    'comment'              => '活动使用',
+    'goods_name'           => 'xxx商品使用',
+    'out_request_no'       => '6122352020010133287985742',
     'display_pattern_info' => [
-      'description' => 'xxx门店可用',
+      'description'       => 'xxx门店可用',
       'merchant_logo_url' => 'https://xxx',
-      'merchant_name' => '微信支付',
-      'background_color' => 'Color020',
-      'coupon_image_url' => 'https://qpic.cn/xxx',
-      'finder_info' => [
-        'finder_id' => 'sph6Rngt2T4RlUf',
-        'finder_video_id' => 'sph6Rngt2T4RlUf',
+      'merchant_name'     => '微信支付',
+      'background_color'  => 'Color020',
+      'coupon_image_url'  => 'https://qpic.cn/xxx',
+      'finder_info'       => [
+        'finder_id'                    => 'sph6Rngt2T4RlUf',
+        'finder_video_id'              => 'sph6Rngt2T4RlUf',
         'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/xxx',
       ],
     ],
-    'coupon_use_rule' => [
-      'use_method' => 'OFF_LINE',
+    'coupon_use_rule'      => [
+      'use_method'          => 'OFF_LINE',
       'mini_programs_appid' => 'wx23232232323',
-      'mini_programs_path' => '/path/index/index',
+      'mini_programs_path'  => '/path/index/index',
     ],
-    'stock_send_rule' => [
+    'stock_send_rule'      => [
       'natural_person_limit' => true,
-      'prevent_api_abuse' => true,
+      'prevent_api_abuse'    => true,
     ],
-    'notify_config' => [
+    'notify_config'        => [
       'notify_appid' => 'wx23232232323',
     ],
-    'subsidy' => true,
+    'subsidy'              => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);

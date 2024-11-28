@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | recovery_time | string | 
 | create_time | string | 
 | update_time | string | 
-| activity_base_info {data-required}| object {data-tooltip="对应PHP的array"} | 
+| activity_base_info {data-required} | object {data-tooltip="对应PHP的array"} | 
 | activity_name {data-required data-indent=1} | string | 
 | activity_second_title {data-required data-indent=1} | string | 
 | merchant_logo_url {data-required data-indent=1} | string | 
@@ -106,7 +106,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | payment_method {data-indent=3} | string | 
 | bank_abbreviation {data-indent=3} | string | 
 | goods_tags {data-indent=1} | string[] | 
-| award_send_rule {data-required}| object {data-tooltip="对应PHP的array"} | 
+| award_send_rule {data-required} | object {data-tooltip="对应PHP的array"} | 
 | full_send_rule {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | award_type {data-required data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_option {data-required data-indent=2} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一

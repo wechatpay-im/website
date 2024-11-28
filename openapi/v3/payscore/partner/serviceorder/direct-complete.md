@@ -48,40 +48,40 @@ description: 该接口适用于无需微信支付分做订单风控判断的业�
 ```php [异步纯链式]
 $instance->v3->payscore->partner->serviceorder->directComplete->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'sub_mchid'            => '1900000109',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'         => 50000,
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'       => true,
+    'goods_tag'            => 'goods_tag',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -93,40 +93,40 @@ $instance->v3->payscore->partner->serviceorder->directComplete->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/partner/serviceorder/direct-complete')->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'sub_mchid'            => '1900000109',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'         => 50000,
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'       => true,
+    'goods_tag'            => 'goods_tag',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -138,40 +138,40 @@ $instance->chain('v3/payscore/partner/serviceorder/direct-complete')->postAsync(
 ```php [异步属性式]
 $instance['v3/payscore/partner/serviceorder/direct-complete']->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'sub_mchid'            => '1900000109',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'         => 50000,
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'       => true,
+    'goods_tag'            => 'goods_tag',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -183,40 +183,40 @@ $instance['v3/payscore/partner/serviceorder/direct-complete']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->partner->serviceorder->directComplete->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'sub_mchid'            => '1900000109',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'         => 50000,
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'       => true,
+    'goods_tag'            => 'goods_tag',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -225,40 +225,40 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/partner/serviceorder/direct-complete')->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'sub_mchid'            => '1900000109',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'         => 50000,
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'       => true,
+    'goods_tag'            => 'goods_tag',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -267,40 +267,40 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/payscore/partner/serviceorder/direct-complete']->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'sub_mchid' => '1900000109',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'sub_mchid'            => '1900000109',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'total_amount'         => 50000,
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'profit_sharing'       => true,
+    'goods_tag'            => 'goods_tag',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

@@ -104,14 +104,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 发起签约的appid
-| sp_mchid {data-required}| string | 服务商商户号
-| sp_openid {data-required}| string | 用户在发起签约APP的标识
+| appid {data-required} | string | 发起签约的appid
+| sp_mchid {data-required} | string | 服务商商户号
+| sp_openid {data-required} | string | 用户在发起签约APP的标识
 | sub_appid | string | 子商户appid
 | sub_mchid | string | 特约商户号
-| contract_id {data-required}| string | ETC扣费授权协议号
-| bind_state {data-required}| string | ETC绑定状态
-| plate_number {data-required}| string | 绑定的车牌号
+| contract_id {data-required} | string | ETC扣费授权协议号
+| bind_state {data-required} | string | ETC绑定状态
+| plate_number {data-required} | string | 绑定的车牌号
 | sub_openid | string | 用户在发起签约子APP的标识
 
 {.im-table #response}

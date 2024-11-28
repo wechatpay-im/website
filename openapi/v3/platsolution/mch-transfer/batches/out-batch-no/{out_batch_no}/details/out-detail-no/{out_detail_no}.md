@@ -97,17 +97,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no {data-required}| string | 商家批次单号
-| batch_id {data-required}| string | 商家转账批次单号
-| out_detail_no {data-required}| string | 商家明细单号
-| detail_id {data-required}| string | 商家转账明细单号
-| sp_appid {data-required}| string | 服务商应用ID
-| sub_mchid {data-required}| string | 二级商户号
+| out_batch_no {data-required} | string | 商家批次单号
+| batch_id {data-required} | string | 商家转账批次单号
+| out_detail_no {data-required} | string | 商家明细单号
+| detail_id {data-required} | string | 商家转账明细单号
+| sp_appid {data-required} | string | 服务商应用ID
+| sub_mchid {data-required} | string | 二级商户号
 | sub_appid | string | 二级商户应用ID
-| create_time {data-required}| string | 转账发起时间
-| detail_state {data-required}| string | 明细状态
-| transfer_amount {data-required}| number | 转账金额
-| transfer_remark {data-required}| string | 转账备注
+| create_time {data-required} | string | 转账发起时间
+| detail_state {data-required} | string | 明细状态
+| transfer_amount {data-required} | number | 转账金额
+| transfer_remark {data-required} | string | 转账备注
 | fail_reason | string | 明细失败原因
 | openid | string | 收款用户OpenID
 | bank_type | string | 收款银行类型

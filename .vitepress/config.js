@@ -143,6 +143,21 @@ export default defineConfig({
       '/openapi/v3/offlineface': offlineFacepaySidebar(),
       '/openapi/v3/bank-': bankTransferSidebar(),
       '/openapi/v3/payscore/acquiringbank/': acquiringbankPayscoreSidebar(),
+      '/openapi/v3/combine-transactions/miniprogram': personalCollectionsSidebar(),
+      '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close#INDIVIDUAL': personalCollectionsSidebar(),
+      '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}#INDIVIDUAL': personalCollectionsSidebar(),
+      '/openapi/v3/combine-transactions/id/{combine_transaction_id}': personalCollectionsSidebar(),
+      '/openapi/v3/ecommerce/refunds/apply#INDIVIDUAL': personalCollectionsSidebar(),
+      '/openapi/v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund#INDIVIDUAL': personalCollectionsSidebar(),
+      '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}#INDIVIDUAL': personalCollectionsSidebar(),
+      '/openapi/v3/ecommerce/refunds/id/{refund_id}#INDIVIDUAL': personalCollectionsSidebar(),
+      '/openapi/v3/ecommerce/individual-contracts/{openid}': personalCollectionsSidebar(),
+      '/openapi/v3/platsolution/ecommerce/settle/': personalCollectionsSidebar(),
+      '/webhook/v3/TRANSACTION.SUCCESS#INDIVIDUAL': personalCollectionsSidebar(),
+      '/webhook/v3/REFUND.SUCCESS#INDIVIDUAL': personalCollectionsSidebar(),
+      '/webhook/v3/REFUND.ABNORMAL#INDIVIDUAL': personalCollectionsSidebar(),
+      '/webhook/v3/REFUND.CLOSED#INDIVIDUAL': personalCollectionsSidebar(),
+      '/webhook/v3/SETTLEMENT.SUCCESS': personalCollectionsSidebar(),
     },
   },
 })
@@ -912,6 +927,7 @@ function openapiSidebar() {
                 ['发起退款申请', '/openapi/v3/ecommerce/refunds/apply'],
                 ['查询退款(商户退款单号)', '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}'],
                 ['查询退款(平台退款单号)', '/openapi/v3/ecommerce/refunds/id/{refund_id}'],
+                ['发起异常退款', '/openapi/v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund'],
                 ['垫付退款回补', '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#post'],
                 ['查询退款回补结果', '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#get'],
               ].map(transArrayItem),
@@ -1694,6 +1710,37 @@ function acquiringbankPayscoreSidebar() {
         },
       ],
     }
+  ]
+}
+
+function personalCollectionsSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '收付通-个人收款(二手交易)',
+          collapsed: false,
+          items: [
+            ['微信小程序下单', '/openapi/v3/combine-transactions/miniprogram'],
+            ['交易关单', '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close#INDIVIDUAL'],
+            ['查询订单(商户单号)', '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}#INDIVIDUAL'],
+            ['查询订单(平台单号)', '/openapi/v3/combine-transactions/id/{combine_transaction_id}'],
+            ['交易成功通知', '/webhook/v3/TRANSACTION.SUCCESS#INDIVIDUAL'],
+            ['申请退款', '/openapi/v3/ecommerce/refunds/apply#INDIVIDUAL'],
+            ['发起异常退款', '/openapi/v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund#INDIVIDUAL'],
+            ['查询单笔退款(商户退款单号)', '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}#INDIVIDUAL'],
+            ['查询单笔退款(平台退款单号)', '/openapi/v3/ecommerce/refunds/id/{refund_id}#INDIVIDUAL'],
+            ['退款成功通知', '/webhook/v3/REFUND.SUCCESS#INDIVIDUAL'],
+            ['退款异常通知', '/webhook/v3/REFUND.ABNORMAL#INDIVIDUAL'],
+            ['退款关闭通知', '/webhook/v3/REFUND.CLOSED#INDIVIDUAL'],
+            ['申请批量结算', '/openapi/v3/platsolution/ecommerce/settle/prepay-settle-orders'],
+            ['查询批量结算信息', '/openapi/v3/platsolution/ecommerce/settle/prepay-settle-orders/{settle_batch_no}'],
+            ['结算成功通知', '/webhook/v3/SETTLEMENT.SUCCESS'],
+            ['查询个人收款方授权结果', '/openapi/v3/ecommerce/individual-contracts/{openid}'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
   ]
 }
 

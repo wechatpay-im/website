@@ -37,24 +37,24 @@ description: 商户调用该接口可获取预签约码（presign_token），预
 ```php [异步纯链式]
 $instance->v3->eduschoolpay->contracts->presign->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
-    'school_id' => '18260256813396',
-    'out_contract_code' => '20190806125346',
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'appid'                      => 'wx8888888888888888',
+    'openid'                     => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'                    => '101164396123311331',
+    'user_id'                    => '20200330tony',
+    'school_id'                  => '18260256813396',
+    'out_contract_code'          => '20190806125346',
+    'contract_mode'              => 'LIMIT_BANK_CARD',
     'downgrade_default_contract' => true,
-    'identity' => [
-      'real_name' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+    'identity'                   => [
+      'real_name'       => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
       'credential_type' => 'IDENTITY_CARD',
-      'id_card_number' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+      'id_card_number'  => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
     ],
-    'bank_card' => [
+    'bank_card'                  => [
       'bank_card_no' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
-      'valid_thru' => '08/21',
-      'phone' => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
-      'bank_type' => 'CMC',
+      'valid_thru'   => '08/21',
+      'phone'        => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
+      'bank_type'    => 'CMC',
     ],
   ],
   'headers' => [
@@ -70,24 +70,24 @@ $instance->v3->eduschoolpay->contracts->presign->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/eduschoolpay/contracts/presign')->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
-    'school_id' => '18260256813396',
-    'out_contract_code' => '20190806125346',
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'appid'                      => 'wx8888888888888888',
+    'openid'                     => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'                    => '101164396123311331',
+    'user_id'                    => '20200330tony',
+    'school_id'                  => '18260256813396',
+    'out_contract_code'          => '20190806125346',
+    'contract_mode'              => 'LIMIT_BANK_CARD',
     'downgrade_default_contract' => true,
-    'identity' => [
-      'real_name' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+    'identity'                   => [
+      'real_name'       => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
       'credential_type' => 'IDENTITY_CARD',
-      'id_card_number' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+      'id_card_number'  => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
     ],
-    'bank_card' => [
+    'bank_card'                  => [
       'bank_card_no' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
-      'valid_thru' => '08/21',
-      'phone' => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
-      'bank_type' => 'CMC',
+      'valid_thru'   => '08/21',
+      'phone'        => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
+      'bank_type'    => 'CMC',
     ],
   ],
   'headers' => [
@@ -103,24 +103,24 @@ $instance->chain('v3/eduschoolpay/contracts/presign')->postAsync([
 ```php [异步属性式]
 $instance['v3/eduschoolpay/contracts/presign']->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
-    'school_id' => '18260256813396',
-    'out_contract_code' => '20190806125346',
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'appid'                      => 'wx8888888888888888',
+    'openid'                     => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'                    => '101164396123311331',
+    'user_id'                    => '20200330tony',
+    'school_id'                  => '18260256813396',
+    'out_contract_code'          => '20190806125346',
+    'contract_mode'              => 'LIMIT_BANK_CARD',
     'downgrade_default_contract' => true,
-    'identity' => [
-      'real_name' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+    'identity'                   => [
+      'real_name'       => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
       'credential_type' => 'IDENTITY_CARD',
-      'id_card_number' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+      'id_card_number'  => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
     ],
-    'bank_card' => [
+    'bank_card'                  => [
       'bank_card_no' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
-      'valid_thru' => '08/21',
-      'phone' => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
-      'bank_type' => 'CMC',
+      'valid_thru'   => '08/21',
+      'phone'        => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
+      'bank_type'    => 'CMC',
     ],
   ],
   'headers' => [
@@ -136,24 +136,24 @@ $instance['v3/eduschoolpay/contracts/presign']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->eduschoolpay->contracts->presign->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
-    'school_id' => '18260256813396',
-    'out_contract_code' => '20190806125346',
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'appid'                      => 'wx8888888888888888',
+    'openid'                     => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'                    => '101164396123311331',
+    'user_id'                    => '20200330tony',
+    'school_id'                  => '18260256813396',
+    'out_contract_code'          => '20190806125346',
+    'contract_mode'              => 'LIMIT_BANK_CARD',
     'downgrade_default_contract' => true,
-    'identity' => [
-      'real_name' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+    'identity'                   => [
+      'real_name'       => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
       'credential_type' => 'IDENTITY_CARD',
-      'id_card_number' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+      'id_card_number'  => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
     ],
-    'bank_card' => [
+    'bank_card'                  => [
       'bank_card_no' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
-      'valid_thru' => '08/21',
-      'phone' => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
-      'bank_type' => 'CMC',
+      'valid_thru'   => '08/21',
+      'phone'        => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
+      'bank_type'    => 'CMC',
     ],
   ],
   'headers' => [
@@ -166,24 +166,24 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/eduschoolpay/contracts/presign')->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
-    'school_id' => '18260256813396',
-    'out_contract_code' => '20190806125346',
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'appid'                      => 'wx8888888888888888',
+    'openid'                     => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'                    => '101164396123311331',
+    'user_id'                    => '20200330tony',
+    'school_id'                  => '18260256813396',
+    'out_contract_code'          => '20190806125346',
+    'contract_mode'              => 'LIMIT_BANK_CARD',
     'downgrade_default_contract' => true,
-    'identity' => [
-      'real_name' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+    'identity'                   => [
+      'real_name'       => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
       'credential_type' => 'IDENTITY_CARD',
-      'id_card_number' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+      'id_card_number'  => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
     ],
-    'bank_card' => [
+    'bank_card'                  => [
       'bank_card_no' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
-      'valid_thru' => '08/21',
-      'phone' => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
-      'bank_type' => 'CMC',
+      'valid_thru'   => '08/21',
+      'phone'        => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
+      'bank_type'    => 'CMC',
     ],
   ],
   'headers' => [
@@ -196,24 +196,24 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/eduschoolpay/contracts/presign']->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'openid' => 'oUpF8uMuAJOM2pxb1Q',
-    'plan_id' => '101164396123311331',
-    'user_id' => '20200330tony',
-    'school_id' => '18260256813396',
-    'out_contract_code' => '20190806125346',
-    'contract_mode' => 'LIMIT_BANK_CARD',
+    'appid'                      => 'wx8888888888888888',
+    'openid'                     => 'oUpF8uMuAJOM2pxb1Q',
+    'plan_id'                    => '101164396123311331',
+    'user_id'                    => '20200330tony',
+    'school_id'                  => '18260256813396',
+    'out_contract_code'          => '20190806125346',
+    'contract_mode'              => 'LIMIT_BANK_CARD',
     'downgrade_default_contract' => true,
-    'identity' => [
-      'real_name' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+    'identity'                   => [
+      'real_name'       => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
       'credential_type' => 'IDENTITY_CARD',
-      'id_card_number' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
+      'id_card_number'  => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
     ],
-    'bank_card' => [
+    'bank_card'                  => [
       'bank_card_no' => '6TqLAZvNZ4AXLNHLMbjA1yKq2k5krHM09m3tCuR',
-      'valid_thru' => '08/21',
-      'phone' => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
-      'bank_type' => 'CMC',
+      'valid_thru'   => '08/21',
+      'phone'        => 'j6PlFRRJ4nvGSbtDZzXbXScACvDSnIny67zk3BgT5uIbK4VfGmcjPBEk2mt5ASZ6UUHB4Gy0IZpbuanF9',
+      'bank_type'    => 'CMC',
     ],
   ],
   'headers' => [
@@ -227,7 +227,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| presign_token {data-required}| string | 预签约码
+| presign_token {data-required} | string | 预签约码
 
 {.im-table #response}
 

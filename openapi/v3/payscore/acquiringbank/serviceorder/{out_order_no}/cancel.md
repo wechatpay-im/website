@@ -26,8 +26,8 @@ $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->cancel->po
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,8 +42,8 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/cancel')
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,8 +58,8 @@ $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/cancel']->postA
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,8 +74,8 @@ $response = $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -87,8 +87,8 @@ $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -100,8 +100,8 @@ $response = $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/can
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'channel_id' => '1230000109',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

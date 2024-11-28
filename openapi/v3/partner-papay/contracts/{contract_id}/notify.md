@@ -30,16 +30,16 @@ description: 商户进行委托代扣扣费前需要在可通知时间段内调�
 $instance->v3->partnerPapay->contracts->_contract_id_->notify->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '12345512',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'sp_mchid'         => '1230000109',
+    'sp_appid'         => 'wxd678efh567hg6787',
+    'sub_mchid'        => '12345512',
+    'sub_appid'        => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -54,16 +54,16 @@ $instance->v3->partnerPapay->contracts->_contract_id_->notify->postAsync([
 $instance->chain('v3/partner-papay/contracts/{contract_id}/notify')->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '12345512',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'sp_mchid'         => '1230000109',
+    'sp_appid'         => 'wxd678efh567hg6787',
+    'sub_mchid'        => '12345512',
+    'sub_appid'        => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -78,16 +78,16 @@ $instance->chain('v3/partner-papay/contracts/{contract_id}/notify')->postAsync([
 $instance['v3/partner-papay/contracts/{contract_id}/notify']->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '12345512',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'sp_mchid'         => '1230000109',
+    'sp_appid'         => 'wxd678efh567hg6787',
+    'sub_mchid'        => '12345512',
+    'sub_appid'        => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -102,16 +102,16 @@ $instance['v3/partner-papay/contracts/{contract_id}/notify']->postAsync([
 $response = $instance->v3->partnerPapay->contracts->_contract_id_->notify->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '12345512',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'sp_mchid'         => '1230000109',
+    'sp_appid'         => 'wxd678efh567hg6787',
+    'sub_mchid'        => '12345512',
+    'sub_appid'        => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -123,16 +123,16 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/partner-papay/contracts/{contract_id}/notify')->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '12345512',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'sp_mchid'         => '1230000109',
+    'sp_appid'         => 'wxd678efh567hg6787',
+    'sub_mchid'        => '12345512',
+    'sub_appid'        => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -144,16 +144,16 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/partner-papay/contracts/{contract_id}/notify']->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '12345512',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'sp_mchid'         => '1230000109',
+    'sp_appid'         => 'wxd678efh567hg6787',
+    'sub_mchid'        => '12345512',
+    'sub_appid'        => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],

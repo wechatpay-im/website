@@ -22,9 +22,9 @@ description: 将有效态（未核销）的商家券与订单信息关联，用�
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->coupons->associate->postAsync([
   'json' => [
-    'stock_id' => '',
-    'coupon_code' => '',
-    'out_trade_no' => '',
+    'stock_id'       => '',
+    'coupon_code'    => '',
+    'out_trade_no'   => '',
     'out_request_no' => '',
   ],
 ])
@@ -37,9 +37,9 @@ $instance->v3->marketing->busifavor->coupons->associate->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/coupons/associate')->postAsync([
   'json' => [
-    'stock_id' => '',
-    'coupon_code' => '',
-    'out_trade_no' => '',
+    'stock_id'       => '',
+    'coupon_code'    => '',
+    'out_trade_no'   => '',
     'out_request_no' => '',
   ],
 ])
@@ -52,9 +52,9 @@ $instance->chain('v3/marketing/busifavor/coupons/associate')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/coupons/associate']->postAsync([
   'json' => [
-    'stock_id' => '',
-    'coupon_code' => '',
-    'out_trade_no' => '',
+    'stock_id'       => '',
+    'coupon_code'    => '',
+    'out_trade_no'   => '',
     'out_request_no' => '',
   ],
 ])
@@ -67,9 +67,9 @@ $instance['v3/marketing/busifavor/coupons/associate']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->coupons->associate->post([
   'json' => [
-    'stock_id' => '',
-    'coupon_code' => '',
-    'out_trade_no' => '',
+    'stock_id'       => '',
+    'coupon_code'    => '',
+    'out_trade_no'   => '',
     'out_request_no' => '',
   ],
 ]);
@@ -79,9 +79,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/coupons/associate')->post([
   'json' => [
-    'stock_id' => '',
-    'coupon_code' => '',
-    'out_trade_no' => '',
+    'stock_id'       => '',
+    'coupon_code'    => '',
+    'out_trade_no'   => '',
     'out_request_no' => '',
   ],
 ]);
@@ -91,9 +91,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/coupons/associate']->post([
   'json' => [
-    'stock_id' => '',
-    'coupon_code' => '',
-    'out_trade_no' => '',
+    'stock_id'       => '',
+    'coupon_code'    => '',
+    'out_trade_no'   => '',
     'out_request_no' => '',
   ],
 ]);
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| wechatpay_associate_time {data-required}| string | 关联成功时间
+| wechatpay_associate_time {data-required} | string | 关联成功时间
 
 {.im-table #response}
 

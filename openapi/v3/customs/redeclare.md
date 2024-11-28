@@ -28,13 +28,13 @@ description: 如果订单附加信息已请求报送海关，但电子口岸丢�
 $instance->v3->customs->redeclare->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '1000320306201511078440737891',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'sub_order_id'        => '1000320306201511078440737891',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
   ],
 ])
@@ -48,13 +48,13 @@ $instance->v3->customs->redeclare->postAsync([
 $instance->chain('v3/customs/redeclare')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '1000320306201511078440737891',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'sub_order_id'        => '1000320306201511078440737891',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
   ],
 ])
@@ -68,13 +68,13 @@ $instance->chain('v3/customs/redeclare')->postAsync([
 $instance['v3/customs/redeclare']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '1000320306201511078440737891',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'sub_order_id'        => '1000320306201511078440737891',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
   ],
 ])
@@ -88,13 +88,13 @@ $instance['v3/customs/redeclare']->postAsync([
 $response = $instance->v3->customs->redeclare->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '1000320306201511078440737891',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'sub_order_id'        => '1000320306201511078440737891',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
   ],
 ]);
@@ -105,13 +105,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/customs/redeclare')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '1000320306201511078440737891',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'sub_order_id'        => '1000320306201511078440737891',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
   ],
 ]);
@@ -122,13 +122,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/customs/redeclare']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/global/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'sub_order_id' => '1000320306201511078440737891',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'sub_order_id'        => '1000320306201511078440737891',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
   ],
 ]);
@@ -139,14 +139,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 机构APPID
-| mchid {data-required}| string | 商户号
-| state {data-required}| string | 报关状态
-| out_trade_no {data-required}| string | 商户订单号
-| transaction_id {data-required}| string | 微信订单号
+| appid {data-required} | string | 机构APPID
+| mchid {data-required} | string | 商户号
+| state {data-required} | string | 报关状态
+| out_trade_no {data-required} | string | 商户订单号
+| transaction_id {data-required} | string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| modify_time {data-required}| string | 最后更新时间
+| modify_time {data-required} | string | 最后更新时间
 | explanation | string | 申报结果说明
 
 {.im-table #response}

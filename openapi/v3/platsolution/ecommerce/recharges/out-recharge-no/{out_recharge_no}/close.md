@@ -90,16 +90,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_mchid {data-required}| string | 平台商户号
-| sub_mchid {data-required}| string | 二级商户号
-| recharge_id {data-required}| string | 微信支付充值单号
-| out_recharge_no {data-required}| string | 商户充值单号
+| sp_mchid {data-required} | string | 平台商户号
+| sub_mchid {data-required} | string | 二级商户号
+| recharge_id {data-required} | string | 微信支付充值单号
+| out_recharge_no {data-required} | string | 商户充值单号
 | recharge_channel | string | 充值渠道<br/>`BANK_TRANSFER` \| `QR_RECHARGE` 枚举值之一
-| account_type {data-required}| string | 充值入账账户<br/>`DEPOSIT` \| `BASIC` \| `OPERATION` \| `FEES` 枚举值之一
-| recharge_state {data-required}| string | 充值状态<br/>`SUCCESS` \| `RECHARGING` \| `CLOSED` 枚举值之一
-| recharge_scene {data-required}| string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_BANK_TRANSFER` \| `NORMAL_BANK_TRANSFER` 枚举值之一
+| account_type {data-required} | string | 充值入账账户<br/>`DEPOSIT` \| `BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| recharge_state {data-required} | string | 充值状态<br/>`SUCCESS` \| `RECHARGING` \| `CLOSED` 枚举值之一
+| recharge_scene {data-required} | string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_BANK_TRANSFER` \| `NORMAL_BANK_TRANSFER` 枚举值之一
 | recharge_state_desc | string | 充值状态描述
-| recharge_amount {data-required}| object {data-tooltip="对应PHP的array"} | 充值金额
+| recharge_amount {data-required} | object {data-tooltip="对应PHP的array"} | 充值金额
 | amount {data-indent=1} | number | 总金额
 | currency {data-indent=1} | string | 货币类型
 | bank_transfer_info | object {data-tooltip="对应PHP的array"} | 转账充值的付款信息

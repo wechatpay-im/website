@@ -118,8 +118,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| description {data-required}| string | 商品或支付单简要描述。
-| out_trade_no {data-required}| string | 商户扣款单号
+| description {data-required} | string | 商品或支付单简要描述。
+| out_trade_no {data-required} | string | 商户扣款单号
 
 {.im-table #response}
 

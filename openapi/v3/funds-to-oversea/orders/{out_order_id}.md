@@ -97,14 +97,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_id {data-required}| string | 商户出境单号
-| sub_mchid {data-required}| string | 二级商户号
-| order_id {data-required}| string | 微信出境单号
-| result {data-required}| string | 出境结果
+| out_order_id {data-required} | string | 商户出境单号
+| sub_mchid {data-required} | string | 二级商户号
+| order_id {data-required} | string | 微信出境单号
+| result {data-required} | string | 出境结果
 | fail_reason | string | 出境失败的原因
-| amount {data-required}| integer | 请求出境人民币金额
+| amount {data-required} | integer | 请求出境人民币金额
 | foreign_amount | integer | 真实出境外币金额
-| foreign_currency {data-required}| string | 外币币种
+| foreign_currency {data-required} | string | 外币币种
 | rate | integer | 汇率
 | exchange_rate_time | string | 购汇时间
 | estimate_exchange_rate_time | string | 预计购汇时间

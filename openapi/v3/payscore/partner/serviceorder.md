@@ -46,44 +46,44 @@
 ```php [异步纯链式]
 $instance->v3->payscore->partner->serviceorder->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'notify_url' => 'https://api.test.com',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'notify_url'           => 'https://api.test.com',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,44 +95,44 @@ $instance->v3->payscore->partner->serviceorder->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/partner/serviceorder')->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'notify_url' => 'https://api.test.com',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'notify_url'           => 'https://api.test.com',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -144,44 +144,44 @@ $instance->chain('v3/payscore/partner/serviceorder')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/partner/serviceorder']->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'notify_url' => 'https://api.test.com',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'notify_url'           => 'https://api.test.com',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -193,44 +193,44 @@ $instance['v3/payscore/partner/serviceorder']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->partner->serviceorder->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'notify_url' => 'https://api.test.com',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'notify_url'           => 'https://api.test.com',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -239,44 +239,44 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/partner/serviceorder')->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'notify_url' => 'https://api.test.com',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'notify_url'           => 'https://api.test.com',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -285,44 +285,44 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/partner/serviceorder']->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_order_no' => '1234323JKHDFE1243252',
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'            => '1900000109',
+    'sub_appid'            => 'wxd678efh567hg6999',
+    'out_order_no'         => '1234323JKHDFE1243252',
     'service_introduction' => 'XX充电宝',
-    'post_payments' => [[
-      'name' => '就餐费用',
+    'post_payments'        => [[
+      'name'        => '就餐费用',
       'description' => '就餐人均100元',
-      'amount' => 40000,
-      'count' => 4,
+      'amount'      => 40000,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'risk_fund' => [
-      'name' => 'DEPOSIT',
-      'amount' => 10000,
+    'risk_fund'            => [
+      'name'        => 'DEPOSIT',
+      'amount'      => 10000,
       'description' => '就餐的预估费用',
     ],
-    'time_range' => [
-      'start_time' => '20091225091010',
+    'time_range'           => [
+      'start_time'        => '20091225091010',
       'start_time_remark' => '开始租借时间',
-      'end_time' => '20091225121010',
-      'end_time_remark' => '租借结束时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '嗨客时尚主题展餐厅',
-      'end_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'need_user_confirm' => true,
-    'notify_url' => 'https://api.test.com',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'           => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'need_user_confirm'    => true,
+    'notify_url'           => 'https://api.test.com',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -332,14 +332,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 服务商应用ID
-| mchid {data-required}| string | 服务商商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 服务商应用ID
+| mchid {data-required} | string | 服务商商户号
 | sub_appid | string | 子商户应用ID
-| sub_mchid {data-required}| string | 子商户号
-| service_introduction {data-required}| string | 服务信息
-| state {data-required}| string | 服务订单状态
+| sub_mchid {data-required} | string | 子商户号
+| service_introduction {data-required} | string | 服务信息
+| state {data-required} | string | 服务订单状态
 | state_description | string | 订单状态说明
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-required data-indent=1} | string | 付费项目名称
@@ -365,7 +365,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | end_location {data-required data-indent=1} | string | 预计服务结束地点
 | attach | string | 商户数据包
 | notify_url | string | 商户回调地址
-| order_id {data-required}| string | 微信支付服务订单号
+| order_id {data-required} | string | 微信支付服务订单号
 | package | string | 跳转微信侧数据包
 
 {.im-table #response}
@@ -473,14 +473,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 服务商应用ID
-| mchid {data-required}| string | 服务商商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 服务商应用ID
+| mchid {data-required} | string | 服务商商户号
 | sub_appid | string | 子商户应用ID
 | sub_mchid | string | 子商户号
-| service_introduction {data-required}| string | 服务信息
-| state {data-required}| string | 服务订单状态
+| service_introduction {data-required} | string | 服务信息
+| state {data-required} | string | 服务订单状态
 | state_description | string | 订单状态说明
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-required data-indent=1} | string | 付费名称

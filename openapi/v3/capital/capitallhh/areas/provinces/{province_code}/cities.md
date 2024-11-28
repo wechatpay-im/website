@@ -73,7 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | data | object[] {data-tooltip="对应PHP的array"} | 城市列表
 | city_name {data-required data-indent=1} | string | 城市名称
 | city_code {data-required data-indent=1} | integer | 城市编码
-| total_count {data-required}| integer | 查询数据总条数
+| total_count {data-required} | integer | 查询数据总条数
 
 {.im-table #response}
 

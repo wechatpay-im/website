@@ -100,8 +100,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | total_count | number | 小店活动业代总数
 | data | object[] {data-tooltip="对应PHP的array"} | 小店活动业代集合
 | openid {data-required data-indent=1} | string | 业务代理的OpenID
-| offset {data-required}| number | 分页页码
-| limit {data-required}| number | 分页大小
+| offset {data-required} | number | 分页页码
+| limit {data-required} | number | 分页大小
 
 {.im-table #response}
 

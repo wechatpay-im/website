@@ -28,20 +28,20 @@
 ```php [异步纯链式]
 $instance->v3->brand->profitsharing->orders->postAsync([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
+    'brand_mchid'    => '1900000108',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
-      'account' => '1900000109',
-      'amount' => 190,
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '1900000109',
+      'amount'      => 190,
       'description' => '1900000109分给商户1900000110',
-      'name' => 'hu89ohu89ohu89o',
+      'name'        => 'hu89ohu89ohu89o',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -56,20 +56,20 @@ $instance->v3->brand->profitsharing->orders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/brand/profitsharing/orders')->postAsync([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
+    'brand_mchid'    => '1900000108',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
-      'account' => '1900000109',
-      'amount' => 190,
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '1900000109',
+      'amount'      => 190,
       'description' => '1900000109分给商户1900000110',
-      'name' => 'hu89ohu89ohu89o',
+      'name'        => 'hu89ohu89ohu89o',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -84,20 +84,20 @@ $instance->chain('v3/brand/profitsharing/orders')->postAsync([
 ```php [异步属性式]
 $instance['v3/brand/profitsharing/orders']->postAsync([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
+    'brand_mchid'    => '1900000108',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
-      'account' => '1900000109',
-      'amount' => 190,
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '1900000109',
+      'amount'      => 190,
       'description' => '1900000109分给商户1900000110',
-      'name' => 'hu89ohu89ohu89o',
+      'name'        => 'hu89ohu89ohu89o',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -112,20 +112,20 @@ $instance['v3/brand/profitsharing/orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->brand->profitsharing->orders->post([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
+    'brand_mchid'    => '1900000108',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
-      'account' => '1900000109',
-      'amount' => 190,
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '1900000109',
+      'amount'      => 190,
       'description' => '1900000109分给商户1900000110',
-      'name' => 'hu89ohu89ohu89o',
+      'name'        => 'hu89ohu89ohu89o',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -137,20 +137,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/profitsharing/orders')->post([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
+    'brand_mchid'    => '1900000108',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
-      'account' => '1900000109',
-      'amount' => 190,
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '1900000109',
+      'amount'      => 190,
       'description' => '1900000109分给商户1900000110',
-      'name' => 'hu89ohu89ohu89o',
+      'name'        => 'hu89ohu89ohu89o',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -162,20 +162,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/brand/profitsharing/orders']->post([
   'json' => [
-    'brand_mchid' => '1900000108',
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
+    'brand_mchid'    => '1900000108',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888889',
     'transaction_id' => '4208450740201411110007820472',
-    'out_order_no' => 'P20150806125346',
-    'receivers' => [[
-      'type' => 'MERCHANT_ID',
-      'account' => '1900000109',
-      'amount' => 190,
+    'out_order_no'   => 'P20150806125346',
+    'receivers'      => [[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '1900000109',
+      'amount'      => 190,
       'description' => '1900000109分给商户1900000110',
-      'name' => 'hu89ohu89ohu89o',
+      'name'        => 'hu89ohu89ohu89o',
     ],],
-    'finish' => true,
+    'finish'         => true,
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -188,11 +188,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_mchid {data-required}| string | 品牌主商户号
-| sub_mchid {data-required}| string | 子商户号
-| transaction_id {data-required}| string | 微信订单号
-| out_order_no {data-required}| string | 商户分账单号
-| order_id {data-required}| string | 微信分账单号
+| brand_mchid {data-required} | string | 品牌主商户号
+| sub_mchid {data-required} | string | 子商户号
+| transaction_id {data-required} | string | 微信订单号
+| out_order_no {data-required} | string | 商户分账单号
+| order_id {data-required} | string | 微信分账单号
 | receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | type {data-required data-indent=1} | string | 接收方类型
 | account {data-required data-indent=1} | string | 接收方账号
@@ -302,12 +302,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| transaction_id {data-required}| string | 微信订单号
-| out_order_no {data-required}| string | 商户分账单号
-| order_id {data-required}| string | 微信分账单号
-| status {data-required}| string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
-| receivers {data-required}| object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
+| sub_mchid {data-required} | string | 子商户号
+| transaction_id {data-required} | string | 微信订单号
+| out_order_no {data-required} | string | 商户分账单号
+| order_id {data-required} | string | 微信分账单号
+| status {data-required} | string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
+| receivers {data-required} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方账号
 | amount {data-required data-indent=1} | integer | 分账金额

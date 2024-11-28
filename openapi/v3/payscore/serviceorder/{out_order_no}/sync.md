@@ -25,10 +25,10 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 $instance->v3->payscore->serviceorder->_out_order_no_->sync->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091210',
     ],
   ],
@@ -43,10 +43,10 @@ $instance->v3->payscore->serviceorder->_out_order_no_->sync->postAsync([
 $instance->chain('v3/payscore/serviceorder/{out_order_no}/sync')->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091210',
     ],
   ],
@@ -61,10 +61,10 @@ $instance->chain('v3/payscore/serviceorder/{out_order_no}/sync')->postAsync([
 $instance['v3/payscore/serviceorder/{out_order_no}/sync']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091210',
     ],
   ],
@@ -79,10 +79,10 @@ $instance['v3/payscore/serviceorder/{out_order_no}/sync']->postAsync([
 $response = $instance->v3->payscore->serviceorder->_out_order_no_->sync->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091210',
     ],
   ],
@@ -94,10 +94,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/serviceorder/{out_order_no}/sync')->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091210',
     ],
   ],
@@ -109,10 +109,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/serviceorder/{out_order_no}/sync']->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
-    'type' => 'Order_Paid',
-    'detail' => [
+    'type'       => 'Order_Paid',
+    'detail'     => [
       'paid_time' => '20091225091210',
     ],
   ],
@@ -124,12 +124,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 服务商公众号ID
-| mchid {data-required}| string | 服务商商户号
-| service_introduction {data-required}| string | 服务信息
-| state {data-required}| string | 服务订单状态
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 服务商公众号ID
+| mchid {data-required} | string | 服务商商户号
+| service_introduction {data-required} | string | 服务信息
+| state {data-required} | string | 服务订单状态
 | state_description | string | 订单状态说明
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费名称
@@ -167,8 +167,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | end_location {data-indent=1} | string | 服务结束地点
 | attach | string | 附加数据
 | notify_url | string | 商户回调地址
-| openid {data-required}| string | 服务商公众号下的用户标识
-| order_id {data-required}| string | 微信支付服务订单号
+| openid {data-required} | string | 服务商公众号下的用户标识
+| order_id {data-required} | string | 微信支付服务订单号
 
 {.im-table #response}
 

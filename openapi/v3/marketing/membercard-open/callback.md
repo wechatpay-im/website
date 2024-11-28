@@ -78,7 +78,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| notify_url {data-required}| string | 通知url地址
+| notify_url {data-required} | string | 通知url地址
 | mchid | string | 商户号
 
 {.im-table #response}
@@ -139,7 +139,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| notify_url {data-required}| string | 通知url地址
+| notify_url {data-required} | string | 通知url地址
 | mchid | string | 商户号
 
 {.im-table #response}

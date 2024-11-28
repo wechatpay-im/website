@@ -28,16 +28,16 @@ description: 服务商下单成功并获取`prepay_id`后，需先调用该预�
 ```php [异步纯链式]
 $instance->v3->passwordExemptContract->contracts->serviceProvider->preEntrustSign->payRedirectSign->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -49,16 +49,16 @@ $instance->v3->passwordExemptContract->contracts->serviceProvider->preEntrustSig
 ```php [异步声明式]
 $instance->chain('v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign')->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,16 +70,16 @@ $instance->chain('v3/password-exempt-contract/contracts/service-provider/pre-ent
 ```php [异步属性式]
 $instance['v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign']->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -91,16 +91,16 @@ $instance['v3/password-exempt-contract/contracts/service-provider/pre-entrust-si
 ```php [同步纯链式]
 $response = $instance->v3->passwordExemptContract->contracts->serviceProvider->preEntrustSign->payRedirectSign->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,16 +109,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign')->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -127,16 +127,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign']->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -146,10 +146,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| sub_mchid {data-required}| string | 子商户号
-| service_id {data-required}| number | 免密支付服务ID
-| out_contract_code {data-required}| string | 商户签约协议号
+| mchid {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 子商户号
+| service_id {data-required} | number | 免密支付服务ID
+| out_contract_code {data-required} | string | 商户签约协议号
 
 {.im-table #response}
 

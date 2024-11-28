@@ -23,9 +23,9 @@ description: 从业机构可调用该接口帮助特约商户进行结算规则I
 $instance->v3->merchantSettlement->merchantSettleRuleApplications->postAsync([
   'json' => [
     'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'settle_rule_id' => 760,
+    'channel_id'        => '20001111',
+    'sub_mchid'         => '1346578',
+    'settle_rule_id'    => 760,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,9 +38,9 @@ $instance->v3->merchantSettlement->merchantSettleRuleApplications->postAsync([
 $instance->chain('v3/merchant-settlement/merchant-settle-rule-applications')->postAsync([
   'json' => [
     'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'settle_rule_id' => 760,
+    'channel_id'        => '20001111',
+    'sub_mchid'         => '1346578',
+    'settle_rule_id'    => 760,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +53,9 @@ $instance->chain('v3/merchant-settlement/merchant-settle-rule-applications')->po
 $instance['v3/merchant-settlement/merchant-settle-rule-applications']->postAsync([
   'json' => [
     'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'settle_rule_id' => 760,
+    'channel_id'        => '20001111',
+    'sub_mchid'         => '1346578',
+    'settle_rule_id'    => 760,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +68,9 @@ $instance['v3/merchant-settlement/merchant-settle-rule-applications']->postAsync
 $response = $instance->v3->merchantSettlement->merchantSettleRuleApplications->post([
   'json' => [
     'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'settle_rule_id' => 760,
+    'channel_id'        => '20001111',
+    'sub_mchid'         => '1346578',
+    'settle_rule_id'    => 760,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,9 +80,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/merchant-settlement/merchant-settle-rule-applications')->post([
   'json' => [
     'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'settle_rule_id' => 760,
+    'channel_id'        => '20001111',
+    'sub_mchid'         => '1346578',
+    'settle_rule_id'    => 760,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -92,9 +92,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/merchant-settlement/merchant-settle-rule-applications']->post([
   'json' => [
     'acquiring_bank_id' => '1356485',
-    'channel_id' => '20001111',
-    'sub_mchid' => '1346578',
-    'settle_rule_id' => 760,
+    'channel_id'        => '20001111',
+    'sub_mchid'         => '1346578',
+    'settle_rule_id'    => 760,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_id {data-required}| string | 申请单编号
+| application_id {data-required} | string | 申请单编号
 | application_process_info | string | 申请单处理信息
 | application_state | string | 申请单状态
 | update_time | string | 最后更新时间

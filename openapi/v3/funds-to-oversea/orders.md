@@ -37,27 +37,27 @@ description: 商户发起资金出境请求，需要传微信支付单号，商�
 ```php [异步纯链式]
 $instance->v3->fundsToOversea->orders->postAsync([
   'json' => [
-    'out_order_id' => 'merchant_1123123',
-    'sub_mchid' => '123456',
-    'transaction_id' => '420000000000000010',
-    'amount' => 10,
+    'out_order_id'     => 'merchant_1123123',
+    'sub_mchid'        => '123456',
+    'transaction_id'   => '420000000000000010',
+    'amount'           => 10,
     'foreign_currency' => 'USD',
-    'goods_info' => [[
-      'goods_name' => '橘子',
-      'goods_category' => '家用电器',
+    'goods_info'       => [[
+      'goods_name'       => '橘子',
+      'goods_category'   => '家用电器',
       'goods_unit_price' => 1,
-      'goods_quantity' => 1,
+      'goods_quantity'   => 1,
     ],],
-    'seller_info' => [
+    'seller_info'      => [
       'oversea_business_name' => '香港xxxx公司',
-      'oversea_shop_name' => '香港xxx公司xxx店铺',
-      'seller_id' => 'id2123123123',
+      'oversea_shop_name'     => '香港xxx公司xxx店铺',
+      'seller_id'             => 'id2123123123',
     ],
-    'express_info' => [
-      'courier_number' => 'curier_number_1231',
+    'express_info'     => [
+      'courier_number'       => 'curier_number_1231',
       'express_company_name' => '国际xxx物流',
     ],
-    'payee_info' => [
+    'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
   ],
@@ -71,27 +71,27 @@ $instance->v3->fundsToOversea->orders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/funds-to-oversea/orders')->postAsync([
   'json' => [
-    'out_order_id' => 'merchant_1123123',
-    'sub_mchid' => '123456',
-    'transaction_id' => '420000000000000010',
-    'amount' => 10,
+    'out_order_id'     => 'merchant_1123123',
+    'sub_mchid'        => '123456',
+    'transaction_id'   => '420000000000000010',
+    'amount'           => 10,
     'foreign_currency' => 'USD',
-    'goods_info' => [[
-      'goods_name' => '橘子',
-      'goods_category' => '家用电器',
+    'goods_info'       => [[
+      'goods_name'       => '橘子',
+      'goods_category'   => '家用电器',
       'goods_unit_price' => 1,
-      'goods_quantity' => 1,
+      'goods_quantity'   => 1,
     ],],
-    'seller_info' => [
+    'seller_info'      => [
       'oversea_business_name' => '香港xxxx公司',
-      'oversea_shop_name' => '香港xxx公司xxx店铺',
-      'seller_id' => 'id2123123123',
+      'oversea_shop_name'     => '香港xxx公司xxx店铺',
+      'seller_id'             => 'id2123123123',
     ],
-    'express_info' => [
-      'courier_number' => 'curier_number_1231',
+    'express_info'     => [
+      'courier_number'       => 'curier_number_1231',
       'express_company_name' => '国际xxx物流',
     ],
-    'payee_info' => [
+    'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
   ],
@@ -105,27 +105,27 @@ $instance->chain('v3/funds-to-oversea/orders')->postAsync([
 ```php [异步属性式]
 $instance['v3/funds-to-oversea/orders']->postAsync([
   'json' => [
-    'out_order_id' => 'merchant_1123123',
-    'sub_mchid' => '123456',
-    'transaction_id' => '420000000000000010',
-    'amount' => 10,
+    'out_order_id'     => 'merchant_1123123',
+    'sub_mchid'        => '123456',
+    'transaction_id'   => '420000000000000010',
+    'amount'           => 10,
     'foreign_currency' => 'USD',
-    'goods_info' => [[
-      'goods_name' => '橘子',
-      'goods_category' => '家用电器',
+    'goods_info'       => [[
+      'goods_name'       => '橘子',
+      'goods_category'   => '家用电器',
       'goods_unit_price' => 1,
-      'goods_quantity' => 1,
+      'goods_quantity'   => 1,
     ],],
-    'seller_info' => [
+    'seller_info'      => [
       'oversea_business_name' => '香港xxxx公司',
-      'oversea_shop_name' => '香港xxx公司xxx店铺',
-      'seller_id' => 'id2123123123',
+      'oversea_shop_name'     => '香港xxx公司xxx店铺',
+      'seller_id'             => 'id2123123123',
     ],
-    'express_info' => [
-      'courier_number' => 'curier_number_1231',
+    'express_info'     => [
+      'courier_number'       => 'curier_number_1231',
       'express_company_name' => '国际xxx物流',
     ],
-    'payee_info' => [
+    'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
   ],
@@ -139,27 +139,27 @@ $instance['v3/funds-to-oversea/orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->fundsToOversea->orders->post([
   'json' => [
-    'out_order_id' => 'merchant_1123123',
-    'sub_mchid' => '123456',
-    'transaction_id' => '420000000000000010',
-    'amount' => 10,
+    'out_order_id'     => 'merchant_1123123',
+    'sub_mchid'        => '123456',
+    'transaction_id'   => '420000000000000010',
+    'amount'           => 10,
     'foreign_currency' => 'USD',
-    'goods_info' => [[
-      'goods_name' => '橘子',
-      'goods_category' => '家用电器',
+    'goods_info'       => [[
+      'goods_name'       => '橘子',
+      'goods_category'   => '家用电器',
       'goods_unit_price' => 1,
-      'goods_quantity' => 1,
+      'goods_quantity'   => 1,
     ],],
-    'seller_info' => [
+    'seller_info'      => [
       'oversea_business_name' => '香港xxxx公司',
-      'oversea_shop_name' => '香港xxx公司xxx店铺',
-      'seller_id' => 'id2123123123',
+      'oversea_shop_name'     => '香港xxx公司xxx店铺',
+      'seller_id'             => 'id2123123123',
     ],
-    'express_info' => [
-      'courier_number' => 'curier_number_1231',
+    'express_info'     => [
+      'courier_number'       => 'curier_number_1231',
       'express_company_name' => '国际xxx物流',
     ],
-    'payee_info' => [
+    'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
   ],
@@ -170,27 +170,27 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/funds-to-oversea/orders')->post([
   'json' => [
-    'out_order_id' => 'merchant_1123123',
-    'sub_mchid' => '123456',
-    'transaction_id' => '420000000000000010',
-    'amount' => 10,
+    'out_order_id'     => 'merchant_1123123',
+    'sub_mchid'        => '123456',
+    'transaction_id'   => '420000000000000010',
+    'amount'           => 10,
     'foreign_currency' => 'USD',
-    'goods_info' => [[
-      'goods_name' => '橘子',
-      'goods_category' => '家用电器',
+    'goods_info'       => [[
+      'goods_name'       => '橘子',
+      'goods_category'   => '家用电器',
       'goods_unit_price' => 1,
-      'goods_quantity' => 1,
+      'goods_quantity'   => 1,
     ],],
-    'seller_info' => [
+    'seller_info'      => [
       'oversea_business_name' => '香港xxxx公司',
-      'oversea_shop_name' => '香港xxx公司xxx店铺',
-      'seller_id' => 'id2123123123',
+      'oversea_shop_name'     => '香港xxx公司xxx店铺',
+      'seller_id'             => 'id2123123123',
     ],
-    'express_info' => [
-      'courier_number' => 'curier_number_1231',
+    'express_info'     => [
+      'courier_number'       => 'curier_number_1231',
       'express_company_name' => '国际xxx物流',
     ],
-    'payee_info' => [
+    'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
   ],
@@ -201,27 +201,27 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/funds-to-oversea/orders']->post([
   'json' => [
-    'out_order_id' => 'merchant_1123123',
-    'sub_mchid' => '123456',
-    'transaction_id' => '420000000000000010',
-    'amount' => 10,
+    'out_order_id'     => 'merchant_1123123',
+    'sub_mchid'        => '123456',
+    'transaction_id'   => '420000000000000010',
+    'amount'           => 10,
     'foreign_currency' => 'USD',
-    'goods_info' => [[
-      'goods_name' => '橘子',
-      'goods_category' => '家用电器',
+    'goods_info'       => [[
+      'goods_name'       => '橘子',
+      'goods_category'   => '家用电器',
       'goods_unit_price' => 1,
-      'goods_quantity' => 1,
+      'goods_quantity'   => 1,
     ],],
-    'seller_info' => [
+    'seller_info'      => [
       'oversea_business_name' => '香港xxxx公司',
-      'oversea_shop_name' => '香港xxx公司xxx店铺',
-      'seller_id' => 'id2123123123',
+      'oversea_shop_name'     => '香港xxx公司xxx店铺',
+      'seller_id'             => 'id2123123123',
     ],
-    'express_info' => [
-      'courier_number' => 'curier_number_1231',
+    'express_info'     => [
+      'courier_number'       => 'curier_number_1231',
       'express_company_name' => '国际xxx物流',
     ],
-    'payee_info' => [
+    'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
   ],
@@ -233,14 +233,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_id {data-required}| string | 商户出境单号
-| sub_mchid {data-required}| string | 二级商户号
-| order_id {data-required}| string | 微信出境单号
-| result {data-required}| string | 出境结果
+| out_order_id {data-required} | string | 商户出境单号
+| sub_mchid {data-required} | string | 二级商户号
+| order_id {data-required} | string | 微信出境单号
+| result {data-required} | string | 出境结果
 | fail_reason | string | 出境失败的原因
-| amount {data-required}| integer | 请求出境人民币金额
+| amount {data-required} | integer | 请求出境人民币金额
 | foreign_amount | integer | 真实出境外币金额
-| foreign_currency {data-required}| string | 外币币种
+| foreign_currency {data-required} | string | 外币币种
 | rate | integer | 汇率
 | exchange_rate_time | string | 购汇时间
 | estimate_exchange_rate_time | string | 预计购汇时间

@@ -97,10 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_appid {data-required}| string | 服务商公众号ID
-| sp_mchid {data-required}| string | 服务商户号
+| sp_appid {data-required} | string | 服务商公众号ID
+| sp_mchid {data-required} | string | 服务商户号
 | sub_appid | string | 子商户公众号ID
-| sub_mchid {data-required}| string | 子商户号
+| sub_mchid {data-required} | string | 子商户号
 | settle_info | object {data-tooltip="对应PHP的array"} | 结算信息
 | profit_sharing {data-indent=1} | boolean | 是否指定分账
 | subsidy_amount {data-indent=1} | integer | 补差金额
@@ -110,14 +110,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | trade_state_desc | string | 交易状态描述
 | bank_type | string | 付款银行
 | success_time | string | 支付完成时间
-| description {data-required}| string | 商品描述
+| description {data-required} | string | 商品描述
 | attach | string | 附加数据
-| out_trade_no {data-required}| string | 商户订单号
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| out_trade_no {data-required} | string | 商户订单号
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=1} | integer | 总金额
 | currency {data-indent=1} | string | 货币类型
 | time_expire | string | 交易结束时间
-| notify_url {data-required}| string | 通知地址
+| notify_url {data-required} | string | 通知地址
 | goods_tag | string | 订单优惠标记
 | limit_pay | string[] | 指定支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
 | support_fapiao | boolean | 电子发票入口开放标识

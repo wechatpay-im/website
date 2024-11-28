@@ -31,20 +31,20 @@ description: 商户可以基于有按计划确认权限的服务，通过此接�
 ```php [异步纯链式]
 $instance->v3->payscore->plan->payscorePlans->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'plan_name' => '瑜伽课20节',
-    'plan_duration' => 300,
-    'deduction_quantity' => 10,
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'plan_name'            => '瑜伽课20节',
+    'plan_duration'        => 300,
+    'deduction_quantity'   => 10,
     'total_original_price' => 15000,
-    'total_actual_price' => 15000,
-    'plan_detail_list' => [[
-      'original_price' => 15000,
+    'total_actual_price'   => 15000,
+    'plan_detail_list'     => [[
+      'original_price'            => 15000,
       'plan_discount_description' => '享受九折',
-      'actual_price' => 14000,
-      'plan_detail_name' => '第八节课',
+      'actual_price'              => 14000,
+      'plan_detail_name'          => '第八节课',
     ],],
-    'merchant_plan_no' => '1234323JKHDFE1243252',
+    'merchant_plan_no'     => '1234323JKHDFE1243252',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,20 +56,20 @@ $instance->v3->payscore->plan->payscorePlans->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/plan/payscore-plans')->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'plan_name' => '瑜伽课20节',
-    'plan_duration' => 300,
-    'deduction_quantity' => 10,
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'plan_name'            => '瑜伽课20节',
+    'plan_duration'        => 300,
+    'deduction_quantity'   => 10,
     'total_original_price' => 15000,
-    'total_actual_price' => 15000,
-    'plan_detail_list' => [[
-      'original_price' => 15000,
+    'total_actual_price'   => 15000,
+    'plan_detail_list'     => [[
+      'original_price'            => 15000,
       'plan_discount_description' => '享受九折',
-      'actual_price' => 14000,
-      'plan_detail_name' => '第八节课',
+      'actual_price'              => 14000,
+      'plan_detail_name'          => '第八节课',
     ],],
-    'merchant_plan_no' => '1234323JKHDFE1243252',
+    'merchant_plan_no'     => '1234323JKHDFE1243252',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,20 +81,20 @@ $instance->chain('v3/payscore/plan/payscore-plans')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/plan/payscore-plans']->postAsync([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'plan_name' => '瑜伽课20节',
-    'plan_duration' => 300,
-    'deduction_quantity' => 10,
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'plan_name'            => '瑜伽课20节',
+    'plan_duration'        => 300,
+    'deduction_quantity'   => 10,
     'total_original_price' => 15000,
-    'total_actual_price' => 15000,
-    'plan_detail_list' => [[
-      'original_price' => 15000,
+    'total_actual_price'   => 15000,
+    'plan_detail_list'     => [[
+      'original_price'            => 15000,
       'plan_discount_description' => '享受九折',
-      'actual_price' => 14000,
-      'plan_detail_name' => '第八节课',
+      'actual_price'              => 14000,
+      'plan_detail_name'          => '第八节课',
     ],],
-    'merchant_plan_no' => '1234323JKHDFE1243252',
+    'merchant_plan_no'     => '1234323JKHDFE1243252',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -106,20 +106,20 @@ $instance['v3/payscore/plan/payscore-plans']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->plan->payscorePlans->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'plan_name' => '瑜伽课20节',
-    'plan_duration' => 300,
-    'deduction_quantity' => 10,
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'plan_name'            => '瑜伽课20节',
+    'plan_duration'        => 300,
+    'deduction_quantity'   => 10,
     'total_original_price' => 15000,
-    'total_actual_price' => 15000,
-    'plan_detail_list' => [[
-      'original_price' => 15000,
+    'total_actual_price'   => 15000,
+    'plan_detail_list'     => [[
+      'original_price'            => 15000,
       'plan_discount_description' => '享受九折',
-      'actual_price' => 14000,
-      'plan_detail_name' => '第八节课',
+      'actual_price'              => 14000,
+      'plan_detail_name'          => '第八节课',
     ],],
-    'merchant_plan_no' => '1234323JKHDFE1243252',
+    'merchant_plan_no'     => '1234323JKHDFE1243252',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -128,20 +128,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/plan/payscore-plans')->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'plan_name' => '瑜伽课20节',
-    'plan_duration' => 300,
-    'deduction_quantity' => 10,
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'plan_name'            => '瑜伽课20节',
+    'plan_duration'        => 300,
+    'deduction_quantity'   => 10,
     'total_original_price' => 15000,
-    'total_actual_price' => 15000,
-    'plan_detail_list' => [[
-      'original_price' => 15000,
+    'total_actual_price'   => 15000,
+    'plan_detail_list'     => [[
+      'original_price'            => 15000,
       'plan_discount_description' => '享受九折',
-      'actual_price' => 14000,
-      'plan_detail_name' => '第八节课',
+      'actual_price'              => 14000,
+      'plan_detail_name'          => '第八节课',
     ],],
-    'merchant_plan_no' => '1234323JKHDFE1243252',
+    'merchant_plan_no'     => '1234323JKHDFE1243252',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -150,20 +150,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/plan/payscore-plans']->post([
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'plan_name' => '瑜伽课20节',
-    'plan_duration' => 300,
-    'deduction_quantity' => 10,
+    'service_id'           => '2002000000000558128851361561536',
+    'appid'                => 'wxd678efh567hg6787',
+    'plan_name'            => '瑜伽课20节',
+    'plan_duration'        => 300,
+    'deduction_quantity'   => 10,
     'total_original_price' => 15000,
-    'total_actual_price' => 15000,
-    'plan_detail_list' => [[
-      'original_price' => 15000,
+    'total_actual_price'   => 15000,
+    'plan_detail_list'     => [[
+      'original_price'            => 15000,
       'plan_discount_description' => '享受九折',
-      'actual_price' => 14000,
-      'plan_detail_name' => '第八节课',
+      'actual_price'              => 14000,
+      'plan_detail_name'          => '第八节课',
     ],],
-    'merchant_plan_no' => '1234323JKHDFE1243252',
+    'merchant_plan_no'     => '1234323JKHDFE1243252',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -173,17 +173,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plan_id {data-required}| string | 支付分计划ID
-| service_id {data-required}| string | 计划所属服务
-| mchid {data-required}| string | 商户号
-| appid {data-required}| string | AppID
-| merchant_plan_no {data-required}| string | 商户侧计划号
-| plan_name {data-required}| string | 支付分计划名称
-| plan_duration {data-required}| number | 支付分计划有效期(单位天)
-| plan_state {data-required}| string | 支付分计划状态
-| total_original_price {data-required}| number | 支付分计划原总金额(单位分)
-| deduction_quantity {data-required}| number | 支付分计划扣费次数
-| total_actual_price {data-required}| number | 支付分计划实际扣费总金额(单位分)
+| plan_id {data-required} | string | 支付分计划ID
+| service_id {data-required} | string | 计划所属服务
+| mchid {data-required} | string | 商户号
+| appid {data-required} | string | AppID
+| merchant_plan_no {data-required} | string | 商户侧计划号
+| plan_name {data-required} | string | 支付分计划名称
+| plan_duration {data-required} | number | 支付分计划有效期(单位天)
+| plan_state {data-required} | string | 支付分计划状态
+| total_original_price {data-required} | number | 支付分计划原总金额(单位分)
+| deduction_quantity {data-required} | number | 支付分计划扣费次数
+| total_actual_price {data-required} | number | 支付分计划实际扣费总金额(单位分)
 | plan_detail_list | object[] {data-tooltip="对应PHP的array"} | 支付分计划明细列表
 | plan_detail_no {data-required data-indent=1} | number | 计划明细序号
 | plan_detail_name {data-required data-indent=1} | string | 计划明细名称

@@ -27,11 +27,11 @@ $instance->v3->ecommerce->combinePapay->transactions->_combine_out_trade_no_->re
   'combine_out_trade_no' => 'P20150806125346',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
+    'sub_orders'    => [[
+      'mchid'        => '1900000109',
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
     ],],
   ],
 ])
@@ -46,11 +46,11 @@ $instance->chain('v3/ecommerce/combine-papay/transactions/{combine_out_trade_no}
   'combine_out_trade_no' => 'P20150806125346',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
+    'sub_orders'    => [[
+      'mchid'        => '1900000109',
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
     ],],
   ],
 ])
@@ -65,11 +65,11 @@ $instance['v3/ecommerce/combine-papay/transactions/{combine_out_trade_no}/revers
   'combine_out_trade_no' => 'P20150806125346',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
+    'sub_orders'    => [[
+      'mchid'        => '1900000109',
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
     ],],
   ],
 ])
@@ -84,11 +84,11 @@ $response = $instance->v3->ecommerce->combinePapay->transactions->_combine_out_t
   'combine_out_trade_no' => 'P20150806125346',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
+    'sub_orders'    => [[
+      'mchid'        => '1900000109',
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
     ],],
   ],
 ]);
@@ -100,11 +100,11 @@ $response = $instance->chain('v3/ecommerce/combine-papay/transactions/{combine_o
   'combine_out_trade_no' => 'P20150806125346',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
+    'sub_orders'    => [[
+      'mchid'        => '1900000109',
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
     ],],
   ],
 ]);
@@ -116,11 +116,11 @@ $response = $instance['v3/ecommerce/combine-papay/transactions/{combine_out_trad
   'combine_out_trade_no' => 'P20150806125346',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
+    'sub_orders'    => [[
+      'mchid'        => '1900000109',
       'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6787',
+      'sub_mchid'    => '1900000109',
+      'sub_appid'    => 'wxd678efh567hg6787',
     ],],
   ],
 ]);

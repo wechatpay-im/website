@@ -111,25 +111,25 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| appid {data-required}| string | APPID
-| sp_mchid {data-required}| string | 机构商户号
-| sub_mchid {data-required}| string | 子商户号
-| sp_appid {data-required}| string | 机构APPID
+| mchid {data-required} | string | 商户号
+| appid {data-required} | string | APPID
+| sp_mchid {data-required} | string | 机构商户号
+| sub_mchid {data-required} | string | 子商户号
+| sp_appid {data-required} | string | 机构APPID
 | sub_appid | string | 子商户APPID
-| out_trade_no {data-required}| string | 商户订单号
-| id {data-required}| string | 微信支付订单号
+| out_trade_no {data-required} | string | 商户订单号
+| id {data-required} | string | 微信支付订单号
 | attach | string | 商户数据
-| trade_type {data-required}| string | 交易类型
-| bank_type {data-required}| string | 付款银行
-| success_time {data-required}| string | 支付完成时间
-| trade_state {data-required}| string | 交易状态
-| trade_state_desc {data-required}| string | 交易状态描述
-| payer {data-required}| object {data-tooltip="对应PHP的array"} | 支付者
+| trade_type {data-required} | string | 交易类型
+| bank_type {data-required} | string | 付款银行
+| success_time {data-required} | string | 支付完成时间
+| trade_state {data-required} | string | 交易状态
+| trade_state_desc {data-required} | string | 交易状态描述
+| payer {data-required} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=1} | string | 用户标识
 | sp_openid {data-indent=1} | string | 机构用户标识
 | sub_openid {data-indent=1} | string | 子商户用户标识
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=1} | integer | 订单金额
 | payer_total {data-required data-indent=1} | integer | 用户支付金额
 | currency {data-required data-indent=1} | string | 订单标价币种

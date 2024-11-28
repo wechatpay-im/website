@@ -104,9 +104,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 查询数据总条数
-| offset {data-required}| integer | 本次查询偏移量
-| limit {data-required}| integer | 本次查询条数
+| total_count {data-required} | integer | 查询数据总条数
+| offset {data-required} | integer | 本次查询偏移量
+| limit {data-required} | integer | 本次查询条数
 | data | object[] {data-tooltip="对应PHP的array"} | 银行来账记录列表
 | sub_mchid {data-required data-indent=1} | string | 特约商户号
 | account_type {data-required data-indent=1} | string | 账户类型
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_account_name {data-required data-indent=1} | string | 付款方银行户名
 | bank_account_number {data-required data-indent=1} | string | 付款方银行卡号
 | recharge_remark {data-required data-indent=1} | string | 银行备注
-| links {data-required}| object {data-tooltip="对应PHP的array"} | 分页链接
+| links {data-required} | object {data-tooltip="对应PHP的array"} | 分页链接
 | next {data-required data-indent=1} | string | 下一页链接
 | prev {data-required data-indent=1} | string | 上一页链接
 | self {data-required data-indent=1} | string | 当前链接

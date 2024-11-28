@@ -30,11 +30,11 @@ description: 商户上传反馈处理结果的接口。 包括商户反馈类型
 ```php [异步纯链式]
 $instance->v3->merchantService->feedbacks->postAsync([
   'json' => [
-    'transaction_id' => '4200000404201909069117582536',
-    'complainted_mchid' => '9980456248',
-    'feedback_type' => 1,
-    'feedback_content' => '已与用户协商解决',
-    'feedback_images' => ['MediaId'],
+    'transaction_id'         => '4200000404201909069117582536',
+    'complainted_mchid'      => '9980456248',
+    'feedback_type'          => 1,
+    'feedback_content'       => '已与用户协商解决',
+    'feedback_images'        => ['MediaId'],
     'launch_confirm_process' => true,
   ],
 ])
@@ -47,11 +47,11 @@ $instance->v3->merchantService->feedbacks->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchant-service/feedbacks')->postAsync([
   'json' => [
-    'transaction_id' => '4200000404201909069117582536',
-    'complainted_mchid' => '9980456248',
-    'feedback_type' => 1,
-    'feedback_content' => '已与用户协商解决',
-    'feedback_images' => ['MediaId'],
+    'transaction_id'         => '4200000404201909069117582536',
+    'complainted_mchid'      => '9980456248',
+    'feedback_type'          => 1,
+    'feedback_content'       => '已与用户协商解决',
+    'feedback_images'        => ['MediaId'],
     'launch_confirm_process' => true,
   ],
 ])
@@ -64,11 +64,11 @@ $instance->chain('v3/merchant-service/feedbacks')->postAsync([
 ```php [异步属性式]
 $instance['v3/merchant-service/feedbacks']->postAsync([
   'json' => [
-    'transaction_id' => '4200000404201909069117582536',
-    'complainted_mchid' => '9980456248',
-    'feedback_type' => 1,
-    'feedback_content' => '已与用户协商解决',
-    'feedback_images' => ['MediaId'],
+    'transaction_id'         => '4200000404201909069117582536',
+    'complainted_mchid'      => '9980456248',
+    'feedback_type'          => 1,
+    'feedback_content'       => '已与用户协商解决',
+    'feedback_images'        => ['MediaId'],
     'launch_confirm_process' => true,
   ],
 ])
@@ -81,11 +81,11 @@ $instance['v3/merchant-service/feedbacks']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantService->feedbacks->post([
   'json' => [
-    'transaction_id' => '4200000404201909069117582536',
-    'complainted_mchid' => '9980456248',
-    'feedback_type' => 1,
-    'feedback_content' => '已与用户协商解决',
-    'feedback_images' => ['MediaId'],
+    'transaction_id'         => '4200000404201909069117582536',
+    'complainted_mchid'      => '9980456248',
+    'feedback_type'          => 1,
+    'feedback_content'       => '已与用户协商解决',
+    'feedback_images'        => ['MediaId'],
     'launch_confirm_process' => true,
   ],
 ]);
@@ -95,11 +95,11 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/merchant-service/feedbacks')->post([
   'json' => [
-    'transaction_id' => '4200000404201909069117582536',
-    'complainted_mchid' => '9980456248',
-    'feedback_type' => 1,
-    'feedback_content' => '已与用户协商解决',
-    'feedback_images' => ['MediaId'],
+    'transaction_id'         => '4200000404201909069117582536',
+    'complainted_mchid'      => '9980456248',
+    'feedback_type'          => 1,
+    'feedback_content'       => '已与用户协商解决',
+    'feedback_images'        => ['MediaId'],
     'launch_confirm_process' => true,
   ],
 ]);
@@ -109,11 +109,11 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/merchant-service/feedbacks']->post([
   'json' => [
-    'transaction_id' => '4200000404201909069117582536',
-    'complainted_mchid' => '9980456248',
-    'feedback_type' => 1,
-    'feedback_content' => '已与用户协商解决',
-    'feedback_images' => ['MediaId'],
+    'transaction_id'         => '4200000404201909069117582536',
+    'complainted_mchid'      => '9980456248',
+    'feedback_type'          => 1,
+    'feedback_content'       => '已与用户协商解决',
+    'feedback_images'        => ['MediaId'],
     'launch_confirm_process' => true,
   ],
 ]);

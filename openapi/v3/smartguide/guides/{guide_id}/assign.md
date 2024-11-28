@@ -22,7 +22,7 @@ description: 用于服务商/商户开发者在顾客下单后为顾客分配服
 $instance->v3->smartguide->guides->_guide_id_->assign->postAsync([
   'guide_id' => '',
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
   ],
 ])
@@ -36,7 +36,7 @@ $instance->v3->smartguide->guides->_guide_id_->assign->postAsync([
 $instance->chain('v3/smartguide/guides/{guide_id}/assign')->postAsync([
   'guide_id' => '',
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
   ],
 ])
@@ -50,7 +50,7 @@ $instance->chain('v3/smartguide/guides/{guide_id}/assign')->postAsync([
 $instance['v3/smartguide/guides/{guide_id}/assign']->postAsync([
   'guide_id' => '',
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
   ],
 ])
@@ -64,7 +64,7 @@ $instance['v3/smartguide/guides/{guide_id}/assign']->postAsync([
 $response = $instance->v3->smartguide->guides->_guide_id_->assign->post([
   'guide_id' => '',
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
   ],
 ]);
@@ -75,7 +75,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/smartguide/guides/{guide_id}/assign')->post([
   'guide_id' => '',
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
   ],
 ]);
@@ -86,7 +86,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/smartguide/guides/{guide_id}/assign']->post([
   'guide_id' => '',
   'json' => [
-    'sub_mchid' => '1234567890',
+    'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
   ],
 ]);

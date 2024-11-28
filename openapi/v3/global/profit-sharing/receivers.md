@@ -29,18 +29,18 @@
 $instance->v3->global->profitSharing->receivers->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'authorized' => true,
-    'relation_type' => 'SERVICE_PROVIDER',
-    'custom_relation' => '代理商',
-    'scene' => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
-    'major_service' => '税务准备服务',
-    'expected_ratio' => 2000,
+    'sub_mchid'           => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888889',
+    'type'                => 'MERCHANT_ID',
+    'account'             => '86693852',
+    'name'                => 'hu89ohu89ohu89o',
+    'authorized'          => true,
+    'relation_type'       => 'SERVICE_PROVIDER',
+    'custom_relation'     => '代理商',
+    'scene'               => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
+    'major_service'       => '税务准备服务',
+    'expected_ratio'      => 2000,
     'application_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
     'partnership_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
   ],
@@ -55,18 +55,18 @@ $instance->v3->global->profitSharing->receivers->postAsync([
 $instance->chain('v3/global/profit-sharing/receivers')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'authorized' => true,
-    'relation_type' => 'SERVICE_PROVIDER',
-    'custom_relation' => '代理商',
-    'scene' => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
-    'major_service' => '税务准备服务',
-    'expected_ratio' => 2000,
+    'sub_mchid'           => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888889',
+    'type'                => 'MERCHANT_ID',
+    'account'             => '86693852',
+    'name'                => 'hu89ohu89ohu89o',
+    'authorized'          => true,
+    'relation_type'       => 'SERVICE_PROVIDER',
+    'custom_relation'     => '代理商',
+    'scene'               => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
+    'major_service'       => '税务准备服务',
+    'expected_ratio'      => 2000,
     'application_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
     'partnership_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
   ],
@@ -81,18 +81,18 @@ $instance->chain('v3/global/profit-sharing/receivers')->postAsync([
 $instance['v3/global/profit-sharing/receivers']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'authorized' => true,
-    'relation_type' => 'SERVICE_PROVIDER',
-    'custom_relation' => '代理商',
-    'scene' => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
-    'major_service' => '税务准备服务',
-    'expected_ratio' => 2000,
+    'sub_mchid'           => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888889',
+    'type'                => 'MERCHANT_ID',
+    'account'             => '86693852',
+    'name'                => 'hu89ohu89ohu89o',
+    'authorized'          => true,
+    'relation_type'       => 'SERVICE_PROVIDER',
+    'custom_relation'     => '代理商',
+    'scene'               => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
+    'major_service'       => '税务准备服务',
+    'expected_ratio'      => 2000,
     'application_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
     'partnership_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
   ],
@@ -107,18 +107,18 @@ $instance['v3/global/profit-sharing/receivers']->postAsync([
 $response = $instance->v3->global->profitSharing->receivers->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'authorized' => true,
-    'relation_type' => 'SERVICE_PROVIDER',
-    'custom_relation' => '代理商',
-    'scene' => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
-    'major_service' => '税务准备服务',
-    'expected_ratio' => 2000,
+    'sub_mchid'           => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888889',
+    'type'                => 'MERCHANT_ID',
+    'account'             => '86693852',
+    'name'                => 'hu89ohu89ohu89o',
+    'authorized'          => true,
+    'relation_type'       => 'SERVICE_PROVIDER',
+    'custom_relation'     => '代理商',
+    'scene'               => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
+    'major_service'       => '税务准备服务',
+    'expected_ratio'      => 2000,
     'application_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
     'partnership_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
   ],
@@ -130,18 +130,18 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/profit-sharing/receivers')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'authorized' => true,
-    'relation_type' => 'SERVICE_PROVIDER',
-    'custom_relation' => '代理商',
-    'scene' => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
-    'major_service' => '税务准备服务',
-    'expected_ratio' => 2000,
+    'sub_mchid'           => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888889',
+    'type'                => 'MERCHANT_ID',
+    'account'             => '86693852',
+    'name'                => 'hu89ohu89ohu89o',
+    'authorized'          => true,
+    'relation_type'       => 'SERVICE_PROVIDER',
+    'custom_relation'     => '代理商',
+    'scene'               => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
+    'major_service'       => '税务准备服务',
+    'expected_ratio'      => 2000,
     'application_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
     'partnership_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
   ],
@@ -153,18 +153,18 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/profit-sharing/receivers']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'authorized' => true,
-    'relation_type' => 'SERVICE_PROVIDER',
-    'custom_relation' => '代理商',
-    'scene' => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
-    'major_service' => '税务准备服务',
-    'expected_ratio' => 2000,
+    'sub_mchid'           => '1900000109',
+    'appid'               => 'wx8888888888888888',
+    'sub_appid'           => 'wx8888888888888889',
+    'type'                => 'MERCHANT_ID',
+    'account'             => '86693852',
+    'name'                => 'hu89ohu89ohu89o',
+    'authorized'          => true,
+    'relation_type'       => 'SERVICE_PROVIDER',
+    'custom_relation'     => '代理商',
+    'scene'               => '该分账接收方是境内税费服务提供方，帮助商户向境内海关代扣代缴税费。',
+    'major_service'       => '税务准备服务',
+    'expected_ratio'      => 2000,
     'application_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
     'partnership_file_id' => 'de851a06-5a38-9d31-a102-275a17c477de',
   ],
@@ -177,10 +177,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| type {data-required}| string | 分账接收方类型
-| account {data-required}| string | 分账接收方账号
+| type {data-required} | string | 分账接收方类型
+| account {data-required} | string | 分账接收方账号
 | name | string | 分账接收方全称
-| relation_type {data-required}| string | 与分账方的关系类型
+| relation_type {data-required} | string | 与分账方的关系类型
 | custom_relation | string | 自定义的分账关系
 | scene | string | 分账场景详细描述
 | major_service | string | 接收方商户的主营业务范围
@@ -218,10 +218,10 @@ $instance->v3->global->profitSharing->receivers->deleteAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
+    'type'      => 'MERCHANT_ID',
+    'account'   => '86693852',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -235,10 +235,10 @@ $instance->chain('v3/global/profit-sharing/receivers')->deleteAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
+    'type'      => 'MERCHANT_ID',
+    'account'   => '86693852',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -252,10 +252,10 @@ $instance['v3/global/profit-sharing/receivers']->deleteAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
+    'type'      => 'MERCHANT_ID',
+    'account'   => '86693852',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -269,10 +269,10 @@ $response = $instance->v3->global->profitSharing->receivers->delete([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
+    'type'      => 'MERCHANT_ID',
+    'account'   => '86693852',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -283,10 +283,10 @@ $response = $instance->chain('v3/global/profit-sharing/receivers')->delete([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
+    'type'      => 'MERCHANT_ID',
+    'account'   => '86693852',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -297,10 +297,10 @@ $response = $instance['v3/global/profit-sharing/receivers']->delete([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
+    'appid'     => 'wx8888888888888888',
     'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
+    'type'      => 'MERCHANT_ID',
+    'account'   => '86693852',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

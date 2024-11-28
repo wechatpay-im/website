@@ -27,12 +27,12 @@ description: 生成授权token信息
 ```php [异步纯链式]
 $instance->v3->payrollCard->tokens->postAsync([
   'json' => [
-    'openid' => '9x111111',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'openid'          => '9x111111',
+    'appid'           => 'wxa1111111',
+    'sub_appid'       => 'wxa1111111',
+    'sub_mchid'       => '1111111',
+    'user_name'       => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'  => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
@@ -48,12 +48,12 @@ $instance->v3->payrollCard->tokens->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payroll-card/tokens')->postAsync([
   'json' => [
-    'openid' => '9x111111',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'openid'          => '9x111111',
+    'appid'           => 'wxa1111111',
+    'sub_appid'       => 'wxa1111111',
+    'sub_mchid'       => '1111111',
+    'user_name'       => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'  => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
@@ -69,12 +69,12 @@ $instance->chain('v3/payroll-card/tokens')->postAsync([
 ```php [异步属性式]
 $instance['v3/payroll-card/tokens']->postAsync([
   'json' => [
-    'openid' => '9x111111',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'openid'          => '9x111111',
+    'appid'           => 'wxa1111111',
+    'sub_appid'       => 'wxa1111111',
+    'sub_mchid'       => '1111111',
+    'user_name'       => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'  => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
@@ -90,12 +90,12 @@ $instance['v3/payroll-card/tokens']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payrollCard->tokens->post([
   'json' => [
-    'openid' => '9x111111',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'openid'          => '9x111111',
+    'appid'           => 'wxa1111111',
+    'sub_appid'       => 'wxa1111111',
+    'sub_mchid'       => '1111111',
+    'user_name'       => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'  => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
@@ -108,12 +108,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payroll-card/tokens')->post([
   'json' => [
-    'openid' => '9x111111',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'openid'          => '9x111111',
+    'appid'           => 'wxa1111111',
+    'sub_appid'       => 'wxa1111111',
+    'sub_mchid'       => '1111111',
+    'user_name'       => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'  => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
@@ -126,12 +126,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payroll-card/tokens']->post([
   'json' => [
-    'openid' => '9x111111',
-    'appid' => 'wxa1111111',
-    'sub_appid' => 'wxa1111111',
-    'sub_mchid' => '1111111',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'openid'          => '9x111111',
+    'appid'           => 'wxa1111111',
+    'sub_appid'       => 'wxa1111111',
+    'sub_mchid'       => '1111111',
+    'user_name'       => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'  => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'employment_type' => 'LONG_TERM_EMPLOYMENT',
   ],
   'headers' => [
@@ -145,11 +145,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid {data-required}| string | 用户标识
-| mchid {data-required}| string | 服务商商户号
-| sub_mchid {data-required}| string | 子商户号
-| token {data-required}| string | 授权token
-| expires_in {data-required}| integer | token有效时间
+| openid {data-required} | string | 用户标识
+| mchid {data-required} | string | 服务商商户号
+| sub_mchid {data-required} | string | 子商户号
+| token {data-required} | string | 授权token
+| expires_in {data-required} | integer | token有效时间
 
 {.im-table #response}
 

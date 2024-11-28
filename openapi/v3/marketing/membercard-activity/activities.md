@@ -56,60 +56,60 @@
 ```php [异步纯链式]
 $instance->v3->marketing->membercardActivity->activities->postAsync([
   'json' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'activity_name' => '良品铺子回馈活动',
-    'activity_type' => 'NON_MEMBER_AFTERPAY',
-    'begin_time' => '2020-01-20T13:29:35.120+08:00',
-    'end_time' => '2020-01-29T13:29:35.120+08:00',
-    'award_send_period' => [
-      'award_send_time' => [[
+    'card_id'                      => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'activity_name'                => '良品铺子回馈活动',
+    'activity_type'                => 'NON_MEMBER_AFTERPAY',
+    'begin_time'                   => '2020-01-20T13:29:35.120+08:00',
+    'end_time'                     => '2020-01-29T13:29:35.120+08:00',
+    'award_send_period'            => [
+      'award_send_time'     => [[
         'begin_time' => '2020-01-21T00:00:00.000+08:00',
-        'end_time' => '2020-01-27T00:00:00.000+08:00',
+        'end_time'   => '2020-01-27T00:00:00.000+08:00',
       ],],
       'award_send_day_time' => [[
         'begin_day_time' => [
-          'hours' => 9,
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
-        'end_day_time' => [
-          'hours' => 9,
+        'end_day_time'   => [
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
       ],],
     ],
-    'stock_list' => [[
+    'stock_list'                   => [[
       'stock_creator_mchid' => '10000022',
-      'stock_id' => '98065001',
+      'stock_id'            => '98065001',
     ],],
-    'out_request_no' => '100002322019090134234sfdf',
-    'pay_activity_setting' => [
-      'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'out_request_no'               => '100002322019090134234sfdf',
+    'pay_activity_setting'         => [
+      'logo_url'              => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
       'activity_second_title' => '湖南麻辣美食券',
-      'mchid_list' => ['string'],
-      'activate_setting' => [
-        'activate_type' => 'AUTO_ACTIVATE',
-        'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+      'mchid_list'            => ['string'],
+      'activate_setting'      => [
+        'activate_type'        => 'AUTO_ACTIVATE',
+        'activate_url'         => 'https://w.url.cn/s/Ahz3p2C',
         'activate_miniprogram' => [
           'activate_appid' => 'wxea9c30a90fs8d3fe',
-          'activate_path' => 'pages/activate/activate',
+          'activate_path'  => 'pages/activate/activate',
         ],
       ],
-      'payment_setting' => [
+      'payment_setting'       => [
         'payment_mode' => [
           'payment_scene_list' => ['string'],
         ],
-        'limit_bank' => 'CFT',
-        'goods_tags' => ['string'],
+        'limit_bank'   => 'CFT',
+        'goods_tags'   => ['string'],
       ],
     ],
     'miniprogram_activity_setting' => [
-      'outer_str' => ['string'],
+      'outer_str'         => ['string'],
       'award_jump_deploy' => [
         'mini_program_appid' => 'wxc0b84a53ed8e8d29',
-        'mini_program_path' => 'mall/pages/List',
-        'button_text' => '点击',
+        'mini_program_path'  => 'mall/pages/List',
+        'button_text'        => '点击',
       ],
     ],
   ],
@@ -123,60 +123,60 @@ $instance->v3->marketing->membercardActivity->activities->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/membercard-activity/activities')->postAsync([
   'json' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'activity_name' => '良品铺子回馈活动',
-    'activity_type' => 'NON_MEMBER_AFTERPAY',
-    'begin_time' => '2020-01-20T13:29:35.120+08:00',
-    'end_time' => '2020-01-29T13:29:35.120+08:00',
-    'award_send_period' => [
-      'award_send_time' => [[
+    'card_id'                      => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'activity_name'                => '良品铺子回馈活动',
+    'activity_type'                => 'NON_MEMBER_AFTERPAY',
+    'begin_time'                   => '2020-01-20T13:29:35.120+08:00',
+    'end_time'                     => '2020-01-29T13:29:35.120+08:00',
+    'award_send_period'            => [
+      'award_send_time'     => [[
         'begin_time' => '2020-01-21T00:00:00.000+08:00',
-        'end_time' => '2020-01-27T00:00:00.000+08:00',
+        'end_time'   => '2020-01-27T00:00:00.000+08:00',
       ],],
       'award_send_day_time' => [[
         'begin_day_time' => [
-          'hours' => 9,
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
-        'end_day_time' => [
-          'hours' => 9,
+        'end_day_time'   => [
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
       ],],
     ],
-    'stock_list' => [[
+    'stock_list'                   => [[
       'stock_creator_mchid' => '10000022',
-      'stock_id' => '98065001',
+      'stock_id'            => '98065001',
     ],],
-    'out_request_no' => '100002322019090134234sfdf',
-    'pay_activity_setting' => [
-      'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'out_request_no'               => '100002322019090134234sfdf',
+    'pay_activity_setting'         => [
+      'logo_url'              => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
       'activity_second_title' => '湖南麻辣美食券',
-      'mchid_list' => ['string'],
-      'activate_setting' => [
-        'activate_type' => 'AUTO_ACTIVATE',
-        'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+      'mchid_list'            => ['string'],
+      'activate_setting'      => [
+        'activate_type'        => 'AUTO_ACTIVATE',
+        'activate_url'         => 'https://w.url.cn/s/Ahz3p2C',
         'activate_miniprogram' => [
           'activate_appid' => 'wxea9c30a90fs8d3fe',
-          'activate_path' => 'pages/activate/activate',
+          'activate_path'  => 'pages/activate/activate',
         ],
       ],
-      'payment_setting' => [
+      'payment_setting'       => [
         'payment_mode' => [
           'payment_scene_list' => ['string'],
         ],
-        'limit_bank' => 'CFT',
-        'goods_tags' => ['string'],
+        'limit_bank'   => 'CFT',
+        'goods_tags'   => ['string'],
       ],
     ],
     'miniprogram_activity_setting' => [
-      'outer_str' => ['string'],
+      'outer_str'         => ['string'],
       'award_jump_deploy' => [
         'mini_program_appid' => 'wxc0b84a53ed8e8d29',
-        'mini_program_path' => 'mall/pages/List',
-        'button_text' => '点击',
+        'mini_program_path'  => 'mall/pages/List',
+        'button_text'        => '点击',
       ],
     ],
   ],
@@ -190,60 +190,60 @@ $instance->chain('v3/marketing/membercard-activity/activities')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/membercard-activity/activities']->postAsync([
   'json' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'activity_name' => '良品铺子回馈活动',
-    'activity_type' => 'NON_MEMBER_AFTERPAY',
-    'begin_time' => '2020-01-20T13:29:35.120+08:00',
-    'end_time' => '2020-01-29T13:29:35.120+08:00',
-    'award_send_period' => [
-      'award_send_time' => [[
+    'card_id'                      => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'activity_name'                => '良品铺子回馈活动',
+    'activity_type'                => 'NON_MEMBER_AFTERPAY',
+    'begin_time'                   => '2020-01-20T13:29:35.120+08:00',
+    'end_time'                     => '2020-01-29T13:29:35.120+08:00',
+    'award_send_period'            => [
+      'award_send_time'     => [[
         'begin_time' => '2020-01-21T00:00:00.000+08:00',
-        'end_time' => '2020-01-27T00:00:00.000+08:00',
+        'end_time'   => '2020-01-27T00:00:00.000+08:00',
       ],],
       'award_send_day_time' => [[
         'begin_day_time' => [
-          'hours' => 9,
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
-        'end_day_time' => [
-          'hours' => 9,
+        'end_day_time'   => [
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
       ],],
     ],
-    'stock_list' => [[
+    'stock_list'                   => [[
       'stock_creator_mchid' => '10000022',
-      'stock_id' => '98065001',
+      'stock_id'            => '98065001',
     ],],
-    'out_request_no' => '100002322019090134234sfdf',
-    'pay_activity_setting' => [
-      'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'out_request_no'               => '100002322019090134234sfdf',
+    'pay_activity_setting'         => [
+      'logo_url'              => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
       'activity_second_title' => '湖南麻辣美食券',
-      'mchid_list' => ['string'],
-      'activate_setting' => [
-        'activate_type' => 'AUTO_ACTIVATE',
-        'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+      'mchid_list'            => ['string'],
+      'activate_setting'      => [
+        'activate_type'        => 'AUTO_ACTIVATE',
+        'activate_url'         => 'https://w.url.cn/s/Ahz3p2C',
         'activate_miniprogram' => [
           'activate_appid' => 'wxea9c30a90fs8d3fe',
-          'activate_path' => 'pages/activate/activate',
+          'activate_path'  => 'pages/activate/activate',
         ],
       ],
-      'payment_setting' => [
+      'payment_setting'       => [
         'payment_mode' => [
           'payment_scene_list' => ['string'],
         ],
-        'limit_bank' => 'CFT',
-        'goods_tags' => ['string'],
+        'limit_bank'   => 'CFT',
+        'goods_tags'   => ['string'],
       ],
     ],
     'miniprogram_activity_setting' => [
-      'outer_str' => ['string'],
+      'outer_str'         => ['string'],
       'award_jump_deploy' => [
         'mini_program_appid' => 'wxc0b84a53ed8e8d29',
-        'mini_program_path' => 'mall/pages/List',
-        'button_text' => '点击',
+        'mini_program_path'  => 'mall/pages/List',
+        'button_text'        => '点击',
       ],
     ],
   ],
@@ -257,60 +257,60 @@ $instance['v3/marketing/membercard-activity/activities']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->membercardActivity->activities->post([
   'json' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'activity_name' => '良品铺子回馈活动',
-    'activity_type' => 'NON_MEMBER_AFTERPAY',
-    'begin_time' => '2020-01-20T13:29:35.120+08:00',
-    'end_time' => '2020-01-29T13:29:35.120+08:00',
-    'award_send_period' => [
-      'award_send_time' => [[
+    'card_id'                      => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'activity_name'                => '良品铺子回馈活动',
+    'activity_type'                => 'NON_MEMBER_AFTERPAY',
+    'begin_time'                   => '2020-01-20T13:29:35.120+08:00',
+    'end_time'                     => '2020-01-29T13:29:35.120+08:00',
+    'award_send_period'            => [
+      'award_send_time'     => [[
         'begin_time' => '2020-01-21T00:00:00.000+08:00',
-        'end_time' => '2020-01-27T00:00:00.000+08:00',
+        'end_time'   => '2020-01-27T00:00:00.000+08:00',
       ],],
       'award_send_day_time' => [[
         'begin_day_time' => [
-          'hours' => 9,
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
-        'end_day_time' => [
-          'hours' => 9,
+        'end_day_time'   => [
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
       ],],
     ],
-    'stock_list' => [[
+    'stock_list'                   => [[
       'stock_creator_mchid' => '10000022',
-      'stock_id' => '98065001',
+      'stock_id'            => '98065001',
     ],],
-    'out_request_no' => '100002322019090134234sfdf',
-    'pay_activity_setting' => [
-      'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'out_request_no'               => '100002322019090134234sfdf',
+    'pay_activity_setting'         => [
+      'logo_url'              => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
       'activity_second_title' => '湖南麻辣美食券',
-      'mchid_list' => ['string'],
-      'activate_setting' => [
-        'activate_type' => 'AUTO_ACTIVATE',
-        'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+      'mchid_list'            => ['string'],
+      'activate_setting'      => [
+        'activate_type'        => 'AUTO_ACTIVATE',
+        'activate_url'         => 'https://w.url.cn/s/Ahz3p2C',
         'activate_miniprogram' => [
           'activate_appid' => 'wxea9c30a90fs8d3fe',
-          'activate_path' => 'pages/activate/activate',
+          'activate_path'  => 'pages/activate/activate',
         ],
       ],
-      'payment_setting' => [
+      'payment_setting'       => [
         'payment_mode' => [
           'payment_scene_list' => ['string'],
         ],
-        'limit_bank' => 'CFT',
-        'goods_tags' => ['string'],
+        'limit_bank'   => 'CFT',
+        'goods_tags'   => ['string'],
       ],
     ],
     'miniprogram_activity_setting' => [
-      'outer_str' => ['string'],
+      'outer_str'         => ['string'],
       'award_jump_deploy' => [
         'mini_program_appid' => 'wxc0b84a53ed8e8d29',
-        'mini_program_path' => 'mall/pages/List',
-        'button_text' => '点击',
+        'mini_program_path'  => 'mall/pages/List',
+        'button_text'        => '点击',
       ],
     ],
   ],
@@ -321,60 +321,60 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/membercard-activity/activities')->post([
   'json' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'activity_name' => '良品铺子回馈活动',
-    'activity_type' => 'NON_MEMBER_AFTERPAY',
-    'begin_time' => '2020-01-20T13:29:35.120+08:00',
-    'end_time' => '2020-01-29T13:29:35.120+08:00',
-    'award_send_period' => [
-      'award_send_time' => [[
+    'card_id'                      => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'activity_name'                => '良品铺子回馈活动',
+    'activity_type'                => 'NON_MEMBER_AFTERPAY',
+    'begin_time'                   => '2020-01-20T13:29:35.120+08:00',
+    'end_time'                     => '2020-01-29T13:29:35.120+08:00',
+    'award_send_period'            => [
+      'award_send_time'     => [[
         'begin_time' => '2020-01-21T00:00:00.000+08:00',
-        'end_time' => '2020-01-27T00:00:00.000+08:00',
+        'end_time'   => '2020-01-27T00:00:00.000+08:00',
       ],],
       'award_send_day_time' => [[
         'begin_day_time' => [
-          'hours' => 9,
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
-        'end_day_time' => [
-          'hours' => 9,
+        'end_day_time'   => [
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
       ],],
     ],
-    'stock_list' => [[
+    'stock_list'                   => [[
       'stock_creator_mchid' => '10000022',
-      'stock_id' => '98065001',
+      'stock_id'            => '98065001',
     ],],
-    'out_request_no' => '100002322019090134234sfdf',
-    'pay_activity_setting' => [
-      'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'out_request_no'               => '100002322019090134234sfdf',
+    'pay_activity_setting'         => [
+      'logo_url'              => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
       'activity_second_title' => '湖南麻辣美食券',
-      'mchid_list' => ['string'],
-      'activate_setting' => [
-        'activate_type' => 'AUTO_ACTIVATE',
-        'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+      'mchid_list'            => ['string'],
+      'activate_setting'      => [
+        'activate_type'        => 'AUTO_ACTIVATE',
+        'activate_url'         => 'https://w.url.cn/s/Ahz3p2C',
         'activate_miniprogram' => [
           'activate_appid' => 'wxea9c30a90fs8d3fe',
-          'activate_path' => 'pages/activate/activate',
+          'activate_path'  => 'pages/activate/activate',
         ],
       ],
-      'payment_setting' => [
+      'payment_setting'       => [
         'payment_mode' => [
           'payment_scene_list' => ['string'],
         ],
-        'limit_bank' => 'CFT',
-        'goods_tags' => ['string'],
+        'limit_bank'   => 'CFT',
+        'goods_tags'   => ['string'],
       ],
     ],
     'miniprogram_activity_setting' => [
-      'outer_str' => ['string'],
+      'outer_str'         => ['string'],
       'award_jump_deploy' => [
         'mini_program_appid' => 'wxc0b84a53ed8e8d29',
-        'mini_program_path' => 'mall/pages/List',
-        'button_text' => '点击',
+        'mini_program_path'  => 'mall/pages/List',
+        'button_text'        => '点击',
       ],
     ],
   ],
@@ -385,60 +385,60 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/membercard-activity/activities']->post([
   'json' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'activity_name' => '良品铺子回馈活动',
-    'activity_type' => 'NON_MEMBER_AFTERPAY',
-    'begin_time' => '2020-01-20T13:29:35.120+08:00',
-    'end_time' => '2020-01-29T13:29:35.120+08:00',
-    'award_send_period' => [
-      'award_send_time' => [[
+    'card_id'                      => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'activity_name'                => '良品铺子回馈活动',
+    'activity_type'                => 'NON_MEMBER_AFTERPAY',
+    'begin_time'                   => '2020-01-20T13:29:35.120+08:00',
+    'end_time'                     => '2020-01-29T13:29:35.120+08:00',
+    'award_send_period'            => [
+      'award_send_time'     => [[
         'begin_time' => '2020-01-21T00:00:00.000+08:00',
-        'end_time' => '2020-01-27T00:00:00.000+08:00',
+        'end_time'   => '2020-01-27T00:00:00.000+08:00',
       ],],
       'award_send_day_time' => [[
         'begin_day_time' => [
-          'hours' => 9,
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
-        'end_day_time' => [
-          'hours' => 9,
+        'end_day_time'   => [
+          'hours'   => 9,
           'minutes' => 34,
           'seconds' => 6,
         ],
       ],],
     ],
-    'stock_list' => [[
+    'stock_list'                   => [[
       'stock_creator_mchid' => '10000022',
-      'stock_id' => '98065001',
+      'stock_id'            => '98065001',
     ],],
-    'out_request_no' => '100002322019090134234sfdf',
-    'pay_activity_setting' => [
-      'logo_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'out_request_no'               => '100002322019090134234sfdf',
+    'pay_activity_setting'         => [
+      'logo_url'              => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
       'activity_second_title' => '湖南麻辣美食券',
-      'mchid_list' => ['string'],
-      'activate_setting' => [
-        'activate_type' => 'AUTO_ACTIVATE',
-        'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+      'mchid_list'            => ['string'],
+      'activate_setting'      => [
+        'activate_type'        => 'AUTO_ACTIVATE',
+        'activate_url'         => 'https://w.url.cn/s/Ahz3p2C',
         'activate_miniprogram' => [
           'activate_appid' => 'wxea9c30a90fs8d3fe',
-          'activate_path' => 'pages/activate/activate',
+          'activate_path'  => 'pages/activate/activate',
         ],
       ],
-      'payment_setting' => [
+      'payment_setting'       => [
         'payment_mode' => [
           'payment_scene_list' => ['string'],
         ],
-        'limit_bank' => 'CFT',
-        'goods_tags' => ['string'],
+        'limit_bank'   => 'CFT',
+        'goods_tags'   => ['string'],
       ],
     ],
     'miniprogram_activity_setting' => [
-      'outer_str' => ['string'],
+      'outer_str'         => ['string'],
       'award_jump_deploy' => [
         'mini_program_appid' => 'wxc0b84a53ed8e8d29',
-        'mini_program_path' => 'mall/pages/List',
-        'button_text' => '点击',
+        'mini_program_path'  => 'mall/pages/List',
+        'button_text'        => '点击',
       ],
     ],
   ],
@@ -450,7 +450,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| string | 活动ID
+| activity_id {data-required} | string | 活动ID
 | activity_status | string | 活动的当前状态
 | create_time | string | 创建时间
 | update_time | string | 更新时间

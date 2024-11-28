@@ -45,37 +45,37 @@ description: 针对被微信支付平台不收不付管控的电商子商户，�
 ```php [异步纯链式]
 $instance->v3->mch_operate->risk->withdrawlApply->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'out_account_type' => 'BASIC_ACCOUNT',
-    'amount' => 101,
-    'out_request_no' => '2019061122222222122',
-    'payee_type' => 'OTHER_MERCHANT',
-    'payee_mchid' => '1900000109',
-    'payee_info' => [
-      'account_type' => 'ACCOUNT_TYPE_CORPORATE',
+    'sub_mchid'            => '1900000109',
+    'out_account_type'     => 'BASIC_ACCOUNT',
+    'amount'               => 101,
+    'out_request_no'       => '2019061122222222122',
+    'payee_type'           => 'OTHER_MERCHANT',
+    'payee_mchid'          => '1900000109',
+    'payee_info'           => [
+      'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name' => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank' => '工商银行',
+        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'   => '工商银行',
         'bank_branch_id' => '402713354941',
-        'bank_name' => '402713354941',
+        'bank_name'      => '402713354941',
         'account_number' => 'd+xT+MQCvrLHeorwC+w==',
       ],
-      'identity_info' => [
-        'id_doc_type' => 'IDENTIFICATION_TYPE_IDCARD',
+      'identity_info'     => [
+        'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
         'identification_name' => 'pVd1HJ6zyvPedzfg==',
-        'identification_no' => 'AOZdYGISxo4y44/UgZ69bkw==',
+        'identification_no'   => 'AOZdYGISxo4y44/UgZ69bkw==',
       ],
     ],
-    'proof_media_list' => [
+    'proof_media_list'     => [
       'proof_payee_media' => [[
         'proof_media_type' => 'WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1',
-        'proof_media' => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
+        'proof_media'      => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
       ],],
     ],
     'additional_materials' => [
       'additional_media' => ['MediaId'],
     ],
-    'remark' => '特殊理由',
+    'remark'               => '特殊理由',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -90,37 +90,37 @@ $instance->v3->mch_operate->risk->withdrawlApply->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/mch_operate/risk/withdrawl-apply')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'out_account_type' => 'BASIC_ACCOUNT',
-    'amount' => 101,
-    'out_request_no' => '2019061122222222122',
-    'payee_type' => 'OTHER_MERCHANT',
-    'payee_mchid' => '1900000109',
-    'payee_info' => [
-      'account_type' => 'ACCOUNT_TYPE_CORPORATE',
+    'sub_mchid'            => '1900000109',
+    'out_account_type'     => 'BASIC_ACCOUNT',
+    'amount'               => 101,
+    'out_request_no'       => '2019061122222222122',
+    'payee_type'           => 'OTHER_MERCHANT',
+    'payee_mchid'          => '1900000109',
+    'payee_info'           => [
+      'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name' => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank' => '工商银行',
+        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'   => '工商银行',
         'bank_branch_id' => '402713354941',
-        'bank_name' => '402713354941',
+        'bank_name'      => '402713354941',
         'account_number' => 'd+xT+MQCvrLHeorwC+w==',
       ],
-      'identity_info' => [
-        'id_doc_type' => 'IDENTIFICATION_TYPE_IDCARD',
+      'identity_info'     => [
+        'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
         'identification_name' => 'pVd1HJ6zyvPedzfg==',
-        'identification_no' => 'AOZdYGISxo4y44/UgZ69bkw==',
+        'identification_no'   => 'AOZdYGISxo4y44/UgZ69bkw==',
       ],
     ],
-    'proof_media_list' => [
+    'proof_media_list'     => [
       'proof_payee_media' => [[
         'proof_media_type' => 'WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1',
-        'proof_media' => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
+        'proof_media'      => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
       ],],
     ],
     'additional_materials' => [
       'additional_media' => ['MediaId'],
     ],
-    'remark' => '特殊理由',
+    'remark'               => '特殊理由',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -135,37 +135,37 @@ $instance->chain('v3/mch_operate/risk/withdrawl-apply')->postAsync([
 ```php [异步属性式]
 $instance['v3/mch_operate/risk/withdrawl-apply']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'out_account_type' => 'BASIC_ACCOUNT',
-    'amount' => 101,
-    'out_request_no' => '2019061122222222122',
-    'payee_type' => 'OTHER_MERCHANT',
-    'payee_mchid' => '1900000109',
-    'payee_info' => [
-      'account_type' => 'ACCOUNT_TYPE_CORPORATE',
+    'sub_mchid'            => '1900000109',
+    'out_account_type'     => 'BASIC_ACCOUNT',
+    'amount'               => 101,
+    'out_request_no'       => '2019061122222222122',
+    'payee_type'           => 'OTHER_MERCHANT',
+    'payee_mchid'          => '1900000109',
+    'payee_info'           => [
+      'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name' => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank' => '工商银行',
+        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'   => '工商银行',
         'bank_branch_id' => '402713354941',
-        'bank_name' => '402713354941',
+        'bank_name'      => '402713354941',
         'account_number' => 'd+xT+MQCvrLHeorwC+w==',
       ],
-      'identity_info' => [
-        'id_doc_type' => 'IDENTIFICATION_TYPE_IDCARD',
+      'identity_info'     => [
+        'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
         'identification_name' => 'pVd1HJ6zyvPedzfg==',
-        'identification_no' => 'AOZdYGISxo4y44/UgZ69bkw==',
+        'identification_no'   => 'AOZdYGISxo4y44/UgZ69bkw==',
       ],
     ],
-    'proof_media_list' => [
+    'proof_media_list'     => [
       'proof_payee_media' => [[
         'proof_media_type' => 'WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1',
-        'proof_media' => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
+        'proof_media'      => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
       ],],
     ],
     'additional_materials' => [
       'additional_media' => ['MediaId'],
     ],
-    'remark' => '特殊理由',
+    'remark'               => '特殊理由',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -180,37 +180,37 @@ $instance['v3/mch_operate/risk/withdrawl-apply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->mch_operate->risk->withdrawlApply->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'out_account_type' => 'BASIC_ACCOUNT',
-    'amount' => 101,
-    'out_request_no' => '2019061122222222122',
-    'payee_type' => 'OTHER_MERCHANT',
-    'payee_mchid' => '1900000109',
-    'payee_info' => [
-      'account_type' => 'ACCOUNT_TYPE_CORPORATE',
+    'sub_mchid'            => '1900000109',
+    'out_account_type'     => 'BASIC_ACCOUNT',
+    'amount'               => 101,
+    'out_request_no'       => '2019061122222222122',
+    'payee_type'           => 'OTHER_MERCHANT',
+    'payee_mchid'          => '1900000109',
+    'payee_info'           => [
+      'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name' => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank' => '工商银行',
+        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'   => '工商银行',
         'bank_branch_id' => '402713354941',
-        'bank_name' => '402713354941',
+        'bank_name'      => '402713354941',
         'account_number' => 'd+xT+MQCvrLHeorwC+w==',
       ],
-      'identity_info' => [
-        'id_doc_type' => 'IDENTIFICATION_TYPE_IDCARD',
+      'identity_info'     => [
+        'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
         'identification_name' => 'pVd1HJ6zyvPedzfg==',
-        'identification_no' => 'AOZdYGISxo4y44/UgZ69bkw==',
+        'identification_no'   => 'AOZdYGISxo4y44/UgZ69bkw==',
       ],
     ],
-    'proof_media_list' => [
+    'proof_media_list'     => [
       'proof_payee_media' => [[
         'proof_media_type' => 'WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1',
-        'proof_media' => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
+        'proof_media'      => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
       ],],
     ],
     'additional_materials' => [
       'additional_media' => ['MediaId'],
     ],
-    'remark' => '特殊理由',
+    'remark'               => '特殊理由',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -222,37 +222,37 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/mch_operate/risk/withdrawl-apply')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'out_account_type' => 'BASIC_ACCOUNT',
-    'amount' => 101,
-    'out_request_no' => '2019061122222222122',
-    'payee_type' => 'OTHER_MERCHANT',
-    'payee_mchid' => '1900000109',
-    'payee_info' => [
-      'account_type' => 'ACCOUNT_TYPE_CORPORATE',
+    'sub_mchid'            => '1900000109',
+    'out_account_type'     => 'BASIC_ACCOUNT',
+    'amount'               => 101,
+    'out_request_no'       => '2019061122222222122',
+    'payee_type'           => 'OTHER_MERCHANT',
+    'payee_mchid'          => '1900000109',
+    'payee_info'           => [
+      'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name' => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank' => '工商银行',
+        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'   => '工商银行',
         'bank_branch_id' => '402713354941',
-        'bank_name' => '402713354941',
+        'bank_name'      => '402713354941',
         'account_number' => 'd+xT+MQCvrLHeorwC+w==',
       ],
-      'identity_info' => [
-        'id_doc_type' => 'IDENTIFICATION_TYPE_IDCARD',
+      'identity_info'     => [
+        'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
         'identification_name' => 'pVd1HJ6zyvPedzfg==',
-        'identification_no' => 'AOZdYGISxo4y44/UgZ69bkw==',
+        'identification_no'   => 'AOZdYGISxo4y44/UgZ69bkw==',
       ],
     ],
-    'proof_media_list' => [
+    'proof_media_list'     => [
       'proof_payee_media' => [[
         'proof_media_type' => 'WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1',
-        'proof_media' => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
+        'proof_media'      => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
       ],],
     ],
     'additional_materials' => [
       'additional_media' => ['MediaId'],
     ],
-    'remark' => '特殊理由',
+    'remark'               => '特殊理由',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -264,37 +264,37 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/mch_operate/risk/withdrawl-apply']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'out_account_type' => 'BASIC_ACCOUNT',
-    'amount' => 101,
-    'out_request_no' => '2019061122222222122',
-    'payee_type' => 'OTHER_MERCHANT',
-    'payee_mchid' => '1900000109',
-    'payee_info' => [
-      'account_type' => 'ACCOUNT_TYPE_CORPORATE',
+    'sub_mchid'            => '1900000109',
+    'out_account_type'     => 'BASIC_ACCOUNT',
+    'amount'               => 101,
+    'out_request_no'       => '2019061122222222122',
+    'payee_type'           => 'OTHER_MERCHANT',
+    'payee_mchid'          => '1900000109',
+    'payee_info'           => [
+      'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name' => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank' => '工商银行',
+        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'   => '工商银行',
         'bank_branch_id' => '402713354941',
-        'bank_name' => '402713354941',
+        'bank_name'      => '402713354941',
         'account_number' => 'd+xT+MQCvrLHeorwC+w==',
       ],
-      'identity_info' => [
-        'id_doc_type' => 'IDENTIFICATION_TYPE_IDCARD',
+      'identity_info'     => [
+        'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
         'identification_name' => 'pVd1HJ6zyvPedzfg==',
-        'identification_no' => 'AOZdYGISxo4y44/UgZ69bkw==',
+        'identification_no'   => 'AOZdYGISxo4y44/UgZ69bkw==',
       ],
     ],
-    'proof_media_list' => [
+    'proof_media_list'     => [
       'proof_payee_media' => [[
         'proof_media_type' => 'WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1',
-        'proof_media' => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
+        'proof_media'      => 'jTpGmxUX3FBWVQ5NJTZvlKXQ',
       ],],
     ],
     'additional_materials' => [
       'additional_media' => ['MediaId'],
     ],
-    'remark' => '特殊理由',
+    'remark'               => '特殊理由',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

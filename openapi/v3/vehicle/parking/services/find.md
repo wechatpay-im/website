@@ -111,11 +111,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| plate_number {data-required}| string | 车牌号
-| plate_color {data-required}| string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| plate_number {data-required} | string | 车牌号
+| plate_color {data-required} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
 | service_open_time | string | 车牌服务开通时间
-| openid {data-required}| string | 用户标识
-| service_state {data-required}| string | 车牌服务开通状态
+| openid {data-required} | string | 用户标识
+| service_state {data-required} | string | 车牌服务开通状态
 
 {.im-table #response}
 

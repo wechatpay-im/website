@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code_information {data-required}| object {data-tooltip="对应PHP的array"} | 券code信息
+| code_information {data-required} | object {data-tooltip="对应PHP的array"} | 券code信息
 | code {data-indent=1} | string | 商户上传code
 | code_status {data-indent=1} | string | 商户上传code分配状态
 | upload_time {data-indent=1} | string | 上传时间
@@ -100,7 +100,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | openid {data-indent=1} | string | 领券用户的OpenID
 | unionid {data-indent=1} | string | 领券用户的UnionID
 | coupon_code {data-indent=1} | string | 用户券code
-| coupon_information {data-required}| object {data-tooltip="对应PHP的array"} | 券码信息
+| coupon_information {data-required} | object {data-tooltip="对应PHP的array"} | 券码信息
 | stock_name {data-required data-indent=1} | string | 商家券批次名称
 | belong_merchant {data-required data-indent=1} | string | 批次归属商户号
 | comment {data-indent=1} | string | 批次备注

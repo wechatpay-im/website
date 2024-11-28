@@ -34,14 +34,14 @@ description: 商户通过该接口，得到用户当次充电的代扣凭证，�
 $instance->v3->ebike->charge->contracts->_contract_id_->confirm->postAsync([
   'contract_id' => 'aAfixCs13LsdKPpfZfDkk2189ssXjfx',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1900000109',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
+      'start_time'            => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'device_id' => '12343232',
+      'charging_gun_number'   => '6555',
+      'device_id'             => '12343232',
     ],
   ],
 ])
@@ -55,14 +55,14 @@ $instance->v3->ebike->charge->contracts->_contract_id_->confirm->postAsync([
 $instance->chain('v3/ebike/charge/contracts/{contract_id}/confirm')->postAsync([
   'contract_id' => 'aAfixCs13LsdKPpfZfDkk2189ssXjfx',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1900000109',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
+      'start_time'            => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'device_id' => '12343232',
+      'charging_gun_number'   => '6555',
+      'device_id'             => '12343232',
     ],
   ],
 ])
@@ -76,14 +76,14 @@ $instance->chain('v3/ebike/charge/contracts/{contract_id}/confirm')->postAsync([
 $instance['v3/ebike/charge/contracts/{contract_id}/confirm']->postAsync([
   'contract_id' => 'aAfixCs13LsdKPpfZfDkk2189ssXjfx',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1900000109',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
+      'start_time'            => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'device_id' => '12343232',
+      'charging_gun_number'   => '6555',
+      'device_id'             => '12343232',
     ],
   ],
 ])
@@ -97,14 +97,14 @@ $instance['v3/ebike/charge/contracts/{contract_id}/confirm']->postAsync([
 $response = $instance->v3->ebike->charge->contracts->_contract_id_->confirm->post([
   'contract_id' => 'aAfixCs13LsdKPpfZfDkk2189ssXjfx',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1900000109',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
+      'start_time'            => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'device_id' => '12343232',
+      'charging_gun_number'   => '6555',
+      'device_id'             => '12343232',
     ],
   ],
 ]);
@@ -115,14 +115,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/ebike/charge/contracts/{contract_id}/confirm')->post([
   'contract_id' => 'aAfixCs13LsdKPpfZfDkk2189ssXjfx',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1900000109',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
+      'start_time'            => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'device_id' => '12343232',
+      'charging_gun_number'   => '6555',
+      'device_id'             => '12343232',
     ],
   ],
 ]);
@@ -133,14 +133,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/ebike/charge/contracts/{contract_id}/confirm']->post([
   'contract_id' => 'aAfixCs13LsdKPpfZfDkk2189ssXjfx',
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx47c677487ce3ac47',
-    'sub_appid' => 'wxcc603d9f0d54eaf0',
+    'sub_mchid'   => '1900000109',
+    'appid'       => 'wx47c677487ce3ac47',
+    'sub_appid'   => 'wxcc603d9f0d54eaf0',
     'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
+      'start_time'            => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'device_id' => '12343232',
+      'charging_gun_number'   => '6555',
+      'device_id'             => '12343232',
     ],
   ],
 ]);
@@ -151,7 +151,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| charging_token {data-required}| string | 用户充电代扣凭证
+| charging_token {data-required} | string | 用户充电代扣凭证
 
 {.im-table #response}
 

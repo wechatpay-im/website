@@ -111,13 +111,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| service_id {data-required}| string | 服务ID
-| mchid {data-required}| string | 商户号
-| sub_mchid {data-required}| string | 子商户商户号
-| appid {data-required}| string | 公众号ID
+| service_id {data-required} | string | 服务ID
+| mchid {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 子商户商户号
+| appid {data-required} | string | 公众号ID
 | sub_appid | string | 子商户的公众号ID
-| risk_level_version {data-required}| number | 分层版本
-| quotas {data-required}| object[] {data-tooltip="对应PHP的array"} | 先享金额列表
+| risk_level_version {data-required} | number | 分层版本
+| quotas {data-required} | object[] {data-tooltip="对应PHP的array"} | 先享金额列表
 | risk_level {data-required data-indent=1} | number | 用户分层
 | suggested_quota {data-required data-indent=1} | number | 建议先享金额
 

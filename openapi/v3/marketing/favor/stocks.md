@@ -118,9 +118,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 批次总数
-| limit {data-required}| integer | 分页大小
-| offset {data-required}| integer | 分页页码
+| total_count {data-required} | integer | 批次总数
+| limit {data-required} | integer | 分页大小
+| offset {data-required} | integer | 分页页码
 
 {.im-table #response}
 

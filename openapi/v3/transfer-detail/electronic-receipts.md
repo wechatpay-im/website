@@ -16,8 +16,8 @@
 ```php [异步纯链式]
 $instance->v3->transferDetail->electronicReceipts->postAsync([
   'json' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -30,8 +30,8 @@ $instance->v3->transferDetail->electronicReceipts->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/transfer-detail/electronic-receipts')->postAsync([
   'json' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -44,8 +44,8 @@ $instance->chain('v3/transfer-detail/electronic-receipts')->postAsync([
 ```php [异步属性式]
 $instance['v3/transfer-detail/electronic-receipts']->postAsync([
   'json' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ])
@@ -58,8 +58,8 @@ $instance['v3/transfer-detail/electronic-receipts']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->transferDetail->electronicReceipts->post([
   'json' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -69,8 +69,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/transfer-detail/electronic-receipts')->post([
   'json' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/transfer-detail/electronic-receipts']->post([
   'json' => [
-    'accept_type' => 'BATCH_TRANSFER',
-    'out_batch_no' => 'GD2021011610162610BBdkkIwcu3',
+    'accept_type'   => 'BATCH_TRANSFER',
+    'out_batch_no'  => 'GD2021011610162610BBdkkIwcu3',
     'out_detail_no' => 'mx0911231610162610v4CNkO4HAf',
   ],
 ]);
@@ -92,10 +92,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_type {data-required}| string | 受理类型
+| accept_type {data-required} | string | 受理类型
 | out_batch_no | string | 商家转账批次单号
-| out_detail_no {data-required}| string | 商家转账明细单号
-| signature_no {data-required}| string | 电子回单受理单号
+| out_detail_no {data-required} | string | 商家转账明细单号
+| signature_no {data-required} | string | 电子回单受理单号
 | signature_status | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值
@@ -199,10 +199,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_type {data-required}| string | 受理类型
+| accept_type {data-required} | string | 受理类型
 | out_batch_no | string | 商家转账批次单号
-| out_detail_no {data-required}| string | 商家转账明细单号
-| signature_no {data-required}| string | 电子回单受理单号
+| out_detail_no {data-required} | string | 商家转账明细单号
+| signature_no {data-required} | string | 电子回单受理单号
 | signature_status | string | 电子回单状态
 | hash_type | string | 电子回单文件的hash方法
 | hash_value | string | 电子回单文件的hash值

@@ -28,13 +28,13 @@ description: 服务商发起添加分账接收方请求，建立分账接收方�
 ```php [异步纯链式]
 $instance->v3->profitsharing->receivers->add->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'relation_type' => 'SERVICE_PROVIDER',
+    'sub_mchid'       => '1900000109',
+    'appid'           => 'wx8888888888888888',
+    'sub_appid'       => 'wx8888888888888889',
+    'type'            => 'MERCHANT_ID',
+    'account'         => '86693852',
+    'name'            => 'hu89ohu89ohu89o',
+    'relation_type'   => 'SERVICE_PROVIDER',
     'custom_relation' => '代理商',
   ],
   'headers' => [
@@ -50,13 +50,13 @@ $instance->v3->profitsharing->receivers->add->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/profitsharing/receivers/add')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'relation_type' => 'SERVICE_PROVIDER',
+    'sub_mchid'       => '1900000109',
+    'appid'           => 'wx8888888888888888',
+    'sub_appid'       => 'wx8888888888888889',
+    'type'            => 'MERCHANT_ID',
+    'account'         => '86693852',
+    'name'            => 'hu89ohu89ohu89o',
+    'relation_type'   => 'SERVICE_PROVIDER',
     'custom_relation' => '代理商',
   ],
   'headers' => [
@@ -72,13 +72,13 @@ $instance->chain('v3/profitsharing/receivers/add')->postAsync([
 ```php [异步属性式]
 $instance['v3/profitsharing/receivers/add']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'relation_type' => 'SERVICE_PROVIDER',
+    'sub_mchid'       => '1900000109',
+    'appid'           => 'wx8888888888888888',
+    'sub_appid'       => 'wx8888888888888889',
+    'type'            => 'MERCHANT_ID',
+    'account'         => '86693852',
+    'name'            => 'hu89ohu89ohu89o',
+    'relation_type'   => 'SERVICE_PROVIDER',
     'custom_relation' => '代理商',
   ],
   'headers' => [
@@ -94,13 +94,13 @@ $instance['v3/profitsharing/receivers/add']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->profitsharing->receivers->add->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'relation_type' => 'SERVICE_PROVIDER',
+    'sub_mchid'       => '1900000109',
+    'appid'           => 'wx8888888888888888',
+    'sub_appid'       => 'wx8888888888888889',
+    'type'            => 'MERCHANT_ID',
+    'account'         => '86693852',
+    'name'            => 'hu89ohu89ohu89o',
+    'relation_type'   => 'SERVICE_PROVIDER',
     'custom_relation' => '代理商',
   ],
   'headers' => [
@@ -113,13 +113,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/profitsharing/receivers/add')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'relation_type' => 'SERVICE_PROVIDER',
+    'sub_mchid'       => '1900000109',
+    'appid'           => 'wx8888888888888888',
+    'sub_appid'       => 'wx8888888888888889',
+    'type'            => 'MERCHANT_ID',
+    'account'         => '86693852',
+    'name'            => 'hu89ohu89ohu89o',
+    'relation_type'   => 'SERVICE_PROVIDER',
     'custom_relation' => '代理商',
   ],
   'headers' => [
@@ -132,13 +132,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/profitsharing/receivers/add']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888889',
-    'type' => 'MERCHANT_ID',
-    'account' => '86693852',
-    'name' => 'hu89ohu89ohu89o',
-    'relation_type' => 'SERVICE_PROVIDER',
+    'sub_mchid'       => '1900000109',
+    'appid'           => 'wx8888888888888888',
+    'sub_appid'       => 'wx8888888888888889',
+    'type'            => 'MERCHANT_ID',
+    'account'         => '86693852',
+    'name'            => 'hu89ohu89ohu89o',
+    'relation_type'   => 'SERVICE_PROVIDER',
     'custom_relation' => '代理商',
   ],
   'headers' => [
@@ -153,10 +153,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| type {data-required}| string | 分账接收方类型
-| account {data-required}| string | 分账接收方账号
+| type {data-required} | string | 分账接收方类型
+| account {data-required} | string | 分账接收方账号
 | name | string | 分账接收方全称
-| relation_type {data-required}| string | 与分账方的关系类型
+| relation_type {data-required} | string | 与分账方的关系类型
 | custom_relation | string | 自定义的分账关系
 
 {.im-table #response}

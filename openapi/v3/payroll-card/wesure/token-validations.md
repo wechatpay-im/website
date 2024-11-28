@@ -26,11 +26,11 @@ description: 校验按商户拉起核身时预下单的token值对应的微工�
 ```php [异步纯链式]
 $instance->v3->payrollCard->wesure->tokenValidations->postAsync([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'token' => 'abcdefghijklmn',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'sp_mchid'          => '1900000109',
+    'sub_mchid'         => '1900000109',
+    'token'             => 'abcdefghijklmn',
+    'user_name'         => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'    => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
@@ -46,11 +46,11 @@ $instance->v3->payrollCard->wesure->tokenValidations->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payroll-card/wesure/token-validations')->postAsync([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'token' => 'abcdefghijklmn',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'sp_mchid'          => '1900000109',
+    'sub_mchid'         => '1900000109',
+    'token'             => 'abcdefghijklmn',
+    'user_name'         => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'    => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
@@ -66,11 +66,11 @@ $instance->chain('v3/payroll-card/wesure/token-validations')->postAsync([
 ```php [异步属性式]
 $instance['v3/payroll-card/wesure/token-validations']->postAsync([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'token' => 'abcdefghijklmn',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'sp_mchid'          => '1900000109',
+    'sub_mchid'         => '1900000109',
+    'token'             => 'abcdefghijklmn',
+    'user_name'         => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'    => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
@@ -86,11 +86,11 @@ $instance['v3/payroll-card/wesure/token-validations']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payrollCard->wesure->tokenValidations->post([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'token' => 'abcdefghijklmn',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'sp_mchid'          => '1900000109',
+    'sub_mchid'         => '1900000109',
+    'token'             => 'abcdefghijklmn',
+    'user_name'         => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'    => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payroll-card/wesure/token-validations')->post([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'token' => 'abcdefghijklmn',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'sp_mchid'          => '1900000109',
+    'sub_mchid'         => '1900000109',
+    'token'             => 'abcdefghijklmn',
+    'user_name'         => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'    => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
@@ -120,11 +120,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payroll-card/wesure/token-validations']->post([
   'json' => [
-    'sp_mchid' => '1900000109',
-    'sub_mchid' => '1900000109',
-    'token' => 'abcdefghijklmn',
-    'user_name' => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
-    'id_card_number' => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
+    'sp_mchid'          => '1900000109',
+    'sub_mchid'         => '1900000109',
+    'token'             => 'abcdefghijklmn',
+    'user_name'         => 'LP7bT4hQXUsOZCEvK2YrSiqFsnP0oRMfeoLN0vBg',
+    'id_card_number'    => '7FzH5XksJG3a8HLLsaaUV6K54y1OnPMY5',
     'authenticate_type' => 'NORMAL',
   ],
   'headers' => [
@@ -138,7 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| result {data-required}| string | 校验结果
+| result {data-required} | string | 校验结果
 | authenticate_success_time | string | 核身成功时间
 | openid | string | 用户标识
 | fail_reason | string | 校验不通过原因

@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| string | 活动ID
+| activity_id {data-required} | string | 活动ID
 | activity_status | string | 活动的当前状态
 | create_time | string | 创建时间
 | update_time | string | 更新时间

@@ -25,11 +25,11 @@ description: 商户可以通过该接口修改批次单天发放上限数量或�
 $instance->v3->marketing->busifavor->stocks->_stock_id_->budget->patchAsync([
   'stock_id' => '98065001',
   'json' => [
-    'target_max_coupons' => 3000,
-    'target_max_coupons_by_day' => 0,
-    'current_max_coupons' => 500,
+    'target_max_coupons'         => 3000,
+    'target_max_coupons_by_day'  => 0,
+    'current_max_coupons'        => 500,
     'current_max_coupons_by_day' => 300,
-    'modify_budget_request_no' => '1002600620019090123143254436',
+    'modify_budget_request_no'   => '1002600620019090123143254436',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,11 +42,11 @@ $instance->v3->marketing->busifavor->stocks->_stock_id_->budget->patchAsync([
 $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/budget')->patchAsync([
   'stock_id' => '98065001',
   'json' => [
-    'target_max_coupons' => 3000,
-    'target_max_coupons_by_day' => 0,
-    'current_max_coupons' => 500,
+    'target_max_coupons'         => 3000,
+    'target_max_coupons_by_day'  => 0,
+    'current_max_coupons'        => 500,
     'current_max_coupons_by_day' => 300,
-    'modify_budget_request_no' => '1002600620019090123143254436',
+    'modify_budget_request_no'   => '1002600620019090123143254436',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,11 +59,11 @@ $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/budget')->patchAsync(
 $instance['v3/marketing/busifavor/stocks/{stock_id}/budget']->patchAsync([
   'stock_id' => '98065001',
   'json' => [
-    'target_max_coupons' => 3000,
-    'target_max_coupons_by_day' => 0,
-    'current_max_coupons' => 500,
+    'target_max_coupons'         => 3000,
+    'target_max_coupons_by_day'  => 0,
+    'current_max_coupons'        => 500,
     'current_max_coupons_by_day' => 300,
-    'modify_budget_request_no' => '1002600620019090123143254436',
+    'modify_budget_request_no'   => '1002600620019090123143254436',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,11 +76,11 @@ $instance['v3/marketing/busifavor/stocks/{stock_id}/budget']->patchAsync([
 $response = $instance->v3->marketing->busifavor->stocks->_stock_id_->budget->patch([
   'stock_id' => '98065001',
   'json' => [
-    'target_max_coupons' => 3000,
-    'target_max_coupons_by_day' => 0,
-    'current_max_coupons' => 500,
+    'target_max_coupons'         => 3000,
+    'target_max_coupons_by_day'  => 0,
+    'current_max_coupons'        => 500,
     'current_max_coupons_by_day' => 300,
-    'modify_budget_request_no' => '1002600620019090123143254436',
+    'modify_budget_request_no'   => '1002600620019090123143254436',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/budget')->patch([
   'stock_id' => '98065001',
   'json' => [
-    'target_max_coupons' => 3000,
-    'target_max_coupons_by_day' => 0,
-    'current_max_coupons' => 500,
+    'target_max_coupons'         => 3000,
+    'target_max_coupons_by_day'  => 0,
+    'current_max_coupons'        => 500,
     'current_max_coupons_by_day' => 300,
-    'modify_budget_request_no' => '1002600620019090123143254436',
+    'modify_budget_request_no'   => '1002600620019090123143254436',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,11 +104,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/busifavor/stocks/{stock_id}/budget']->patch([
   'stock_id' => '98065001',
   'json' => [
-    'target_max_coupons' => 3000,
-    'target_max_coupons_by_day' => 0,
-    'current_max_coupons' => 500,
+    'target_max_coupons'         => 3000,
+    'target_max_coupons_by_day'  => 0,
+    'current_max_coupons'        => 500,
     'current_max_coupons_by_day' => 300,
-    'modify_budget_request_no' => '1002600620019090123143254436',
+    'modify_budget_request_no'   => '1002600620019090123143254436',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| max_coupons {data-required}| integer | 批次当前最大发放个数
+| max_coupons {data-required} | integer | 批次当前最大发放个数
 | max_coupons_by_day | integer | 当前单天发放上限个数
 
 {.im-table #response}

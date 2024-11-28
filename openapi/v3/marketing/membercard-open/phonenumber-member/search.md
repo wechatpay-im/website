@@ -110,7 +110,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| receive_status {data-required}| string | 用户领取状态<br/>`UNSHOWED` \| `UNRECEIVED` \| `RECEIVED` 枚举值之一
+| receive_status {data-required} | string | 用户领取状态<br/>`UNSHOWED` \| `UNRECEIVED` \| `RECEIVED` 枚举值之一
 | user_card_information | object {data-tooltip="对应PHP的array"} | 用户会员卡信息
 | code {data-required data-indent=1} | string | 会员卡code
 | openid {data-required data-indent=1} | string | 用户标识

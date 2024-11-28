@@ -27,10 +27,10 @@ $instance->v3->global->papay->contracts->_contract_id_->terminate->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'contract_id' => '100005698',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
+    'appid'            => 'wxd678efh567hg6787',
+    'sp_appid'         => 'wx8888888888888888',
+    'sub_mchid'        => '1230000109',
+    'sub_appid'        => 'wxcbda96de0b165484',
     'termination_note' => '解约原因',
   ],
 ])
@@ -45,10 +45,10 @@ $instance->chain('v3/global/papay/contracts/{contract_id}/terminate')->postAsync
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'contract_id' => '100005698',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
+    'appid'            => 'wxd678efh567hg6787',
+    'sp_appid'         => 'wx8888888888888888',
+    'sub_mchid'        => '1230000109',
+    'sub_appid'        => 'wxcbda96de0b165484',
     'termination_note' => '解约原因',
   ],
 ])
@@ -63,10 +63,10 @@ $instance['v3/global/papay/contracts/{contract_id}/terminate']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'contract_id' => '100005698',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
+    'appid'            => 'wxd678efh567hg6787',
+    'sp_appid'         => 'wx8888888888888888',
+    'sub_mchid'        => '1230000109',
+    'sub_appid'        => 'wxcbda96de0b165484',
     'termination_note' => '解约原因',
   ],
 ])
@@ -81,10 +81,10 @@ $response = $instance->v3->global->papay->contracts->_contract_id_->terminate->p
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'contract_id' => '100005698',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
+    'appid'            => 'wxd678efh567hg6787',
+    'sp_appid'         => 'wx8888888888888888',
+    'sub_mchid'        => '1230000109',
+    'sub_appid'        => 'wxcbda96de0b165484',
     'termination_note' => '解约原因',
   ],
 ]);
@@ -96,10 +96,10 @@ $response = $instance->chain('v3/global/papay/contracts/{contract_id}/terminate'
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'contract_id' => '100005698',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
+    'appid'            => 'wxd678efh567hg6787',
+    'sp_appid'         => 'wx8888888888888888',
+    'sub_mchid'        => '1230000109',
+    'sub_appid'        => 'wxcbda96de0b165484',
     'termination_note' => '解约原因',
   ],
 ]);
@@ -111,10 +111,10 @@ $response = $instance['v3/global/papay/contracts/{contract_id}/terminate']->post
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'contract_id' => '100005698',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_mchid' => '1230000109',
-    'sub_appid' => 'wxcbda96de0b165484',
+    'appid'            => 'wxd678efh567hg6787',
+    'sp_appid'         => 'wx8888888888888888',
+    'sub_mchid'        => '1230000109',
+    'sub_appid'        => 'wxcbda96de0b165484',
     'termination_note' => '解约原因',
   ],
 ]);

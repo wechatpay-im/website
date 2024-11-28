@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| available_amount {data-required}| integer | 可用余额
+| sub_mchid {data-required} | string | 二级商户号
+| available_amount {data-required} | integer | 可用余额
 | pending_amount | integer | 不可用余额
 | account_type | string | 账户类型<br/>`BASIC` \| `DEPOSIT` 枚举值之一
 

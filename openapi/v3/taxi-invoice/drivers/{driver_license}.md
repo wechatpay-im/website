@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| driver_name {data-required}| string | 司机姓名
-| company_name {data-required}| string | 公司名称
-| company_mchid {data-required}| string | 商户号
-| driver_license {data-required}| string | 营运资格证号
-| driver_category {data-required}| string | 司机类别
+| driver_name {data-required} | string | 司机姓名
+| company_name {data-required} | string | 公司名称
+| company_mchid {data-required} | string | 商户号
+| driver_license {data-required} | string | 营运资格证号
+| driver_category {data-required} | string | 司机类别
 | driver_photo | object {data-tooltip="对应PHP的array"} | 司机照片
 | photo_type {data-indent=1} | string | 照片类型
 | photo_digest {data-indent=1} | object {data-tooltip="对应PHP的array"} | 司机照片摘要
@@ -102,8 +102,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | hash_value {data-indent=2} | string | 哈希值
 | photo_url {data-indent=1} | string | 头像url
 | photo_data {data-indent=1} | string | 头像icon
-| region_id {data-required}| integer | 行政区划代码
-| driver_state {data-required}| string | 司机状态
+| region_id {data-required} | integer | 行政区划代码
+| driver_state {data-required} | string | 司机状态
 
 {.im-table #response}
 

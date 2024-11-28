@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| transfer_batch {data-required}| object {data-tooltip="对应PHP的array"} | 转账批次单
+| transfer_batch {data-required} | object {data-tooltip="对应PHP的array"} | 转账批次单
 | out_batch_no {data-required data-indent=1} | string | 商家批次单号
 | batch_id {data-required data-indent=1} | string | 商家转账批次单号
 | sp_appid {data-required data-indent=1} | string | 服务商应用ID

@@ -120,10 +120,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | contract_status {data-required data-indent=1} | string | 签约状态
 | create_time {data-required data-indent=1} | string | 签约时间
 | out_contract_code {data-required data-indent=1} | string | 外部签约号
-| offset {data-required}| integer | 请求资源起始位置
-| limit {data-required}| integer | 最大资源条数
-| total_count {data-required}| integer | 资源总条数
-| links {data-required}| object {data-tooltip="对应PHP的array"} | 相关链接
+| offset {data-required} | integer | 请求资源起始位置
+| limit {data-required} | integer | 最大资源条数
+| total_count {data-required} | integer | 资源总条数
+| links {data-required} | object {data-tooltip="对应PHP的array"} | 相关链接
 | next {data-indent=1} | string | 下一页链接
 | prev {data-indent=1} | string | 上一页链接
 | self {data-required data-indent=1} | string | 当前链接

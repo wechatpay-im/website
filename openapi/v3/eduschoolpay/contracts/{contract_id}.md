@@ -70,14 +70,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id {data-required}| string | 签约协议号
-| mchid {data-required}| string | 商户号
-| appid {data-required}| string | 商户appid
-| openid {data-required}| string | 商户appid下的用户标识
-| plan_id {data-required}| string | 签约模板号
-| contract_status {data-required}| string | 签约状态
-| create_time {data-required}| string | 签约时间
-| out_contract_code {data-required}| string | 外部签约号
+| contract_id {data-required} | string | 签约协议号
+| mchid {data-required} | string | 商户号
+| appid {data-required} | string | 商户appid
+| openid {data-required} | string | 商户appid下的用户标识
+| plan_id {data-required} | string | 签约模板号
+| contract_status {data-required} | string | 签约状态
+| create_time {data-required} | string | 签约时间
+| out_contract_code {data-required} | string | 外部签约号
 
 {.im-table #response}
 

@@ -28,7 +28,7 @@ $instance->v3->statements->getAsync([
   'base_uri' => 'https://api.mch.weixin.qq.com/hk/', // 接入点(国内接入)
   'sink' => $stream,
   'query' => [
-    'date' => '20180130',
+    'date'  => '20180130',
     'mchid' => '1900000109',
   ],
   'headers' => [
@@ -46,7 +46,7 @@ $instance->chain('v3/statements')->getAsync([
   'base_uri' => 'https://api.mch.weixin.qq.com/hk/', // 接入点(国内接入)
   'sink' => $stream,
   'query' => [
-    'date' => '20180130',
+    'date'  => '20180130',
     'mchid' => '1900000109',
   ],
   'headers' => [
@@ -64,7 +64,7 @@ $instance['v3/statements']->getAsync([
   'base_uri' => 'https://api.mch.weixin.qq.com/hk/', // 接入点(国内接入)
   'sink' => $stream,
   'query' => [
-    'date' => '20180130',
+    'date'  => '20180130',
     'mchid' => '1900000109',
   ],
   'headers' => [
@@ -82,7 +82,7 @@ $response = $instance->v3->statements->get([
   'base_uri' => 'https://api.mch.weixin.qq.com/hk/', // 接入点(国内接入)
   'sink' => $stream,
   'query' => [
-    'date' => '20180130',
+    'date'  => '20180130',
     'mchid' => '1900000109',
   ],
   'headers' => [
@@ -99,7 +99,7 @@ $response = $instance->chain('v3/statements')->get([
   'base_uri' => 'https://api.mch.weixin.qq.com/hk/', // 接入点(国内接入)
   'sink' => $stream,
   'query' => [
-    'date' => '20180130',
+    'date'  => '20180130',
     'mchid' => '1900000109',
   ],
   'headers' => [
@@ -116,7 +116,7 @@ $response = $instance['v3/statements']->get([
   'base_uri' => 'https://api.mch.weixin.qq.com/hk/', // 接入点(国内接入)
   'sink' => $stream,
   'query' => [
-    'date' => '20180130',
+    'date'  => '20180130',
     'mchid' => '1900000109',
   ],
   'headers' => [

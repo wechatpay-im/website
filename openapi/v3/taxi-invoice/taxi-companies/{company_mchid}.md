@@ -90,18 +90,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| company_mchid {data-required}| string | 商户号
-| enterprise_type {data-required}| string | 企业类型
-| company_name {data-required}| string | 公司名称
-| short_name {data-required}| string | 公司简称
-| tax_id {data-required}| string | 税号
-| address {data-required}| string | 公司地址
+| company_mchid {data-required} | string | 商户号
+| enterprise_type {data-required} | string | 企业类型
+| company_name {data-required} | string | 公司名称
+| short_name {data-required} | string | 公司简称
+| tax_id {data-required} | string | 税号
+| address {data-required} | string | 公司地址
 | phone | string | 公司电话
 | bank_name | string | 开户行
 | bank_account | string | 银行账号
-| legal_person {data-required}| string | 企业法人姓名
-| invoice_mode {data-required}| string | 开票渠道
-| region_id {data-required}| integer | 行政区划代码
+| legal_person {data-required} | string | 企业法人姓名
+| invoice_mode {data-required} | string | 开票渠道
+| region_id {data-required} | integer | 行政区划代码
 
 {.im-table #response}
 

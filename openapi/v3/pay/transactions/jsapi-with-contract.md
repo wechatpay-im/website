@@ -54,48 +54,48 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 ```php [异步纯链式]
 $instance->v3->pay->transactions->jsapiWithContract->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据说明',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据说明',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'payer' => [
+    'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
-        'merchant_goods_id' => '1246464644',
+        'merchant_goods_id'  => '1246464644',
         'wechatpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhoneX 256G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'        => '0001',
+        'name'      => '腾讯大厦分店',
         'area_code' => '440305',
-        'address' => '广东省深圳市南山区科技中一道10000号',
+        'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
-    'contract_info' => [
-      'token' => '201710180325670965',
+    'contract_info'  => [
+      'token'                     => '201710180325670965',
       'password_free_contract_id' => '201710180325670965',
     ],
   ],
@@ -109,48 +109,48 @@ $instance->v3->pay->transactions->jsapiWithContract->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/pay/transactions/jsapi-with-contract')->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据说明',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据说明',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'payer' => [
+    'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
-        'merchant_goods_id' => '1246464644',
+        'merchant_goods_id'  => '1246464644',
         'wechatpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhoneX 256G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'        => '0001',
+        'name'      => '腾讯大厦分店',
         'area_code' => '440305',
-        'address' => '广东省深圳市南山区科技中一道10000号',
+        'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
-    'contract_info' => [
-      'token' => '201710180325670965',
+    'contract_info'  => [
+      'token'                     => '201710180325670965',
       'password_free_contract_id' => '201710180325670965',
     ],
   ],
@@ -164,48 +164,48 @@ $instance->chain('v3/pay/transactions/jsapi-with-contract')->postAsync([
 ```php [异步属性式]
 $instance['v3/pay/transactions/jsapi-with-contract']->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据说明',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据说明',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'payer' => [
+    'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
-        'merchant_goods_id' => '1246464644',
+        'merchant_goods_id'  => '1246464644',
         'wechatpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhoneX 256G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'        => '0001',
+        'name'      => '腾讯大厦分店',
         'area_code' => '440305',
-        'address' => '广东省深圳市南山区科技中一道10000号',
+        'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
-    'contract_info' => [
-      'token' => '201710180325670965',
+    'contract_info'  => [
+      'token'                     => '201710180325670965',
       'password_free_contract_id' => '201710180325670965',
     ],
   ],
@@ -219,48 +219,48 @@ $instance['v3/pay/transactions/jsapi-with-contract']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->pay->transactions->jsapiWithContract->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据说明',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据说明',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'payer' => [
+    'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
-        'merchant_goods_id' => '1246464644',
+        'merchant_goods_id'  => '1246464644',
         'wechatpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhoneX 256G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'        => '0001',
+        'name'      => '腾讯大厦分店',
         'area_code' => '440305',
-        'address' => '广东省深圳市南山区科技中一道10000号',
+        'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
-    'contract_info' => [
-      'token' => '201710180325670965',
+    'contract_info'  => [
+      'token'                     => '201710180325670965',
       'password_free_contract_id' => '201710180325670965',
     ],
   ],
@@ -271,48 +271,48 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/pay/transactions/jsapi-with-contract')->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据说明',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据说明',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'payer' => [
+    'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
-        'merchant_goods_id' => '1246464644',
+        'merchant_goods_id'  => '1246464644',
         'wechatpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhoneX 256G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'        => '0001',
+        'name'      => '腾讯大厦分店',
         'area_code' => '440305',
-        'address' => '广东省深圳市南山区科技中一道10000号',
+        'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
-    'contract_info' => [
-      'token' => '201710180325670965',
+    'contract_info'  => [
+      'token'                     => '201710180325670965',
       'password_free_contract_id' => '201710180325670965',
     ],
   ],
@@ -323,48 +323,48 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/pay/transactions/jsapi-with-contract']->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'time_expire' => '2018-06-08T10:34:56+08:00',
-    'attach' => '自定义数据说明',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'goods_tag' => 'WXG',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'time_expire'    => '2018-06-08T10:34:56+08:00',
+    'attach'         => '自定义数据说明',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'payer' => [
+    'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
-        'merchant_goods_id' => '1246464644',
+        'merchant_goods_id'  => '1246464644',
         'wechatpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'goods_name'         => 'iPhoneX 256G',
+        'quantity'           => 1,
+        'unit_price'         => 528800,
       ],],
     ],
-    'scene_info' => [
+    'scene_info'     => [
       'payer_client_ip' => '14.23.150.211',
-      'device_id' => '013467007045764',
-      'store_info' => [
-        'id' => '0001',
-        'name' => '腾讯大厦分店',
+      'device_id'       => '013467007045764',
+      'store_info'      => [
+        'id'        => '0001',
+        'name'      => '腾讯大厦分店',
         'area_code' => '440305',
-        'address' => '广东省深圳市南山区科技中一道10000号',
+        'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
-    'contract_info' => [
-      'token' => '201710180325670965',
+    'contract_info'  => [
+      'token'                     => '201710180325670965',
       'password_free_contract_id' => '201710180325670965',
     ],
   ],
@@ -376,7 +376,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| prepay_id {data-required}| string | 预支付交易会话标识
+| prepay_id {data-required} | string | 预支付交易会话标识
 
 {.im-table #response}
 

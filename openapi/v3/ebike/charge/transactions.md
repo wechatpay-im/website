@@ -47,29 +47,29 @@ description: 通过调用该接口，为用户当次充电完成后发起代扣�
 ```php [异步纯链式]
 $instance->v3->ebike->charge->transactions->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wxd678efh567hg678',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_trade_no' => '121775250124070332',
-    'attach' => '自定义数据',
-    'goods_tag' => 'test',
-    'notify_url' => 'http://1111:111/metro-spt-api/callback',
-    'description' => '商品信息',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg678',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'out_trade_no'   => '121775250124070332',
+    'attach'         => '自定义数据',
+    'goods_tag'      => 'test',
+    'notify_url'     => 'http://1111:111/metro-spt-api/callback',
+    'description'    => '商品信息',
     'charging_token' => 'sdjf23kdsHJfdk',
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
-      'end_time' => '2017-08-26T09:43:39+08:00',
+    'charge_info'    => [
+      'start_time'            => '2017-08-26T09:43:39+08:00',
+      'end_time'              => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'charged_capacity' => 10,
-      'park_duration' => 60,
-      'park_fee' => 100,
+      'charging_gun_number'   => '6555',
+      'charged_capacity'      => 10,
+      'park_duration'         => 60,
+      'park_fee'              => 100,
     ],
-    'device_info' => [
+    'device_info'    => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
@@ -84,29 +84,29 @@ $instance->v3->ebike->charge->transactions->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ebike/charge/transactions')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wxd678efh567hg678',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_trade_no' => '121775250124070332',
-    'attach' => '自定义数据',
-    'goods_tag' => 'test',
-    'notify_url' => 'http://1111:111/metro-spt-api/callback',
-    'description' => '商品信息',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg678',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'out_trade_no'   => '121775250124070332',
+    'attach'         => '自定义数据',
+    'goods_tag'      => 'test',
+    'notify_url'     => 'http://1111:111/metro-spt-api/callback',
+    'description'    => '商品信息',
     'charging_token' => 'sdjf23kdsHJfdk',
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
-      'end_time' => '2017-08-26T09:43:39+08:00',
+    'charge_info'    => [
+      'start_time'            => '2017-08-26T09:43:39+08:00',
+      'end_time'              => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'charged_capacity' => 10,
-      'park_duration' => 60,
-      'park_fee' => 100,
+      'charging_gun_number'   => '6555',
+      'charged_capacity'      => 10,
+      'park_duration'         => 60,
+      'park_fee'              => 100,
     ],
-    'device_info' => [
+    'device_info'    => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
@@ -121,29 +121,29 @@ $instance->chain('v3/ebike/charge/transactions')->postAsync([
 ```php [异步属性式]
 $instance['v3/ebike/charge/transactions']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wxd678efh567hg678',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_trade_no' => '121775250124070332',
-    'attach' => '自定义数据',
-    'goods_tag' => 'test',
-    'notify_url' => 'http://1111:111/metro-spt-api/callback',
-    'description' => '商品信息',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg678',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'out_trade_no'   => '121775250124070332',
+    'attach'         => '自定义数据',
+    'goods_tag'      => 'test',
+    'notify_url'     => 'http://1111:111/metro-spt-api/callback',
+    'description'    => '商品信息',
     'charging_token' => 'sdjf23kdsHJfdk',
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
-      'end_time' => '2017-08-26T09:43:39+08:00',
+    'charge_info'    => [
+      'start_time'            => '2017-08-26T09:43:39+08:00',
+      'end_time'              => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'charged_capacity' => 10,
-      'park_duration' => 60,
-      'park_fee' => 100,
+      'charging_gun_number'   => '6555',
+      'charged_capacity'      => 10,
+      'park_duration'         => 60,
+      'park_fee'              => 100,
     ],
-    'device_info' => [
+    'device_info'    => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
@@ -158,29 +158,29 @@ $instance['v3/ebike/charge/transactions']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ebike->charge->transactions->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wxd678efh567hg678',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_trade_no' => '121775250124070332',
-    'attach' => '自定义数据',
-    'goods_tag' => 'test',
-    'notify_url' => 'http://1111:111/metro-spt-api/callback',
-    'description' => '商品信息',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg678',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'out_trade_no'   => '121775250124070332',
+    'attach'         => '自定义数据',
+    'goods_tag'      => 'test',
+    'notify_url'     => 'http://1111:111/metro-spt-api/callback',
+    'description'    => '商品信息',
     'charging_token' => 'sdjf23kdsHJfdk',
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
-      'end_time' => '2017-08-26T09:43:39+08:00',
+    'charge_info'    => [
+      'start_time'            => '2017-08-26T09:43:39+08:00',
+      'end_time'              => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'charged_capacity' => 10,
-      'park_duration' => 60,
-      'park_fee' => 100,
+      'charging_gun_number'   => '6555',
+      'charged_capacity'      => 10,
+      'park_duration'         => 60,
+      'park_fee'              => 100,
     ],
-    'device_info' => [
+    'device_info'    => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
@@ -192,29 +192,29 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ebike/charge/transactions')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wxd678efh567hg678',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_trade_no' => '121775250124070332',
-    'attach' => '自定义数据',
-    'goods_tag' => 'test',
-    'notify_url' => 'http://1111:111/metro-spt-api/callback',
-    'description' => '商品信息',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg678',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'out_trade_no'   => '121775250124070332',
+    'attach'         => '自定义数据',
+    'goods_tag'      => 'test',
+    'notify_url'     => 'http://1111:111/metro-spt-api/callback',
+    'description'    => '商品信息',
     'charging_token' => 'sdjf23kdsHJfdk',
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
-      'end_time' => '2017-08-26T09:43:39+08:00',
+    'charge_info'    => [
+      'start_time'            => '2017-08-26T09:43:39+08:00',
+      'end_time'              => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'charged_capacity' => 10,
-      'park_duration' => 60,
-      'park_fee' => 100,
+      'charging_gun_number'   => '6555',
+      'charged_capacity'      => 10,
+      'park_duration'         => 60,
+      'park_fee'              => 100,
     ],
-    'device_info' => [
+    'device_info'    => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
@@ -226,29 +226,29 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ebike/charge/transactions']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'appid' => 'wxd678efh567hg678',
-    'sub_appid' => 'wxd678efh567hg6999',
-    'out_trade_no' => '121775250124070332',
-    'attach' => '自定义数据',
-    'goods_tag' => 'test',
-    'notify_url' => 'http://1111:111/metro-spt-api/callback',
-    'description' => '商品信息',
+    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg678',
+    'sub_appid'      => 'wxd678efh567hg6999',
+    'out_trade_no'   => '121775250124070332',
+    'attach'         => '自定义数据',
+    'goods_tag'      => 'test',
+    'notify_url'     => 'http://1111:111/metro-spt-api/callback',
+    'description'    => '商品信息',
     'charging_token' => 'sdjf23kdsHJfdk',
-    'amount' => [
-      'total' => 888,
+    'amount'         => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'charge_info' => [
-      'start_time' => '2017-08-26T09:43:39+08:00',
-      'end_time' => '2017-08-26T09:43:39+08:00',
+    'charge_info'    => [
+      'start_time'            => '2017-08-26T09:43:39+08:00',
+      'end_time'              => '2017-08-26T09:43:39+08:00',
       'charging_station_name' => 'xxx充电站',
-      'charging_gun_number' => '6555',
-      'charged_capacity' => 10,
-      'park_duration' => 60,
-      'park_fee' => 100,
+      'charging_gun_number'   => '6555',
+      'charged_capacity'      => 10,
+      'park_duration'         => 60,
+      'park_fee'              => 100,
     ],
-    'device_info' => [
+    'device_info'    => [
       'device_id' => '12343232',
       'device_ip' => '123.12.12.123',
     ],
@@ -261,7 +261,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_state {data-required}| string | 受理状态
+| accept_state {data-required} | string | 受理状态
 | create_time | string | 订单创建时间
 
 {.im-table #response}

@@ -34,23 +34,23 @@ description: 发起商家转账接口。商户可以通过该接口同时向多�
 ```php [异步纯链式]
 $instance->v3->platsolution->mchTransfer->batches->apply->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_batch_no' => 'sjzz20230223',
-    'batch_name' => '2023年2月深圳分部报销单',
-    'batch_remark' => '2023年2月深圳分部报销单',
-    'total_amount' => 4000000,
-    'total_num' => 200,
-    'transfer_scene_id' => '1000',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_batch_no'         => 'sjzz20230223',
+    'batch_name'           => '2023年2月深圳分部报销单',
+    'batch_remark'         => '2023年2月深圳分部报销单',
+    'total_amount'         => 4000000,
+    'total_num'            => 200,
+    'transfer_scene_id'    => '1000',
     'transfer_detail_list' => [[
-      'out_detail_no' => 'x23zy545Bd5436',
+      'out_detail_no'   => 'x23zy545Bd5436',
       'transfer_amount' => 200000,
       'transfer_remark' => '2023年2月报销',
-      'reservation_id' => '1330000071100999991182020050700019480001',
-      'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
+      'reservation_id'  => '1330000071100999991182020050700019480001',
+      'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
     ],],
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,23 +62,23 @@ $instance->v3->platsolution->mchTransfer->batches->apply->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/platsolution/mch-transfer/batches/apply')->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_batch_no' => 'sjzz20230223',
-    'batch_name' => '2023年2月深圳分部报销单',
-    'batch_remark' => '2023年2月深圳分部报销单',
-    'total_amount' => 4000000,
-    'total_num' => 200,
-    'transfer_scene_id' => '1000',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_batch_no'         => 'sjzz20230223',
+    'batch_name'           => '2023年2月深圳分部报销单',
+    'batch_remark'         => '2023年2月深圳分部报销单',
+    'total_amount'         => 4000000,
+    'total_num'            => 200,
+    'transfer_scene_id'    => '1000',
     'transfer_detail_list' => [[
-      'out_detail_no' => 'x23zy545Bd5436',
+      'out_detail_no'   => 'x23zy545Bd5436',
       'transfer_amount' => 200000,
       'transfer_remark' => '2023年2月报销',
-      'reservation_id' => '1330000071100999991182020050700019480001',
-      'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
+      'reservation_id'  => '1330000071100999991182020050700019480001',
+      'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
     ],],
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -90,23 +90,23 @@ $instance->chain('v3/platsolution/mch-transfer/batches/apply')->postAsync([
 ```php [异步属性式]
 $instance['v3/platsolution/mch-transfer/batches/apply']->postAsync([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_batch_no' => 'sjzz20230223',
-    'batch_name' => '2023年2月深圳分部报销单',
-    'batch_remark' => '2023年2月深圳分部报销单',
-    'total_amount' => 4000000,
-    'total_num' => 200,
-    'transfer_scene_id' => '1000',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_batch_no'         => 'sjzz20230223',
+    'batch_name'           => '2023年2月深圳分部报销单',
+    'batch_remark'         => '2023年2月深圳分部报销单',
+    'total_amount'         => 4000000,
+    'total_num'            => 200,
+    'transfer_scene_id'    => '1000',
     'transfer_detail_list' => [[
-      'out_detail_no' => 'x23zy545Bd5436',
+      'out_detail_no'   => 'x23zy545Bd5436',
       'transfer_amount' => 200000,
       'transfer_remark' => '2023年2月报销',
-      'reservation_id' => '1330000071100999991182020050700019480001',
-      'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
+      'reservation_id'  => '1330000071100999991182020050700019480001',
+      'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
     ],],
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -118,23 +118,23 @@ $instance['v3/platsolution/mch-transfer/batches/apply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->platsolution->mchTransfer->batches->apply->post([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_batch_no' => 'sjzz20230223',
-    'batch_name' => '2023年2月深圳分部报销单',
-    'batch_remark' => '2023年2月深圳分部报销单',
-    'total_amount' => 4000000,
-    'total_num' => 200,
-    'transfer_scene_id' => '1000',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_batch_no'         => 'sjzz20230223',
+    'batch_name'           => '2023年2月深圳分部报销单',
+    'batch_remark'         => '2023年2月深圳分部报销单',
+    'total_amount'         => 4000000,
+    'total_num'            => 200,
+    'transfer_scene_id'    => '1000',
     'transfer_detail_list' => [[
-      'out_detail_no' => 'x23zy545Bd5436',
+      'out_detail_no'   => 'x23zy545Bd5436',
       'transfer_amount' => 200000,
       'transfer_remark' => '2023年2月报销',
-      'reservation_id' => '1330000071100999991182020050700019480001',
-      'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
+      'reservation_id'  => '1330000071100999991182020050700019480001',
+      'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
     ],],
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -143,23 +143,23 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/platsolution/mch-transfer/batches/apply')->post([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_batch_no' => 'sjzz20230223',
-    'batch_name' => '2023年2月深圳分部报销单',
-    'batch_remark' => '2023年2月深圳分部报销单',
-    'total_amount' => 4000000,
-    'total_num' => 200,
-    'transfer_scene_id' => '1000',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_batch_no'         => 'sjzz20230223',
+    'batch_name'           => '2023年2月深圳分部报销单',
+    'batch_remark'         => '2023年2月深圳分部报销单',
+    'total_amount'         => 4000000,
+    'total_num'            => 200,
+    'transfer_scene_id'    => '1000',
     'transfer_detail_list' => [[
-      'out_detail_no' => 'x23zy545Bd5436',
+      'out_detail_no'   => 'x23zy545Bd5436',
       'transfer_amount' => 200000,
       'transfer_remark' => '2023年2月报销',
-      'reservation_id' => '1330000071100999991182020050700019480001',
-      'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
+      'reservation_id'  => '1330000071100999991182020050700019480001',
+      'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
     ],],
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -168,23 +168,23 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/platsolution/mch-transfer/batches/apply']->post([
   'json' => [
-    'sub_mchid' => '1900001109',
-    'sp_appid' => 'wxf636efh567hg4356',
-    'sub_appid' => 'wxf636efh567hg4356',
-    'out_batch_no' => 'sjzz20230223',
-    'batch_name' => '2023年2月深圳分部报销单',
-    'batch_remark' => '2023年2月深圳分部报销单',
-    'total_amount' => 4000000,
-    'total_num' => 200,
-    'transfer_scene_id' => '1000',
+    'sub_mchid'            => '1900001109',
+    'sp_appid'             => 'wxf636efh567hg4356',
+    'sub_appid'            => 'wxf636efh567hg4356',
+    'out_batch_no'         => 'sjzz20230223',
+    'batch_name'           => '2023年2月深圳分部报销单',
+    'batch_remark'         => '2023年2月深圳分部报销单',
+    'total_amount'         => 4000000,
+    'total_num'            => 200,
+    'transfer_scene_id'    => '1000',
     'transfer_detail_list' => [[
-      'out_detail_no' => 'x23zy545Bd5436',
+      'out_detail_no'   => 'x23zy545Bd5436',
       'transfer_amount' => 200000,
       'transfer_remark' => '2023年2月报销',
-      'reservation_id' => '1330000071100999991182020050700019480001',
-      'openid' => 'o-MYE42l80oelYMDE34nYD456Xoy',
+      'reservation_id'  => '1330000071100999991182020050700019480001',
+      'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
     ],],
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -194,9 +194,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_batch_no {data-required}| string | 商家批次单号
-| batch_id {data-required}| string | 商家转账批次单号
-| create_time {data-required}| string | 批次创建时间
+| out_batch_no {data-required} | string | 商家批次单号
+| batch_id {data-required} | string | 商家转账批次单号
+| create_time {data-required} | string | 批次创建时间
 | batch_state | string | 批次状态
 
 {.im-table #response}

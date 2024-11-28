@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| schedule_state {data-required}| string | 扣费预约的状态
+| schedule_state {data-required} | string | 扣费预约的状态
 | deduct_start_date | string | 可扣费开始日期
 | deduct_end_date | string | 可扣费结束日期
 | scheduled_amount | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息

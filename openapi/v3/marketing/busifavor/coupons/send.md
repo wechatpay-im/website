@@ -23,11 +23,11 @@ description:
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->coupons->send->postAsync([
   'json' => [
-    'openid' => 'xsd3434454567676',
-    'appid' => 'wx1234567889999',
-    'stock_id' => '100088',
+    'openid'         => 'xsd3434454567676',
+    'appid'          => 'wx1234567889999',
+    'stock_id'       => '100088',
     'out_request_no' => '1002600620019090123143254435',
-    'coupon_code' => 'sxxe34343434',
+    'coupon_code'    => 'sxxe34343434',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,11 +39,11 @@ $instance->v3->marketing->busifavor->coupons->send->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/coupons/send')->postAsync([
   'json' => [
-    'openid' => 'xsd3434454567676',
-    'appid' => 'wx1234567889999',
-    'stock_id' => '100088',
+    'openid'         => 'xsd3434454567676',
+    'appid'          => 'wx1234567889999',
+    'stock_id'       => '100088',
     'out_request_no' => '1002600620019090123143254435',
-    'coupon_code' => 'sxxe34343434',
+    'coupon_code'    => 'sxxe34343434',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,11 +55,11 @@ $instance->chain('v3/marketing/busifavor/coupons/send')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/coupons/send']->postAsync([
   'json' => [
-    'openid' => 'xsd3434454567676',
-    'appid' => 'wx1234567889999',
-    'stock_id' => '100088',
+    'openid'         => 'xsd3434454567676',
+    'appid'          => 'wx1234567889999',
+    'stock_id'       => '100088',
     'out_request_no' => '1002600620019090123143254435',
-    'coupon_code' => 'sxxe34343434',
+    'coupon_code'    => 'sxxe34343434',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,11 +71,11 @@ $instance['v3/marketing/busifavor/coupons/send']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->coupons->send->post([
   'json' => [
-    'openid' => 'xsd3434454567676',
-    'appid' => 'wx1234567889999',
-    'stock_id' => '100088',
+    'openid'         => 'xsd3434454567676',
+    'appid'          => 'wx1234567889999',
+    'stock_id'       => '100088',
     'out_request_no' => '1002600620019090123143254435',
-    'coupon_code' => 'sxxe34343434',
+    'coupon_code'    => 'sxxe34343434',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,11 +84,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/coupons/send')->post([
   'json' => [
-    'openid' => 'xsd3434454567676',
-    'appid' => 'wx1234567889999',
-    'stock_id' => '100088',
+    'openid'         => 'xsd3434454567676',
+    'appid'          => 'wx1234567889999',
+    'stock_id'       => '100088',
     'out_request_no' => '1002600620019090123143254435',
-    'coupon_code' => 'sxxe34343434',
+    'coupon_code'    => 'sxxe34343434',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/coupons/send']->post([
   'json' => [
-    'openid' => 'xsd3434454567676',
-    'appid' => 'wx1234567889999',
-    'stock_id' => '100088',
+    'openid'         => 'xsd3434454567676',
+    'appid'          => 'wx1234567889999',
+    'stock_id'       => '100088',
     'out_request_no' => '1002600620019090123143254435',
-    'coupon_code' => 'sxxe34343434',
+    'coupon_code'    => 'sxxe34343434',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,7 +111,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id {data-required}| string | 批次号
+| stock_id {data-required} | string | 批次号
 | coupon_code | string | 券code
 | out_request_no | string | 发券凭证
 

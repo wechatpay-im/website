@@ -22,8 +22,8 @@ $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_activity_id_->r
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'add_time'                 => '2015-05-20T13:29:35+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-act/{activity
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'add_time'                 => '2015-05-20T13:29:35+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,8 +56,8 @@ $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{activity_id}/re
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'add_time'                 => '2015-05-20T13:29:35+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -73,8 +73,8 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_act
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'add_time'                 => '2015-05-20T13:29:35+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,8 +87,8 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-a
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'add_time'                 => '2015-05-20T13:29:35+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -101,8 +101,8 @@ $response = $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{act
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'add_time'                 => '2015-05-20T13:29:35+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -112,10 +112,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| string | 零售小店活动ID
+| activity_id {data-required} | string | 零售小店活动ID
 | failed_representative_info_list | object[] {data-tooltip="对应PHP的array"} | 添加失败业务代理信息列表
 | openid {data-required data-indent=1} | string | 业务代理的OpenID
-| add_time {data-required}| string | 添加时间
+| add_time {data-required} | string | 添加时间
 
 {.im-table #response}
 
@@ -145,8 +145,8 @@ $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_activity_id_->r
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35.120+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'delete_time'              => '2015-05-20T13:29:35.120+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -162,8 +162,8 @@ $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-act/{activity
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35.120+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'delete_time'              => '2015-05-20T13:29:35.120+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -179,8 +179,8 @@ $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{activity_id}/re
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35.120+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'delete_time'              => '2015-05-20T13:29:35.120+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -196,8 +196,8 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_act
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35.120+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'delete_time'              => '2015-05-20T13:29:35.120+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -210,8 +210,8 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-a
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35.120+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'delete_time'              => '2015-05-20T13:29:35.120+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -224,8 +224,8 @@ $response = $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{act
     'representative_info_list' => [[
       'openid' => 'oK7fFt8zzEZ909XH-LE2#',
     ],],
-    'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35.120+08:00',
+    'out_request_no'           => '1002600620019090123143254436',
+    'delete_time'              => '2015-05-20T13:29:35.120+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -235,10 +235,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id {data-required}| string | 零售小店活动ID
+| activity_id {data-required} | string | 零售小店活动ID
 | failed_representative_info_list | object[] {data-tooltip="对应PHP的array"} | 删除失败业务代理信息列表
 | openid {data-required data-indent=1} | string | 业务代理的OpenID
-| delete_time {data-required}| string | 删除时间
+| delete_time {data-required} | string | 删除时间
 
 {.im-table #response}
 

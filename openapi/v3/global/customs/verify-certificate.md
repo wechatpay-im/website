@@ -32,16 +32,16 @@ description: 该接口用于商户上传用户身份信息，微信支付会重�
 $instance->v3->global->customs->verifyCertificate->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'certificate_type' => 'IDCARD',
-    'certificate_id' => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name' => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_type'    => 'IDCARD',
+    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -57,16 +57,16 @@ $instance->v3->global->customs->verifyCertificate->postAsync([
 $instance->chain('v3/global/customs/verify-certificate')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'certificate_type' => 'IDCARD',
-    'certificate_id' => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name' => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_type'    => 'IDCARD',
+    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -82,16 +82,16 @@ $instance->chain('v3/global/customs/verify-certificate')->postAsync([
 $instance['v3/global/customs/verify-certificate']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'certificate_type' => 'IDCARD',
-    'certificate_id' => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name' => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_type'    => 'IDCARD',
+    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -107,16 +107,16 @@ $instance['v3/global/customs/verify-certificate']->postAsync([
 $response = $instance->v3->global->customs->verifyCertificate->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'certificate_type' => 'IDCARD',
-    'certificate_id' => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name' => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_type'    => 'IDCARD',
+    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -129,16 +129,16 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/customs/verify-certificate')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'certificate_type' => 'IDCARD',
-    'certificate_id' => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name' => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_type'    => 'IDCARD',
+    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -151,16 +151,16 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/customs/verify-certificate']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'mchid' => '1230000109',
-    'out_trade_no' => '20150806125346',
-    'transaction_id' => '1000320306201511078440737890',
-    'sub_order_no' => '20150806125346',
-    'customs' => 'SHANGHAI_ZS',
+    'appid'               => 'wxd678efh567hg6787',
+    'mchid'               => '1230000109',
+    'out_trade_no'        => '20150806125346',
+    'transaction_id'      => '1000320306201511078440737890',
+    'sub_order_no'        => '20150806125346',
+    'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
-    'certificate_type' => 'IDCARD',
-    'certificate_id' => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name' => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_type'    => 'IDCARD',
+    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -173,11 +173,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 机构APPID
-| mchid {data-required}| string | 商户号
-| out_trade_no {data-required}| string | 商户订单号
-| transaction_id {data-required}| string | 微信订单号
-| certificate_check_result {data-required}| string | 身份核验结果
+| appid {data-required} | string | 机构APPID
+| mchid {data-required} | string | 商户号
+| out_trade_no {data-required} | string | 商户订单号
+| transaction_id {data-required} | string | 微信订单号
+| certificate_check_result {data-required} | string | 身份核验结果
 
 {.im-table #response}
 

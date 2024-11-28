@@ -21,8 +21,8 @@ $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_brand_id_->stor
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'add_time'       => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -39,8 +39,8 @@ $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'add_time'       => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -57,8 +57,8 @@ $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/store
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'add_time'       => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -75,8 +75,8 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_bra
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'add_time'       => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -90,8 +90,8 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-a
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'add_time'       => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -105,8 +105,8 @@ $response = $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{bra
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'add_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'add_time'       => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -151,8 +151,8 @@ $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_brand_id_->stor
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'delete_time'    => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -169,8 +169,8 @@ $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'delete_time'    => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -187,8 +187,8 @@ $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/store
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'delete_time'    => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -205,8 +205,8 @@ $response = $instance->v3->marketing->goodsSubsidyActivity->retailStoreAct->_bra
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'delete_time'    => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -220,8 +220,8 @@ $response = $instance->chain('v3/marketing/goods-subsidy-activity/retail-store-a
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'delete_time'    => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],
@@ -235,8 +235,8 @@ $response = $instance['v3/marketing/goods-subsidy-activity/retail-store-act/{bra
   'brand_id' => '1001',
   'json' => [
     'out_request_no' => '1002600620019090123143254436',
-    'delete_time' => '2015-05-20T13:29:35+08:00',
-    'stores' => [[
+    'delete_time'    => '2015-05-20T13:29:35+08:00',
+    'stores'         => [[
       'store_code' => 'abc_001',
       'store_name' => '幸福小店',
     ],],

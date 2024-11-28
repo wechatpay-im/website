@@ -24,12 +24,12 @@ description: 在用户满足优惠门槛后，商户可通过该接口核销用�
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->coupons->use->postAsync([
   'json' => [
-    'coupon_code' => 'sxxe34343434',
-    'stock_id' => '100088',
-    'appid' => 'wx1234567889999',
-    'use_time' => '2015-05-20T13:29:35+08:00',
+    'coupon_code'    => 'sxxe34343434',
+    'stock_id'       => '100088',
+    'appid'          => 'wx1234567889999',
+    'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
-    'openid' => 'xsd3434454567676',
+    'openid'         => 'xsd3434454567676',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,12 +41,12 @@ $instance->v3->marketing->busifavor->coupons->use->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/coupons/use')->postAsync([
   'json' => [
-    'coupon_code' => 'sxxe34343434',
-    'stock_id' => '100088',
-    'appid' => 'wx1234567889999',
-    'use_time' => '2015-05-20T13:29:35+08:00',
+    'coupon_code'    => 'sxxe34343434',
+    'stock_id'       => '100088',
+    'appid'          => 'wx1234567889999',
+    'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
-    'openid' => 'xsd3434454567676',
+    'openid'         => 'xsd3434454567676',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,12 +58,12 @@ $instance->chain('v3/marketing/busifavor/coupons/use')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/coupons/use']->postAsync([
   'json' => [
-    'coupon_code' => 'sxxe34343434',
-    'stock_id' => '100088',
-    'appid' => 'wx1234567889999',
-    'use_time' => '2015-05-20T13:29:35+08:00',
+    'coupon_code'    => 'sxxe34343434',
+    'stock_id'       => '100088',
+    'appid'          => 'wx1234567889999',
+    'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
-    'openid' => 'xsd3434454567676',
+    'openid'         => 'xsd3434454567676',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,12 +75,12 @@ $instance['v3/marketing/busifavor/coupons/use']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->coupons->use->post([
   'json' => [
-    'coupon_code' => 'sxxe34343434',
-    'stock_id' => '100088',
-    'appid' => 'wx1234567889999',
-    'use_time' => '2015-05-20T13:29:35+08:00',
+    'coupon_code'    => 'sxxe34343434',
+    'stock_id'       => '100088',
+    'appid'          => 'wx1234567889999',
+    'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
-    'openid' => 'xsd3434454567676',
+    'openid'         => 'xsd3434454567676',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,12 +89,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/coupons/use')->post([
   'json' => [
-    'coupon_code' => 'sxxe34343434',
-    'stock_id' => '100088',
-    'appid' => 'wx1234567889999',
-    'use_time' => '2015-05-20T13:29:35+08:00',
+    'coupon_code'    => 'sxxe34343434',
+    'stock_id'       => '100088',
+    'appid'          => 'wx1234567889999',
+    'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
-    'openid' => 'xsd3434454567676',
+    'openid'         => 'xsd3434454567676',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,12 +103,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/coupons/use']->post([
   'json' => [
-    'coupon_code' => 'sxxe34343434',
-    'stock_id' => '100088',
-    'appid' => 'wx1234567889999',
-    'use_time' => '2015-05-20T13:29:35+08:00',
+    'coupon_code'    => 'sxxe34343434',
+    'stock_id'       => '100088',
+    'appid'          => 'wx1234567889999',
+    'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
-    'openid' => 'xsd3434454567676',
+    'openid'         => 'xsd3434454567676',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -118,9 +118,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id {data-required}| string | 批次号
-| openid {data-required}| string | 用户标识
-| wechatpay_use_time {data-required}| string | 系统核销券成功的时间
+| stock_id {data-required} | string | 批次号
+| openid {data-required} | string | 用户标识
+| wechatpay_use_time {data-required} | string | 系统核销券成功的时间
 
 {.im-table #response}
 

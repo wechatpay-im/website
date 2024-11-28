@@ -28,14 +28,14 @@ description: 如：若需要在3号扣费，则需要在1号将通知下发给�
 $instance->v3->papay->contracts->_contract_id_->notify->postAsync([
   'contract_id' => '',
   'json' => [
-    'mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'mchid'            => '1230000109',
+    'appid'            => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -50,14 +50,14 @@ $instance->v3->papay->contracts->_contract_id_->notify->postAsync([
 $instance->chain('v3/papay/contracts/{contract_id}/notify')->postAsync([
   'contract_id' => '',
   'json' => [
-    'mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'mchid'            => '1230000109',
+    'appid'            => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -72,14 +72,14 @@ $instance->chain('v3/papay/contracts/{contract_id}/notify')->postAsync([
 $instance['v3/papay/contracts/{contract_id}/notify']->postAsync([
   'contract_id' => '',
   'json' => [
-    'mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'mchid'            => '1230000109',
+    'appid'            => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -94,14 +94,14 @@ $instance['v3/papay/contracts/{contract_id}/notify']->postAsync([
 $response = $instance->v3->papay->contracts->_contract_id_->notify->post([
   'contract_id' => '',
   'json' => [
-    'mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'mchid'            => '1230000109',
+    'appid'            => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -113,14 +113,14 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/papay/contracts/{contract_id}/notify')->post([
   'contract_id' => '',
   'json' => [
-    'mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'mchid'            => '1230000109',
+    'appid'            => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],
@@ -132,14 +132,14 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/papay/contracts/{contract_id}/notify']->post([
   'contract_id' => '',
   'json' => [
-    'mchid' => '1230000109',
-    'appid' => 'wxd678efh567hg6787',
-    'deduct_duration' => [
+    'mchid'            => '1230000109',
+    'appid'            => 'wxd678efh567hg6787',
+    'deduct_duration'  => [
       'count' => 1,
-      'unit' => 'DAY',
+      'unit'  => 'DAY',
     ],
     'estimated_amount' => [
-      'amount' => 1,
+      'amount'   => 1,
       'currency' => 'CNY',
     ],
   ],

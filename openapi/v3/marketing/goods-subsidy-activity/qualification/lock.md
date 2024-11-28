@@ -26,10 +26,10 @@ description: 指定服务商可通过该接口报名加价购活动、查询某�
 $instance->v3->marketing->goodsSubsidyActivity->qualification->lock->postAsync([
   'json' => [
     'order_information' => [
-      'payer_openid' => '',
-      'out_trade_no' => '',
-      'total_fee' => 0,
-      'store_id' => '',
+      'payer_openid'      => '',
+      'out_trade_no'      => '',
+      'total_fee'         => 0,
+      'store_id'          => '',
       'store_merchant_id' => '',
     ],
     'qualification_ids' => ['string'],
@@ -45,10 +45,10 @@ $instance->v3->marketing->goodsSubsidyActivity->qualification->lock->postAsync([
 $instance->chain('v3/marketing/goods-subsidy-activity/qualification/lock')->postAsync([
   'json' => [
     'order_information' => [
-      'payer_openid' => '',
-      'out_trade_no' => '',
-      'total_fee' => 0,
-      'store_id' => '',
+      'payer_openid'      => '',
+      'out_trade_no'      => '',
+      'total_fee'         => 0,
+      'store_id'          => '',
       'store_merchant_id' => '',
     ],
     'qualification_ids' => ['string'],
@@ -64,10 +64,10 @@ $instance->chain('v3/marketing/goods-subsidy-activity/qualification/lock')->post
 $instance['v3/marketing/goods-subsidy-activity/qualification/lock']->postAsync([
   'json' => [
     'order_information' => [
-      'payer_openid' => '',
-      'out_trade_no' => '',
-      'total_fee' => 0,
-      'store_id' => '',
+      'payer_openid'      => '',
+      'out_trade_no'      => '',
+      'total_fee'         => 0,
+      'store_id'          => '',
       'store_merchant_id' => '',
     ],
     'qualification_ids' => ['string'],
@@ -83,10 +83,10 @@ $instance['v3/marketing/goods-subsidy-activity/qualification/lock']->postAsync([
 $response = $instance->v3->marketing->goodsSubsidyActivity->qualification->lock->post([
   'json' => [
     'order_information' => [
-      'payer_openid' => '',
-      'out_trade_no' => '',
-      'total_fee' => 0,
-      'store_id' => '',
+      'payer_openid'      => '',
+      'out_trade_no'      => '',
+      'total_fee'         => 0,
+      'store_id'          => '',
       'store_merchant_id' => '',
     ],
     'qualification_ids' => ['string'],
@@ -99,10 +99,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/goods-subsidy-activity/qualification/lock')->post([
   'json' => [
     'order_information' => [
-      'payer_openid' => '',
-      'out_trade_no' => '',
-      'total_fee' => 0,
-      'store_id' => '',
+      'payer_openid'      => '',
+      'out_trade_no'      => '',
+      'total_fee'         => 0,
+      'store_id'          => '',
       'store_merchant_id' => '',
     ],
     'qualification_ids' => ['string'],
@@ -115,10 +115,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/goods-subsidy-activity/qualification/lock']->post([
   'json' => [
     'order_information' => [
-      'payer_openid' => '',
-      'out_trade_no' => '',
-      'total_fee' => 0,
-      'store_id' => '',
+      'payer_openid'      => '',
+      'out_trade_no'      => '',
+      'total_fee'         => 0,
+      'store_id'          => '',
       'store_merchant_id' => '',
     ],
     'qualification_ids' => ['string'],

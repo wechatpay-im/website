@@ -70,10 +70,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| collection_id {data-required}| string | 重采ID
-| use_id {data-required}| string | 用户ID
-| organization_id {data-required}| string | 机构ID
-| collection_state {data-required}| string | 重采状态<br/>`COLLECTION_REQUIRED` \| `PHOTO_UPLOADED` \| `COMPLETE` 枚举值之一
+| collection_id {data-required} | string | 重采ID
+| use_id {data-required} | string | 用户ID
+| organization_id {data-required} | string | 机构ID
+| collection_state {data-required} | string | 重采状态<br/>`COLLECTION_REQUIRED` \| `PHOTO_UPLOADED` \| `COMPLETE` 枚举值之一
 | register_photo_upload_time | string | 注册照上传时间
 | confirm_time | string | 支付用户确认时间
 

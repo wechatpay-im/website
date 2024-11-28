@@ -37,28 +37,28 @@ description:
 ```php [异步纯链式]
 $instance->v3->offlineface->transactions->postAsync([
   'json' => [
-    'auth_code' => '',
-    'sp_appid' => '',
-    'sp_mchid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'amount' => [
-      'total' => 0,
+    'auth_code'    => '',
+    'sp_appid'     => '',
+    'sp_mchid'     => '',
+    'sub_appid'    => '',
+    'sub_mchid'    => '',
+    'amount'       => [
+      'total'    => 0,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'device_ip' => '',
     ],
-    'goods_tag' => '',
-    'description' => '',
-    'attach' => '',
-    'settle_info' => [
+    'goods_tag'    => '',
+    'description'  => '',
+    'attach'       => '',
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'out_trade_no' => '',
-    'business' => [
+    'business'     => [
       'business_product_id' => 0,
-      'business_scene_id' => 0,
+      'business_scene_id'   => 0,
     ],
   ],
 ])
@@ -71,28 +71,28 @@ $instance->v3->offlineface->transactions->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/offlineface/transactions')->postAsync([
   'json' => [
-    'auth_code' => '',
-    'sp_appid' => '',
-    'sp_mchid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'amount' => [
-      'total' => 0,
+    'auth_code'    => '',
+    'sp_appid'     => '',
+    'sp_mchid'     => '',
+    'sub_appid'    => '',
+    'sub_mchid'    => '',
+    'amount'       => [
+      'total'    => 0,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'device_ip' => '',
     ],
-    'goods_tag' => '',
-    'description' => '',
-    'attach' => '',
-    'settle_info' => [
+    'goods_tag'    => '',
+    'description'  => '',
+    'attach'       => '',
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'out_trade_no' => '',
-    'business' => [
+    'business'     => [
       'business_product_id' => 0,
-      'business_scene_id' => 0,
+      'business_scene_id'   => 0,
     ],
   ],
 ])
@@ -105,28 +105,28 @@ $instance->chain('v3/offlineface/transactions')->postAsync([
 ```php [异步属性式]
 $instance['v3/offlineface/transactions']->postAsync([
   'json' => [
-    'auth_code' => '',
-    'sp_appid' => '',
-    'sp_mchid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'amount' => [
-      'total' => 0,
+    'auth_code'    => '',
+    'sp_appid'     => '',
+    'sp_mchid'     => '',
+    'sub_appid'    => '',
+    'sub_mchid'    => '',
+    'amount'       => [
+      'total'    => 0,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'device_ip' => '',
     ],
-    'goods_tag' => '',
-    'description' => '',
-    'attach' => '',
-    'settle_info' => [
+    'goods_tag'    => '',
+    'description'  => '',
+    'attach'       => '',
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'out_trade_no' => '',
-    'business' => [
+    'business'     => [
       'business_product_id' => 0,
-      'business_scene_id' => 0,
+      'business_scene_id'   => 0,
     ],
   ],
 ])
@@ -139,28 +139,28 @@ $instance['v3/offlineface/transactions']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->offlineface->transactions->post([
   'json' => [
-    'auth_code' => '',
-    'sp_appid' => '',
-    'sp_mchid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'amount' => [
-      'total' => 0,
+    'auth_code'    => '',
+    'sp_appid'     => '',
+    'sp_mchid'     => '',
+    'sub_appid'    => '',
+    'sub_mchid'    => '',
+    'amount'       => [
+      'total'    => 0,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'device_ip' => '',
     ],
-    'goods_tag' => '',
-    'description' => '',
-    'attach' => '',
-    'settle_info' => [
+    'goods_tag'    => '',
+    'description'  => '',
+    'attach'       => '',
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'out_trade_no' => '',
-    'business' => [
+    'business'     => [
       'business_product_id' => 0,
-      'business_scene_id' => 0,
+      'business_scene_id'   => 0,
     ],
   ],
 ]);
@@ -170,28 +170,28 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/offlineface/transactions')->post([
   'json' => [
-    'auth_code' => '',
-    'sp_appid' => '',
-    'sp_mchid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'amount' => [
-      'total' => 0,
+    'auth_code'    => '',
+    'sp_appid'     => '',
+    'sp_mchid'     => '',
+    'sub_appid'    => '',
+    'sub_mchid'    => '',
+    'amount'       => [
+      'total'    => 0,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'device_ip' => '',
     ],
-    'goods_tag' => '',
-    'description' => '',
-    'attach' => '',
-    'settle_info' => [
+    'goods_tag'    => '',
+    'description'  => '',
+    'attach'       => '',
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'out_trade_no' => '',
-    'business' => [
+    'business'     => [
       'business_product_id' => 0,
-      'business_scene_id' => 0,
+      'business_scene_id'   => 0,
     ],
   ],
 ]);
@@ -201,28 +201,28 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/offlineface/transactions']->post([
   'json' => [
-    'auth_code' => '',
-    'sp_appid' => '',
-    'sp_mchid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'amount' => [
-      'total' => 0,
+    'auth_code'    => '',
+    'sp_appid'     => '',
+    'sp_mchid'     => '',
+    'sub_appid'    => '',
+    'sub_mchid'    => '',
+    'amount'       => [
+      'total'    => 0,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
+    'scene_info'   => [
       'device_ip' => '',
     ],
-    'goods_tag' => '',
-    'description' => '',
-    'attach' => '',
-    'settle_info' => [
+    'goods_tag'    => '',
+    'description'  => '',
+    'attach'       => '',
+    'settle_info'  => [
       'profit_sharing' => true,
     ],
     'out_trade_no' => '',
-    'business' => [
+    'business'     => [
       'business_product_id' => 0,
-      'business_scene_id' => 0,
+      'business_scene_id'   => 0,
     ],
   ],
 ]);
@@ -233,10 +233,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_appid {data-required}| string | 服务商公众号appid
-| sp_mchid {data-required}| string | 服务商商户号
+| sp_appid {data-required} | string | 服务商公众号appid
+| sp_mchid {data-required} | string | 服务商商户号
 | sub_appid | string | 子商户公众号appid
-| sub_mchid {data-required}| string | 子商户商户号
+| sub_mchid {data-required} | string | 子商户商户号
 | payer | object {data-tooltip="对应PHP的array"} | 支付用户信息
 | sp_openid {data-indent=1} | string | 公众下的openid
 | sub_openid {data-indent=1} | string | 子公众下的openid

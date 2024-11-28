@@ -118,8 +118,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | total {data-required data-indent=2} | number | 金额
 | currency {data-indent=2} | string | 货币类型
 | deduct_date {data-indent=1} | string | 实际扣费的日期
-| limit {data-required}| number | 分页大小
-| offset {data-required}| number | 分页开始位置
+| limit {data-required} | number | 分页大小
+| offset {data-required} | number | 分页开始位置
 | total_count | number | 扣费周期总条数
 
 {.im-table #response}

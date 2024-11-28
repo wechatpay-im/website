@@ -32,19 +32,19 @@ description: 该接口用于在开通ETC自动扣费前上传一些必要的信�
 ```php [异步纯链式]
 $instance->v3->vehicle->etc->preopen->postAsync([
   'json' => [
-    'sp_appid' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mchid' => '1510770601',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
-    'plan_id' => '97619',
+    'sp_appid'      => '10000098',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mchid'     => '1510770601',
+    'openid'        => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'plan_id'       => '97619',
     'etc_device_id' => 'xxxxxxx',
-    'plate_number' => '藏ZZZZZZ',
-    'identify' => [
-      'encrypted_real_name' => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'plate_number'  => '藏ZZZZZZ',
+    'identify'      => [
+      'encrypted_real_name'     => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
       'encrypted_credential_id' => 't85SAX3GxVYqGQm2Q8cfeFd1dWy40j4s7XpIds8Glw83HG3vN9Q==',
-      'credential_type' => 'ID_CARD',
+      'credential_type'         => 'ID_CARD',
     ],
-    'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'bank_card_no'  => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -59,19 +59,19 @@ $instance->v3->vehicle->etc->preopen->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/vehicle/etc/preopen')->postAsync([
   'json' => [
-    'sp_appid' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mchid' => '1510770601',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
-    'plan_id' => '97619',
+    'sp_appid'      => '10000098',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mchid'     => '1510770601',
+    'openid'        => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'plan_id'       => '97619',
     'etc_device_id' => 'xxxxxxx',
-    'plate_number' => '藏ZZZZZZ',
-    'identify' => [
-      'encrypted_real_name' => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'plate_number'  => '藏ZZZZZZ',
+    'identify'      => [
+      'encrypted_real_name'     => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
       'encrypted_credential_id' => 't85SAX3GxVYqGQm2Q8cfeFd1dWy40j4s7XpIds8Glw83HG3vN9Q==',
-      'credential_type' => 'ID_CARD',
+      'credential_type'         => 'ID_CARD',
     ],
-    'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'bank_card_no'  => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -86,19 +86,19 @@ $instance->chain('v3/vehicle/etc/preopen')->postAsync([
 ```php [异步属性式]
 $instance['v3/vehicle/etc/preopen']->postAsync([
   'json' => [
-    'sp_appid' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mchid' => '1510770601',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
-    'plan_id' => '97619',
+    'sp_appid'      => '10000098',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mchid'     => '1510770601',
+    'openid'        => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'plan_id'       => '97619',
     'etc_device_id' => 'xxxxxxx',
-    'plate_number' => '藏ZZZZZZ',
-    'identify' => [
-      'encrypted_real_name' => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'plate_number'  => '藏ZZZZZZ',
+    'identify'      => [
+      'encrypted_real_name'     => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
       'encrypted_credential_id' => 't85SAX3GxVYqGQm2Q8cfeFd1dWy40j4s7XpIds8Glw83HG3vN9Q==',
-      'credential_type' => 'ID_CARD',
+      'credential_type'         => 'ID_CARD',
     ],
-    'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'bank_card_no'  => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -113,19 +113,19 @@ $instance['v3/vehicle/etc/preopen']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->vehicle->etc->preopen->post([
   'json' => [
-    'sp_appid' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mchid' => '1510770601',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
-    'plan_id' => '97619',
+    'sp_appid'      => '10000098',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mchid'     => '1510770601',
+    'openid'        => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'plan_id'       => '97619',
     'etc_device_id' => 'xxxxxxx',
-    'plate_number' => '藏ZZZZZZ',
-    'identify' => [
-      'encrypted_real_name' => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'plate_number'  => '藏ZZZZZZ',
+    'identify'      => [
+      'encrypted_real_name'     => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
       'encrypted_credential_id' => 't85SAX3GxVYqGQm2Q8cfeFd1dWy40j4s7XpIds8Glw83HG3vN9Q==',
-      'credential_type' => 'ID_CARD',
+      'credential_type'         => 'ID_CARD',
     ],
-    'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'bank_card_no'  => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -137,19 +137,19 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/vehicle/etc/preopen')->post([
   'json' => [
-    'sp_appid' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mchid' => '1510770601',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
-    'plan_id' => '97619',
+    'sp_appid'      => '10000098',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mchid'     => '1510770601',
+    'openid'        => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'plan_id'       => '97619',
     'etc_device_id' => 'xxxxxxx',
-    'plate_number' => '藏ZZZZZZ',
-    'identify' => [
-      'encrypted_real_name' => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'plate_number'  => '藏ZZZZZZ',
+    'identify'      => [
+      'encrypted_real_name'     => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
       'encrypted_credential_id' => 't85SAX3GxVYqGQm2Q8cfeFd1dWy40j4s7XpIds8Glw83HG3vN9Q==',
-      'credential_type' => 'ID_CARD',
+      'credential_type'         => 'ID_CARD',
     ],
-    'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'bank_card_no'  => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -161,19 +161,19 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/vehicle/etc/preopen']->post([
   'json' => [
-    'sp_appid' => '10000098',
-    'sub_appid' => 'wxcbda96de0b165489',
-    'sub_mchid' => '1510770601',
-    'openid' => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
-    'plan_id' => '97619',
+    'sp_appid'      => '10000098',
+    'sub_appid'     => 'wxcbda96de0b165489',
+    'sub_mchid'     => '1510770601',
+    'openid'        => 'ot35_4gNgXsUuh2sQY0lT9N08AU0',
+    'plan_id'       => '97619',
     'etc_device_id' => 'xxxxxxx',
-    'plate_number' => '藏ZZZZZZ',
-    'identify' => [
-      'encrypted_real_name' => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'plate_number'  => '藏ZZZZZZ',
+    'identify'      => [
+      'encrypted_real_name'     => 'LOX6jBeRlK/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
       'encrypted_credential_id' => 't85SAX3GxVYqGQm2Q8cfeFd1dWy40j4s7XpIds8Glw83HG3vN9Q==',
-      'credential_type' => 'ID_CARD',
+      'credential_type'         => 'ID_CARD',
     ],
-    'bank_card_no' => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
+    'bank_card_no'  => 'K/TErW6DqEM8JFHX4iL3Rlj2vqaEqktvw1KVjgmQ==',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -186,7 +186,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| preopen_id {data-required}| string | 预开通ID
+| preopen_id {data-required} | string | 预开通ID
 
 {.im-table #response}
 

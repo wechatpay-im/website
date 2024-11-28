@@ -70,9 +70,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| url {data-required}| string | 下载链接
-| hash_value {data-required}| string | 安全校验码
-| hash_type {data-required}| string | 哈希算法类型
+| url {data-required} | string | 下载链接
+| hash_value {data-required} | string | 安全校验码
+| hash_type {data-required} | string | 哈希算法类型
 
 {.im-table #response}
 

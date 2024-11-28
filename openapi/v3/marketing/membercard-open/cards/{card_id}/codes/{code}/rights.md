@@ -27,9 +27,9 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_code_->right
   'code' => '478515832665',
   'json' => [
     'before_bonus_value' => 500,
-    'bonus_value' => 600,
-    'add_bonus_value' => 100,
-    'out_request_no' => '100002322019090134234sfdf',
+    'bonus_value'        => 600,
+    'add_bonus_value'    => 100,
+    'out_request_no'     => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,9 +44,9 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes/{code}/righ
   'code' => '478515832665',
   'json' => [
     'before_bonus_value' => 500,
-    'bonus_value' => 600,
-    'add_bonus_value' => 100,
-    'out_request_no' => '100002322019090134234sfdf',
+    'bonus_value'        => 600,
+    'add_bonus_value'    => 100,
+    'out_request_no'     => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,9 +61,9 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}/rights']->p
   'code' => '478515832665',
   'json' => [
     'before_bonus_value' => 500,
-    'bonus_value' => 600,
-    'add_bonus_value' => 100,
-    'out_request_no' => '100002322019090134234sfdf',
+    'bonus_value'        => 600,
+    'add_bonus_value'    => 100,
+    'out_request_no'     => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,9 +78,9 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_
   'code' => '478515832665',
   'json' => [
     'before_bonus_value' => 500,
-    'bonus_value' => 600,
-    'add_bonus_value' => 100,
-    'out_request_no' => '100002322019090134234sfdf',
+    'bonus_value'        => 600,
+    'add_bonus_value'    => 100,
+    'out_request_no'     => '100002322019090134234sfdf',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -92,9 +92,9 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes
   'code' => '478515832665',
   'json' => [
     'before_bonus_value' => 500,
-    'bonus_value' => 600,
-    'add_bonus_value' => 100,
-    'out_request_no' => '100002322019090134234sfdf',
+    'bonus_value'        => 600,
+    'add_bonus_value'    => 100,
+    'out_request_no'     => '100002322019090134234sfdf',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -106,9 +106,9 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}
   'code' => '478515832665',
   'json' => [
     'before_bonus_value' => 500,
-    'bonus_value' => 600,
-    'add_bonus_value' => 100,
-    'out_request_no' => '100002322019090134234sfdf',
+    'bonus_value'        => 600,
+    'add_bonus_value'    => 100,
+    'out_request_no'     => '100002322019090134234sfdf',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

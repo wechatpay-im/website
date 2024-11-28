@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| out_bill_no {data-required}| string | 商户单号
-| transfer_bill_no {data-required}| string | 微信转账单号
-| state {data-required}| string | 单据状态
-| update_time {data-required}| string | 状态变更时间
+| sub_mchid {data-required} | string | 二级商户号
+| out_bill_no {data-required} | string | 商户单号
+| transfer_bill_no {data-required} | string | 微信转账单号
+| state {data-required} | string | 单据状态
+| update_time {data-required} | string | 状态变更时间
 
 {.im-table #response}
 

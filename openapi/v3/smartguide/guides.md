@@ -24,13 +24,13 @@
 $instance->v3->smartguide->guides->postAsync([
   'json' => [
     'sub_mchid' => '',
-    'corpid' => '',
-    'store_id' => 0,
-    'userid' => '',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'corpid'    => '',
+    'store_id'  => 0,
+    'userid'    => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -46,13 +46,13 @@ $instance->v3->smartguide->guides->postAsync([
 $instance->chain('v3/smartguide/guides')->postAsync([
   'json' => [
     'sub_mchid' => '',
-    'corpid' => '',
-    'store_id' => 0,
-    'userid' => '',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'corpid'    => '',
+    'store_id'  => 0,
+    'userid'    => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -68,13 +68,13 @@ $instance->chain('v3/smartguide/guides')->postAsync([
 $instance['v3/smartguide/guides']->postAsync([
   'json' => [
     'sub_mchid' => '',
-    'corpid' => '',
-    'store_id' => 0,
-    'userid' => '',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'corpid'    => '',
+    'store_id'  => 0,
+    'userid'    => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -90,13 +90,13 @@ $instance['v3/smartguide/guides']->postAsync([
 $response = $instance->v3->smartguide->guides->post([
   'json' => [
     'sub_mchid' => '',
-    'corpid' => '',
-    'store_id' => 0,
-    'userid' => '',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'corpid'    => '',
+    'store_id'  => 0,
+    'userid'    => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -109,13 +109,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/smartguide/guides')->post([
   'json' => [
     'sub_mchid' => '',
-    'corpid' => '',
-    'store_id' => 0,
-    'userid' => '',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'corpid'    => '',
+    'store_id'  => 0,
+    'userid'    => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -128,13 +128,13 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/smartguide/guides']->post([
   'json' => [
     'sub_mchid' => '',
-    'corpid' => '',
-    'store_id' => 0,
-    'userid' => '',
-    'name' => '',
-    'mobile' => '',
-    'qr_code' => '',
-    'avatar' => '',
+    'corpid'    => '',
+    'store_id'  => 0,
+    'userid'    => '',
+    'name'      => '',
+    'mobile'    => '',
+    'qr_code'   => '',
+    'avatar'    => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -147,7 +147,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| guide_id {data-required}| string | 服务人员ID
+| guide_id {data-required} | string | 服务人员ID
 
 {.im-table #response}
 

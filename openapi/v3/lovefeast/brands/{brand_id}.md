@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| donate_count {data-required}| number | 捐赠数量
-| consume_count {data-required}| number | 供餐数量
+| donate_count {data-required} | number | 捐赠数量
+| consume_count {data-required} | number | 供餐数量
 
 {.im-table #response}
 

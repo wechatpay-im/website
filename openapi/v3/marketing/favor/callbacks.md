@@ -78,8 +78,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| notify_url {data-required}| string | 通知地址
+| mchid {data-required} | string | 商户号
+| notify_url {data-required} | string | 通知地址
 
 {.im-table #response}
 
@@ -103,9 +103,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->marketing->favor->callbacks->postAsync([
   'json' => [
-    'mchid' => '9856888',
+    'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
-    'switch' => true,
+    'switch'     => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -117,9 +117,9 @@ $instance->v3->marketing->favor->callbacks->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/callbacks')->postAsync([
   'json' => [
-    'mchid' => '9856888',
+    'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
-    'switch' => true,
+    'switch'     => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -131,9 +131,9 @@ $instance->chain('v3/marketing/favor/callbacks')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/favor/callbacks']->postAsync([
   'json' => [
-    'mchid' => '9856888',
+    'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
-    'switch' => true,
+    'switch'     => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -145,9 +145,9 @@ $instance['v3/marketing/favor/callbacks']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->callbacks->post([
   'json' => [
-    'mchid' => '9856888',
+    'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
-    'switch' => true,
+    'switch'     => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -156,9 +156,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/callbacks')->post([
   'json' => [
-    'mchid' => '9856888',
+    'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
-    'switch' => true,
+    'switch'     => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -167,9 +167,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/callbacks']->post([
   'json' => [
-    'mchid' => '9856888',
+    'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
-    'switch' => true,
+    'switch'     => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -179,8 +179,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| update_time {data-required}| string | 修改时间
-| notify_url {data-required}| string | 通知地址
+| update_time {data-required} | string | 修改时间
+| notify_url {data-required} | string | 通知地址
 
 {.im-table #response}
 

@@ -23,9 +23,9 @@ description: 商户在下单之前，调用该API来标记该笔商户订单后�
 $instance->v3->global->profitSharing->transactions->mark->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_trade_no' => 'P20150806125346',
-    'currency' => 'CNY',
+    'currency'     => 'CNY',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,9 +38,9 @@ $instance->v3->global->profitSharing->transactions->mark->postAsync([
 $instance->chain('v3/global/profit-sharing/transactions/mark')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_trade_no' => 'P20150806125346',
-    'currency' => 'CNY',
+    'currency'     => 'CNY',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +53,9 @@ $instance->chain('v3/global/profit-sharing/transactions/mark')->postAsync([
 $instance['v3/global/profit-sharing/transactions/mark']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_trade_no' => 'P20150806125346',
-    'currency' => 'CNY',
+    'currency'     => 'CNY',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +68,9 @@ $instance['v3/global/profit-sharing/transactions/mark']->postAsync([
 $response = $instance->v3->global->profitSharing->transactions->mark->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_trade_no' => 'P20150806125346',
-    'currency' => 'CNY',
+    'currency'     => 'CNY',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -80,9 +80,9 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/global/profit-sharing/transactions/mark')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_trade_no' => 'P20150806125346',
-    'currency' => 'CNY',
+    'currency'     => 'CNY',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -92,9 +92,9 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/global/profit-sharing/transactions/mark']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'    => '1900000109',
     'out_trade_no' => 'P20150806125346',
-    'currency' => 'CNY',
+    'currency'     => 'CNY',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

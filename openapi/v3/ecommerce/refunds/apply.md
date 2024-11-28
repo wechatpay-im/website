@@ -10,10 +10,12 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| individual_auth_id {data-indent=1} | string | 商品单个人收款方受理授权ID
+| sub_mchid {data-indent=1} | string | 二级商户号
 | sp_appid {data-required data-indent=1} | string | 电商平台APPID
 | sub_appid {data-indent=1} | string | 二级商户APPID
-| transaction_id {data-indent=1} | string | 微信订单号
+| combine_transaction_id {data-required data-indent=1} | string | 交易单微信支付订单号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_trade_no {data-indent=1} | string | 商户订单号
 | out_refund_no {data-required data-indent=1} | string | 商户退款单号
 | reason {data-indent=1} | string | 退款原因
@@ -26,7 +28,7 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 | currency {data-indent=2} | string | 退款币种
 | notify_url {data-indent=1} | string | 退款结果回调url
 | refund_account {data-indent=1} | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
-| funds_account {data-indent=1} | string | 资金账户
+| funds_account {data-required data-indent=1} | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` 枚举值之一
 
 {.im-table #request}
 
@@ -35,25 +37,27 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 ```php [异步纯链式]
 $instance->v3->ecommerce->refunds->apply->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'individual_auth_id'     => '1900000109',
+    'sub_mchid'              => '1900000109',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'combine_transaction_id' => '1217752501201407033233368018',
+    'transaction_id'         => '1217752501201407033233368018',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'out_refund_no'          => '1217752501201407033233368018',
+    'reason'                 => '商品已售完',
+    'amount'                 => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'notify_url' => 'https://weixin.qq.com',
-    'refund_account' => 'REFUND_SOURCE_SUB_MERCHANT',
-    'funds_account' => 'AVAILABLE',
+    'notify_url'             => 'https://weixin.qq.com',
+    'refund_account'         => 'REFUND_SOURCE_SUB_MERCHANT',
+    'funds_account'          => 'AVAILABLE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,25 +69,27 @@ $instance->v3->ecommerce->refunds->apply->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/refunds/apply')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'individual_auth_id'     => '1900000109',
+    'sub_mchid'              => '1900000109',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'combine_transaction_id' => '1217752501201407033233368018',
+    'transaction_id'         => '1217752501201407033233368018',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'out_refund_no'          => '1217752501201407033233368018',
+    'reason'                 => '商品已售完',
+    'amount'                 => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'notify_url' => 'https://weixin.qq.com',
-    'refund_account' => 'REFUND_SOURCE_SUB_MERCHANT',
-    'funds_account' => 'AVAILABLE',
+    'notify_url'             => 'https://weixin.qq.com',
+    'refund_account'         => 'REFUND_SOURCE_SUB_MERCHANT',
+    'funds_account'          => 'AVAILABLE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,25 +101,27 @@ $instance->chain('v3/ecommerce/refunds/apply')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/refunds/apply']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'individual_auth_id'     => '1900000109',
+    'sub_mchid'              => '1900000109',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'combine_transaction_id' => '1217752501201407033233368018',
+    'transaction_id'         => '1217752501201407033233368018',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'out_refund_no'          => '1217752501201407033233368018',
+    'reason'                 => '商品已售完',
+    'amount'                 => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'notify_url' => 'https://weixin.qq.com',
-    'refund_account' => 'REFUND_SOURCE_SUB_MERCHANT',
-    'funds_account' => 'AVAILABLE',
+    'notify_url'             => 'https://weixin.qq.com',
+    'refund_account'         => 'REFUND_SOURCE_SUB_MERCHANT',
+    'funds_account'          => 'AVAILABLE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -125,25 +133,27 @@ $instance['v3/ecommerce/refunds/apply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->refunds->apply->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'individual_auth_id'     => '1900000109',
+    'sub_mchid'              => '1900000109',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'combine_transaction_id' => '1217752501201407033233368018',
+    'transaction_id'         => '1217752501201407033233368018',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'out_refund_no'          => '1217752501201407033233368018',
+    'reason'                 => '商品已售完',
+    'amount'                 => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'notify_url' => 'https://weixin.qq.com',
-    'refund_account' => 'REFUND_SOURCE_SUB_MERCHANT',
-    'funds_account' => 'AVAILABLE',
+    'notify_url'             => 'https://weixin.qq.com',
+    'refund_account'         => 'REFUND_SOURCE_SUB_MERCHANT',
+    'funds_account'          => 'AVAILABLE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -152,25 +162,27 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/refunds/apply')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'individual_auth_id'     => '1900000109',
+    'sub_mchid'              => '1900000109',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'combine_transaction_id' => '1217752501201407033233368018',
+    'transaction_id'         => '1217752501201407033233368018',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'out_refund_no'          => '1217752501201407033233368018',
+    'reason'                 => '商品已售完',
+    'amount'                 => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'notify_url' => 'https://weixin.qq.com',
-    'refund_account' => 'REFUND_SOURCE_SUB_MERCHANT',
-    'funds_account' => 'AVAILABLE',
+    'notify_url'             => 'https://weixin.qq.com',
+    'refund_account'         => 'REFUND_SOURCE_SUB_MERCHANT',
+    'funds_account'          => 'AVAILABLE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -179,25 +191,27 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/refunds/apply']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
-    'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'individual_auth_id'     => '1900000109',
+    'sub_mchid'              => '1900000109',
+    'sp_appid'               => 'wx8888888888888888',
+    'sub_appid'              => 'wx8888888888888888',
+    'combine_transaction_id' => '1217752501201407033233368018',
+    'transaction_id'         => '1217752501201407033233368018',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'out_refund_no'          => '1217752501201407033233368018',
+    'reason'                 => '商品已售完',
+    'amount'                 => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'notify_url' => 'https://weixin.qq.com',
-    'refund_account' => 'REFUND_SOURCE_SUB_MERCHANT',
-    'funds_account' => 'AVAILABLE',
+    'notify_url'             => 'https://weixin.qq.com',
+    'refund_account'         => 'REFUND_SOURCE_SUB_MERCHANT',
+    'funds_account'          => 'AVAILABLE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -207,10 +221,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id {data-required}| string | 微信退款单号
-| out_refund_no {data-required}| string | 商户退款单号
-| create_time {data-required}| string | 退款创建时间
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| refund_id {data-required} | string | 微信退款单号
+| out_refund_no {data-required} | string | 商户退款单号
+| create_time {data-required} | string | 退款创建时间
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | refund {data-required data-indent=1} | integer | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
 | account {data-required data-indent=2} | string | 出资账户类型
@@ -225,8 +239,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-required data-indent=1} | string | 优惠类型
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | refund_amount {data-required data-indent=1} | integer | 优惠退款金额
-| refund_account | string | 退款出资商户
+| refund_account | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-refund.html)
+参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/create-refund.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-refund.html)

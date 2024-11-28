@@ -24,8 +24,8 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->cancel->postAsyn
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,8 +39,8 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/cancel')->post
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +54,8 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/cancel']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,8 +69,8 @@ $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->canc
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -81,8 +81,8 @@ $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/ca
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -93,8 +93,8 @@ $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/cancel']-
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'reason' => '用户投诉',
+    'sub_mchid'  => '1900000109',
+    'reason'     => '用户投诉',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

@@ -25,10 +25,10 @@ description: 前置条件：服务订单状态为“进行中”且订单状态�
 $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->registerdeductinfo->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
   ],
 ])
@@ -42,10 +42,10 @@ $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->registerde
 $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeductinfo')->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
   ],
 ])
@@ -59,10 +59,10 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/register
 $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeductinfo']->postAsync([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
   ],
 ])
@@ -76,10 +76,10 @@ $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeducti
 $response = $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->registerdeductinfo->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
   ],
 ]);
@@ -90,10 +90,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeductinfo')->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
   ],
 ]);
@@ -104,10 +104,10 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeductinfo']->post([
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'channel_id' => '1230000109',
+    'service_id'   => '2002000000000558128851361561536',
+    'appid'        => 'wxd678efh567hg6787',
+    'sub_mchid'    => '1900000109',
+    'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
   ],
 ]);

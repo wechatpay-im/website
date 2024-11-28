@@ -46,38 +46,38 @@ description: 该接口适用于无需微信支付分做订单风控判断的业�
 ```php [异步纯链式]
 $instance->v3->payscore->serviceorder->directComplete->postAsync([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'service_id'           => '500001',
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '',
+    'time_range'           => [
+      'start_time'        => '',
       'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'end_time'          => '',
+      'end_time_remark'   => '',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '',
-      'end_location' => '',
+      'end_location'   => '',
     ],
     'service_introduction' => '某某酒店',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'total_amount' => 50000,
-    'profit_sharing' => true,
-    'goods_tag' => '',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'total_amount'         => 50000,
+    'profit_sharing'       => true,
+    'goods_tag'            => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -89,38 +89,38 @@ $instance->v3->payscore->serviceorder->directComplete->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/serviceorder/direct-complete')->postAsync([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'service_id'           => '500001',
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '',
+    'time_range'           => [
+      'start_time'        => '',
       'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'end_time'          => '',
+      'end_time_remark'   => '',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '',
-      'end_location' => '',
+      'end_location'   => '',
     ],
     'service_introduction' => '某某酒店',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'total_amount' => 50000,
-    'profit_sharing' => true,
-    'goods_tag' => '',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'total_amount'         => 50000,
+    'profit_sharing'       => true,
+    'goods_tag'            => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -132,38 +132,38 @@ $instance->chain('v3/payscore/serviceorder/direct-complete')->postAsync([
 ```php [异步属性式]
 $instance['v3/payscore/serviceorder/direct-complete']->postAsync([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'service_id'           => '500001',
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '',
+    'time_range'           => [
+      'start_time'        => '',
       'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'end_time'          => '',
+      'end_time_remark'   => '',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '',
-      'end_location' => '',
+      'end_location'   => '',
     ],
     'service_introduction' => '某某酒店',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'total_amount' => 50000,
-    'profit_sharing' => true,
-    'goods_tag' => '',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'total_amount'         => 50000,
+    'profit_sharing'       => true,
+    'goods_tag'            => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -175,38 +175,38 @@ $instance['v3/payscore/serviceorder/direct-complete']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->serviceorder->directComplete->post([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'service_id'           => '500001',
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '',
+    'time_range'           => [
+      'start_time'        => '',
       'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'end_time'          => '',
+      'end_time_remark'   => '',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '',
-      'end_location' => '',
+      'end_location'   => '',
     ],
     'service_introduction' => '某某酒店',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'total_amount' => 50000,
-    'profit_sharing' => true,
-    'goods_tag' => '',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'total_amount'         => 50000,
+    'profit_sharing'       => true,
+    'goods_tag'            => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -215,38 +215,38 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/serviceorder/direct-complete')->post([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'service_id'           => '500001',
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '',
+    'time_range'           => [
+      'start_time'        => '',
       'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'end_time'          => '',
+      'end_time_remark'   => '',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '',
-      'end_location' => '',
+      'end_location'   => '',
     ],
     'service_introduction' => '某某酒店',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'total_amount' => 50000,
-    'profit_sharing' => true,
-    'goods_tag' => '',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'total_amount'         => 50000,
+    'profit_sharing'       => true,
+    'goods_tag'            => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -255,38 +255,38 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/serviceorder/direct-complete']->post([
   'json' => [
-    'out_order_no' => '1234323JKHDFE1243252',
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '500001',
-    'post_payments' => [[
-      'name' => '就餐费用, 服务费',
-      'amount' => 40000,
+    'out_order_no'         => '1234323JKHDFE1243252',
+    'appid'                => 'wxd678efh567hg6787',
+    'service_id'           => '500001',
+    'post_payments'        => [[
+      'name'        => '就餐费用, 服务费',
+      'amount'      => 40000,
       'description' => '就餐人均100元，服务费：100/小时',
-      'count' => 4,
+      'count'       => 4,
     ],],
-    'post_discounts' => [[
-      'name' => '满20减1元',
+    'post_discounts'       => [[
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'time_range' => [
-      'start_time' => '',
+    'time_range'           => [
+      'start_time'        => '',
       'start_time_remark' => '',
-      'end_time' => '',
-      'end_time_remark' => '',
+      'end_time'          => '',
+      'end_time_remark'   => '',
     ],
-    'location' => [
+    'location'             => [
       'start_location' => '',
-      'end_location' => '',
+      'end_location'   => '',
     ],
     'service_introduction' => '某某酒店',
-    'attach' => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
-    'notify_url' => 'https://api.test.com',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'total_amount' => 50000,
-    'profit_sharing' => true,
-    'goods_tag' => '',
+    'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
+    'notify_url'           => 'https://api.test.com',
+    'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'total_amount'         => 50000,
+    'profit_sharing'       => true,
+    'goods_tag'            => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -296,9 +296,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_order_no {data-required}| string | 商户服务订单号
-| appid {data-required}| string | 公众账号ID
-| service_id {data-required}| string | 服务ID
+| out_order_no {data-required} | string | 商户服务订单号
+| appid {data-required} | string | 公众账号ID
+| service_id {data-required} | string | 服务ID
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费项目名称
 | amount {data-indent=1} | integer | 金额
@@ -309,7 +309,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-indent=1} | string | 优惠说明
 | amount {data-indent=1} | integer | 优惠金额
 | count {data-indent=1} | integer | 优惠数量
-| time_range {data-required}| object {data-tooltip="对应PHP的array"} | 服务时间段
+| time_range {data-required} | object {data-tooltip="对应PHP的array"} | 服务时间段
 | start_time {data-indent=1} | string | 
 | start_time_remark {data-indent=1} | string | 
 | end_time {data-indent=1} | string | 
@@ -317,11 +317,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | location | object {data-tooltip="对应PHP的array"} | 服务位置
 | start_location {data-indent=1} | string | 
 | end_location {data-indent=1} | string | 
-| service_introduction {data-required}| string | 服务信息
-| mchid {data-required}| string | 商户号
-| order_id {data-required}| string | 微信支付服务订单号
-| state {data-required}| string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
-| state_description {data-required}| string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
+| service_introduction {data-required} | string | 服务信息
+| mchid {data-required} | string | 商户号
+| order_id {data-required} | string | 微信支付服务订单号
+| state {data-required} | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description {data-required} | string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
 | attach | string | 商户数据包
 | notify_url | string | 商户回调地址
 | total_amount | integer | 总金额

@@ -23,8 +23,8 @@ description: 对于经营会员生意的商户来说，存量会员的注册渠�
 $instance->v3->marketing->membercardOpen->cards->_card_id_->users->import->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'code' => '478515832665',
+    'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'code'           => '478515832665',
     'out_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -38,8 +38,8 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->users->import->postA
 $instance->chain('v3/marketing/membercard-open/cards/{card_id}/users/import')->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'code' => '478515832665',
+    'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'code'           => '478515832665',
     'out_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -53,8 +53,8 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/users/import')->p
 $instance['v3/marketing/membercard-open/cards/{card_id}/users/import']->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'code' => '478515832665',
+    'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'code'           => '478515832665',
     'out_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -68,8 +68,8 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/users/import']->postAsyn
 $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->users->import->post([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'code' => '478515832665',
+    'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'code'           => '478515832665',
     'out_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/users/import')->post([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'code' => '478515832665',
+    'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'code'           => '478515832665',
     'out_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -92,8 +92,8 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/membercard-open/cards/{card_id}/users/import']->post([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'code' => '478515832665',
+    'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'code'           => '478515832665',
     'out_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| code {data-required}| string | 会员卡code
+| code {data-required} | string | 会员卡code
 
 {.im-table #response}
 

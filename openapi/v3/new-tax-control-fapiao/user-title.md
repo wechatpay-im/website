@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type {data-required}| string | 购买方类型
-| name {data-required}| string | 名称
+| type {data-required} | string | 购买方类型
+| name {data-required} | string | 名称
 | taxpayer_id | string | 纳税人识别号
 | address | string | 地址
 | telephone | string | 电话

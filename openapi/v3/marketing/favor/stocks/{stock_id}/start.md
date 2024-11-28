@@ -90,8 +90,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| start_time {data-required}| string | 生效时间
-| stock_id {data-required}| string | 批次号
+| start_time {data-required} | string | 生效时间
+| stock_id {data-required} | string | 批次号
 
 {.im-table #response}
 

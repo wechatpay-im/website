@@ -104,10 +104,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid {data-required}| string | 用户标识
-| mchid {data-required}| string | 商户号
-| sub_mchid {data-required}| string | 子商户号
-| authorize_state {data-required}| string | 授权状态<br/>`UNAUTHORIZED` \| `AUTHORIZED` \| `DEAUTHORIZED` 枚举值之一
+| openid {data-required} | string | 用户标识
+| mchid {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 子商户号
+| authorize_state {data-required} | string | 授权状态<br/>`UNAUTHORIZED` \| `AUTHORIZED` \| `DEAUTHORIZED` 枚举值之一
 | authorize_time | string | 授权时间
 | deauthorize_time | string | 取消授权时间
 

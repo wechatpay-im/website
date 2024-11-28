@@ -28,14 +28,14 @@ description: 商户可以通过该接口为自身和子商户发起H5支付域�
 $instance->v3->global->merchant->h5->permission->domain->applications->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'website_url' => 'https://qq.com',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'out_applyment_id' => '123456',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'out_applyment_id'           => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,14 +48,14 @@ $instance->v3->global->merchant->h5->permission->domain->applications->postAsync
 $instance->chain('v3/global/merchant/h5/permission/domain/applications')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'website_url' => 'https://qq.com',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'out_applyment_id' => '123456',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'out_applyment_id'           => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,14 +68,14 @@ $instance->chain('v3/global/merchant/h5/permission/domain/applications')->postAs
 $instance['v3/global/merchant/h5/permission/domain/applications']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'website_url' => 'https://qq.com',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'out_applyment_id' => '123456',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'out_applyment_id'           => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -88,14 +88,14 @@ $instance['v3/global/merchant/h5/permission/domain/applications']->postAsync([
 $response = $instance->v3->global->merchant->h5->permission->domain->applications->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'website_url' => 'https://qq.com',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'out_applyment_id' => '123456',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'out_applyment_id'           => '123456',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -105,14 +105,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/merchant/h5/permission/domain/applications')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'website_url' => 'https://qq.com',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'out_applyment_id' => '123456',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'out_applyment_id'           => '123456',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -122,14 +122,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/merchant/h5/permission/domain/applications']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sub_mchid' => '2491935631',
-    'domains' => ['string'],
-    'website_url' => 'https://qq.com',
+    'sub_mchid'                  => '2491935631',
+    'domains'                    => ['string'],
+    'website_url'                => 'https://qq.com',
     'website_business_page_pics' => ['MediaId'],
-    'website_homepage_pics' => ['MediaId'],
-    'website_state' => 'HAS_LAUNCHED',
-    'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action',
-    'out_applyment_id' => '123456',
+    'website_homepage_pics'      => ['MediaId'],
+    'website_state'              => 'HAS_LAUNCHED',
+    'notify_url'                 => 'https://pay.weixin.qq.com/wxpay/pay.action',
+    'out_applyment_id'           => '123456',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -139,17 +139,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| website_state {data-required}| string | 子商户经营网址状态
-| domains {data-required}| string[] | H5支付域名
-| webiste_url {data-required}| string | 子商户H5经营网址
+| sub_mchid {data-required} | string | 子商户号
+| website_state {data-required} | string | 子商户经营网址状态
+| domains {data-required} | string[] | H5支付域名
+| webiste_url {data-required} | string | 子商户H5经营网址
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
-| applyment_id {data-required}| integer | 申请单号
+| applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
 | applyment_state | string | 申请单状态
 | notify_url | string | 商户提供的审核结果回调接口
-| out_applyment_id {data-required}| string | 商户申请单号
+| out_applyment_id {data-required} | string | 商户申请单号
 
 {.im-table #response}
 

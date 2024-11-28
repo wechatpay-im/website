@@ -24,11 +24,11 @@ description: 建议authinfo每1小时内获取一次，否则当设备断网且�
 ```php [异步纯链式]
 $instance->v3->offlineface->authinfo->postAsync([
   'json' => [
-    'sp_appid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'device_id' => '',
-    'raw_data' => '',
+    'sp_appid'        => '',
+    'sub_appid'       => '',
+    'sub_mchid'       => '',
+    'device_id'       => '',
+    'raw_data'        => '',
     'organization_id' => '',
   ],
 ])
@@ -41,11 +41,11 @@ $instance->v3->offlineface->authinfo->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/offlineface/authinfo')->postAsync([
   'json' => [
-    'sp_appid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'device_id' => '',
-    'raw_data' => '',
+    'sp_appid'        => '',
+    'sub_appid'       => '',
+    'sub_mchid'       => '',
+    'device_id'       => '',
+    'raw_data'        => '',
     'organization_id' => '',
   ],
 ])
@@ -58,11 +58,11 @@ $instance->chain('v3/offlineface/authinfo')->postAsync([
 ```php [异步属性式]
 $instance['v3/offlineface/authinfo']->postAsync([
   'json' => [
-    'sp_appid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'device_id' => '',
-    'raw_data' => '',
+    'sp_appid'        => '',
+    'sub_appid'       => '',
+    'sub_mchid'       => '',
+    'device_id'       => '',
+    'raw_data'        => '',
     'organization_id' => '',
   ],
 ])
@@ -75,11 +75,11 @@ $instance['v3/offlineface/authinfo']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->offlineface->authinfo->post([
   'json' => [
-    'sp_appid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'device_id' => '',
-    'raw_data' => '',
+    'sp_appid'        => '',
+    'sub_appid'       => '',
+    'sub_mchid'       => '',
+    'device_id'       => '',
+    'raw_data'        => '',
     'organization_id' => '',
   ],
 ]);
@@ -89,11 +89,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/offlineface/authinfo')->post([
   'json' => [
-    'sp_appid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'device_id' => '',
-    'raw_data' => '',
+    'sp_appid'        => '',
+    'sub_appid'       => '',
+    'sub_mchid'       => '',
+    'device_id'       => '',
+    'raw_data'        => '',
     'organization_id' => '',
   ],
 ]);
@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/offlineface/authinfo']->post([
   'json' => [
-    'sp_appid' => '',
-    'sub_appid' => '',
-    'sub_mchid' => '',
-    'device_id' => '',
-    'raw_data' => '',
+    'sp_appid'        => '',
+    'sub_appid'       => '',
+    'sub_mchid'       => '',
+    'device_id'       => '',
+    'raw_data'        => '',
     'organization_id' => '',
   ],
 ]);
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| authinfo {data-required}| string | 授权信息
+| authinfo {data-required} | string | 授权信息
 
 {.im-table #response}
 

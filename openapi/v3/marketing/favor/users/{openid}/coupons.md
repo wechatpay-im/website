@@ -21,12 +21,12 @@
 $instance->v3->marketing->favor->users->_openid_->coupons->postAsync([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
-    'out_request_no' => '89560002019101000121',
-    'appid' => 'wx233544546545989',
+    'stock_id'            => '9856000',
+    'out_request_no'      => '89560002019101000121',
+    'appid'               => 'wx233544546545989',
     'stock_creator_mchid' => '8956000',
-    'coupon_value' => 100,
-    'coupon_minimum' => 100,
+    'coupon_value'        => 100,
+    'coupon_minimum'      => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -39,12 +39,12 @@ $instance->v3->marketing->favor->users->_openid_->coupons->postAsync([
 $instance->chain('v3/marketing/favor/users/{openid}/coupons')->postAsync([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
-    'out_request_no' => '89560002019101000121',
-    'appid' => 'wx233544546545989',
+    'stock_id'            => '9856000',
+    'out_request_no'      => '89560002019101000121',
+    'appid'               => 'wx233544546545989',
     'stock_creator_mchid' => '8956000',
-    'coupon_value' => 100,
-    'coupon_minimum' => 100,
+    'coupon_value'        => 100,
+    'coupon_minimum'      => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,12 +57,12 @@ $instance->chain('v3/marketing/favor/users/{openid}/coupons')->postAsync([
 $instance['v3/marketing/favor/users/{openid}/coupons']->postAsync([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
-    'out_request_no' => '89560002019101000121',
-    'appid' => 'wx233544546545989',
+    'stock_id'            => '9856000',
+    'out_request_no'      => '89560002019101000121',
+    'appid'               => 'wx233544546545989',
     'stock_creator_mchid' => '8956000',
-    'coupon_value' => 100,
-    'coupon_minimum' => 100,
+    'coupon_value'        => 100,
+    'coupon_minimum'      => 100,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,12 +75,12 @@ $instance['v3/marketing/favor/users/{openid}/coupons']->postAsync([
 $response = $instance->v3->marketing->favor->users->_openid_->coupons->post([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
-    'out_request_no' => '89560002019101000121',
-    'appid' => 'wx233544546545989',
+    'stock_id'            => '9856000',
+    'out_request_no'      => '89560002019101000121',
+    'appid'               => 'wx233544546545989',
     'stock_creator_mchid' => '8956000',
-    'coupon_value' => 100,
-    'coupon_minimum' => 100,
+    'coupon_value'        => 100,
+    'coupon_minimum'      => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,12 +90,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/favor/users/{openid}/coupons')->post([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
-    'out_request_no' => '89560002019101000121',
-    'appid' => 'wx233544546545989',
+    'stock_id'            => '9856000',
+    'out_request_no'      => '89560002019101000121',
+    'appid'               => 'wx233544546545989',
     'stock_creator_mchid' => '8956000',
-    'coupon_value' => 100,
-    'coupon_minimum' => 100,
+    'coupon_value'        => 100,
+    'coupon_minimum'      => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -105,12 +105,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/favor/users/{openid}/coupons']->post([
   'openid' => '',
   'json' => [
-    'stock_id' => '9856000',
-    'out_request_no' => '89560002019101000121',
-    'appid' => 'wx233544546545989',
+    'stock_id'            => '9856000',
+    'out_request_no'      => '89560002019101000121',
+    'appid'               => 'wx233544546545989',
     'stock_creator_mchid' => '8956000',
-    'coupon_value' => 100,
-    'coupon_minimum' => 100,
+    'coupon_value'        => 100,
+    'coupon_minimum'      => 100,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -120,7 +120,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| coupon_id {data-required}| string | 代金券id
+| coupon_id {data-required} | string | 代金券id
 
 {.im-table #response}
 
@@ -269,9 +269,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 总数量
-| offset {data-required}| integer | 分页页码
-| limit {data-required}| integer | 分页大小
+| total_count {data-required} | integer | 总数量
+| offset {data-required} | integer | 分页页码
+| limit {data-required} | integer | 分页大小
 
 {.im-table #response}
 

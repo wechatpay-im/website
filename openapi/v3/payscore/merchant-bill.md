@@ -104,8 +104,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| download_bill_count {data-required}| integer | 下载信息总数
-| download_bill_list {data-required}| object[] {data-tooltip="对应PHP的array"} | 下载信息明细
+| download_bill_count {data-required} | integer | 下载信息总数
+| download_bill_list {data-required} | object[] {data-tooltip="对应PHP的array"} | 下载信息明细
 | bill_sequence {data-required data-indent=1} | integer | 账单文件序号
 | hash_type {data-required data-indent=1} | string | 哈希类型
 | hash_value {data-required data-indent=1} | string | 哈希值

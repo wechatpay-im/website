@@ -84,12 +84,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_name {data-required}| string | 商家券批次名称
-| belong_merchant {data-required}| string | 批次归属商户号
+| stock_name {data-required} | string | 商家券批次名称
+| belong_merchant {data-required} | string | 批次归属商户号
 | comment | string | 批次备注
-| goods_name {data-required}| string | 适用商品范围
-| stock_type {data-required}| string | 批次类型(NORMAL：固定面额满减券批次 DISCOUNT：折扣券批次 EXCHANGE：换购券批次)<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| coupon_use_rule {data-required}| object {data-tooltip="对应PHP的array"} | 核销规则
+| goods_name {data-required} | string | 适用商品范围
+| stock_type {data-required} | string | 批次类型(NORMAL：固定面额满减券批次 DISCOUNT：折扣券批次 EXCHANGE：换购券批次)<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
+| coupon_use_rule {data-required} | object {data-tooltip="对应PHP的array"} | 核销规则
 | coupon_available_time {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 券可核销时间
 | available_begin_time {data-indent=2} | string | 开始时间
 | available_end_time {data-indent=2} | string | 结束时间
@@ -124,7 +124,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | hall_id {data-indent=1} | string | 更多优惠入口；[营销馆创建地址](https://pay.weixin.qq.com/index.php/xphp/cfav_market/hall#/pages/list/list)
 | store_id {data-indent=1} | string | 可用门店id
 | code_display_mode {data-indent=1} | string | code展示模式
-| display_pattern_info {data-required}| object {data-tooltip="对应PHP的array"} | 样式信息
+| display_pattern_info {data-required} | object {data-tooltip="对应PHP的array"} | 样式信息
 | description {data-indent=1} | string | 使用须知
 | merchant_logo_url {data-indent=1} | string | 商户logo
 | merchant_name {data-indent=1} | string | 商户名称
@@ -139,11 +139,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | stock_id | string | 批次号
 | transferable | boolean | 是否允许转赠
 | shareable | boolean | 是否允许分享链接
-| send_request_no {data-required}| string | 发券请求单号
+| send_request_no {data-required} | string | 发券请求单号
 | use_request_no | string | 核销请求单号
-| available_start_time {data-required}| string | 券可使用开始时间
-| expire_time {data-required}| string | 券过期时间
-| receive_time {data-required}| string | 券领券时间
+| available_start_time {data-required} | string | 券可使用开始时间
+| expire_time {data-required} | string | 券过期时间
+| receive_time {data-required} | string | 券领券时间
 | use_time | string | 券核销时间
 
 {.im-table #response}

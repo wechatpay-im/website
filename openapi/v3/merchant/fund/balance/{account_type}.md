@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| available_amount {data-required}| integer | 可用余额
+| available_amount {data-required} | integer | 可用余额
 | pending_amount | integer | 不可用余额
 
 {.im-table #response}

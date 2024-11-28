@@ -34,18 +34,18 @@ description: 扣款受理接口，支付结果以回调为准，或者超时以�
 ```php [异步纯链式]
 $instance->v3->eduPapay->transactions->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'body' => '新东方-语文课程',
-    'attach' => '自定义数据',
-    'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => 'wx998877665544wx',
-    'trade_scene' => 'EDUCATION_PERIOD',
-    'amount' => [
-      'total' => 888,
+    'appid'              => 'wx8888888888888888',
+    'sub_mchid'          => '1900000109',
+    'sub_appid'          => 'wx8888888888888888',
+    'body'               => '新东方-语文课程',
+    'attach'             => '自定义数据',
+    'out_trade_no'       => '121775250124070332',
+    'goods_tag'          => 'test',
+    'notify_url'         => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'        => 'wx998877665544wx',
+    'trade_scene'        => 'EDUCATION_PERIOD',
+    'amount'             => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
     'device_information' => [
@@ -63,18 +63,18 @@ $instance->v3->eduPapay->transactions->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/edu-papay/transactions')->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'body' => '新东方-语文课程',
-    'attach' => '自定义数据',
-    'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => 'wx998877665544wx',
-    'trade_scene' => 'EDUCATION_PERIOD',
-    'amount' => [
-      'total' => 888,
+    'appid'              => 'wx8888888888888888',
+    'sub_mchid'          => '1900000109',
+    'sub_appid'          => 'wx8888888888888888',
+    'body'               => '新东方-语文课程',
+    'attach'             => '自定义数据',
+    'out_trade_no'       => '121775250124070332',
+    'goods_tag'          => 'test',
+    'notify_url'         => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'        => 'wx998877665544wx',
+    'trade_scene'        => 'EDUCATION_PERIOD',
+    'amount'             => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
     'device_information' => [
@@ -92,18 +92,18 @@ $instance->chain('v3/edu-papay/transactions')->postAsync([
 ```php [异步属性式]
 $instance['v3/edu-papay/transactions']->postAsync([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'body' => '新东方-语文课程',
-    'attach' => '自定义数据',
-    'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => 'wx998877665544wx',
-    'trade_scene' => 'EDUCATION_PERIOD',
-    'amount' => [
-      'total' => 888,
+    'appid'              => 'wx8888888888888888',
+    'sub_mchid'          => '1900000109',
+    'sub_appid'          => 'wx8888888888888888',
+    'body'               => '新东方-语文课程',
+    'attach'             => '自定义数据',
+    'out_trade_no'       => '121775250124070332',
+    'goods_tag'          => 'test',
+    'notify_url'         => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'        => 'wx998877665544wx',
+    'trade_scene'        => 'EDUCATION_PERIOD',
+    'amount'             => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
     'device_information' => [
@@ -121,18 +121,18 @@ $instance['v3/edu-papay/transactions']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->eduPapay->transactions->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'body' => '新东方-语文课程',
-    'attach' => '自定义数据',
-    'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => 'wx998877665544wx',
-    'trade_scene' => 'EDUCATION_PERIOD',
-    'amount' => [
-      'total' => 888,
+    'appid'              => 'wx8888888888888888',
+    'sub_mchid'          => '1900000109',
+    'sub_appid'          => 'wx8888888888888888',
+    'body'               => '新东方-语文课程',
+    'attach'             => '自定义数据',
+    'out_trade_no'       => '121775250124070332',
+    'goods_tag'          => 'test',
+    'notify_url'         => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'        => 'wx998877665544wx',
+    'trade_scene'        => 'EDUCATION_PERIOD',
+    'amount'             => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
     'device_information' => [
@@ -147,18 +147,18 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/edu-papay/transactions')->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'body' => '新东方-语文课程',
-    'attach' => '自定义数据',
-    'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => 'wx998877665544wx',
-    'trade_scene' => 'EDUCATION_PERIOD',
-    'amount' => [
-      'total' => 888,
+    'appid'              => 'wx8888888888888888',
+    'sub_mchid'          => '1900000109',
+    'sub_appid'          => 'wx8888888888888888',
+    'body'               => '新东方-语文课程',
+    'attach'             => '自定义数据',
+    'out_trade_no'       => '121775250124070332',
+    'goods_tag'          => 'test',
+    'notify_url'         => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'        => 'wx998877665544wx',
+    'trade_scene'        => 'EDUCATION_PERIOD',
+    'amount'             => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
     'device_information' => [
@@ -173,18 +173,18 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/edu-papay/transactions']->post([
   'json' => [
-    'appid' => 'wx8888888888888888',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wx8888888888888888',
-    'body' => '新东方-语文课程',
-    'attach' => '自定义数据',
-    'out_trade_no' => '121775250124070332',
-    'goods_tag' => 'test',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay',
-    'contract_id' => 'wx998877665544wx',
-    'trade_scene' => 'EDUCATION_PERIOD',
-    'amount' => [
-      'total' => 888,
+    'appid'              => 'wx8888888888888888',
+    'sub_mchid'          => '1900000109',
+    'sub_appid'          => 'wx8888888888888888',
+    'body'               => '新东方-语文课程',
+    'attach'             => '自定义数据',
+    'out_trade_no'       => '121775250124070332',
+    'goods_tag'          => 'test',
+    'notify_url'         => 'https://www.weixin.qq.com/wxpay/pay',
+    'contract_id'        => 'wx998877665544wx',
+    'trade_scene'        => 'EDUCATION_PERIOD',
+    'amount'             => [
+      'total'    => 888,
       'currency' => 'CNY',
     ],
     'device_information' => [

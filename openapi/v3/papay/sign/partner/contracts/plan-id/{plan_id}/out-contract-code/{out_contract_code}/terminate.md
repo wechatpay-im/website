@@ -24,7 +24,7 @@ $instance->v3->papay->sign->partner->contracts->planId->_plan_id_->outContractCo
   'plan_id' => '12535',
   'out_contract_code' => 'wxwtdk20200910100000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                   => '1900000109',
     'contract_termination_remark' => '用户解约',
   ],
 ])
@@ -39,7 +39,7 @@ $instance->chain('v3/papay/sign/partner/contracts/plan-id/{plan_id}/out-contract
   'plan_id' => '12535',
   'out_contract_code' => 'wxwtdk20200910100000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                   => '1900000109',
     'contract_termination_remark' => '用户解约',
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/papay/sign/partner/contracts/plan-id/{plan_id}/out-contract-code/{
   'plan_id' => '12535',
   'out_contract_code' => 'wxwtdk20200910100000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                   => '1900000109',
     'contract_termination_remark' => '用户解约',
   ],
 ])
@@ -69,7 +69,7 @@ $response = $instance->v3->papay->sign->partner->contracts->planId->_plan_id_->o
   'plan_id' => '12535',
   'out_contract_code' => 'wxwtdk20200910100000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                   => '1900000109',
     'contract_termination_remark' => '用户解约',
   ],
 ]);
@@ -81,7 +81,7 @@ $response = $instance->chain('v3/papay/sign/partner/contracts/plan-id/{plan_id}/
   'plan_id' => '12535',
   'out_contract_code' => 'wxwtdk20200910100000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                   => '1900000109',
     'contract_termination_remark' => '用户解约',
   ],
 ]);
@@ -93,7 +93,7 @@ $response = $instance['v3/papay/sign/partner/contracts/plan-id/{plan_id}/out-con
   'plan_id' => '12535',
   'out_contract_code' => 'wxwtdk20200910100000',
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                   => '1900000109',
     'contract_termination_remark' => '用户解约',
   ],
 ]);
@@ -104,18 +104,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| contract_id {data-required}| string | 委托代扣协议ID
-| sp_mchid {data-required}| string | 普通服务商商户号
-| sp_appid {data-required}| string | 普通服务商的AppID
-| sub_mchid {data-required}| string | 子商户号
+| contract_id {data-required} | string | 委托代扣协议ID
+| sp_mchid {data-required} | string | 普通服务商商户号
+| sp_appid {data-required} | string | 普通服务商的AppID
+| sub_mchid {data-required} | string | 子商户号
 | sub_appid | string | 子商户的AppID
-| plan_id {data-required}| number | 委托代扣模板ID
-| out_contract_code {data-required}| string | 商户签约协议号
-| contract_display_account {data-required}| string | 用户账户展示名称
-| contract_state {data-required}| string | 委托代扣协议状态
+| plan_id {data-required} | number | 委托代扣模板ID
+| out_contract_code {data-required} | string | 商户签约协议号
+| contract_display_account {data-required} | string | 用户账户展示名称
+| contract_state {data-required} | string | 委托代扣协议状态
 | contract_signed_time | string | 协议签署时间
 | contract_expired_time | string | 协议到期时间
-| sp_openid {data-required}| string | 用户OpenID
+| sp_openid {data-required} | string | 用户OpenID
 | sub_openid | string | 子商户AppID对应的用户OpenID
 | contract_terminate_info | object {data-tooltip="对应PHP的array"} | 协议解约信息
 | contract_termination_mode {data-required data-indent=1} | string | 协议解约方式

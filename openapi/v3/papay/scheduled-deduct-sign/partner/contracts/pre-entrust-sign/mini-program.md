@@ -34,23 +34,23 @@ description: 商户可调用本接口预先指定签约信息，生成预签约�
 ```php [异步纯链式]
 $instance->v3->papay->scheduledDeductSign->partner->contracts->preEntrustSign->miniProgram->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ])
@@ -63,23 +63,23 @@ $instance->v3->papay->scheduledDeductSign->partner->contracts->preEntrustSign->m
 ```php [异步声明式]
 $instance->chain('v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program')->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ])
@@ -92,23 +92,23 @@ $instance->chain('v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-s
 ```php [异步属性式]
 $instance['v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program']->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ])
@@ -121,23 +121,23 @@ $instance['v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/min
 ```php [同步纯链式]
 $response = $instance->v3->papay->scheduledDeductSign->partner->contracts->preEntrustSign->miniProgram->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ]);
@@ -147,23 +147,23 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program')->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ]);
@@ -173,23 +173,23 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program']->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_openid' => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_openid' => 'wxd678efh567hg6787',
-    'plan_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
+    'sp_appid'                 => 'wxd678efh567hg6787',
+    'sp_openid'                => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
+    'sub_mchid'                => '1900000109',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_openid'               => 'wxd678efh567hg6787',
+    'plan_id'                  => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
     'contract_display_account' => '微信代扣用户A',
-    'contract_notify_url' => 'https://yourapp.com/notify',
-    'out_user_code' => '用户A',
-    'deduct_schedule' => [
-      'estimated_deduct_date' => '2019-11-22',
+    'contract_notify_url'      => 'https://yourapp.com/notify',
+    'out_user_code'            => '用户A',
+    'deduct_schedule'          => [
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
-      'description' => '小乔-碎云皮肤（微信83区沧海之耀）',
+      'description'             => '小乔-碎云皮肤（微信83区沧海之耀）',
     ],
   ],
 ]);
@@ -200,9 +200,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| pre_entrustweb_id {data-required}| string | 预签约ID
-| redirect_appid {data-required}| string | 跳转签约小程序的AppID
-| redirect_path {data-required}| string | 跳转签约小程序的路径
+| pre_entrustweb_id {data-required} | string | 预签约ID
+| redirect_appid {data-required} | string | 跳转签约小程序的AppID
+| redirect_path {data-required} | string | 跳转签约小程序的路径
 
 {.im-table #response}
 

@@ -27,14 +27,14 @@ description: 该接口主要为商户提供营销资源的终止授权能力，�
 ```php [异步纯链式]
 $instance->v3->marketing->partnerships->terminate->postAsync([
   'json' => [
-    'partner' => [
-      'type' => 'APPID',
-      'appid' => '',
+    'partner'         => [
+      'type'        => 'APPID',
+      'appid'       => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id' => '',
+      'stock_id'      => '',
     ],
   ],
   'headers' => [
@@ -50,14 +50,14 @@ $instance->v3->marketing->partnerships->terminate->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/partnerships/terminate')->postAsync([
   'json' => [
-    'partner' => [
-      'type' => 'APPID',
-      'appid' => '',
+    'partner'         => [
+      'type'        => 'APPID',
+      'appid'       => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id' => '',
+      'stock_id'      => '',
     ],
   ],
   'headers' => [
@@ -73,14 +73,14 @@ $instance->chain('v3/marketing/partnerships/terminate')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/partnerships/terminate']->postAsync([
   'json' => [
-    'partner' => [
-      'type' => 'APPID',
-      'appid' => '',
+    'partner'         => [
+      'type'        => 'APPID',
+      'appid'       => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id' => '',
+      'stock_id'      => '',
     ],
   ],
   'headers' => [
@@ -96,14 +96,14 @@ $instance['v3/marketing/partnerships/terminate']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->partnerships->terminate->post([
   'json' => [
-    'partner' => [
-      'type' => 'APPID',
-      'appid' => '',
+    'partner'         => [
+      'type'        => 'APPID',
+      'appid'       => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id' => '',
+      'stock_id'      => '',
     ],
   ],
   'headers' => [
@@ -116,14 +116,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/partnerships/terminate')->post([
   'json' => [
-    'partner' => [
-      'type' => 'APPID',
-      'appid' => '',
+    'partner'         => [
+      'type'        => 'APPID',
+      'appid'       => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id' => '',
+      'stock_id'      => '',
     ],
   ],
   'headers' => [
@@ -136,14 +136,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/partnerships/terminate']->post([
   'json' => [
-    'partner' => [
-      'type' => 'APPID',
-      'appid' => '',
+    'partner'         => [
+      'type'        => 'APPID',
+      'appid'       => '',
       'merchant_id' => '',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id' => '',
+      'stock_id'      => '',
     ],
   ],
   'headers' => [
@@ -157,7 +157,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| terminate_time {data-required}| string | 终止合作关系时间
+| terminate_time {data-required} | string | 终止合作关系时间
 
 {.im-table #response}
 

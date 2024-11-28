@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
+| mchid {data-required} | string | 商户号
 | limited_functions | string[] | 商户被管控能力列表<br/>`NO_PAYMENT` \| `NO_WITHDRAWAL` \| `NO_REFUND` \| `NO_TRANSACTION` \| `NO_PROFIT_SHARING` \| `NO_PAYMENT_POINT_COMPLETE_ORDER` 枚举值之一
 | recovery_specifications | object[] {data-tooltip="对应PHP的array"} | 被管控原因及解脱路径列表
 | limitation_reason {data-indent=1} | string | 商户被管控原因描述

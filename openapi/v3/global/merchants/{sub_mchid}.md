@@ -99,12 +99,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
-| name {data-required}| string | 子商户全称
-| shortname {data-required}| string | 子商户简称
-| office_phone {data-required}| string | 公司联系方式
-| merchant_country_code {data-required}| string | 册国家或区域
-| business_category {data-required}| integer | 类目
+| sub_mchid {data-required} | string | 子商户号
+| name {data-required} | string | 子商户全称
+| shortname {data-required} | string | 子商户简称
+| office_phone {data-required} | string | 公司联系方式
+| merchant_country_code {data-required} | string | 册国家或区域
+| business_category {data-required} | integer | 类目
 | contact | object {data-tooltip="对应PHP的array"} | 联系人信息
 | name {data-indent=1} | string | 联系人名称
 | phone {data-indent=1} | string | 联系人电话
@@ -186,47 +186,47 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->global->merchants->_sub_mchid_->patchAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'name' => 'Merchant name',
-    'sub_mchid' => '示例值: 20000100',
-    'shortname' => 'Merchant shortname',
-    'office_phone' => '075586010000',
-    'contact' => [
-      'name' => '李先生',
+    'sp_appid'                        => 'wx8888888888888888',
+    'sp_mchid'                        => '3200000001',
+    'name'                            => 'Merchant name',
+    'sub_mchid'                       => '示例值: 20000100',
+    'shortname'                       => 'Merchant shortname',
+    'office_phone'                    => '075586010000',
+    'contact'                         => [
+      'name'  => '李先生',
       'phone' => '075586010000',
       'email' => 'test@test.com',
     ],
-    'business_category' => 644,
-    'channel_id' => '3200000001',
-    'merchant_country_code' => '344',
-    'merchant_type' => 'ENTERPRISE',
+    'business_category'               => 644,
+    'channel_id'                      => '3200000001',
+    'merchant_country_code'           => '344',
+    'merchant_type'                   => 'ENTERPRISE',
     'registration_certificate_number' => '5555-8888',
-    'registration_certificate_date' => '2020-10-16',
-    'registration_certificate_copy' => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
-    'settlement_bank_number' => '555588889999',
-    'business' => [
-      'business_type' => 'BOTH',
-      'app_download' => 'https://download.qq.com',
-      'website' => 'https://www.qq.com',
+    'registration_certificate_date'   => '2020-10-16',
+    'registration_certificate_copy'   => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
+    'settlement_bank_number'          => '555588889999',
+    'business'                        => [
+      'business_type'  => 'BOTH',
+      'app_download'   => 'https://download.qq.com',
+      'website'        => 'https://www.qq.com',
       'office_account' => 'wx8888888888888888',
-      'mini_program' => 'wx8888888888888888',
-      'store_address' => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos' => '[Media_id1, Media_id2, Media_id3]',
-      'mcc' => '4214',
+      'mini_program'   => 'wx8888888888888888',
+      'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
+      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'mcc'            => '4214',
     ],
-    'director' => [
-      'name' => 'Bob',
+    'director'                        => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'principal' => [
-      'name' => 'Bob',
+    'principal'                       => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'apply_h5_payment' => true,
-    'h5_payment_apply_info' => [
+    'apply_h5_payment'                => true,
+    'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains' => ['string'],
+      'domains'     => ['string'],
     ],
   ],
 ])
@@ -240,47 +240,47 @@ $instance->v3->global->merchants->_sub_mchid_->patchAsync([
 $instance->chain('v3/global/merchants/{sub_mchid}')->patchAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'name' => 'Merchant name',
-    'sub_mchid' => '示例值: 20000100',
-    'shortname' => 'Merchant shortname',
-    'office_phone' => '075586010000',
-    'contact' => [
-      'name' => '李先生',
+    'sp_appid'                        => 'wx8888888888888888',
+    'sp_mchid'                        => '3200000001',
+    'name'                            => 'Merchant name',
+    'sub_mchid'                       => '示例值: 20000100',
+    'shortname'                       => 'Merchant shortname',
+    'office_phone'                    => '075586010000',
+    'contact'                         => [
+      'name'  => '李先生',
       'phone' => '075586010000',
       'email' => 'test@test.com',
     ],
-    'business_category' => 644,
-    'channel_id' => '3200000001',
-    'merchant_country_code' => '344',
-    'merchant_type' => 'ENTERPRISE',
+    'business_category'               => 644,
+    'channel_id'                      => '3200000001',
+    'merchant_country_code'           => '344',
+    'merchant_type'                   => 'ENTERPRISE',
     'registration_certificate_number' => '5555-8888',
-    'registration_certificate_date' => '2020-10-16',
-    'registration_certificate_copy' => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
-    'settlement_bank_number' => '555588889999',
-    'business' => [
-      'business_type' => 'BOTH',
-      'app_download' => 'https://download.qq.com',
-      'website' => 'https://www.qq.com',
+    'registration_certificate_date'   => '2020-10-16',
+    'registration_certificate_copy'   => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
+    'settlement_bank_number'          => '555588889999',
+    'business'                        => [
+      'business_type'  => 'BOTH',
+      'app_download'   => 'https://download.qq.com',
+      'website'        => 'https://www.qq.com',
       'office_account' => 'wx8888888888888888',
-      'mini_program' => 'wx8888888888888888',
-      'store_address' => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos' => '[Media_id1, Media_id2, Media_id3]',
-      'mcc' => '4214',
+      'mini_program'   => 'wx8888888888888888',
+      'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
+      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'mcc'            => '4214',
     ],
-    'director' => [
-      'name' => 'Bob',
+    'director'                        => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'principal' => [
-      'name' => 'Bob',
+    'principal'                       => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'apply_h5_payment' => true,
-    'h5_payment_apply_info' => [
+    'apply_h5_payment'                => true,
+    'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains' => ['string'],
+      'domains'     => ['string'],
     ],
   ],
 ])
@@ -294,47 +294,47 @@ $instance->chain('v3/global/merchants/{sub_mchid}')->patchAsync([
 $instance['v3/global/merchants/{sub_mchid}']->patchAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'name' => 'Merchant name',
-    'sub_mchid' => '示例值: 20000100',
-    'shortname' => 'Merchant shortname',
-    'office_phone' => '075586010000',
-    'contact' => [
-      'name' => '李先生',
+    'sp_appid'                        => 'wx8888888888888888',
+    'sp_mchid'                        => '3200000001',
+    'name'                            => 'Merchant name',
+    'sub_mchid'                       => '示例值: 20000100',
+    'shortname'                       => 'Merchant shortname',
+    'office_phone'                    => '075586010000',
+    'contact'                         => [
+      'name'  => '李先生',
       'phone' => '075586010000',
       'email' => 'test@test.com',
     ],
-    'business_category' => 644,
-    'channel_id' => '3200000001',
-    'merchant_country_code' => '344',
-    'merchant_type' => 'ENTERPRISE',
+    'business_category'               => 644,
+    'channel_id'                      => '3200000001',
+    'merchant_country_code'           => '344',
+    'merchant_type'                   => 'ENTERPRISE',
     'registration_certificate_number' => '5555-8888',
-    'registration_certificate_date' => '2020-10-16',
-    'registration_certificate_copy' => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
-    'settlement_bank_number' => '555588889999',
-    'business' => [
-      'business_type' => 'BOTH',
-      'app_download' => 'https://download.qq.com',
-      'website' => 'https://www.qq.com',
+    'registration_certificate_date'   => '2020-10-16',
+    'registration_certificate_copy'   => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
+    'settlement_bank_number'          => '555588889999',
+    'business'                        => [
+      'business_type'  => 'BOTH',
+      'app_download'   => 'https://download.qq.com',
+      'website'        => 'https://www.qq.com',
       'office_account' => 'wx8888888888888888',
-      'mini_program' => 'wx8888888888888888',
-      'store_address' => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos' => '[Media_id1, Media_id2, Media_id3]',
-      'mcc' => '4214',
+      'mini_program'   => 'wx8888888888888888',
+      'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
+      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'mcc'            => '4214',
     ],
-    'director' => [
-      'name' => 'Bob',
+    'director'                        => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'principal' => [
-      'name' => 'Bob',
+    'principal'                       => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'apply_h5_payment' => true,
-    'h5_payment_apply_info' => [
+    'apply_h5_payment'                => true,
+    'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains' => ['string'],
+      'domains'     => ['string'],
     ],
   ],
 ])
@@ -348,47 +348,47 @@ $instance['v3/global/merchants/{sub_mchid}']->patchAsync([
 $response = $instance->v3->global->merchants->_sub_mchid_->patch([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'name' => 'Merchant name',
-    'sub_mchid' => '示例值: 20000100',
-    'shortname' => 'Merchant shortname',
-    'office_phone' => '075586010000',
-    'contact' => [
-      'name' => '李先生',
+    'sp_appid'                        => 'wx8888888888888888',
+    'sp_mchid'                        => '3200000001',
+    'name'                            => 'Merchant name',
+    'sub_mchid'                       => '示例值: 20000100',
+    'shortname'                       => 'Merchant shortname',
+    'office_phone'                    => '075586010000',
+    'contact'                         => [
+      'name'  => '李先生',
       'phone' => '075586010000',
       'email' => 'test@test.com',
     ],
-    'business_category' => 644,
-    'channel_id' => '3200000001',
-    'merchant_country_code' => '344',
-    'merchant_type' => 'ENTERPRISE',
+    'business_category'               => 644,
+    'channel_id'                      => '3200000001',
+    'merchant_country_code'           => '344',
+    'merchant_type'                   => 'ENTERPRISE',
     'registration_certificate_number' => '5555-8888',
-    'registration_certificate_date' => '2020-10-16',
-    'registration_certificate_copy' => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
-    'settlement_bank_number' => '555588889999',
-    'business' => [
-      'business_type' => 'BOTH',
-      'app_download' => 'https://download.qq.com',
-      'website' => 'https://www.qq.com',
+    'registration_certificate_date'   => '2020-10-16',
+    'registration_certificate_copy'   => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
+    'settlement_bank_number'          => '555588889999',
+    'business'                        => [
+      'business_type'  => 'BOTH',
+      'app_download'   => 'https://download.qq.com',
+      'website'        => 'https://www.qq.com',
       'office_account' => 'wx8888888888888888',
-      'mini_program' => 'wx8888888888888888',
-      'store_address' => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos' => '[Media_id1, Media_id2, Media_id3]',
-      'mcc' => '4214',
+      'mini_program'   => 'wx8888888888888888',
+      'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
+      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'mcc'            => '4214',
     ],
-    'director' => [
-      'name' => 'Bob',
+    'director'                        => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'principal' => [
-      'name' => 'Bob',
+    'principal'                       => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'apply_h5_payment' => true,
-    'h5_payment_apply_info' => [
+    'apply_h5_payment'                => true,
+    'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains' => ['string'],
+      'domains'     => ['string'],
     ],
   ],
 ]);
@@ -399,47 +399,47 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/merchants/{sub_mchid}')->patch([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'name' => 'Merchant name',
-    'sub_mchid' => '示例值: 20000100',
-    'shortname' => 'Merchant shortname',
-    'office_phone' => '075586010000',
-    'contact' => [
-      'name' => '李先生',
+    'sp_appid'                        => 'wx8888888888888888',
+    'sp_mchid'                        => '3200000001',
+    'name'                            => 'Merchant name',
+    'sub_mchid'                       => '示例值: 20000100',
+    'shortname'                       => 'Merchant shortname',
+    'office_phone'                    => '075586010000',
+    'contact'                         => [
+      'name'  => '李先生',
       'phone' => '075586010000',
       'email' => 'test@test.com',
     ],
-    'business_category' => 644,
-    'channel_id' => '3200000001',
-    'merchant_country_code' => '344',
-    'merchant_type' => 'ENTERPRISE',
+    'business_category'               => 644,
+    'channel_id'                      => '3200000001',
+    'merchant_country_code'           => '344',
+    'merchant_type'                   => 'ENTERPRISE',
     'registration_certificate_number' => '5555-8888',
-    'registration_certificate_date' => '2020-10-16',
-    'registration_certificate_copy' => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
-    'settlement_bank_number' => '555588889999',
-    'business' => [
-      'business_type' => 'BOTH',
-      'app_download' => 'https://download.qq.com',
-      'website' => 'https://www.qq.com',
+    'registration_certificate_date'   => '2020-10-16',
+    'registration_certificate_copy'   => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
+    'settlement_bank_number'          => '555588889999',
+    'business'                        => [
+      'business_type'  => 'BOTH',
+      'app_download'   => 'https://download.qq.com',
+      'website'        => 'https://www.qq.com',
       'office_account' => 'wx8888888888888888',
-      'mini_program' => 'wx8888888888888888',
-      'store_address' => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos' => '[Media_id1, Media_id2, Media_id3]',
-      'mcc' => '4214',
+      'mini_program'   => 'wx8888888888888888',
+      'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
+      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'mcc'            => '4214',
     ],
-    'director' => [
-      'name' => 'Bob',
+    'director'                        => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'principal' => [
-      'name' => 'Bob',
+    'principal'                       => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'apply_h5_payment' => true,
-    'h5_payment_apply_info' => [
+    'apply_h5_payment'                => true,
+    'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains' => ['string'],
+      'domains'     => ['string'],
     ],
   ],
 ]);
@@ -450,47 +450,47 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/merchants/{sub_mchid}']->patch([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'sp_appid' => 'wx8888888888888888',
-    'sp_mchid' => '3200000001',
-    'name' => 'Merchant name',
-    'sub_mchid' => '示例值: 20000100',
-    'shortname' => 'Merchant shortname',
-    'office_phone' => '075586010000',
-    'contact' => [
-      'name' => '李先生',
+    'sp_appid'                        => 'wx8888888888888888',
+    'sp_mchid'                        => '3200000001',
+    'name'                            => 'Merchant name',
+    'sub_mchid'                       => '示例值: 20000100',
+    'shortname'                       => 'Merchant shortname',
+    'office_phone'                    => '075586010000',
+    'contact'                         => [
+      'name'  => '李先生',
       'phone' => '075586010000',
       'email' => 'test@test.com',
     ],
-    'business_category' => 644,
-    'channel_id' => '3200000001',
-    'merchant_country_code' => '344',
-    'merchant_type' => 'ENTERPRISE',
+    'business_category'               => 644,
+    'channel_id'                      => '3200000001',
+    'merchant_country_code'           => '344',
+    'merchant_type'                   => 'ENTERPRISE',
     'registration_certificate_number' => '5555-8888',
-    'registration_certificate_date' => '2020-10-16',
-    'registration_certificate_copy' => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
-    'settlement_bank_number' => '555588889999',
-    'business' => [
-      'business_type' => 'BOTH',
-      'app_download' => 'https://download.qq.com',
-      'website' => 'https://www.qq.com',
+    'registration_certificate_date'   => '2020-10-16',
+    'registration_certificate_copy'   => 'w7yQFawBtja5uEdm_aoXokv2SDoEmHIPs',
+    'settlement_bank_number'          => '555588889999',
+    'business'                        => [
+      'business_type'  => 'BOTH',
+      'app_download'   => 'https://download.qq.com',
+      'website'        => 'https://www.qq.com',
       'office_account' => 'wx8888888888888888',
-      'mini_program' => 'wx8888888888888888',
-      'store_address' => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos' => '[Media_id1, Media_id2, Media_id3]',
-      'mcc' => '4214',
+      'mini_program'   => 'wx8888888888888888',
+      'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
+      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'mcc'            => '4214',
     ],
-    'director' => [
-      'name' => 'Bob',
+    'director'                        => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'principal' => [
-      'name' => 'Bob',
+    'principal'                       => [
+      'name'   => 'Bob',
       'number' => '5555-8888',
     ],
-    'apply_h5_payment' => true,
-    'h5_payment_apply_info' => [
+    'apply_h5_payment'                => true,
+    'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains' => ['string'],
+      'domains'     => ['string'],
     ],
   ],
 ]);
@@ -501,7 +501,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 子商户号
+| sub_mchid {data-required} | string | 子商户号
 | h5_authorization_state | string | H5支付权限状态
 
 {.im-table #response}

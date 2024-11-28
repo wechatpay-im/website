@@ -70,9 +70,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| combine_appid {data-required}| string | 合单商户APPID
-| combine_mchid {data-required}| string | 合单商户号
-| combine_out_trade_no {data-required}| string | 合单商户订单号
+| combine_appid {data-required} | string | 合单商户APPID
+| combine_mchid {data-required} | string | 合单商户号
+| combine_out_trade_no {data-required} | string | 合单商户订单号
 | sub_orders | object[] {data-tooltip="对应PHP的array"} | 子单信息
 | mchid {data-required data-indent=1} | string | 子单商户号
 | trade_type {data-required data-indent=1} | string | 交易类型

@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| openid {data-required}| string | 转换后的openid
+| openid {data-required} | string | 转换后的openid
 
 {.im-table #response}
 

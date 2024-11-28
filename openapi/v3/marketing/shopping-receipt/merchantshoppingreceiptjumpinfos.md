@@ -26,14 +26,14 @@ description: 接口介绍：可通过该接口给对应的微信支付订单上�
 ```php [异步纯链式]
 $instance->v3->marketing->shoppingReceipt->merchantshoppingreceiptjumpinfos->postAsync([
   'json' => [
-    'transaction_id' => '4200000008202209139188072801',
-    'transaction_mchid' => '1230000109',
+    'transaction_id'        => '4200000008202209139188072801',
+    'transaction_mchid'     => '1230000109',
     'transaction_sub_mchid' => '1230000109',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'merchant_upload_time' => '2021-05-20T13:29:35.120+08:00',
-    'jump_info' => [
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'merchant_upload_time'  => '2021-05-20T13:29:35.120+08:00',
+    'jump_info'             => [
       'merchant_appid' => 'example_merchant_appid',
-      'merchant_path' => 'example_merchant_path',
+      'merchant_path'  => 'example_merchant_path',
     ],
   ],
 ])
@@ -46,14 +46,14 @@ $instance->v3->marketing->shoppingReceipt->merchantshoppingreceiptjumpinfos->pos
 ```php [异步声明式]
 $instance->chain('v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos')->postAsync([
   'json' => [
-    'transaction_id' => '4200000008202209139188072801',
-    'transaction_mchid' => '1230000109',
+    'transaction_id'        => '4200000008202209139188072801',
+    'transaction_mchid'     => '1230000109',
     'transaction_sub_mchid' => '1230000109',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'merchant_upload_time' => '2021-05-20T13:29:35.120+08:00',
-    'jump_info' => [
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'merchant_upload_time'  => '2021-05-20T13:29:35.120+08:00',
+    'jump_info'             => [
       'merchant_appid' => 'example_merchant_appid',
-      'merchant_path' => 'example_merchant_path',
+      'merchant_path'  => 'example_merchant_path',
     ],
   ],
 ])
@@ -66,14 +66,14 @@ $instance->chain('v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos
 ```php [异步属性式]
 $instance['v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos']->postAsync([
   'json' => [
-    'transaction_id' => '4200000008202209139188072801',
-    'transaction_mchid' => '1230000109',
+    'transaction_id'        => '4200000008202209139188072801',
+    'transaction_mchid'     => '1230000109',
     'transaction_sub_mchid' => '1230000109',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'merchant_upload_time' => '2021-05-20T13:29:35.120+08:00',
-    'jump_info' => [
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'merchant_upload_time'  => '2021-05-20T13:29:35.120+08:00',
+    'jump_info'             => [
       'merchant_appid' => 'example_merchant_appid',
-      'merchant_path' => 'example_merchant_path',
+      'merchant_path'  => 'example_merchant_path',
     ],
   ],
 ])
@@ -86,14 +86,14 @@ $instance['v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos']->pos
 ```php [同步纯链式]
 $response = $instance->v3->marketing->shoppingReceipt->merchantshoppingreceiptjumpinfos->post([
   'json' => [
-    'transaction_id' => '4200000008202209139188072801',
-    'transaction_mchid' => '1230000109',
+    'transaction_id'        => '4200000008202209139188072801',
+    'transaction_mchid'     => '1230000109',
     'transaction_sub_mchid' => '1230000109',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'merchant_upload_time' => '2021-05-20T13:29:35.120+08:00',
-    'jump_info' => [
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'merchant_upload_time'  => '2021-05-20T13:29:35.120+08:00',
+    'jump_info'             => [
       'merchant_appid' => 'example_merchant_appid',
-      'merchant_path' => 'example_merchant_path',
+      'merchant_path'  => 'example_merchant_path',
     ],
   ],
 ]);
@@ -103,14 +103,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos')->post([
   'json' => [
-    'transaction_id' => '4200000008202209139188072801',
-    'transaction_mchid' => '1230000109',
+    'transaction_id'        => '4200000008202209139188072801',
+    'transaction_mchid'     => '1230000109',
     'transaction_sub_mchid' => '1230000109',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'merchant_upload_time' => '2021-05-20T13:29:35.120+08:00',
-    'jump_info' => [
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'merchant_upload_time'  => '2021-05-20T13:29:35.120+08:00',
+    'jump_info'             => [
       'merchant_appid' => 'example_merchant_appid',
-      'merchant_path' => 'example_merchant_path',
+      'merchant_path'  => 'example_merchant_path',
     ],
   ],
 ]);
@@ -120,14 +120,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos']->post([
   'json' => [
-    'transaction_id' => '4200000008202209139188072801',
-    'transaction_mchid' => '1230000109',
+    'transaction_id'        => '4200000008202209139188072801',
+    'transaction_mchid'     => '1230000109',
     'transaction_sub_mchid' => '1230000109',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'merchant_upload_time' => '2021-05-20T13:29:35.120+08:00',
-    'jump_info' => [
+    'openid'                => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'merchant_upload_time'  => '2021-05-20T13:29:35.120+08:00',
+    'jump_info'             => [
       'merchant_appid' => 'example_merchant_appid',
-      'merchant_path' => 'example_merchant_path',
+      'merchant_path'  => 'example_merchant_path',
     ],
   ],
 ]);

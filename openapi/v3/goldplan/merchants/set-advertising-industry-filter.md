@@ -20,7 +20,7 @@ description: 服务商使用此接口为特约商户配置同业过滤标签，�
 ```php [异步纯链式]
 $instance->v3->goldplan->merchants->setAdvertisingIndustryFilter->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->goldplan->merchants->setAdvertisingIndustryFilter->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/goldplan/merchants/set-advertising-industry-filter')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ])
@@ -46,7 +46,7 @@ $instance->chain('v3/goldplan/merchants/set-advertising-industry-filter')->postA
 ```php [异步属性式]
 $instance['v3/goldplan/merchants/set-advertising-industry-filter']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ])
@@ -59,7 +59,7 @@ $instance['v3/goldplan/merchants/set-advertising-industry-filter']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->goldplan->merchants->setAdvertisingIndustryFilter->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ]);
@@ -69,7 +69,7 @@ print_r($response->getStatusCode() === 204);
 ```php [同步声明式]
 $response = $instance->chain('v3/goldplan/merchants/set-advertising-industry-filter')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ]);
@@ -79,7 +79,7 @@ print_r($response->getStatusCode() === 204);
 ```php [同步属性式]
 $response = $instance['v3/goldplan/merchants/set-advertising-industry-filter']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'                    => '1900000109',
     'advertising_industry_filters' => ['string'],
   ],
 ]);

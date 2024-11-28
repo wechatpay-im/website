@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_mchid {data-required}| string | 品牌主商户号
-| max_ratio {data-required}| integer | 最大分账比例
+| brand_mchid {data-required} | string | 品牌主商户号
+| max_ratio {data-required} | integer | 最大分账比例
 
 {.im-table #response}
 

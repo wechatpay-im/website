@@ -23,9 +23,9 @@ description: 商户可通过该接口创建保险订单。
 $instance->v3->hirePowerBank->insuranceOrders->postAsync([
   'json' => [
     'out_order_no' => '6e8369071cd942c0476613f9d1ce9ca3',
-    'openid' => '2323dfsdf342342',
-    'notify_url' => 'https://api.test.com',
-    'service_id' => '实例值',
+    'openid'       => '2323dfsdf342342',
+    'notify_url'   => 'https://api.test.com',
+    'service_id'   => '实例值',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,9 +38,9 @@ $instance->v3->hirePowerBank->insuranceOrders->postAsync([
 $instance->chain('v3/hire-power-bank/insurance-orders')->postAsync([
   'json' => [
     'out_order_no' => '6e8369071cd942c0476613f9d1ce9ca3',
-    'openid' => '2323dfsdf342342',
-    'notify_url' => 'https://api.test.com',
-    'service_id' => '实例值',
+    'openid'       => '2323dfsdf342342',
+    'notify_url'   => 'https://api.test.com',
+    'service_id'   => '实例值',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +53,9 @@ $instance->chain('v3/hire-power-bank/insurance-orders')->postAsync([
 $instance['v3/hire-power-bank/insurance-orders']->postAsync([
   'json' => [
     'out_order_no' => '6e8369071cd942c0476613f9d1ce9ca3',
-    'openid' => '2323dfsdf342342',
-    'notify_url' => 'https://api.test.com',
-    'service_id' => '实例值',
+    'openid'       => '2323dfsdf342342',
+    'notify_url'   => 'https://api.test.com',
+    'service_id'   => '实例值',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +68,9 @@ $instance['v3/hire-power-bank/insurance-orders']->postAsync([
 $response = $instance->v3->hirePowerBank->insuranceOrders->post([
   'json' => [
     'out_order_no' => '6e8369071cd942c0476613f9d1ce9ca3',
-    'openid' => '2323dfsdf342342',
-    'notify_url' => 'https://api.test.com',
-    'service_id' => '实例值',
+    'openid'       => '2323dfsdf342342',
+    'notify_url'   => 'https://api.test.com',
+    'service_id'   => '实例值',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,9 +80,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/hire-power-bank/insurance-orders')->post([
   'json' => [
     'out_order_no' => '6e8369071cd942c0476613f9d1ce9ca3',
-    'openid' => '2323dfsdf342342',
-    'notify_url' => 'https://api.test.com',
-    'service_id' => '实例值',
+    'openid'       => '2323dfsdf342342',
+    'notify_url'   => 'https://api.test.com',
+    'service_id'   => '实例值',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -92,9 +92,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/hire-power-bank/insurance-orders']->post([
   'json' => [
     'out_order_no' => '6e8369071cd942c0476613f9d1ce9ca3',
-    'openid' => '2323dfsdf342342',
-    'notify_url' => 'https://api.test.com',
-    'service_id' => '实例值',
+    'openid'       => '2323dfsdf342342',
+    'notify_url'   => 'https://api.test.com',
+    'service_id'   => '实例值',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

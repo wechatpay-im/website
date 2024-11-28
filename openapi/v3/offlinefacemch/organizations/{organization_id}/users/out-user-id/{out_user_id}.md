@@ -119,16 +119,16 @@ $instance->v3->offlinefacemch->organizations->_organization_id_->users->outUserI
   'organization_id' => '',
   'out_user_id' => '',
   'json' => [
-    'user_name' => '',
-    'user_type' => 'STUDENT',
+    'user_name'    => '',
+    'user_type'    => 'STUDENT',
     'student_info' => [
       'class_name' => '',
     ],
-    'staff_info' => [
+    'staff_info'   => [
       'occupation' => '',
     ],
-    'status' => 'NORMAL',
-    'phone' => '',
+    'status'       => 'NORMAL',
+    'phone'        => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -145,16 +145,16 @@ $instance->chain('v3/offlinefacemch/organizations/{organization_id}/users/out-us
   'organization_id' => '',
   'out_user_id' => '',
   'json' => [
-    'user_name' => '',
-    'user_type' => 'STUDENT',
+    'user_name'    => '',
+    'user_type'    => 'STUDENT',
     'student_info' => [
       'class_name' => '',
     ],
-    'staff_info' => [
+    'staff_info'   => [
       'occupation' => '',
     ],
-    'status' => 'NORMAL',
-    'phone' => '',
+    'status'       => 'NORMAL',
+    'phone'        => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -171,16 +171,16 @@ $instance['v3/offlinefacemch/organizations/{organization_id}/users/out-user-id/{
   'organization_id' => '',
   'out_user_id' => '',
   'json' => [
-    'user_name' => '',
-    'user_type' => 'STUDENT',
+    'user_name'    => '',
+    'user_type'    => 'STUDENT',
     'student_info' => [
       'class_name' => '',
     ],
-    'staff_info' => [
+    'staff_info'   => [
       'occupation' => '',
     ],
-    'status' => 'NORMAL',
-    'phone' => '',
+    'status'       => 'NORMAL',
+    'phone'        => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -197,16 +197,16 @@ $response = $instance->v3->offlinefacemch->organizations->_organization_id_->use
   'organization_id' => '',
   'out_user_id' => '',
   'json' => [
-    'user_name' => '',
-    'user_type' => 'STUDENT',
+    'user_name'    => '',
+    'user_type'    => 'STUDENT',
     'student_info' => [
       'class_name' => '',
     ],
-    'staff_info' => [
+    'staff_info'   => [
       'occupation' => '',
     ],
-    'status' => 'NORMAL',
-    'phone' => '',
+    'status'       => 'NORMAL',
+    'phone'        => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -220,16 +220,16 @@ $response = $instance->chain('v3/offlinefacemch/organizations/{organization_id}/
   'organization_id' => '',
   'out_user_id' => '',
   'json' => [
-    'user_name' => '',
-    'user_type' => 'STUDENT',
+    'user_name'    => '',
+    'user_type'    => 'STUDENT',
     'student_info' => [
       'class_name' => '',
     ],
-    'staff_info' => [
+    'staff_info'   => [
       'occupation' => '',
     ],
-    'status' => 'NORMAL',
-    'phone' => '',
+    'status'       => 'NORMAL',
+    'phone'        => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -243,16 +243,16 @@ $response = $instance['v3/offlinefacemch/organizations/{organization_id}/users/o
   'organization_id' => '',
   'out_user_id' => '',
   'json' => [
-    'user_name' => '',
-    'user_type' => 'STUDENT',
+    'user_name'    => '',
+    'user_type'    => 'STUDENT',
     'student_info' => [
       'class_name' => '',
     ],
-    'staff_info' => [
+    'staff_info'   => [
       'occupation' => '',
     ],
-    'status' => 'NORMAL',
-    'phone' => '',
+    'status'       => 'NORMAL',
+    'phone'        => '',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

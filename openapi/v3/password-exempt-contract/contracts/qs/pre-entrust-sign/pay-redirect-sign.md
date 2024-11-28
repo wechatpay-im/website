@@ -28,16 +28,16 @@ description: 从业机构服务商下单成功并获取`prepay_id`后，在把`p
 ```php [异步纯链式]
 $instance->v3->passwordExemptContract->contracts->qs->preEntrustSign->payRedirectSign->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'appid'                    => 'wxd678efh567hg6787',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'                => '1900000109',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -49,16 +49,16 @@ $instance->v3->passwordExemptContract->contracts->qs->preEntrustSign->payRedirec
 ```php [异步声明式]
 $instance->chain('v3/password-exempt-contract/contracts/qs/pre-entrust-sign/pay-redirect-sign')->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'appid'                    => 'wxd678efh567hg6787',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'                => '1900000109',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,16 +70,16 @@ $instance->chain('v3/password-exempt-contract/contracts/qs/pre-entrust-sign/pay-
 ```php [异步属性式]
 $instance['v3/password-exempt-contract/contracts/qs/pre-entrust-sign/pay-redirect-sign']->postAsync([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'appid'                    => 'wxd678efh567hg6787',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'                => '1900000109',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -91,16 +91,16 @@ $instance['v3/password-exempt-contract/contracts/qs/pre-entrust-sign/pay-redirec
 ```php [同步纯链式]
 $response = $instance->v3->passwordExemptContract->contracts->qs->preEntrustSign->payRedirectSign->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'appid'                    => 'wxd678efh567hg6787',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'                => '1900000109',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,16 +109,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/password-exempt-contract/contracts/qs/pre-entrust-sign/pay-redirect-sign')->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'appid'                    => 'wxd678efh567hg6787',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'                => '1900000109',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -127,16 +127,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/password-exempt-contract/contracts/qs/pre-entrust-sign/pay-redirect-sign']->post([
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'service_id' => 12535,
-    'out_contract_code' => 'wxwtdk20200910100000',
-    'notify_url' => 'https://yourapp.com/notify',
+    'appid'                    => 'wxd678efh567hg6787',
+    'sub_appid'                => 'wxd678efh567hg6787',
+    'sub_mchid'                => '1900000109',
+    'service_id'               => 12535,
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'notify_url'               => 'https://yourapp.com/notify',
     'contract_display_account' => '微信代扣用户A',
-    'prepay_id' => 'wx201410272009395522657a690389285100',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'prepay_id'                => 'wx201410272009395522657a690389285100',
+    'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -146,9 +146,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 商户号
-| service_id {data-required}| number | 免密支付服务ID
-| out_contract_code {data-required}| string | 商户签约协议号
+| mchid {data-required} | string | 商户号
+| service_id {data-required} | number | 免密支付服务ID
+| out_contract_code {data-required} | string | 商户签约协议号
 
 {.im-table #response}
 

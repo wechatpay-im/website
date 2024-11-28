@@ -30,19 +30,19 @@ description: 商户调用「预约扣费」接口预约成功后，可调用本�
 ```php [异步纯链式]
 $instance->v3->papay->pay->partner->transactions->apply->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'out_trade_no' => '1217752501201407033233368018',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
+    'sp_appid'               => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1900000109',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'description'            => 'Image形象店-深圳腾大-QQ公仔',
     'transaction_notify_url' => 'https://www.qq.com/',
-    'contract_id' => '123124412412423431',
-    'amount' => [
-      'total' => 1,
+    'contract_id'            => '123124412412423431',
+    'amount'                 => [
+      'total'    => 1,
       'currency' => 'CNY',
     ],
-    'goods_tag' => 'DISCOUNTS',
-    'attach' => '自定义数据',
+    'goods_tag'              => 'DISCOUNTS',
+    'attach'                 => '自定义数据',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,19 +54,19 @@ $instance->v3->papay->pay->partner->transactions->apply->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/papay/pay/partner/transactions/apply')->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'out_trade_no' => '1217752501201407033233368018',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
+    'sp_appid'               => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1900000109',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'description'            => 'Image形象店-深圳腾大-QQ公仔',
     'transaction_notify_url' => 'https://www.qq.com/',
-    'contract_id' => '123124412412423431',
-    'amount' => [
-      'total' => 1,
+    'contract_id'            => '123124412412423431',
+    'amount'                 => [
+      'total'    => 1,
       'currency' => 'CNY',
     ],
-    'goods_tag' => 'DISCOUNTS',
-    'attach' => '自定义数据',
+    'goods_tag'              => 'DISCOUNTS',
+    'attach'                 => '自定义数据',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,19 +78,19 @@ $instance->chain('v3/papay/pay/partner/transactions/apply')->postAsync([
 ```php [异步属性式]
 $instance['v3/papay/pay/partner/transactions/apply']->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'out_trade_no' => '1217752501201407033233368018',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
+    'sp_appid'               => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1900000109',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'description'            => 'Image形象店-深圳腾大-QQ公仔',
     'transaction_notify_url' => 'https://www.qq.com/',
-    'contract_id' => '123124412412423431',
-    'amount' => [
-      'total' => 1,
+    'contract_id'            => '123124412412423431',
+    'amount'                 => [
+      'total'    => 1,
       'currency' => 'CNY',
     ],
-    'goods_tag' => 'DISCOUNTS',
-    'attach' => '自定义数据',
+    'goods_tag'              => 'DISCOUNTS',
+    'attach'                 => '自定义数据',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -102,19 +102,19 @@ $instance['v3/papay/pay/partner/transactions/apply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->papay->pay->partner->transactions->apply->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'out_trade_no' => '1217752501201407033233368018',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
+    'sp_appid'               => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1900000109',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'description'            => 'Image形象店-深圳腾大-QQ公仔',
     'transaction_notify_url' => 'https://www.qq.com/',
-    'contract_id' => '123124412412423431',
-    'amount' => [
-      'total' => 1,
+    'contract_id'            => '123124412412423431',
+    'amount'                 => [
+      'total'    => 1,
       'currency' => 'CNY',
     ],
-    'goods_tag' => 'DISCOUNTS',
-    'attach' => '自定义数据',
+    'goods_tag'              => 'DISCOUNTS',
+    'attach'                 => '自定义数据',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -123,19 +123,19 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/papay/pay/partner/transactions/apply')->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'out_trade_no' => '1217752501201407033233368018',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
+    'sp_appid'               => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1900000109',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'description'            => 'Image形象店-深圳腾大-QQ公仔',
     'transaction_notify_url' => 'https://www.qq.com/',
-    'contract_id' => '123124412412423431',
-    'amount' => [
-      'total' => 1,
+    'contract_id'            => '123124412412423431',
+    'amount'                 => [
+      'total'    => 1,
       'currency' => 'CNY',
     ],
-    'goods_tag' => 'DISCOUNTS',
-    'attach' => '自定义数据',
+    'goods_tag'              => 'DISCOUNTS',
+    'attach'                 => '自定义数据',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -144,19 +144,19 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/papay/pay/partner/transactions/apply']->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1900000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'out_trade_no' => '1217752501201407033233368018',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
+    'sp_appid'               => 'wxd678efh567hg6787',
+    'sub_mchid'              => '1900000109',
+    'sub_appid'              => 'wxd678efh567hg6787',
+    'out_trade_no'           => '1217752501201407033233368018',
+    'description'            => 'Image形象店-深圳腾大-QQ公仔',
     'transaction_notify_url' => 'https://www.qq.com/',
-    'contract_id' => '123124412412423431',
-    'amount' => [
-      'total' => 1,
+    'contract_id'            => '123124412412423431',
+    'amount'                 => [
+      'total'    => 1,
       'currency' => 'CNY',
     ],
-    'goods_tag' => 'DISCOUNTS',
-    'attach' => '自定义数据',
+    'goods_tag'              => 'DISCOUNTS',
+    'attach'                 => '自定义数据',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -166,8 +166,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| out_trade_no {data-required}| string | 商户订单号
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 扣费金额信息
+| out_trade_no {data-required} | string | 商户订单号
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 扣费金额信息
 | total {data-required data-indent=1} | number | 金额
 | currency {data-indent=1} | string | 货币类型
 

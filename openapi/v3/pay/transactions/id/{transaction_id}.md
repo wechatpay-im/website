@@ -96,16 +96,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | trade_state_desc | string | 交易状态描述
 | bank_type | string | 付款银行
 | success_time | string | 支付完成时间
-| appid {data-required}| string | 公众号ID
-| mchid {data-required}| string | 直连商户号
-| description {data-required}| string | 商品描述
+| appid {data-required} | string | 公众号ID
+| mchid {data-required} | string | 直连商户号
+| description {data-required} | string | 商品描述
 | attach | string | 附加数据
-| out_trade_no {data-required}| string | 商户订单号
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| out_trade_no {data-required} | string | 商户订单号
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=1} | integer | 总金额
 | currency {data-indent=1} | string | 货币类型
 | time_expire | string | 交易结束时间
-| notify_url {data-required}| string | 通知地址
+| notify_url {data-required} | string | 通知地址
 | goods_tag | string | 订单优惠标记
 | limit_pay | string[] | 指定支付方式<br/>`no_balance` \| `no_credit` \| `no_debit` \| `balance_only` 枚举值之一
 | support_fapiao | boolean | 电子发票入口开放标识

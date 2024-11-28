@@ -24,8 +24,8 @@ description: 若在可扣费期内扣费失败，商户在可通知时间段可�
 $instance->v3->partnerPapay->contracts->_contract_id_->failNotify->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
     'sub_mchid' => '12345512',
     'sub_appid' => 'wxd678efh567hg6787',
   ],
@@ -40,8 +40,8 @@ $instance->v3->partnerPapay->contracts->_contract_id_->failNotify->postAsync([
 $instance->chain('v3/partner-papay/contracts/{contract_id}/fail-notify')->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
     'sub_mchid' => '12345512',
     'sub_appid' => 'wxd678efh567hg6787',
   ],
@@ -56,8 +56,8 @@ $instance->chain('v3/partner-papay/contracts/{contract_id}/fail-notify')->postAs
 $instance['v3/partner-papay/contracts/{contract_id}/fail-notify']->postAsync([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
     'sub_mchid' => '12345512',
     'sub_appid' => 'wxd678efh567hg6787',
   ],
@@ -72,8 +72,8 @@ $instance['v3/partner-papay/contracts/{contract_id}/fail-notify']->postAsync([
 $response = $instance->v3->partnerPapay->contracts->_contract_id_->failNotify->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
     'sub_mchid' => '12345512',
     'sub_appid' => 'wxd678efh567hg6787',
   ],
@@ -85,8 +85,8 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/partner-papay/contracts/{contract_id}/fail-notify')->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
     'sub_mchid' => '12345512',
     'sub_appid' => 'wxd678efh567hg6787',
   ],
@@ -98,8 +98,8 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/partner-papay/contracts/{contract_id}/fail-notify']->post([
   'contract_id' => '123124412412423431',
   'json' => [
-    'sp_mchid' => '1230000109',
-    'sp_appid' => 'wxd678efh567hg6787',
+    'sp_mchid'  => '1230000109',
+    'sp_appid'  => 'wxd678efh567hg6787',
     'sub_mchid' => '12345512',
     'sub_appid' => 'wxd678efh567hg6787',
   ],

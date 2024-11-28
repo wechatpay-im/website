@@ -77,8 +77,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| policy_period_id {data-required}| number | 保单的扣费周期编号
-| policy_period_state {data-required}| string | 当前扣费周期的状态
+| policy_period_id {data-required} | number | 保单的扣费周期编号
+| policy_period_state {data-required} | string | 当前扣费周期的状态
 | deduct_start_date | string | 可扣费开始日期
 | deduct_end_date | string | 可扣费结束日期
 | scheduled_amount | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息

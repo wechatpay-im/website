@@ -107,9 +107,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | data | object[] {data-tooltip="对应PHP的array"} | 会员卡列表
 | card_id {data-indent=1} | string | 会员卡id
 | code {data-indent=1} | string | 会员卡code
-| total_count {data-required}| integer | 总数量
-| offset {data-required}| integer | 分页页码
-| limit {data-required}| integer | 分页大小
+| total_count {data-required} | integer | 总数量
+| offset {data-required} | integer | 分页页码
+| limit {data-required} | integer | 分页大小
 
 {.im-table #response}
 

@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 设备信息
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 设备信息
 | device_sn {data-indent=1} | string | 设备序列号
 | camera_sn {data-indent=1} | string | 摄像头序列号
 | device_category_code {data-indent=1} | string | 设备品类代码
@@ -107,10 +107,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | merchant_shortname {data-indent=1} | string | 商户简称
 | sub_mchid {data-indent=1} | string | 子商户号
 | sub_merchant_shortname {data-indent=1} | string | 子商户简称
-| offset {data-required}| integer | 请求资源起始位置
-| limit {data-required}| integer | 最大资源条数
-| total_count {data-required}| integer | 资源总条数
-| links {data-required}| object {data-tooltip="对应PHP的array"} | 相关链接
+| offset {data-required} | integer | 请求资源起始位置
+| limit {data-required} | integer | 最大资源条数
+| total_count {data-required} | integer | 资源总条数
+| links {data-required} | object {data-tooltip="对应PHP的array"} | 相关链接
 | next {data-indent=1} | string | 下一页链接
 | prev {data-indent=1} | string | 上一页链接
 | self {data-indent=1} | string | 当前链接

@@ -33,18 +33,18 @@ description:
 ```php [异步纯链式]
 $instance->v3->payscore->partner->permissions->assessUserRiskLevel->postAsync([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'service_id'         => '500001',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'authorization_code' => '1234323JKHDFE1243252',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'shopping_info' => [
+    'openid'             => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'shopping_info'      => [
       'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 550,
-        'count' => 1,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 550,
+        'count'       => 1,
         'category_id' => ['string'],
       ],],
     ],
@@ -62,18 +62,18 @@ $instance->v3->payscore->partner->permissions->assessUserRiskLevel->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/payscore/partner/permissions/assess-user-risk-level')->postAsync([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'service_id'         => '500001',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'authorization_code' => '1234323JKHDFE1243252',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'shopping_info' => [
+    'openid'             => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'shopping_info'      => [
       'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 550,
-        'count' => 1,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 550,
+        'count'       => 1,
         'category_id' => ['string'],
       ],],
     ],
@@ -91,18 +91,18 @@ $instance->chain('v3/payscore/partner/permissions/assess-user-risk-level')->post
 ```php [异步属性式]
 $instance['v3/payscore/partner/permissions/assess-user-risk-level']->postAsync([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'service_id'         => '500001',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'authorization_code' => '1234323JKHDFE1243252',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'shopping_info' => [
+    'openid'             => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'shopping_info'      => [
       'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 550,
-        'count' => 1,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 550,
+        'count'       => 1,
         'category_id' => ['string'],
       ],],
     ],
@@ -120,18 +120,18 @@ $instance['v3/payscore/partner/permissions/assess-user-risk-level']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->payscore->partner->permissions->assessUserRiskLevel->post([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'service_id'         => '500001',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'authorization_code' => '1234323JKHDFE1243252',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'shopping_info' => [
+    'openid'             => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'shopping_info'      => [
       'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 550,
-        'count' => 1,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 550,
+        'count'       => 1,
         'category_id' => ['string'],
       ],],
     ],
@@ -146,18 +146,18 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/partner/permissions/assess-user-risk-level')->post([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'service_id'         => '500001',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'authorization_code' => '1234323JKHDFE1243252',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'shopping_info' => [
+    'openid'             => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'shopping_info'      => [
       'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 550,
-        'count' => 1,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 550,
+        'count'       => 1,
         'category_id' => ['string'],
       ],],
     ],
@@ -172,18 +172,18 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/payscore/partner/permissions/assess-user-risk-level']->post([
   'json' => [
-    'service_id' => '500001',
-    'appid' => 'wxd678efh567hg6787',
-    'sub_appid' => 'wxd678efh567hg6787',
+    'service_id'         => '500001',
+    'appid'              => 'wxd678efh567hg6787',
+    'sub_appid'          => 'wxd678efh567hg6787',
     'authorization_code' => '1234323JKHDFE1243252',
-    'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'shopping_info' => [
+    'openid'             => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'shopping_info'      => [
       'goods' => [[
-        'name' => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount' => 550,
-        'count' => 1,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 550,
+        'count'       => 1,
         'category_id' => ['string'],
       ],],
     ],
@@ -199,12 +199,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| service_id {data-required}| string | 服务ID
-| appid {data-required}| string | 公众号ID
-| mchid {data-required}| string | 商户号
+| service_id {data-required} | string | 服务ID
+| appid {data-required} | string | 公众号ID
+| mchid {data-required} | string | 商户号
 | openid | string | 用户标识
 | authorization_code | string | 授权协议号
-| authorization_state {data-required}| string | 授权状态
+| authorization_state {data-required} | string | 授权状态
 | notify_url | string | 授权通知地址
 | cancel_authorization_time | string | 最近一次解除授权时间
 | authorization_success_time | string | 最近一次授权成功时间

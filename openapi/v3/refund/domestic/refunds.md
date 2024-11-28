@@ -39,29 +39,29 @@ description: 当交易发生之后一年内，由于买家或者卖家的原因�
 ```php [异步纯链式]
 $instance->v3->refund->domestic->refunds->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://weixin.qq.com',
-    'funds_account' => 'AVAILABLE',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'out_trade_no'   => '1217752501201407033233368018',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://weixin.qq.com',
+    'funds_account'  => 'AVAILABLE',
+    'amount'         => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'goods_detail' => [[
-      'merchant_goods_id' => '1217752501201407033233368018',
+    'goods_detail'   => [[
+      'merchant_goods_id'  => '1217752501201407033233368018',
       'wechatpay_goods_id' => '1001',
-      'goods_name' => 'iPhone6s 16G',
-      'unit_price' => 528800,
-      'refund_amount' => 528800,
-      'refund_quantity' => 1,
+      'goods_name'         => 'iPhone6s 16G',
+      'unit_price'         => 528800,
+      'refund_amount'      => 528800,
+      'refund_quantity'    => 1,
     ],],
   ],
 ])
@@ -74,29 +74,29 @@ $instance->v3->refund->domestic->refunds->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/refund/domestic/refunds')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://weixin.qq.com',
-    'funds_account' => 'AVAILABLE',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'out_trade_no'   => '1217752501201407033233368018',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://weixin.qq.com',
+    'funds_account'  => 'AVAILABLE',
+    'amount'         => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'goods_detail' => [[
-      'merchant_goods_id' => '1217752501201407033233368018',
+    'goods_detail'   => [[
+      'merchant_goods_id'  => '1217752501201407033233368018',
       'wechatpay_goods_id' => '1001',
-      'goods_name' => 'iPhone6s 16G',
-      'unit_price' => 528800,
-      'refund_amount' => 528800,
-      'refund_quantity' => 1,
+      'goods_name'         => 'iPhone6s 16G',
+      'unit_price'         => 528800,
+      'refund_amount'      => 528800,
+      'refund_quantity'    => 1,
     ],],
   ],
 ])
@@ -109,29 +109,29 @@ $instance->chain('v3/refund/domestic/refunds')->postAsync([
 ```php [异步属性式]
 $instance['v3/refund/domestic/refunds']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://weixin.qq.com',
-    'funds_account' => 'AVAILABLE',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'out_trade_no'   => '1217752501201407033233368018',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://weixin.qq.com',
+    'funds_account'  => 'AVAILABLE',
+    'amount'         => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'goods_detail' => [[
-      'merchant_goods_id' => '1217752501201407033233368018',
+    'goods_detail'   => [[
+      'merchant_goods_id'  => '1217752501201407033233368018',
       'wechatpay_goods_id' => '1001',
-      'goods_name' => 'iPhone6s 16G',
-      'unit_price' => 528800,
-      'refund_amount' => 528800,
-      'refund_quantity' => 1,
+      'goods_name'         => 'iPhone6s 16G',
+      'unit_price'         => 528800,
+      'refund_amount'      => 528800,
+      'refund_quantity'    => 1,
     ],],
   ],
 ])
@@ -144,29 +144,29 @@ $instance['v3/refund/domestic/refunds']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->refund->domestic->refunds->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://weixin.qq.com',
-    'funds_account' => 'AVAILABLE',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'out_trade_no'   => '1217752501201407033233368018',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://weixin.qq.com',
+    'funds_account'  => 'AVAILABLE',
+    'amount'         => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'goods_detail' => [[
-      'merchant_goods_id' => '1217752501201407033233368018',
+    'goods_detail'   => [[
+      'merchant_goods_id'  => '1217752501201407033233368018',
       'wechatpay_goods_id' => '1001',
-      'goods_name' => 'iPhone6s 16G',
-      'unit_price' => 528800,
-      'refund_amount' => 528800,
-      'refund_quantity' => 1,
+      'goods_name'         => 'iPhone6s 16G',
+      'unit_price'         => 528800,
+      'refund_amount'      => 528800,
+      'refund_quantity'    => 1,
     ],],
   ],
 ]);
@@ -176,29 +176,29 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/refund/domestic/refunds')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://weixin.qq.com',
-    'funds_account' => 'AVAILABLE',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'out_trade_no'   => '1217752501201407033233368018',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://weixin.qq.com',
+    'funds_account'  => 'AVAILABLE',
+    'amount'         => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'goods_detail' => [[
-      'merchant_goods_id' => '1217752501201407033233368018',
+    'goods_detail'   => [[
+      'merchant_goods_id'  => '1217752501201407033233368018',
       'wechatpay_goods_id' => '1001',
-      'goods_name' => 'iPhone6s 16G',
-      'unit_price' => 528800,
-      'refund_amount' => 528800,
-      'refund_quantity' => 1,
+      'goods_name'         => 'iPhone6s 16G',
+      'unit_price'         => 528800,
+      'refund_amount'      => 528800,
+      'refund_quantity'    => 1,
     ],],
   ],
 ]);
@@ -208,29 +208,29 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/refund/domestic/refunds']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
+    'sub_mchid'      => '1900000109',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '1217752501201407033233368018',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://weixin.qq.com',
-    'funds_account' => 'AVAILABLE',
-    'amount' => [
-      'refund' => 888,
-      'from' => [[
+    'out_trade_no'   => '1217752501201407033233368018',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://weixin.qq.com',
+    'funds_account'  => 'AVAILABLE',
+    'amount'         => [
+      'refund'   => 888,
+      'from'     => [[
         'account' => 'AVAILABLE',
-        'amount' => 444,
+        'amount'  => 444,
       ],],
-      'total' => 888,
+      'total'    => 888,
       'currency' => 'CNY',
     ],
-    'goods_detail' => [[
-      'merchant_goods_id' => '1217752501201407033233368018',
+    'goods_detail'   => [[
+      'merchant_goods_id'  => '1217752501201407033233368018',
       'wechatpay_goods_id' => '1001',
-      'goods_name' => 'iPhone6s 16G',
-      'unit_price' => 528800,
-      'refund_amount' => 528800,
-      'refund_quantity' => 1,
+      'goods_name'         => 'iPhone6s 16G',
+      'unit_price'         => 528800,
+      'refund_amount'      => 528800,
+      'refund_quantity'    => 1,
     ],],
   ],
 ]);
@@ -241,17 +241,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| refund_id {data-required}| string | 微信支付退款号
-| out_refund_no {data-required}| string | 商户退款单号
-| transaction_id {data-required}| string | 微信支付订单号
-| out_trade_no {data-required}| string | 商户订单号
-| channel {data-required}| string | 退款渠道
-| user_received_account {data-required}| string | 退款入账账户
+| refund_id {data-required} | string | 微信支付退款号
+| out_refund_no {data-required} | string | 商户退款单号
+| transaction_id {data-required} | string | 微信支付订单号
+| out_trade_no {data-required} | string | 商户订单号
+| channel {data-required} | string | 退款渠道
+| user_received_account {data-required} | string | 退款入账账户
 | success_time | string | 退款成功时间
-| create_time {data-required}| string | 退款创建时间
-| status {data-required}| string | 退款状态
+| create_time {data-required} | string | 退款创建时间
+| status {data-required} | string | 退款状态
 | funds_account | string | 资金账户
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 金额信息
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 金额信息
 | total {data-required data-indent=1} | integer | 订单金额
 | refund {data-required data-indent=1} | integer | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额

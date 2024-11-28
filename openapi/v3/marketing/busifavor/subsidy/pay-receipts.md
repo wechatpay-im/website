@@ -21,13 +21,13 @@
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->subsidy->payReceipts->postAsync([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'transaction_id' => '4200000913202101152566792388',
     'payer_merchant' => '1900000001',
     'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'amount'         => 100,
+    'description'    => '20210115DESCRIPTION',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -40,13 +40,13 @@ $instance->v3->marketing->busifavor->subsidy->payReceipts->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/subsidy/pay-receipts')->postAsync([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'transaction_id' => '4200000913202101152566792388',
     'payer_merchant' => '1900000001',
     'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'amount'         => 100,
+    'description'    => '20210115DESCRIPTION',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -59,13 +59,13 @@ $instance->chain('v3/marketing/busifavor/subsidy/pay-receipts')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/subsidy/pay-receipts']->postAsync([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'transaction_id' => '4200000913202101152566792388',
     'payer_merchant' => '1900000001',
     'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'amount'         => 100,
+    'description'    => '20210115DESCRIPTION',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ])
@@ -78,13 +78,13 @@ $instance['v3/marketing/busifavor/subsidy/pay-receipts']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->subsidy->payReceipts->post([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'transaction_id' => '4200000913202101152566792388',
     'payer_merchant' => '1900000001',
     'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'amount'         => 100,
+    'description'    => '20210115DESCRIPTION',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -94,13 +94,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/subsidy/pay-receipts')->post([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'transaction_id' => '4200000913202101152566792388',
     'payer_merchant' => '1900000001',
     'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'amount'         => 100,
+    'description'    => '20210115DESCRIPTION',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -110,13 +110,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/subsidy/pay-receipts']->post([
   'json' => [
-    'stock_id' => '128888000000001',
-    'coupon_code' => 'ABCD12345678',
+    'stock_id'       => '128888000000001',
+    'coupon_code'    => 'ABCD12345678',
     'transaction_id' => '4200000913202101152566792388',
     'payer_merchant' => '1900000001',
     'payee_merchant' => '1900000002',
-    'amount' => 100,
-    'description' => '20210115DESCRIPTION',
+    'amount'         => 100,
+    'description'    => '20210115DESCRIPTION',
     'out_subsidy_no' => 'subsidy-abcd-12345678',
   ],
 ]);
@@ -127,18 +127,18 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| subsidy_receipt_id {data-required}| string | 补差付款单号
-| stock_id {data-required}| string | 商家券批次号
-| coupon_code {data-required}| string | 商家券Code
-| transaction_id {data-required}| string | 微信支付订单号
-| payer_merchant {data-required}| string | 营销补差扣款商户号
-| payee_merchant {data-required}| string | 营销补差入账商户号
-| amount {data-required}| integer | 补差付款金额
-| description {data-required}| string | 补差付款描述
-| status {data-required}| string | 补差付款单据状态
+| subsidy_receipt_id {data-required} | string | 补差付款单号
+| stock_id {data-required} | string | 商家券批次号
+| coupon_code {data-required} | string | 商家券Code
+| transaction_id {data-required} | string | 微信支付订单号
+| payer_merchant {data-required} | string | 营销补差扣款商户号
+| payee_merchant {data-required} | string | 营销补差入账商户号
+| amount {data-required} | integer | 补差付款金额
+| description {data-required} | string | 补差付款描述
+| status {data-required} | string | 补差付款单据状态
 | fail_reason | string | 补差付款失败原因
 | success_time | string | 补差付款完成时间
-| out_subsidy_no {data-required}| string | 业务请求唯一单号
+| out_subsidy_no {data-required} | string | 业务请求唯一单号
 | create_time | string | 补差付款发起时间
 
 {.im-table #response}

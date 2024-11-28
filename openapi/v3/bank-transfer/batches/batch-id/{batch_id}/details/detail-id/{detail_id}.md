@@ -77,26 +77,26 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| bank_sp_mchid {data-required}| string | 银行服务商号
-| platform_mchid {data-required}| string | 服务平台商户号
-| specialized_payment_mchid {data-required}| string | 付款企业商户号
-| sponsor_mchid {data-required}| string | 实际出资商户号
-| user_authorized_mchid {data-required}| string | 用户授权商户号
-| user_authorized_appid {data-required}| string | 用户授权appid
-| out_batch_no {data-required}| string | 银行批次单号
-| batch_id {data-required}| string | 微信支付批次单号
-| transfer_scene {data-required}| string | 转账场景
-| out_detail_no {data-required}| string | 银行明细单号
-| detail_id {data-required}| string | 微信支付明细单号
-| openid {data-required}| string | 收款用户openid
-| username {data-required}| string | 收款用户姓名
-| transfer_amount {data-required}| integer | 转账金额
-| transfer_remark {data-required}| string | 转账备注
-| detail_state {data-required}| string | 明细状态
+| bank_sp_mchid {data-required} | string | 银行服务商号
+| platform_mchid {data-required} | string | 服务平台商户号
+| specialized_payment_mchid {data-required} | string | 付款企业商户号
+| sponsor_mchid {data-required} | string | 实际出资商户号
+| user_authorized_mchid {data-required} | string | 用户授权商户号
+| user_authorized_appid {data-required} | string | 用户授权appid
+| out_batch_no {data-required} | string | 银行批次单号
+| batch_id {data-required} | string | 微信支付批次单号
+| transfer_scene {data-required} | string | 转账场景
+| out_detail_no {data-required} | string | 银行明细单号
+| detail_id {data-required} | string | 微信支付明细单号
+| openid {data-required} | string | 收款用户openid
+| username {data-required} | string | 收款用户姓名
+| transfer_amount {data-required} | integer | 转账金额
+| transfer_remark {data-required} | string | 转账备注
+| detail_state {data-required} | string | 明细状态
 | fail_reason | string | 明细失败原因
 | initiate_time | string | 转账发起时间
-| update_time {data-required}| string | 明细更新时间
-| account_type {data-required}| string | 收款账户类型
+| update_time {data-required} | string | 明细更新时间
+| account_type {data-required} | string | 收款账户类型
 | bank_name | string | 银行名称
 | bank_card_number_tail | string | 银行卡尾号
 

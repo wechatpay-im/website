@@ -103,7 +103,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 查询数据总条数
+| total_count {data-required} | integer | 查询数据总条数
 | data | object[] {data-tooltip="对应PHP的array"} | 银行列表
 | bank_alias {data-required data-indent=1} | string | 银行别名
 | bank_alias_code {data-required data-indent=1} | string | 银行别名编码

@@ -12,10 +12,11 @@ description: 合单支付订单只能使用此合单关单api完成关单。
 | combine_out_trade_no {data-required} | string | 合单商户订单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | combine_appid {data-required data-indent=1} | string | 合单商户appid
-| sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| sub_orders {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
 | mchid {data-required data-indent=2} | string | 子单商户号
 | out_trade_no {data-required data-indent=2} | string | 子单商户订单号
-| sub_mchid {data-required data-indent=2} | string | 二级商户号
+| individual_auth_id {data-indent=2} | string | 商品单个人收款方受理授权ID
+| sub_mchid {data-indent=2} | string | 二级商户号
 | sub_appid {data-indent=2} | string | 子商户应用ID
 
 {.im-table #request}
@@ -27,11 +28,12 @@ $instance->v3->combineTransactions->outTradeNo->_combine_out_trade_no_->close->p
   'combine_out_trade_no' => '',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6999',
+    'sub_orders'    => [[
+      'mchid'              => '1900000109',
+      'out_trade_no'       => '20150806125346',
+      'individual_auth_id' => '1900000109',
+      'sub_mchid'          => '1900000109',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
   ],
 ])
@@ -46,11 +48,12 @@ $instance->chain('v3/combine-transactions/out-trade-no/{combine_out_trade_no}/cl
   'combine_out_trade_no' => '',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6999',
+    'sub_orders'    => [[
+      'mchid'              => '1900000109',
+      'out_trade_no'       => '20150806125346',
+      'individual_auth_id' => '1900000109',
+      'sub_mchid'          => '1900000109',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
   ],
 ])
@@ -65,11 +68,12 @@ $instance['v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close']->
   'combine_out_trade_no' => '',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6999',
+    'sub_orders'    => [[
+      'mchid'              => '1900000109',
+      'out_trade_no'       => '20150806125346',
+      'individual_auth_id' => '1900000109',
+      'sub_mchid'          => '1900000109',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
   ],
 ])
@@ -84,11 +88,12 @@ $response = $instance->v3->combineTransactions->outTradeNo->_combine_out_trade_n
   'combine_out_trade_no' => '',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6999',
+    'sub_orders'    => [[
+      'mchid'              => '1900000109',
+      'out_trade_no'       => '20150806125346',
+      'individual_auth_id' => '1900000109',
+      'sub_mchid'          => '1900000109',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
   ],
 ]);
@@ -100,11 +105,12 @@ $response = $instance->chain('v3/combine-transactions/out-trade-no/{combine_out_
   'combine_out_trade_no' => '',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6999',
+    'sub_orders'    => [[
+      'mchid'              => '1900000109',
+      'out_trade_no'       => '20150806125346',
+      'individual_auth_id' => '1900000109',
+      'sub_mchid'          => '1900000109',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
   ],
 ]);
@@ -116,11 +122,12 @@ $response = $instance['v3/combine-transactions/out-trade-no/{combine_out_trade_n
   'combine_out_trade_no' => '',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
-    'sub_orders' => [[
-      'mchid' => '1900000109',
-      'out_trade_no' => '20150806125346',
-      'sub_mchid' => '1900000109',
-      'sub_appid' => 'wxd678efh567hg6999',
+    'sub_orders'    => [[
+      'mchid'              => '1900000109',
+      'out_trade_no'       => '20150806125346',
+      'individual_auth_id' => '1900000109',
+      'sub_mchid'          => '1900000109',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
   ],
 ]);
@@ -135,4 +142,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/close-order.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_4.shtml)

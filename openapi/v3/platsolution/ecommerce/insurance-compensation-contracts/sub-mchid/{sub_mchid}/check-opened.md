@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sub_mchid {data-required}| string | 二级商户号
-| opened {data-required}| boolean | 是否开通成功
+| sub_mchid {data-required} | string | 二级商户号
+| opened {data-required} | boolean | 是否开通成功
 | success_time | string | 成功时间
 
 {.im-table #response}

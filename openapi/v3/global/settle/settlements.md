@@ -139,9 +139,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | net {data-required data-indent=2} | integer | 支付净额
 | fee {data-required data-indent=2} | integer | 手续费金额
 | wallet_region {data-indent=1} | string | 钱包主体
-| total_count {data-required}| integer | 总记录条数
-| offset {data-required}| integer | 记录起始位置
-| limit {data-required}| integer | 本次返回条数
+| total_count {data-required} | integer | 总记录条数
+| offset {data-required} | integer | 记录起始位置
+| limit {data-required} | integer | 本次返回条数
 
 {.im-table #response}
 

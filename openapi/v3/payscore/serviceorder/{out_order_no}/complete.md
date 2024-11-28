@@ -42,32 +42,32 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 $instance->v3->payscore->serviceorder->_out_order_no_->complete->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '2002000000000558128851361561536',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'appid'          => 'wxd678efh567hg6787',
+    'service_id'     => '2002000000000558128851361561536',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'       => [
       'end_location' => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
+    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,32 +80,32 @@ $instance->v3->payscore->serviceorder->_out_order_no_->complete->postAsync([
 $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '2002000000000558128851361561536',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'appid'          => 'wxd678efh567hg6787',
+    'service_id'     => '2002000000000558128851361561536',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'       => [
       'end_location' => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
+    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -118,32 +118,32 @@ $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->postAsync(
 $instance['v3/payscore/serviceorder/{out_order_no}/complete']->postAsync([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '2002000000000558128851361561536',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'appid'          => 'wxd678efh567hg6787',
+    'service_id'     => '2002000000000558128851361561536',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'       => [
       'end_location' => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
+    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -156,32 +156,32 @@ $instance['v3/payscore/serviceorder/{out_order_no}/complete']->postAsync([
 $response = $instance->v3->payscore->serviceorder->_out_order_no_->complete->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '2002000000000558128851361561536',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'appid'          => 'wxd678efh567hg6787',
+    'service_id'     => '2002000000000558128851361561536',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'       => [
       'end_location' => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
+    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -191,32 +191,32 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '2002000000000558128851361561536',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'appid'          => 'wxd678efh567hg6787',
+    'service_id'     => '2002000000000558128851361561536',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'       => [
       'end_location' => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
+    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -226,32 +226,32 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/serviceorder/{out_order_no}/complete']->post([
   'out_order_no' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
-    'service_id' => '2002000000000558128851361561536',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'appid'          => 'wxd678efh567hg6787',
+    'service_id'     => '2002000000000558128851361561536',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'time_range' => [
-      'start_time' => '20091225091010',
-      'end_time' => '20091225121010',
+    'total_amount'   => 50000,
+    'time_range'     => [
+      'start_time'        => '20091225091010',
+      'end_time'          => '20091225121010',
       'start_time_remark' => '备注1',
-      'end_time_remark' => '备注2',
+      'end_time_remark'   => '备注2',
     ],
-    'location' => [
+    'location'       => [
       'end_location' => '嗨客时尚主题展餐厅',
     ],
     'profit_sharing' => true,
-    'goods_tag' => 'goods_tag',
+    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -261,14 +261,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| appid {data-required}| string | 公众账号ID
-| mchid {data-required}| string | 商户号
-| out_order_no {data-required}| string | 商户服务订单号
-| service_id {data-required}| string | 服务ID
-| service_introduction {data-required}| string | 服务信息
-| state {data-required}| string | 服务订单状态
+| appid {data-required} | string | 公众账号ID
+| mchid {data-required} | string | 商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
+| service_introduction {data-required} | string | 服务信息
+| state {data-required} | string | 服务订单状态
 | state_description | string | 订单状态说明
-| total_amount {data-required}| number | 商户收款总金额
+| total_amount {data-required} | number | 商户收款总金额
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-required data-indent=1} | string | 付费名称
 | amount {data-indent=1} | number | 付费金额
@@ -279,7 +279,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-indent=1} | string | 优惠说明
 | amount {data-required data-indent=1} | number | 优惠金额
 | count {data-indent=1} | number | 优惠数量
-| risk_fund {data-required}| object {data-tooltip="对应PHP的array"} | 服务风险金
+| risk_fund {data-required} | object {data-tooltip="对应PHP的array"} | 服务风险金
 | name {data-required data-indent=1} | string | 风险名称
 | amount {data-required data-indent=1} | number | 风险金额
 | description {data-indent=1} | string | 风险说明

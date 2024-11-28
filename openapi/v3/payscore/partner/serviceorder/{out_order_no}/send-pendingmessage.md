@@ -34,22 +34,22 @@ description: 商户系统请求支付分系统，下发服务费用待处理消�
 $instance->v3->payscore->partner->serviceorder->_out_order_no_->sendPendingmessage->postAsync([
   'out_order_no' => '',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'prepaid_time' => '20231218',
+    'total_amount'   => 50000,
+    'prepaid_time'   => '20231218',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,22 +62,22 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->sendPendingmessa
 $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage')->postAsync([
   'out_order_no' => '',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'prepaid_time' => '20231218',
+    'total_amount'   => 50000,
+    'prepaid_time'   => '20231218',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -90,22 +90,22 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/send-pendingme
 $instance['v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage']->postAsync([
   'out_order_no' => '',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'prepaid_time' => '20231218',
+    'total_amount'   => 50000,
+    'prepaid_time'   => '20231218',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -118,22 +118,22 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage']
 $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->sendPendingmessage->post([
   'out_order_no' => '',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'prepaid_time' => '20231218',
+    'total_amount'   => 50000,
+    'prepaid_time'   => '20231218',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -143,22 +143,22 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage')->post([
   'out_order_no' => '',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'prepaid_time' => '20231218',
+    'total_amount'   => 50000,
+    'prepaid_time'   => '20231218',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -168,22 +168,22 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage']->post([
   'out_order_no' => '',
   'json' => [
-    'service_id' => '2002000000000558128851361561536',
-    'sub_mchid' => '1900000109',
-    'post_payments' => [[
-      'name' => '就餐费用',
-      'amount' => 40000,
+    'service_id'     => '2002000000000558128851361561536',
+    'sub_mchid'      => '1900000109',
+    'post_payments'  => [[
+      'name'        => '就餐费用',
+      'amount'      => 40000,
       'description' => '就餐人均100元',
-      'count' => 4,
+      'count'       => 4,
     ],],
     'post_discounts' => [[
-      'name' => '满20减1元',
+      'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
-      'amount' => 100,
-      'count' => 2,
+      'amount'      => 100,
+      'count'       => 2,
     ],],
-    'total_amount' => 50000,
-    'prepaid_time' => '20231218',
+    'total_amount'   => 50000,
+    'prepaid_time'   => '20231218',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

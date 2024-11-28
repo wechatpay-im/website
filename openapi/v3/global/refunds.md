@@ -26,17 +26,17 @@
 $instance->v3->global->refunds->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sp_mchid' => '1900000100',
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
+    'mchid'          => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sp_mchid'       => '1900000100',
+    'sub_mchid'      => '1900000109',
+    'sp_appid'       => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888888',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'   => '',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -49,17 +49,17 @@ $instance->v3->global->refunds->postAsync([
 $instance->chain('v3/global/refunds')->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sp_mchid' => '1900000100',
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
+    'mchid'          => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sp_mchid'       => '1900000100',
+    'sub_mchid'      => '1900000109',
+    'sp_appid'       => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888888',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'   => '',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,17 +72,17 @@ $instance->chain('v3/global/refunds')->postAsync([
 $instance['v3/global/refunds']->postAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sp_mchid' => '1900000100',
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
+    'mchid'          => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sp_mchid'       => '1900000100',
+    'sub_mchid'      => '1900000109',
+    'sp_appid'       => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888888',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'   => '',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,17 +95,17 @@ $instance['v3/global/refunds']->postAsync([
 $response = $instance->v3->global->refunds->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sp_mchid' => '1900000100',
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
+    'mchid'          => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sp_mchid'       => '1900000100',
+    'sub_mchid'      => '1900000109',
+    'sp_appid'       => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888888',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'   => '',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -115,17 +115,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/global/refunds')->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sp_mchid' => '1900000100',
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
+    'mchid'          => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sp_mchid'       => '1900000100',
+    'sub_mchid'      => '1900000109',
+    'sp_appid'       => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888888',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'   => '',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -135,17 +135,17 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/global/refunds']->post([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
-    'mchid' => '1900000109',
-    'appid' => 'wx8888888888888888',
-    'sp_mchid' => '1900000100',
-    'sub_mchid' => '1900000109',
-    'sp_appid' => 'wx8888888888888888',
-    'sub_appid' => 'wx8888888888888888',
+    'mchid'          => '1900000109',
+    'appid'          => 'wx8888888888888888',
+    'sp_mchid'       => '1900000100',
+    'sub_mchid'      => '1900000109',
+    'sp_appid'       => 'wx8888888888888888',
+    'sub_appid'      => 'wx8888888888888888',
     'transaction_id' => '1217752501201407033233368018',
-    'out_trade_no' => '',
-    'out_refund_no' => '1217752501201407033233368018',
-    'reason' => '商品已售完',
-    'notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_trade_no'   => '',
+    'out_refund_no'  => '1217752501201407033233368018',
+    'reason'         => '商品已售完',
+    'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -155,10 +155,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| id {data-required}| string | 微信支付退款订单号
-| out_refund_no {data-required}| string | 商户退款单号
-| create_time {data-required}| string | 退款创建时间
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 退款金额
+| id {data-required} | string | 微信支付退款订单号
+| out_refund_no {data-required} | string | 商户退款单号
+| create_time {data-required} | string | 退款创建时间
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 退款金额
 | refund {data-required data-indent=1} | integer | 退款金额
 | currency {data-required data-indent=1} | string | 退款币种
 | payer_refund {data-required data-indent=1} | integer | 用户退款金额
@@ -307,17 +307,17 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| id {data-required}| string | 微信支付交易订单号
-| mchid {data-required}| string | 商户号
-| sub_mchid {data-required}| string | 子商户号
-| sp_mchid {data-required}| string | 机构商户号
-| out_trade_no {data-required}| string | 商户原交易订单号
-| amount {data-required}| object {data-tooltip="对应PHP的array"} | 订单金额
+| id {data-required} | string | 微信支付交易订单号
+| mchid {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 子商户号
+| sp_mchid {data-required} | string | 机构商户号
+| out_trade_no {data-required} | string | 商户原交易订单号
+| amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=1} | integer | 订单金额
 | currency {data-indent=1} | string | 货币类型
 | payer_total {data-required data-indent=1} | integer | 用户支付金额
 | payer_currency {data-required data-indent=1} | string | 支付币种
-| data {data-required}| object[] {data-tooltip="对应PHP的array"} | 退款单列表
+| data {data-required} | object[] {data-tooltip="对应PHP的array"} | 退款单列表
 | id {data-required data-indent=1} | string | 微信退款单号
 | out_refund_no {data-required data-indent=1} | string | 商户退款单号
 | channel {data-indent=1} | string | 退款渠道
@@ -341,8 +341,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-indent=2} | integer | 优惠券面额
 | refund_amount {data-indent=2} | integer | 优惠券退款额
 | currency {data-required data-indent=2} | string | 货币类型
-| total_num {data-required}| integer | 订单总退款次数
-| current_total_num {data-required}| integer | 本次返回退款单数
+| total_num {data-required} | integer | 订单总退款次数
+| current_total_num {data-required} | integer | 本次返回退款单数
 
 {.im-table #response}
 

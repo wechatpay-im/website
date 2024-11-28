@@ -96,11 +96,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mchid {data-required}| string | 服务商商户号
-| openid {data-required}| string | 用户标识
+| mchid {data-required} | string | 服务商商户号
+| openid {data-required} | string | 用户标识
 | sub_mchid | string | 特约商户号
 | contract_id | string | 充电授权扣费协议号
-| contract_state {data-required}| string | 协议状态
+| contract_state {data-required} | string | 协议状态
 
 {.im-table #response}
 

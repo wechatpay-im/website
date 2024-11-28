@@ -24,7 +24,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v3->billdownload->file->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'token'   => 'dN7J6yDgUzbX8Uk3sD4a4e',
     'tartype' => 'GZIP',
   ],
 ])
@@ -38,7 +38,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v3/billdownload/file')->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'token'   => 'dN7J6yDgUzbX8Uk3sD4a4e',
     'tartype' => 'GZIP',
   ],
 ])
@@ -52,7 +52,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v3/billdownload/file']->getAsync([
   'sink' => $stream,
   'query' => [
-    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'token'   => 'dN7J6yDgUzbX8Uk3sD4a4e',
     'tartype' => 'GZIP',
   ],
 ])
@@ -66,7 +66,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->v3->billdownload->file->get([
   'sink' => $stream,
   'query' => [
-    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'token'   => 'dN7J6yDgUzbX8Uk3sD4a4e',
     'tartype' => 'GZIP',
   ],
 ]);
@@ -79,7 +79,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance->chain('v3/billdownload/file')->get([
   'sink' => $stream,
   'query' => [
-    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'token'   => 'dN7J6yDgUzbX8Uk3sD4a4e',
     'tartype' => 'GZIP',
   ],
 ]);
@@ -92,7 +92,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 $instance['v3/billdownload/file']->get([
   'sink' => $stream,
   'query' => [
-    'token' => 'dN7J6yDgUzbX8Uk3sD4a4e',
+    'token'   => 'dN7J6yDgUzbX8Uk3sD4a4e',
     'tartype' => 'GZIP',
   ],
 ]);

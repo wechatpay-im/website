@@ -29,17 +29,17 @@ description: 接口介绍：该接口为电子小票自定义入口创建接口�
 ```php [异步纯链式]
 $instance->v3->marketing->shoppingReceipt->customentrances->postAsync([
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2015-05-20T13:29:35+08:00',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2015-05-20T13:29:35+08:00',
     'custom_entrance_state' => 'ONLINE',
-    'brand_id' => '1014',
-    'out_request_no' => '6122352020010133287985742',
-    'jump_link' => [
+    'brand_id'              => '1014',
+    'out_request_no'        => '6122352020010133287985742',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ])
@@ -52,17 +52,17 @@ $instance->v3->marketing->shoppingReceipt->customentrances->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/shopping-receipt/customentrances')->postAsync([
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2015-05-20T13:29:35+08:00',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2015-05-20T13:29:35+08:00',
     'custom_entrance_state' => 'ONLINE',
-    'brand_id' => '1014',
-    'out_request_no' => '6122352020010133287985742',
-    'jump_link' => [
+    'brand_id'              => '1014',
+    'out_request_no'        => '6122352020010133287985742',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ])
@@ -75,17 +75,17 @@ $instance->chain('v3/marketing/shopping-receipt/customentrances')->postAsync([
 ```php [异步属性式]
 $instance['v3/marketing/shopping-receipt/customentrances']->postAsync([
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2015-05-20T13:29:35+08:00',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2015-05-20T13:29:35+08:00',
     'custom_entrance_state' => 'ONLINE',
-    'brand_id' => '1014',
-    'out_request_no' => '6122352020010133287985742',
-    'jump_link' => [
+    'brand_id'              => '1014',
+    'out_request_no'        => '6122352020010133287985742',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ])
@@ -98,17 +98,17 @@ $instance['v3/marketing/shopping-receipt/customentrances']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->shoppingReceipt->customentrances->post([
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2015-05-20T13:29:35+08:00',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2015-05-20T13:29:35+08:00',
     'custom_entrance_state' => 'ONLINE',
-    'brand_id' => '1014',
-    'out_request_no' => '6122352020010133287985742',
-    'jump_link' => [
+    'brand_id'              => '1014',
+    'out_request_no'        => '6122352020010133287985742',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ]);
@@ -118,17 +118,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/shopping-receipt/customentrances')->post([
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2015-05-20T13:29:35+08:00',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2015-05-20T13:29:35+08:00',
     'custom_entrance_state' => 'ONLINE',
-    'brand_id' => '1014',
-    'out_request_no' => '6122352020010133287985742',
-    'jump_link' => [
+    'brand_id'              => '1014',
+    'out_request_no'        => '6122352020010133287985742',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ]);
@@ -138,17 +138,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/shopping-receipt/customentrances']->post([
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2015-05-20T13:29:35+08:00',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2015-05-20T13:29:35+08:00',
     'custom_entrance_state' => 'ONLINE',
-    'brand_id' => '1014',
-    'out_request_no' => '6122352020010133287985742',
-    'jump_link' => [
+    'brand_id'              => '1014',
+    'out_request_no'        => '6122352020010133287985742',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ]);

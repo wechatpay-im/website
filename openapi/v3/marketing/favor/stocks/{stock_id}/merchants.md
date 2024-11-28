@@ -104,11 +104,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 可用商户总数量
+| total_count {data-required} | integer | 可用商户总数量
 | data | string[] | 可用商户列表
-| offset {data-required}| integer | 分页页码
-| limit {data-required}| integer | 分页大小
-| stock_id {data-required}| string | 批次号
+| offset {data-required} | integer | 分页页码
+| limit {data-required} | integer | 分页大小
+| stock_id {data-required} | string | 批次号
 
 {.im-table #response}
 

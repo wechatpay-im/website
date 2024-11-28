@@ -49,42 +49,42 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 ```php [异步纯链式]
 $instance->v3->pay->partner->transactions->codepay->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'attach' => '自定义数据说明',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wxd678efh567hg6787',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'      => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'attach'         => '自定义数据说明',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'payer' => [
+    'payer'          => [
       'auth_code' => '130061098828009406',
     ],
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'     => [
+      'device_id'  => '013467007045764',
+      'device_ip'  => '128.0.0.1',
       'store_info' => [
-        'id' => '0001',
+        'id'     => '0001',
         'out_id' => 'A1111',
       ],
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
         'merchant_goods_id' => '1246464644',
-        'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'wxpay_goods_id'    => '1001',
+        'goods_name'        => 'iPhoneX 256G',
+        'quantity'          => 1,
+        'unit_price'        => 528800,
       ],],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -98,42 +98,42 @@ $instance->v3->pay->partner->transactions->codepay->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/pay/partner/transactions/codepay')->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'attach' => '自定义数据说明',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wxd678efh567hg6787',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'      => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'attach'         => '自定义数据说明',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'payer' => [
+    'payer'          => [
       'auth_code' => '130061098828009406',
     ],
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'     => [
+      'device_id'  => '013467007045764',
+      'device_ip'  => '128.0.0.1',
       'store_info' => [
-        'id' => '0001',
+        'id'     => '0001',
         'out_id' => 'A1111',
       ],
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
         'merchant_goods_id' => '1246464644',
-        'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'wxpay_goods_id'    => '1001',
+        'goods_name'        => 'iPhoneX 256G',
+        'quantity'          => 1,
+        'unit_price'        => 528800,
       ],],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -147,42 +147,42 @@ $instance->chain('v3/pay/partner/transactions/codepay')->postAsync([
 ```php [异步属性式]
 $instance['v3/pay/partner/transactions/codepay']->postAsync([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'attach' => '自定义数据说明',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wxd678efh567hg6787',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'      => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'attach'         => '自定义数据说明',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'payer' => [
+    'payer'          => [
       'auth_code' => '130061098828009406',
     ],
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'     => [
+      'device_id'  => '013467007045764',
+      'device_ip'  => '128.0.0.1',
       'store_info' => [
-        'id' => '0001',
+        'id'     => '0001',
         'out_id' => 'A1111',
       ],
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
         'merchant_goods_id' => '1246464644',
-        'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'wxpay_goods_id'    => '1001',
+        'goods_name'        => 'iPhoneX 256G',
+        'quantity'          => 1,
+        'unit_price'        => 528800,
       ],],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -196,42 +196,42 @@ $instance['v3/pay/partner/transactions/codepay']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->pay->partner->transactions->codepay->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'attach' => '自定义数据说明',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wxd678efh567hg6787',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'      => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'attach'         => '自定义数据说明',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'payer' => [
+    'payer'          => [
       'auth_code' => '130061098828009406',
     ],
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'     => [
+      'device_id'  => '013467007045764',
+      'device_ip'  => '128.0.0.1',
       'store_info' => [
-        'id' => '0001',
+        'id'     => '0001',
         'out_id' => 'A1111',
       ],
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
         'merchant_goods_id' => '1246464644',
-        'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'wxpay_goods_id'    => '1001',
+        'goods_name'        => 'iPhoneX 256G',
+        'quantity'          => 1,
+        'unit_price'        => 528800,
       ],],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -242,42 +242,42 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/pay/partner/transactions/codepay')->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'attach' => '自定义数据说明',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wxd678efh567hg6787',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'      => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'attach'         => '自定义数据说明',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'payer' => [
+    'payer'          => [
       'auth_code' => '130061098828009406',
     ],
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'     => [
+      'device_id'  => '013467007045764',
+      'device_ip'  => '128.0.0.1',
       'store_info' => [
-        'id' => '0001',
+        'id'     => '0001',
         'out_id' => 'A1111',
       ],
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
         'merchant_goods_id' => '1246464644',
-        'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'wxpay_goods_id'    => '1001',
+        'goods_name'        => 'iPhoneX 256G',
+        'quantity'          => 1,
+        'unit_price'        => 528800,
       ],],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -288,42 +288,42 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/pay/partner/transactions/codepay']->post([
   'json' => [
-    'sp_appid' => 'wxd678efh567hg6787',
-    'sp_mchid' => '1230000109',
-    'sub_appid' => 'wxd678efh567hg6787',
-    'sub_mchid' => '1230000109',
-    'description' => 'Image形象店-深圳腾大-QQ公仔',
-    'out_trade_no' => '1217752501201407033233368018',
-    'attach' => '自定义数据说明',
-    'goods_tag' => 'WXG',
+    'sp_appid'       => 'wxd678efh567hg6787',
+    'sp_mchid'       => '1230000109',
+    'sub_appid'      => 'wxd678efh567hg6787',
+    'sub_mchid'      => '1230000109',
+    'description'    => 'Image形象店-深圳腾大-QQ公仔',
+    'out_trade_no'   => '1217752501201407033233368018',
+    'attach'         => '自定义数据说明',
+    'goods_tag'      => 'WXG',
     'support_fapiao' => true,
-    'payer' => [
+    'payer'          => [
       'auth_code' => '130061098828009406',
     ],
-    'amount' => [
-      'total' => 100,
+    'amount'         => [
+      'total'    => 100,
       'currency' => 'CNY',
     ],
-    'scene_info' => [
-      'device_id' => '013467007045764',
-      'device_ip' => '128.0.0.1',
+    'scene_info'     => [
+      'device_id'  => '013467007045764',
+      'device_ip'  => '128.0.0.1',
       'store_info' => [
-        'id' => '0001',
+        'id'     => '0001',
         'out_id' => 'A1111',
       ],
     ],
-    'detail' => [
-      'cost_price' => 608800,
-      'invoice_id' => '微信123',
+    'detail'         => [
+      'cost_price'   => 608800,
+      'invoice_id'   => '微信123',
       'goods_detail' => [[
         'merchant_goods_id' => '1246464644',
-        'wxpay_goods_id' => '1001',
-        'goods_name' => 'iPhoneX 256G',
-        'quantity' => 1,
-        'unit_price' => 528800,
+        'wxpay_goods_id'    => '1001',
+        'goods_name'        => 'iPhoneX 256G',
+        'quantity'          => 1,
+        'unit_price'        => 528800,
       ],],
     ],
-    'settle_info' => [
+    'settle_info'    => [
       'profit_sharing' => true,
     ],
   ],
@@ -336,15 +336,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sp_appid | string | 合作伙伴应用AppID
-| sp_mchid {data-required}| string | 合作伙伴商户号
+| sp_mchid {data-required} | string | 合作伙伴商户号
 | sub_appid | string | 特约商户应用AppID
-| sub_mchid {data-required}| string | 特约商户商户号
-| out_trade_no {data-required}| string | 商户订单号
+| sub_mchid {data-required} | string | 特约商户商户号
+| out_trade_no {data-required} | string | 商户订单号
 | transaction_id | string | 微信支付订单号
 | trade_type | string | 交易类型
 | bank_type | string | 银行类型
 | success_time | string | 支付完成时间
-| trade_state {data-required}| string | 交易状态
+| trade_state {data-required} | string | 交易状态
 | trade_state_desc | string | 交易状态描述
 | attach | string | 附加数据
 | payer | object {data-tooltip="对应PHP的array"} | 支付者

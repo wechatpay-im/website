@@ -25,11 +25,11 @@ description: 商户可通过调用此接口，更新“申请退款”单据的�
 $instance->v3->merchantService->complaintsV2->_complaint_id_->updateRefundProgress->postAsync([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'action' => 'REJECT',
+    'action'            => 'REJECT',
     'launch_refund_day' => 3,
-    'reject_reason' => '拒绝退款',
+    'reject_reason'     => '拒绝退款',
     'reject_media_list' => ['MediaId'],
-    'remark' => '已处理完成',
+    'remark'            => '已处理完成',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,11 +42,11 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->updateRefundProgre
 $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress')->postAsync([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'action' => 'REJECT',
+    'action'            => 'REJECT',
     'launch_refund_day' => 3,
-    'reject_reason' => '拒绝退款',
+    'reject_reason'     => '拒绝退款',
     'reject_media_list' => ['MediaId'],
-    'remark' => '已处理完成',
+    'remark'            => '已处理完成',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,11 +59,11 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/update-refund
 $instance['v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress']->postAsync([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'action' => 'REJECT',
+    'action'            => 'REJECT',
     'launch_refund_day' => 3,
-    'reject_reason' => '拒绝退款',
+    'reject_reason'     => '拒绝退款',
     'reject_media_list' => ['MediaId'],
-    'remark' => '已处理完成',
+    'remark'            => '已处理完成',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,11 +76,11 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progre
 $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->updateRefundProgress->post([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'action' => 'REJECT',
+    'action'            => 'REJECT',
     'launch_refund_day' => 3,
-    'reject_reason' => '拒绝退款',
+    'reject_reason'     => '拒绝退款',
     'reject_media_list' => ['MediaId'],
-    'remark' => '已处理完成',
+    'remark'            => '已处理完成',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -90,11 +90,11 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress')->post([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'action' => 'REJECT',
+    'action'            => 'REJECT',
     'launch_refund_day' => 3,
-    'reject_reason' => '拒绝退款',
+    'reject_reason'     => '拒绝退款',
     'reject_media_list' => ['MediaId'],
-    'remark' => '已处理完成',
+    'remark'            => '已处理完成',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -104,11 +104,11 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress']->post([
   'complaint_id' => '200201820200101080076610000',
   'json' => [
-    'action' => 'REJECT',
+    'action'            => 'REJECT',
     'launch_refund_day' => 3,
-    'reject_reason' => '拒绝退款',
+    'reject_reason'     => '拒绝退款',
     'reject_media_list' => ['MediaId'],
-    'remark' => '已处理完成',
+    'remark'            => '已处理完成',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

@@ -25,11 +25,11 @@ description: 商户创建会员卡后，可以调用此api创建二维码，用�
 $instance->v3->marketing->membercardOpen->cards->_card_id_->qrcode->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'activate_type' => 'AUTO_ACTIVATE',
-    'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+    'activate_type'  => 'AUTO_ACTIVATE',
+    'activate_url'   => 'https://w.url.cn/s/Ahz3p2C',
     'activate_appid' => 'wxea9c30a90fs8d3fe',
-    'activate_path' => 'pages/activate/activate',
-    'outer_str' => 'szwxtd',
+    'activate_path'  => 'pages/activate/activate',
+    'outer_str'      => 'szwxtd',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,11 +42,11 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->qrcode->postAsync([
 $instance->chain('v3/marketing/membercard-open/cards/{card_id}/qrcode')->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'activate_type' => 'AUTO_ACTIVATE',
-    'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+    'activate_type'  => 'AUTO_ACTIVATE',
+    'activate_url'   => 'https://w.url.cn/s/Ahz3p2C',
     'activate_appid' => 'wxea9c30a90fs8d3fe',
-    'activate_path' => 'pages/activate/activate',
-    'outer_str' => 'szwxtd',
+    'activate_path'  => 'pages/activate/activate',
+    'outer_str'      => 'szwxtd',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,11 +59,11 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/qrcode')->postAsy
 $instance['v3/marketing/membercard-open/cards/{card_id}/qrcode']->postAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'activate_type' => 'AUTO_ACTIVATE',
-    'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+    'activate_type'  => 'AUTO_ACTIVATE',
+    'activate_url'   => 'https://w.url.cn/s/Ahz3p2C',
     'activate_appid' => 'wxea9c30a90fs8d3fe',
-    'activate_path' => 'pages/activate/activate',
-    'outer_str' => 'szwxtd',
+    'activate_path'  => 'pages/activate/activate',
+    'outer_str'      => 'szwxtd',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,11 +76,11 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/qrcode']->postAsync([
 $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->qrcode->post([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'activate_type' => 'AUTO_ACTIVATE',
-    'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+    'activate_type'  => 'AUTO_ACTIVATE',
+    'activate_url'   => 'https://w.url.cn/s/Ahz3p2C',
     'activate_appid' => 'wxea9c30a90fs8d3fe',
-    'activate_path' => 'pages/activate/activate',
-    'outer_str' => 'szwxtd',
+    'activate_path'  => 'pages/activate/activate',
+    'outer_str'      => 'szwxtd',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/qrcode')->post([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'activate_type' => 'AUTO_ACTIVATE',
-    'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+    'activate_type'  => 'AUTO_ACTIVATE',
+    'activate_url'   => 'https://w.url.cn/s/Ahz3p2C',
     'activate_appid' => 'wxea9c30a90fs8d3fe',
-    'activate_path' => 'pages/activate/activate',
-    'outer_str' => 'szwxtd',
+    'activate_path'  => 'pages/activate/activate',
+    'outer_str'      => 'szwxtd',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,11 +104,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/membercard-open/cards/{card_id}/qrcode']->post([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'activate_type' => 'AUTO_ACTIVATE',
-    'activate_url' => 'https://w.url.cn/s/Ahz3p2C',
+    'activate_type'  => 'AUTO_ACTIVATE',
+    'activate_url'   => 'https://w.url.cn/s/Ahz3p2C',
     'activate_appid' => 'wxea9c30a90fs8d3fe',
-    'activate_path' => 'pages/activate/activate',
-    'outer_str' => 'szwxtd',
+    'activate_path'  => 'pages/activate/activate',
+    'outer_str'      => 'szwxtd',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| url {data-required}| string | 二维码对应的url
+| url {data-required} | string | 二维码对应的url
 
 {.im-table #response}
 

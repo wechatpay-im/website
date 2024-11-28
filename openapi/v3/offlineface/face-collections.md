@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| face_collections {data-required}| object[] {data-tooltip="对应PHP的array"} | 重采对象
+| face_collections {data-required} | object[] {data-tooltip="对应PHP的array"} | 重采对象
 | collection_id {data-required data-indent=1} | string | 重采ID
 | use_id {data-required data-indent=1} | string | 用户ID
 | organization_id {data-required data-indent=1} | string | 机构ID

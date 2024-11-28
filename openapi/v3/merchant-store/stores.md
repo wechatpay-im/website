@@ -36,26 +36,26 @@ description: 连锁品牌方案，是微信支付为「连锁经营品牌商家�
 ```php [异步纯链式]
 $instance->v3->merchantStore->stores->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'       => '1900000109',
+    'store_basics'    => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'branch_name' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'branch_name'        => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'   => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
-    'store_business' => [
-      'service_phone' => '0755-86013388',
+    'store_business'  => [
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -69,26 +69,26 @@ $instance->v3->merchantStore->stores->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchant-store/stores')->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'       => '1900000109',
+    'store_basics'    => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'branch_name' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'branch_name'        => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'   => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
-    'store_business' => [
-      'service_phone' => '0755-86013388',
+    'store_business'  => [
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -102,26 +102,26 @@ $instance->chain('v3/merchant-store/stores')->postAsync([
 ```php [异步属性式]
 $instance['v3/merchant-store/stores']->postAsync([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'       => '1900000109',
+    'store_basics'    => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'branch_name' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'branch_name'        => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'   => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
-    'store_business' => [
-      'service_phone' => '0755-86013388',
+    'store_business'  => [
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -135,26 +135,26 @@ $instance['v3/merchant-store/stores']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantStore->stores->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'       => '1900000109',
+    'store_basics'    => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'branch_name' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'branch_name'        => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'   => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
-    'store_business' => [
-      'service_phone' => '0755-86013388',
+    'store_business'  => [
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -165,26 +165,26 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/merchant-store/stores')->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'       => '1900000109',
+    'store_basics'    => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'branch_name' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'branch_name'        => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'   => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
-    'store_business' => [
-      'service_phone' => '0755-86013388',
+    'store_business'  => [
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -195,26 +195,26 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/merchant-store/stores']->post([
   'json' => [
-    'sub_mchid' => '1900000109',
-    'store_basics' => [
+    'sub_mchid'       => '1900000109',
+    'store_basics'    => [
       'store_reference_id' => '',
-      'brand_name' => '',
-      'store_name' => '',
-      'branch_name' => '',
+      'brand_name'         => '',
+      'store_name'         => '',
+      'branch_name'        => '',
     ],
-    'store_address' => [
-      'address_code' => '440305',
-      'address_detail' => '',
+    'store_address'   => [
+      'address_code'        => '440305',
+      'address_detail'      => '',
       'address_complements' => '',
-      'longitude' => '',
-      'latitude' => '',
+      'longitude'           => '',
+      'latitude'            => '',
     ],
-    'store_business' => [
-      'service_phone' => '0755-86013388',
+    'store_business'  => [
+      'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid' => '',
+      'mchid'        => '',
       'company_name' => '',
     ],],
   ],
@@ -226,7 +226,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| store_id {data-required}| integer | 微信支付商户门店ID
+| store_id {data-required} | integer | 微信支付商户门店ID
 
 {.im-table #response}
 

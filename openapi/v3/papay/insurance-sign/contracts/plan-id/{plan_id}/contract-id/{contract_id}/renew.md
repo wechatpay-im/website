@@ -29,12 +29,12 @@ $instance->v3->papay->insuranceSign->contracts->planId->_plan_id_->contractId->_
   'plan_id' => '',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'          => 'wxd678efh567hg6787',
     'policy_periods' => [[
-      'policy_period_id' => 1,
-      'estimated_deduct_date' => '2019-11-22',
+      'policy_period_id'        => 1,
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
     ],],
@@ -51,12 +51,12 @@ $instance->chain('v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contract-i
   'plan_id' => '',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'          => 'wxd678efh567hg6787',
     'policy_periods' => [[
-      'policy_period_id' => 1,
-      'estimated_deduct_date' => '2019-11-22',
+      'policy_period_id'        => 1,
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
     ],],
@@ -73,12 +73,12 @@ $instance['v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contract-id/{cont
   'plan_id' => '',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'          => 'wxd678efh567hg6787',
     'policy_periods' => [[
-      'policy_period_id' => 1,
-      'estimated_deduct_date' => '2019-11-22',
+      'policy_period_id'        => 1,
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
     ],],
@@ -95,12 +95,12 @@ $response = $instance->v3->papay->insuranceSign->contracts->planId->_plan_id_->c
   'plan_id' => '',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'          => 'wxd678efh567hg6787',
     'policy_periods' => [[
-      'policy_period_id' => 1,
-      'estimated_deduct_date' => '2019-11-22',
+      'policy_period_id'        => 1,
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
     ],],
@@ -114,12 +114,12 @@ $response = $instance->chain('v3/papay/insurance-sign/contracts/plan-id/{plan_id
   'plan_id' => '',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'          => 'wxd678efh567hg6787',
     'policy_periods' => [[
-      'policy_period_id' => 1,
-      'estimated_deduct_date' => '2019-11-22',
+      'policy_period_id'        => 1,
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
     ],],
@@ -133,12 +133,12 @@ $response = $instance['v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contr
   'plan_id' => '',
   'contract_id' => '',
   'json' => [
-    'appid' => 'wxd678efh567hg6787',
+    'appid'          => 'wxd678efh567hg6787',
     'policy_periods' => [[
-      'policy_period_id' => 1,
-      'estimated_deduct_date' => '2019-11-22',
+      'policy_period_id'        => 1,
+      'estimated_deduct_date'   => '2019-11-22',
       'estimated_deduct_amount' => [
-        'total' => 1,
+        'total'    => 1,
         'currency' => 'CNY',
       ],
     ],],

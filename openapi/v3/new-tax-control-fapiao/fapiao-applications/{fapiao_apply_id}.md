@@ -97,8 +97,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| total_count {data-required}| integer | 发票数量
-| fapiao_information {data-required}| object[] {data-tooltip="对应PHP的array"} | 发票信息
+| total_count {data-required} | integer | 发票数量
+| fapiao_information {data-required} | object[] {data-tooltip="对应PHP的array"} | 发票信息
 | fapiao_id {data-required data-indent=1} | string | 商户发票单号
 | status {data-required data-indent=1} | string | 发票状态
 | blue_fapiao {data-indent=1} | object {data-tooltip="对应PHP的array"} | 蓝字发票信息

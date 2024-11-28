@@ -110,16 +110,16 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->shoppingReceipt->customentrances->_brand_id_->patchAsync([
   'brand_id' => '1014',
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
     'custom_entrance_state' => 'ONLINE',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2019-12-31T13:29:35.120+08:00',
-    'out_request_no' => '100002322019090134234sfdf',
-    'jump_link' => [
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2019-12-31T13:29:35.120+08:00',
+    'out_request_no'        => '100002322019090134234sfdf',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ])
@@ -133,16 +133,16 @@ $instance->v3->marketing->shoppingReceipt->customentrances->_brand_id_->patchAsy
 $instance->chain('v3/marketing/shopping-receipt/customentrances/{brand_id}')->patchAsync([
   'brand_id' => '1014',
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
     'custom_entrance_state' => 'ONLINE',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2019-12-31T13:29:35.120+08:00',
-    'out_request_no' => '100002322019090134234sfdf',
-    'jump_link' => [
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2019-12-31T13:29:35.120+08:00',
+    'out_request_no'        => '100002322019090134234sfdf',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ])
@@ -156,16 +156,16 @@ $instance->chain('v3/marketing/shopping-receipt/customentrances/{brand_id}')->pa
 $instance['v3/marketing/shopping-receipt/customentrances/{brand_id}']->patchAsync([
   'brand_id' => '1014',
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
     'custom_entrance_state' => 'ONLINE',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2019-12-31T13:29:35.120+08:00',
-    'out_request_no' => '100002322019090134234sfdf',
-    'jump_link' => [
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2019-12-31T13:29:35.120+08:00',
+    'out_request_no'        => '100002322019090134234sfdf',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ])
@@ -179,16 +179,16 @@ $instance['v3/marketing/shopping-receipt/customentrances/{brand_id}']->patchAsyn
 $response = $instance->v3->marketing->shoppingReceipt->customentrances->_brand_id_->patch([
   'brand_id' => '1014',
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
     'custom_entrance_state' => 'ONLINE',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2019-12-31T13:29:35.120+08:00',
-    'out_request_no' => '100002322019090134234sfdf',
-    'jump_link' => [
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2019-12-31T13:29:35.120+08:00',
+    'out_request_no'        => '100002322019090134234sfdf',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ]);
@@ -199,16 +199,16 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/shopping-receipt/customentrances/{brand_id}')->patch([
   'brand_id' => '1014',
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
     'custom_entrance_state' => 'ONLINE',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2019-12-31T13:29:35.120+08:00',
-    'out_request_no' => '100002322019090134234sfdf',
-    'jump_link' => [
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2019-12-31T13:29:35.120+08:00',
+    'out_request_no'        => '100002322019090134234sfdf',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ]);
@@ -219,16 +219,16 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/shopping-receipt/customentrances/{brand_id}']->patch([
   'brand_id' => '1014',
   'json' => [
-    'custom_entrance_type' => 'MERCHANT_ACTIVITY',
-    'subtitle' => '双十一8折活动',
-    'goods_thumbnail_url' => 'https://qpic.cn/xxx',
+    'custom_entrance_type'  => 'MERCHANT_ACTIVITY',
+    'subtitle'              => '双十一8折活动',
+    'goods_thumbnail_url'   => 'https://qpic.cn/xxx',
     'custom_entrance_state' => 'ONLINE',
-    'start_time' => '2015-05-20T13:29:35+08:00',
-    'end_time' => '2019-12-31T13:29:35.120+08:00',
-    'out_request_no' => '100002322019090134234sfdf',
-    'jump_link' => [
+    'start_time'            => '2015-05-20T13:29:35+08:00',
+    'end_time'              => '2019-12-31T13:29:35.120+08:00',
+    'out_request_no'        => '100002322019090134234sfdf',
+    'jump_link'             => [
       'mini_programs_appid' => 'wxea9c30a90fs8d3fe',
-      'mini_programs_path' => '/pages/bonus/bonus',
+      'mini_programs_path'  => '/pages/bonus/bonus',
     ],
   ],
 ]);

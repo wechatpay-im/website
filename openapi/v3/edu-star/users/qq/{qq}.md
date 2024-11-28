@@ -90,10 +90,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| education_star_student {data-required}| boolean | 学生标识
-| appid {data-required}| string | 商户appid
-| wechat_openid {data-required}| string | 用户在appid下的唯一标识
-| qq {data-required}| string | 用户QQ账号
+| education_star_student {data-required} | boolean | 学生标识
+| appid {data-required} | string | 商户appid
+| wechat_openid {data-required} | string | 用户在appid下的唯一标识
+| qq {data-required} | string | 用户QQ账号
 | register_time | string | 注册时间
 
 {.im-table #response}
