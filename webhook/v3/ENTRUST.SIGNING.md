@@ -48,7 +48,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
 | bank_type {data-indent=3} | string | 银行类型，采用字符串类型的银行标识
 | success_time {data-indent=3} | string | 支付成功时返回
-| trade_state {data-indent=3} | string | 枚举值：<br/>`SUCCESS`：支付成功<br/>`REFUND`：转入退款<br/>`ACCEPTED`：已受理，未支付<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)
+| trade_state {data-required data-indent=3} | string | 枚举值：<br/>`SUCCESS`：支付成功<br/>`REFUND`：转入退款<br/>`ACCEPTED`：已受理，未支付<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引
 | payer {data-indent=3} | object | 支付者
 | openid {data-indent=4} | string | 用户在服务商AppID下的唯一标识
@@ -58,7 +58,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | payer_total {data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
 | discount_total {data-indent=4} | number | 订单折扣
 | currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
-| device_information {data-indent=3} | object | 设备信息
+| device_information {data-required data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号
 | payer_total {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
 | promotion_detail {data-indent=3} | object[] | 优惠详情

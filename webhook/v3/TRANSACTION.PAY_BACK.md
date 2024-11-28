@@ -52,9 +52,9 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 | payer {data-indent=3} | object | 支付者信息，详细说明见下文
 | openid {data-required data-indent=4} | string | 用户在服务商的标识
 | sub_openid {data-indent=4} | string | 用户在子商户的标识
-| amount {data-indent=3} | object | 订单金额信息，详细说明见下文
-| currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
-| device_info {data-indent=3} | object | 设备信息
+| amount {data-required data-indent=3} | object | 订单金额信息，详细说明见下文
+| currency {data-required data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
+| device_info {data-required data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号，商户自定义，最大长度32个字符。
 | promotion_detail {data-indent=3} | object[] | 优惠功能信息，详细说明见下文
 | coupon_id {data-required data-indent=4} | string | 券或者立减优惠ID
@@ -70,15 +70,15 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引。
 | user_repaid {data-indent=3} | string | 枚举值：<br/>`Y`：用户已还款<br/>`N`：用户未还款<br/>注意：使用此字段前需先确认bank_type字段值为`BPA`以及 trade_state字段值为`SUCCESS`。
 | trade_scene {data-indent=3} | string | 交易场景值，`PARKING`：车场停车场景
-| parking_info {data-indent=3} | object | trade_scene为`PARKING`时，返回停车场景信息
-| parking_id {data-indent=4} | string | 车主服务为商户分配的入场ID，商户通过入场通知接口获取入场ID
-| plate_number {data-indent=4} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
-| plate_color {data-indent=4} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
-| start_time {data-indent=4} | string | 用户入场时间
-| end_time {data-indent=4} | string | 用户出场时间
-| parking_name {data-indent=4} | string | 所在停车位车场的名称
-| charging_duration {data-indent=4} | number | 计费的时间长，单位为秒
-| device_id {data-indent=4} | string | 停车场设备ID
+| parking_info {data-required data-indent=3} | object | trade_scene为`PARKING`时，返回停车场景信息
+| parking_id {data-required data-indent=4} | string | 车主服务为商户分配的入场ID，商户通过入场通知接口获取入场ID
+| plate_number {data-required data-indent=4} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
+| plate_color {data-required data-indent=4} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| start_time {data-required data-indent=4} | string | 用户入场时间
+| end_time {data-required data-indent=4} | string | 用户出场时间
+| parking_name {data-required data-indent=4} | string | 所在停车位车场的名称
+| charging_duration {data-required data-indent=4} | number | 计费的时间长，单位为秒
+| device_id {data-required data-indent=4} | string | 停车场设备ID
 
 {.im-table #request}
 

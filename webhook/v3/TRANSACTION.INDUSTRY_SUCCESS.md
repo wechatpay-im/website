@@ -56,8 +56,8 @@ description: 扣费成功后，微信会把相关支付结果信息异步通知�
 | total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数。
 | payer_total {data-indent=4} | number | 用户实际支付金额，支付成功时有返回，单位为分，只能为整数。
 | discount_total {data-indent=4} | number | 订单折扣，有优惠折扣则返回该字段。
-| currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
-| device_info {data-indent=3} | object | 设备信息
+| currency {data-required data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
+| device_info {data-required data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号，商户自定义，最大长度32个字符。
 | device_ip {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP），支持IPv6
 | promotion_detail {data-indent=3} | object[] | 优惠详情

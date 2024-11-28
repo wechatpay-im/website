@@ -36,19 +36,19 @@ description: 根据「国家金融监督管理总局深圳监督局」的2023-28
 | ciphertext {data-required data-indent=2} | string | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| mchid {data-indent=3} | string | 微信支付分配的商户号
-| contract_id {data-indent=3} | string | 委托代扣协议的主键，唯一定义此资源的标识
-| appid {data-indent=3} | string | 商户在微信申请的公众号或移动应用AppID
-| plan_id {data-indent=3} | number | 委托代扣协议模板ID
-| out_contract_code {data-indent=3} | string | 商户侧的签约协议号，商户侧需保证唯一性。只能是数字、大小写字母的组合
-| insured_display_name {data-indent=3} | string | 签约用户的名称，用于页面展示，在签约时由商户传入。
-| contract_state {data-indent=3} | string | 委托代扣协议状态<br/>`SIGNED` \| `TERMINATED` 枚举值之一
-| contract_signed_time {data-indent=3} | string | 协议签署时间
-| contract_expired_time {data-indent=3} | string | 协议到期时间
-| openid {data-indent=3} | string | 商户AppID下的用户唯一标识
-| contract_terminate_info {data-indent=3} | object | 协议解约信息，仅当contract_state=`TERMINATED`时，该值有效。
-| contract_termination_mode {data-indent=4} | string | 协议解约方式<br/>`USER_TERMINATE` \| `MCH_API_TERMINATE` \| `API` \| `WEPAY_WEB_TERMINATE` \| `CUSTOMER_SERVICE_TERMINATE` \| `SYSTEM_TERMINATE` 枚举值之一
-| contract_terminated_time {data-indent=4} | string | 协议解约时间
+| mchid {data-required data-indent=3} | string | 微信支付分配的商户号
+| contract_id {data-required data-indent=3} | string | 委托代扣协议的主键，唯一定义此资源的标识
+| appid {data-required data-indent=3} | string | 商户在微信申请的公众号或移动应用AppID
+| plan_id {data-required data-indent=3} | number | 委托代扣协议模板ID
+| out_contract_code {data-required data-indent=3} | string | 商户侧的签约协议号，商户侧需保证唯一性。只能是数字、大小写字母的组合
+| insured_display_name {data-required data-indent=3} | string | 签约用户的名称，用于页面展示，在签约时由商户传入。
+| contract_state {data-required data-indent=3} | string | 委托代扣协议状态<br/>`SIGNED` \| `TERMINATED` 枚举值之一
+| contract_signed_time {data-required data-indent=3} | string | 协议签署时间
+| contract_expired_time {data-required data-indent=3} | string | 协议到期时间
+| openid {data-required data-indent=3} | string | 商户AppID下的用户唯一标识
+| contract_terminate_info {data-required data-indent=3} | object | 协议解约信息，仅当contract_state=`TERMINATED`时，该值有效。
+| contract_termination_mode {data-required data-indent=4} | string | 协议解约方式<br/>`USER_TERMINATE` \| `MCH_API_TERMINATE` \| `API` \| `WEPAY_WEB_TERMINATE` \| `CUSTOMER_SERVICE_TERMINATE` \| `SYSTEM_TERMINATE` 枚举值之一
+| contract_terminated_time {data-required data-indent=4} | string | 协议解约时间
 | contract_termination_remark {data-indent=4} | string | 解约原因的备注说明，如：签约信息有误，须重新签约。
 
 {.im-table #request}

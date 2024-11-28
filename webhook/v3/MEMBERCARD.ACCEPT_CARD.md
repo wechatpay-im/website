@@ -37,8 +37,8 @@ description: 当会员卡批次或者用户的会员卡发生变化时，微信�
 | ciphertext {data-required data-indent=2} | string | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| event_type {data-indent=3} | string | 事件类型<br/>`NEW_ACTIVATE` \| `RECOVER` 枚举值之一
-| card_id {data-indent=3} | string | 会员卡ID
+| event_type {data-required data-indent=3} | string | 事件类型<br/>`NEW_ACTIVATE` \| `RECOVER` 枚举值之一
+| card_id {data-required data-indent=3} | string | 会员卡ID
 | code {data-indent=3} | string | 会员卡code
 | event_time {data-required data-indent=3} | string | 激活时间
 | openid {data-required data-indent=3} | string | 用户标识

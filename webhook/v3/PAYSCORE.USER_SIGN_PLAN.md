@@ -43,22 +43,22 @@ description: 商户创建签约计划后，拉起支付分签约页，用户会�
 | sub_mchid {data-required data-indent=3} | string | 子商户商户号
 | appid {data-required data-indent=3} | string | 服务商AppID
 | sub_appid {data-indent=3} | string | 子商户AppID
-| merchant_sign_plan_no {data-indent=3} | string | 商户系统内部签约计划单号，只能是数字、大小写字母_-* 且在同一个商户号下唯一
-| merchant_callback_url {data-indent=3} | string | 签约成功事件通知回调地址，用于接收用户签约计划成功后的通知
-| plan_id {data-indent=3} | string | 签约所属计划ID
-| going_detail_no {data-indent=3} | number | 序号从1开始，顺序按照创建计划时传入的计划详情顺序，0代表无任何详情开始使用
-| sign_state {data-indent=3} | string | 计划签约状态<br/>`UNSIGNED` 枚举值
-| cancel_sign_time {data-indent=3} | string | 取消计划时间
+| merchant_sign_plan_no {data-required data-indent=3} | string | 商户系统内部签约计划单号，只能是数字、大小写字母_-* 且在同一个商户号下唯一
+| merchant_callback_url {data-required data-indent=3} | string | 签约成功事件通知回调地址，用于接收用户签约计划成功后的通知
+| plan_id {data-required data-indent=3} | string | 签约所属计划ID
+| going_detail_no {data-required data-indent=3} | number | 序号从1开始，顺序按照创建计划时传入的计划详情顺序，0代表无任何详情开始使用
+| sign_state {data-required data-indent=3} | string | 计划签约状态<br/>`UNSIGNED` 枚举值
+| cancel_sign_time {data-required data-indent=3} | string | 取消计划时间
 | cancel_sign_type {data-indent=3} | string | 签约计划取消类型<br/>`NOT_CANCEL` \| `USER` \| `MERCHANT` \| `REVOKE_SERVICE` 枚举值之一
 | cancel_reason {data-indent=3} | string | 签约计划取消原因
-| plan_name {data-indent=3} | string | 签约计划的名称
-| plan_over_time {data-indent=3} | string | 签约计划过期时间
-| total_origin_price {data-indent=3} | number | 签约计划原总金额(单位分)
-| deduction_quantity {data-indent=3} | number | 签约计划扣费次数
-| total_actual_price {data-indent=3} | number | 签约计划实际总金额（单位分）
-| signed_detail_list {data-indent=3} | object[] | 签约计划明细列表
-| plan_detail_no {data-indent=4} | number | 根据创建计划时传入明细顺序编号，从1开始
-| original_price {data-indent=4} | number | 计划明细原支付金额（单位分）
+| plan_name {data-required data-indent=3} | string | 签约计划的名称
+| plan_over_time {data-required data-indent=3} | string | 签约计划过期时间
+| total_origin_price {data-required data-indent=3} | number | 签约计划原总金额(单位分)
+| deduction_quantity {data-required data-indent=3} | number | 签约计划扣费次数
+| total_actual_price {data-required data-indent=3} | number | 签约计划实际总金额（单位分）
+| signed_detail_list {data-required data-indent=3} | object[] | 签约计划明细列表
+| plan_detail_no {data-required data-indent=4} | number | 根据创建计划时传入明细顺序编号，从1开始
+| original_price {data-required data-indent=4} | number | 计划明细原支付金额（单位分）
 | plan_discount_description {data-indent=4} | string | 计划明细优惠说明
 | actual_price {data-required data-indent=4} | number | 计划明细实际支付金额（单位分）
 | plan_detail_state {data-required data-indent=4} | string | 计划明细状态<br/>`NOT_USED` \| `USING` \| `USED` \| `SIGN_PLAN_DETAIL_CANCEL` 枚举值之一
@@ -66,10 +66,10 @@ description: 商户创建签约计划后，拉起支付分签约页，用户会�
 | merchant_plan_detail_no {data-required data-indent=4} | string | 必须保障在商户下唯一，会在创建计划详情对应的支付分订单时会使用该字段作为支付分订单商户侧订单号,只能是数字、大小写字母_-*
 | plan_detail_name {data-required data-indent=4} | string | 计划详情名称
 | actual_pay_price {data-indent=4} | number | 单位分，计划明细对应订单实际支付金额，是根据完结订单填写金额，订单完结后用户实际支付此金额
-| use_time {data-indent=4} | string | 详情使用时间
-| complete_time {data-indent=4} | string | 详情对应订单实际完成支付时间
-| cancel_time {data-indent=4} | string | 详情对应订单取消时间
-| sign_time {data-indent=3} | string | 签约时间
+| use_time {data-required data-indent=4} | string | 详情使用时间
+| complete_time {data-required data-indent=4} | string | 详情对应订单实际完成支付时间
+| cancel_time {data-required data-indent=4} | string | 详情对应订单取消时间
+| sign_time {data-required data-indent=3} | string | 签约时间
 
 {.im-table #request}
 

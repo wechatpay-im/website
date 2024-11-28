@@ -36,10 +36,10 @@ description: 商圈会员在商圈小程序内打开“商圈会员快速积分�
 | ciphertext {data-required data-indent=2} | string | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| openid {data-indent=3} | string | 顾客授权时使用的小程序上的OpenID
-| code {data-indent=3} | string | 用户在商圈会员卡card_id下的唯一标志，用户领取会员卡后获得的code
-| mchid {data-indent=3} | string | 用户开会员卡时的商圈商户号
-| auth_type {data-indent=3} | string | 用户授权类型  <br/>`REGISTERED_MODE` ：会员开卡(进卡包) + 未授权会员积分服务 <br/>`REGISTERED_AND_AUTHORIZATION_MODE`：会员开卡(进卡包）+授权会员积分服务
+| openid {data-required data-indent=3} | string | 顾客授权时使用的小程序上的OpenID
+| code {data-required data-indent=3} | string | 用户在商圈会员卡card_id下的唯一标志，用户领取会员卡后获得的code
+| mchid {data-required data-indent=3} | string | 用户开会员卡时的商圈商户号
+| auth_type {data-required data-indent=3} | string | 用户授权类型  <br/>`REGISTERED_MODE` ：会员开卡(进卡包) + 未授权会员积分服务 <br/>`REGISTERED_AND_AUTHORIZATION_MODE`：会员开卡(进卡包）+授权会员积分服务
 
 {.im-table #request}
 

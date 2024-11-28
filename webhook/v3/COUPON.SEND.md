@@ -36,9 +36,9 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | event_type {data-indent=3} | string | 业务细分事件类型<br/>`EVENT_TYPE_BUSICOUPON_SEND` 枚举值
-| coupon_code {data-indent=3} | string | 券的唯一标识。
-| stock_id {data-indent=3} | string | 批次号
-| send_time {data-indent=3} | string | 发放时间
+| coupon_code {data-required data-indent=3} | string | 券的唯一标识。
+| stock_id {data-required data-indent=3} | string | 批次号
+| send_time {data-required data-indent=3} | string | 发放时间
 | openid {data-indent=3} | string | 微信用户在AppID下的唯一标识。
 | unionid {data-indent=3} | string | 微信用户在同一个微信开放平台账号下的唯一用户标识
 | send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` 枚举值之一

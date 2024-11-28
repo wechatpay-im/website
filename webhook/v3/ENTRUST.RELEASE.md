@@ -65,7 +65,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | wechatpay_contribute {data-indent=4} | number | 特指由微信支付商户平台创建的优惠，出资金额等于本项优惠总金额，单位为分
 | merchant_contribute {data-indent=4} | number | 特指商户自己创建的优惠，出资金额等于本项优惠总金额，单位为分
 | other_contribute {data-indent=4} | number | 其他出资方出资金额，单位为分
-| sp_mchid {data-required data-indent=3} | string | 微信支付分配的商户号
+| sp_mchid {data-indent=3} | string | 微信支付分配的商户号
 | sub_mchid {data-indent=3} | string | 微信支付分配的商户号，服务商商户号与子商户号存在父子关系，如果是直连商户模式接入，该字段返回为空
 | sub_appid {data-indent=3} | string | 微信公众平台为商户的应用分配的ID，与子商户号存在绑定关系，如果是直连商户模式接入，该字段返回为空
 | openid {data-indent=3} | string | 用户在服务商AppID下的唯一标识
@@ -73,7 +73,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | plan_id {data-indent=3} | string | 签约模板号，签约模板唯一标识
 | contract_information {data-indent=3} | object | 签约信息
 | contract_id {data-indent=4} | string | 标识用户与某签约模板的一次签约，具有唯一性
-| contract_status {data-indent=4} | string | 枚举值：<br/>`ADD`：签约<br/>`DELETE`：解约
+| contract_status {data-required data-indent=4} | string | 枚举值：<br/>`ADD`：签约<br/>`DELETE`：解约
 | create_time {data-indent=4} | string | 签约完成时间
 
 {.im-table #request}

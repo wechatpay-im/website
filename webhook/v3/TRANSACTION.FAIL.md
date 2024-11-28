@@ -51,18 +51,18 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 | out_trade_no {data-required data-indent=3} | string | 调用接口提交的商户服务订单号
 | transaction_id {data-required data-indent=3} | string | 微信支付系统生成的订单号
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，可作为自定义参数使用，实际情况下只有支付完成状态才会返回该字段。
-| bank_type {data-indent=3} | string | 银行类型，采用字符串类型的银行标识。
-| success_time {data-indent=3} | string | 订单支付完成时间
-| trade_state {data-indent=3} | string | 交易状态：<br/>`SUCCESS`：支付成功<br/>`ACCEPT`：已接收，等待扣款<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)<br/>`REFUND`：转入退款
+| bank_type {data-required data-indent=3} | string | 银行类型，采用字符串类型的银行标识。
+| success_time {data-required data-indent=3} | string | 订单支付完成时间
+| trade_state {data-required data-indent=3} | string | 交易状态：<br/>`SUCCESS`：支付成功<br/>`ACCEPT`：已接收，等待扣款<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)<br/>`REFUND`：转入退款
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引。
 | payer {data-required data-indent=3} | object | 支付者信息，详细说明见下文
 | openid {data-required data-indent=4} | string | 用户在服务商的标识
 | sub_openid {data-indent=4} | string | 用户在子商户的标识
 | sp_openid {data-indent=4} | string | 用户在服务商商户AppID下的唯一标识。
-| amount {data-indent=3} | object | 订单金额信息，详细说明见下文
-| currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
-| payer_currency {data-indent=4} | string | 用户支付币种。
-| device_information {data-indent=3} | object | 设备信息
+| amount {data-required data-indent=3} | object | 订单金额信息，详细说明见下文
+| currency {data-required data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
+| payer_currency {data-required data-indent=4} | string | 用户支付币种。
+| device_information {data-required data-indent=3} | object | 设备信息
 | device_id {data-indent=4} | string | 商户设备号
 | payer_total {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
 | promotion_detail {data-indent=3} | object[] | 优惠功能信息，详细说明见下文
@@ -85,19 +85,19 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 | scene_info {data-indent=3} | object | 支付场景信息描述
 | device_id {data-indent=4} | string | 终端设备号（门店号或收银设备ID）。
 | sp_appid {data-indent=3} | string | 服务商申请的公众号或移动应用AppID。
-| description {data-indent=3} | string | 商户自定义字段，用户交易账单中对扣费服务的描述。
-| create_time {data-indent=3} | string | 订单成功创建时返回
-| user_repaid {data-indent=3} | string | 枚举值：<br/>`Y`：用户已还款<br/>`N`：用户未还款<br/>注意：使用此字段前需先确认bank_type字段值为`BPA`以及 trade_state字段值为`SUCCESS`。
+| description {data-required data-indent=3} | string | 商户自定义字段，用户交易账单中对扣费服务的描述。
+| create_time {data-required data-indent=3} | string | 订单成功创建时返回
+| user_repaid {data-required data-indent=3} | string | 枚举值：<br/>`Y`：用户已还款<br/>`N`：用户未还款<br/>注意：使用此字段前需先确认bank_type字段值为`BPA`以及 trade_state字段值为`SUCCESS`。
 | trade_scene {data-indent=3} | string | 交易场景值，`PARKING`：车场停车场景
-| parking_info {data-indent=3} | object | trade_scene为`PARKING`时，返回停车场景信息
-| parking_id {data-indent=4} | string | 车主服务为商户分配的入场ID，商户通过入场通知接口获取入场ID
-| plate_number {data-indent=4} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
-| plate_color {data-indent=4} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
-| start_time {data-indent=4} | string | 用户入场时间
-| end_time {data-indent=4} | string | 用户出场时间
-| parking_name {data-indent=4} | string | 所在停车位车场的名称
-| charging_duration {data-indent=4} | number | 计费的时间长，单位为秒
-| device_id {data-indent=4} | string | 停车场设备ID
+| parking_info {data-required data-indent=3} | object | trade_scene为`PARKING`时，返回停车场景信息
+| parking_id {data-required data-indent=4} | string | 车主服务为商户分配的入场ID，商户通过入场通知接口获取入场ID
+| plate_number {data-required data-indent=4} | string | 车牌号，仅包括省份+车牌，不包括特殊字符。
+| plate_color {data-required data-indent=4} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
+| start_time {data-required data-indent=4} | string | 用户入场时间
+| end_time {data-required data-indent=4} | string | 用户出场时间
+| parking_name {data-required data-indent=4} | string | 所在停车位车场的名称
+| charging_duration {data-required data-indent=4} | number | 计费的时间长，单位为秒
+| device_id {data-required data-indent=4} | string | 停车场设备ID
 
 {.im-table #request}
 

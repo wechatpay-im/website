@@ -45,25 +45,18 @@ description: 微信支付分通过商户预下单通知告知商户对待支付�
 | sub_openid {data-indent=3} | string | 微信用户在商户对应sub_appid下的唯一标识。（传了sub_appid的情况下则只返回sub_openid）
 | total_amount {data-required data-indent=3} | number | 总金额，大于等于0的数字，单位为分，只能为整数。
 | prepay_req_body {data-required data-indent=3} | object | 预下单请求部分输入参数。  <br/>注意：商户请求预下单接口时需要使用本对象中同名字段值，若字段在本对象中不存在则由商户根据实际情况填写。
-| appid {data-required data-indent=4} | string | 从业机构在微信公众平台申请服务号对应的AppID，申请商户功能的时候微信支付会配置绑定关系
-| mchid {data-required data-indent=4} | string | 微信支付分配给从业机机构的机构号
-| sub_appid {data-indent=4} | string | AppID 是商户在微信申请公众号成功后分配的帐号ID，需要机构侧有配置绑定关系才能传
-| sub_mchid {data-required data-indent=4} | string | 从业机构报备的商户返回的商户识别码
-| channel_id {data-required data-indent=4} | string | 微信支付分配给收单服务商的ID
 | device_info {data-required data-indent=4} | string | 终端设备号，PC网页或公众号内支付请传`WEB`
 | nonce_str {data-required data-indent=4} | string | 微信支付分配给收单服务商的ID
 | body {data-required data-indent=4} | string | 商品或支付单简要描述
 | attach {data-indent=4} | string | 附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
-| fee_type {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，默认人民币：`CNY`
-| time_start {data-indent=4} | string | 订单生成时间，格式为`yyyyMMddHHmmss`
-| time_expire {data-indent=4} | string | 订单失效时间，格式为`yyyyMMddHHmmss`
+| fee_type {data-required data-indent=4} | string | 符合ISO 4217标准的三位字母代码，默认人民币：`CNY`
+| time_start {data-required data-indent=4} | string | 订单生成时间，格式为`yyyyMMddHHmmss`
+| time_expire {data-required data-indent=4} | string | 订单失效时间，格式为`yyyyMMddHHmmss`
 | goods_tag {data-indent=4} | string | 商品标记，代金券或立减优惠功能的参数， 说明详见代金券或立减优惠
-| notify_url {data-indent=4} | string | 异步接收微信支付结果通知的回调地址，通知URL必须为外网可访问的URL，不能携带参数。请使用HTTPS协议链接
-| trade_type {data-indent=4} | string | `JSAPI`：公众号支付 <br/> `NATIVE`：扫码支付 <br/> `App`：App 支付
-| limit_pay {data-indent=4} | string | `no_credit`：指定不能使用信用卡支付
-| openid {data-indent=4} | string | trade_type=JSAPI，此参数必传，用户在主商户AppID下的唯一标识。OpenID和sub_openid可以选传其中之一，如果选择传sub_openid，则必须传sub_appid。
-| sub_openid {data-indent=4} | string | trade_type=JSAPI，此参数必传，用户在主商户AppID下的唯一标识。OpenID和sub_openid可以选传其中之一，如果选择传sub_openid，则必须传sub_appid。
-| need_receipt {data-indent=4} | boolean | 需要跟公众平台的发票功能联合使用
+| notify_url {data-required data-indent=4} | string | 异步接收微信支付结果通知的回调地址，通知URL必须为外网可访问的URL，不能携带参数。请使用HTTPS协议链接
+| trade_type {data-required data-indent=4} | string | `JSAPI`：公众号支付 <br/> `NATIVE`：扫码支付 <br/> `App`：App 支付
+| limit_pay {data-required data-indent=4} | string | `no_credit`：指定不能使用信用卡支付
+| need_receipt {data-required data-indent=4} | boolean | 需要跟公众平台的发票功能联合使用
 | prepay_req_header_base64 {data-indent=3} | string | Base64编码后的从业机构请求预下单接口使用请求的头部
 | prepay_req_body_base64 {data-indent=3} | string | Base64编码后的从业机构请求预下单接口使用请求的包体
 | prepay_resp_http_code {data-indent=3} | number | 从业机构请求预下单接口时，收到响应的HttpCode

@@ -44,23 +44,23 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 | discount_to {data-indent=3} | object | 减至优惠限定字段，仅减至优惠场景有返回。
 | cut_to_price {data-indent=4} | number | 减至后优惠单价，单位：分。
 | max_price {data-indent=4} | number | 可享受优惠的最高价格，单位：分。
-| coupon_name {data-indent=3} | string | 券或消费金名称
-| status {data-indent=3} | string | 券或消费金状态：<br/>`SENDED`：可用<br/>`USED`：已实扣<br/>`EXPIRED`：已过期
-| description {data-indent=3} | string | 券或消费金描述说明字段。
-| create_time {data-indent=3} | string | 领券时间
-| coupon_type {data-indent=3} | string | 券或消费金类型：<br/>`NORMAL`：满减券<br/>`CUT_TO`：减至券
-| no_cash {data-indent=3} | boolean | 是否无资金流
-| available_begin_time {data-indent=3} | string | 可用开始时间
-| available_end_time {data-indent=3} | string | 可用结束时间
-| singleitem {data-indent=3} | boolean | 是否单品优惠
+| coupon_name {data-required data-indent=3} | string | 券或消费金名称
+| status {data-required data-indent=3} | string | 券或消费金状态：<br/>`SENDED`：可用<br/>`USED`：已实扣<br/>`EXPIRED`：已过期
+| description {data-required data-indent=3} | string | 券或消费金描述说明字段。
+| create_time {data-required data-indent=3} | string | 领券时间
+| coupon_type {data-required data-indent=3} | string | 券或消费金类型：<br/>`NORMAL`：满减券<br/>`CUT_TO`：减至券
+| no_cash {data-required data-indent=3} | boolean | 是否无资金流
+| available_begin_time {data-required data-indent=3} | string | 可用开始时间
+| available_end_time {data-required data-indent=3} | string | 可用结束时间
+| singleitem {data-required data-indent=3} | boolean | 是否单品优惠
 | normal_coupon_information {data-indent=3} | object | 普通满减券或消费金面额、门槛信息。
 | coupon_amount {data-required data-indent=4} | number | 面额，单位：分。
 | transaction_minimum {data-required data-indent=4} | number | 使用券或消费金金额门槛，单位：分。
 | consume_information {data-indent=3} | object | 已实扣代金券或消费金信息。
-| consume_time {data-indent=4} | string | 代金券核销时间
-| consume_mchid {data-indent=4} | string | 核销代金券的商户号。<br/>校验规则：<br/>该参数目前现在返回的是收款商户号，间连模式下，目前传的是银联和网联的商户号<br/>
-| transaction_id {data-indent=4} | string | 微信支付系统生成的订单号。
-| consume_amount {data-indent=4} | number | 核销金额，仅有当business_type=`MULTIUSE`时，才会返回。单位，分
+| consume_time {data-required data-indent=4} | string | 代金券核销时间
+| consume_mchid {data-required data-indent=4} | string | 核销代金券的商户号。<br/>校验规则：<br/>该参数目前现在返回的是收款商户号，间连模式下，目前传的是银联和网联的商户号<br/>
+| transaction_id {data-required data-indent=4} | string | 微信支付系统生成的订单号。
+| consume_amount {data-required data-indent=4} | number | 核销金额，仅有当business_type=`MULTIUSE`时，才会返回。单位，分
 | goods_detail {data-indent=4} | object[] | 商户下单接口传的单品信息。
 | goods_id {data-required data-indent=5} | string | 单品券创建时录入的单品编码。
 | quantity {data-required data-indent=5} | number | 单品数据

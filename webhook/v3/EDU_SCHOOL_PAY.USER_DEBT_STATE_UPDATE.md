@@ -36,11 +36,11 @@ description: 用户欠款状态发生变化时主动通知所有与该用户签�
 | ciphertext {data-required data-indent=2} | string | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| appid {data-indent=3} | string | 微信公众平台为服务商商户分配的公众账号ID，与商户号存在绑定关系。 如果是服务商模式接入则为服务商商户号绑定的AppID；如果是直连商户模式接入则为直连商户号绑定的AppID。
-| openid {data-indent=3} | string | 使用字段AppID生成的用户唯一标识，与返回字段AppID有对应关系。
-| state {data-indent=3} | string | 根据校园轻松付风控规则，当用户在校园轻松付产品中欠款超过一定限制后，会处于无法扣款的状态，直到用户归还欠款。<br/>可选状态：<br/>`NORMAL`：正常，允许扣款<br/>`FORBIDDEN`：禁止扣款
-| debt_count {data-indent=3} | number | 用户在校园轻松付中尚未归还的欠款笔数。 用户使用校园轻松付进行消费时，如果微信账户上可用的付款方式均没有足够的余额完成支付，会由微信支付出资对该笔订单进行垫付。这次垫付即会产生一笔用户向微信支付的欠款，直到用户对该笔欠款进行归还。
-| update_time {data-indent=3} | string | 遵循rfc3339标准格式
+| appid {data-required data-indent=3} | string | 微信公众平台为服务商商户分配的公众账号ID，与商户号存在绑定关系。 如果是服务商模式接入则为服务商商户号绑定的AppID；如果是直连商户模式接入则为直连商户号绑定的AppID。
+| openid {data-required data-indent=3} | string | 使用字段AppID生成的用户唯一标识，与返回字段AppID有对应关系。
+| state {data-required data-indent=3} | string | 根据校园轻松付风控规则，当用户在校园轻松付产品中欠款超过一定限制后，会处于无法扣款的状态，直到用户归还欠款。<br/>可选状态：<br/>`NORMAL`：正常，允许扣款<br/>`FORBIDDEN`：禁止扣款
+| debt_count {data-required data-indent=3} | number | 用户在校园轻松付中尚未归还的欠款笔数。 用户使用校园轻松付进行消费时，如果微信账户上可用的付款方式均没有足够的余额完成支付，会由微信支付出资对该笔订单进行垫付。这次垫付即会产生一笔用户向微信支付的欠款，直到用户对该笔欠款进行归还。
+| update_time {data-required data-indent=3} | string | 遵循rfc3339标准格式
 
 {.im-table #request}
 
