@@ -29,10 +29,10 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 | phone_from {data-indent=1} | integer | 用户手机号的来源方式
 | seller_userid {data-indent=1} | string | 收款方在商户侧的用户标识，由商户侧定义，账号维度唯一即可
 | scene {data-indent=1} | integer | 0：无明确场景；1：充值；2：生活缴费
-| recharge_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| recharge_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 充值业务场景独有字段
 | account_type {data-indent=2} | integer | 充值场景，用户充值的账号类型
-| account {data-indent=2} | string | 
-| living_expenses_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| account {data-indent=2} | string | 充值账号
+| living_expenses_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 生活缴费场景独有字段
 | acc_no {data-indent=2} | string | 生活缴费的呼号
 | type {data-indent=2} | integer | 缴费的种类
 | city {data-indent=2} | string | 用户缴费户号所属城市

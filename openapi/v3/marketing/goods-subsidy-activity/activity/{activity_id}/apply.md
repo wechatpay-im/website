@@ -13,7 +13,7 @@ description: 指定服务商可通过该接口报名加价购活动、查询某�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | caller_merchant_id {data-required data-indent=1} | string | 调用报名活动API的商户的商户号
 | apply_infos {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 门店报名信息
-| store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 
+| store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 门店信息
 | store_id {data-indent=3} | string | 门店ID
 | accounting_merchant_id {data-indent=3} | string | 门店补贴入账商户号
 | merchant_id {data-indent=3} | string | 门店商户号
@@ -146,13 +146,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | return_message | string | 返回结果文案
 | failed_apply_infos | object[] {data-tooltip="对应PHP的array"} | 失败的报名记录
-| store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店信息
 | store_id {data-indent=2} | string | 门店ID
 | accounting_merchant_id {data-indent=2} | string | 门店补贴入账商户号
 | merchant_id {data-indent=2} | string | 门店商户号
 | goods_original_price {data-indent=1} | number | 商品原价
 | succeed_apply_infos | object[] {data-tooltip="对应PHP的array"} | 成功的报名记录
-| store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店信息
 | store_id {data-indent=2} | string | 门店ID
 | accounting_merchant_id {data-indent=2} | string | 门店补贴入账商户号
 | merchant_id {data-indent=2} | string | 门店商户号

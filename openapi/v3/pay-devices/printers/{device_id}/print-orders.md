@@ -15,12 +15,12 @@ description:
 | template_id {data-indent=1} | string | 模板ID
 | notify_url {data-indent=1} | string | 回调通知地址
 | variable_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 变量列表
-| key {data-indent=2} | string | 
-| value {data-indent=2} | string | 
+| key {data-indent=2} | string | Key字段
+| value {data-indent=2} | string | Value值字段
 | table_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 表格变量列表
-| key {data-indent=2} | string | 
-| row_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 
-| cell_list {data-indent=3} | string[] | 
+| key {data-indent=2} | string | Key字段
+| row_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | Value值列表
+| cell_list {data-indent=3} | string[] | 值列表
 
 {.im-table #request}
 

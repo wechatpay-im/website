@@ -6,6 +6,12 @@ head:
     - name: keywords
       content: 数据摘要, 对称加解密, 非对称加解密, WeChatPay PHP, XML Transformer, OpenAPI package for IDE
 aside: true
+prev:
+  text: 使用指南
+  link: /guide/
+next:
+  text: 快速开始
+  link: /guide/getting-started
 ---
 
 # 软件开发包 {#summary}

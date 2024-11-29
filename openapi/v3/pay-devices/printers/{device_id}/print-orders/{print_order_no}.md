@@ -83,12 +83,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | print_state | string | 打印状态<br/>`PRINT_STATE_WAIT` \| `PRINT_STATE_SUCCESS` \| `PRINT_STATE_FAIL` \| `PRINT_STATE_CACHED` 枚举值之一
 | print_state_description | string | 打印状态描述
 | variable_list | object[] {data-tooltip="对应PHP的array"} | 变量列表
-| key {data-indent=1} | string | 
-| value {data-indent=1} | string | 
+| key {data-indent=1} | string | Key字段
+| value {data-indent=1} | string | Value值字段
 | table_list | object[] {data-tooltip="对应PHP的array"} | 表格变量列表
-| key {data-indent=1} | string | 
-| row_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 
-| cell_list {data-indent=2} | string[] | 
+| key {data-indent=1} | string | Key字段
+| row_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | Value值列表
+| cell_list {data-indent=2} | string[] | 值列表
 
 {.im-table #response}
 
