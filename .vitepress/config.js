@@ -127,10 +127,16 @@ export default defineConfig({
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
       '/devkit/': divkitSidebar(),
-      '/openapi/v2/applyment/': microMerchantSidebar(),
-      '/openapi/v2/fund/': microMerchantSidebar(),
+      '/openapi/v2/applyment/': microMerchantMixedSidebar(),
+      '/openapi/v2/fund/': microMerchantMixedSidebar(),
+      '/openapi/v2/risk/getcertficates': microMerchantMixedSidebar(),
+      '/openapi/v2/mmpaymkttransfers/query_coupon_stock': microMerchantMixedSidebar(),
+      '/openapi/v2/mmpaymkttransfers/querycouponsinfo': microMerchantMixedSidebar(),
+      '/openapi/v2/mmpaymkttransfers/send_coupon': microMerchantMixedSidebar(),
       '/openapi/v2/deposit/': depositSidebar(),
       '/openapi/v2/secapi/mkt/addrecommendconf': acquiringBankMgrSidebar(),
+      '/openapi/v2/secapi/mch/submchmanage': acquiringBankMgrSidebar(),
+      '/openapi/v2/secapi/mch/modifymchinfo': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/channelsetting': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/addsubdevconfig': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/querysubdevconfig': acquiringBankMgrSidebar(),
@@ -1548,14 +1554,24 @@ function depositSidebar() {
   ]
 }
 
-function microMerchantSidebar() {
+function microMerchantMixedSidebar() {
   return [
     {
       items: [
         {
+          text: '代金券',
+          collapsed: false,
+          items: [
+            ['查询代金券批次', '/openapi/v2/mmpaymkttransfers/query_coupon_stock'],
+            ['发放代金券', '/openapi/v2/mmpaymkttransfers/send_coupon'],
+            ['查询代金券信息', '/openapi/v2/mmpaymkttransfers/querycouponsinfo'],
+          ].map(transArrayItem),
+        },
+        {
           text: '小微特约商户',
           collapsed: false,
           items: [
+            ['获取平台证书', '/openapi/v2/risk/getcertficates'],
             ['申请入驻', '/openapi/v2/applyment/micro/submit'],
             ['查询申请状态', '/openapi/v2/applyment/micro/getstate'],
             ['修改联系信息', '/openapi/v2/applyment/micro/modifycontactinfo'],
@@ -1584,6 +1600,8 @@ function acquiringBankMgrSidebar() {
               ['查询特约子商户配置信息', '/openapi/v2/secapi/mch/querysubdevconfig'],
               ['设置特约子商户配置信息', '/openapi/v2/secapi/mch/addsubdevconfig'],
               ['设置特约子商户指定渠道号', '/openapi/v2/secapi/mch/channelsetting'],
+              ['报备/查询银行特约商户资料', '/openapi/v2/secapi/mch/submchmanage'],
+              ['修改银行特约商户信息', '/openapi/v2/secapi/mch/modifymchinfo'],
               ['设置子商户关注功能配置信息', '/openapi/v2/secapi/mkt/addrecommendconf'],
               ['查询商户审核状态(间联模式)', '/openapi/v2/mchrisk/bankquerymchauditinfo'],
               ['查询商户审核信息(渠道商)', '/openapi/v2/mchrisk/channelquerymchauditinfo'],
