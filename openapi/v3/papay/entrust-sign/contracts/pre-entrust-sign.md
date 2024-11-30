@@ -10,7 +10,7 @@ description: 商户可调用本接口预先指定签约信息，生成预签约�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sign_scene {data-indent=1} | string | 签约场景<br/>`SIGN_SCENE_APP` \| `SIGN_SCENE_QRCODE` 枚举值之一
+| sign_scene {data-required data-indent=1} | string | 签约场景<br/>`SIGN_SCENE_APP` \| `SIGN_SCENE_QRCODE` 枚举值之一
 | appid {data-required data-indent=1} | string | 应用ID
 | openid {data-indent=1} | string | 用户在直连商户应用下的用户标示
 | plan_id {data-required data-indent=1} | number | 委托代扣模板ID
