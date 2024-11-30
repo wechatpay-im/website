@@ -55,7 +55,8 @@ next:
 | | [收付通充值资金退回通知](/webhook/v3/RECHARGE.FUND_RETURNED)
 | JSON {rowspan=2} | [产生新投诉通知](/webhook/v3/COMPLAINT.CREATE) {colspan=2}
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
-| JSON {rowspan=2} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}
+| JSON {rowspan=3} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}
+| [委托代扣解约问询通知](/webhook/v3/ENTRUST.TERMINATE_INQUIRY)
 | [委托代扣解约成功通知](/webhook/v3/ENTRUST.TERMINATE) {colspan=2}
 | JSON {rowspan=5} | [保险商户委托代扣签约成功通知](/webhook/v3/INSURANCE_ENTRUST.SIGN)
 | [保险商户委托代扣解约成功通知](/webhook/v3/INSURANCE_ENTRUST.TERMINATE)

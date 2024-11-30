@@ -1139,6 +1139,7 @@ function openapiSidebar() {
               text: '直连商户模式',
               collapsed: true,
               items: [
+                ['代扣预签约', '/openapi/v3/papay/entrust-sign/contracts/pre-entrust-sign'],
                 ['JSAPI场景预约扣费预签约', '/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi'],
                 ['App场景预约扣费预签约', '/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/app'],
                 ['H5场景预约扣费预签约', '/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/h5'],
@@ -1931,6 +1932,7 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['签约成功通知', '/webhook/v3/ENTRUST.SIGN'],
+            ['解约问询通知', '/webhook/v3/ENTRUST.TERMINATE_INQUIRY'],
             ['解约成功通知', '/webhook/v3/ENTRUST.TERMINATE'],
             ['解约挽留信息通知', '/webhook/v3/ENTRUST.TERMINATE_RETENTION'],
           ].map(transArrayItem).concat({
