@@ -5,6 +5,12 @@ head:
   - - meta
     - name: keywords
       content: 微信支付, 回调通知事件, WeChatPay webhook events
+prev:
+  text: 开放接口
+  link: /openapi/
+next:
+  text: 软件开发包
+  link: /devkit/
 ---
 
 | 通知格式 | 直连商户模式 | 合作伙伴模式

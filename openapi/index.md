@@ -5,6 +5,12 @@ head:
   - - meta
     - name: keywords
       content: 微信支付, OpenAPI路径地址, 接口文档, WeChatPay merchant partner OpenAPI entry path
+prev:
+  text: 数据签名
+  link: /guide/digital-signature
+next:
+  text: 回调通知
+  link: /webhook/
 ---
 
 | 业务标签 | 直连商户模式 | 合作伙伴模式

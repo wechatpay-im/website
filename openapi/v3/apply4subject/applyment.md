@@ -26,7 +26,9 @@
 | merchant_name {data-required data-indent=3} | string | 商户名称
 | legal_person {data-required data-indent=3} | string | 法人姓名
 | company_address {data-required data-indent=3} | string | 注册地址
-| licence_valid_date {data-required data-indent=3} | string | 营业执照有效日期
+| licence_valid_date {data-required data-indent=3} | string | 营业执照有效日期`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| period {data-required data-indent=4} | string[] | 岂止日期
 | certificate_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 登记证书
 | cert_type {data-required data-indent=3} | string | 登记证书类型<br/>`CERTIFICATE_TYPE_2388` \| `CERTIFICATE_TYPE_2389` \| `CERTIFICATE_TYPE_2390` \| `CERTIFICATE_TYPE_2391` \| `CERTIFICATE_TYPE_2392` \| `CERTIFICATE_TYPE_2393` \| `CERTIFICATE_TYPE_2394` \| `CERTIFICATE_TYPE_2395` \| `CERTIFICATE_TYPE_2396` \| `CERTIFICATE_TYPE_2399` \| `CERTIFICATE_TYPE_2400` \| `CERTIFICATE_TYPE_2520` \| `CERTIFICATE_TYPE_2521` \| `CERTIFICATE_TYPE_2522` 枚举值之一
 | cert_number {data-required data-indent=3} | string | 证书编号
@@ -34,7 +36,9 @@
 | merchant_name {data-required data-indent=3} | string | 商户名称
 | legal_person {data-required data-indent=3} | string | 法人姓名
 | company_address {data-required data-indent=3} | string | 注册地址
-| cert_valid_date {data-required data-indent=3} | string | 营业执照有效日期
+| cert_valid_date {data-required data-indent=3} | string | 营业执照有效日期`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| period {data-required data-indent=4} | string[] | 岂止日期
 | company_prove_copy {data-indent=2} | string | 单位证明函照片
 | assist_prove_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 辅助证明材料信息
 | micro_biz_type {data-required data-indent=3} | string | 小微经营类型<br/>`MICRO_TYPE_STORE` \| `MICRO_TYPE_MOBILE` \| `MICRO_TYPE_ONLINE` 枚举值之一
@@ -55,7 +59,9 @@
 | authorize_letter_copy {data-indent=2} | string | 法定代表人说明函
 | identification_name {data-required data-indent=2} | string | 证件姓名
 | identification_number {data-required data-indent=2} | string | 证件号码
-| identification_valid_date {data-required data-indent=2} | string | 证件有效日期
+| identification_valid_date {data-required data-indent=2} | string | 证件有效日期`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| period {data-required data-indent=3} | string[] | 岂止日期
 | identification_address {data-indent=2} | string | 证件居住地址
 | identification_front_copy {data-required data-indent=2} | string | 证件正面照片
 | identification_back_copy {data-indent=2} | string | 证件反面照片

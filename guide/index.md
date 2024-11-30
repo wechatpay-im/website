@@ -6,6 +6,9 @@ head:
     - name: keywords
       content: 微信支付, PHP SDK指南, WeChatPay CertificateDownloader, Chainable OpenAPI client, Atomic Webhook functions
 aside: true
+prev:
+  text: 软件开发包
+  link: /devkit/
 ---
 
 # 使用指南

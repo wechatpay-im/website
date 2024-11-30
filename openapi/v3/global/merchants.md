@@ -30,7 +30,9 @@
 | office_account {data-indent=2} | string | 公众号
 | mini_program {data-indent=2} | string | 小程序
 | store_address {data-indent=2} | string | 门店地址
-| store_photos {data-indent=2} | string | 门店照片
+| store_photos {data-indent=2} | string | 门店照片`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| media_id {data-required data-indent=3} | string[] | 媒体文件MediaId列表
 | mcc {data-indent=2} | string | MCC码
 | director {data-indent=1} | object {data-tooltip="对应PHP的array"} | 董事信息
 | name {data-indent=2} | string | 董事姓名
@@ -75,7 +77,7 @@ $instance->v3->global->merchants->postAsync([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -127,7 +129,7 @@ $instance->chain('v3/global/merchants')->postAsync([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -179,7 +181,7 @@ $instance['v3/global/merchants']->postAsync([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -231,7 +233,7 @@ $response = $instance->v3->global->merchants->post([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -280,7 +282,7 @@ $response = $instance->chain('v3/global/merchants')->post([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -329,7 +331,7 @@ $response = $instance['v3/global/merchants']->post([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -354,7 +356,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required} | string | 子商户号
-| verification_status | string | 验证状态
+| verification_status | string | 验证状态<br/>`Under Review` \| `Approved` 枚举值之一
 | description | string | 验证状态描述
 
 {.im-table #response}
@@ -394,7 +396,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | office_account {data-indent=2} | string | 公众号
 | mini_program {data-indent=2} | string | 小程序
 | store_address {data-indent=2} | string | 门店地址
-| store_photos {data-indent=2} | string | 门店照片
+| store_photos {data-indent=2} | string | 门店照片`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| media_id {data-required data-indent=3} | string[] | 媒体文件MediaId列表
 | mcc {data-indent=2} | string | MCC码
 | director {data-indent=1} | object {data-tooltip="对应PHP的array"} | 董事信息
 | name {data-indent=2} | string | 董事姓名
@@ -439,7 +443,7 @@ $instance->v3->global->merchants->putAsync([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -491,7 +495,7 @@ $instance->chain('v3/global/merchants')->putAsync([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -543,7 +547,7 @@ $instance['v3/global/merchants']->putAsync([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -595,7 +599,7 @@ $response = $instance->v3->global->merchants->put([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -644,7 +648,7 @@ $response = $instance->chain('v3/global/merchants')->put([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [
@@ -693,7 +697,7 @@ $response = $instance['v3/global/merchants']->put([
       'office_account' => 'wx8888888888888888',
       'mini_program'   => 'wx8888888888888888',
       'store_address'  => '10F World Finance Centre (South Office), 11 Canton Road, Tsim Sha Tsui, Hong Kong',
-      'store_photos'   => '[Media_id1, Media_id2, Media_id3]',
+      'store_photos'   => '["Media_id1","Media_id2","Media_id3"]',
       'mcc'            => '4214',
     ],
     'director'                        => [

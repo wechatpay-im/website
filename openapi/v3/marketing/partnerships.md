@@ -9,9 +9,16 @@ description: 该接口主要为商户提供合作关系列表的查询能力。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| partner {data-indent=1} | string | 合作方信息
-| authorized_data {data-indent=1} | string | 被授权数据
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| partner {data-indent=1} | string | 合作方信息`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| type {data-required data-indent=2} | string | 合作方类别<br/>`APPID` \| `MERCHANT` 枚举值之一
+| appid {data-indent=2} | string | 合作方APPID
+| merchant_id {data-indent=2} | string | 合作方商户ID
+| authorized_data {data-indent=1} | string | 被授权数据`JSON`格式字符串
+| {colspan=3 .im-table-line}
+| business_type {data-indent=2} | string | 授权业务类别<br/>`FAVOR_STOCK` \| `BUSIFAVOR_STOCK` 枚举值之一
+| stock_id {data-indent=2} | string | 授权批次ID
 | limit {data-indent=1} | integer | 分页大小
 | offset {data-indent=1} | integer | 分页页码
 
