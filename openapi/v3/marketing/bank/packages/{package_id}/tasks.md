@@ -126,16 +126,16 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| bank_type {data-required} | string | 银行类型
-| create_time | string | 创建上传任务的时间
-| fail_count | integer | 失败数
-| filename | string | 文件名
+| task_id {data-required} | string | 上传任务
 | package_id {data-required} | string | 号码包id
-| status | string | 任务状态
+| filename {data-required} | string | 文件名
+| bank_type {data-required} | string | 银行类型
+| create_time  {data-required}| string | 创建上传任务的时间
+| update_time | string | 上传任务最近一次更新的时间
+| status | string | 任务状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
+| fail_count | integer | 失败数
 | success_count | integer | 成功数
 | success_user_count | integer | 匹配成功的微信用户数
-| task_id {data-required} | string | 上传任务
-| update_time | string | 上传任务最近一次更新的时间
 
 {.im-table #response}
 
@@ -149,7 +149,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | package_id {data-required} | string | 号码包id
 | query {data-required} | object | 声明请求的查询参数
-| status {data-required data-indent=1} | string | 任务状态
+| status {data-required data-indent=1} | string | 任务状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
 | filename {data-indent=1} | string | 文件名
 | offset {data-indent=1} | integer | 分页页码
 | limit {data-indent=1} | integer | 分页大小
@@ -249,20 +249,20 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| data {data-required} | object[] | 上传任务列表
-| task_id {data-indent=1} | string | 上传任务
-| package_id {data-indent=1} | string | 号码包id
-| filename {data-indent=1} | string | 文件名
-| create_time {data-indent=1} | string | 创建上传任务的时间
+| total_count {data-required} | integer | 总数量
+| offset {data-required} | integer | 分页页码
+| limit {data-required} | integer | 分页大小
+| data | object[] | 上传任务列表
+| task_id {data-required data-indent=1} | string | 上传任务
+| package_id {data-required data-indent=1} | string | 号码包id
+| filename {data-required data-indent=1} | string | 文件名
+| bank_type {data-required data-indent=1} | string | 银行类型
+| create_time {data-required data-indent=1} | string | 创建上传任务的时间
 | update_time {data-indent=1} | string | 上传任务最近一次更新的时间
-| status {data-indent=1} | string | 任务状态
+| status {data-indent=1} | string | 任务状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
 | success_count {data-indent=1} | integer | 成功数
 | fail_count {data-indent=1} | integer | 失败数
 | success_user_count {data-indent=1} | integer | 匹配成功的微信用户数
-| bank_type {data-required} {data-indent=1} | string | 银行类型
-| total_count {data-required} | integer | 总数量
-| offset | integer | 分页页码
-| limit | integer | 分页大小
 
 {.im-table #response}
 
