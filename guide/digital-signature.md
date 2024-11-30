@@ -203,7 +203,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'package' => \urlencode($package)
 >  ];
 >
-> $collection['paySign'] = Hash::sign($signType, $collection, $key); // [!code hl]
+> $collection['paySign'] = \strtolower(Hash::sign($signType, $collection, $key)); // [!code hl]
 > $collection['signType'] = $signType;
 >
 > echo \json_encode($collection);
