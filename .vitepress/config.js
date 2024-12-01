@@ -133,7 +133,6 @@ export default defineConfig({
       '/openapi/v2/mmpaymkttransfers/query_coupon_stock': microMerchantMixedSidebar(),
       '/openapi/v2/mmpaymkttransfers/querycouponsinfo': microMerchantMixedSidebar(),
       '/openapi/v2/mmpaymkttransfers/send_coupon': microMerchantMixedSidebar(),
-      '/openapi/v2/deposit/': depositSidebar(),
       '/openapi/v2/secapi/mkt/addrecommendconf': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/submchmanage': acquiringBankMgrSidebar(),
       '/openapi/v2/secapi/mch/modifymchinfo': acquiringBankMgrSidebar(),
@@ -397,6 +396,7 @@ function openapiSidebar() {
                 ['完结速住订单', '/openapi/v2/wxv/finishhotelbill'],
               ].map(transArrayItem),
             },
+            ...(depositSidebar()?.[0]?.items ?? []),
           ],
         },
         {
@@ -1539,7 +1539,7 @@ function depositSidebar() {
       items: [
         {
           text: '酒店押金',
-          collapsed: false,
+          collapsed: true,
           items: [
             ['支付押金(付款码支付)', '/openapi/v2/deposit/micropay'],
             ['支付押金(人脸支付)', '/openapi/v2/deposit/facepay'],

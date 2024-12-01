@@ -136,7 +136,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 #### 现金支付 {#symmetric.frontend.cashpay}
 
 > [!TIP] JSAPI 唤起微信支付收银台场景
-> ```php
+> ```php hl8,17
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
 >
@@ -153,14 +153,14 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >    'signType' => $signType
 >  ];
 >
-> $collection['paySign'] = Hash::sign($signType, $collection, $key); // [!code hl]
+> $collection['paySign'] = Hash::sign($signType, $collection, $key);
 >
 > echo \json_encode($collection);
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=5)
 
 > [!TIP] APP 唤起微信支付收银台场景
-> ```php
+> ```php hl8,18
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
 >
@@ -178,16 +178,16 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >    'prepayid' => $prepayId
 >  ];
 >
-> $collection['sign'] = Hash::sign($signType, $collection, $key); // [!code hl]
+> $collection['sign'] = Hash::sign($signType, $collection, $key);
 >
 > echo \json_encode($collection);
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_12&index=2)
 
-#### 小程序红包 {#symmetric.frontend.wxaredpack}
+#### 小程序红包 <Badge type="warning" text="特殊规则" /> {#symmetric.frontend.wxaredpack}
 
 > [!TIP] 微信小程序 唤起发放小程序红包场景
-> ```php
+> ```php hl:7,13,16-20
 > use WeChatPay\Formatter;
 > use WeChatPay\Crypto\Hash;
 >
@@ -199,11 +199,15 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   'appId' => $appId,
 >   'timeStamp' => $timeStamp,
 >   'nonceStr' => $nonceStr,
->   // packageStr 即后台调用 sendminiprogramhb 接口的 package 返回字符串
+>   // $package 即后台调用 sendminiprogramhb 接口的 package 返回字符串
 >   'package' => \urlencode($package)
 >  ];
 >
-> $collection['paySign'] = \strtolower(Hash::sign($signType, $collection, $key)); // [!code hl]
+> $collection['paySign'] = Hash::md5(
+>   Formatter::queryStringLike(
+>     Formatter::ksort($collection)
+>  ), $key
+> );
 > $collection['signType'] = $signType;
 >
 > echo \json_encode($collection);
