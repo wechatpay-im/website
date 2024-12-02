@@ -24,7 +24,7 @@ description: 当收到通知进行处理时，首先检查对应业务数据的�
 | attach {data-indent=1} | string | 商家数据包
 | bank_type {data-required data-indent=1} | string | 付款银行
 | fee_type {data-indent=1} | string | 货币种类
-| is_subscribe {data-required data-indent=1} | string | 是否关注公众账号
+| is_subscribe {data-required data-indent=1} | string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
@@ -40,17 +40,19 @@ description: 当收到通知进行处理时，首先检查对应业务数据的�
 | coupon_count {data-indent=1} | string | 代金券使用数量
 | coupon_type_$n {data-indent=1} | string | 代金券类型
 | coupon_id_$n {data-indent=1} | string | 代金券ID
-| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
+| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` \| `PAP` 枚举值之一
 | transaction_id {data-required data-indent=1} | string | 微信支付订单号
 | contract_id {data-indent=1} | string | 委托代扣协议id
+| user_repaid {data-indent=1} | string | ⽤户是否已还款<br/>`Y` \| `N` 枚举值之一
+| trade_state {data-indent=1} | string | 交易状态<br/>`SUCCESS` \| `PAY_FAIL` 枚举值之一
 
 {.im-table #request}
 
 1. 普通支付只有支付成功(**trade_state=SUCCESS**)才有通知 {#BASIC}
 
-1. 服务商支付成功会带上(**sub_mchid及sub_mch_id**)字段 {#PARTNER}
+1. 服务商支付成功会带上(**sub_appid及sub_mch_id**)字段 {#PARTNER}
 
-1. 扣款服务回调会带上(**contract_id**)字段 {#PAP}
+1. 扣款服务回调会带上(**contract_id user_repaid trade_state**)字段 {#PAP}
 
 ::: code-group
 

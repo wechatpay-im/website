@@ -24,6 +24,8 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 | return_msg {data-indent=1} | string | 返回信息
 | appid {data-required data-indent=1} | string | 公众平台APPID
 | mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
+| sub_appid {data-indent=1} | string | 子商户应用ID
 | nonce_str {data-required data-indent=1} | string | 随机字符串
 | req_info {data-required data-indent=1} | string | 加密的`XML`信息
 | {colspan=3 .im-table-line}
@@ -34,7 +36,7 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 | refund_id {data-required data-indent=2} | string | 微信退款单号
 | refund_recv_accout {data-indent=2} | string | 退款入账账户
 | refund_request_source {data-indent=2} | string | 退款发起来源<br/>`API` \| `VENDOR_PLATFORM` 枚举值之一
-| refund_status {data-required data-indent=2} | string |退款状态
+| refund_status {data-required data-indent=2} | string |退款状态<br/>`SUCCESS` \| `CHANGE` \| `REFUNDCLOSE` 枚举值之一
 | settlement_refund_fee {data-indent=2} | string | 退款金额
 | settlement_total_fee {data-indent=2} | string | 应结订单金额
 | success_time {data-indent=2} | string | 退款成功时间
@@ -43,6 +45,8 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 | cash_refund_fee {data-required data-indent=2} | string | 用户退款金额
 
 {.im-table #request}
+
+1. 服务商支付成功会带上(**sub_appid及sub_mch_id**)字段 {#PARTNER}
 
 ::: code-group
 

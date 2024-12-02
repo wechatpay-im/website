@@ -22,7 +22,7 @@ description: 从用户进入开通车主服务的停车场（用户入场通知�
 | sub_mch_id {data-indent=1} | string | 子商户号
 | appid {data-required data-indent=1} | string | 公众平台APPID
 | nonce_str {data-required data-indent=1} | string | 随机字符串
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | sign {data-required data-indent=1} | string | 签名
 | plate_number {data-required data-indent=1} | string | 车牌号
 | vehicle_event_type {data-indent=1} | string | 车牌变更事件类型<br/>`NORMAL` \| `BLOCKED` 枚举值之一
