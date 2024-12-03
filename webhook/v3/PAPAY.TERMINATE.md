@@ -1,6 +1,9 @@
 ---
 title: 跨境/全球-委托代扣成功解约(PAPAY.TERMINATE)通知(JSON)
 description: 签约、解约成功后（包含用户主动解约），微信会把相关签约、解约信息异步通知给商户。
+next:
+  text: SDK
+  link: /devkit/
 ---
 
 # {{ $frontmatter.title }} {#post}

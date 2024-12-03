@@ -1,6 +1,9 @@
 ---
 title: 获取平台证书列表
 description: 获取商户当前可用的平台证书列表。微信支付提供该接口，帮助商户后台系统实现平台证书的平滑更换。
+next:
+  text: 回调通知
+  link: /webhook/
 ---
 
 # {{ $frontmatter.title }} {#get}

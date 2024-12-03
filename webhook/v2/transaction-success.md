@@ -1,6 +1,9 @@
 ---
 title: 普通支付通知(XML)
 description: 当收到通知进行处理时，首先检查对应业务数据的状态，判断该通知是否已经处理过，如果没有处理过再进行处理，如果处理过直接返回结果成功。
+prev:
+  text: 回调通知
+  link: /webhook/
 ---
 
 # {{ $frontmatter.title }} {#post}

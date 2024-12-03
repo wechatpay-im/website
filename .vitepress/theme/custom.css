@@ -141,6 +141,10 @@
   --data-indent: 0;
 }
 
+.edit-info:not(:has(>.edit-link)) {
+  justify-content: flex-end;
+}
+
 .vp-doc._webhook_ table,
 .vp-doc._openapi_ table {
   margin: 0;
