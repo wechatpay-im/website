@@ -32,16 +32,32 @@
   }
 }
 
+.vp-code-group .tabs::-webkit-scrollbar,
+.vp-code-group .tabs::-webkit-scrollbar-track,
+.vp-doc [class*="language-"] pre::-webkit-scrollbar,
+.vp-doc [class*="language-"] pre::-webkit-scrollbar-track,
 .VPSidebar::-webkit-scrollbar,
 .VPSidebar::-webkit-scrollbar-track {
   background-color: initial
 }
 
+.vp-code-group .tabs::-webkit-scrollbar-thumb:active,
+.vp-code-group .tabs::-webkit-scrollbar-thumb:hover,
+.vp-doc [class*="language-"] pre::-webkit-scrollbar-thumb:active,
+.vp-doc [class*="language-"] pre::-webkit-scrollbar-thumb:hover,
 .VPSidebar::-webkit-scrollbar-thumb:active,
 .VPSidebar::-webkit-scrollbar-thumb:hover {
   background-color: var(--vp-c-text-1) !important
 }
 
+.vp-code-group .tabs:active::-webkit-scrollbar-thumb,
+.vp-code-group .tabs:focus-within::-webkit-scrollbar-thumb,
+.vp-code-group .tabs:focus::-webkit-scrollbar-thumb,
+.vp-code-group .tabs:hover::-webkit-scrollbar-thumb,
+.vp-code-group .tabs:active::-webkit-scrollbar-thumb,
+.vp-doc [class*="language-"] pre:focus-within::-webkit-scrollbar-thumb,
+.vp-doc [class*="language-"] pre:focus::-webkit-scrollbar-thumb,
+.vp-doc [class*="language-"] pre:hover::-webkit-scrollbar-thumb,
 .VPSidebar:active::-webkit-scrollbar-thumb,
 .VPSidebar:focus-within::-webkit-scrollbar-thumb,
 .VPSidebar:focus::-webkit-scrollbar-thumb,
