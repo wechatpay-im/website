@@ -21,7 +21,7 @@ description: 获取微信用户的授权, 需要使用微信支付提供的 OAut
 | openid {data-required data-indent=1} | string | 微信openID
 | code {data-required data-indent=1} | string | 第一步返回的auth_code
 | grant_type {data-required data-indent=1} | string | 固定值`authorization_code`<br/>`authorization_code` 枚举值
-| scope {data-required data-indent=1} | string | 应用授权作用域<br/>`pay_identity` 枚举值
+| scope {data-required data-indent=1} | string | 应用授权作用域<br/>`pay_identity` \| `pay_realname` 枚举值之一
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | sign {data-required data-indent=1} | string | 签名
 
