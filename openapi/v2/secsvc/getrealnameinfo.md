@@ -15,6 +15,7 @@ description: 由于实名信息属于敏感数据，不能以明文数据传输�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| base_uri {data-required} | string | 声明接入点<br/>固定值`https://fraud.mch.weixin.qq.com/`
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | version {data-required data-indent=1} | string | 接口版本号<br/>`1.0` \| `2.0` 枚举值之一
 | mch_id {data-required data-indent=1} | string | 商户号
@@ -39,6 +40,7 @@ $certSign = \WeChatPay\Crypto\Rsa::sign(
   $merchantPrivateKeyInstance
 );
 $instance->v2->secsvc->getrealnameinfo->postAsync([
+  'base_uri' => 'https://fraud.mch.weixin.qq.com/', // 接入点
   'xml' => [
     'version'       => '1.0',
     'mch_id'        => '1900000109',
@@ -66,6 +68,7 @@ $certSign = \WeChatPay\Crypto\Rsa::sign(
   $merchantPrivateKeyInstance
 );
 $instance->chain('v2/secsvc/getrealnameinfo')->postAsync([
+  'base_uri' => 'https://fraud.mch.weixin.qq.com/', // 接入点
   'xml' => [
     'version'       => '1.0',
     'mch_id'        => '1900000109',
@@ -93,6 +96,7 @@ $certSign = \WeChatPay\Crypto\Rsa::sign(
   $merchantPrivateKeyInstance
 );
 $instance['v2/secsvc/getrealnameinfo']->postAsync([
+  'base_uri' => 'https://fraud.mch.weixin.qq.com/', // 接入点
   'xml' => [
     'version'       => '1.0',
     'mch_id'        => '1900000109',
@@ -120,6 +124,7 @@ $certSign = \WeChatPay\Crypto\Rsa::sign(
   $merchantPrivateKeyInstance
 );
 $response = $instance->v2->secsvc->getrealnameinfo->post([
+  'base_uri' => 'https://fraud.mch.weixin.qq.com/', // 接入点
   'xml' => [
     'version'       => '1.0',
     'mch_id'        => '1900000109',
@@ -144,6 +149,7 @@ $certSign = \WeChatPay\Crypto\Rsa::sign(
   $merchantPrivateKeyInstance
 );
 $response = $instance->chain('v2/secsvc/getrealnameinfo')->post([
+  'base_uri' => 'https://fraud.mch.weixin.qq.com/', // 接入点
   'xml' => [
     'version'       => '1.0',
     'mch_id'        => '1900000109',
@@ -168,6 +174,7 @@ $certSign = \WeChatPay\Crypto\Rsa::sign(
   $merchantPrivateKeyInstance
 );
 $response = $instance['v2/secsvc/getrealnameinfo']->post([
+  'base_uri' => 'https://fraud.mch.weixin.qq.com/', // 接入点
   'xml' => [
     'version'       => '1.0',
     'mch_id'        => '1900000109',
