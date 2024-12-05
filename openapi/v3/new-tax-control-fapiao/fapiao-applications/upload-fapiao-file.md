@@ -7,6 +7,12 @@ description: 调用【将电子发票插入微信用户卡包】接口之前，�
 
 {{ $frontmatter.description }}
 
+::: danger :sweat_smile: {.im-deprecated}
+
+请特别注意 `$.meta.digest_alogrithm` 单词拼写，是 `alogrithm` 非 `algorithm`。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | body {data-required} | object | `multipart/form-data` 数据结构
@@ -15,7 +21,7 @@ description: 调用【将电子发票插入微信用户卡包】接口之前，�
 | {colspan=3 .im-table-line}
 | sub_mchid {data-indent=2} | string | 微信支付分配的子商户号，服务商模式下必传
 | file_type {data-required data-indent=2} | string | 发票文件的类型
-| digest_algorithm {data-required data-indent=2} | string | 文件摘要算法 `SM3`枚举值
+| digest_alogrithm {data-required data-indent=2} | string | 文件摘要算法 `SM3`枚举值
 | digest {data-required data-indent=2} | string | 文件的`SM3`摘要
 
 {.im-table #request}
@@ -27,7 +33,7 @@ $media = new \WeChatPay\Util\MediaUtil('file:///path/to/fapiao.pdf');
 $meta = [
   'sub_mchid' => 'your_sub_mchid',
   'file_type' => 'PDF',
-  'digest_algorithm' => 'SM3',
+  'digest_alogrithm' => 'SM3',
   'digest' => 'your_fapiao_pdf_sm3_string',
 ];
 $media->setMeta(\json_encode($meta));
@@ -49,7 +55,7 @@ $media = new \WeChatPay\Util\MediaUtil('file:///path/to/fapiao.pdf');
 $meta = [
   'sub_mchid' => 'your_sub_mchid',
   'file_type' => 'PDF',
-  'digest_algorithm' => 'SM3',
+  'digest_alogrithm' => 'SM3',
   'digest' => 'your_fapiao_pdf_sm3_string',
 ];
 $media->setMeta(\json_encode($meta));
@@ -71,7 +77,7 @@ $media = new \WeChatPay\Util\MediaUtil('file:///path/to/fapiao.pdf');
 $meta = [
   'sub_mchid' => 'your_sub_mchid',
   'file_type' => 'PDF',
-  'digest_algorithm' => 'SM3',
+  'digest_alogrithm' => 'SM3',
   'digest' => 'your_fapiao_pdf_sm3_string',
 ];
 $media->setMeta(\json_encode($meta));
@@ -93,7 +99,7 @@ $media = new \WeChatPay\Util\MediaUtil('file:///path/to/fapiao.pdf');
 $meta = [
   'sub_mchid' => 'your_sub_mchid',
   'file_type' => 'PDF',
-  'digest_algorithm' => 'SM3',
+  'digest_alogrithm' => 'SM3',
   'digest' => 'your_fapiao_pdf_sm3_string',
 ];
 $media->setMeta(\json_encode($meta));
@@ -112,7 +118,7 @@ $media = new \WeChatPay\Util\MediaUtil('file:///path/to/fapiao.pdf');
 $meta = [
   'sub_mchid' => 'your_sub_mchid',
   'file_type' => 'PDF',
-  'digest_algorithm' => 'SM3',
+  'digest_alogrithm' => 'SM3',
   'digest' => 'your_fapiao_pdf_sm3_string',
 ];
 $media->setMeta(\json_encode($meta));
@@ -131,7 +137,7 @@ $media = new \WeChatPay\Util\MediaUtil('file:///path/to/fapiao.pdf');
 $meta = [
   'sub_mchid' => 'your_sub_mchid',
   'file_type' => 'PDF',
-  'digest_algorithm' => 'SM3',
+  'digest_alogrithm' => 'SM3',
   'digest' => 'your_fapiao_pdf_sm3_string',
 ];
 $media->setMeta(\json_encode($meta));
