@@ -43,7 +43,7 @@ $instance->v2->appauth->getaccesstoken->getAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  print_r(json_decode((string) $response->getBody()));
 })
 ->wait();
 ```
@@ -62,7 +62,7 @@ $instance->chain('v2/appauth/getaccesstoken')->getAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  print_r(json_decode((string) $response->getBody()));
 })
 ->wait();
 ```
@@ -81,7 +81,7 @@ $instance['v2/appauth/getaccesstoken']->getAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+  print_r(json_decode((string) $response->getBody()));
 })
 ->wait();
 ```
@@ -99,7 +99,7 @@ $response = $instance->v2->appauth->getaccesstoken->get([
     'sign'       => 'C380BEC2BFD727A4B6845133519F3AD6',
   ],
 ]);
-print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+print_r(json_decode((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
@@ -115,7 +115,7 @@ $response = $instance->chain('v2/appauth/getaccesstoken')->get([
     'sign'       => 'C380BEC2BFD727A4B6845133519F3AD6',
   ],
 ]);
-print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+print_r(json_decode((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
@@ -131,7 +131,7 @@ $response = $instance['v2/appauth/getaccesstoken']->get([
     'sign'       => 'C380BEC2BFD727A4B6845133519F3AD6',
   ],
 ]);
-print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
+print_r(json_decode((string) $response->getBody()));
 ```
 
 :::
