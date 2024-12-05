@@ -24,7 +24,7 @@ description: 由于实名信息属于敏感数据，不能以明文数据传输�
 | access_token {data-required data-indent=1} | string | 步骤2或步骤3获取到的access_token
 | timestamp {data-required data-indent=1} | number | unix时间戳，必须获取当前时间。
 | cert_sign {data-required data-indent=1} | string | 使用rsa私钥对证书序列号和unix时间戳的进行签名
-| charset {data-indent=1} | number | 证件类型<br/>`UTF-8` \| `GBK` 枚举值之一
+| charset {data-indent=1} | string | 证件类型<br/>`UTF-8` \| `GBK` 枚举值之一
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
