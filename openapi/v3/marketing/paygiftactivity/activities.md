@@ -111,10 +111,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| offset | integer | 
-| limit | integer | 
-| total_count | integer | 
-| activity_id | string | 
+| offset | integer | 分页页码
+| limit | integer | 分页大小
+| total_count | integer | 总数
 
 {.im-table #response}
 

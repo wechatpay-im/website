@@ -11,8 +11,8 @@ description: 商户创建活动后，可以通过该接口查询支付有礼的�
 | --- | --- | ---
 | activity_id {data-required} | string | 活动id
 | query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| offset {data-indent=1} | integer | 
-| limit {data-indent=1} | integer | 
+| offset {data-indent=1} | integer | 分页页码
+| limit {data-indent=1} | integer | 分页大小
 
 {.im-table #request}
 
@@ -23,7 +23,7 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants-
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchant
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,7 +51,7 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants']->ge
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -65,7 +65,7 @@ $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -76,7 +76,7 @@ $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -87,7 +87,7 @@ $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}/mer
   'activity_id' => '',
   'query' => [
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -97,15 +97,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| offset | integer | 
-| limit | integer | 
-| total_count | integer | 
-| activity_id | string | 
-| data | object[] {data-tooltip="对应PHP的array"} | 
-| mchid {data-indent=1} | string | 
-| merchant_name {data-indent=1} | string | 
-| create_time {data-indent=1} | string | 
-| update_time {data-indent=1} | string | 
+| offset | integer | 分页页码
+| limit | integer | 分页大小
+| total_count | integer | 总数
+| activity_id | string | 活动id
+| data | object[] {data-tooltip="对应PHP的array"} | 结果集
+| mchid {data-indent=1} | string | 商户号
+| merchant_name {data-indent=1} | string | 商户名称
+| create_time {data-indent=1} | string | 创建时间
+| update_time {data-indent=1} | string | 更新时间
 
 {.im-table #response}
 

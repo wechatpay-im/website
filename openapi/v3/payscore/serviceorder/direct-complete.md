@@ -24,13 +24,13 @@ description: 该接口适用于无需微信支付分做订单风控判断的业�
 | amount {data-indent=2} | integer | 优惠金额
 | count {data-indent=2} | integer | 优惠数量
 | time_range {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务时间段
-| start_time {data-indent=2} | string | 
-| start_time_remark {data-indent=2} | string | 
-| end_time {data-indent=2} | string | 
-| end_time_remark {data-indent=2} | string | 
+| start_time {data-indent=2} | string | 服务开始时间
+| start_time_remark {data-indent=2} | string | 服务开始时间备注
+| end_time {data-indent=2} | string | 服务结束时间
+| end_time_remark {data-indent=2} | string | 服务结束时间备注
 | location {data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务位置
-| start_location {data-indent=2} | string | 
-| end_location {data-indent=2} | string | 
+| start_location {data-indent=2} | string | 服务开始地点
+| end_location {data-indent=2} | string | 服务结束地点
 | service_introduction {data-indent=1} | string | 服务信息
 | attach {data-indent=1} | string | 商户数据包
 | notify_url {data-indent=1} | string | 商户回调地址
@@ -62,14 +62,14 @@ $instance->v3->payscore->serviceorder->directComplete->postAsync([
       'count'       => 2,
     ],],
     'time_range'           => [
-      'start_time'        => '',
-      'start_time_remark' => '',
-      'end_time'          => '',
-      'end_time_remark'   => '',
+      'start_time'        => '20091225091010',
+      'start_time_remark' => '开始租借时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
     'location'             => [
-      'start_location' => '',
-      'end_location'   => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'service_introduction' => '某某酒店',
     'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
@@ -105,14 +105,14 @@ $instance->chain('v3/payscore/serviceorder/direct-complete')->postAsync([
       'count'       => 2,
     ],],
     'time_range'           => [
-      'start_time'        => '',
-      'start_time_remark' => '',
-      'end_time'          => '',
-      'end_time_remark'   => '',
+      'start_time'        => '20091225091010',
+      'start_time_remark' => '开始租借时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
     'location'             => [
-      'start_location' => '',
-      'end_location'   => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'service_introduction' => '某某酒店',
     'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
@@ -148,14 +148,14 @@ $instance['v3/payscore/serviceorder/direct-complete']->postAsync([
       'count'       => 2,
     ],],
     'time_range'           => [
-      'start_time'        => '',
-      'start_time_remark' => '',
-      'end_time'          => '',
-      'end_time_remark'   => '',
+      'start_time'        => '20091225091010',
+      'start_time_remark' => '开始租借时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
     'location'             => [
-      'start_location' => '',
-      'end_location'   => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'service_introduction' => '某某酒店',
     'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
@@ -191,14 +191,14 @@ $response = $instance->v3->payscore->serviceorder->directComplete->post([
       'count'       => 2,
     ],],
     'time_range'           => [
-      'start_time'        => '',
-      'start_time_remark' => '',
-      'end_time'          => '',
-      'end_time_remark'   => '',
+      'start_time'        => '20091225091010',
+      'start_time_remark' => '开始租借时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
     'location'             => [
-      'start_location' => '',
-      'end_location'   => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'service_introduction' => '某某酒店',
     'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
@@ -231,14 +231,14 @@ $response = $instance->chain('v3/payscore/serviceorder/direct-complete')->post([
       'count'       => 2,
     ],],
     'time_range'           => [
-      'start_time'        => '',
-      'start_time_remark' => '',
-      'end_time'          => '',
-      'end_time_remark'   => '',
+      'start_time'        => '20091225091010',
+      'start_time_remark' => '开始租借时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
     'location'             => [
-      'start_location' => '',
-      'end_location'   => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'service_introduction' => '某某酒店',
     'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
@@ -271,14 +271,14 @@ $response = $instance['v3/payscore/serviceorder/direct-complete']->post([
       'count'       => 2,
     ],],
     'time_range'           => [
-      'start_time'        => '',
-      'start_time_remark' => '',
-      'end_time'          => '',
-      'end_time_remark'   => '',
+      'start_time'        => '20091225091010',
+      'start_time_remark' => '开始租借时间',
+      'end_time'          => '20091225121010',
+      'end_time_remark'   => '租借结束时间',
     ],
     'location'             => [
-      'start_location' => '',
-      'end_location'   => '',
+      'start_location' => '嗨客时尚主题展餐厅',
+      'end_location'   => '嗨客时尚主题展餐厅',
     ],
     'service_introduction' => '某某酒店',
     'attach'               => 'Easdfowealsdkjfnlaksjdlfkwqoi&wl3l2sald',
@@ -310,13 +310,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-indent=1} | integer | 优惠金额
 | count {data-indent=1} | integer | 优惠数量
 | time_range {data-required} | object {data-tooltip="对应PHP的array"} | 服务时间段
-| start_time {data-indent=1} | string | 
-| start_time_remark {data-indent=1} | string | 
-| end_time {data-indent=1} | string | 
-| end_time_remark {data-indent=1} | string | 
+| start_time {data-indent=1} | string | 服务开始时间
+| start_time_remark {data-indent=1} | string | 服务开始时间备注
+| end_time {data-indent=1} | string | 服务结束时间
+| end_time_remark {data-indent=1} | string | 服务结束时间备注
 | location | object {data-tooltip="对应PHP的array"} | 服务位置
-| start_location {data-indent=1} | string | 
-| end_location {data-indent=1} | string | 
+| start_location {data-indent=1} | string | 服务开始地点
+| end_location {data-indent=1} | string | 服务结束地点
 | service_introduction {data-required} | string | 服务信息
 | mchid {data-required} | string | 商户号
 | order_id {data-required} | string | 微信支付服务订单号

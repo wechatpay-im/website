@@ -104,32 +104,32 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| count | integer | 
-| limit | integer | 
-| offset | integer | 
-| total_count | integer | 
-| data | object[] {data-tooltip="对应PHP的array"} | 
-| welfare_trade_id {data-indent=1} | string | 
-| appid {data-indent=1} | string | 
-| sub_appid {data-indent=1} | string | 
-| brand_id {data-indent=1} | string | 
-| donate_source {data-indent=1} | string | `MINIPROGRAM_PAY` \| `ENTRUST_PAY` 枚举值之一
-| merchant_order {data-indent=1} | string | 
-| institution_name {data-indent=1} | string | 
-| business_id {data-indent=1} | string | 
-| business_name {data-indent=1} | string | 
-| success_time {data-indent=1} | string | 
-| payer {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
-| openid {data-indent=2} | string | 
-| sub_openid {data-indent=2} | string | 
-| avatar {data-indent=2} | string | 
-| nickname {data-indent=2} | string | 
-| amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
-| total {data-indent=2} | number | 
-| payer_total {data-indent=2} | number | 
-| currency {data-indent=2} | string | 
-| payer_currency {data-indent=2} | string | 
-| device_id {data-indent=1} | string | 
+| count | integer | 该次请求返回的记录条数
+| limit | integer | 最大记录条数
+| offset | integer | 起始位置
+| total_count | integer | 全部记录数量
+| data | object[] {data-tooltip="对应PHP的array"} | 结果集
+| welfare_trade_id {data-indent=1} | string | 捐赠订单号
+| appid {data-indent=1} | string | 应用ID
+| sub_appid {data-indent=1} | string | 子商户应用ID
+| brand_id {data-indent=1} | string | 品牌ID
+| donate_source {data-indent=1} | string | 捐赠来源<br/>`MINIPROGRAM_PAY` \| `ENTRUST_PAY` 枚举值之一
+| merchant_order {data-indent=1} | string | 商户订单
+| institution_name {data-indent=1} | string | 捐赠机构名称
+| business_id {data-indent=1} | string | 捐赠项目编号
+| business_name {data-indent=1} | string | 捐赠活动名称
+| success_time {data-indent=1} | string | 支付完成时间
+| payer {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
+| openid {data-indent=2} | string | 用户标识
+| sub_openid {data-indent=2} | string | 用户子标识
+| avatar {data-indent=2} | string | 用户头像URL
+| nickname {data-indent=2} | string | 用户昵称
+| amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
+| total {data-indent=2} | number | 总金额
+| payer_total {data-indent=2} | number | 用户支付金额
+| currency {data-indent=2} | string | 货币类型
+| payer_currency {data-indent=2} | string | 用户支付币种
+| device_id {data-indent=1} | string | 设备编号
 
 {.im-table #response}
 

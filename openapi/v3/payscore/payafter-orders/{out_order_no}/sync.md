@@ -14,8 +14,8 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 | appid {data-indent=1} | string | 公众账号ID
 | service_id {data-indent=1} | string | 服务ID
 | type {data-indent=1} | string | 场景类型<br/>`Order_Paid` 枚举值
-| detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
-| paid_time {data-indent=2} | string | 
+| detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 内容信息详情
+| paid_time {data-indent=2} | string | 用户通过其他方式付款成功的实际时间
 
 {.im-table #request}
 

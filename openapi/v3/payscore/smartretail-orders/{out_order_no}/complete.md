@@ -1,6 +1,6 @@
 ---
 title: 完结智慧零售订单
-description: 
+description: 前置条件：用户确认订单成功后。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -13,23 +13,23 @@ description:
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-required data-indent=1} | string | 公众账号ID
 | service_id {data-required data-indent=1} | string | 服务ID
-| finish_type {data-indent=1} | integer | 
-| cancel_reason {data-indent=1} | string | 
-| real_service_start_time {data-indent=1} | string | 
-| real_service_end_time {data-indent=1} | string | 
-| real_service_end_location {data-indent=1} | string | 
-| fees {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 
-| fee_name {data-indent=2} | string | 
-| fee_count {data-indent=2} | integer | 
-| fee_amount {data-indent=2} | integer | 
-| fee_desc {data-indent=2} | string | 
-| discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 
+| finish_type {data-indent=1} | integer | 标识用户订单使用情况<br/>`1` \| `2` 枚举值之一
+| cancel_reason {data-indent=1} | string | 取消订单的原因
+| real_service_start_time {data-indent=1} | string | 实际服务开始时间
+| real_service_end_time {data-indent=1} | string | 服务结束时间
+| real_service_end_location {data-indent=1} | string | 实际结束使用服务的地点
+| fees {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费，描述付费项目列表
+| fee_name {data-indent=2} | string | 付费项目名称
+| fee_count {data-indent=2} | integer | 付费项目数量
+| fee_amount {data-indent=2} | integer | 付费项目总金额
+| fee_desc {data-indent=2} | string | 描述计费规则
+| discounts {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商户优惠，最多包含5条商户优惠
 | discount_name {data-indent=2} | string | 优惠名称
-| discount_amount {data-indent=2} | integer | 
+| discount_amount {data-indent=2} | integer | 商品优惠金额
 | discount_desc {data-indent=2} | string | 优惠说明
-| total_amount {data-indent=1} | integer | 
-| finish_ticket {data-indent=1} | string | 
-| profit_sharing {data-indent=1} | boolean | 
+| total_amount {data-indent=1} | integer | 总金额(大于等于0的数字，单位为分)
+| finish_ticket {data-indent=1} | string | 完结凭证
+| profit_sharing {data-indent=1} | boolean | 是否指定商户分账
 
 {.im-table #request}
 

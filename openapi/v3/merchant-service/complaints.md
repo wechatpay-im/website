@@ -16,11 +16,11 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| limit {data-indent=1} | integer | 
-| offset {data-indent=1} | integer | 
-| begin_date {data-required data-indent=1} | string | 
-| end_date {data-required data-indent=1} | string | 
-| sub_mchid {data-indent=1} | string | 
+| limit {data-indent=1} | integer | 分页大小
+| offset {data-indent=1} | integer | 分页开始位置
+| begin_date {data-required data-indent=1} | string | 开始日期
+| end_date {data-required data-indent=1} | string | 结束日期
+| sub_mchid {data-indent=1} | string | 特约商户号
 
 {.im-table #request}
 
@@ -29,11 +29,11 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 ```php [异步纯链式]
 $instance->v3->merchantService->complaints->getAsync([
   'query' => [
-    'limit'      => 0,
-    'offset'     => 0,
-    'begin_date' => '',
-    'end_date'   => '',
-    'sub_mchid'  => '',
+    'limit'      => 5,
+    'offset'     => 10,
+    'begin_date' => '2019-01-01',
+    'end_date'   => '2019-01-01',
+    'sub_mchid'  => '1900012181',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,11 +45,11 @@ $instance->v3->merchantService->complaints->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/merchant-service/complaints')->getAsync([
   'query' => [
-    'limit'      => 0,
-    'offset'     => 0,
-    'begin_date' => '',
-    'end_date'   => '',
-    'sub_mchid'  => '',
+    'limit'      => 5,
+    'offset'     => 10,
+    'begin_date' => '2019-01-01',
+    'end_date'   => '2019-01-01',
+    'sub_mchid'  => '1900012181',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,11 +61,11 @@ $instance->chain('v3/merchant-service/complaints')->getAsync([
 ```php [异步属性式]
 $instance['v3/merchant-service/complaints']->getAsync([
   'query' => [
-    'limit'      => 0,
-    'offset'     => 0,
-    'begin_date' => '',
-    'end_date'   => '',
-    'sub_mchid'  => '',
+    'limit'      => 5,
+    'offset'     => 10,
+    'begin_date' => '2019-01-01',
+    'end_date'   => '2019-01-01',
+    'sub_mchid'  => '1900012181',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -77,11 +77,11 @@ $instance['v3/merchant-service/complaints']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->merchantService->complaints->get([
   'query' => [
-    'limit'      => 0,
-    'offset'     => 0,
-    'begin_date' => '',
-    'end_date'   => '',
-    'sub_mchid'  => '',
+    'limit'      => 5,
+    'offset'     => 10,
+    'begin_date' => '2019-01-01',
+    'end_date'   => '2019-01-01',
+    'sub_mchid'  => '1900012181',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/merchant-service/complaints')->get([
   'query' => [
-    'limit'      => 0,
-    'offset'     => 0,
-    'begin_date' => '',
-    'end_date'   => '',
-    'sub_mchid'  => '',
+    'limit'      => 5,
+    'offset'     => 10,
+    'begin_date' => '2019-01-01',
+    'end_date'   => '2019-01-01',
+    'sub_mchid'  => '1900012181',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/merchant-service/complaints']->get([
   'query' => [
-    'limit'      => 0,
-    'offset'     => 0,
-    'begin_date' => '',
-    'end_date'   => '',
-    'sub_mchid'  => '',
+    'limit'      => 5,
+    'offset'     => 10,
+    'begin_date' => '2019-01-01',
+    'end_date'   => '2019-01-01',
+    'sub_mchid'  => '1900012181',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -117,19 +117,19 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| offset {data-required} | integer | 
-| limit {data-required} | integer | 
-| total_count | integer | 
-| data | object[] {data-tooltip="对应PHP的array"} | 
-| out_trade_no {data-required data-indent=1} | string | 
-| complaint_time {data-required data-indent=1} | string | 
-| amount {data-required data-indent=1} | integer | 
-| payer_phone {data-indent=1} | string | 
-| complaint_detail {data-required data-indent=1} | string | 
+| offset {data-required} | integer | 分页开始位置
+| limit {data-required} | integer | 分页大小
+| total_count | integer | 投诉总条数
+| data | object[] {data-tooltip="对应PHP的array"} | 用户投诉信息详情
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
+| complaint_time {data-required data-indent=1} | string | 投诉时间
+| amount {data-required data-indent=1} | integer | 订单金额
+| payer_phone {data-indent=1} | string | 投诉人联系方式
+| complaint_detail {data-required data-indent=1} | string | 投诉详情
 | complaint_state {data-required data-indent=1} | string | 投诉单状态<br/>`PAYER_COMPLAINTED` \| `FROZENED` \| `FROZEN_FINISHED` \| `PAYER_CANCELED` \| `MERCHANT_REFUNDED` \| `SYSTEM_REFUNDED` \| `MANUAL_UNFROZEN` 枚举值之一
-| transaction_id {data-required data-indent=1} | string | 
-| frozen_end_time {data-indent=1} | string | 
-| sub_mchid {data-indent=1} | string | 
+| transaction_id {data-required data-indent=1} | string | 微信订单号
+| frozen_end_time {data-indent=1} | string | 冻结结束时间
+| sub_mchid {data-indent=1} | string | 特约商户号
 
 {.im-table #response}
 

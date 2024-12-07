@@ -11,8 +11,8 @@ description: 商户创建活动后，可以通过该接口增加支付有礼的�
 | --- | --- | ---
 | activity_id {data-required} | string | 活动id
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| merchant_id_list {data-indent=1} | string[] | 
-| add_request_no {data-indent=1} | string | 
+| merchant_id_list {data-indent=1} | string[] | 发券商户号
+| add_request_no {data-indent=1} | string | 请求业务单据号
 
 {.im-table #request}
 
@@ -97,11 +97,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| activity_id | string | 
-| add_time | string | 
-| invalid_merchant_id_list | object[] {data-tooltip="对应PHP的array"} | 
-| mchid {data-indent=1} | string | 
-| invalid_reason {data-indent=1} | string | 
+| activity_id | string | 活动id
+| add_time | string | 添加时间
+| invalid_merchant_id_list | object[] {data-tooltip="对应PHP的array"} | 未通过规则校验的发券商户号列表
+| mchid {data-indent=1} | string | 商户号
+| invalid_reason {data-indent=1} | string | 无效原因
 
 {.im-table #response}
 
