@@ -350,6 +350,7 @@ function openapiSidebar() {
                 )
               ],
             },
+            ...(depositSidebar()?.[0]?.items ?? []),
             {
               text: '微信车主服务',
               collapsed: true,
@@ -418,7 +419,6 @@ function openapiSidebar() {
                 ['完结速住订单', '/openapi/v2/wxv/finishhotelbill'],
               ].map(transArrayItem),
             },
-            ...(depositSidebar()?.[0]?.items ?? []),
           ],
         },
         {
@@ -1255,6 +1255,15 @@ function openapiSidebar() {
                 ['查询订单(商户订单号)', '/openapi/v3/vehicle/etc/transactions/out-trade-no/{out_trade_no}'],
                 ['查询订单(微信订单号)', '/openapi/v3/vehicle/etc/transactions/id/{transaction_id}'],
                 ['高速场景商户扣款', '/openapi/v3/vehicle/etc/transactions/highway'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '刷码乘车',
+              collapsed: true,
+              items: [
+                ['查询用户服务可用信息', '/openapi/v3/qrcode/user-services/contract-id/{contract_id}'],
+                ['扣费受理', '/openapi/v3/qrcode/transactions'],
+                ['查询订单', '/openapi/v3/qrcode/transactions/out-trade-no/{out_trade_no}'],
               ].map(transArrayItem),
             },
           ],

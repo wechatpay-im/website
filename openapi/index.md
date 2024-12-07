@@ -69,6 +69,14 @@ next:
 | [查询签约关系](/openapi/v2/papay/querycontract) | [查询签约关系](/openapi/v2/papay/partner/querycontract)
 | [申请扣款](/openapi/v2/pay/pappayapply) | [申请扣款](/openapi/v2/pay/partner/pappayapply)
 | [申请解约](/openapi/v2/papay/deletecontract) {colspan=2}
+| 酒店押金v2{rowspan=8} | [支付押金(付款码支付)](/openapi/v2/deposit/micropay) {colspan=2}
+| [支付押金(人脸支付)](/openapi/v2/deposit/facepay) {colspan=2}
+| [支付押金(统一下单)](/openapi/v2/deposit/unifiedorder) {colspan=2}
+| [查询订单](/openapi/v2/deposit/orderquery) {colspan=2}
+| [撤销订单](/openapi/v2/deposit/reverse) {colspan=2}
+| [消费押金](/openapi/v2/deposit/consume) {colspan=2}
+| [申请退款(押金)](/openapi/v2/deposit/refund) {colspan=2}
+| [查询退款(押金)](/openapi/v2/deposit/refundquery) {colspan=2}
 | 微信车主服务v2{rowspan=3} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)
@@ -83,6 +91,9 @@ next:
 | 免押速住v2{rowspan=3} | [创建速住订单](/openapi/v2/wxv/createhotelbill)
 | [查询速住订单](/openapi/v2/wxv/queryhotelbill)
 | [完结速住订单](/openapi/v2/wxv/finishhotelbill)
+| 清关报关v2{rowspan=3} | [提交订单附加信息](/openapi/v2/cgi-bin/mch/customs/customdeclareorder)
+| [查询订单附加信息](/openapi/v2/cgi-bin/mch/customs/customdeclarequery)
+| [重推订单附加信息](/openapi/v2/cgi-bin/mch/newcustoms/customdeclareredeclar)
 | 基础支付v3{rowspan=13} | [付款码支付](/openapi/v3/pay/transactions/codepay) | [付款码支付](/openapi/v3/pay/partner/transactions/codepay)
 | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
@@ -545,6 +556,11 @@ next:
 | 爱心餐v3{rowspan=3} | [查询爱心餐品牌信息](/openapi/v3/lovefeast/brands/{brand_id}) {colspan=2}
 | [查询用户捐赠单列表](/openapi/v3/lovefeast/users/{openid}/orders/brand-id/{brand_id}) {colspan=2}
 | [查询用户捐赠单详情](/openapi/v3/lovefeast/users/{openid}/orders/out-trade-no/{out_trade_no}) {colspan=2}
+| 清关报关v3{rowspan=5} | [提交报关申请](/openapi/v3/global/customs/orders#post)
+| [查询报关信息](/openapi/v3/global/customs/orders#get)
+| [修改报关信息](/openapi/v3/global/customs/orders#patch)
+| [重推报关信息](/openapi/v3/global/customs/redeclare)
+| [身份信息校验](/openapi/v3/global/customs/verify-certificate)
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.im-table}
