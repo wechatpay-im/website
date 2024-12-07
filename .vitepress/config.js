@@ -361,7 +361,6 @@ function openapiSidebar() {
                     ['用户入场通知', '/openapi/v2/vehicle/pay/notification'],
                     ['用户状态查询', '/openapi/v2/vehicle/pay/querystate'],
                     ['申请代扣', '/openapi/v2/vehicle/pay/payapply'],
-                    ['查询订单', '/openapi/v2/transit/queryorder'],
                   ].map(transArrayItem),
                 },
                 {
@@ -371,6 +370,29 @@ function openapiSidebar() {
                     ['用户入场通知', '/openapi/v2/vehicle/partnerpay/notification'],
                     ['用户状态查询', '/openapi/v2/vehicle/partnerpay/querystate'],
                     ['申请代扣', '/openapi/v2/vehicle/partnerpay/payapply'],
+                  ].map(transArrayItem),
+                },
+              ],
+            },
+            {
+              text: '乘车码代扣',
+              collapsed: true,
+              items: [
+                {
+                  text: '直连商户模式',
+                  collapsed: true,
+                  items: [
+                    ['用户状态查询', '/openapi/v2/transit/pay/querystate'],
+                    ['申请代扣', '/openapi/v2/transit/pay/payapply'],
+                    ['查询订单', '/openapi/v2/transit/queryorder'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '合作伙伴模式',
+                  collapsed: true,
+                  items: [
+                    ['用户状态查询', '/openapi/v2/transit/partnerpay/querystate'],
+                    ['申请代扣', '/openapi/v2/transit/partnerpay/payapply'],
                     ['查询订单', '/openapi/v2/transit/partnerpay/queryorder'],
                   ].map(transArrayItem),
                 },

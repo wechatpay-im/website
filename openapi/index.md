@@ -69,9 +69,11 @@ next:
 | [查询签约关系](/openapi/v2/papay/querycontract) | [查询签约关系](/openapi/v2/papay/partner/querycontract)
 | [申请扣款](/openapi/v2/pay/pappayapply) | [申请扣款](/openapi/v2/pay/partner/pappayapply)
 | [申请解约](/openapi/v2/papay/deletecontract) {colspan=2}
-| 微信车主服务v2{rowspan=4} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
+| 微信车主服务v2{rowspan=3} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)
+| 乘车码代扣v2 {rowspan=3} | [用户状态查询](/openapi/v2/transit/pay/querystate) | [用户状态查询](/openapi/v2/transit/partnerpay/querystate)
+| [申请扣款](/openapi/v2/transit/pay/payapply) | [申请扣款](/openapi/v2/transit/partnerpay/payapply)
 | [查询订单](/openapi/v2/transit/queryorder) | [查询订单](/openapi/v2/transit/partnerpay/queryorder)
 | 免押租借v2{rowspan=5} | [创建租借订单](/openapi/v2/wxv/createrentbill)
 | [查询租借订单](/openapi/v2/wxv/queryrentbill)
