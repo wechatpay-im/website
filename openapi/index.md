@@ -93,7 +93,7 @@ next:
 | [完结速住订单](/openapi/v2/wxv/finishhotelbill)
 | 清关报关v2{rowspan=3} | [提交订单附加信息](/openapi/v2/cgi-bin/mch/customs/customdeclareorder)
 | [查询订单附加信息](/openapi/v2/cgi-bin/mch/customs/customdeclarequery)
-| [重推订单附加信息](/openapi/v2/cgi-bin/mch/newcustoms/customdeclareredeclar)
+| [重推订单附加信息](/openapi/v2/cgi-bin/mch/newcustoms/customdeclareredeclare)
 | 基础支付v3{rowspan=13} | [付款码支付](/openapi/v3/pay/transactions/codepay) | [付款码支付](/openapi/v3/pay/partner/transactions/codepay)
 | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
