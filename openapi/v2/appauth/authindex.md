@@ -29,7 +29,7 @@ description: 使用标准OAuth2.0协议接入微信支付，在用户授权的�
 
 ::: code-group
 
-```php [标准Ps7]
+```php [标准PSR7]
 $entry = new \GuzzleHttp\Psr7\Uri('https://payapp.weixin.qq.com/appauth/authindex');
 
 $query = \GuzzleHttp\Psr7\Query::build([

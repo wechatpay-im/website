@@ -1571,7 +1571,7 @@ function oauthIdentifierSidebar() {
     {
       items: [
         {
-          text: '实名校验',
+          text: '实名校验/授权',
           collapsed: true,
           items: [
             ['授权获取code', '/openapi/v2/appauth/authindex'],
