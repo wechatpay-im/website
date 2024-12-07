@@ -7,7 +7,7 @@ description: 取得token后调用本接口验证微信用户的姓名和身份�
 
 {{ $frontmatter.description }}
 
-::: danger :no_entry_sign: {.im-deprecated}
+::: danger :closed_lock_with_key: {.im-privated}
 
 因为监管原因，本接口服务已于 `2021.11.10` (北京时间)停止开放，文档仅做留存参考。
 

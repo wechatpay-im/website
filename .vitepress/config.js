@@ -129,6 +129,8 @@ export default defineConfig({
       '/devkit/': divkitSidebar(),
       '/openapi/v2/applyment/': microMerchantMixedSidebar(),
       '/openapi/v2/fund/': microMerchantMixedSidebar(),
+      '/openapi/v2/appauth/': oauthIdentifierSidebar(),
+      '/openapi/v2/secsvc/': oauthIdentifierSidebar(),
       '/openapi/v2/risk/getcertficates': microMerchantMixedSidebar(),
       '/openapi/v2/mmpaymkttransfers/query_coupon_stock': microMerchantMixedSidebar(),
       '/openapi/v2/mmpaymkttransfers/querycouponsinfo': microMerchantMixedSidebar(),
@@ -1562,6 +1564,25 @@ function openapiSidebar() {
       ]
     },
   ];
+}
+
+function oauthIdentifierSidebar() {
+  return [
+    {
+      items: [
+        {
+          text: '实名校验',
+          collapsed: true,
+          items: [
+            ['授权获取code', '/openapi/v2/appauth/authindex'],
+            ['通过code换取accesstoken', '/openapi/v2/appauth/getaccesstoken'],
+            ['微信支付实名验证', '/openapi/v2/secsvc/realnameauth'],
+            ['微信支付实名授权', '/openapi/v2/secsvc/getrealnameinfo'],
+          ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
 }
 
 function depositSidebar() {
