@@ -1460,27 +1460,7 @@ function openapiSidebar() {
                 ['查询所有退款', '/openapi/v3/global/refunds#get'],
                 ['查询单笔退款(商户单号)', '/openapi/v3/global/refunds/out-refund-no/{out_refund_no}'],
                 ['查询单笔退款(平台单号)', '/openapi/v3/global/refunds/id/{refund_id}'],
-              ].map(transArrayItem).concat({
-                text: '可用版本',
-                collapsed: true,
-                items: [
-                  ['付款码支付', '/openapi/v3/transactions/micropay'],
-                  ['撤销订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}/reverse'],
-                  ['撤销订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}/reverse'],
-                  ['JSAPI下单', '/openapi/v3/transactions/jsapi'],
-                  ['APP下单', '/openapi/v3/transactions/app'],
-                  ['NATIVE下单', '/openapi/v3/transactions/native'],
-                  ['H5下单', '/openapi/v3/transactions/mweb'],
-                  ['查询订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}'],
-                  ['查询订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}'],
-                  ['关闭订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}/close'],
-                  ['关闭订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}/close'],
-                  ['申请退款', '/openapi/v3/refunds#post'],
-                  ['查询所有退款', '/openapi/v3/refunds#get'],
-                  ['查询单笔退款(商户单号)', '/openapi/v3/refunds/out-refund-no/{out_refund_no}'],
-                  ['查询单笔退款(平台单号)', '/openapi/v3/refunds/id/{refund_id}'],
-                ].map(transArrayItem),
-              }),
+              ].map(transArrayItem),
             },
             {
               text: '分账',
@@ -1498,6 +1478,7 @@ function openapiSidebar() {
                 ['添加分账接收方', '/openapi/v3/global/profit-sharing/receivers#post'],
                 ['删除分账接收方', '/openapi/v3/global/profit-sharing/receivers#delete'],
                 ['查询分账接收方添加结果', '/openapi/v3/global/profit-sharing/receivers/{account}'],
+                ['上传资证图片文件', '/openapi/v3/global/merchant-storage/file/upload'],
               ].map(transArrayItem),
             },
             {
@@ -1524,13 +1505,7 @@ function openapiSidebar() {
               items: [
                 ['下载交易账单文件', '/openapi/v3/global/statements'],
                 ['查询结算资金明细', '/openapi/v3/global/settle/settlements'],
-              ].map(transArrayItem).concat({
-                text: '可用版本',
-                collapsed: true,
-                items: [
-                  ['下载交易账单文件', '/openapi/v3/statements'],
-                ].map(transArrayItem),
-              }),
+              ].map(transArrayItem),
             },
             {
               text: '清关报关',
@@ -1541,17 +1516,62 @@ function openapiSidebar() {
                 ['修改报关信息', '/openapi/v3/global/customs/orders#patch'],
                 ['重推报关信息', '/openapi/v3/global/customs/redeclare'],
                 ['身份信息校验', '/openapi/v3/global/customs/verify-certificate'],
-              ].map(transArrayItem).concat({
-                text: '可用版本',
-                collapsed: true,
-                items: [
-                  ['提交报关申请', '/openapi/v3/customs/orders#post'],
-                  ['查询报关信息', '/openapi/v3/customs/orders#get'],
-                  ['修改报关信息', '/openapi/v3/customs/orders#patch'],
-                  ['重推报关信息', '/openapi/v3/customs/redeclare'],
-                  ['身份信息校验', '/openapi/v3/customs/verify-certificate'],
-                ].map(transArrayItem),
-              }),
+              ].map(transArrayItem),
+            },
+            {
+              text: '可用版本',
+              collapsed: true,
+              items: [
+                {
+                  text: '进件(融合钱包)',
+                  collapsed: true,
+                  items: [
+                    ['进件子商户', '/openapi/v3/merchants'],
+                    ['查询子商户', '/openapi/v3/merchants/{sub_mchid}#get'],
+                    ['修改子商户', '/openapi/v3/merchants/{sub_mchid}#patch'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '基础支付',
+                  collapsed: true,
+                  items: [
+                    ['付款码支付', '/openapi/v3/transactions/micropay'],
+                    ['撤销订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}/reverse'],
+                    ['撤销订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}/reverse'],
+                    ['JSAPI下单', '/openapi/v3/transactions/jsapi'],
+                    ['APP下单', '/openapi/v3/transactions/app'],
+                    ['NATIVE下单', '/openapi/v3/transactions/native'],
+                    ['H5下单', '/openapi/v3/transactions/mweb'],
+                    ['查询订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}'],
+                    ['查询订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}'],
+                    ['关闭订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}/close'],
+                    ['关闭订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}/close'],
+                    ['申请退款', '/openapi/v3/refunds#post'],
+                    ['查询所有退款', '/openapi/v3/refunds#get'],
+                    ['查询单笔退款(商户单号)', '/openapi/v3/refunds/out-refund-no/{out_refund_no}'],
+                    ['查询单笔退款(平台单号)', '/openapi/v3/refunds/id/{refund_id}'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '账单',
+                  collapsed: true,
+                  items: [
+                    ['下载交易账单文件', '/openapi/v3/statements'],
+                    ['查询结算资金明细', '/openapi/v3/settle/settlements'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '清关报关',
+                  collapsed: true,
+                  items: [
+                    ['提交报关申请', '/openapi/v3/customs/orders#post'],
+                    ['查询报关信息', '/openapi/v3/customs/orders#get'],
+                    ['修改报关信息', '/openapi/v3/customs/orders#patch'],
+                    ['重推报关信息', '/openapi/v3/customs/redeclare'],
+                    ['身份信息校验', '/openapi/v3/customs/verify-certificate'],
+                  ].map(transArrayItem),
+                },
+              ],
             },
             transArrayItem(
               ['获取平台证书列表', '/openapi/v3/global/certificates'],

@@ -12,7 +12,7 @@ description: 部分微信支付境外业务指定商户需要上传文件资料�
 | base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
 | body {data-required} | object | `multipart/form-data` 数据结构
 | file {data-required data-indent=1} | object | 文件信息。文件支持PDF、JPG、BMP、PNG格式，文件大小不能超过5M。
-| meta {data-required data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`sha256`、`filename`
+| meta {data-required data-indent=1} | string | 媒体文件元信息，使用json表示，包含两个参数：`digest`、`filename`
 | {colspan=3 .im-table-line}
 | digest {data-required data-indent=2} | string | 文件的`sha256`摘要
 | filename {data-required data-indent=2} | string | 商户上传的文件的名称，商户自定义，必须以PDF、JPG、BMP、PNG为后缀
