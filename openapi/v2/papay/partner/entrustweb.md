@@ -12,6 +12,8 @@ description: 商户可以通过请求此接口唤起微信委托代扣的页面�
 | query | object {data-required data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | appid {data-required data-indent=1} | string | 应用ID
 | mch_id {data-required data-indent=1} | string | 商户号
+| sub_appid {data-indent=1} | string | 子商户应用ID
+| sub_mch_id {data-required data-indent=1} | string | 子商户号
 | plan_id {data-required data-indent=1} | integer | 模板id
 | contract_code {data-required data-indent=1} | string | 签约协议号
 | request_serial {data-required data-indent=1} | integer | 请求序列号
@@ -21,7 +23,6 @@ description: 商户可以通过请求此接口唤起微信委托代扣的页面�
 | sign {data-required data-indent=1} | string | 签名
 | timestamp {data-required data-indent=1} | string | 时间戳
 | return_web {data-indent=1} | integer | 返回web<br/>`1` 枚举值
-| fragment {data-required} | string | 固定填`#wechat_redirect`
 
 {.im-table #request}
 
@@ -33,9 +34,11 @@ use WeChatPay\Formatter;
 use GuzzleHttp\Psr7\Uri;
 use GuzzleHttp\Psr7\Query;
 
-$params =[
+$params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -53,7 +56,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$entry = new Uri('https://api.weixin.qq.com/papay/entrustweb');
+$entry = new Uri('https://api.weixin.qq.com/papay/partner/entrustweb');
 $query = Query::build($params);
 
 // 30x返回此变量即可
@@ -68,4 +71,4 @@ $uri = $entry->withQuery($query)->withFragment('#wechat_redirect');
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_1.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter5_1.shtml)

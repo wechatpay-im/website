@@ -339,9 +339,9 @@ function openapiSidebar() {
                   text: '合作伙伴模式',
                   collapsed: true,
                   items: [
-                    ['公众号纯签约', '/openapi/v2/pay/partner/entrustweb'],
-                    ['H5纯签约', '/openapi/v2/pay/partner/h5entrustweb'],
-                    ['APP预签约', '/openapi/v2/pay/partner/preentrustweb'],
+                    ['公众号纯签约', '/openapi/v2/papay/partner/entrustweb'],
+                    ['H5纯签约', '/openapi/v2/papay/partner/h5entrustweb'],
+                    ['APP预签约', '/openapi/v2/papay/partner/preentrustweb'],
                     ['查询签约关系', '/openapi/v2/papay/partner/querycontract'],
                     ['申请扣款', '/openapi/v2/pay/partner/pappayapply'],
                     ['查询订单', '/openapi/v2/papay/partner/paporderquery'],

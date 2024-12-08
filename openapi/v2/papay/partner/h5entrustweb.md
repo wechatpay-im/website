@@ -12,6 +12,8 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 | query | object {data-required data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | appid {data-required data-indent=1} | string | 应用ID
 | mch_id {data-required data-indent=1} | string | 商户号
+| sub_appid {data-indent=1} | string | 子商户应用ID
+| sub_mch_id {data-required data-indent=1} | string | 子商户号
 | plan_id {data-required data-indent=1} | string | 模板id
 | contract_code {data-required data-indent=1} | string | 签约协议号
 | request_serial {data-required data-indent=1} | integer | 请求序列号
@@ -21,6 +23,14 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 | sign {data-required data-indent=1} | string | 签名
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | timestamp {data-required data-indent=1} | string | 时间戳
+| clientip {data-required data-indent=1} | string | 客户端 IP
+| deviceid {data-indent=1} | string | 设备ID
+| mobile {data-indent=1} | string | 手机号
+| email {data-indent=1} | string | 邮箱地址
+| qq {data-indent=1} | string | QQ号
+| openid {data-indent=1} | string | 微信openID
+| creid {data-indent=1} | string | 身份证号
+| outerid {data-indent=1} | string | 商户侧用户标识
 | return_appid {data-indent=1} | string | 回调应用appid
 
 {.im-table #request}
@@ -34,6 +44,8 @@ use WeChatPay\Formatter;
 $params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -59,7 +71,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$instance->v2->papay->h5entrustweb->getAsync([
+$instance->v2->papay->partner->h5entrustweb->getAsync([
   'query' => $params
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,6 +87,8 @@ use WeChatPay\Formatter;
 $params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -100,7 +114,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$instance->chain('v2/papay/h5entrustweb')->getAsync([
+$instance->chain('v2/papay/partner/h5entrustweb')->getAsync([
   'query' => $params
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -116,6 +130,8 @@ use WeChatPay\Formatter;
 $params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -141,7 +157,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$instance['v2/papay/h5entrustweb']->getAsync([
+$instance['v2/papay/partner/h5entrustweb']->getAsync([
   'query' => $params
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -157,6 +173,8 @@ use WeChatPay\Formatter;
 $params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -182,7 +200,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$response = $instance->v2->papay->h5entrustweb->get([
+$response = $instance->v2->papay->partner->h5entrustweb->get([
   'query' => $params
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -195,6 +213,8 @@ use WeChatPay\Formatter;
 $params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -220,7 +240,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$response = $instance->chain('v2/papay/h5entrustweb')->get([
+$response = $instance->chain('v2/papay/partner/h5entrustweb')->get([
   'query' => $params
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -233,6 +253,8 @@ use WeChatPay\Formatter;
 $params = [
   'appid'                    => 'wxcbda96de0b165486',
   'mch_id'                   => '1200009811',
+  'sub_appid'                => 'wxcbda96de0b165489',
+  'sub_mch_id'               => '1900000109',
   'plan_id'                  => '12535',
   'contract_code'            => '100000',
   'request_serial'           => '1000',
@@ -258,7 +280,7 @@ $params['sign'] = Hash::sign(
   $apiv2Key
 );
 
-$response = $instance['v2/papay/h5entrustweb']->get([
+$response = $instance['v2/papay/partner/h5entrustweb']->get([
   'query' => $params
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -276,4 +298,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter5_4.shtml)
