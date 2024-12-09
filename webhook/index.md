@@ -48,6 +48,7 @@ next:
 | JSON {rowspan=3} | [商家转账批次完成通知](/webhook/v3/MCHTRANSFER.BATCH.FINISHED)
 | [商家转账批次关闭通知](/webhook/v3/MCHTRANSFER.BATCH.CLOSED)
 | [商家转账单据终态通知](/webhook/v3/MCHTRANSFER.BILL.FINISHED)
+| JSON {rowspan=1} | | [预约提现状态变更通知](/webhook/v3/MCHWITHDRAW.CHANGE)
 | JSON {rowspan=2} | | [收付通合单代扣签约成功通知](/webhook/v3/ECOMMERCE_ENTRUST.SIGN)
 | | [收付通合单代扣解约成功通知](/webhook/v3/ECOMMERCE_ENTRUST.TERMINATE)
 | JSON {rowspan=3} | | [收付通充值成功通知](/webhook/v3/RECHARGE.SUCCESS)

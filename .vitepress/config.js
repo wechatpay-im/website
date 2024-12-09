@@ -1933,6 +1933,13 @@ function webhookSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '提现',
+          collapsed: true,
+          items: [
+            ['预约提现状态变更通知', '/webhook/v3/MCHWITHDRAW.CHANGE'],
+          ].map(transArrayItem),
+        },
+        {
           text: '平台收付通',
           collapsed: true,
           items: [
