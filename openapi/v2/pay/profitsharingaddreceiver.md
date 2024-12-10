@@ -19,9 +19,9 @@ description: 服务商代子商户发起添加分账接收方请求，后续可�
 | {colspan=3 .im-table-line}
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=2} | string | 分账接收方账号
-| amount {data-required data-indent=2} | number | 分账金额
-| description {data-required data-indent=2} | string | 分账描述
 | name {data-indent=2} | string | 分账个人接收方姓名
+| relation_type {data-indent=2} | string | 与分账方的关系类型<br/>`SERVICE_PROVIDER` \| `STORE` \| `STAFF` \| `STORE_OWNER` \| `PARTNER` \| `HEADQUARTER` \| `BRAND` \| `DISTRIBUTOR` \| `USER` \| `SUPPLIER` \| `CUSTOM` \| `SUPPLIER` \| `DISTRIBUTOR` \| `SERVICE_PROVIDER` \| `PLATFORM` \| `STAFF` \| `OTHERS` 枚举值之一
+| custom_relation {data-indent=2} | string | 自定义的分账关系
 
 {.im-table #request}
 
@@ -35,7 +35,13 @@ $instance->v2->pay->profitsharingaddreceiver->postAsync([
     'appid'      => 'wx8888888888888888',
     'sub_appid'  => 'wx8888888888888888',
     'sign_type'  => 'HMAC-SHA256',
-    'receiver'   => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称","relation_type": "STORE_OWNER"}',
+    'receiver'   => \json_encode([
+      'type'            => 'MERCHANT_ID',
+      'account'         => '190001001',
+      'name'            => '示例商户全称',
+      'relation_type'   => 'SERVICE_PROVIDER',
+      'custom_relation' => '代理商',
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,7 +58,13 @@ $instance->chain('v2/pay/profitsharingaddreceiver')->postAsync([
     'appid'      => 'wx8888888888888888',
     'sub_appid'  => 'wx8888888888888888',
     'sign_type'  => 'HMAC-SHA256',
-    'receiver'   => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称","relation_type": "STORE_OWNER"}',
+    'receiver'   => \json_encode([
+      'type'            => 'MERCHANT_ID',
+      'account'         => '190001001',
+      'name'            => '示例商户全称',
+      'relation_type'   => 'SERVICE_PROVIDER',
+      'custom_relation' => '代理商',
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,7 +81,13 @@ $instance['v2/pay/profitsharingaddreceiver']->postAsync([
     'appid'      => 'wx8888888888888888',
     'sub_appid'  => 'wx8888888888888888',
     'sign_type'  => 'HMAC-SHA256',
-    'receiver'   => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称","relation_type": "STORE_OWNER"}',
+    'receiver'   => \json_encode([
+      'type'            => 'MERCHANT_ID',
+      'account'         => '190001001',
+      'name'            => '示例商户全称',
+      'relation_type'   => 'SERVICE_PROVIDER',
+      'custom_relation' => '代理商',
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,7 +104,13 @@ $response = $instance->v2->pay->profitsharingaddreceiver->post([
     'appid'      => 'wx8888888888888888',
     'sub_appid'  => 'wx8888888888888888',
     'sign_type'  => 'HMAC-SHA256',
-    'receiver'   => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称","relation_type": "STORE_OWNER"}',
+    'receiver'   => \json_encode([
+      'type'            => 'MERCHANT_ID',
+      'account'         => '190001001',
+      'name'            => '示例商户全称',
+      'relation_type'   => 'SERVICE_PROVIDER',
+      'custom_relation' => '代理商',
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -100,7 +124,13 @@ $response = $instance->chain('v2/pay/profitsharingaddreceiver')->post([
     'appid'      => 'wx8888888888888888',
     'sub_appid'  => 'wx8888888888888888',
     'sign_type'  => 'HMAC-SHA256',
-    'receiver'   => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称","relation_type": "STORE_OWNER"}',
+    'receiver'   => \json_encode([
+      'type'            => 'MERCHANT_ID',
+      'account'         => '190001001',
+      'name'            => '示例商户全称',
+      'relation_type'   => 'SERVICE_PROVIDER',
+      'custom_relation' => '代理商',
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -114,7 +144,13 @@ $response = $instance['v2/pay/profitsharingaddreceiver']->post([
     'appid'      => 'wx8888888888888888',
     'sub_appid'  => 'wx8888888888888888',
     'sign_type'  => 'HMAC-SHA256',
-    'receiver'   => '{"type": "MERCHANT_ID","account": "190001001","name": "示例商户全称","relation_type": "STORE_OWNER"}',
+    'receiver'   => \json_encode([
+      'type'            => 'MERCHANT_ID',
+      'account'         => '190001001',
+      'name'            => '示例商户全称',
+      'relation_type'   => 'SERVICE_PROVIDER',
+      'custom_relation' => '代理商',
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

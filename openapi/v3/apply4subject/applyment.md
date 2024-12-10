@@ -111,7 +111,10 @@ $instance->v3->apply4subject->applyment->postAsync([
         'merchant_name'      => '',
         'legal_person'       => '',
         'company_address'    => '',
-        'licence_valid_date' => '["1970-01-01","forever"]',
+        'licence_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'certificate_info'         => [
         'cert_type'       => 'CERTIFICATE_TYPE_2388',
@@ -120,7 +123,10 @@ $instance->v3->apply4subject->applyment->postAsync([
         'merchant_name'   => '',
         'legal_person'    => '',
         'company_address' => '',
-        'cert_valid_date' => '["1970-01-01","forever"]',
+        'cert_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'company_prove_copy'       => '',
       'assist_prove_info'        => [
@@ -146,7 +152,10 @@ $instance->v3->apply4subject->applyment->postAsync([
       'authorize_letter_copy'     => '',
       'identification_name'       => '',
       'identification_number'     => '',
-      'identification_valid_date' => '["1970-01-01","forever"]',
+      'identification_valid_date' => \json_encode([
+        '1970-01-01',
+        'forever',
+      ]),
       'identification_address'    => '',
       'identification_front_copy' => '',
       'identification_back_copy'  => '',
@@ -204,7 +213,10 @@ $instance->chain('v3/apply4subject/applyment')->postAsync([
         'merchant_name'      => '',
         'legal_person'       => '',
         'company_address'    => '',
-        'licence_valid_date' => '["1970-01-01","forever"]',
+        'licence_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'certificate_info'         => [
         'cert_type'       => 'CERTIFICATE_TYPE_2388',
@@ -213,7 +225,10 @@ $instance->chain('v3/apply4subject/applyment')->postAsync([
         'merchant_name'   => '',
         'legal_person'    => '',
         'company_address' => '',
-        'cert_valid_date' => '["1970-01-01","forever"]',
+        'cert_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'company_prove_copy'       => '',
       'assist_prove_info'        => [
@@ -239,7 +254,10 @@ $instance->chain('v3/apply4subject/applyment')->postAsync([
       'authorize_letter_copy'     => '',
       'identification_name'       => '',
       'identification_number'     => '',
-      'identification_valid_date' => '["1970-01-01","forever"]',
+      'identification_valid_date' => \json_encode([
+        '1970-01-01',
+        'forever',
+      ]),
       'identification_address'    => '',
       'identification_front_copy' => '',
       'identification_back_copy'  => '',
@@ -297,7 +315,10 @@ $instance['v3/apply4subject/applyment']->postAsync([
         'merchant_name'      => '',
         'legal_person'       => '',
         'company_address'    => '',
-        'licence_valid_date' => '["1970-01-01","forever"]',
+        'licence_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'certificate_info'         => [
         'cert_type'       => 'CERTIFICATE_TYPE_2388',
@@ -306,7 +327,10 @@ $instance['v3/apply4subject/applyment']->postAsync([
         'merchant_name'   => '',
         'legal_person'    => '',
         'company_address' => '',
-        'cert_valid_date' => '["1970-01-01","forever"]',
+        'cert_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'company_prove_copy'       => '',
       'assist_prove_info'        => [
@@ -332,7 +356,10 @@ $instance['v3/apply4subject/applyment']->postAsync([
       'authorize_letter_copy'     => '',
       'identification_name'       => '',
       'identification_number'     => '',
-      'identification_valid_date' => '["1970-01-01","forever"]',
+      'identification_valid_date' => \json_encode([
+        '1970-01-01',
+        'forever',
+      ]),
       'identification_address'    => '',
       'identification_front_copy' => '',
       'identification_back_copy'  => '',
@@ -390,7 +417,10 @@ $response = $instance->v3->apply4subject->applyment->post([
         'merchant_name'      => '',
         'legal_person'       => '',
         'company_address'    => '',
-        'licence_valid_date' => '["1970-01-01","forever"]',
+        'licence_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'certificate_info'         => [
         'cert_type'       => 'CERTIFICATE_TYPE_2388',
@@ -399,7 +429,10 @@ $response = $instance->v3->apply4subject->applyment->post([
         'merchant_name'   => '',
         'legal_person'    => '',
         'company_address' => '',
-        'cert_valid_date' => '["1970-01-01","forever"]',
+        'cert_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'company_prove_copy'       => '',
       'assist_prove_info'        => [
@@ -425,7 +458,10 @@ $response = $instance->v3->apply4subject->applyment->post([
       'authorize_letter_copy'     => '',
       'identification_name'       => '',
       'identification_number'     => '',
-      'identification_valid_date' => '["1970-01-01","forever"]',
+      'identification_valid_date' => \json_encode([
+        '1970-01-01',
+        'forever',
+      ]),
       'identification_address'    => '',
       'identification_front_copy' => '',
       'identification_back_copy'  => '',
@@ -480,7 +516,10 @@ $response = $instance->chain('v3/apply4subject/applyment')->post([
         'merchant_name'      => '',
         'legal_person'       => '',
         'company_address'    => '',
-        'licence_valid_date' => '["1970-01-01","forever"]',
+        'licence_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'certificate_info'         => [
         'cert_type'       => 'CERTIFICATE_TYPE_2388',
@@ -489,7 +528,10 @@ $response = $instance->chain('v3/apply4subject/applyment')->post([
         'merchant_name'   => '',
         'legal_person'    => '',
         'company_address' => '',
-        'cert_valid_date' => '["1970-01-01","forever"]',
+        'cert_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'company_prove_copy'       => '',
       'assist_prove_info'        => [
@@ -515,7 +557,10 @@ $response = $instance->chain('v3/apply4subject/applyment')->post([
       'authorize_letter_copy'     => '',
       'identification_name'       => '',
       'identification_number'     => '',
-      'identification_valid_date' => '["1970-01-01","forever"]',
+      'identification_valid_date' => \json_encode([
+        '1970-01-01',
+        'forever',
+      ]),
       'identification_address'    => '',
       'identification_front_copy' => '',
       'identification_back_copy'  => '',
@@ -570,7 +615,10 @@ $response = $instance['v3/apply4subject/applyment']->post([
         'merchant_name'      => '',
         'legal_person'       => '',
         'company_address'    => '',
-        'licence_valid_date' => '["1970-01-01","forever"]',
+        'licence_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'certificate_info'         => [
         'cert_type'       => 'CERTIFICATE_TYPE_2388',
@@ -579,7 +627,10 @@ $response = $instance['v3/apply4subject/applyment']->post([
         'merchant_name'   => '',
         'legal_person'    => '',
         'company_address' => '',
-        'cert_valid_date' => '["1970-01-01","forever"]',
+        'cert_valid_date' => \json_encode([
+          '1970-01-01',
+          'forever',
+        ]),
       ],
       'company_prove_copy'       => '',
       'assist_prove_info'        => [
@@ -605,7 +656,10 @@ $response = $instance['v3/apply4subject/applyment']->post([
       'authorize_letter_copy'     => '',
       'identification_name'       => '',
       'identification_number'     => '',
-      'identification_valid_date' => '["1970-01-01","forever"]',
+      'identification_valid_date' => \json_encode([
+        '1970-01-01',
+        'forever',
+      ]),
       'identification_address'    => '',
       'identification_front_copy' => '',
       'identification_back_copy'  => '',

@@ -7,6 +7,12 @@ description: 合单支付订单只能使用此合单关单api完成关单。调�
 
 {{ $frontmatter.description }}
 
+::: danger :closed_lock_with_key: {.im-privated}
+
+本接口服务已于 `2021.09.01` (北京时间)停止开放，文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
@@ -31,7 +37,10 @@ $instance->v2->pay->closecombinedorder->postAsync([
     'combine_mch_id'       => '1900000109',
     'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list'       => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
+    'sub_order_list'       => \json_encode([[
+      'mchid'        => '1900009001',
+      'out_trade_no' => 'OD201708030001',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,7 +56,10 @@ $instance->chain('v2/pay/closecombinedorder')->postAsync([
     'combine_mch_id'       => '1900000109',
     'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list'       => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
+    'sub_order_list'       => \json_encode([[
+      'mchid'        => '1900009001',
+      'out_trade_no' => 'OD201708030001',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,7 +75,10 @@ $instance['v2/pay/closecombinedorder']->postAsync([
     'combine_mch_id'       => '1900000109',
     'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list'       => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
+    'sub_order_list'       => \json_encode([[
+      'mchid'        => '1900009001',
+      'out_trade_no' => 'OD201708030001',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,7 +94,10 @@ $response = $instance->v2->pay->closecombinedorder->post([
     'combine_mch_id'       => '1900000109',
     'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list'       => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
+    'sub_order_list'       => \json_encode([[
+      'mchid'        => '1900009001',
+      'out_trade_no' => 'OD201708030001',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -92,7 +110,10 @@ $response = $instance->chain('v2/pay/closecombinedorder')->post([
     'combine_mch_id'       => '1900000109',
     'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list'       => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
+    'sub_order_list'       => \json_encode([[
+      'mchid'        => '1900009001',
+      'out_trade_no' => 'OD201708030001',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -105,7 +126,10 @@ $response = $instance['v2/pay/closecombinedorder']->post([
     'combine_mch_id'       => '1900000109',
     'sign_type'            => 'HMAC-SHA256',
     'combine_out_trade_no' => '1217752501201407033233368018',
-    'sub_order_list'       => '[{"mch_id": "1900009001","out_trade_no": "OD201708030001"}]',
+    'sub_order_list'       => \json_encode([[
+      'mchid'        => '1900009001',
+      'out_trade_no' => 'OD201708030001',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

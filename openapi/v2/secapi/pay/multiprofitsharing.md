@@ -42,7 +42,13 @@ $instance->v2->secapi->pay->multiprofitsharing->postAsync([
     'sign_type'      => 'HMAC-SHA256',
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
-    'receivers'      => '[{"type": "MERCHANT_ID","account": "190001001","amount": 100,"description": "分到商户"}, {"type": "PERSONAL_OPENID","account": "86693952","amount": 888,"description": "分到个人"}]',
+    'receivers'      => \json_encode([[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '190001001',
+      'amount'      => 100,
+      'description' => '分到商户',
+      'name'        => '分到个人',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,7 +68,13 @@ $instance->chain('v2/secapi/pay/multiprofitsharing')->postAsync([
     'sign_type'      => 'HMAC-SHA256',
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
-    'receivers'      => '[{"type": "MERCHANT_ID","account": "190001001","amount": 100,"description": "分到商户"}, {"type": "PERSONAL_OPENID","account": "86693952","amount": 888,"description": "分到个人"}]',
+    'receivers'      => \json_encode([[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '190001001',
+      'amount'      => 100,
+      'description' => '分到商户',
+      'name'        => '分到个人',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -82,7 +94,13 @@ $instance['v2/secapi/pay/multiprofitsharing']->postAsync([
     'sign_type'      => 'HMAC-SHA256',
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
-    'receivers'      => '[{"type": "MERCHANT_ID","account": "190001001","amount": 100,"description": "分到商户"}, {"type": "PERSONAL_OPENID","account": "86693952","amount": 888,"description": "分到个人"}]',
+    'receivers'      => \json_encode([[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '190001001',
+      'amount'      => 100,
+      'description' => '分到商户',
+      'name'        => '分到个人',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -102,7 +120,13 @@ $response = $instance->v2->secapi->pay->multiprofitsharing->post([
     'sign_type'      => 'HMAC-SHA256',
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
-    'receivers'      => '[{"type": "MERCHANT_ID","account": "190001001","amount": 100,"description": "分到商户"}, {"type": "PERSONAL_OPENID","account": "86693952","amount": 888,"description": "分到个人"}]',
+    'receivers'      => \json_encode([[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '190001001',
+      'amount'      => 100,
+      'description' => '分到商户',
+      'name'        => '分到个人',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -119,7 +143,13 @@ $response = $instance->chain('v2/secapi/pay/multiprofitsharing')->post([
     'sign_type'      => 'HMAC-SHA256',
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
-    'receivers'      => '[{"type": "MERCHANT_ID","account": "190001001","amount": 100,"description": "分到商户"}, {"type": "PERSONAL_OPENID","account": "86693952","amount": 888,"description": "分到个人"}]',
+    'receivers'      => \json_encode([[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '190001001',
+      'amount'      => 100,
+      'description' => '分到商户',
+      'name'        => '分到个人',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -136,7 +166,13 @@ $response = $instance['v2/secapi/pay/multiprofitsharing']->post([
     'sign_type'      => 'HMAC-SHA256',
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
-    'receivers'      => '[{"type": "MERCHANT_ID","account": "190001001","amount": 100,"description": "分到商户"}, {"type": "PERSONAL_OPENID","account": "86693952","amount": 888,"description": "分到个人"}]',
+    'receivers'      => \json_encode([[
+      'type'        => 'MERCHANT_ID',
+      'account'     => '190001001',
+      'amount'      => 100,
+      'description' => '分到商户',
+      'name'        => '分到个人',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

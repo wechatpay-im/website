@@ -77,7 +77,11 @@ $instance->v2->secapi->mch->_modifyinstitutionsub_->postAsync([
     'office_account'                  => 'wx8888888888888888',
     'mini_program'                    => 'wx8888888888888888',
     'store_address'                   => '广东省深圳市南山区科技中一道10000号',
-    'store_photos'                    => '["Media_id1","Media_id2","Media_id3"]',
+    'store_photos'                    => \json_encode([
+      'Media_id1',
+      'Media_id2',
+      'Media_id3',
+    ]),
     'director_name'                   => 'BobZhang',
     'director_id_number'              => '5555—8888',
     'principal_name'                  => 'BobZhang',
@@ -89,7 +93,10 @@ $instance->v2->secapi->mch->_modifyinstitutionsub_->postAsync([
     'settlement_bank_number'          => '555588889999',
     'apply_h5_payment'                => 'YES',
     'h5_website_url'                  => 'https://qq.com',
-    'h5_domains'                      => '["www.qq.com","www.weixin.com"]',
+    'h5_domains'                      => \json_encode([
+      'www.qq.com',
+      'www.weixin.com',
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -122,7 +129,11 @@ $instance->chain('v2/secapi/mch/{modifyinstitutionsub}')->postAsync([
     'office_account'                  => 'wx8888888888888888',
     'mini_program'                    => 'wx8888888888888888',
     'store_address'                   => '广东省深圳市南山区科技中一道10000号',
-    'store_photos'                    => '["Media_id1","Media_id2","Media_id3"]',
+    'store_photos'                    => \json_encode([
+      'Media_id1',
+      'Media_id2',
+      'Media_id3',
+    ]),
     'director_name'                   => 'BobZhang',
     'director_id_number'              => '5555—8888',
     'principal_name'                  => 'BobZhang',
@@ -134,7 +145,10 @@ $instance->chain('v2/secapi/mch/{modifyinstitutionsub}')->postAsync([
     'settlement_bank_number'          => '555588889999',
     'apply_h5_payment'                => 'YES',
     'h5_website_url'                  => 'https://qq.com',
-    'h5_domains'                      => '["www.qq.com","www.weixin.com"]',
+    'h5_domains'                      => \json_encode([
+      'www.qq.com',
+      'www.weixin.com',
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -167,7 +181,11 @@ $instance['v2/secapi/mch/{modifyinstitutionsub}']->postAsync([
     'office_account'                  => 'wx8888888888888888',
     'mini_program'                    => 'wx8888888888888888',
     'store_address'                   => '广东省深圳市南山区科技中一道10000号',
-    'store_photos'                    => '["Media_id1","Media_id2","Media_id3"]',
+    'store_photos'                    => \json_encode([
+      'Media_id1',
+      'Media_id2',
+      'Media_id3',
+    ]),
     'director_name'                   => 'BobZhang',
     'director_id_number'              => '5555—8888',
     'principal_name'                  => 'BobZhang',
@@ -179,7 +197,10 @@ $instance['v2/secapi/mch/{modifyinstitutionsub}']->postAsync([
     'settlement_bank_number'          => '555588889999',
     'apply_h5_payment'                => 'YES',
     'h5_website_url'                  => 'https://qq.com',
-    'h5_domains'                      => '["www.qq.com","www.weixin.com"]',
+    'h5_domains'                      => \json_encode([
+      'www.qq.com',
+      'www.weixin.com',
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -212,7 +233,11 @@ $response = $instance->v2->secapi->mch->_modifyinstitutionsub_->post([
     'office_account'                  => 'wx8888888888888888',
     'mini_program'                    => 'wx8888888888888888',
     'store_address'                   => '广东省深圳市南山区科技中一道10000号',
-    'store_photos'                    => '["Media_id1","Media_id2","Media_id3"]',
+    'store_photos'                    => \json_encode([
+      'Media_id1',
+      'Media_id2',
+      'Media_id3',
+    ]),
     'director_name'                   => 'BobZhang',
     'director_id_number'              => '5555—8888',
     'principal_name'                  => 'BobZhang',
@@ -224,7 +249,10 @@ $response = $instance->v2->secapi->mch->_modifyinstitutionsub_->post([
     'settlement_bank_number'          => '555588889999',
     'apply_h5_payment'                => 'YES',
     'h5_website_url'                  => 'https://qq.com',
-    'h5_domains'                      => '["www.qq.com","www.weixin.com"]',
+    'h5_domains'                      => \json_encode([
+      'www.qq.com',
+      'www.weixin.com',
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -254,7 +282,11 @@ $response = $instance->chain('v2/secapi/mch/{modifyinstitutionsub}')->post([
     'office_account'                  => 'wx8888888888888888',
     'mini_program'                    => 'wx8888888888888888',
     'store_address'                   => '广东省深圳市南山区科技中一道10000号',
-    'store_photos'                    => '["Media_id1","Media_id2","Media_id3"]',
+    'store_photos'                    => \json_encode([
+      'Media_id1',
+      'Media_id2',
+      'Media_id3',
+    ]),
     'director_name'                   => 'BobZhang',
     'director_id_number'              => '5555—8888',
     'principal_name'                  => 'BobZhang',
@@ -266,7 +298,10 @@ $response = $instance->chain('v2/secapi/mch/{modifyinstitutionsub}')->post([
     'settlement_bank_number'          => '555588889999',
     'apply_h5_payment'                => 'YES',
     'h5_website_url'                  => 'https://qq.com',
-    'h5_domains'                      => '["www.qq.com","www.weixin.com"]',
+    'h5_domains'                      => \json_encode([
+      'www.qq.com',
+      'www.weixin.com',
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -296,7 +331,11 @@ $response = $instance['v2/secapi/mch/{modifyinstitutionsub}']->post([
     'office_account'                  => 'wx8888888888888888',
     'mini_program'                    => 'wx8888888888888888',
     'store_address'                   => '广东省深圳市南山区科技中一道10000号',
-    'store_photos'                    => '["Media_id1","Media_id2","Media_id3"]',
+    'store_photos'                    => \json_encode([
+      'Media_id1',
+      'Media_id2',
+      'Media_id3',
+    ]),
     'director_name'                   => 'BobZhang',
     'director_id_number'              => '5555—8888',
     'principal_name'                  => 'BobZhang',
@@ -308,7 +347,10 @@ $response = $instance['v2/secapi/mch/{modifyinstitutionsub}']->post([
     'settlement_bank_number'          => '555588889999',
     'apply_h5_payment'                => 'YES',
     'h5_website_url'                  => 'https://qq.com',
-    'h5_domains'                      => '["www.qq.com","www.weixin.com"]',
+    'h5_domains'                      => \json_encode([
+      'www.qq.com',
+      'www.weixin.com',
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

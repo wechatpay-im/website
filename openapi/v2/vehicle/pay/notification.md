@@ -45,7 +45,16 @@ $instance->v2->vehicle->pay->notification->postAsync([
     'sign_type'   => 'HMAC-SHA256',
     'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => \json_encode([
+      'scene_info' => [
+        'start_time'   => '20170826104339',
+        'notify_url'   => 'https://weixin.qq.com',
+        'plate_number' => '粤B888888',
+        'car_type'     => '小型车',
+        'parking_name' => '欢乐海岸停车场',
+        'free_time'    => '1200',
+      ],
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,7 +71,16 @@ $instance->chain('v2/vehicle/pay/notification')->postAsync([
     'sign_type'   => 'HMAC-SHA256',
     'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => \json_encode([
+      'scene_info' => [
+        'start_time'   => '20170826104339',
+        'notify_url'   => 'https://weixin.qq.com',
+        'plate_number' => '粤B888888',
+        'car_type'     => '小型车',
+        'parking_name' => '欢乐海岸停车场',
+        'free_time'    => '1200',
+      ],
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,7 +97,16 @@ $instance['v2/vehicle/pay/notification']->postAsync([
     'sign_type'   => 'HMAC-SHA256',
     'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => \json_encode([
+      'scene_info' => [
+        'start_time'   => '20170826104339',
+        'notify_url'   => 'https://weixin.qq.com',
+        'plate_number' => '粤B888888',
+        'car_type'     => '小型车',
+        'parking_name' => '欢乐海岸停车场',
+        'free_time'    => '1200',
+      ],
+    ]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -96,7 +123,16 @@ $response = $instance->v2->vehicle->pay->notification->post([
     'sign_type'   => 'HMAC-SHA256',
     'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => \json_encode([
+      'scene_info' => [
+        'start_time'   => '20170826104339',
+        'notify_url'   => 'https://weixin.qq.com',
+        'plate_number' => '粤B888888',
+        'car_type'     => '小型车',
+        'parking_name' => '欢乐海岸停车场',
+        'free_time'    => '1200',
+      ],
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -110,7 +146,16 @@ $response = $instance->chain('v2/vehicle/pay/notification')->post([
     'sign_type'   => 'HMAC-SHA256',
     'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => \json_encode([
+      'scene_info' => [
+        'start_time'   => '20170826104339',
+        'notify_url'   => 'https://weixin.qq.com',
+        'plate_number' => '粤B888888',
+        'car_type'     => '小型车',
+        'parking_name' => '欢乐海岸停车场',
+        'free_time'    => '1200',
+      ],
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -124,7 +169,16 @@ $response = $instance['v2/vehicle/pay/notification']->post([
     'sign_type'   => 'HMAC-SHA256',
     'version'     => '3.0',
     'trade_scene' => 'PARKING',
-    'scene_info'  => '{"scene_info":{"start_time":"20170926114339","plate_number":"CB1000sdfasd","free_time":"1200","car_type":"大型车","parking_name":"欢乐海岸停车场"}}',
+    'scene_info'  => \json_encode([
+      'scene_info' => [
+        'start_time'   => '20170826104339',
+        'notify_url'   => 'https://weixin.qq.com',
+        'plate_number' => '粤B888888',
+        'car_type'     => '小型车',
+        'parking_name' => '欢乐海岸停车场',
+        'free_time'    => '1200',
+      ],
+    ]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

@@ -104,7 +104,10 @@ $instance->v3->ecommerce->applyments->_empty_->postAsync([
       'merchant_name'           => '腾讯科技有限公司',
       'legal_person'            => '张三',
       'company_address'         => '深圳南山区科苑路',
-      'business_time'           => '["2014-01-01","长期"]',
+      'business_time'           => \json_encode([
+        '2014-01-01',
+        '长期',
+      ]),
     ],
     'finance_institution_info' => [
       'finance_type'         => 'BANK_AGENT',
@@ -199,7 +202,10 @@ $instance->chain('v3/ecommerce/applyments/{empty}')->postAsync([
       'merchant_name'           => '腾讯科技有限公司',
       'legal_person'            => '张三',
       'company_address'         => '深圳南山区科苑路',
-      'business_time'           => '["2014-01-01","长期"]',
+      'business_time'           => \json_encode([
+        '2014-01-01',
+        '长期',
+      ]),
     ],
     'finance_institution_info' => [
       'finance_type'         => 'BANK_AGENT',
@@ -294,7 +300,10 @@ $instance['v3/ecommerce/applyments/{empty}']->postAsync([
       'merchant_name'           => '腾讯科技有限公司',
       'legal_person'            => '张三',
       'company_address'         => '深圳南山区科苑路',
-      'business_time'           => '["2014-01-01","长期"]',
+      'business_time'           => \json_encode([
+        '2014-01-01',
+        '长期',
+      ]),
     ],
     'finance_institution_info' => [
       'finance_type'         => 'BANK_AGENT',
@@ -389,7 +398,10 @@ $response = $instance->v3->ecommerce->applyments->_empty_->post([
       'merchant_name'           => '腾讯科技有限公司',
       'legal_person'            => '张三',
       'company_address'         => '深圳南山区科苑路',
-      'business_time'           => '["2014-01-01","长期"]',
+      'business_time'           => \json_encode([
+        '2014-01-01',
+        '长期',
+      ]),
     ],
     'finance_institution_info' => [
       'finance_type'         => 'BANK_AGENT',
@@ -481,7 +493,10 @@ $response = $instance->chain('v3/ecommerce/applyments/{empty}')->post([
       'merchant_name'           => '腾讯科技有限公司',
       'legal_person'            => '张三',
       'company_address'         => '深圳南山区科苑路',
-      'business_time'           => '["2014-01-01","长期"]',
+      'business_time'           => \json_encode([
+        '2014-01-01',
+        '长期',
+      ]),
     ],
     'finance_institution_info' => [
       'finance_type'         => 'BANK_AGENT',
@@ -573,7 +588,10 @@ $response = $instance['v3/ecommerce/applyments/{empty}']->post([
       'merchant_name'           => '腾讯科技有限公司',
       'legal_person'            => '张三',
       'company_address'         => '深圳南山区科苑路',
-      'business_time'           => '["2014-01-01","长期"]',
+      'business_time'           => \json_encode([
+        '2014-01-01',
+        '长期',
+      ]),
     ],
     'finance_institution_info' => [
       'finance_type'         => 'BANK_AGENT',

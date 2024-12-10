@@ -30,9 +30,9 @@ next:
 | [查询退款](/openapi/v2/pay/refundquery) {colspan=2}
 | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2) {colspan=2}
 | [交易保障](/openapi/v2/payitil/report) {colspan=2}
-| 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) {colspan=2}
-| [合单查单](/openapi/v2/pay/querycombinedorder) {colspan=2}
-| [合单关单](/openapi/v2/pay/closecombinedorder) {colspan=2}
+| 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) :closed_lock_with_key: {colspan=2}
+| [合单查单](/openapi/v2/pay/querycombinedorder) :closed_lock_with_key: {colspan=2}
+| [合单关单](/openapi/v2/pay/closecombinedorder) :closed_lock_with_key: {colspan=2}
 | 刷脸支付v2{rowspan=4} | [人脸识别获取调用凭证](/openapi/v2/face/get_wxpayface_authinfo) {colspan=2}
 | [提交刷脸支付](/openapi/v2/pay/facepay) {colspan=2}
 | [查询订单](/openapi/v2/pay/facepayquery) {colspan=2}
