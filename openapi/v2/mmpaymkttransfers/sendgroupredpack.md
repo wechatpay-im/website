@@ -30,6 +30,11 @@ description: 裂变红包：一次可以发放一组红包。首先领取的用�
 | remark {data-required data-indent=1} | string | 备注
 | scene_id {data-indent=1} | string | 场景id<br/>`PRODUCT_1` \| `PRODUCT_2` \| `PRODUCT_3` \| `PRODUCT_4` \| `PRODUCT_5` \| `PRODUCT_6` \| `PRODUCT_7` \| `PRODUCT_8` 枚举值之一
 | risk_info {data-indent=1} | string | 活动信息
+| {colspan=3 .im-table-line}
+| posttime {data-indent=2} | number | 用户操作的时间戳
+| mobile {data-indent=2} | string | 业务系统账号的手机号
+| deviceid {data-indent=2} | string | MAC地址或者设备唯一标识
+| clientversion {data-indent=2} | string | 用户操作的客户端版本
 
 {.im-table #request}
 
@@ -51,7 +56,12 @@ $instance->v2->mmpaymkttransfers->sendgroupredpack->postAsync([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
-    'risk_info'    => 'posttime%3d123123412%26clientversion%3d234134%26mobile%3d122344545%26deviceid%3dIOS',
+    'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
+      'posttime'      => 1717171199,
+      'mobile'        => '122344545',
+      'deviceid'      => 'IOS',
+      'clientversion' => '234134',
+    ])),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,7 +86,12 @@ $instance->chain('v2/mmpaymkttransfers/sendgroupredpack')->postAsync([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
-    'risk_info'    => 'posttime%3d123123412%26clientversion%3d234134%26mobile%3d122344545%26deviceid%3dIOS',
+    'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
+      'posttime'      => 1717171199,
+      'mobile'        => '122344545',
+      'deviceid'      => 'IOS',
+      'clientversion' => '234134',
+    ])),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -101,7 +116,12 @@ $instance['v2/mmpaymkttransfers/sendgroupredpack']->postAsync([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
-    'risk_info'    => 'posttime%3d123123412%26clientversion%3d234134%26mobile%3d122344545%26deviceid%3dIOS',
+    'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
+      'posttime'      => 1717171199,
+      'mobile'        => '122344545',
+      'deviceid'      => 'IOS',
+      'clientversion' => '234134',
+    ])),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -126,7 +146,12 @@ $response = $instance->v2->mmpaymkttransfers->sendgroupredpack->post([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
-    'risk_info'    => 'posttime%3d123123412%26clientversion%3d234134%26mobile%3d122344545%26deviceid%3dIOS',
+    'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
+      'posttime'      => 1717171199,
+      'mobile'        => '122344545',
+      'deviceid'      => 'IOS',
+      'clientversion' => '234134',
+    ])),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -148,7 +173,12 @@ $response = $instance->chain('v2/mmpaymkttransfers/sendgroupredpack')->post([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
-    'risk_info'    => 'posttime%3d123123412%26clientversion%3d234134%26mobile%3d122344545%26deviceid%3dIOS',
+    'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
+      'posttime'      => 1717171199,
+      'mobile'        => '122344545',
+      'deviceid'      => 'IOS',
+      'clientversion' => '234134',
+    ])),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -170,7 +200,12 @@ $response = $instance['v2/mmpaymkttransfers/sendgroupredpack']->post([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
-    'risk_info'    => 'posttime%3d123123412%26clientversion%3d234134%26mobile%3d122344545%26deviceid%3dIOS',
+    'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
+      'posttime'      => 1717171199,
+      'mobile'        => '122344545',
+      'deviceid'      => 'IOS',
+      'clientversion' => '234134',
+    ])),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

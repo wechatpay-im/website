@@ -16,7 +16,7 @@ description: 服务商可通过此接口添加分账接收方，建立分账接�
 | type {data-required data-indent=1} | string | 分账接收方类型
 | account {data-required data-indent=1} | string | 分账接收方账号
 | name {data-indent=1} | string | 接收方名称
-| relation_type {data-required data-indent=1} | string | 与品牌主商户的的关系类型
+| relation_type {data-required data-indent=1} | string | 与品牌主商户的的关系类型<br/>`SUPPLIER` \| `DISTRIBUTOR` \| `SERVICE_PROVIDER` \| `PLATFORM` \| `STAFF` \| `OTHERS` 枚举值之一
 
 {.im-table #request}
 

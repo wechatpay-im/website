@@ -20,7 +20,7 @@ description: 服务商代子商户发起添加分账接收方请求，后续可�
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=2} | string | 分账接收方账号
 | name {data-indent=2} | string | 分账个人接收方姓名
-| relation_type {data-indent=2} | string | 与分账方的关系类型<br/>`SERVICE_PROVIDER` \| `STORE` \| `STAFF` \| `STORE_OWNER` \| `PARTNER` \| `HEADQUARTER` \| `BRAND` \| `DISTRIBUTOR` \| `USER` \| `SUPPLIER` \| `CUSTOM` \| `SUPPLIER` \| `DISTRIBUTOR` \| `SERVICE_PROVIDER` \| `PLATFORM` \| `STAFF` \| `OTHERS` 枚举值之一
+| relation_type {data-indent=2} | string | 与分账方的关系类型<br/>`SERVICE_PROVIDER` \| `STORE` \| `STAFF` \| `STORE_OWNER` \| `PARTNER` \| `HEADQUARTER` \| `BRAND` \| `DISTRIBUTOR` \| `USER` \| `SUPPLIER` \| `CUSTOM` \| `PLATFORM` \| `OTHERS` 枚举值之一
 | custom_relation {data-indent=2} | string | 自定义的分账关系
 
 {.im-table #request}

@@ -7,6 +7,12 @@ description: 合单支付的支付结果将只通知给合单支付发起方（�
 
 {{ $frontmatter.description }}
 
+::: danger :closed_lock_with_key: {.im-privated}
+
+本接口服务已于 `2021.09.01` (北京时间)停止开放，文档仅做留存参考。
+
+:::
+
 > [!IMPORTANT] 注意：
 > - 合单支付的支付结果将只通知给合单支付发起方（即combine_appid一方）。
 > - 支付完成后，微信会把相关支付结果和用户信息发送给商户，商户需要接收处理，并返回应答。

@@ -16,7 +16,7 @@ next:
 | 通知格式 | 直连商户模式 | 合作伙伴模式
 | :------: | :----------: | :----------:
 | XML {rowspan=3} | [普通支付通知](/webhook/v2/transaction-success) {colspan=2}
-| [合单支付通知](/webhook/v2/combined-transactions-success) {colspan=2}
+| [合单支付通知](/webhook/v2/combined-transactions-success) :closed_lock_with_key: {colspan=2}
 | [退款结果通知](/webhook/v2/refund-processed) {colspan=2}
 | XML {rowspan=1} | [车牌状态变更通知](/webhook/v2/vehicle-state-changed-for-parking) {colspan=2}
 | XML {rowspan=1} | [签/解约扣款服务通知](/webhook/v2/pap-contract-state-changed) {colspan=2}
