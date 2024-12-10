@@ -7,6 +7,12 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 
 {{ $frontmatter.description }}
 
+> [!IMPORTANT] 注意：
+> - 同样的通知可能会多次发送给商户系统。商户系统必须能够正确处理重复的通知。推荐的做法是，当商户系统收到通知进行处理时，先检查对应业务数据的状态，并判断该通知是否已经处理。如果未处理，则再进行处理；如果已处理，则直接返回结果成功。在对业务数据进行状态检查和处理之前，要采用数据锁进行并发控制，以避免函数重入造成的数据混乱。
+> - 如果在所有通知频率后没有收到微信侧回调，商户应调用提现查询接口确认提现状态。
+> - 特别提醒：商户系统对于开启结果通知的内容一定要做签名验证，并校验通知的信息是否与商户侧的信息一致，防止数据泄露导致出现“假通知”，造成资金损失。
+> - 对后台通知交互时，如果微信收到商户的应答不符合规范或超时，微信认为通知失败，微信支付会通过一定的策略(**15秒×10次 / 5分钟×10次 / 30分钟×47次, 最多覆盖到24小时**)定期重新发起通知，尽可能提高通知的成功率，但微信不保证通知最终能成功。
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | headers {data-required} | object | 通知的头参数
@@ -30,7 +36,7 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 | ciphertext {data-required data-indent=2} | string | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型<br/>`mch_withdraw` 枚举值
 | {colspan=3 .im-table-line}
-| original_object {data-indent=2} | object | 平台预约提现结果
+| original_data {data-indent=2} | object | 平台预约提现结果
 | status {data-required data-indent=3} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
 | withdraw_id {data-required data-indent=3} | string | 微信支付提现单号
 | out_request_no {data-required data-indent=3} | string | 商户提现单号
@@ -43,7 +49,7 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 | account_type {data-required data-indent=3} | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | solution {data-required data-indent=3} | string | 提现失败解决方案
 | {colspan=3 .im-table-line}
-| original_object {data-indent=2} | object | 二级商户预约提现结果
+| original_data {data-indent=2} | object | 二级商户预约提现结果
 | sub_mchid {data-indent=3} | string | 二级商户号
 | sp_mchid {data-required data-indent=3} | string | 电商平台商户号
 | status {data-required data-indent=3} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
@@ -60,7 +66,7 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 | account_bank {data-indent=3} | string | 入账银行
 | bank_name {data-indent=3} | string | 入账银行全称（含支行）
 | {colspan=3 .im-table-line}
-| original_object {data-indent=2} | object | 二级商户按日终余额预约提现结果<Badge type="warning" text="特殊申请" />
+| original_data {data-indent=2} | object | 二级商户按日终余额预约提现结果<Badge type="warning" text="特殊申请" />
 | sub_mchid {data-indent=3} | string | 二级商户号
 | sp_mchid {data-required data-indent=3} | string | 电商平台商户号
 | status {data-required data-indent=3} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
