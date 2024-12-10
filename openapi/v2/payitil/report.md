@@ -36,7 +36,13 @@ $instance->v2->payitil->report->postAsync([
     'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
     'user_ip'       => '8.8.8.8',
-    'trades'        => '',
+    'trades'        => \json_encode([[
+      'out_trade_no' => 'out_trade_no_test_1',
+      'begin_time'   => '20160602203256',
+      'end_time'     => '20160602203257',
+      'state'        => 'OK',
+      'err_msg'      => '',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,7 +59,13 @@ $instance->chain('v2/payitil/report')->postAsync([
     'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
     'user_ip'       => '8.8.8.8',
-    'trades'        => '',
+    'trades'        => \json_encode([[
+      'out_trade_no' => 'out_trade_no_test_1',
+      'begin_time'   => '20160602203256',
+      'end_time'     => '20160602203257',
+      'state'        => 'OK',
+      'err_msg'      => '',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,7 +82,13 @@ $instance['v2/payitil/report']->postAsync([
     'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
     'user_ip'       => '8.8.8.8',
-    'trades'        => '',
+    'trades'        => \json_encode([[
+      'out_trade_no' => 'out_trade_no_test_1',
+      'begin_time'   => '20160602203256',
+      'end_time'     => '20160602203257',
+      'state'        => 'OK',
+      'err_msg'      => '',
+    ],]),
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -87,7 +105,13 @@ $response = $instance->v2->payitil->report->post([
     'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
     'user_ip'       => '8.8.8.8',
-    'trades'        => '',
+    'trades'        => \json_encode([[
+      'out_trade_no' => 'out_trade_no_test_1',
+      'begin_time'   => '20160602203256',
+      'end_time'     => '20160602203257',
+      'state'        => 'OK',
+      'err_msg'      => '',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -101,7 +125,13 @@ $response = $instance->chain('v2/payitil/report')->post([
     'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
     'user_ip'       => '8.8.8.8',
-    'trades'        => '',
+    'trades'        => \json_encode([[
+      'out_trade_no' => 'out_trade_no_test_1',
+      'begin_time'   => '20160602203256',
+      'end_time'     => '20160602203257',
+      'state'        => 'OK',
+      'err_msg'      => '',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -115,7 +145,13 @@ $response = $instance['v2/payitil/report']->post([
     'device_info'   => '013467007045764',
     'interface_url' => 'https://api.mch.weixin.qq.com/pay/batchreport/micropay/total',
     'user_ip'       => '8.8.8.8',
-    'trades'        => '',
+    'trades'        => \json_encode([[
+      'out_trade_no' => 'out_trade_no_test_1',
+      'begin_time'   => '20160602203256',
+      'end_time'     => '20160602203257',
+      'state'        => 'OK',
+      'err_msg'      => '',
+    ],]),
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
