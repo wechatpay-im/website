@@ -1,4 +1,6 @@
-# 添加分账接收方 {#post}
+# 添加及删除分账接收方信息 {#mix}
+
+## 添加分账接收方 {#post}
 
 商户发起添加分账接收方请求，建立分账接收方列表。后续可通过发起分账请求，将分账方商户结算后的资金，分给该分账接收方。
 
@@ -195,7 +197,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_1_6.shtml)
 
-# 删除分账接收方 {#delete}
+## 删除分账接收方 {#delete}
 
 商户发起删除分账接收方请求。删除后，不支持将分账方商户结算后的资金再分给该分账接收方。
 

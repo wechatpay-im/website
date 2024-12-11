@@ -1,4 +1,6 @@
-# 创建支付分订单 {#post}
+# 服务商创建及查询微信支付分订单信息 {#mix}
+
+## 创建支付分订单 {#post}
 
 用户申请使用服务时，商户可通过此接口申请创建微信支付分订单。
 
@@ -372,7 +374,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/create-partner-service-order.html)
 
-# 查询支付分订单 {#get}
+## 查询支付分订单 {#get}
 
 用于查询单笔微信支付分订单详细信息。
 

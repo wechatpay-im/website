@@ -1,4 +1,6 @@
-# 从业机构创建微信支付分订单 {#post}
+# 从业机构创建及查询微信支付分订单信息 {#mix}
+
+## 从业机构创建微信支付分订单 {#post}
 
 用户申请使用服务时，从业机构可通过此接口申请创建微信支付分订单。
 
@@ -372,7 +374,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-order/create-acquiring-bank-service-order.html)
 
-# 从业机构查询微信支付分订单 {#get}
+## 从业机构查询微信支付分订单 {#get}
 
 前置条件：商户已创建支付分服务订单
 

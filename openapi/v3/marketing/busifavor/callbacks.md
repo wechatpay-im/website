@@ -1,4 +1,6 @@
-# 设置商家券事件通知地址 {#post}
+# 设置及查询商家券事件通知地址 {#mix}
+
+## 设置商家券事件通知地址 {#post}
 
 用于设置接收商家券相关事件通知的URL，可接收商家券相关的事件通知、包括发放通知等。需要设置接收通知的URL，并在商户平台开通营销事件推送的能力，即可接收到相关通知。
 
@@ -93,7 +95,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_7.shtml)
 
-# 查询商家券事件通知地址 {#get}
+## 查询商家券事件通知地址 {#get}
 
 通过调用此接口可查询设置的通知URL。
 

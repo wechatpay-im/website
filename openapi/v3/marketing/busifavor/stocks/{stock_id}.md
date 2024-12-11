@@ -1,4 +1,6 @@
-# 查询商家券详情 {#get}
+# 查询及修改商家券详情信息 {#mix}
+
+## 查询商家券详情 {#get}
 
 商户可通过该接口查询已创建的商家券批次详情信息。
 
@@ -145,7 +147,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_2.shtml)
 
-# 修改商家券基本信息 {#patch}
+## 修改商家券基本信息 {#patch}
 
 商户可以通过该接口修改商家券基本信息
 

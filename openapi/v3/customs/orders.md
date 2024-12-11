@@ -1,4 +1,6 @@
-# 报关 {#post}
+# 提交、修改及查询报关信息(可用版本) {#mix}
+
+## 报关 {#post}
 
 该接口用于商户提交海关需要的订单附加信息。
 
@@ -176,7 +178,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay/ch/declarecustom_ch/chapter3_1.shtml)
 
-# 报关查询 {#get}
+## 报关查询 {#get}
 
 商户通过订单号查询提交的订单附加信息及订单报关状态。
 
@@ -331,7 +333,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay/ch/declarecustom_ch/chapter3_3.shtml)
 
-# 报关信息修改 {#patch}
+## 报关信息修改 {#patch}
 
 该接口用于商户修改订单附加信息。
 

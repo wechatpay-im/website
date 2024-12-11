@@ -1,4 +1,6 @@
-# 创建先享后付订单 {#post}
+# 普通商户创建及查询微信先享后付订单信息 {#mix}
+
+## 创建先享后付订单 {#post}
 
 
 
@@ -286,7 +288,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=17_1&index=3)
 
-# 查询先享后付订单 {#get}
+## 查询先享后付订单 {#get}
 
 
 

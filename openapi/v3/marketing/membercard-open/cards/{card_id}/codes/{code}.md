@@ -1,4 +1,6 @@
-# 查询用户会员卡信息 {#get}
+# 查询及修改用户会员卡信息 {#mix}
+
+## 查询用户会员卡信息 {#get}
 
 通过此接口可查询指定用户会员卡的信息，如会员积分、储值余额、开卡信息等
 
@@ -96,7 +98,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_4.shtml)
 
-# 修改用户会员卡信息 {#patch}
+## 修改用户会员卡信息 {#patch}
 
 通过此接口可更新指定用户的会员卡背景图、会员卡号、等级、储值余额
 

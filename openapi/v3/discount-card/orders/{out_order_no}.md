@@ -1,4 +1,6 @@
-# 更新先享卡订单 {#patch}
+# 通过先享卡订单号更新及查询先享卡订单 {#mix}
+
+## 更新先享卡订单 {#patch}
 
 当用户在商户侧消费时，用户完成微信先享卡的目标或者领取奖励时，商户需要将信息同步至微信先享卡平台，用于在微信先享卡小程序展示及先享卡到期后的用户结算。
 
@@ -216,7 +218,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/discount-card/chapter3_2.shtml)
 
-# 通过先享卡订单号查询订单 {#get}
+## 通过先享卡订单号查询订单 {#get}
 
 商户可以通过先享卡订单号或商户订单号查询用户目前的先享卡使用情况、订单状态，可用于对账或者界面展示。
 

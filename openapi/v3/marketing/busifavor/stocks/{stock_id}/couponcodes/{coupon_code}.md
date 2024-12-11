@@ -1,4 +1,6 @@
-# 查询预存code详情 {#get}
+# 查询及删除预存code详情信息 {#mix}
+
+## 查询预存code详情 {#get}
 
 
 
@@ -160,7 +162,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/products/merchant-exclusive-coupon/introduction.html)
 
-# 删除预存code {#delete}
+## 删除预存code {#delete}
 
 
 

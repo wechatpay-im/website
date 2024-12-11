@@ -1,4 +1,6 @@
-# 查询子商户（融合钱包） {#get}
+# 查询及修改子商户信息（融合钱包） {#mix}
+
+## 查询子商户（融合钱包） {#get}
 
 用于机构查询子商户创建是否成功，接口只提供单个子商户信息查询。
 
@@ -132,7 +134,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_2_2.shtml)
 
-# 修改子商户（融合钱包） {#patch}
+## 修改子商户（融合钱包） {#patch}
 
 用于机构子商户创建成功后，接口提供子商户信息修改
 

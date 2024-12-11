@@ -1,4 +1,6 @@
-# 创建商户违规通知回调地址 {#post}
+# 管理商户违规通知回调地址 {#mix}
+
+## 创建商户违规通知回调地址 {#post}
 
 调用该接口设置商户违规通知回调地址，开启违规通知，当子商户被处罚或拦截时，微信支付会通过回调地址通知从业机构/服务商/渠道商。
 
@@ -84,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_1.shtml)
 
-# 查询商户违规通知回调地址 {#get}
+## 查询商户违规通知回调地址 {#get}
 
 调用该接口查询商户违规通知回调地址，如果已设置回调地址，说明已开启违规通知，当子商户被处罚或拦截时，微信支付会通过回调地址通知从业机构/服务商/渠道商。
 
@@ -144,7 +146,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_2.shtml)
 
-# 修改商户违规通知回调地址 {#put}
+## 修改商户违规通知回调地址 {#put}
 
 调用该接口修改商户违规通知回调地址，开启违规通知，当子商户被处罚或拦截时，微信支付会通过回调地址通知从业机构/服务商/渠道商。
 
@@ -230,7 +232,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_3.shtml)
 
-# 删除商户违规通知回调地址 {#delete}
+## 删除商户违规通知回调地址 {#delete}
 
 调用该接口删除商户违规通知回调地址，关闭违规通知，当子商户被处罚或拦截时，微信支付不会再通知从业机构/服务商/渠道商。
 

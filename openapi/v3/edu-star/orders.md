@@ -1,4 +1,6 @@
-# 创建核销订单 {#post}
+# 创建及查询核销订单结果 {#mix}
+
+## 创建核销订单 {#post}
 
 用户完成充值后，合作方必须调用该接口创建核销记录，并确保得到明确应答。 若调用失败，必须间隔一定时间后重试，否则会导致用户在集星光小程序中看到权益的使用状态与实际不符，进而引发用户投诉。
 
@@ -118,7 +120,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方流程图](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/assets/img/common/edu/edu-star/chapter2_3.png)
 
-# 通过QQ账号查询核销订单列表 {#get}
+## 通过QQ账号查询核销订单列表 {#get}
 
 合作方通过调用该接口可获取核销订单信息。
 

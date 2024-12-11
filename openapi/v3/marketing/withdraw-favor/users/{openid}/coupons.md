@@ -1,4 +1,6 @@
-# 为用户发银行提现免费券 {#post}
+# 发放及查询用户银行提现免费券 {#mix}
+
+## 为用户发银行提现免费券 {#post}
 
 为用户发银行提现免费券
 
@@ -113,7 +115,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter3_2_1.shtml)
 
-# 查询批次下用户银行提现免费券列表 {#get}
+## 查询批次下用户银行提现免费券列表 {#get}
 
 查询批次下用户银行提现免费券列表
 

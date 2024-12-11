@@ -1,4 +1,6 @@
-# 提交商户开户意愿申请单 {#post}
+# 提交及查询商户开户意愿申请单状态 {#mix}
+
+## 提交商户开户意愿申请单 {#post}
 
 服务商可以通过该接口向微信支付提交商户的联系人信息、主体信息以及联系人信息。
 
@@ -699,7 +701,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_1_1.shtml)
 
-# 查询商户开户意愿申请单审核结果 {#get}
+## 查询商户开户意愿申请单审核结果 {#get}
 
 当服务商提交申请单后，需要定期调用此接口查询申请单的审核状态。
 

@@ -1,4 +1,6 @@
-# 查询会员卡模板信息 {#get}
+# 查询、修改及删除会员卡模板信息 {#mix}
+
+## 查询会员卡模板信息 {#get}
 
 通过此接口可查询指定会员卡模板的所有信息
 
@@ -111,7 +113,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_2.shtml)
 
-# 修改会员卡模板信息 {#patch}
+## 修改会员卡模板信息 {#patch}
 
 通过此接口可更新会员卡的信息，包括基本信息、储值信息、开卡信息、补充说明
 
@@ -444,7 +446,7 @@ print_r($response->getStatusCode() === 204);
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_9.shtml)
 
-# 删除会员卡模板 {#delete}
+## 删除会员卡模板 {#delete}
 
 商户可调用此api删除会员卡。删除后，商家将无法通过任何渠道再投放该会员卡。
 

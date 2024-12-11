@@ -1,4 +1,6 @@
-# 子商户进件（融合钱包） {#post}
+# 子商户进件及进件信息修改（融合钱包） {#mix}
+
+## 子商户进件（融合钱包） {#post}
 
 机构提交子商户资料，微信支付系统会为每个子商户创建子商户号。
 
@@ -387,7 +389,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_2_1.shtml)
 
-# 修改子商户（融合钱包） {#put}
+## 修改子商户（融合钱包） {#put}
 
 用于机构子商户创建成功后，接口提供子商户信息修改
 

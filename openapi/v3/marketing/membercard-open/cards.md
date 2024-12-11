@@ -1,4 +1,6 @@
-# 创建会员卡模板 {#post}
+# 创建及查询会员卡模板列表信息 {#mix}
+
+## 创建会员卡模板 {#post}
 
 通过此接口可以创建一张会员卡模板，创建成功将获得会员卡模板card_id
 
@@ -405,7 +407,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_1.shtml)
 
-# 查询会员卡模板列表 {#get}
+## 查询会员卡模板列表 {#get}
 
 通过此接口可查询指定某品牌的所有会员卡模板列表
 

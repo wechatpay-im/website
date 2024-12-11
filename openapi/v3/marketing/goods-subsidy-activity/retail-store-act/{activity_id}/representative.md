@@ -1,4 +1,6 @@
-# 添加零售小店活动业务代理 {#put}
+# 添加及删除零售小店活动业务代理信息 {#mix}
+
+## 添加零售小店活动业务代理 {#put}
 
 该接口为服务商或商户给零售小店活动添加业务代理的专用接口。 使用对象：活动创建方商户号、活动归属品牌的品牌主商户号或品牌经营商户号。
 
@@ -121,7 +123,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-stores/add-representative.html)
 
-# 删除零售小店活动业务代理 {#delete}
+## 删除零售小店活动业务代理 {#delete}
 
 该接口为服务商或商户给零售小店活动删除业务代理的专用接口。 使用对象：活动创建方商户号、活动归属品牌的品牌主商户号或品牌经营商户号。
 

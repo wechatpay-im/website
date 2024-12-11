@@ -1,4 +1,6 @@
-# 营销补差付款 {#post}
+# 提交及查询营销补差付款信息 {#mix}
+
+## 营销补差付款 {#post}
 
 给核销了商家券的商户做营销资金补差
 
@@ -145,7 +147,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_16.shtml)
 
-# 查询营销补差付款单列表 {#get}
+## 查询营销补差付款单列表 {#get}
 
 查询商家券营销补差付款单列表
 

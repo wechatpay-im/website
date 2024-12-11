@@ -1,4 +1,6 @@
-# 请求分账 {#post}
+# 平台收付通-请求及查询分账结果 {#mix}
+
+## 请求分账 {#post}
 
 微信订单支付成功后，由电商平台发起分账请求，将结算后的资金分给分账接收方。
 
@@ -156,7 +158,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_1.shtml)
 
-# 查询分账结果 {#get}
+## 查询分账结果 {#get}
 
 发起分账请求后，可调用此接口查询分账结果 ;发起分账完结请求后，可调用此接口查询分账完结的结果。
 

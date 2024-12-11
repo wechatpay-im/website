@@ -1,4 +1,6 @@
-# 刷脸用户信息查询接口 {#get}
+# 查询及更新K12离线刷脸用户信息 {#mix}
+
+## 刷脸用户信息查询接口 {#get}
 
 
 
@@ -90,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/wxfacepay/develop/k12-development-guidelines.html)
 
-# 刷脸用户信息修改接口 {#patch}
+## 刷脸用户信息修改接口 {#patch}
 
 若修改了学生姓名、班级、手机号时，需调用接口同步给微信侧，否则可能导致小助手上记录欠款的学生姓名、班级与实际不符合以及学生刷脸验证手机号时无法通过。
 

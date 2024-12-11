@@ -1,4 +1,6 @@
-# 垫付退款回补 {#post}
+# 平台收付通-请求及查询垫付退款回补结果 {#mix}
+
+## 垫付退款回补 {#post}
 
 提交垫付退款后，发起退款方可通过该接口发起垫付退款资金回补，把退款垫付的资金从二级商户回补到电商平台账户。
 
@@ -99,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_6_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-return-advance.html)
 
-# 查询垫付回补结果 {#get}
+## 查询垫付回补结果 {#get}
 
 提交垫付退款回补后，通过调用该接口查询垫付回补结果。
 

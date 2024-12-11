@@ -1,4 +1,6 @@
-# 添加小店活动门店 {#post}
+# 添加、删除及查询小店活动门店信息 {#mix}
+
+## 添加小店活动门店 {#post}
 
 该接口为服务商或商户给零售小店活动添加门店专用接口。 使用对象：品牌的品牌主商户号或品牌服务商。
 
@@ -128,7 +130,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-store-act/add-stores.html)
 
-# 删除小店活动门店 {#delete}
+## 删除小店活动门店 {#delete}
 
 该接口为服务商或商户给零售小店活动删除门店专用接口。 使用对象：品牌的品牌主商户号或品牌服务商。
 
@@ -258,7 +260,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-store-act/delete-stores.html)
 
-# 查询小店活动门店列表 {#get}
+## 查询小店活动门店列表 {#get}
 
 该接口为服务商或商户给零售小店活动查询门店列表专用接口。 使用对象：品牌的品牌主商户号或品牌服务商。
 

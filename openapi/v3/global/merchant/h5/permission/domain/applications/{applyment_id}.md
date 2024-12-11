@@ -1,4 +1,6 @@
-# 查询H5支付域名修改申请单 {#get}
+# 查询及修改H5支付域名修改申请单 {#mix}
+
+## 查询H5支付域名修改申请单 {#get}
 
 商户可以通过该接口查询H5支付域名修改申请单。
 
@@ -88,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_4_5.shtml)
 
-# 修改H5支付域名修改申请单 {#patch}
+## 修改H5支付域名修改申请单 {#patch}
 
 商户可以通过该接口修改已被驳回的H5支付域名修改申请单。
 

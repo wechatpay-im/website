@@ -1,4 +1,6 @@
-# 设置回调地址 {#patch}
+# 设置及查询会员业务的相关信息营销事件通知地址 {#mix}
+
+## 设置回调地址 {#patch}
 
 通过此接口商户可设置回调地址，用于接收会员业务的相关信息营销事件推送：点击开通产品权限。由会员卡创建方登录Pay平台，操作开通。
 
@@ -85,7 +87,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter6_1.shtml)
 
-# 查询回调地址 {#get}
+## 查询回调地址 {#get}
 
 通过此接口可查询以前设置的回调地址
 

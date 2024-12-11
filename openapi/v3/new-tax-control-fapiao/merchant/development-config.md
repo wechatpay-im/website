@@ -1,4 +1,6 @@
-# 配置开发选项 {#patch}
+# 配置及查询电子发票开发选项信息 {#mix}
+
+## 配置开发选项 {#patch}
 
 配置开发选项(例如回调地址等)
 
@@ -99,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/Offline/apis/chapter4_8_18.shtml)
 
-# 查询商户配置的开发选项 {#get}
+## 查询商户配置的开发选项 {#get}
 
 查询商户配置的开发选项
 

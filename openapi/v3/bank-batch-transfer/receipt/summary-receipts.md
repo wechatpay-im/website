@@ -1,4 +1,6 @@
-# 受理汇总电子回单 {#post}
+# 受理及查询汇总电子回单结果 {#mix}
+
+## 受理汇总电子回单 {#post}
 
 银行付款模式转账汇总电子回单申请受理接口，商户通过该接口可以申请受理电子回单服务。
 
@@ -91,7 +93,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_2_6.shtml)
 
-# 查询汇总电子回单受理结果 {#get}
+## 查询汇总电子回单受理结果 {#get}
 
 查询银行付款模式转账汇总电子回单接口，商户通过该接口可以查询电子回单受理进度信息，包括电子回单据信息，电子回单文件的hash值，电子回单文件的下载地址等
 

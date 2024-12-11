@@ -1,4 +1,6 @@
-# 服务人员注册 {#post}
+# 注册及查询-支付即服务-服务人员信息 {#mix}
+
+## 服务人员注册 {#post}
 
 用于服务商/商户开发者为商户注册服务人员使用。
 
@@ -153,7 +155,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/smartguide/chapter3_1.shtml)
 
-# 服务人员查询 {#get}
+## 服务人员查询 {#get}
 
 用于服务商/商户开发者查询已注册的服务人员ID等信息。
 

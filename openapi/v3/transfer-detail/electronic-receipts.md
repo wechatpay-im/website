@@ -1,4 +1,6 @@
-# 转账明细电子回单受理 {#post}
+# 受理及查询明细电子回单结果 {#mix}
+
+## 转账明细电子回单受理 {#post}
 
 受理转账明细电子回单接口，商户通过该接口可以申请受理转账明细单电子回单服务。
 
@@ -105,7 +107,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_13.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transfer_partner/chapter4_4.shtml)
 
-# 查询转账明细电子回单受理结果 {#get}
+## 查询转账明细电子回单受理结果 {#get}
 
 查询转账明细电子回单受理结果接口，商户通过该接口可以查询电子回单受理进度信息，包括电子回单据信息，电子回单文件的hash值，电子回单文件的下载地址等。
 

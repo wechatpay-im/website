@@ -1,4 +1,6 @@
-# 查询自定义入口 {#get}
+# 查询及更新电子小票自定义入口信息 {#mix}
+
+## 查询自定义入口 {#get}
 
 该接口为电子小票自定义入口查询接口，商家可以通过该接口查询品牌的自定义入口展示内容。
 
@@ -83,7 +85,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/custom-entrances/query-custom-entrance.html)
 
-# 更新自定义入口 {#patch}
+## 更新自定义入口 {#patch}
 
 该接口为电子小票自定义入口更新接口，商家可以通过该接口为品牌更新自定义入口展示内容。
 

@@ -1,4 +1,6 @@
-# 创建智慧零售订单 {#post}
+# 普通商户创建及查询智慧零售订单信息 {#mix}
+
+## 创建智慧零售订单 {#post}
 
 
 
@@ -238,7 +240,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=14_1&index=3)
 
-# 查询智慧零售订单 {#get}
+## 查询智慧零售订单 {#get}
 
 
 

@@ -1,4 +1,6 @@
-# 根据申请单ID查询申请单结果 {#get}
+# 从业机构查询及修改优惠费率活动申请单 {#mix}
+
+## 根据申请单ID查询申请单结果 {#get}
 
 从业机构可调用该接口查询优惠费率活动的报名结果。
 
@@ -75,7 +77,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/rateactivity/chapter3_2.shtml)
 
-# 修改单据信息 {#patch}
+## 修改单据信息 {#patch}
 
 该接口只适用于修改已经审核失败的单据。
 

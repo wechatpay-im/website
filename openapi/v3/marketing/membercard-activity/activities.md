@@ -1,4 +1,6 @@
-# 创建活动 {#post}
+# 创建及查询会员有礼活动信息 {#mix}
+
+## 创建活动 {#post}
 
 创建会员活动，可以创建支付后开卡有礼&老会员有礼、以及小程序开卡有礼&老会员有礼，共四种类型的活动。
 
@@ -502,7 +504,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/create-activity.html)
 
-# 查询活动列表 {#get}
+## 查询活动列表 {#get}
 
 查询符合条件的多个活动
 

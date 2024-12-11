@@ -1,4 +1,6 @@
-# 获取已设置的消息通知地址 {#get}
+# 查询及设置营销事件消息通知地址 {#mix}
+
+## 获取已设置的消息通知地址 {#get}
 
 用于查询已经设置的接收营销事件通知的URL。
 
@@ -85,7 +87,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_12.shtml)
 
-# 设置消息通知地址 {#post}
+## 设置消息通知地址 {#post}
 
 用于设置接收营销事件通知的URL，可接收营销相关的事件通知，包括核销、发放、退款等。
 

@@ -1,4 +1,6 @@
-# 请求售后服务分账 {#post}
+# 请求及查询售后服务分账结果 {#mix}
+
+## 请求售后服务分账 {#post}
 
 
 
@@ -121,7 +123,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/products/ecommerce/introduction.html)
 
-# 查询售后服务分账结果 {#get}
+## 查询售后服务分账结果 {#get}
 
 
 

@@ -1,4 +1,6 @@
-# 查询门店 {#get}
+# 管理连锁品牌门店信息 {#mix}
+
+## 查询门店 {#get}
 
 
 
@@ -105,7 +107,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-# 修改门店 {#patch}
+## 修改门店 {#patch}
 
 
 
