@@ -125,9 +125,6 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | trade_state_desc | string | 交易状态描述
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| scene_info | string | 场景信息`JSON`格式字符串
-| {colspan=3 .im-table-line}
-| device_id {data-indent=1} | string | 商户端设备号
 | sub_order_list {data-required} | string | 子单信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | order_num {data-required data-indent=1} | number | 子订单数
