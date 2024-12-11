@@ -10,36 +10,36 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sp_mchid {data-indent=1} | string | 微信支付分配的服务商唯一标识
-| acquiring_bank_id {data-indent=1} | string | 微信支付分配的从业机构唯一标识
-| channel_id {data-indent=1} | string | 微信支付分配的渠道商唯一标识
-| sub_mchid {data-indent=1} | string | 上报订单风险数据的商户号信息
-| out_trade_no {data-indent=1} | string | 商户系统内部订单号，只能是数字、大小写字母_-*且在同一个商户号下唯一
-| openid {data-indent=1} | string | 此参数为微信用户在商户对应appid下的唯一标识
-| phone {data-indent=1} | string | 用户在商户侧留存的手机号，采用商户平台证书sm2公钥加密传递
-| certificates_number {data-indent=1} | string | 身份证ID后6位，采用商户平台证书sm2公钥加密传递
-| client_ip {data-indent=1} | string | 用户的终端IP
-| risk_level {data-indent=1} | integer | 商户判定交易的风险等级
-| line_type {data-indent=1} | integer | 1：线上交易; 2：线下交易
-| goods_type {data-indent=1} | integer | 1：虚拟交易；2：实物交易
-| seller_type {data-indent=1} | integer | 物品发布类型
+| sp_mchid {data-indent=1} | string | 服务商商户号
+| acquiring_bank_id {data-indent=1} | string | 从业机构商户号
+| channel_id {data-indent=1} | string | 渠道号
+| sub_mchid {data-indent=1} | string | 子商户号
+| out_trade_no {data-indent=1} | string | 商户订单号
+| openid {data-indent=1} | string | 用户标识
+| phone {data-indent=1} | string | 用户手机号
+| certificates_number {data-indent=1} | string | 用户实名证件号
+| client_ip {data-indent=1} | string | 用户终端ip
+| risk_level {data-indent=1} | number | 商户判定交易的风险等级
+| line_type {data-indent=1} | number | 线上线下标识
+| goods_type {data-indent=1} | number | 虚拟实物标识
+| seller_type {data-indent=1} | number | 物品发布类型
 | is_need_deliver {data-indent=1} | boolean | 是否需要物流发货
-| device_type {data-indent=1} | integer | 用户设备类型
-| userid {data-indent=1} | string | 出金的用户在商户侧的账号，由商户侧定义，保证账号维度唯一即可
-| phone_from {data-indent=1} | integer | 用户手机号的来源方式
-| seller_userid {data-indent=1} | string | 收款方在商户侧的用户标识，由商户侧定义，账号维度唯一即可
-| scene {data-indent=1} | integer | 0：无明确场景；1：充值；2：生活缴费
+| device_type {data-indent=1} | number | 用户设备类型
+| userid {data-indent=1} | string | 付款方用户标识
+| phone_from {data-indent=1} | number | 手机号来源
+| seller_userid {data-indent=1} | string | 收款方用户标识
+| scene {data-indent=1} | number | 业务场景
 | recharge_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 充值业务场景独有字段
-| account_type {data-indent=2} | integer | 充值场景，用户充值的账号类型
+| account_type {data-indent=2} | number | 充值账号类型
 | account {data-indent=2} | string | 充值账号
 | living_expenses_fields {data-indent=1} | object {data-tooltip="对应PHP的array"} | 生活缴费场景独有字段
-| acc_no {data-indent=2} | string | 生活缴费的呼号
-| type {data-indent=2} | integer | 缴费的种类
-| city {data-indent=2} | string | 用户缴费户号所属城市
-| address {data-indent=2} | string | 用户缴费户号所对应的地址信息
-| acc_name {data-indent=2} | string | 缴费户号对应的户主名字
-| company_name {data-indent=2} | string | 给哪个机构缴纳该笔费用
-| amount {data-indent=2} | integer | 缴费金额，单位为分，币种为人名币
+| acc_no {data-indent=2} | string | 户号
+| type {data-indent=2} | number | 费种
+| city {data-indent=2} | string | 缴费城市
+| address {data-indent=2} | string | 户号对应的地址信息
+| acc_name {data-indent=2} | string | 缴费户名
+| company_name {data-indent=2} | string | 机构名称
+| amount {data-indent=2} | number | 缴费金额
 | extra_fields1 {data-indent=1} | string | 扩展字段1，json格式
 | extra_fields2 {data-indent=1} | string | 扩展字段2，json格式
 | extra_fields3 {data-indent=1} | string | 扩展字段3，json格式
@@ -339,11 +339,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sp_mchid | string | 微信支付分配的服务商唯一标识
-| acquiring_bank_id | string | 微信支付分配的从业机构唯一标识
-| channel_id | string | 微信支付分配的渠道商唯一标识
-| sub_mchid | string | 上报订单风险数据的商户号信息
-| out_trade_no | string | 商户系统内部订单号
+| sp_mchid | string | 服务商商户号
+| acquiring_bank_id | string | 从业机构商户号
+| channel_id | string | 渠道号
+| sub_mchid | string | 子商户号
+| out_trade_no | string | 商户订单号
 
 {.im-table #response}
 

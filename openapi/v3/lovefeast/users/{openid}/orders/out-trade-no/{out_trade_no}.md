@@ -96,5 +96,3 @@ print_r(json_decode((string) $response->getBody(), true));
 | device_id | string | 设备编号
 
 {.im-table #response}
-
-参阅 情

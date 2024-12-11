@@ -122,5 +122,3 @@ print_r(json_decode((string) $response->getBody(), true));
 | failed_reason {data-indent=1} | string | 绑定当前收款信息失败的原因
 
 {.im-table #response}
-
-参阅 。

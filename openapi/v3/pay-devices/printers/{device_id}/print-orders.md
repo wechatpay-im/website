@@ -174,5 +174,3 @@ print_r($response->getStatusCode() === 204);
 | 空字符串(无返回内容) {align=center colspan=3}
 
 {.im-table #response}
-
-参阅 。

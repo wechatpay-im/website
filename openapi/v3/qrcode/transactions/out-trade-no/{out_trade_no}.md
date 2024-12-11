@@ -131,5 +131,3 @@ print_r(json_decode((string) $response->getBody(), true));
 | currency {data-indent=1} | string | 优惠币种
 
 {.im-table #response}
-
-参阅 息

@@ -109,5 +109,3 @@ print_r(json_decode((string) $response->getBody(), true));
 | block_reason | string | 原因
 
 {.im-table #response}
-
-参阅 务

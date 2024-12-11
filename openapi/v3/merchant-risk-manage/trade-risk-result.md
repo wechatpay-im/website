@@ -1,6 +1,6 @@
 ---
 title: 处置结果回传
-description: 
+description: 从业机构/服务商/渠道商/商户查询订单风险后，调用该接口回传对风险订单/风险商户的调查、处置信息。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -10,13 +10,13 @@ description:
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sp_mchid {data-indent=1} | string | 微信支付分配的服务商唯一标识
-| acquiring_bank_id {data-indent=1} | string | 微信支付分配的从业机构唯一标识
-| channel_id {data-indent=1} | string | 微信支付分配的渠道商唯一标识
-| sub_mchid {data-indent=1} | string | 上报订单风险数据的商户号信息
-| out_trade_no {data-indent=1} | string | 商户系统内部订单号，只能是数字、大小写字母_-*且在同一个商户号下唯一
+| sp_mchid {data-indent=1} | string | 服务商商户号
+| acquiring_bank_id {data-indent=1} | string | 从业机构商户号
+| channel_id {data-indent=1} | string | 渠道号
+| sub_mchid {data-indent=1} | string | 子商户号
+| out_trade_no {data-indent=1} | string | 商户订单号
 | risk_type {data-indent=1} | string | 风险类型<br/>`OTHER_RISK` \| `INDUCE_PAYMENT` \| `FRAUD` \| `GAMBLING` \| `CYBERSEX` 枚举值之一
-| punish_type {data-indent=1} | string | 处置手段<br/>`OTHER_PUNISH` \| `DISABLE_PAYMENT` \| `SUSPEND_SETTLEMENT` \| `DISABLE_WITHDRAW` \| `REMOVE_MERCHANTS` \| `ADD_MERCHANTS_BLACKLIST` \| `REFUND` \| `FREEZING_FUND_BY_TRANSACTION` \| `FREEZING_FUND_BY_MERCHANTS` \| `BLOCKED_USER` 枚举值之一
+| punish_type {data-required data-indent=1} | string | 处置手段<br/>`OTHER_PUNISH` \| `DISABLE_PAYMENT` \| `SUSPEND_SETTLEMENT` \| `DISABLE_WITHDRAW` \| `REMOVE_MERCHANTS` \| `ADD_MERCHANTS_BLACKLIST` \| `REFUND` \| `FREEZING_FUND_BY_TRANSACTION` \| `FREEZING_FUND_BY_MERCHANTS` \| `BLOCKED_USER` 枚举值之一
 | additional_punish_type {data-indent=1} | string | 处置手段补充
 | complaints_information {data-indent=1} | string | 投诉信息
 
@@ -139,6 +139,15 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| sp_mchid | string | 服务商商户号
+| acquiring_bank_id | string | 从业机构商户号
+| channel_id | string | 渠道号
+| sub_mchid | string | 子商户号
+| out_trade_no | string | 商户订单号
+| risk_type | string | 风险类型<br/>`OTHER_RISK` \| `INDUCE_PAYMENT` \| `FRAUD` \| `GAMBLING` \| `CYBERSEX` 枚举值之一
+| punish_type {data-required} | string | 处置手段<br/>`OTHER_PUNISH` \| `DISABLE_PAYMENT` \| `SUSPEND_SETTLEMENT` \| `DISABLE_WITHDRAW` \| `REMOVE_MERCHANTS` \| `ADD_MERCHANTS_BLACKLIST` \| `REFUND` \| `FREEZING_FUND_BY_TRANSACTION` \| `FREEZING_FUND_BY_MERCHANTS` \| `BLOCKED_USER` 枚举值之一
+| additional_punish_type | string | 处置手段补充
+| punish_description | string | 处置手段描述
 
 {.im-table #response}
 

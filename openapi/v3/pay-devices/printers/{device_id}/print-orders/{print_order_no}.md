@@ -91,5 +91,3 @@ print_r(json_decode((string) $response->getBody(), true));
 | cell_list {data-indent=2} | string[] | 值列表
 
 {.im-table #response}
-
-参阅 情

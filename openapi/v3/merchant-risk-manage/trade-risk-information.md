@@ -1,6 +1,6 @@
 ---
 title: 查询风险信息
-description: 
+description: 从业机构/服务商/渠道商/商户可调用该接口，在商户订单支付完成后，进行订单风险查询，从而进行后置风险管控&生态建设。
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -9,12 +9,12 @@ description:
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| sp_mchid {data-indent=1} | string | 微信支付分配的服务商唯一标识
-| acquiring_bank_id {data-indent=1} | string | 微信支付分配的从业机构唯一标识
-| channel_id {data-indent=1} | string | 微信支付分配的渠道商唯一标识
-| sub_mchid {data-indent=1} | string | 上报订单风险数据的商户号信息
-| out_trade_no {data-indent=1} | string | 商户系统内部订单号，只能是数字、大小写字母_-*且在同一个商户号下唯一
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sp_mchid {data-indent=1} | string | 服务商商户号
+| acquiring_bank_id {data-indent=1} | string | 从业机构号
+| channel_id {data-indent=1} | string | 渠道号
+| sub_mchid {data-indent=1} | string | 子商户号
+| out_trade_no {data-required data-indent=1} | string | 商户订单号
 | complaints_information {data-indent=1} | string | 投诉信息
 
 {.im-table #request}
@@ -118,6 +118,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| risk_score {data-required} | number | 风险系数值
+| risk_type | string | 风险类型<br/>`OTHER_RISK` \| `INDUCE_PAYMENT` \| `FRAUD` \| `GAMBLING` \| `CYBERSEX` 枚举值之一
+| punish_type | string | 处置手段<br/>`OTHER_PUNISH` \| `DISABLE_PAYMENT` \| `SUSPEND_SETTLEMENT` \| `DISABLE_WITHDRAW` \| `REMOVE_MERCHANTS` \| `ADD_MERCHANTS_BLACKLIST` \| `REFUND` \| `FREEZING_FUND_BY_TRANSACTION` \| `FREEZING_FUND_BY_MERCHANTS` \| `BLOCKED_USER` 枚举值之一
+| punish_description | string | 处置手段描述
 
 {.im-table #response}
 
