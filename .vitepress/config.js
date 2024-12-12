@@ -1526,9 +1526,9 @@ function openapiSidebar() {
                   text: '进件(融合钱包)',
                   collapsed: true,
                   items: [
-                    ['进件子商户', '/openapi/v3/merchants'],
+                    ['进件子商户', '/openapi/v3/merchants#post'],
+                    ['修改子商户', '/openapi/v3/merchants#put'],
                     ['查询子商户', '/openapi/v3/merchants/{sub_mchid}#get'],
-                    ['修改子商户', '/openapi/v3/merchants/{sub_mchid}#patch'],
                   ].map(transArrayItem),
                 },
                 {
