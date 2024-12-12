@@ -38,12 +38,12 @@ $instance->v3->rateActivity->applications->postAsync([
       'activity_rate'              => '0.6',
       'activity_apply_information' => [[
         'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
-        'apply_material_information' => ['MediaId'],
+        'apply_material_information' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
       ],],
     ],
     'additional_information' => [
       'additional_message'  => '特殊情况，说明原因',
-      'additional_material' => ['MediaId'],
+      'additional_material' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
     ],
   ],
 ])
@@ -64,12 +64,12 @@ $instance->chain('v3/rate-activity/applications')->postAsync([
       'activity_rate'              => '0.6',
       'activity_apply_information' => [[
         'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
-        'apply_material_information' => ['MediaId'],
+        'apply_material_information' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
       ],],
     ],
     'additional_information' => [
       'additional_message'  => '特殊情况，说明原因',
-      'additional_material' => ['MediaId'],
+      'additional_material' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
     ],
   ],
 ])
@@ -90,12 +90,12 @@ $instance['v3/rate-activity/applications']->postAsync([
       'activity_rate'              => '0.6',
       'activity_apply_information' => [[
         'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
-        'apply_material_information' => ['MediaId'],
+        'apply_material_information' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
       ],],
     ],
     'additional_information' => [
       'additional_message'  => '特殊情况，说明原因',
-      'additional_material' => ['MediaId'],
+      'additional_material' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
     ],
   ],
 ])
@@ -116,12 +116,12 @@ $response = $instance->v3->rateActivity->applications->post([
       'activity_rate'              => '0.6',
       'activity_apply_information' => [[
         'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
-        'apply_material_information' => ['MediaId'],
+        'apply_material_information' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
       ],],
     ],
     'additional_information' => [
       'additional_message'  => '特殊情况，说明原因',
-      'additional_material' => ['MediaId'],
+      'additional_material' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
     ],
   ],
 ]);
@@ -139,12 +139,12 @@ $response = $instance->chain('v3/rate-activity/applications')->post([
       'activity_rate'              => '0.6',
       'activity_apply_information' => [[
         'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
-        'apply_material_information' => ['MediaId'],
+        'apply_material_information' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
       ],],
     ],
     'additional_information' => [
       'additional_message'  => '特殊情况，说明原因',
-      'additional_material' => ['MediaId'],
+      'additional_material' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
     ],
   ],
 ]);
@@ -162,12 +162,12 @@ $response = $instance['v3/rate-activity/applications']->post([
       'activity_rate'              => '0.6',
       'activity_apply_information' => [[
         'apply_material_id'          => 'SCHOOL_QUALIFICATION_PROVEMENT',
-        'apply_material_information' => ['MediaId'],
+        'apply_material_information' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
       ],],
     ],
     'additional_information' => [
       'additional_message'  => '特殊情况，说明原因',
-      'additional_material' => ['MediaId'],
+      'additional_material' => ['0P3ng6KTIW4-Q_l2FjKLZuhHjBWoMAjm'],
     ],
   ],
 ]);

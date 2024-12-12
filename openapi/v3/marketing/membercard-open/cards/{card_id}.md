@@ -184,7 +184,7 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->patchAsync([
     ],
     'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list'         => ['string'],
+      'common_field_list'         => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list'         => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -232,7 +232,7 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patchAsync([
     ],
     'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list'         => ['string'],
+      'common_field_list'         => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list'         => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -280,7 +280,7 @@ $instance['v3/marketing/membercard-open/cards/{card_id}']->patchAsync([
     ],
     'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list'         => ['string'],
+      'common_field_list'         => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list'         => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -328,7 +328,7 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->patch([
     ],
     'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list'         => ['string'],
+      'common_field_list'         => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list'         => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -373,7 +373,7 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->pa
     ],
     'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list'         => ['string'],
+      'common_field_list'         => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list'         => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -418,7 +418,7 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}']->patch([
     ],
     'user_information_form'  => [
       'can_modify_after_activate' => true,
-      'common_field_list'         => ['string'],
+      'common_field_list'         => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list'         => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',

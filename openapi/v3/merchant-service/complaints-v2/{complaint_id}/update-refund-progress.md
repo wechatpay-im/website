@@ -28,7 +28,7 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->updateRefundProgre
     'action'            => 'REJECT',
     'launch_refund_day' => 3,
     'reject_reason'     => '拒绝退款',
-    'reject_media_list' => ['MediaId'],
+    'reject_media_list' => ['file23578_21798531.jpg'],
     'remark'            => '已处理完成',
   ],
 ])
@@ -45,7 +45,7 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/update-refund
     'action'            => 'REJECT',
     'launch_refund_day' => 3,
     'reject_reason'     => '拒绝退款',
-    'reject_media_list' => ['MediaId'],
+    'reject_media_list' => ['file23578_21798531.jpg'],
     'remark'            => '已处理完成',
   ],
 ])
@@ -62,7 +62,7 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progre
     'action'            => 'REJECT',
     'launch_refund_day' => 3,
     'reject_reason'     => '拒绝退款',
-    'reject_media_list' => ['MediaId'],
+    'reject_media_list' => ['file23578_21798531.jpg'],
     'remark'            => '已处理完成',
   ],
 ])
@@ -79,7 +79,7 @@ $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->update
     'action'            => 'REJECT',
     'launch_refund_day' => 3,
     'reject_reason'     => '拒绝退款',
-    'reject_media_list' => ['MediaId'],
+    'reject_media_list' => ['file23578_21798531.jpg'],
     'remark'            => '已处理完成',
   ],
 ]);
@@ -93,7 +93,7 @@ $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/u
     'action'            => 'REJECT',
     'launch_refund_day' => 3,
     'reject_reason'     => '拒绝退款',
-    'reject_media_list' => ['MediaId'],
+    'reject_media_list' => ['file23578_21798531.jpg'],
     'remark'            => '已处理完成',
   ],
 ]);
@@ -107,7 +107,7 @@ $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/update-r
     'action'            => 'REJECT',
     'launch_refund_day' => 3,
     'reject_reason'     => '拒绝退款',
-    'reject_media_list' => ['MediaId'],
+    'reject_media_list' => ['file23578_21798531.jpg'],
     'remark'            => '已处理完成',
   ],
 ]);

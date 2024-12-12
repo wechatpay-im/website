@@ -100,7 +100,7 @@ $instance->v3->marketing->membercardActivity->activities->postAsync([
       ],
       'payment_setting'       => [
         'payment_mode' => [
-          'payment_scene_list' => ['string'],
+          'payment_scene_list' => ['APP'],
         ],
         'limit_bank'   => 'CFT',
         'goods_tags'   => ['string'],
@@ -167,7 +167,7 @@ $instance->chain('v3/marketing/membercard-activity/activities')->postAsync([
       ],
       'payment_setting'       => [
         'payment_mode' => [
-          'payment_scene_list' => ['string'],
+          'payment_scene_list' => ['APP'],
         ],
         'limit_bank'   => 'CFT',
         'goods_tags'   => ['string'],
@@ -234,7 +234,7 @@ $instance['v3/marketing/membercard-activity/activities']->postAsync([
       ],
       'payment_setting'       => [
         'payment_mode' => [
-          'payment_scene_list' => ['string'],
+          'payment_scene_list' => ['APP'],
         ],
         'limit_bank'   => 'CFT',
         'goods_tags'   => ['string'],
@@ -301,7 +301,7 @@ $response = $instance->v3->marketing->membercardActivity->activities->post([
       ],
       'payment_setting'       => [
         'payment_mode' => [
-          'payment_scene_list' => ['string'],
+          'payment_scene_list' => ['APP'],
         ],
         'limit_bank'   => 'CFT',
         'goods_tags'   => ['string'],
@@ -365,7 +365,7 @@ $response = $instance->chain('v3/marketing/membercard-activity/activities')->pos
       ],
       'payment_setting'       => [
         'payment_mode' => [
-          'payment_scene_list' => ['string'],
+          'payment_scene_list' => ['APP'],
         ],
         'limit_bank'   => 'CFT',
         'goods_tags'   => ['string'],
@@ -429,7 +429,7 @@ $response = $instance['v3/marketing/membercard-activity/activities']->post([
       ],
       'payment_setting'       => [
         'payment_mode' => [
-          'payment_scene_list' => ['string'],
+          'payment_scene_list' => ['APP'],
         ],
         'limit_bank'   => 'CFT',
         'goods_tags'   => ['string'],

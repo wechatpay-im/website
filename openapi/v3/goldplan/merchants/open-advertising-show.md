@@ -21,7 +21,7 @@ description: 此接口为特约商户的点金计划页面开通广告展示功�
 $instance->v3->goldplan->merchants->openAdvertisingShow->patchAsync([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,7 +34,7 @@ $instance->v3->goldplan->merchants->openAdvertisingShow->patchAsync([
 $instance->chain('v3/goldplan/merchants/open-advertising-show')->patchAsync([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,7 +47,7 @@ $instance->chain('v3/goldplan/merchants/open-advertising-show')->patchAsync([
 $instance['v3/goldplan/merchants/open-advertising-show']->patchAsync([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,7 +60,7 @@ $instance['v3/goldplan/merchants/open-advertising-show']->patchAsync([
 $response = $instance->v3->goldplan->merchants->openAdvertisingShow->patch([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -70,7 +70,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/goldplan/merchants/open-advertising-show')->patch([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -80,7 +80,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/goldplan/merchants/open-advertising-show']->patch([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ]);
 print_r($response->getStatusCode() === 204);

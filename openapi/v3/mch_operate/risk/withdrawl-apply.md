@@ -73,7 +73,7 @@ $instance->v3->mch_operate->risk->withdrawlApply->postAsync([
       ],],
     ],
     'additional_materials' => [
-      'additional_media' => ['MediaId'],
+      'additional_media' => ['jTpGmxUX3FBWVQ5NFQ'],
     ],
     'remark'               => '特殊理由',
   ],
@@ -118,7 +118,7 @@ $instance->chain('v3/mch_operate/risk/withdrawl-apply')->postAsync([
       ],],
     ],
     'additional_materials' => [
-      'additional_media' => ['MediaId'],
+      'additional_media' => ['jTpGmxUX3FBWVQ5NFQ'],
     ],
     'remark'               => '特殊理由',
   ],
@@ -163,7 +163,7 @@ $instance['v3/mch_operate/risk/withdrawl-apply']->postAsync([
       ],],
     ],
     'additional_materials' => [
-      'additional_media' => ['MediaId'],
+      'additional_media' => ['jTpGmxUX3FBWVQ5NFQ'],
     ],
     'remark'               => '特殊理由',
   ],
@@ -208,7 +208,7 @@ $response = $instance->v3->mch_operate->risk->withdrawlApply->post([
       ],],
     ],
     'additional_materials' => [
-      'additional_media' => ['MediaId'],
+      'additional_media' => ['jTpGmxUX3FBWVQ5NFQ'],
     ],
     'remark'               => '特殊理由',
   ],
@@ -250,7 +250,7 @@ $response = $instance->chain('v3/mch_operate/risk/withdrawl-apply')->post([
       ],],
     ],
     'additional_materials' => [
-      'additional_media' => ['MediaId'],
+      'additional_media' => ['jTpGmxUX3FBWVQ5NFQ'],
     ],
     'remark'               => '特殊理由',
   ],
@@ -292,7 +292,7 @@ $response = $instance['v3/mch_operate/risk/withdrawl-apply']->post([
       ],],
     ],
     'additional_materials' => [
-      'additional_media' => ['MediaId'],
+      'additional_media' => ['jTpGmxUX3FBWVQ5NFQ'],
     ],
     'remark'               => '特殊理由',
   ],

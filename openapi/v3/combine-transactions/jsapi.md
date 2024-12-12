@@ -78,7 +78,7 @@ $instance->v3->combineTransactions->jsapi->postAsync([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['string'],
+    'limit_pay'            => ['no_balance'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -122,7 +122,7 @@ $instance->chain('v3/combine-transactions/jsapi')->postAsync([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['string'],
+    'limit_pay'            => ['no_balance'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -166,7 +166,7 @@ $instance['v3/combine-transactions/jsapi']->postAsync([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['string'],
+    'limit_pay'            => ['no_balance'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -210,7 +210,7 @@ $response = $instance->v3->combineTransactions->jsapi->post([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['string'],
+    'limit_pay'            => ['no_balance'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -251,7 +251,7 @@ $response = $instance->chain('v3/combine-transactions/jsapi')->post([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['string'],
+    'limit_pay'            => ['no_balance'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -292,7 +292,7 @@ $response = $instance['v3/combine-transactions/jsapi']->post([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['string'],
+    'limit_pay'            => ['no_balance'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

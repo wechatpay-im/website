@@ -21,7 +21,7 @@ description: 服务商使用此接口为特约商户配置同业过滤标签，�
 $instance->v3->goldplan->merchants->setAdvertisingIndustryFilter->postAsync([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,7 +34,7 @@ $instance->v3->goldplan->merchants->setAdvertisingIndustryFilter->postAsync([
 $instance->chain('v3/goldplan/merchants/set-advertising-industry-filter')->postAsync([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,7 +47,7 @@ $instance->chain('v3/goldplan/merchants/set-advertising-industry-filter')->postA
 $instance['v3/goldplan/merchants/set-advertising-industry-filter']->postAsync([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,7 +60,7 @@ $instance['v3/goldplan/merchants/set-advertising-industry-filter']->postAsync([
 $response = $instance->v3->goldplan->merchants->setAdvertisingIndustryFilter->post([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -70,7 +70,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/goldplan/merchants/set-advertising-industry-filter')->post([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -80,7 +80,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/goldplan/merchants/set-advertising-industry-filter']->post([
   'json' => [
     'sub_mchid'                    => '1900000109',
-    'advertising_industry_filters' => ['string'],
+    'advertising_industry_filters' => ['E_COMMERCE'],
   ],
 ]);
 print_r($response->getStatusCode() === 204);

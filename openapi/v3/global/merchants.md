@@ -104,7 +104,7 @@ $instance->v3->global->merchants->postAsync([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'h5_website_url' => 'https://qq.com',
-      'domains'        => ['string'],
+      'domains'        => ['www.qq.com'],
     ],
   ],
   'headers' => [
@@ -165,7 +165,7 @@ $instance->chain('v3/global/merchants')->postAsync([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'h5_website_url' => 'https://qq.com',
-      'domains'        => ['string'],
+      'domains'        => ['www.qq.com'],
     ],
   ],
   'headers' => [
@@ -226,7 +226,7 @@ $instance['v3/global/merchants']->postAsync([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'h5_website_url' => 'https://qq.com',
-      'domains'        => ['string'],
+      'domains'        => ['www.qq.com'],
     ],
   ],
   'headers' => [
@@ -287,7 +287,7 @@ $response = $instance->v3->global->merchants->post([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'h5_website_url' => 'https://qq.com',
-      'domains'        => ['string'],
+      'domains'        => ['www.qq.com'],
     ],
   ],
   'headers' => [
@@ -345,7 +345,7 @@ $response = $instance->chain('v3/global/merchants')->post([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'h5_website_url' => 'https://qq.com',
-      'domains'        => ['string'],
+      'domains'        => ['www.qq.com'],
     ],
   ],
   'headers' => [
@@ -403,7 +403,7 @@ $response = $instance['v3/global/merchants']->post([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'h5_website_url' => 'https://qq.com',
-      'domains'        => ['string'],
+      'domains'        => ['www.qq.com'],
     ],
   ],
   'headers' => [

@@ -228,7 +228,7 @@ $instance->v3->global->merchants->_sub_mchid_->patchAsync([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains'     => ['string'],
+      'domains'     => ['www.qq.com'],
     ],
   ],
 ])
@@ -282,7 +282,7 @@ $instance->chain('v3/global/merchants/{sub_mchid}')->patchAsync([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains'     => ['string'],
+      'domains'     => ['www.qq.com'],
     ],
   ],
 ])
@@ -336,7 +336,7 @@ $instance['v3/global/merchants/{sub_mchid}']->patchAsync([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains'     => ['string'],
+      'domains'     => ['www.qq.com'],
     ],
   ],
 ])
@@ -390,7 +390,7 @@ $response = $instance->v3->global->merchants->_sub_mchid_->patch([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains'     => ['string'],
+      'domains'     => ['www.qq.com'],
     ],
   ],
 ]);
@@ -441,7 +441,7 @@ $response = $instance->chain('v3/global/merchants/{sub_mchid}')->patch([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains'     => ['string'],
+      'domains'     => ['www.qq.com'],
     ],
   ],
 ]);
@@ -492,7 +492,7 @@ $response = $instance['v3/global/merchants/{sub_mchid}']->patch([
     'apply_h5_payment'                => true,
     'h5_payment_apply_info'           => [
       'website_url' => 'https://qq.com',
-      'domains'     => ['string'],
+      'domains'     => ['www.qq.com'],
     ],
   ],
 ]);

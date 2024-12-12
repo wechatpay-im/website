@@ -80,7 +80,7 @@ $instance->v3->marketing->membercardOpen->cards->postAsync([
       'balance_url'   => 'https://xxx.com',
     ],
     'user_information_form'  => [
-      'common_field_list' => ['string'],
+      'common_field_list' => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list' => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -133,7 +133,7 @@ $instance->chain('v3/marketing/membercard-open/cards')->postAsync([
       'balance_url'   => 'https://xxx.com',
     ],
     'user_information_form'  => [
-      'common_field_list' => ['string'],
+      'common_field_list' => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list' => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -186,7 +186,7 @@ $instance['v3/marketing/membercard-open/cards']->postAsync([
       'balance_url'   => 'https://xxx.com',
     ],
     'user_information_form'  => [
-      'common_field_list' => ['string'],
+      'common_field_list' => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list' => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -239,7 +239,7 @@ $response = $instance->v3->marketing->membercardOpen->cards->post([
       'balance_url'   => 'https://xxx.com',
     ],
     'user_information_form'  => [
-      'common_field_list' => ['string'],
+      'common_field_list' => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list' => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -289,7 +289,7 @@ $response = $instance->chain('v3/marketing/membercard-open/cards')->post([
       'balance_url'   => 'https://xxx.com',
     ],
     'user_information_form'  => [
-      'common_field_list' => ['string'],
+      'common_field_list' => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list' => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
@@ -339,7 +339,7 @@ $response = $instance['v3/marketing/membercard-open/cards']->post([
       'balance_url'   => 'https://xxx.com',
     ],
     'user_information_form'  => [
-      'common_field_list' => ['string'],
+      'common_field_list' => ['USER_FORM_FLAG_MOBILE'],
       'custom_field_list' => [[
         'type'   => 'TEXT',
         'name'   => '喜欢的运动',
