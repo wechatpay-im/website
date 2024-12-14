@@ -78,7 +78,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required} | string | 子商户号
-| authorization_state {data-required} | string | H5支付权限状态
+| authorization_state {data-required} | string | H5支付权限状态<br/>`AUTHORITY_TO_TEST` \| `FORMAL_AUTHORITY` \| `AUTHORIZED` \| `UNDER_PUNISHMENT` \| `UNDER_PUNISHMENT` \| `UNAUTHORIZED` 枚举值之一
 
 {.im-table #response}
 

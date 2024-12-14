@@ -77,16 +77,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-required} | string | 子商户号
 | domains {data-required} | string[] | H5支付域名
 | business_description | string | 公司介绍和业务描述
-| transaction_limit_type {data-required} | string | 限额类型
+| transaction_limit_type {data-required} | string | 限额类型<br/>`UN_LAUNCHED_WEBSITE_LIMIT` \| `NORMAL_LIMIT` \| `NO_LIMIT` 枚举值之一
 | company_register_cert | string | 公司注册资质证书
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
-| website_state {data-required} | string | 子商户经营网址状态
+| website_state {data-required} | string | 子商户经营网址状态<br/>`HAS_LAUNCHED` \| `UN_LAUNCHED` 枚举值之一
 | website_url {data-required} | string | 子商户H5经营网址
 | applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
-| applyment_state {data-required} | string | 申请单状态
-| applyment_type {data-required} | string | 申请单类型
+| applyment_state {data-required} | string | 申请单状态<br/>`PENDING` \| `UNDER_REVIEW` \| `APPROVED` \| `REJECTED` 枚举值之一
+| applyment_type {data-required} | string | 申请单类型<br/>`APPLY_FOR_PAYMENT_AUTHORITY` \| `APPLY_FOR_RELIEVE_LIMITED` 枚举值之一
 | notify_url | string | 商户提供的审核结果回调接口
 
 {.im-table #response}
@@ -107,7 +107,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | company_register_cert {data-indent=1} | string | 公司注册资质证书
 | website_business_page_pics {data-indent=1} | string[] | 经营网址商业页面截图
 | website_homepage_pics {data-indent=1} | string[] | 经营网址首页截图
-| website_state {data-indent=1} | string | 子商户经营网址状态
+| website_state {data-indent=1} | string | 子商户经营网址状态<br/>`HAS_LAUNCHED` \| `UN_LAUNCHED` 枚举值之一
 | website_url {data-indent=1} | string | 子商户H5经营网址
 
 {.im-table #request}
@@ -232,16 +232,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-required} | string | 子商户号
 | domains {data-required} | string[] | H5支付域名
 | business_description | string | 公司介绍和业务描述
-| transaction_limit_type {data-required} | string | 限额类型
+| transaction_limit_type {data-required} | string | 限额类型<br/>`UN_LAUNCHED_WEBSITE_LIMIT` \| `NORMAL_LIMIT` \| `NO_LIMIT` 枚举值之一
 | company_register_cert | string | 公司注册资质证书
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
-| website_state {data-required} | string | 子商户经营网址状态
+| website_state {data-required} | string | 子商户经营网址状态<br/>`HAS_LAUNCHED` \| `UN_LAUNCHED` 枚举值之一
 | website_url {data-required} | string | 子商户H5经营网址
 | applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
-| applyment_state {data-required} | string | 申请单状态
-| applyment_type {data-required} | string | 申请单类型
+| applyment_state {data-required} | string | 申请单状态<br/>`PENDING` \| `UNDER_REVIEW` \| `APPROVED` \| `REJECTED` 枚举值之一
+| applyment_type {data-required} | string | 申请单类型<br/>`APPLY_FOR_PAYMENT_AUTHORITY` \| `APPLY_FOR_RELIEVE_LIMITED` 枚举值之一
 | notify_url | string | 商户提供的审核结果回调接口
 
 {.im-table #response}

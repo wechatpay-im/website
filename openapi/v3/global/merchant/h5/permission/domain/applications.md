@@ -16,7 +16,7 @@ description: 商户可以通过该接口为自身和子商户发起H5支付域�
 | website_url {data-required data-indent=1} | string | 子商户H5经营网址
 | website_business_page_pics {data-indent=1} | string[] | 经营网址商业页面截图
 | website_homepage_pics {data-indent=1} | string[] | 经营网址首页截图
-| website_state {data-indent=1} | string | 子商户经营网址状态
+| website_state {data-indent=1} | string | 子商户经营网址状态<br/>`HAS_LAUNCHED` \| `UN_LAUNCHED` 枚举值之一
 | notify_url {data-indent=1} | string | 商户提供的审核结果回调接口
 | out_applyment_id {data-required data-indent=1} | string | 商户申请单号
 
@@ -140,14 +140,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required} | string | 子商户号
-| website_state {data-required} | string | 子商户经营网址状态
+| website_state {data-required} | string | 子商户经营网址状态<br/>`HAS_LAUNCHED` \| `UN_LAUNCHED` 枚举值之一
 | domains {data-required} | string[] | H5支付域名
 | webiste_url {data-required} | string | 子商户H5经营网址
 | website_business_page_pics | string[] | 经营网址商业页面截图
 | website_homepage_pics | string[] | 经营网址首页截图
 | applyment_id {data-required} | integer | 申请单号
 | audit_reject_detail | string | 驳回原因
-| applyment_state | string | 申请单状态
+| applyment_state | string | 申请单状态<br/>`PENDING` \| `UNDER_REVIEW` \| `APPROVED` \| `REJECTED` 枚举值之一
 | notify_url | string | 商户提供的审核结果回调接口
 | out_applyment_id {data-required} | string | 商户申请单号
 
