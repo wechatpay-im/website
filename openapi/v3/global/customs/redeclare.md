@@ -17,7 +17,7 @@ description: 如果订单附加信息已请求报送海关，但电子口岸丢�
 | transaction_id {data-indent=1} | string | 微信订单号
 | sub_order_no {data-indent=1} | string | 商户子单号
 | sub_order_id {data-indent=1} | string | 微信子单号
-| customs {data-required data-indent=1} | string | 海关编码
+| customs {data-required data-indent=1} | string | 海关编码<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 
 {.im-table #request}
@@ -141,7 +141,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | appid {data-required} | string | 机构APPID
 | mchid {data-required} | string | 商户号
-| state {data-required} | string | 报关状态
+| state {data-required} | string | 报关状态<br/>`PROCESSING` \| `UNDECLARED` \| `SUBMITTED` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | out_trade_no {data-required} | string | 商户订单号
 | transaction_id {data-required} | string | 微信订单号
 | sub_order_no | string | 商户子订单号

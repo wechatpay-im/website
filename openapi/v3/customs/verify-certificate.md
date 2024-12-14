@@ -16,9 +16,9 @@ description: 该接口用于商户上传用户身份信息，微信支付会重�
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | sub_order_no {data-indent=1} | string | 商户子订单号
-| customs {data-required data-indent=1} | string | 海关
+| customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
-| certificate_type {data-required data-indent=1} | string | 证件类型
+| certificate_type {data-required data-indent=1} | string | 证件类型<br/>`IDCARD` 枚举值
 | certificate_id {data-required data-indent=1} | string | 证件号
 | certificate_name {data-required data-indent=1} | string | 证件姓名
 | headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
@@ -40,8 +40,8 @@ $instance->v3->customs->verifyCertificate->postAsync([
     'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
     'certificate_type'    => 'IDCARD',
-    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_id'      => '330821198809085211',
+    'certificate_name'    => '张三',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -65,8 +65,8 @@ $instance->chain('v3/customs/verify-certificate')->postAsync([
     'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
     'certificate_type'    => 'IDCARD',
-    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_id'      => '330821198809085211',
+    'certificate_name'    => '张三',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -90,8 +90,8 @@ $instance['v3/customs/verify-certificate']->postAsync([
     'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
     'certificate_type'    => 'IDCARD',
-    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_id'      => '330821198809085211',
+    'certificate_name'    => '张三',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -115,8 +115,8 @@ $response = $instance->v3->customs->verifyCertificate->post([
     'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
     'certificate_type'    => 'IDCARD',
-    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_id'      => '330821198809085211',
+    'certificate_name'    => '张三',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -137,8 +137,8 @@ $response = $instance->chain('v3/customs/verify-certificate')->post([
     'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
     'certificate_type'    => 'IDCARD',
-    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_id'      => '330821198809085211',
+    'certificate_name'    => '张三',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -159,8 +159,8 @@ $response = $instance['v3/customs/verify-certificate']->post([
     'customs'             => 'SHANGHAI_ZS',
     'merchant_customs_no' => '123456',
     'certificate_type'    => 'IDCARD',
-    'certificate_id'      => 'Rsa::encrypt(0101211X, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
-    'certificate_name'    => 'Rsa::encrypt(张三, WechatpayPlatformCertificateInstance, OPENSSL_PKCS1_PADDING)',
+    'certificate_id'      => '330821198809085211',
+    'certificate_name'    => '张三',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -177,7 +177,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-required} | string | 商户号
 | out_trade_no {data-required} | string | 商户订单号
 | transaction_id {data-required} | string | 微信订单号
-| certificate_check_result {data-required} | string | 身份核验结果
+| certificate_check_result {data-required} | string | 身份核验结果<br/>`SAME` \| `DIFFERENT` 枚举值之一
 
 {.im-table #response}
 

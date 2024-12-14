@@ -12,7 +12,7 @@
 | mchid {data-required data-indent=1} | string | 商户号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
-| customs {data-required data-indent=1} | string | 海关
+| customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | duty {data-indent=1} | integer | 关税
 | sub_order_no {data-indent=1} | string | 商户子订单号
@@ -166,12 +166,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | appid {data-required} | string | 机构APPID
 | mchid {data-required} | string | 商户号
-| state {data-required} | string | 报关状态
+| state {data-required} | string | 报关状态<br/>`PROCESSING` \| `UNDECLARED` \| `SUBMITTED` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | out_trade_no {data-required} | string | 商户订单号
 | transaction_id {data-required} | string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
-| verify_department {data-required} | string | 核验机构
+| verify_department {data-required} | string | 核验机构<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
 | verify_department_trade_id {data-required} | string | 核验机构交易流水号
 
 {.im-table #response}
@@ -190,7 +190,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-required data-indent=1} | string | 商户号
 | order_type {data-required data-indent=1} | string | 订单类型<br/>`out_trade_no` \| `transaction_id` \| `sub_order_no` \| `sub_order_id` 枚举值之一
 | order_no {data-required data-indent=1} | string | 订单号
-| customs {data-required data-indent=1} | string | 海关
+| customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | offset {data-indent=1} | integer | 偏移量
 | limit {data-indent=1} | integer | 请求最大记录条数
 
@@ -310,7 +310,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-required} | string | 机构APPID
 | mchid {data-required} | string | 商户号
 | transaction_id {data-required} | string | 微信订单号
-| verify_department {data-required} | string | 核验机构
+| verify_department {data-required} | string | 核验机构<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
 | verify_department_trade_id {data-required} | string | 核验机构流水号
 | offset {data-required} | integer | 偏移量
 | limit {data-required} | integer | 请求最大记录条数
@@ -319,13 +319,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_order_no {data-indent=1} | string | 商户子单号
 | sub_order_id {data-indent=1} | string | 微信子单号
 | mch_customs_no {data-indent=1} | string | 商户海关备案号
-| customs {data-required data-indent=1} | string | 海关代码
+| customs {data-required data-indent=1} | string | 海关代码<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | fee_type {data-indent=1} | string | 币种
 | order_fee {data-indent=1} | integer | 子单金额
 | duty {data-indent=1} | integer | 关税
 | transport_fee {data-indent=1} | integer | 物流费用
 | product_fee {data-indent=1} | integer | 商品费用
-| state {data-required data-indent=1} | string | 报关状态
+| state {data-required data-indent=1} | string | 报关状态<br/>`PROCESSING` \| `UNDECLARED` \| `SUBMITTED` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | explanation {data-indent=1} | string | 报关结果说明
 | modify_time {data-required data-indent=1} | string | 最后更新时间
 
@@ -346,7 +346,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | sub_order_no {data-indent=1} | string | 商户子订单号
-| customs {data-required data-indent=1} | string | 海关编码
+| customs {data-required data-indent=1} | string | 海关编码<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | duty {data-indent=1} | integer | 关税
 | order_fee {data-indent=1} | integer | 子订单金额
@@ -492,13 +492,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | appid {data-required} | string | 机构APPID
 | mchid {data-required} | string | 商户号
-| state {data-required} | string | 报关状态
+| state {data-required} | string | 报关状态<br/>`PROCESSING` \| `UNDECLARED` \| `SUBMITTED` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
 | out_trade_no {data-required} | string | 商户订单号
 | transaction_id {data-required} | string | 微信订单号
 | sub_order_no | string | 商户子订单号
 | sub_order_id | string | 微信子订单号
 | modify_time {data-required} | string | 最后更新时间
-| verify_department {data-required} | string | 核验机构
+| verify_department {data-required} | string | 核验机构<br/>`UNIONPAY` \| `NETSUNION` \| `OTHERS` 枚举值之一
 | verify_department_trade_id {data-required} | string | 核验机构流水号
 
 {.im-table #response}
