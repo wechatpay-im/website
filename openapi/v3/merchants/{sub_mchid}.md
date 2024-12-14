@@ -114,12 +114,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | name {data-indent=1} | string | 联系人名称
 | phone {data-indent=1} | string | 联系人电话
 | email {data-indent=1} | string | 联系人邮箱
-| merchant_type | string | 商户类型
+| merchant_type | string | 商户类型<br/>`ENTERPRISE` \| `INDIVIDUAL` 枚举值之一
 | registration_certificate_number | string | 公司注册文件编号
 | registration_certificate_date | string | 公司注册文件过期时间
 | settlement_bank_number | string | 子商户结算账户
 | business | object {data-tooltip="对应PHP的array"} | 业务信息
-| business_type {data-indent=1} | string | 业务类型
+| business_type {data-indent=1} | string | 业务类型<br/>`ONLINE` \| `OFFLINE` \| `BOTH` 枚举值之一
 | app_download {data-indent=1} | string | APP下载地址
 | website {data-indent=1} | string | 业务网站
 | office_account {data-indent=1} | string | 公众号

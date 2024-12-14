@@ -20,12 +20,13 @@ description: 用于机构子商户创建成功后，接口提供子商户信息�
 | channel_id {data-indent=1} | string | 渠道编号
 | merchant_shortname {data-required data-indent=1} | string | 子商户简称
 | merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
-| merchant_type {data-required data-indent=1} | string | 商户类型
+| merchant_type {data-required data-indent=1} | string | 商户类型<br/>`ENTERPRISE` \| `INDIVIDUAL` 枚举值之一
+| business_category {data-required data-indent=1} | string | 业务类目
 | mcc {data-required data-indent=1} | string | MCC码
 | registration_certificate_number {data-required data-indent=1} | string | 公司注册文件编号
 | registration_certificate_date {data-required data-indent=1} | string | 公司注册文件过期时间
 | registration_certificate_copy {data-indent=1} | string | 公司注册文件照片
-| business_type {data-required data-indent=1} | string | 业务类型
+| business_type {data-required data-indent=1} | string | 业务类型<br/>`ONLINE` \| `OFFLINE` \| `BOTH` 枚举值之一
 | app_download {data-required data-indent=1} | string | APP下载链接
 | business_website {data-required data-indent=1} | string | 业务网站
 | office_account {data-required data-indent=1} | string | 公众号
@@ -67,6 +68,7 @@ $instance->v2->secapi->mch->_modifyinstitutionsub_->postAsync([
     'merchant_shortname'              => 'Merchantshortname',
     'merchant_country_code'           => '344',
     'merchant_type'                   => 'ENTERPRISE',
+    'business_category'               => '343',
     'mcc'                             => '4214',
     'registration_certificate_number' => '5555-8888',
     'registration_certificate_date'   => '2020-10-16',
@@ -119,6 +121,7 @@ $instance->chain('v2/secapi/mch/{modifyinstitutionsub}')->postAsync([
     'merchant_shortname'              => 'Merchantshortname',
     'merchant_country_code'           => '344',
     'merchant_type'                   => 'ENTERPRISE',
+    'business_category'               => '343',
     'mcc'                             => '4214',
     'registration_certificate_number' => '5555-8888',
     'registration_certificate_date'   => '2020-10-16',
@@ -171,6 +174,7 @@ $instance['v2/secapi/mch/{modifyinstitutionsub}']->postAsync([
     'merchant_shortname'              => 'Merchantshortname',
     'merchant_country_code'           => '344',
     'merchant_type'                   => 'ENTERPRISE',
+    'business_category'               => '343',
     'mcc'                             => '4214',
     'registration_certificate_number' => '5555-8888',
     'registration_certificate_date'   => '2020-10-16',
@@ -223,6 +227,7 @@ $response = $instance->v2->secapi->mch->_modifyinstitutionsub_->post([
     'merchant_shortname'              => 'Merchantshortname',
     'merchant_country_code'           => '344',
     'merchant_type'                   => 'ENTERPRISE',
+    'business_category'               => '343',
     'mcc'                             => '4214',
     'registration_certificate_number' => '5555-8888',
     'registration_certificate_date'   => '2020-10-16',
@@ -272,6 +277,7 @@ $response = $instance->chain('v2/secapi/mch/{modifyinstitutionsub}')->post([
     'merchant_shortname'              => 'Merchantshortname',
     'merchant_country_code'           => '344',
     'merchant_type'                   => 'ENTERPRISE',
+    'business_category'               => '343',
     'mcc'                             => '4214',
     'registration_certificate_number' => '5555-8888',
     'registration_certificate_date'   => '2020-10-16',
@@ -321,6 +327,7 @@ $response = $instance['v2/secapi/mch/{modifyinstitutionsub}']->post([
     'merchant_shortname'              => 'Merchantshortname',
     'merchant_country_code'           => '344',
     'merchant_type'                   => 'ENTERPRISE',
+    'business_category'               => '343',
     'mcc'                             => '4214',
     'registration_certificate_number' => '5555-8888',
     'registration_certificate_date'   => '2020-10-16',
@@ -367,7 +374,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | err_code_des | string | 错误描述
 | sub_mch_id {data-required} | string | 子商户号
 | sign {data-required} | string | 签名
-| verification_status | string | 验证状态
+| verification_status | string | 验证状态<br/>`Under review` \| `Approved` 枚举值之一
 | h5_authorization_state | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
 
 {.im-table #response}

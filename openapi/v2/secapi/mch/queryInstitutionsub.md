@@ -135,8 +135,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | contact_phone | string | 联系人手机
 | contact_email | string | 联系人邮箱
 | merchant_remark {data-required} | string | 子商户唯一标识
-| business_type | string | 业务类型
-| merchant_type | string | 商户类型
+| business_type | string | 业务类型<br/>`ONLINE` \| `OFFLINE` \| `BOTH` 枚举值之一
+| merchant_type | string | 商户类型<br/>`ENTERPRISE` \| `INDIVIDUAL` 枚举值之一
 | registration_certificate_number | string | 公司注册文件编号
 | registration_certificate_date | string | 公司注册文件过期时间
 | app_download | string | APP下载链接
@@ -152,8 +152,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | channel_id | string | 渠道编号
 | h5_authorization_state | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
 | h5_audit_reject_detail | string | H5驳回详情
-| sub_mch_status | string | 子商户状态
-| application_status | string | 子商户入驻状态
+| sub_mch_status | string | 子商户状态<br/>`OPERATING` \| `PENDING` \| `DEACTIVATED` \| `CLOSED` \| `INCOMPLETE_APPLICATION` 枚举值之一
+| application_status | string | 子商户入驻状态<br/>`UNDER_REVIEW` \| `REJECTED` 枚举值之一
 | application_reject_detail | string | 子商户入驻驳回详情
 | {colspan=3 .im-table-line}
 | reason {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 驳回原因列表

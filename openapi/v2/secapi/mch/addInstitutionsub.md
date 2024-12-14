@@ -26,7 +26,7 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | registration_certificate_number {data-required data-indent=1} | string | 公司注册文件编号
 | registration_certificate_date {data-required data-indent=1} | string | 公司注册文件过期时间
 | registration_certificate_copy {data-indent=1} | string | 公司注册文件照片
-| business_type {data-required data-indent=1} | string | 业务类型
+| business_type {data-required data-indent=1} | string | 业务类型<br/>`ONLINE` \| `OFFLINE` \| `BOTH` 枚举值之一
 | app_download {data-required data-indent=1} | string | APP下载链接
 | business_website {data-required data-indent=1} | string | 业务网站
 | office_account {data-required data-indent=1} | string | 公众号
@@ -374,7 +374,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | err_code_des | string | 错误描述
 | sub_mch_id {data-required} | string | 子商户号
 | sign {data-required} | string | 签名
-| verification_status | string | 验证状态
+| verification_status | string | 验证状态<br/>`Under review` \| `Approved` 枚举值之一
 | description | string | 验证状态描述
 | h5_authorization_state | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
 
