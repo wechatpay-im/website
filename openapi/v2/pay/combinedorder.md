@@ -7,9 +7,9 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 
 {{ $frontmatter.description }}
 
-::: danger :closed_lock_with_key: {.im-privated}
+::: warning :closed_lock_with_key: {.im-privated}
 
-本接口服务已于 `2021.09.01` (北京时间)停止开放，文档仅做留存参考。
+本接口服务已于 `2021.09.01` (北京时间)停止开放，新接口见[这里](/openapi/v3/combine-transactions/app) [这里](/openapi/v3/combine-transactions/h5) [这里](/openapi/v3/combine-transactions/jsapi) [这里](/openapi/v3/combine-transactions/native)，此文档仅做留存参考。
 
 :::
 

@@ -7,6 +7,12 @@ description: 如果订单附加信息已请求报送海关，但电子口岸丢�
 
 {{ $frontmatter.description }}
 
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/customs/redeclare)，此文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri {data-required} | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)

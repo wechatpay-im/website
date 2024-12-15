@@ -7,9 +7,9 @@ description: 所有微信支付订单的查询，商户可以通过查询订单�
 
 {{ $frontmatter.description }}
 
-::: danger :closed_lock_with_key: {.im-privated}
+::: warning :closed_lock_with_key: {.im-privated}
 
-本接口服务已于 `2021.09.01` (北京时间)停止开放，文档仅做留存参考。
+本接口服务已于 `2021.09.01` (北京时间)停止开放，新接口见[这里](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no})，此文档仅做留存参考。
 
 :::
 

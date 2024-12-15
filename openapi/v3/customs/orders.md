@@ -4,6 +4,12 @@
 
 该接口用于商户提交海关需要的订单附加信息。
 
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/customs/orders#post)，此文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri {data-required} | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
@@ -182,6 +188,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 商户通过订单号查询提交的订单附加信息及订单报关状态。
 
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/customs/orders#get)，此文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri {data-required} | string | 声明接入点`https://apihk.mch.weixin.qq.com/global/`(香港接入)
@@ -336,6 +348,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ## 报关信息修改 {#patch}
 
 该接口用于商户修改订单附加信息。
+
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/customs/orders#patch)，此文档仅做留存参考。
+
+:::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---

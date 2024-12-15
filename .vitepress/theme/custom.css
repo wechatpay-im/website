@@ -121,12 +121,12 @@
   display: none;
 }
 
-.custom-block.danger[class^="im-"] {
+.custom-block:not(.im-badges)[class^="im-"] {
   display: flex;
   align-items: center;
 }
 
-.custom-block.danger[class^="im-"] .custom-block-title {
+.custom-block:not(.im-badges)[class^="im-"] .custom-block-title {
   font-size: calc(var(--vp-custom-block-font-size, 14px) * 1.3);
   letter-spacing: .25em;
 }

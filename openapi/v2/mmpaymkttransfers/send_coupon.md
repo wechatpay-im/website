@@ -7,9 +7,9 @@ description: 用于商户主动调用接口给用户发放代金券的场景，�
 
 {{ $frontmatter.description }}
 
-::: danger :no_entry_sign: {.im-deprecated}
+::: warning :jack_o_lantern: {.im-discarded}
 
-本接口服务已于 `2020.MM.dd` (北京时间)下线，文档仅做留存参考。
+本接口服务已于 `2020年` (北京时间)处于流放状态，新接口见[这里](/openapi/v3/marketing/favor/users/{openid}/coupons#post)，此文档仅做留存参考。
 
 :::
 

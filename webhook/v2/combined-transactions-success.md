@@ -7,9 +7,9 @@ description: 合单支付的支付结果将只通知给合单支付发起方（�
 
 {{ $frontmatter.description }}
 
-::: danger :closed_lock_with_key: {.im-privated}
+::: warning :closed_lock_with_key: {.im-privated}
 
-本接口服务已于 `2021.09.01` (北京时间)停止开放，文档仅做留存参考。
+本通知服务已于 `2021.09.01` (北京时间)停止开放，新通知见[这里](/webhook/v3/TRANSACTION.SUCCESS#COMBINE)，此文档仅做留存参考。
 
 :::
 

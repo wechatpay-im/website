@@ -7,9 +7,9 @@ description: 获取微信用户的授权, 需要使用微信支付提供的 OAut
 
 {{ $frontmatter.description }}
 
-::: danger :closed_lock_with_key: {.im-privated}
+::: warning :closed_lock_with_key: {.im-privated}
 
-因为监管原因，本接口服务已于 `2021.11.10` (北京时间)停止开放，文档仅做留存参考。
+本接口服务已于 `2021.11.10` (北京时间)停止开放，文档仅做留存参考。
 
 :::
 

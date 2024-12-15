@@ -4,6 +4,12 @@
 
 当交易发生之后一段时间内，由于买家或者卖家的原因需要退款时，卖家可以通过退款接口将支付款退还给买家，微信支付将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退到买家账号上。
 
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/refunds#post)，此文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)
@@ -217,6 +223,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ## 查询所有退款 {#get}
 
 提交退款申请后，通过调用该接口查询退款状态。退款有一定延时，用零钱支付的退款20分钟内到账，银行卡支付的退款3个工作日后重新查询退款状态。
+
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/refunds#get)，此文档仅做留存参考。
+
+:::
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---

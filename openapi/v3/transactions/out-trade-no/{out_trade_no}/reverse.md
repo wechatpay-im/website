@@ -7,6 +7,12 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 
 {{ $frontmatter.description }}
 
+::: warning :beginner: {.im-redesigned}
+
+本接口服务已于 `2022.09.08` (北京时间)发布新版，新接口见[这里](/openapi/v3/global/micropay/transactions/out-trade-no/{out_trade_no}/reverse)，此文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | base_uri {data-required} | string | 声明接入点`https://api.mch.weixin.qq.com/hk/`(国内接入)

@@ -7,9 +7,9 @@ description: 由于实名信息属于敏感数据，不能以明文数据传输�
 
 {{ $frontmatter.description }}
 
-::: danger :closed_lock_with_key: {.im-privated}
+::: warning :closed_lock_with_key: {.im-privated}
 
-因为监管原因，本接口服务已于 `2021.11.10` (北京时间)停止开放，文档仅做留存参考。
+本接口服务已于 `2021.11.10` (北京时间)停止开放，文档仅做留存参考。
 
 :::
 
