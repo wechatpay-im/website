@@ -379,8 +379,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | sp_appid {data-required} | string | 机构APPID
 | sub_appid | string | 子商户APPID
 | out_trade_no {data-required} | string | 商户订单号
-| trade_type {data-required} | string | 交易类型
-| trade_state {data-required} | string | 交易状态
+| trade_type {data-required} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` \| `MICROPAY` 枚举值之一
+| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` 枚举值之一
 | trade_state_desc {data-required} | string | 交易状态描述
 | bank_type {data-required} | string | 付款银行
 | attach | string | 商户数据
@@ -395,13 +395,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | payer_total {data-required data-indent=1} | integer | 用户支付金额
 | payer _currency {data-indent=1} | string | 支付货币类型
 | exchange_rate {data-indent=1} | object {data-tooltip="对应PHP的array"} | 汇率
-| type {data-indent=2} | string | 汇率类型
+| type {data-indent=2} | string | 汇率类型<br/>`SETTLEMENT_RATE` 枚举值
 | rate {data-indent=2} | integer | 汇率值
 | detail | object[] {data-tooltip="对应PHP的array"} | 优惠功能
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | currency {data-indent=1} | string | 货币类型
 | activity_id {data-indent=1} | string | 活动ID

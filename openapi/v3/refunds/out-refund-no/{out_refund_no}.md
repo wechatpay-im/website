@@ -115,24 +115,24 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_refund_no {data-required} | string | 商户退款单号
 | transaction_id {data-required} | string | 微信支付交易订单号
 | out_trade_no {data-required} | string | 商户原交易订单号
-| channel | string | 退款渠道
+| channel | string | 退款渠道<br/>`ORIGINAL` \| `BALANCE` \| `OTHER_BALANCE` \| `OTHER_BANKCARD` 枚举值之一
 | recv_account | string | 退款入账账户
-| fund_source | string | 退款资金来源
+| fund_source | string | 退款资金来源<br/>`REFUND_SOURCE_UNSETTLED_FUNDS` \| `REFUND_SOURCE_REchARGE_FUNDS` 枚举值之一
 | success_time | string | 退款成功时间
 | create_time {data-required} | string | 退款创建时间
-| status {data-required} | string | 退款状态
+| status {data-required} | string | 退款状态<br/>`SUCCESS` \| `REFUNDCLOSE` \| `PROCESSING` \| `ABNORMAL` 枚举值之一
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 退款金额
 | refund {data-required data-indent=1} | integer | 退款金额
 | currency {data-indent=1} | string | 货币类型
 | payer_refund {data-required data-indent=1} | integer | 用户退款金额
 | payer_currency {data-required data-indent=1} | string | 支付币种
 | exchange_rate {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 汇率
-| type {data-indent=2} | string | 汇率类型
+| type {data-indent=2} | string | 汇率类型<br/>`SETTLEMENT_RATE` 枚举值
 | rate {data-indent=2} | integer | 汇率值
 | detail | object {data-tooltip="对应PHP的array"} | 优惠退款详情
 | promotion_id {data-required data-indent=1} | string | 券ID
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
 | amount {data-indent=1} | integer | 优惠券面额
 | refund_amount {data-indent=1} | integer | 优惠券退款额
 | currency {data-required data-indent=1} | string | 货币类型

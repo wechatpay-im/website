@@ -120,10 +120,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required} | string | 商户订单号
 | id {data-required} | string | 微信支付订单号
 | attach | string | 商户数据
-| trade_type {data-required} | string | 交易类型
+| trade_type {data-required} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` \| `MICROPAY` 枚举值之一
 | bank_type {data-required} | string | 付款银行
 | success_time {data-required} | string | 支付完成时间
-| trade_state {data-required} | string | 交易状态
+| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` 枚举值之一
 | trade_state_desc {data-required} | string | 交易状态描述
 | payer {data-required} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=1} | string | 用户标识
@@ -135,13 +135,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | currency {data-required data-indent=1} | string | 订单标价币种
 | payer_currency {data-required data-indent=1} | string | 用户支付币种
 | exchange_rate {data-indent=1} | object {data-tooltip="对应PHP的array"} | 汇率信息
-| type {data-indent=2} | string | 汇率类型
+| type {data-indent=2} | string | 汇率类型<br/>`SETTLEMENT_RATE` 枚举值
 | rate {data-indent=2} | integer | 汇率值
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠功能
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
+| scope {data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | currency {data-required data-indent=1} | string | 优惠币种
 | activity_id {data-indent=1} | string | 活动ID

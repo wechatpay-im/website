@@ -16,7 +16,7 @@ description: 商户发起添加分账接收方请求后，可通过调用本API�
 | transaction_id {data-indent=1} | string | 微信订单号
 | appid {data-indent=1} | string | 应用ID
 | sub_appid {data-indent=1} | string | 子商户应用ID
-| type {data-indent=1} | string | 分账接收方类型
+| type {data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 
 {.im-table #request}
 
@@ -126,10 +126,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid | string | 子商户号
-| type {data-required} | string | 分账接收方类型
+| type {data-required} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required} | string | 分账接收方账号
 | name | string | 分账接收方全称
-| relation_type {data-required} | string | 与分账方的关系类型
+| relation_type {data-required} | string | 与分账方的关系类型<br/>`SUPPLIER` \| `DISTRIBUTOR` \| `TAX_SERVICE_PROVIDER` \| `IT_SERVICE_PROVIDER` \| `CUSTOM` 枚举值之一
 | custom_relation | string | 自定义的分账关系
 | scene | string | 分账场景详细描述
 | major_service | string | 接收方商户的主营业务范围

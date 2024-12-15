@@ -17,8 +17,8 @@ description: 微信订单支付成功后，商户发起分账请求，将结算�
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
 | receivers {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
-| currency {data-required data-indent=2} | string | 分账币种
-| type {data-required data-indent=2} | string | 分账接收方类型
+| currency {data-required data-indent=2} | string | 分账币种<br/>`CNY` 枚举值
+| type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=2} | string | 分账接收方帐号
 | name {data-indent=2} | string | 分账个人接收方姓名
 | authorized {data-indent=2} | boolean | 是否已经获取用户实名信息授权
@@ -196,7 +196,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | currency {data-required data-indent=1} | string | 分账币种
 | amount {data-required data-indent=1} | integer | 分账金额
 | description {data-required data-indent=1} | string | 分账描述
-| type {data-required data-indent=1} | string | 分账接收方类型
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方帐号
 | result {data-required data-indent=1} | string | 分账结果
 | fail_reason {data-required data-indent=1} | string | 分账失败原因
