@@ -40,6 +40,8 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | name {data-required data-indent=3} | string | 门店名称
 | area_code {data-required data-indent=3} | string | 地区编码
 | address {data-required data-indent=3} | string | 详细地址
+| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
+| profit_sharing {data-indent=2} | boolean | 是否指定分账
 
 {.im-table #request}
 
@@ -82,6 +84,9 @@ $instance->v3->pay->transactions->native->postAsync([
         'area_code' => '440305',
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
+    ],
+    'settle_info'    => [
+      'profit_sharing' => true,
     ],
   ],
 ])
@@ -129,6 +134,9 @@ $instance->chain('v3/pay/transactions/native')->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -174,6 +182,9 @@ $instance['v3/pay/transactions/native']->postAsync([
         'area_code' => '440305',
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
+    ],
+    'settle_info'    => [
+      'profit_sharing' => true,
     ],
   ],
 ])
@@ -221,6 +232,9 @@ $response = $instance->v3->pay->transactions->native->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -264,6 +278,9 @@ $response = $instance->chain('v3/pay/transactions/native')->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -306,6 +323,9 @@ $response = $instance['v3/pay/transactions/native']->post([
         'area_code' => '440305',
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
+    ],
+    'settle_info'    => [
+      'profit_sharing' => true,
     ],
   ],
 ]);

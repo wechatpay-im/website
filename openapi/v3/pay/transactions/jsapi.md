@@ -42,6 +42,8 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | address {data-required data-indent=3} | string | 详细地址
 | payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-required data-indent=2} | string | 用户标识
+| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
+| profit_sharing {data-indent=2} | boolean | 是否指定分账
 
 {.im-table #request}
 
@@ -87,6 +89,9 @@ $instance->v3->pay->transactions->jsapi->postAsync([
     ],
     'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    ],
+    'settle_info'    => [
+      'profit_sharing' => true,
     ],
   ],
 ])
@@ -137,6 +142,9 @@ $instance->chain('v3/pay/transactions/jsapi')->postAsync([
     'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -185,6 +193,9 @@ $instance['v3/pay/transactions/jsapi']->postAsync([
     ],
     'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    ],
+    'settle_info'    => [
+      'profit_sharing' => true,
     ],
   ],
 ])
@@ -235,6 +246,9 @@ $response = $instance->v3->pay->transactions->jsapi->post([
     'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -281,6 +295,9 @@ $response = $instance->chain('v3/pay/transactions/jsapi')->post([
     'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -326,6 +343,9 @@ $response = $instance['v3/pay/transactions/jsapi']->post([
     ],
     'payer'          => [
       'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    ],
+    'settle_info'    => [
+      'profit_sharing' => true,
     ],
   ],
 ]);

@@ -137,6 +137,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | mch_id {data-required} | string | 商户号
 | device_info | string | 设备号
 | nonce_str {data-required} | string | 随机字符串
+| sign | string | 签名
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述

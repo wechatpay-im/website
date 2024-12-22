@@ -140,6 +140,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
+| sign | string | 签名
 | record_num {data-required} | string | 返回数据行数
 | fbatchno {data-required} | string | 付汇批次号
 | date_settlement {data-required} | string | 结算日期

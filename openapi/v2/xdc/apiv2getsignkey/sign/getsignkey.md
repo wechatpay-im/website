@@ -93,7 +93,7 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 {.im-table #response}
 
 > [!IMPORTANT] 重要提示
-> 1. *wxpay* 构造实例化时，需要显式初始化 **secret** 字段，此为正式环境密钥；
+> 1. *$instance* 构造实例化时，需要显式初始化 **secret** 字段，此为正式环境密钥；
 > 2. 此接口请求时，会隐式按照[MD5数据签名算法](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)进行签名，填充请求的*sign*字段;
 > 3. 此接口有QPS限制(官方未公布)，高频请求会被官方重定向到腾讯[公益404](https://wx.gtimg.com/core/404.html)页面；
 > 4. *sandbox_signkey* 具有时效性，时长官方未公布，建议缓存1个小时即可，请按需缓存；

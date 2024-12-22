@@ -134,6 +134,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | --- | --- | ---
 | return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回结果
+| sign {data-required} | string | 签名
+| nonce_str {data-required} | string | 随机字符串
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| err_code | string | 错误代码
+| err_code_des | string | 错误描述
+| appid {data-required} | string | 公众账号ID
+| mch_id {data-required} | string | 商户号
+| out_order_no {data-required} | string | 商户服务订单号
+| service_id {data-required} | string | 服务ID
 | order_id {data-required} | string | 微信支付服务订单号
 
 {.im-table #response}

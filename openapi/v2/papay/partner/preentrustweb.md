@@ -176,6 +176,16 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | --- | --- | ---
 | return_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg | string | 返回信息
+| result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
+| err_code | string | 错误代码
+| err_code_des | string | 错误代码描述
+| appid {data-required} | string | 请求appid
+| mch_id {data-required} | string | 商户号
+| sub_appid | string | 子商户应用ID
+| sub_mch_id {data-required} | string | 子商户号
+| nonce_str {data-required} | string | 随机字符串
+| sign {data-required} | string | 签名
+| pre_entrustweb_id {data-required} | string | 预签约id
 
 {.im-table #response}
 
