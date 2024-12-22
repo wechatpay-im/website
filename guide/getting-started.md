@@ -142,7 +142,7 @@ $merchantCertificateSerial = '3775B6A45ACD588826D15E583A95F5DD********';
 $platformCertificateFilePath  = 'file:///path/to/wechatpay/certificate.pem';
 $onePlatformPublicKeyInstance = Rsa::from($platformCertificateFilePath, Rsa::KEY_TYPE_PUBLIC);
 
-// 「微信支付平台证书」的「平台证书证书序列号」
+// 「微信支付平台证书」的「平台证书序列号」
 // 可以从「微信支付平台证书」文件解析，也可以在 商户平台 -> 账户中心 -> API安全 查询到
 $platformCertificateSerial = '7132D72A03E93CDDF8C03BBD1F37EEDF********';
 
@@ -150,7 +150,7 @@ $platformCertificateSerial = '7132D72A03E93CDDF8C03BBD1F37EEDF********';
 $platformPublicKeyFilePath    = 'file:///path/to/wechatpay/publickey.pem';
 $twoPlatformPublicKeyInstance = Rsa::from($platformPublicKeyFilePath, Rsa::KEY_TYPE_PUBLIC);
 
-// 「微信支付平台公钥」的「微信支付平台公钥ID」
+// 「微信支付平台公钥」的「平台公钥ID」
 // 需要在 商户平台 -> 账户中心 -> API安全 查询
 $platformPublicKeyId = 'PUB_KEY_ID_01142321349124100000000000********';
 
