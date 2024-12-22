@@ -18,8 +18,6 @@ description: 车辆入场以后，商户调用该接口，创建停车入场信�
 | start_time {data-required data-indent=1} | string | 入场时间
 | parking_name {data-required data-indent=1} | string | 停车场名称
 | free_duration {data-required data-indent=1} | integer | 免费时长
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
 
 {.im-table #request}
 
@@ -36,9 +34,6 @@ $instance->v3->vehicle->parking->parkings->postAsync([
     'start_time'     => '2017-08-26T10:43:39+08:00',
     'parking_name'   => '欢乐海岸停车场',
     'free_duration'  => 3600,
-  ],
-  'headers' => [
-    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -59,9 +54,6 @@ $instance->chain('v3/vehicle/parking/parkings')->postAsync([
     'parking_name'   => '欢乐海岸停车场',
     'free_duration'  => 3600,
   ],
-  'headers' => [
-    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
-  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -80,9 +72,6 @@ $instance['v3/vehicle/parking/parkings']->postAsync([
     'start_time'     => '2017-08-26T10:43:39+08:00',
     'parking_name'   => '欢乐海岸停车场',
     'free_duration'  => 3600,
-  ],
-  'headers' => [
-    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -103,9 +92,6 @@ $response = $instance->v3->vehicle->parking->parkings->post([
     'parking_name'   => '欢乐海岸停车场',
     'free_duration'  => 3600,
   ],
-  'headers' => [
-    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
-  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -121,9 +107,6 @@ $response = $instance->chain('v3/vehicle/parking/parkings')->post([
     'start_time'     => '2017-08-26T10:43:39+08:00',
     'parking_name'   => '欢乐海岸停车场',
     'free_duration'  => 3600,
-  ],
-  'headers' => [
-    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -141,9 +124,6 @@ $response = $instance['v3/vehicle/parking/parkings']->post([
     'parking_name'   => '欢乐海岸停车场',
     'free_duration'  => 3600,
   ],
-  'headers' => [
-    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
-  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -159,8 +139,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | start_time {data-required} | string | 入场时间
 | parking_name {data-required} | string | 停车场名称
 | free_duration {data-required} | integer | 免费时长
-| state {data-required} | string | 停车入场状态
-| block_reason | string | 不可用状态描述
+| state {data-required} | string | 停车入场状态<br/>`NORMAL` \| `BLOCKED` 枚举值之一
+| block_reason | string | 不可用状态描述<br/>`PAUSE` \| `OVERDUE` \| `OUT_SERVICE` \| `EVALUATION_FAILED` 枚举值之一
 
 {.im-table #response}
 

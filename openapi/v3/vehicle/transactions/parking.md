@@ -250,13 +250,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | create_time {data-required} | string | 订单创建时间
 | out_trade_no {data-required} | string | 商户订单号
 | transaction_id | string | 微信支付订单号
-| trade_state {data-required} | string | 交易状态
+| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `ACCEPTED` \| `PAY_FAIL` \| `REFUND` 枚举值之一
 | trade_state_description | string | 交易状态描述
 | success_time | string | 支付完成时间
 | bank_type | string | 付款银行
-| user_repaid | string | 用户是否已还款
+| user_repaid | string | 用户是否已还款<br/>`Y` \| `N` 枚举值之一
 | attach | string | 附加数据
-| trade_scene {data-required} | string | 交易场景
+| trade_scene {data-required} | string | 交易场景<br/>`PARKING` 枚举值
 | parking_info | object {data-tooltip="对应PHP的array"} | 停车场景信息
 | parking_id {data-required data-indent=1} | string | 停车入场id
 | plate_number {data-required data-indent=1} | string | 车牌号

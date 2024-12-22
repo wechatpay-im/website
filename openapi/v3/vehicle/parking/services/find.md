@@ -115,7 +115,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | plate_color {data-required} | string | 车牌颜色<br/>`BLUE` \| `GREEN` \| `YELLOW` \| `BLACK` \| `WHITE` \| `LIMEGREEN` 枚举值之一
 | service_open_time | string | 车牌服务开通时间
 | openid {data-required} | string | 用户标识
-| service_state {data-required} | string | 车牌服务开通状态
+| service_state {data-required} | string | 车牌服务开通状态<br/>`NORMAL` \| `PAUSE` \| `OUT_SERVICE` 枚举值之一
 
 {.im-table #response}
 
