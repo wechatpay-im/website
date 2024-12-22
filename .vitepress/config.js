@@ -1149,6 +1149,16 @@ function openapiSidebar() {
                 ['更新退款审批结果', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress'],
               ].map(transArrayItem),
             },
+            {
+              text: ' 1.0',
+              collapsed: true,
+              items: [
+                ['查询投诉信息列表', '/openapi/v3/merchant-service/complaints'],
+                ['查询投诉信息详情', '/openapi/v3/merchant-service/complaints/{transaction_id}'],
+                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys'],
+                ['商户反馈', '/openapi/v3/merchant-service/feedbacks'],
+              ].map(transArrayItem),
+            },
             ...[
               ['上传商户反馈图片文件', '/openapi/v3/merchant-service/images/upload'],
               ['投诉单详情图片文件下载', '/openapi/v3/merchant-service/images/{media_id}'],
