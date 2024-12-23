@@ -11,8 +11,8 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 | --- | --- | ---
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | bill_date {data-required data-indent=1} | string | 账单日期
-| account_type {data-required data-indent=1} | string | 资金账户类型
-| tar_type {data-indent=1} | string | 压缩类型
+| account_type {data-required data-indent=1} | string | 资金账户类型<br/>`ALL` 枚举值
+| tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
 | algorithm {data-required data-indent=1} | string | 加密算法<br/>`AEAD_AES_256_GCM` \| `SM4_GCM` 枚举值之一
 
 {.im-table #request}
@@ -107,7 +107,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | download_bill_count {data-required} | integer | 下载信息总数
 | download_bill_list | object[] {data-tooltip="对应PHP的array"} | 下载信息明细
 | bill_sequence {data-required data-indent=1} | integer | 账单文件序号
-| hash_type {data-required data-indent=1} | string | 哈希类型
+| hash_type {data-required data-indent=1} | string | 哈希类型<br/>`SHA1` 枚举值
 | hash_value {data-required data-indent=1} | string | 哈希值
 | download_url {data-required data-indent=1} | string | 账单下载地址
 | encrypt_key {data-required data-indent=1} | string | 加密密钥

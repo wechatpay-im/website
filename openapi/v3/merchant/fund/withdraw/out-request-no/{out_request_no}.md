@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| status {data-required} | string | 提现单状态
+| status {data-required} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
 | withdraw_id {data-required} | string | 微信支付提现单号
 | out_request_no {data-required} | string | 商户提现单号
 | amount {data-required} | integer | 提现金额
@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | reason {data-required} | string | 失败原因
 | remark {data-required} | string | 提现备注
 | bank_memo {data-required} | string | 银行附言
-| account_type {data-required} | string | 出款账户类型
+| account_type {data-required} | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | solution {data-required} | string | 提现失败解决方案
 
 {.im-table #response}

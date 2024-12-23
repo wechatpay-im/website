@@ -52,7 +52,7 @@ next:
 | 现金红包v2{rowspan=4} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) {colspan=2}
 | [~~发放裂变红包~~](/openapi/v2/mmpaymkttransfers/sendgroupredpack) :no_entry_sign: {colspan=2}
 | [查询红包记录](/openapi/v2/mmpaymkttransfers/gethbinfo) {colspan=2}
-| [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb)
+| [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb) {colspan=2}
 | 付款到零钱v2{rowspan=2} | [发起付款](/openapi/v2/mmpaymkttransfers/promotion/transfers)
 | [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo)
 | 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
@@ -548,7 +548,7 @@ next:
 | [创建保险订单](/openapi/v3/hire-power-bank/insurance-orders)
 | [查询保险订单详情](/openapi/v3/hire-power-bank/insurance-orders/{out_order_no})
 | 扫码点餐v3{rowspan=1} | | [点餐订单信息同步](/openapi/v3/catering/orders/sync-status)
-| 微信寄快递v3{rowspan=1} | | [用户openid转换](/openapi/v3/express/users/{openid}/transform)
+| 微信寄快递v3{rowspan=1} | | [用户openid转换](/openapi/v3/express/users/{openid}/transform) :eye_speech_bubble:
 | 出行券v3{rowspan=1} | [出行券切卡组件预下单](/openapi/v3/industry-coupon/tokens)
 | 刷码乘车v3{rowspan=3} | [查询用户服务可用信息](/openapi/v3/qrcode/user-services/contract-id/{contract_id}) {colspan=2}
 | [扣费受理](/openapi/v3/qrcode/transactions) {colspan=2}

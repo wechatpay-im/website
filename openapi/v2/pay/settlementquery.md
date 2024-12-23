@@ -13,11 +13,12 @@ description: 通过此接口可以查询结算资金的明细。
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mchid {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
-| usetag {data-required data-indent=1} | integer | 结算状态
+| usetag {data-required data-indent=1} | integer | 结算状态<br/>`1` \| `2` 枚举值之一
 | offset {data-required data-indent=1} | integer | 偏移量
 | limit {data-required data-indent=1} | integer | 最大记录条数
 | date_start {data-required data-indent=1} | string | 开始日期
 | date_end {data-required data-indent=1} | string | 结束日期
+| query_split {data-indent=1} | boolean | 是否查询分账结算信息
 
 {.im-table #request}
 
@@ -26,14 +27,15 @@ description: 通过此接口可以查询结算资金的明细。
 ```php [异步纯链式]
 $instance->v2->pay->settlementquery->postAsync([
   'xml' => [
-    'appid'      => 'wxd678efh567hg6787',
-    'mchid'      => '1900000109',
-    'sub_mch_id' => '1230000109',
-    'usetag'     => '1',
-    'offset'     => '0',
-    'limit'      => '10',
-    'date_start' => '20150807',
-    'date_end'   => '20150807',
+    'appid'       => 'wxd678efh567hg6787',
+    'mchid'       => '1900000109',
+    'sub_mch_id'  => '1230000109',
+    'usetag'      => '1',
+    'offset'      => '0',
+    'limit'       => '10',
+    'date_start'  => '20150807',
+    'date_end'    => '20150807',
+    'query_split' => 'true',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,14 +47,15 @@ $instance->v2->pay->settlementquery->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/pay/settlementquery')->postAsync([
   'xml' => [
-    'appid'      => 'wxd678efh567hg6787',
-    'mchid'      => '1900000109',
-    'sub_mch_id' => '1230000109',
-    'usetag'     => '1',
-    'offset'     => '0',
-    'limit'      => '10',
-    'date_start' => '20150807',
-    'date_end'   => '20150807',
+    'appid'       => 'wxd678efh567hg6787',
+    'mchid'       => '1900000109',
+    'sub_mch_id'  => '1230000109',
+    'usetag'      => '1',
+    'offset'      => '0',
+    'limit'       => '10',
+    'date_start'  => '20150807',
+    'date_end'    => '20150807',
+    'query_split' => 'true',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,14 +67,15 @@ $instance->chain('v2/pay/settlementquery')->postAsync([
 ```php [异步属性式]
 $instance['v2/pay/settlementquery']->postAsync([
   'xml' => [
-    'appid'      => 'wxd678efh567hg6787',
-    'mchid'      => '1900000109',
-    'sub_mch_id' => '1230000109',
-    'usetag'     => '1',
-    'offset'     => '0',
-    'limit'      => '10',
-    'date_start' => '20150807',
-    'date_end'   => '20150807',
+    'appid'       => 'wxd678efh567hg6787',
+    'mchid'       => '1900000109',
+    'sub_mch_id'  => '1230000109',
+    'usetag'      => '1',
+    'offset'      => '0',
+    'limit'       => '10',
+    'date_start'  => '20150807',
+    'date_end'    => '20150807',
+    'query_split' => 'true',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -83,14 +87,15 @@ $instance['v2/pay/settlementquery']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->pay->settlementquery->post([
   'xml' => [
-    'appid'      => 'wxd678efh567hg6787',
-    'mchid'      => '1900000109',
-    'sub_mch_id' => '1230000109',
-    'usetag'     => '1',
-    'offset'     => '0',
-    'limit'      => '10',
-    'date_start' => '20150807',
-    'date_end'   => '20150807',
+    'appid'       => 'wxd678efh567hg6787',
+    'mchid'       => '1900000109',
+    'sub_mch_id'  => '1230000109',
+    'usetag'      => '1',
+    'offset'      => '0',
+    'limit'       => '10',
+    'date_start'  => '20150807',
+    'date_end'    => '20150807',
+    'query_split' => 'true',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -99,14 +104,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/pay/settlementquery')->post([
   'xml' => [
-    'appid'      => 'wxd678efh567hg6787',
-    'mchid'      => '1900000109',
-    'sub_mch_id' => '1230000109',
-    'usetag'     => '1',
-    'offset'     => '0',
-    'limit'      => '10',
-    'date_start' => '20150807',
-    'date_end'   => '20150807',
+    'appid'       => 'wxd678efh567hg6787',
+    'mchid'       => '1900000109',
+    'sub_mch_id'  => '1230000109',
+    'usetag'      => '1',
+    'offset'      => '0',
+    'limit'       => '10',
+    'date_start'  => '20150807',
+    'date_end'    => '20150807',
+    'query_split' => 'true',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -115,14 +121,15 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/pay/settlementquery']->post([
   'xml' => [
-    'appid'      => 'wxd678efh567hg6787',
-    'mchid'      => '1900000109',
-    'sub_mch_id' => '1230000109',
-    'usetag'     => '1',
-    'offset'     => '0',
-    'limit'      => '10',
-    'date_start' => '20150807',
-    'date_end'   => '20150807',
+    'appid'       => 'wxd678efh567hg6787',
+    'mchid'       => '1900000109',
+    'sub_mch_id'  => '1230000109',
+    'usetag'      => '1',
+    'offset'      => '0',
+    'limit'       => '10',
+    'date_start'  => '20150807',
+    'date_end'    => '20150807',
+    'query_split' => 'true',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

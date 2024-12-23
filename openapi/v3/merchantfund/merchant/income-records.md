@@ -10,7 +10,7 @@ description: 服务商通过本接口查询指定日期内本商户银行来账�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| account_type {data-required data-indent=1} | string | 账户类型
+| account_type {data-required data-indent=1} | string | 账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | date {data-required data-indent=1} | string | 日期
 | offset {data-indent=1} | integer | 本次查询偏移量
 | limit {data-required data-indent=1} | integer | 本次请求最大查询条数
@@ -109,8 +109,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | limit {data-required} | integer | 本次查询条数
 | data | object[] {data-tooltip="对应PHP的array"} | 银行来账记录列表
 | mchid {data-required data-indent=1} | string | 商户号
-| account_type {data-required data-indent=1} | string | 账户类型
-| income_record_type {data-required data-indent=1} | string | 银行来账类型
+| account_type {data-required data-indent=1} | string | 账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| income_record_type {data-required data-indent=1} | string | 银行来账类型<br/>`OFFLINERECHARGE` \| `ENTERPRISEDIRECTREVENUE` 枚举值之一
 | income_record_id {data-required data-indent=1} | string | 银行来账微信单号
 | amount {data-required data-indent=1} | integer | 银行来账金额
 | success_time {data-required data-indent=1} | string | 银行来账完成时间

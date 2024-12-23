@@ -10,7 +10,7 @@ description: 电商服务商按日查询并下载提现状态为异常的提现�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| bill_type {data-indent=1} | string | 账单类型
+| bill_type {data-indent=1} | string | 账单类型<br/>`NO_SUCC` 枚举值
 | bill_date {data-required data-indent=1} | string | 账单日期
 | tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
 
@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| hash_type {data-required} | string | 哈希类型
+| hash_type {data-required} | string | 哈希类型<br/>`SHA1` 枚举值
 | hash_value {data-required} | string | 哈希值
 | download_url {data-required} | string | 账单下载地址
 

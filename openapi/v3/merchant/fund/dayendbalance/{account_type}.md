@@ -11,7 +11,7 @@ description: 通过此接口可以查询本商户号指定日期当天24点的�
 | --- | --- | ---
 | account_type {data-required} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| bill_date {data-required data-indent=1} | string | 日期
+| date {data-required data-indent=1} | string | 日期
 
 {.im-table #request}
 
@@ -21,7 +21,7 @@ description: 通过此接口可以查询本商户号指定日期当天24点的�
 $instance->v3->merchant->fund->dayendbalance->_account_type_->getAsync([
   'account_type' => 'BASIC',
   'query' => [
-    'bill_date' => '2019-06-11',
+    'date' => '2019-06-11',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,7 +34,7 @@ $instance->v3->merchant->fund->dayendbalance->_account_type_->getAsync([
 $instance->chain('v3/merchant/fund/dayendbalance/{account_type}')->getAsync([
   'account_type' => 'BASIC',
   'query' => [
-    'bill_date' => '2019-06-11',
+    'date' => '2019-06-11',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,7 +47,7 @@ $instance->chain('v3/merchant/fund/dayendbalance/{account_type}')->getAsync([
 $instance['v3/merchant/fund/dayendbalance/{account_type}']->getAsync([
   'account_type' => 'BASIC',
   'query' => [
-    'bill_date' => '2019-06-11',
+    'date' => '2019-06-11',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,7 +60,7 @@ $instance['v3/merchant/fund/dayendbalance/{account_type}']->getAsync([
 $response = $instance->v3->merchant->fund->dayendbalance->_account_type_->get([
   'account_type' => 'BASIC',
   'query' => [
-    'bill_date' => '2019-06-11',
+    'date' => '2019-06-11',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/merchant/fund/dayendbalance/{account_type}')->get([
   'account_type' => 'BASIC',
   'query' => [
-    'bill_date' => '2019-06-11',
+    'date' => '2019-06-11',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -80,7 +80,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/merchant/fund/dayendbalance/{account_type}']->get([
   'account_type' => 'BASIC',
   'query' => [
-    'bill_date' => '2019-06-11',
+    'date' => '2019-06-11',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

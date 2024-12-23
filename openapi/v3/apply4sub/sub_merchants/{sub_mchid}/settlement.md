@@ -70,12 +70,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| account_type {data-required} | string | 账户类型
+| account_type {data-required} | string | 账户类型<br/>`ACCOUNT_TYPE_BUSINESS` \| `ACCOUNT_TYPE_PRIVATE` 枚举值之一
 | account_bank {data-required} | string | 开户银行
 | bank_name | string | 开户银行全称（含支行）
 | bank_branch_id | string | 开户银行联行号
 | account_number {data-required} | string | 银行账号
-| verify_result {data-required} | string | 验证结果
+| verify_result {data-required} | string | 验证结果<br/>`VERIFY_SUCCESS` \| `VERIFY_FAIL` \| `VERIFYING` 枚举值之一
 | verify_fail_reason | string | 验证失败原因
 
 {.im-table #response}

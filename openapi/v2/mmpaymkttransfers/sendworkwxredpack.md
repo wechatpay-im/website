@@ -15,7 +15,7 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 | mch_billno {data-required data-indent=1} | string | 商户订单号
 | mch_id {data-required data-indent=1} | string | 商户号
 | wxappid {data-required data-indent=1} | string | 公众账号appid
-| agentid {data-indent=1} | integer | 发送红包的应用id
+| agentid {data-indent=1} | string | 发送红包的应用id
 | sender_name {data-required data-indent=1} | string | 发送者名称
 | sender_header_media_id {data-indent=1} | string | 发送者头像
 | re_openid {data-required data-indent=1} | string | 用户openid
@@ -24,7 +24,7 @@ description: 红包金额大于200或者小于1元时，请求参数scene_id必�
 | act_name {data-required data-indent=1} | string | 活动名称
 | remark {data-required data-indent=1} | string | 备注
 | scene_id {data-indent=1} | string | 场景id<br/>`PRODUCT_1` \| `PRODUCT_2` \| `PRODUCT_3` \| `PRODUCT_4` \| `PRODUCT_5` \| `PRODUCT_6` \| `PRODUCT_7` \| `PRODUCT_8` 枚举值之一
-| workwx_sign {data-indent=1} | string | 活动信息
+| workwx_sign {data-indent=1} | string | 企业微信签名
 
 {.im-table #request}
 

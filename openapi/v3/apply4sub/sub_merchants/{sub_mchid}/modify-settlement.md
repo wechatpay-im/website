@@ -11,8 +11,8 @@ description: 修改结算帐号API
 | --- | --- | ---
 | sub_mchid {data-required} | string | 特约商户号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| modify_mode {data-indent=1} | string | 修改模式
-| account_type {data-required data-indent=1} | string | 账户类型
+| modify_mode {data-indent=1} | string | 修改模式<br/>`MODIFY_MODE_ASYNC` 枚举值
+| account_type {data-required data-indent=1} | string | 账户类型<br/>`ACCOUNT_TYPE_BUSINESS` \| `ACCOUNT_TYPE_PRIVATE` 枚举值之一
 | account_bank {data-required data-indent=1} | string | 开户银行
 | bank_address_code {data-required data-indent=1} | string | 开户银行省市编码
 | bank_name {data-indent=1} | string | 开户银行全称（含支行）

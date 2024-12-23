@@ -7,6 +7,12 @@ description: 将另一个应用的用户openid转换为指定appid应用下的�
 
 {{ $frontmatter.description }}
 
+::: warning :eye_speech_bubble: {.im-specific}
+
+1. appid必须为请求商户名下的应用ID；2. 只支持在指定（白名单）appid之间的openid转换；
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | openid {data-required} | string | 用户openid
