@@ -122,7 +122,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code {data-required} | string | 错误代码
 | err_code_des | string | 错误代码描述
-| sign_type | string | 签名类型
+| sign_type | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | sign | string | 签名
 | date {data-required} | string | 日期
 | mch_id {data-required} | string | 商户号

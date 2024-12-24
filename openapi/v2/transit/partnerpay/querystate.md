@@ -15,7 +15,7 @@ description: 用于查询用户是否有欠费或黑名单用户情况，确定�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | contract_id {data-required data-indent=1} | string | 委托代扣协议id
-| sign_type {data-required data-indent=1} | string | 签名类型
+| sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | openid {data-required data-indent=1} | string | 微信open ID
 
 {.im-table #request}
@@ -30,7 +30,7 @@ $instance->v2->transit->partnerpay->querystate->postAsync([
     'mch_id'      => '10000098',
     'sub_mch_id'  => '1900000109',
     'contract_id' => 'wx15463511252015071056489715',
-    'sign_type'   => 'hmac-sha256',
+    'sign_type'   => 'HMAC-SHA256',
     'openid'      => 'oyobu0dmn6tdodznfwkoekqorbi8',
   ],
 ])
@@ -48,7 +48,7 @@ $instance->chain('v2/transit/partnerpay/querystate')->postAsync([
     'mch_id'      => '10000098',
     'sub_mch_id'  => '1900000109',
     'contract_id' => 'wx15463511252015071056489715',
-    'sign_type'   => 'hmac-sha256',
+    'sign_type'   => 'HMAC-SHA256',
     'openid'      => 'oyobu0dmn6tdodznfwkoekqorbi8',
   ],
 ])
@@ -66,7 +66,7 @@ $instance['v2/transit/partnerpay/querystate']->postAsync([
     'mch_id'      => '10000098',
     'sub_mch_id'  => '1900000109',
     'contract_id' => 'wx15463511252015071056489715',
-    'sign_type'   => 'hmac-sha256',
+    'sign_type'   => 'HMAC-SHA256',
     'openid'      => 'oyobu0dmn6tdodznfwkoekqorbi8',
   ],
 ])
@@ -84,7 +84,7 @@ $response = $instance->v2->transit->partnerpay->querystate->post([
     'mch_id'      => '10000098',
     'sub_mch_id'  => '1900000109',
     'contract_id' => 'wx15463511252015071056489715',
-    'sign_type'   => 'hmac-sha256',
+    'sign_type'   => 'HMAC-SHA256',
     'openid'      => 'oyobu0dmn6tdodznfwkoekqorbi8',
   ],
 ]);
@@ -99,7 +99,7 @@ $response = $instance->chain('v2/transit/partnerpay/querystate')->post([
     'mch_id'      => '10000098',
     'sub_mch_id'  => '1900000109',
     'contract_id' => 'wx15463511252015071056489715',
-    'sign_type'   => 'hmac-sha256',
+    'sign_type'   => 'HMAC-SHA256',
     'openid'      => 'oyobu0dmn6tdodznfwkoekqorbi8',
   ],
 ]);
@@ -114,7 +114,7 @@ $response = $instance['v2/transit/partnerpay/querystate']->post([
     'mch_id'      => '10000098',
     'sub_mch_id'  => '1900000109',
     'contract_id' => 'wx15463511252015071056489715',
-    'sign_type'   => 'hmac-sha256',
+    'sign_type'   => 'HMAC-SHA256',
     'openid'      => 'oyobu0dmn6tdodznfwkoekqorbi8',
   ],
 ]);

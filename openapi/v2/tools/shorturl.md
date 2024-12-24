@@ -13,7 +13,7 @@ description: 该接口主要用于Native支付模式一中的二维码链接转�
 | appid {data-required data-indent=1} | string | 公众账号ID
 | mch_id {data-required data-indent=1} | string | 商户号
 | long_url {data-required data-indent=1} | string | URL链接
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 
 {.im-table #request}
 

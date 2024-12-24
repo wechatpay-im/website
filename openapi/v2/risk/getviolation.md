@@ -12,7 +12,7 @@ description: 方便银行服务商查询特约商户违规记录
 | security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-indent=1} | string | 商户号
-| sign_type {data-indent=1} | string | 签名类型
+| sign_type {data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | begin_time {data-indent=1} | string | 开始时间
 | end_time {data-indent=1} | string | 结束时间
 | page_index {data-indent=1} | string | 页码
