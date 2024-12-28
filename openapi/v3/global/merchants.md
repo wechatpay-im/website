@@ -17,9 +17,9 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | shortname {data-required data-indent=1} | string | 子商户简称
 | office_phone {data-required data-indent=1} | string | 公司电话
 | contact {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 联系人信息
-| name {data-required data-indent=2} | string | 联系人名称
-| phone {data-required data-indent=2} | string | 联系人电话
-| email {data-required data-indent=2} | string | 联系人邮箱
+| name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人名称
+| phone {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人电话
+| email {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人邮箱
 | business_category {data-required data-indent=1} | integer | 类目
 | channel_id {data-indent=1} | string | 渠道号
 | merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
@@ -49,9 +49,9 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | h5_payment_apply_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | H5申请资料
 | h5_website_url {data-required data-indent=2} | string | H5经营网址
 | domains {data-required data-indent=2} | string[] | 拉起H5支付的域名，不超过5个
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 由商户侧生成的唯一key，用来标识多次重试是否为同一请求
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

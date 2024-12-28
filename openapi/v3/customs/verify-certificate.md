@@ -25,10 +25,10 @@ description: 该接口用于商户上传用户身份信息，微信支付会重�
 | customs {data-required data-indent=1} | string | 海关<br/>`GUANGZHOU_ZS` \| `HANGZHOU_ZS` \| `NINGBO` \| `ZHENGZHOU_BS` \| `CHONGQING` \| `SHANGHAI_ZS` \| `SHENZHEN` \| `ZHENGZHOU_ZH_ZS` \| `TIANJIN` 枚举值之一
 | merchant_customs_no {data-required data-indent=1} | string | 商户海关备案号
 | certificate_type {data-required data-indent=1} | string | 证件类型<br/>`IDCARD` 枚举值
-| certificate_id {data-required data-indent=1} | string | 证件号
-| certificate_name {data-required data-indent=1} | string | 证件姓名
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| certificate_id {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号
+| certificate_name {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

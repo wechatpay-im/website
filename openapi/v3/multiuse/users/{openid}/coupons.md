@@ -13,13 +13,13 @@ description: 商户平台/API完成制券/消费金后，可使用发放代金�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | stock_id {data-required data-indent=1} | string | 批次号
 | out_request_no {data-required data-indent=1} | string | 商户单据号
-| user_name {data-required data-indent=1} | string | 用户姓名
-| id_card_number {data-required data-indent=1} | string | 身份证号码
+| user_name {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户姓名
+| id_card_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证号码
 | amount {data-indent=1} | number | 发放面额
 | appid {data-required data-indent=1} | string | 公众账号ID
-| card_type {data-required data-indent=1} | string | 证件类型
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| card_type {data-required data-indent=1} | string | 证件类型<br/>`ID_CARD` 枚举值
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

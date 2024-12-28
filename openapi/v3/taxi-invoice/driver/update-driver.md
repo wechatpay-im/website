@@ -10,8 +10,8 @@ description: 新增、更新司机信息，司机需有实名认证的微信号�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| driver_name {data-required data-indent=1} | string | 司机姓名
-| id_card_number {data-required data-indent=1} | string | 司机身份证号码
+| driver_name {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 司机姓名
+| id_card_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 司机身份证号码
 | company_name {data-required data-indent=1} | string | 公司名称
 | mchid {data-required data-indent=1} | string | 商户号
 | driver_license {data-required data-indent=1} | string | 营运资格证号
@@ -25,8 +25,8 @@ description: 新增、更新司机信息，司机需有实名认证的微信号�
 | photo_url {data-indent=2} | string | 头像url
 | photo_icon {data-indent=2} | string | 头像icon
 | region_id {data-required data-indent=1} | integer | 行政区划ID
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -213,8 +213,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| driver_name {data-required} | string | 司机姓名
-| id_card_number {data-required} | string | 司机身份证号码
+| driver_name {data-required} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 司机姓名
+| id_card_number {data-required} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 司机身份证号码
 | company_name {data-required} | string | 公司名称
 | mchid {data-required} | string | 商户号
 | driver_license {data-required} | string | 营运资格证号

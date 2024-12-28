@@ -20,7 +20,7 @@ description: 微信订单支付成功后，商户发起分账请求，将结算�
 | currency {data-required data-indent=2} | string | 分账币种<br/>`CNY` 枚举值
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=2} | string | 分账接收方帐号
-| name {data-indent=2} | string | 分账个人接收方姓名
+| name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 分账个人接收方姓名
 | authorized {data-indent=2} | boolean | 是否已经获取用户实名信息授权
 | amount {data-required data-indent=2} | integer | 分账金额
 | description {data-required data-indent=2} | string | 分账描述

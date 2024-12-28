@@ -122,9 +122,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | openid | string | 用户在商户appid下的唯⼀标识
 | sub_openid | string | 用户在⼦商户appid下的唯⼀标识
 | real_name_info | object {data-tooltip="对应PHP的array"} | 姓名信息
-| encrypted_real_name {data-indent=1} | string | 加密后的姓名信息，商户用API证书私钥解密
+| encrypted_real_name {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名信息，商户用API证书私钥解密
 | credential_type {data-indent=1} | integer | `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9` \| `10` \| `11` 枚举值之一
-| encrypted_credential_id {data-indent=1} | string | 加密后的身份证号，商户用API证书私钥解密
+| encrypted_credential_id {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的身份证号，商户用API证书私钥解密
 
 {.im-table #response}
 

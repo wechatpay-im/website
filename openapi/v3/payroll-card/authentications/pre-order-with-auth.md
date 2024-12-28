@@ -17,12 +17,12 @@ description: 本接口适用于用户需同步完成服务开通、授权及身�
 | authenticate_number {data-required data-indent=1} | string | 商家核身单号
 | project_name {data-required data-indent=1} | string | 项目名称
 | employer_name {data-required data-indent=1} | string | 用工单位名称
-| user_name {data-required data-indent=1} | string | 用户实名
-| id_card_number {data-required data-indent=1} | string | 用户证件号
+| user_name {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户实名
+| id_card_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户证件号
 | employment_type {data-required data-indent=1} | string | 用工类型<br/>`LONG_TERM_EMPLOYMENT` \| `SHORT_TERM_EMPLOYMENT` \| `COOPERATION_EMPLOYMENT` 枚举值之一
 | authenticate_type {data-required data-indent=1} | string | 核身类型<br/>`SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

@@ -288,6 +288,10 @@ td[data-required]::before {
 }
 
 [data-tooltip] {
+  text-align-last: justify;
+  text-decoration: underline wavy var(--vp-c-yellow-1);
+  text-decoration-thickness: from-font;
+  text-underline-offset: .3em;
   position: relative;
   z-index: 15;
   --im-tooltip-color: var(--vp-c-neutral);

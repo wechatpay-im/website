@@ -21,8 +21,8 @@ description: 商户自行开具电子发票后，可调用本接口将电子发�
 | telephone {data-indent=2} | string | 电话
 | bank_name {data-indent=2} | string | 开户银行
 | bank_account {data-indent=2} | string | 银行账号
-| phone {data-indent=2} | string | 手机号
-| email {data-indent=2} | string | 邮箱地址
+| phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号
+| email {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 邮箱地址
 | fapiao_card_information {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 电子发票卡券信息列表
 | fapiao_media_id {data-required data-indent=2} | string | 电子发票文件ID
 | fapiao_number {data-required data-indent=2} | string | 发票号码
@@ -58,8 +58,8 @@ description: 商户自行开具电子发票后，可调用本接口将电子发�
 | tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识
 | discount {data-required data-indent=3} | boolean | 是否折扣行
 | remark {data-indent=2} | string | 备注信息
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -88,7 +88,7 @@ $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_apply_id_->inser
       'fapiao_code'        => '044001911211',
       'fapiao_time'        => '2020-07-01T12:00:00+08:00',
       'check_code'         => '69001808340631374774',
-      'password'           => '006>299-375/326>2+7/*0-+<351059<80<4*/5>+<11631+*3030/5*37+/-243159658+013>3409*044>4-/1+/9->*>69501*6++1997--21',
+      'password'           => '006>299-375/326>2+7/*0-+<3510',
       'total_amount'       => 382895,
       'tax_amount'         => 44050,
       'amount'             => 338845,
@@ -155,7 +155,7 @@ $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id
       'fapiao_code'        => '044001911211',
       'fapiao_time'        => '2020-07-01T12:00:00+08:00',
       'check_code'         => '69001808340631374774',
-      'password'           => '006>299-375/326>2+7/*0-+<351059<80<4*/5>+<11631+*3030/5*37+/-243159658+013>3409*044>4-/1+/9->*>69501*6++1997--21',
+      'password'           => '006>299-375/326>2+7/*0-+<3510',
       'total_amount'       => 382895,
       'tax_amount'         => 44050,
       'amount'             => 338845,
@@ -222,7 +222,7 @@ $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/inser
       'fapiao_code'        => '044001911211',
       'fapiao_time'        => '2020-07-01T12:00:00+08:00',
       'check_code'         => '69001808340631374774',
-      'password'           => '006>299-375/326>2+7/*0-+<351059<80<4*/5>+<11631+*3030/5*37+/-243159658+013>3409*044>4-/1+/9->*>69501*6++1997--21',
+      'password'           => '006>299-375/326>2+7/*0-+<3510',
       'total_amount'       => 382895,
       'tax_amount'         => 44050,
       'amount'             => 338845,
@@ -289,7 +289,7 @@ $response = $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_appl
       'fapiao_code'        => '044001911211',
       'fapiao_time'        => '2020-07-01T12:00:00+08:00',
       'check_code'         => '69001808340631374774',
-      'password'           => '006>299-375/326>2+7/*0-+<351059<80<4*/5>+<11631+*3030/5*37+/-243159658+013>3409*044>4-/1+/9->*>69501*6++1997--21',
+      'password'           => '006>299-375/326>2+7/*0-+<3510',
       'total_amount'       => 382895,
       'tax_amount'         => 44050,
       'amount'             => 338845,
@@ -353,7 +353,7 @@ $response = $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fap
       'fapiao_code'        => '044001911211',
       'fapiao_time'        => '2020-07-01T12:00:00+08:00',
       'check_code'         => '69001808340631374774',
-      'password'           => '006>299-375/326>2+7/*0-+<351059<80<4*/5>+<11631+*3030/5*37+/-243159658+013>3409*044>4-/1+/9->*>69501*6++1997--21',
+      'password'           => '006>299-375/326>2+7/*0-+<3510',
       'total_amount'       => 382895,
       'tax_amount'         => 44050,
       'amount'             => 338845,
@@ -417,7 +417,7 @@ $response = $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_app
       'fapiao_code'        => '044001911211',
       'fapiao_time'        => '2020-07-01T12:00:00+08:00',
       'check_code'         => '69001808340631374774',
-      'password'           => '006>299-375/326>2+7/*0-+<351059<80<4*/5>+<11631+*3030/5*37+/-243159658+013>3409*044>4-/1+/9->*>69501*6++1997--21',
+      'password'           => '006>299-375/326>2+7/*0-+<3510',
       'total_amount'       => 382895,
       'tax_amount'         => 44050,
       'amount'             => 338845,

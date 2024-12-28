@@ -23,12 +23,12 @@ description: 服务商可以通过该接口，批量向用户选择的收款账�
 | transfer_amount {data-required data-indent=2} | integer | 转账金额
 | transfer_remark {data-required data-indent=2} | string | 转账备注
 | openid {data-required data-indent=2} | string | 收款用户OpenID
-| user_name {data-required data-indent=2} | string | 收款用户姓名
+| user_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | sp_appid {data-indent=1} | string | 服务商的AppID
 | employment_type {data-required data-indent=1} | string | 用工类型
 | employment_scene {data-required data-indent=1} | string | 用工场景
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

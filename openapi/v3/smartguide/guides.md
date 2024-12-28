@@ -11,12 +11,12 @@
 | corpid {data-required data-indent=1} | string | 企业ID
 | store_id {data-required data-indent=1} | integer | 门店ID
 | userid {data-required data-indent=1} | string | 企业微信的员工ID
-| name {data-required data-indent=1} | string | 企业微信的员工姓名
-| mobile {data-required data-indent=1} | string | 手机号码
+| name {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 企业微信的员工姓名
+| mobile {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | qr_code {data-required data-indent=1} | string | 员工个人二维码
 | avatar {data-required data-indent=1} | string | 头像URL
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -165,12 +165,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-indent=1} | string | 子商户ID
 | store_id {data-required data-indent=1} | integer | 门店ID
 | userid {data-indent=1} | string | 企业微信的员工ID
-| mobile {data-indent=1} | string | 手机号码
+| mobile {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | work_id {data-indent=1} | string | 工号
 | limit {data-indent=1} | integer | 最大资源条数
 | offset {data-indent=1} | integer | 请求资源起始位置
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -303,8 +303,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | data | object[] {data-tooltip="对应PHP的array"} | 服务人员信息
 | guide_id {data-indent=1} | string | 服务人员ID
 | store_id {data-indent=1} | integer | 门店ID
-| name {data-indent=1} | string | 企业微信的员工姓名
-| mobile {data-indent=1} | string | 手机号码
+| name {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 企业微信的员工姓名
+| mobile {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | userid {data-indent=1} | string | 企业微信的员工ID
 | work_id {data-indent=1} | string | 工号
 

@@ -15,12 +15,12 @@ description: 商户可通过此接口申请创建商家转账订单。
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
 | openid {data-required data-indent=1} | string | 收款用户OpenID
-| user_name {data-indent=1} | string | 收款用户姓名
+| user_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | transfer_amount {data-required data-indent=1} | number | 转账金额
 | transfer_remark {data-required data-indent=1} | string | 转账备注
 | notify_url {data-indent=1} | string | 商户回调地址
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

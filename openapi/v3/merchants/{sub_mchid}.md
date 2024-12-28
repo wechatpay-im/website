@@ -117,9 +117,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | merchant_country_code {data-required} | string | 册国家或区域
 | business_category {data-required} | integer | 类目
 | contact | object {data-tooltip="对应PHP的array"} | 联系人信息
-| name {data-indent=1} | string | 联系人名称
-| phone {data-indent=1} | string | 联系人电话
-| email {data-indent=1} | string | 联系人邮箱
+| name {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人名称
+| phone {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人电话
+| email {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人邮箱
 | merchant_type | string | 商户类型<br/>`ENTERPRISE` \| `INDIVIDUAL` 枚举值之一
 | registration_certificate_number | string | 公司注册文件编号
 | registration_certificate_date | string | 公司注册文件过期时间

@@ -108,9 +108,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | merchant_country_code {data-required} | string | 册国家或区域
 | business_category {data-required} | integer | 类目
 | contact | object {data-tooltip="对应PHP的array"} | 联系人信息
-| name {data-indent=1} | string | 联系人名称
-| phone {data-indent=1} | string | 联系人电话
-| email {data-indent=1} | string | 联系人邮箱
+| name {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人名称
+| phone {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人电话
+| email {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人邮箱
 | merchant_type | string | 商户类型<br/>`ENTERPRISE` \| `INDIVIDUAL` 枚举值之一
 | registration_certificate_number | string | 公司注册文件编号
 | registration_certificate_date | string | 公司注册文件过期时间
@@ -149,9 +149,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | shortname {data-required data-indent=1} | string | 子商户简称
 | office_phone {data-required data-indent=1} | string | 公司电话
 | contact {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 联系人信息
-| name {data-required data-indent=2} | string | 联系人名称
-| phone {data-required data-indent=2} | string | 联系人电话
-| email {data-required data-indent=2} | string | 联系人邮箱
+| name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人名称
+| phone {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人电话
+| email {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人邮箱
 | business_category {data-required data-indent=1} | integer | 类目
 | channel_id {data-indent=1} | string | 渠道号
 | merchant_country_code {data-required data-indent=1} | string | 注册国家或区域
@@ -179,6 +179,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | h5_payment_apply_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | H5支付申请资料资料
 | website_url {data-indent=2} | string | H5经营网址
 | domains {data-indent=2} | string[] | H5支付域名
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -230,6 +232,9 @@ $instance->v3->global->merchants->_sub_mchid_->patchAsync([
       'website_url' => 'https://qq.com',
       'domains'     => ['www.qq.com'],
     ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -285,6 +290,9 @@ $instance->chain('v3/global/merchants/{sub_mchid}')->patchAsync([
       'domains'     => ['www.qq.com'],
     ],
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -338,6 +346,9 @@ $instance['v3/global/merchants/{sub_mchid}']->patchAsync([
       'website_url' => 'https://qq.com',
       'domains'     => ['www.qq.com'],
     ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -393,6 +404,9 @@ $response = $instance->v3->global->merchants->_sub_mchid_->patch([
       'domains'     => ['www.qq.com'],
     ],
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -444,6 +458,9 @@ $response = $instance->chain('v3/global/merchants/{sub_mchid}')->patch([
       'domains'     => ['www.qq.com'],
     ],
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -494,6 +511,9 @@ $response = $instance['v3/global/merchants/{sub_mchid}']->patch([
       'website_url' => 'https://qq.com',
       'domains'     => ['www.qq.com'],
     ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

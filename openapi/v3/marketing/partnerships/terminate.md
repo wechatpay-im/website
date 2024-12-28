@@ -17,8 +17,8 @@ description: 该接口主要为商户提供营销资源的终止授权能力，�
 | authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 被授权数据
 | business_type {data-required data-indent=2} | string | 授权业务类别<br/>`FAVOR_STOCK` \| `BUSIFAVOR_STOCK` 枚举值之一
 | stock_id {data-indent=2} | string | 授权批次ID
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Idempotency-Key {data-indent=1} | string | 业务请求幂等值
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Idempotency-Key {data-required data-indent=1} | string | 业务请求幂等值
 
 {.im-table #request}
 

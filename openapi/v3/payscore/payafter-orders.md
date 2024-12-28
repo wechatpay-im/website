@@ -27,12 +27,12 @@
 | attach {data-indent=1} | string | 商户自定义说明,可存放本订单所需信息
 | need_user_confirm {data-indent=1} | boolean | 使用需用户确认订单类型
 | openid {data-indent=1} | string | 微信用户在商户对应appid下的唯一标识
-| name {data-indent=1} | string | 用户姓名
-| phone {data-indent=1} | string | 用户手机号
-| userid {data-indent=1} | string | 用户身份证ID
-| address {data-indent=1} | string | 用户收货地址
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户姓名
+| phone {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户手机号
+| userid {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户身份证ID
+| address {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户收货地址
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

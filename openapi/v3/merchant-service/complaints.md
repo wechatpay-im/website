@@ -124,7 +124,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | complaint_time {data-required data-indent=1} | string | 投诉时间
 | amount {data-required data-indent=1} | integer | 订单金额
-| payer_phone {data-indent=1} | string | 投诉人联系方式
+| payer_phone {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 投诉人联系方式
 | complaint_detail {data-required data-indent=1} | string | 投诉详情
 | complaint_state {data-required data-indent=1} | string | 投诉单状态<br/>`PAYER_COMPLAINTED` \| `FROZENED` \| `FROZEN_FINISHED` \| `PAYER_CANCELED` \| `MERCHANT_REFUNDED` \| `SYSTEM_REFUNDED` \| `MANUAL_UNFROZEN` 枚举值之一
 | transaction_id {data-required data-indent=1} | string | 微信订单号

@@ -21,8 +21,8 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 | telephone {data-indent=2} | string | 电话
 | bank_name {data-indent=2} | string | 开户银行
 | bank_account {data-indent=2} | string | 银行账号
-| phone {data-indent=2} | string | 手机号
-| email {data-indent=2} | string | 邮箱地址
+| phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号
+| email {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 邮箱地址
 | fapiao_information {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 需要开具的发票信息
 | fapiao_id {data-required data-indent=2} | string | 商户发票单号
 | total_amount {data-required data-indent=2} | integer | 总价税合计
@@ -40,8 +40,8 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 | tax_rate {data-indent=3} | number | 税率
 | tax_prefer_mark {data-indent=3} | string | 税收优惠政策标识
 | discount {data-required data-indent=3} | boolean | 是否折扣行
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

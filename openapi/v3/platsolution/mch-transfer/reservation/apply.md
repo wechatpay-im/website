@@ -19,7 +19,7 @@ description: 商户可调用接口预先指定转账的单次计划，预创建�
 | estimated_max_amount {data-indent=1} | number | 预计最大转账金额
 | exact_amount {data-indent=1} | number | 准确转账金额
 | openid {data-indent=1} | string | 收款用户OpenID
-| user_real_name {data-indent=1} | string | 收款用户姓名
+| user_real_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | reserve_remark {data-required data-indent=1} | string | 预约备注
 | notify_url {data-required data-indent=1} | string | 商户回调地址
 | scene_report_data {data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景报备信息
@@ -29,8 +29,8 @@ description: 商户可调用接口预先指定转账的单次计划，预创建�
 | name {data-required data-indent=3} | string | 保险名称
 | withdrawal_no {data-indent=3} | string | 取现单号
 | claim_no {data-indent=3} | string | 理赔单号
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

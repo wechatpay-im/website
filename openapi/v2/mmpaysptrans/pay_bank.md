@@ -13,8 +13,8 @@ description: 企业付款业务是基于微信支付商户平台的资金管理�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
 | partner_trade_no {data-required data-indent=1} | string | 商户企业付款单号
-| enc_bank_no {data-required data-indent=1} | string | 收款方银行卡号
-| enc_true_name {data-required data-indent=1} | string | 收款方用户名
+| enc_bank_no {data-required data-indent=1} | string {data-tooltip=付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款方银行卡号
+| enc_true_name {data-required data-indent=1} | string {data-tooltip=付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款方用户名
 | bank_code {data-required data-indent=1} | string | 收款方开户行
 | amount {data-required data-indent=1} | integer | 付款金额
 | desc {data-indent=1} | string | 付款说明

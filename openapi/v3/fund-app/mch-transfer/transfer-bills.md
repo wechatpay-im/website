@@ -14,7 +14,7 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
 | openid {data-required data-indent=1} | string | 收款用户OpenID
-| user_name {data-indent=1} | string | 收款用户姓名
+| user_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | transfer_amount {data-required data-indent=1} | number | 转账金额
 | transfer_remark {data-required data-indent=1} | string | 转账备注
 | notify_url {data-indent=1} | string | 通知地址
@@ -22,8 +22,8 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 | transfer_scene_report_infos {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账场景报备信息
 | info_type {data-indent=2} | string | 信息类型
 | info_content {data-indent=2} | string | 信息内容
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

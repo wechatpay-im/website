@@ -23,13 +23,13 @@ description: 服务商可以通过该接口，批量向用户零钱进行转账�
 | transfer_amount {data-required data-indent=2} | integer | 转账金额
 | transfer_remark {data-required data-indent=2} | string | 转账备注
 | openid {data-required data-indent=2} | string | 收款用户openid
-| user_name {data-required data-indent=2} | string | 收款用户姓名
-| user_id_card {data-indent=2} | string | 收款用户身份证
+| user_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
+| user_id_card {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户身份证
 | sp_appid {data-indent=1} | string | 服务商的appid
 | transfer_purpose {data-indent=1} | string | 批量转账用途<br/>`GOODSPAYMENT` \| `COMMISSION` \| `REFUND` \| `REIMBURSEMENT` \| `FREIGHT` \| `OTHERS` 枚举值之一
 | transfer_scene {data-indent=1} | string | 转账场景<br/>`ORDINARY_TRANSFER` \| `PAYROLL_CARD_TRANSFER` 枚举值之一
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

@@ -101,16 +101,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | organization_id {data-required} | string | 机构ID
 | out_user_id {data-required} | string | 商户刷脸用户ID
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| user_name {data-indent=1} | string | 姓名
+| user_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 姓名
 | user_type {data-indent=1} | string | 用户类型<br/>`STUDENT` \| `STUFF` 枚举值之一
 | student_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 学生信息
 | class_name {data-indent=2} | string | 班级名
 | staff_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 职工信息
 | occupation {data-indent=2} | string | 职业
 | status {data-indent=1} | string | 状态<br/>`NORMAL` \| `DISABLED` 枚举值之一
-| phone {data-indent=1} | string | 手机号
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| phone {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

@@ -15,11 +15,11 @@ description: 服务商发起添加分账接收方请求，建立分账接收方�
 | sub_appid {data-indent=1} | string | 子商户应用ID
 | type {data-required data-indent=1} | string | 分账接收方类型
 | account {data-required data-indent=1} | string | 分账接收方帐号
-| name {data-indent=1} | string | 分账个人接收方姓名
+| name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 分账个人接收方姓名
 | relation_type {data-required data-indent=1} | string | 与分账方的关系类型<br/>`SERVICE_PROVIDER` \| `STORE` \| `STAFF` \| `STORE_OWNER` \| `PARTNER` \| `HEADQUARTER` \| `BRAND` \| `DISTRIBUTOR` \| `USER` \| `SUPPLIER` \| `CUSTOM` 枚举值之一
 | custom_relation {data-indent=1} | string | 自定义的分账关系
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -155,7 +155,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid | string | 子商户号
 | type {data-required} | string | 分账接收方类型
 | account {data-required} | string | 分账接收方账号
-| name | string | 分账接收方全称
+| name | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 分账接收方全称
 | relation_type {data-required} | string | 与分账方的关系类型
 | custom_relation | string | 自定义的分账关系
 

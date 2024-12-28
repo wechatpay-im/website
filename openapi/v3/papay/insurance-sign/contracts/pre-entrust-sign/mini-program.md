@@ -36,12 +36,12 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 | can_auto_insure {data-indent=1} | boolean | 是否自动续保
 | can_auto_reinsure {data-indent=1} | boolean | 是否自动重新投保
 | real_identity {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户实名信息
-| real_name {data-required data-indent=2} | string | 自然人姓名
-| id_card_number {data-required data-indent=2} | string | 自然人身份证号码
-| identity_type {data-indent=2} | string | 实名验证类型
+| real_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 自然人姓名
+| id_card_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 自然人身份证号码
+| identity_type {data-indent=2} | string | 实名验证类型<br/>`ID_CARD` 枚举值
 | combined_deduct_period_count {data-indent=1} | number | 合并扣费期数
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 微信支付平台证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -86,7 +86,7 @@ $instance->v3->papay->insuranceSign->contracts->preEntrustSign->miniProgram->pos
     'combined_deduct_period_count' => 1,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -134,7 +134,7 @@ $instance->chain('v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-progra
     'combined_deduct_period_count' => 1,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -182,7 +182,7 @@ $instance['v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-program']->po
     'combined_deduct_period_count' => 1,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -230,7 +230,7 @@ $response = $instance->v3->papay->insuranceSign->contracts->preEntrustSign->mini
     'combined_deduct_period_count' => 1,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -275,7 +275,7 @@ $response = $instance->chain('v3/papay/insurance-sign/contracts/pre-entrust-sign
     'combined_deduct_period_count' => 1,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -320,7 +320,7 @@ $response = $instance['v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-p
     'combined_deduct_period_count' => 1,
   ],
   'headers' => [
-    'Wechatpay-Serial' => '',
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -12,12 +12,12 @@ description: 用于服务商/用于服务商/商户开发者为商户更新门�
 | guide_id {data-required} | string | 服务人员ID
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户ID
-| name {data-indent=1} | string | 企业微信的员工姓名
-| mobile {data-indent=1} | string | 手机号码
+| name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 企业微信的员工姓名
+| mobile {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | qr_code {data-indent=1} | string | 员工个人二维码
 | avatar {data-indent=1} | string | 头像URL
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

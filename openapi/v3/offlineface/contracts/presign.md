@@ -17,20 +17,20 @@ description: 一键绑卡不是支持所有银行卡，上线前请先测试是�
 | organization_id {data-required data-indent=2} | string | 机构ID
 | identification {data-indent=2} | object {data-tooltip="对应PHP的array"} | 证件信息
 | identification_type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
-| identification_number {data-required data-indent=3} | string | 证件ID
-| phone {data-indent=2} | string | 手机号码
+| identification_number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件ID
+| phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | limit_bank_card {data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约指定银行卡
-| bank_card_number {data-indent=2} | string | 银行卡号
-| identification_name {data-indent=2} | string | 开卡人姓名
+| bank_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行卡号
+| identification_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 开卡人姓名
 | identification {data-indent=2} | object {data-tooltip="对应PHP的array"} | 开卡人证件
 | identification_type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
-| identification_number {data-required data-indent=3} | string | 证件ID
+| identification_number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件ID
 | valid_thru {data-indent=2} | string | 银行卡有效期
 | bank_type {data-indent=2} | string | 银行类型
-| phone {data-indent=2} | string | 开卡预留手机号
+| phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 开卡预留手机号
 | contract_mode {data-indent=1} | string | 签约模式<br/>`LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` \| `LIMIT_NONE` 枚举值之一
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

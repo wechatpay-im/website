@@ -14,10 +14,10 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 | type {data-required data-indent=1} | string | 接收方类型
 | account {data-required data-indent=1} | string | 接收方账号
 | name {data-indent=1} | string | 接收方名称
-| encrypted_name {data-indent=1} | string | 接收方名称的密文
+| encrypted_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 接收方名称的密文
 | relation_type {data-required data-indent=1} | string | 与分账方的关系类型
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

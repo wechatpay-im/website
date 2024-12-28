@@ -17,10 +17,10 @@ description: 修改结算帐号API
 | bank_address_code {data-required data-indent=1} | string | 开户银行省市编码
 | bank_name {data-indent=1} | string | 开户银行全称（含支行）
 | bank_branch_id {data-indent=1} | string | 开户银行联行号
-| account_number {data-required data-indent=1} | string | 银行账号
-| account_name {data-indent=1} | string | 开户名称
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| account_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行账号
+| account_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 开户名称
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

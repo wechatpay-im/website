@@ -18,12 +18,12 @@ description: 该接口用于在开通ETC自动扣费前上传一些必要的信�
 | etc_device_id {data-indent=1} | string | ETC设备号
 | plate_number {data-required data-indent=1} | string | 车牌号
 | identify {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 实名信息
-| encrypted_real_name {data-required data-indent=2} | string | 姓名
-| encrypted_credential_id {data-required data-indent=2} | string | 证件号码
+| encrypted_real_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 姓名
+| encrypted_credential_id {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
 | credential_type {data-required data-indent=2} | string | 证件类型
-| bank_card_no {data-indent=1} | string | 用户开通ETC时绑定的银行卡
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| bank_card_no {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户开通ETC时绑定的银行卡
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

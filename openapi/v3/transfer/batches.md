@@ -21,12 +21,12 @@ description: 商户可以通过该接口同时向多个用户微信零钱进行�
 | transfer_amount {data-required data-indent=2} | integer | 转账金额
 | transfer_remark {data-required data-indent=2} | string | 转账备注
 | openid {data-required data-indent=2} | string | 用户在直连商户应用下的用户标示
-| user_name {data-required data-indent=2} | string | 收款用户姓名
-| user_id_card {data-indent=2} | string | 收款用户身份证
+| user_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
+| user_id_card {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户身份证
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
 | notify_url {data-indent=1} | string | 通知地址
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

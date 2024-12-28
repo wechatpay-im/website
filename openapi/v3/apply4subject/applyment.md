@@ -10,15 +10,15 @@
 | business_code {data-required data-indent=1} | string | 业务申请编号
 | contact_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 联系人信息
 | contact_type {data-indent=2} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
-| name {data-required data-indent=2} | string | 联系人姓名
+| name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人姓名
 | contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
-| id_card_number {data-required data-indent=2} | string | 联系人身份证号码
+| id_card_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人身份证号码
 | contact_id_doc_copy {data-indent=2} | string | 联系人证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 联系人证件反面照片
 | contact_period_begin {data-indent=2} | string | 联系人证件有效期开始时间
 | contact_period_end {data-indent=2} | string | 联系人证件有效期结束时间
 | business_authorization_letter {data-indent=2} | string | 业务办理授权函
-| mobile {data-required data-indent=2} | string | 联系人手机号
+| mobile {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人手机号
 | subject_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 主体信息
 | subject_type {data-required data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
 | is_finance_institution {data-indent=2} | boolean | 是否金融机构
@@ -59,12 +59,12 @@
 | id_holder_type {data-indent=2} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
 | identification_type {data-required data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | authorize_letter_copy {data-indent=2} | string | 法定代表人说明函
-| identification_name {data-required data-indent=2} | string | 证件姓名
-| identification_number {data-required data-indent=2} | string | 证件号码
+| identification_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| identification_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
 | identification_valid_date {data-required data-indent=2} | string | 证件有效日期`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | period {data-required data-indent=3} | string[] | 岂止日期
-| identification_address {data-indent=2} | string | 证件居住地址
+| identification_address {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件居住地址
 | identification_front_copy {data-required data-indent=2} | string | 证件正面照片
 | identification_back_copy {data-indent=2} | string | 证件反面照片
 | owner {data-indent=2} | boolean | 经营者/法人是否为受益人
@@ -72,17 +72,17 @@
 | ubo_id_doc_type {data-required data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | ubo_id_doc_copy {data-required data-indent=2} | string | 证件正面照片
 | ubo_id_doc_copy_back {data-required data-indent=2} | string | 证件反面照片
-| ubo_id_doc_name {data-required data-indent=2} | string | 证件姓名
-| ubo_id_doc_number {data-required data-indent=2} | string | 证件号码
-| ubo_id_doc_address {data-required data-indent=2} | string | 证件居住地址
+| ubo_id_doc_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| ubo_id_doc_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
+| ubo_id_doc_address {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件居住地址
 | ubo_period_begin {data-required data-indent=2} | string | 证件有效期开始时间
 | ubo_period_end {data-required data-indent=2} | string | 证件有效期结束时间
 | addition_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料
 | confirm_mchid_list {data-indent=2} | string[] | 待确认商户号列表
 | query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | channel_id {data-indent=1} | string | 渠道商户号
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

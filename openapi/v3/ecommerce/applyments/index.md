@@ -32,13 +32,13 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | id_card_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 经营者/法人身份证信息
 | id_card_copy {data-indent=2} | string | 身份证人像面照片
 | id_card_national {data-indent=2} | string | 身份证国徽面照片
-| id_card_name {data-indent=2} | string | 身份证姓名
-| id_card_number {data-indent=2} | string | 身份证号码
+| id_card_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证姓名
+| id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证号码
 | id_card_valid_time_begin {data-indent=2} | string | 身份证有效期开始时间
 | id_card_valid_time {data-indent=2} | string | 身份证有效期结束时间
 | id_doc_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 经营者/法人其他类型证件信息
-| id_doc_name {data-indent=2} | string | 证件姓名
-| id_doc_number {data-indent=2} | string | 证件号码
+| id_doc_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| id_doc_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
 | id_doc_copy {data-indent=2} | string | 证件正面照片
 | id_doc_copy_back {data-indent=2} | string | 证件反面照片
 | doc_period_begin {data-indent=2} | string | 证件有效期开始时间
@@ -48,30 +48,30 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | ubo_id_doc_type {data-required data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | ubo_id_doc_copy {data-required data-indent=2} | string | 证件正面照片
 | ubo_id_doc_copy_back {data-required data-indent=2} | string | 证件反面照片
-| ubo_id_doc_name {data-required data-indent=2} | string | 受益人姓名
-| ubo_id_doc_number {data-required data-indent=2} | string | 证件号码
-| ubo_id_doc_address {data-required data-indent=2} | string | 证件居住地址
+| ubo_id_doc_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 受益人姓名
+| ubo_id_doc_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
+| ubo_id_doc_address {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件居住地址
 | ubo_period_begin {data-required data-indent=2} | string | 证件有效期开始时间
 | ubo_period_end {data-required data-indent=2} | string | 证件有效期结束时间
 | account_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算银行账户
 | bank_account_type {data-indent=2} | string | 账户类型<br/>`74` \| `75` 枚举值之一
 | account_bank {data-indent=2} | string | 开户银行
-| account_name {data-indent=2} | string | 开户名称
+| account_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 开户名称
 | bank_address_code {data-indent=2} | string | 开户银行省市编码
 | bank_branch_id {data-indent=2} | string | 开户银行联行号
 | bank_name {data-indent=2} | string | 开户银行全称 （含支行]
-| account_number {data-indent=2} | string | 银行帐号
+| account_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行帐号
 | contact_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 超级管理员信息
 | contact_type {data-indent=2} | string | 超级管理员类型<br/>`65` \| `66` 枚举值之一
-| contact_name {data-indent=2} | string | 超级管理员姓名
+| contact_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员姓名
 | contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
-| contact_id_card_number {data-indent=2} | string | 超级管理员身份证件号码
+| contact_id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员身份证件号码
 | contact_id_doc_copy {data-indent=2} | string | 超级管理员证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 超级管理员证件反面照片
 | contact_period_begin {data-indent=2} | string | 超级管理员证件有效期开始时间
 | contact_period_end {data-indent=2} | string | 超级管理员证件有效期结束时间
 | business_authorization_letter {data-indent=2} | string | 业务办理授权函
-| mobile_phone {data-indent=2} | string | 超级管理员手机
+| mobile_phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员手机
 | sales_scene_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 店铺信息
 | store_name {data-indent=2} | string | 店铺名称
 | store_url {data-indent=2} | string | 店铺链接
@@ -84,8 +84,8 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | qualifications {data-indent=1} | string[] | 特殊资质
 | business_addition_pics {data-indent=1} | string[] | 补充材料
 | business_addition_desc {data-indent=1} | string[] | 补充说明
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

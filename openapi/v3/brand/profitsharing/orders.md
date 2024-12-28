@@ -20,8 +20,8 @@
 | description {data-required data-indent=2} | string | 分账描述
 | name {data-indent=2} | string | 分账个人接收方姓名
 | finish {data-required data-indent=1} | boolean | 是否分账完成
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

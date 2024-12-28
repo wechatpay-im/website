@@ -1,6 +1,6 @@
 ---
 title: 快速开始
-description: 使用composer安装wechatpay/wechatpay包之后，兼容微信支付平台公钥及/或微信支付平台证书模式，支持包含XML模式的数据通信协议，一个闭环示例链式调用OpenAPI接口。
+description: 使用composer安装wechatpay/wechatpay包之后，兼容微信支付公钥及/或平台证书模式，支持包含XML模式的数据通信协议，一个闭环示例链式调用OpenAPI接口。
 head:
   - - meta
     - name: keywords
@@ -16,11 +16,11 @@ aside: true
 composer install wechatpay/wechatpay
 ```
 
-## 下载平台公钥 {#pubkey}
+## 下载微信支付公钥 {#pubkey}
 
 > [!NOTE]
-> 2024年Q3，微信支付官方开启了「平台公钥」平替「平台证书」方案，初始化所需的参数仅需配置上 **平台公钥ID** 及 **平台公钥** 即完全兼容支持，CLI/API下载 **平台证书** 已不是一个必要步骤，可略过。
-> **平台公钥ID** 及 **平台公钥** 均可在 [微信支付商户平台](https://pay.weixin.qq.com/) -> 账户中心 -> API安全 查看及/或下载。
+> 2024年Q3，微信支付官方开启了「微信支付公钥」平替「平台证书」方案，初始化所需的参数仅需配置上 **微信支付公钥ID** 及 **微信支付公钥** 即完全兼容支持，CLI/API下载 **平台证书** 已不是一个必要步骤，可略过。
+> **微信支付公钥ID** 及 **微信支付公钥** 均可在 [微信支付商户平台](https://pay.weixin.qq.com/) -> 账户中心 -> API安全 查看及/或下载。
 
 ## 下载平台证书 {#cli}
 
@@ -142,15 +142,15 @@ $merchantCertificateSerial = '3775B6A45ACD588826D15E583A95F5DD********';
 $platformCertificateFilePath  = 'file:///path/to/wechatpay/certificate.pem';
 $onePlatformPublicKeyInstance = Rsa::from($platformCertificateFilePath, Rsa::KEY_TYPE_PUBLIC);
 
-// 「微信支付平台证书」的「平台证书序列号」
+// 「微信支付平台证书」的「证书序列号」
 // 可以从「微信支付平台证书」文件解析，也可以在 商户平台 -> 账户中心 -> API安全 查询到
 $platformCertificateSerial = '7132D72A03E93CDDF8C03BBD1F37EEDF********';
 
-// 从本地文件中加载「微信支付平台公钥」，用来验证微信支付应答的签名
+// 从本地文件中加载「微信支付公钥」，用来验证微信支付应答的签名
 $platformPublicKeyFilePath    = 'file:///path/to/wechatpay/publickey.pem';
 $twoPlatformPublicKeyInstance = Rsa::from($platformPublicKeyFilePath, Rsa::KEY_TYPE_PUBLIC);
 
-// 「微信支付平台公钥」的「平台公钥ID」
+// 「微信支付公钥」的「微信支付公钥ID」
 // 需要在 商户平台 -> 账户中心 -> API安全 查询
 $platformPublicKeyId = 'PUB_KEY_ID_01142321349124100000000000********';
 

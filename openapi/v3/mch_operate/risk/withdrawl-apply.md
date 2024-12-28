@@ -19,15 +19,15 @@ description: 针对被微信支付平台不收不付管控的电商子商户，�
 | payee_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款账号信息
 | account_type {data-required data-indent=2} | string | 账户类型<br/>`ACCOUNT_TYPE_CORPORATE` \| `ACCOUNT_TYPE_PERSONAL` 枚举值之一
 | bank_account_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 银行账户
-| account_name {data-required data-indent=3} | string | 开户名称
+| account_name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 开户名称
 | account_bank {data-required data-indent=3} | string | 开户银行
 | bank_branch_id {data-indent=3} | string | 开户银行联行号
 | bank_name {data-indent=3} | string | 开户银行全称（含支行）
-| account_number {data-required data-indent=3} | string | 银行账号
+| account_number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行账号
 | identity_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 收款人账号对应的证件信息
 | id_doc_type {data-indent=3} | string | 证件类型<br/>`IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
-| identification_name {data-required data-indent=3} | string | 证件姓名
-| identification_no {data-required data-indent=3} | string | 证件号码
+| identification_name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| identification_no {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
 | proof_media_list {data-indent=1} | object {data-tooltip="对应PHP的array"} | 付款申请证明材料
 | proof_payee_media {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 申请证明材料
 | proof_media_type {data-required data-indent=3} | string | 申请证明材料类型<br/>`BASIC_TRANSACTION_INFORMATION` \| `LEGAL_ID_CARD` \| `ID_CARD` \| `BUSINESS_LICENSE_PHOTO` \| `PAYEE_ID_CARD` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_6` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_7` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_8` 枚举值之一
@@ -35,8 +35,8 @@ description: 针对被微信支付平台不收不付管控的电商子商户，�
 | additional_materials {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料
 | additional_media {data-indent=2} | string[] | 补充材料照片列表，最多10张
 | remark {data-indent=1} | string | 备注
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

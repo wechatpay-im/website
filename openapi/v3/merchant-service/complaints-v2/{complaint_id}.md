@@ -75,7 +75,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | complaint_detail {data-required} | string | 投诉详情
 | complaint_state {data-required} | string | 投诉单状态
 | complainted_mchid {data-required} | string | 被诉商户号
-| payer_phone | string | 投诉人联系方式
+| payer_phone | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 投诉人联系方式
 | payer_openid | string | 投诉人openid
 | complaint_media_list | object[] {data-tooltip="对应PHP的array"} | 投诉资料列表
 | media_type {data-required data-indent=1} | string | 媒体文件业务类型<br/>`USER_COMPLAINT_IMAGE` \| `OPERATION_IMAGE` 枚举值之一

@@ -15,10 +15,10 @@ description: 如商户有存量注册会员未领取会员卡，可导入最近�
 | code {data-indent=2} | string | 会员卡code
 | membership_number {data-indent=2} | string | 会员卡编号
 | registration_time {data-required data-indent=2} | string | 会员注册时间
-| encrypted_phone_number {data-required data-indent=1} | string | 加密手机号
+| encrypted_phone_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密手机号
 | outer_str {data-indent=1} | string | 自定义场景值
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

@@ -15,10 +15,10 @@ description: 提交退款申请后，查询退款确认状态为退款异常，�
 | out_refund_no {data-required data-indent=1} | string | 商户退款单号
 | type {data-required data-indent=1} | string | 异常退款处理方式<br/>`USER_BANK_CARD` \| `MERCHANT_BANK_CARD` 枚举值之一
 | bank_type {data-indent=1} | string | 开户银行<br/>`CMB_DEBIT` \| `COMM_DEBIT` \| `ABC_DEBIT` \| `CCB_DEBIT` \| `ICBC_DEBIT` \| `BOC_DEBIT` \| `PAB_DEBIT` \| `SPDB_DEBIT` \| `CITIC_DEBIT` \| `CEB_DEBIT` \| `CMBC_DEBIT` \| `CIB_DEBIT` \| `GDB_DEBIT` \| `PSBC_DEBIT` \| `NBCB_DEBIT` 枚举值之一
-| bank_account {data-indent=1} | string | 收款银行卡号
-| real_name {data-indent=1} | string | 收款用户姓名
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| bank_account {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款银行卡号
+| real_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

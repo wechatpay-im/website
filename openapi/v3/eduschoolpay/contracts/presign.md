@@ -19,16 +19,16 @@ description: 商户调用该接口可获取预签约码（presign_token），预
 | contract_mode {data-indent=1} | string | 签约模式
 | downgrade_default_contract {data-indent=1} | boolean | 允许降级为普通签约模式
 | identity {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实名信息
-| real_name {data-required data-indent=2} | string | 姓名
-| credential_type {data-required data-indent=2} | string | 证件类型
-| id_card_number {data-indent=2} | string | 身份证号
+| real_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 姓名
+| credential_type {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件类型
+| id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证号
 | bank_card {data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约银行卡
-| bank_card_no {data-required data-indent=2} | string | 签约银行卡号
+| bank_card_no {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 签约银行卡号
 | valid_thru {data-indent=2} | string | 银行卡有效期
-| phone {data-indent=2} | string | 银行卡开卡预留手机号
+| phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行卡开卡预留手机号
 | bank_type {data-indent=2} | string | 银行类型
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

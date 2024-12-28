@@ -13,11 +13,11 @@ description: 校验按商户拉起核身时预下单的token值对应的微工�
 | sp_mchid {data-required data-indent=1} | string | 服务商商户号
 | sub_mchid {data-required data-indent=1} | string | 特约商户商户号
 | token {data-required data-indent=1} | string | token值
-| user_name {data-required data-indent=1} | string | 用户姓名
-| id_card_number {data-required data-indent=1} | string | 用户身份证号
+| user_name {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户姓名
+| id_card_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户身份证号
 | authenticate_type {data-indent=1} | string | 核身类型<br/>`NORMAL` \| `SIGN_IN` \| `INSURANCE` \| `CONTRACT` 枚举值之一
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 

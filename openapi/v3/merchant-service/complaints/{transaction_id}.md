@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required} | string | 商户订单号
 | complaint_time {data-required} | string | 投诉时间
 | amount {data-required} | integer | 投诉金额
-| payer_phone | string | 投诉人联系方式
+| payer_phone | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 投诉人联系方式
 | complaint_detail {data-required} | string | 投诉描述
 | complaint_state | string | 投诉单状态
 | transaction_id {data-required} | string | 微信支付订单号

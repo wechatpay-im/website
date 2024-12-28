@@ -18,12 +18,12 @@ description: 微信订单支付成功后，服务商代特约商户发起分账�
 | receivers {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | type {data-required data-indent=2} | string | 分账接收方类型
 | account {data-required data-indent=2} | string | 分账接收方帐号
-| name {data-indent=2} | string | 分账个人接收方姓名
+| name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 分账个人接收方姓名
 | amount {data-required data-indent=2} | integer | 分账金额
 | description {data-required data-indent=2} | string | 分账描述
 | unfreeze_unsplit {data-required data-indent=1} | boolean | 是否解冻剩余未分资金
-| headers | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
-| Wechatpay-Serial {data-indent=1} | string | 平台公钥ID/平台公钥证书序列号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
