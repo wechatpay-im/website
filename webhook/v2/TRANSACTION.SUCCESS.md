@@ -17,10 +17,10 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers {data-required} | object | 通知的头参数
+| headers {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的头参数
 | Request-ID {data-required data-indent=1} | string | 通知的唯一标识
 | Content-Type {data-required data-indent=1} | string | `text/xml`
-| body {data-required} | object | 通知的`XML`数据结构
+| body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | algorithm {data-required data-indent=1} | string | 签名算法<br/> `HMAC-SHA256` 枚举值
@@ -32,7 +32,7 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 | event_algorithm {data-required data-indent=1} | string | 通知加密类型<br/>`AEAD_AES_256_GCM` 枚举值
 | event_nonce {data-required data-indent=1} | string | 通知随机串
 | event_associated_data {data-indent=1} | string | 通知附加数据
-| event_ciphertext {data-required data-indent=1} | string | 通知密文
+| event_ciphertext {data-required data-indent=1} | string {data-tooltip=商户APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 通知密文
 | {colspan=3 .im-table-line}
 | state {data-indent=2} | string | 单据状态
 | service_id {data-indent=2} | string | 服务ID

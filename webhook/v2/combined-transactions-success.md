@@ -23,10 +23,10 @@ description: 合单支付的支付结果将只通知给合单支付发起方（�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers {data-required} | object | 通知的头参数
+| headers {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的头参数
 | Request-ID {data-required data-indent=1} | string | 通知的唯一标识
 | Content-Type {data-required data-indent=1} | string | `text/xml`
-| body {data-required} | object | 通知的`XML`数据结构
+| body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`XML`数据结构
 | return_code {data-required data-indent=1} | string | 返回状态码
 | return_msg {data-indent=1} | string | 返回信息
 | combine_appid {data-required data-indent=1} | string | 合单APPID

@@ -15,10 +15,10 @@ description: 推送涉及高风险诈骗（尤其是来源订单/客服电话投
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers {data-required} | object | 通知的头参数
+| headers {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的头参数
 | Request-ID {data-required data-indent=1} | string | 通知的唯一标识
 | Content-Type {data-required data-indent=1} | string | `text/xml`
-| body {data-required} | object | 通知的`XML`数据结构
+| body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`XML`数据结构
 | return_code {data-required data-indent=1} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-indent=1} | string | 返回信息
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值

@@ -24,7 +24,7 @@ description: 由于实名信息属于敏感数据，不能以明文数据传输�
 | cert_serialno {data-required data-indent=1} | string | 加密实名信息的证书序列号
 | access_token {data-required data-indent=1} | string | 步骤2或步骤3获取到的access_token
 | timestamp {data-required data-indent=1} | number | unix时间戳，必须获取当前时间。
-| cert_sign {data-required data-indent=1} | string | 使用rsa私钥对证书序列号和unix时间戳的进行签名
+| cert_sign {data-required data-indent=1} | string {data-tooltip=商户API私钥签名后的BASE64字符串 data-signed=by-rsa-privatekey} | 使用rsa私钥对证书序列号和unix时间戳的进行签名
 | charset {data-indent=1} | string | 证件类型<br/>`UTF-8` \| `GBK` 枚举值之一
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
@@ -205,8 +205,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | mch_id {data-required} | string | 商户号
 | nonce_str {data-required} | string | 随机字符串
 | openid {data-required} | string | 用户标识
-| encrypted_real_name {data-required} | string | 加密后的姓名。如果请求参数`charset`=`UTF-8`，解密之后数据为`UTF-8`格式，否则解密之后数据为`GBK`格式。
-| encrypted_credential_id {data-required} | string | 加密后的证件号码
+| encrypted_real_name {data-required} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名。如果请求参数`charset`=`UTF-8`，解密之后数据为`UTF-8`格式，否则解密之后数据为`GBK`格式。
+| encrypted_credential_id {data-required} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号码
 | cre_type | string | 证件类型，`version` >= `2.0`时返回此字段<br/>`MAINLAND_ID` \| `PASSPOT` \| `MO` \| `SOLDIERS` \| `HVPS` \| `MAINLAND_TMP_ID` \| `ACCOUNT_THIN` \| `POLICE` \| `MTPS` \| `BL` \| `OTHER` \| `RPFF` \| `HK_MACAO` \| `TAIWAN` 枚举值之一
 
 {.im-table #response}

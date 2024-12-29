@@ -16,15 +16,15 @@ description: 扣费后，微信后台会把相关确认结果和订单信息发�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| headers {data-required} | object | 通知的头参数
+| headers {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的头参数
 | Content-Type {data-required data-indent=1} | string | `application/json`
 | Request-ID {data-required data-indent=1} | string | 通知的唯一标识
 | Wechatpay-Nonce {data-required data-indent=1} | string | 数据签名使用的随机串
-| Wechatpay-Serial {data-required data-indent=1} | string | 平台证书序列号/平台公钥ID
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 | Wechatpay-Signature {data-required data-indent=1} | string | 签名串
 | Wechatpay-Signature-Type {data-required data-indent=1} | string | 签名算法<br/>`WECHATPAY2-SHA256-RSA2048` 枚举值
 | Wechatpay-Timestamp {data-required data-indent=1} | string | 时间戳
-| body {data-required} | object | 通知的`JSON`数据结构
+| body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`JSON`数据结构
 | id {data-required data-indent=1} | string | 通知的唯一ID
 | create_time {data-required data-indent=1} | string | 通知创建的时间
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`TRANSACTION.INDUSTRY_FAILED` 枚举值
@@ -34,7 +34,7 @@ description: 扣费后，微信后台会把相关确认结果和订单信息发�
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
-| ciphertext {data-required data-indent=2} | string | 加密后的密文数据
+| ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | mchid {data-required data-indent=3} | string | 微信支付分配的商户号。如果是服务商模式接入则为服务商商户号；如果是直连商户模式接入则为直连商户号。

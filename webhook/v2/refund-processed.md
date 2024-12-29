@@ -16,10 +16,10 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | -- | -- | --
-| headers {data-required} | object | 通知的头参数
+| headers {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的头参数
 | Request-ID {data-required data-indent=1} | string | 通知的唯一标识
 | Content-Type {data-required data-indent=1} | string | `text/xml`
-| body {data-required} | object | 通知的`XML`数据结构
+| body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`XML`数据结构
 | return_code {data-required data-indent=1} | string | 返回状态码
 | return_msg {data-indent=1} | string | 返回信息
 | appid {data-required data-indent=1} | string | 公众平台APPID
@@ -27,7 +27,7 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 | sub_mch_id {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
 | nonce_str {data-required data-indent=1} | string | 随机字符串
-| req_info {data-required data-indent=1} | string | 加密的`XML`信息
+| req_info {data-required data-indent=1} | string {data-tooltip=商户API密钥加密后的BASE64字符串 data-encrypted=by-aes-ecb} | 加密的`XML`信息
 | {colspan=3 .im-table-line}
 | out_refund_no {data-required data-indent=2} | string | 商户退款单号
 | out_trade_no {data-required data-indent=2} | string | 商户订单号
