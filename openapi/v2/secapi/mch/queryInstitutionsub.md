@@ -154,7 +154,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | h5_audit_reject_detail | string | H5驳回详情
 | sub_mch_status | string | 子商户状态<br/>`OPERATING` \| `PENDING` \| `DEACTIVATED` \| `CLOSED` \| `INCOMPLETE_APPLICATION` 枚举值之一
 | application_status | string | 子商户入驻状态<br/>`UNDER_REVIEW` \| `REJECTED` 枚举值之一
-| application_reject_detail | string | 子商户入驻驳回详情
+| application_reject_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 子商户入驻驳回详情
 | {colspan=3 .im-table-line}
 | reason {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 驳回原因列表
 | field {data-indent=2} | string | 字段

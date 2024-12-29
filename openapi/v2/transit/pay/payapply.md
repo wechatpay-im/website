@@ -25,7 +25,7 @@ description: 委托代扣可应用于定期扣款或需事后扣款以期提高�
 | trade_type {data-required data-indent=1} | string | 交易类型<br/>`PAP` 枚举值
 | contract_id {data-indent=1} | string | 委托代扣协议id
 | trade_scene {data-required data-indent=1} | string | 交易场景<br/>`METRO` \| `BUS` 枚举值之一
-| scene_info {data-required data-indent=1} | string | 场景信息`JSON`格式字符串
+| scene_info {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 场景信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | scene_info {data-required data-indent=2} | object | 场景`METRO`信息
 | start_time {data-required data-indent=3} | string | 乘车时间

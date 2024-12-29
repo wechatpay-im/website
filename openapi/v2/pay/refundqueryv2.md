@@ -179,7 +179,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | refund_account_$n | string | 退款资金来源
 | refund_recv_accout_$n {data-required} | string | 退款入账账户
 | refund_success_time_$n | string | 退款成功时间
-| promotion_detail | string | 营销详情`JSON`格式字符串
+| promotion_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称

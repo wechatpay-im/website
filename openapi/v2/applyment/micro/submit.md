@@ -26,7 +26,7 @@ description: 使用申请入驻接口提交你的小微商户资料，申请后�
 | id_card_national {data-required data-indent=1} | string | 身份证国徽面照片
 | id_card_name {data-required data-indent=1} | string | 身份证姓名
 | id_card_number {data-required data-indent=1} | string | 身份证号码
-| id_card_valid_time {data-required data-indent=1} | string | 身份证有效期限`JSON`格式字符串
+| id_card_valid_time {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 身份证有效期限`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | period {data-required data-indent=2} | string[] | 有效期限
 | account_name {data-required data-indent=1} | string | 开户名称
@@ -47,7 +47,7 @@ description: 使用申请入驻接口提交你的小微商户资料，申请后�
 | product_desc {data-required data-indent=1} | string | 售卖商品/提供服务描述
 | rate {data-required data-indent=1} | string | 费率
 | business_addition_desc {data-indent=1} | string | 补充说明
-| business_addition_pics {data-indent=1} | string | 补充材料
+| business_addition_pics {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 补充材料
 | {colspan=3 .im-table-line}
 | media_id {data-required data-indent=2} | string[] | 图片列表
 | contact {data-required data-indent=1} | string | 超级管理员姓名

@@ -11,7 +11,7 @@ description: 如果使用不支持单品优惠部分退款的历史接口，请�
 | --- | --- | ---
 | security {data-required} | `true` | 声明加载商户API证书
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
-| detail {data-indent=1} | string | 退款包含的商品列表信息，全额退款可不传`JSON`格式字符串
+| detail {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 退款包含的商品列表信息，全额退款可不传`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | cost_price {data-indent=2} | number | 订单原价
 | receipt_id {data-indent=2} | string | 商品小票ID
@@ -285,7 +285,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | coupon_refund_fee_$n | integer | 单个代金券退款金额
 | coupon_refund_count | integer | 退款代金券使用数量
 | coupon_refund_id_$n | string | 退款代金券ID
-| promotion_detail | string | 营销详情`JSON`格式字符串
+| promotion_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称

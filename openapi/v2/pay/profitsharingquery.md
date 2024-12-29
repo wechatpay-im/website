@@ -126,7 +126,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | out_order_no {data-required} | string | 商户分账单号
 | order_id {data-required} | string | 微信分账单号
 | status {data-required} | string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
-| receivers {data-required} | string | 分账接收方列表`JSON`格式字符串
+| receivers {data-required} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 分账接收方列表`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | receiver {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表`JSON`表达式
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一

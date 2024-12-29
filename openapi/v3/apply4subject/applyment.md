@@ -28,7 +28,7 @@
 | merchant_name {data-required data-indent=3} | string | 商户名称
 | legal_person {data-required data-indent=3} | string | 法人姓名
 | company_address {data-required data-indent=3} | string | 注册地址
-| licence_valid_date {data-required data-indent=3} | string | 营业执照有效日期`JSON`格式字符串
+| licence_valid_date {data-required data-indent=3} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营业执照有效日期`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | period {data-required data-indent=4} | string[] | 岂止日期
 | certificate_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 登记证书
@@ -38,7 +38,7 @@
 | merchant_name {data-required data-indent=3} | string | 商户名称
 | legal_person {data-required data-indent=3} | string | 法人姓名
 | company_address {data-required data-indent=3} | string | 注册地址
-| cert_valid_date {data-required data-indent=3} | string | 营业执照有效日期`JSON`格式字符串
+| cert_valid_date {data-required data-indent=3} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营业执照有效日期`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | period {data-required data-indent=4} | string[] | 岂止日期
 | company_prove_copy {data-indent=2} | string | 单位证明函照片
@@ -61,7 +61,7 @@
 | authorize_letter_copy {data-indent=2} | string | 法定代表人说明函
 | identification_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
 | identification_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
-| identification_valid_date {data-required data-indent=2} | string | 证件有效日期`JSON`格式字符串
+| identification_valid_date {data-required data-indent=2} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 证件有效日期`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | period {data-required data-indent=3} | string[] | 岂止日期
 | identification_address {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件居住地址

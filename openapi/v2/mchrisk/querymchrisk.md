@@ -13,12 +13,12 @@ description: 为了提升特约商户录入质量，发现并及时中止特约�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | mch_id {data-required data-indent=1} | string | 服务商号
 | cert_serial_number {data-indent=1} | string | 平台证书序列号
-| certificates_number {data-indent=1} | string | 身份证号（需加密）
-| certificates_name {data-indent=1} | string | 身份证所有人姓名（需加密）
-| settlement_card_no {data-indent=1} | string | 结算账号（需加密）
-| settlement_card_name {data-indent=1} | string | 结算户名（需加密）
+| certificates_number {data-indent=1} | string {data-tooltip=同付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证号（需加密）
+| certificates_name {data-indent=1} | string {data-tooltip=同付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证所有人姓名（需加密）
+| settlement_card_no {data-indent=1} | string {data-tooltip=同付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 结算账号（需加密）
+| settlement_card_name {data-indent=1} | string {data-tooltip=同付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 结算户名（需加密）
 | settlement_card_bank {data-indent=1} | string | 结算银行
-| business_license_number {data-indent=1} | string | 营业执照编号（需加密）
+| business_license_number {data-indent=1} | string {data-tooltip=同付款到银行卡用的RSA加密公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 营业执照编号（需加密）
 | company_name {data-indent=1} | string | 公司名称
 | store_address {data-indent=1} | string | 门店地址
 | store_longitude {data-indent=1} | string | 门店经度

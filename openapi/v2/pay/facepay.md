@@ -17,7 +17,7 @@ description: 发起订单支付
 | sub_mch_id {data-indent=1} | string | 子商户号
 | device_info {data-indent=1} | string | 设备号
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 商品详情`JSON`格式字符串
+| detail {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 商品详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | goods_detail {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
 | goods_id {data-required data-indent=3} | string | 商品编码
@@ -313,7 +313,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | out_trade_no {data-required} | string | 商户订单号
 | attach | string | 商家数据包
 | time_end {data-required} | string | 支付完成时间
-| promotion_detail | string | 营销详情`JSON`格式字符串
+| promotion_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称

@@ -166,7 +166,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | attach | string | 附加数据
 | time_end {data-required} | string | 支付完成时间
 | trade_state_desc {data-required} | string | 交易状态描述
-| promotion_detail | string | 营销详情`JSON`格式字符串
+| promotion_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称

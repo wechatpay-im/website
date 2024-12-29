@@ -20,7 +20,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | merchant_name {data-indent=2} | string | 商户名称
 | legal_person {data-indent=2} | string | 经营者/法定代表人姓名
 | company_address {data-indent=2} | string | 注册地址
-| business_time {data-indent=2} | string | 营业期限`JSON`格式字符串
+| business_time {data-indent=2} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营业期限`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | period {data-required data-indent=3} | string[] | 岂止日期
 | finance_institution_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 金融机构许可证信息

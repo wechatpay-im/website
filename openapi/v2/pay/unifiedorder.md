@@ -17,7 +17,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | device_info {data-indent=1} | string | 设备号
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 单品优惠活动该字段必传，`JSON`格式字符串
+| detail {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 单品优惠活动该字段必传，`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | cost_price {data-indent=2} | number | 订单原价
 | receipt_id {data-indent=2} | string | 商品小票ID
@@ -41,7 +41,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
 | receipt {data-indent=1} | string | 电子发票入口开放标识<br/>`Y` \| `N` 枚举值之一
-| scene_info {data-indent=1} | string | 场景信息`JSON`格式字符串
+| scene_info {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 场景信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 实际门店信息
 | id {data-required data-indent=3} | string | 门店id
@@ -368,7 +368,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | prepay_id {data-required} | string | 预支付交易会话标识
 | code_url | string | 二维码链接
 | mweb_url | string | 支付跳转链接，**mweb_url为拉起微信支付收银台的中间页面，可通过访问该url来拉起微信客户端，完成支付,mweb_url的有效期为5分钟。**
-| promotion_detail | string | 营销详情`JSON`格式字符串
+| promotion_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称

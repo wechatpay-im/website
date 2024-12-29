@@ -28,7 +28,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | trade_type {data-required data-indent=1} | string | 交易类型
 | product_id {data-indent=1} | string | 商品ID
 | combine_openid {data-indent=1} | string | 合单用户标识
-| scene_info {data-required data-indent=1} | string | 场景信息`JSON`格式字符串
+| scene_info {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 场景信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | device_id {data-indent=2} | string | 商户端设备号
 | payer_client_ip {data-required data-indent=2} | string | 用户终端IP
@@ -38,7 +38,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | app_url {data-indent=3} | string | 网站URL
 | bundle_id {data-indent=3} | string | iOS平台BundleID
 | package_name {data-indent=3} | string | Android平台PackageName
-| sub_order_list {data-required data-indent=1} | string | 子单信息`JSON`格式字符串
+| sub_order_list {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 子单信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | order_num {data-required data-indent=2} | number | 子订单数
 | order_list {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 子订单信息

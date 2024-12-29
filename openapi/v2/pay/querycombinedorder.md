@@ -125,7 +125,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | trade_state_desc | string | 交易状态描述
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| sub_order_list {data-required} | string | 子单信息`JSON`格式字符串
+| sub_order_list {data-required} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 子单信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | order_num {data-required data-indent=1} | number | 子订单数
 | order_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子订单信息

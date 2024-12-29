@@ -20,7 +20,7 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 | device_info {data-indent=1} | string | 设备号
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | body {data-required data-indent=1} | string | 商品描述
-| detail {data-indent=1} | string | 单品优惠活动该字段必传，`JSON`格式字符串
+| detail {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 单品优惠活动该字段必传，`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | cost_price {data-indent=2} | number | 订单原价
 | receipt_id {data-indent=2} | string | 商品小票ID
@@ -41,7 +41,7 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 | time_expire {data-indent=1} | string | 交易结束时间
 | receipt {data-indent=1} | string | 电子发票入口开放标识
 | auth_code {data-required data-indent=1} | string | 授权码
-| scene_info {data-indent=1} | string | 场景信息`JSON`格式字符串
+| scene_info {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 场景信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | store_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 实际门店信息
 | id {data-required data-indent=3} | string | 门店id
@@ -380,7 +380,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | out_trade_no {data-required} | string | 商户订单号
 | attach | string | 商家数据包
 | time_end {data-required} | string | 支付完成时间
-| promotion_detail | string | 营销详情`JSON`格式字符串
+| promotion_detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 营销详情`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | promotion_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称

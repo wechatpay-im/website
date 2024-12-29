@@ -138,7 +138,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | error_code_des | string | 错误代码描述
 | result_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | result_msg {data-required} | string | 错误码描述
-| violation_records | string | 违规记录数据`JSON`格式字符串
+| violation_records | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 违规记录数据`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | total_size {data-required data-indent=1} | number | 记录总数
 | violation_records {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 违规记录列表

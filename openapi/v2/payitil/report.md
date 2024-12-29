@@ -15,7 +15,7 @@ description: 商户在调用微信支付提供的相关接口时，会得到微�
 | device_info {data-indent=1} | string | 设备号
 | interface_url {data-required data-indent=1} | string | 接口URL
 | user_ip {data-required data-indent=1} | string | 访问接口IP
-| trades {data-required data-indent=1} | string | 上报数据包`JSON`格式字符串
+| trades {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 上报数据包`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | transaction {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 交易数据
 | out_trade_no {data-required data-indent=3} | string | 商户订单号

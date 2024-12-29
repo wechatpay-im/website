@@ -117,8 +117,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | err_code_des {data-required} | string | 错误代码描述
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | sign {data-required} | string | 签名
-| jsapi_path_list {data-required} | string | 授权目录
-| appid_config_list {data-required} | string | 关联APPID与关注
+| jsapi_path_list {data-required} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 授权目录
+| {colspan=3 .im-table-line}
+| jsapi_path_list {data-indent=1} | string[] | 支付目录URI数组
+| appid_config_list {data-required} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 关联APPID与关注特约商户公众号的APPID
+| {colspan=3 .im-table-line}
+| appid_config_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | APPID数组
+| subscribe_appid {data-indent=2} | string | 关注特约商户公众号的APPID
+| sub_appid {data-indent=2} | string | 绑定好的商户公众号、小程序、APP支付等APPID
 
 {.im-table #response}
 

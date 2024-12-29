@@ -155,7 +155,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | deduct_mode | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
 | sub_openid | string | 用户子标识
 | path | string | 跳转路径
-| plate_number_info | string | 车牌信息
+| plate_number_info | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 车牌信息
 | {colspan=3 .im-table-line}
 | plate_number_info {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 车牌信息列表
 | plate_number {data-indent=2} | string | 车牌号

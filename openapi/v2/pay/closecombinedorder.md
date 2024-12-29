@@ -20,7 +20,7 @@ description: 合单支付订单只能使用此合单关单api完成关单。调�
 | combine_mch_id {data-required data-indent=1} | string | 合单商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | combine_out_trade_no {data-required data-indent=1} | string | 合单商户订单号
-| sub_order_list {data-required data-indent=1} | string | 子单信息`JSON`格式字符串
+| sub_order_list {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 子单信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | order {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 子单信息
 | mchid {data-required data-indent=3} | string | 子单商户号

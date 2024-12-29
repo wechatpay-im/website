@@ -38,7 +38,7 @@
 | office_account {data-indent=2} | string | 公众号
 | mini_program {data-indent=2} | string | 小程序
 | store_address {data-indent=2} | string | 门店地址
-| store_photos {data-indent=2} | string | 门店照片`JSON`格式字符串
+| store_photos {data-indent=2} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 门店照片`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | media_id {data-required data-indent=3} | string[] | 媒体文件MediaId列表
 | mcc {data-indent=2} | string | MCC码
@@ -434,7 +434,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | office_account {data-indent=2} | string | 公众号
 | mini_program {data-indent=2} | string | 小程序
 | store_address {data-indent=2} | string | 门店地址
-| store_photos {data-indent=2} | string | 门店照片`JSON`格式字符串
+| store_photos {data-indent=2} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 门店照片`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | media_id {data-required data-indent=3} | string[] | 媒体文件MediaId列表
 | mcc {data-indent=2} | string | MCC码

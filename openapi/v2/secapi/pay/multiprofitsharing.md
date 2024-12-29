@@ -18,7 +18,7 @@ description: 微信订单支付成功后，服务商代子商户发起分账请�
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
-| receivers {data-required data-indent=1} | string | 分账接收方列表`JSON`格式字符串
+| receivers {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 分账接收方列表`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | receiver {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表`JSON`表达式
 | type {data-required data-indent=3} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
@@ -196,7 +196,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | transaction_id {data-required} | string | 微信订单号
 | out_order_no {data-required} | string | 商户分账单号
 | order_id {data-required} | string | 微信分账单号
-| receivers | string | 分账接收方列表`JSON`格式字符串
+| receivers | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 分账接收方列表`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | receiver {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表`JSON`表达式
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一

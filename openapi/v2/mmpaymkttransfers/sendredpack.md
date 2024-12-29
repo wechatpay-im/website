@@ -25,7 +25,7 @@ description: 现金红包发放后会以公众号消息的形式触达用户，�
 | act_name {data-required data-indent=1} | string | 活动名称
 | remark {data-required data-indent=1} | string | 备注
 | scene_id {data-indent=1} | string | 场景id<br/>`PRODUCT_1` \| `PRODUCT_2` \| `PRODUCT_3` \| `PRODUCT_4` \| `PRODUCT_5` \| `PRODUCT_6` \| `PRODUCT_7` \| `PRODUCT_8` 枚举值之一
-| risk_info {data-indent=1} | string | 活动信息
+| risk_info {data-indent=1} | string {data-tooltip=使用urlencode后的字符串 data-encoded=by-urlencode} | 活动信息
 | {colspan=3 .im-table-line}
 | posttime {data-indent=2} | number | 用户操作的时间戳
 | mobile {data-indent=2} | string | 业务系统账号的手机号

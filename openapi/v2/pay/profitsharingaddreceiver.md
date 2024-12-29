@@ -15,7 +15,7 @@ description: 服务商代子商户发起添加分账接收方请求，后续可�
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
-| receiver {data-required data-indent=1} | string | 分账接收方`JSON`格式字符串
+| receiver {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 分账接收方`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=2} | string | 分账接收方账号
@@ -171,7 +171,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| receiver {data-required} | string | 分账接收方
+| receiver {data-required} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 分账接收方
 | {colspan=3 .im-table-line}
 | type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方账号

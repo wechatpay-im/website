@@ -17,7 +17,7 @@ description: 在停车场场景下，如用户已加入车主平台，则进行�
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | version {data-required data-indent=1} | string | 版本号<br/>`3.0` 枚举值
 | trade_scene {data-required data-indent=1} | string | 交易场景<br/>`PARKING` \| `PARKING SPACE` 枚举值之一
-| scene_info {data-required data-indent=1} | string | 场景信息`JSON`格式字符串
+| scene_info {data-required data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 场景信息`JSON`格式字符串
 | {colspan=3 .im-table-line}
 | scene_info {data-required data-indent=2} | object | 场景`PARKING`信息
 | start_time {data-required data-indent=3} | string | 入场时间
