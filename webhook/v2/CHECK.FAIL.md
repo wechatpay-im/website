@@ -32,7 +32,7 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 | event_algorithm {data-required data-indent=1} | string | 通知加密类型<br/>`AEAD_AES_256_GCM` 枚举值
 | event_nonce {data-required data-indent=1} | string | 通知随机串
 | event_associated_data {data-indent=1} | string | 通知附加数据
-| event_ciphertext {data-required data-indent=1} | string {data-tooltip=商户APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 通知密文
+| event_ciphertext {data-required data-indent=1} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 通知密文
 | {colspan=3 .im-table-line}
 | state {data-indent=2} | string | 单据状态
 | service_id {data-indent=2} | string | 服务ID
