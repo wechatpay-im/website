@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 const baseUri = 'https://wechatpay.im'
+const lastPathMdPattern = /(?:(?<=\/)index)?\.md$/
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -29,7 +30,7 @@ export default defineConfig({
     ]),
   ],
   transformHead(ctx) {
-    const href = `${baseUri}/${ctx.pageData.relativePath}`.replace(/(?:index)?\.md$/, '')
+    const href = `${baseUri}/${ctx.pageData.relativePath}`.replace(lastPathMdPattern, '')
     return [
       ['link', { rel: 'canonical', href }],
       ['meta', { property: 'og:url', content: href }],
