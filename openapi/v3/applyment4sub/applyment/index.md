@@ -21,9 +21,9 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | contact_period_begin {data-indent=2} | string | 超级管理员证件有效期开始时间
 | contact_period_end {data-indent=2} | string | 超级管理员证件有效期结束时间
 | business_authorization_letter {data-indent=2} | string | 业务办理授权函
-| openid {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员微信openid
+| openid {data-indent=2} | string | 超级管理员微信openid
 | mobile_phone {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系手机
-| contact_email {data-required data-indent=2} | string | 联系邮箱
+| contact_email {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系邮箱
 | subject_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 主体资料
 | subject_type {data-required data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
 | business_license_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 营业执照

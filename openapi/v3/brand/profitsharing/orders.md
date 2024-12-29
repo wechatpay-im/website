@@ -18,7 +18,7 @@
 | account {data-required data-indent=2} | string | 分账接收方账号
 | amount {data-required data-indent=2} | integer | 分账金额
 | description {data-required data-indent=2} | string | 分账描述
-| name {data-indent=2} | string | 分账个人接收方姓名
+| name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 分账个人接收方姓名
 | finish {data-required data-indent=1} | boolean | 是否分账完成
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号

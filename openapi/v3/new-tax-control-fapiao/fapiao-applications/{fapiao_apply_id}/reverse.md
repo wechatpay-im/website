@@ -131,6 +131,7 @@ print_r($response->getStatusCode() === 202);
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| 空字符串(无返回内容) {align=center colspan=3}
 
 {.im-table #response}
 

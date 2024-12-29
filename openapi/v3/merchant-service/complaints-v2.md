@@ -117,7 +117,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | complaint_detail {data-required data-indent=1} | string | 投诉详情
 | complaint_state {data-required data-indent=1} | string | 投诉单状态
 | complainted_mchid {data-required data-indent=1} | string | 被诉商户号
-| payer_phone {data-indent=1} | string | 投诉人联系方式
+| payer_phone {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 投诉人联系方式
 | complaint_order_info {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 投诉单关联订单信息
 | transaction_id {data-required data-indent=2} | string | 微信订单号
 | out_trade_no {data-required data-indent=2} | string | 商户订单号

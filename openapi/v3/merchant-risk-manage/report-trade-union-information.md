@@ -16,8 +16,8 @@ description: 从业机构/服务商/渠道商/商户可调用该接口，在商�
 | sub_mchid {data-indent=1} | string | 子商户号
 | out_trade_no {data-indent=1} | string | 商户订单号
 | openid {data-indent=1} | string | 用户标识
-| phone {data-indent=1} | string | 用户手机号
-| certificates_number {data-indent=1} | string | 用户实名证件号
+| phone {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户手机号
+| certificates_number {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户实名证件号
 | client_ip {data-indent=1} | string | 用户终端ip
 | risk_level {data-indent=1} | number | 商户判定交易的风险等级
 | line_type {data-indent=1} | number | 线上线下标识
