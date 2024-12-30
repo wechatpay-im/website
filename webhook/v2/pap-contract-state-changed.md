@@ -78,7 +78,7 @@ $xml = \WeChatPay\Transformer::toXml([
 
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | 应答的`XML`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`XML`数据结构
 | return_code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-indent=1} | string | 业务处理附加信息
 

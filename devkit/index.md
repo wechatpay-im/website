@@ -65,7 +65,7 @@ next:
 
 ### Makefile {#make}
 
-这是一个小型的完整版`MiniCA`辅助测试套件，提供了核心包测试所需的`RSA`私钥、证书、公钥，覆盖了 `PKCS1`、`PKCS8`、`SPKI`、`X509` 格式文件的诸多模拟。
+这是一个小型的完整版`MiniCA`辅助测试套件，提供了核心包测试所需的`RSA`私钥、证书、公钥，覆盖了 `PKCS#1`、`PKCS#8`、`SPKI`、`X509` 格式文件的诸多模拟。
 
 此文件并未随核心包一并发行，开放源码见[这里](https://github.com/wechatpay-apiv3/wechatpay-php/blob/main/Makefile)，国内镜像见[这里](https://gitee.com/TheNorthMemory/wechatpay-php/blob/main/Makefile)。
 

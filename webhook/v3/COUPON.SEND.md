@@ -28,7 +28,7 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`COUPON.SEND` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -43,7 +43,7 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | unionid {data-indent=3} | string | 微信用户在同一个微信开放平台账号下的唯一用户标识
 | send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` 枚举值之一
 | send_merchant {data-required data-indent=3} | string | 发券商户号
-| attach_info {data-indent=3} | object | 仅在支付有礼、扫码领券（营销馆）、会员有礼发放渠道，才有该信息
+| attach_info {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 仅在支付有礼、扫码领券（营销馆）、会员有礼发放渠道，才有该信息
 | transaction_id {data-indent=4} | string | 仅在支付有礼渠道，才有该信息，对应支付有礼曝光支付订单编号信息
 | act_code {data-indent=4} | string | 仅在扫码领券（营销馆）渠道，才有该信息，对应领券的营销馆领券活动ID信息信息。该字段并不会和支付有礼活动编码(act_code)同时出现。
 | hall_code {data-indent=4} | string | 仅在扫码领券（营销馆）渠道，才有该信息，对应领券的营销馆ID信息
@@ -134,7 +134,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

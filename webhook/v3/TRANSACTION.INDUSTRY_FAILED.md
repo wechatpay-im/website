@@ -30,7 +30,7 @@ description: 扣费后，微信后台会把相关确认结果和订单信息发�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`TRANSACTION.INDUSTRY_FAILED` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -49,18 +49,18 @@ description: 扣费后，微信后台会把相关确认结果和订单信息发�
 | bank_type {data-indent=3} | string | 银行类型，采用字符串类型的银行标识。
 | attach {data-indent=3} | string | 附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
 | success_time {data-indent=3} | string | 支付订单已成功才会返回
-| payer {data-indent=3} | object | 支付者
+| payer {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 支付者
 | openid {data-required data-indent=4} | string | 用户在商户AppID下的唯一标识。
 | sub_openid {data-indent=4} | string | 用户在子商户AppID下的唯一标识。如果是服务商模式接入则有值；如果是直连商户模式接入则该字段为空。
-| amount {data-required data-indent=3} | object | 订单金额信息
+| amount {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 订单金额信息
 | total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数。
 | payer_total {data-indent=4} | number | 用户实际支付金额，支付成功时有返回，单位为分，只能为整数。
 | discount_total {data-indent=4} | number | 订单折扣，有优惠折扣则返回该字段。
 | currency {data-required data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
-| device_info {data-required data-indent=3} | object | 设备信息
+| device_info {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 设备信息
 | device_id {data-indent=4} | string | 商户设备号，商户自定义，最大长度32个字符。
 | device_ip {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP），支持IPv6
-| promotion_detail {data-indent=3} | object[] | 优惠详情
+| promotion_detail {data-indent=3} | object[] {data-tooltip="对应PHP的Array"} | 优惠详情
 | coupon_id {data-indent=4} | string | 券ID。
 | name {data-indent=4} | string | 优惠名称。
 | scope {data-indent=4} | string | 枚举值：<br/>`GLOBAL`：全场代金券<br/>`SINGLE`：单品优惠
@@ -153,7 +153,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

@@ -30,7 +30,7 @@ description: 支付分服务用户支付成功通知
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`PAYSCORE.USER_PAID` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -50,41 +50,41 @@ description: 支付分服务用户支付成功通知
 | state {data-required data-indent=3} | string | 服务订单状态
 | service_introduction {data-required data-indent=3} | string | 服务信息
 | total_amount {data-indent=3} | number | 商户收款总金额
-| post_payments {data-required data-indent=3} | object[] | 后付费项目
+| post_payments {data-required data-indent=3} | object[] {data-tooltip="对应PHP的Array"} | 后付费项目
 | name {data-indent=4} | string | 付费项目名称
 | amount {data-indent=4} | number | 金额
 | description {data-indent=4} | string | 计费说明
 | count {data-indent=4} | number | 付费数量
-| post_discounts {data-indent=3} | object[] | 商户优惠
+| post_discounts {data-indent=3} | object[] {data-tooltip="对应PHP的Array"} | 商户优惠
 | name {data-indent=4} | string | 优惠名称
 | description {data-indent=4} | string | 优惠说明
 | amount {data-indent=4} | number | 优惠金额
-| risk_fund {data-required data-indent=3} | object | 订单风险金
+| risk_fund {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 订单风险金
 | amount {data-required data-indent=4} | number | 风险金额
 | description {data-indent=4} | string | 风险说明
-| time_range {data-required data-indent=3} | object | 服务时间段
+| time_range {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 服务时间段
 | start_time {data-required data-indent=4} | string | 服务开始时间
 | start_time_remark {data-indent=4} | string | 服务开始时间备注
 | end_time {data-indent=4} | string | 服务结束时间
 | end_time_remark {data-indent=4} | string | 服务结束时间备注
-| location {data-indent=3} | object | 服务位置
+| location {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 服务位置
 | start_location {data-indent=4} | string | 服务开始地点
 | end_location {data-indent=4} | string | 服务结束位置
 | attach {data-indent=3} | string | 商户数据包
 | order_id {data-indent=3} | string | 微信支付服务订单号
 | need_collection {data-indent=3} | boolean | 是否需要收款
-| collection {data-indent=3} | object | 收款信息
+| collection {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 收款信息
 | state {data-required data-indent=4} | string | 收款状态
 | total_amount {data-required data-indent=4} | number | 总收款金额
 | paying_amount {data-required data-indent=4} | number | 待收金额
 | paid_amount {data-required data-indent=4} | number | 已收金额
-| details {data-indent=4} | object[] | 收款明细列表
+| details {data-indent=4} | object[] {data-tooltip="对应PHP的Array"} | 收款明细列表
 | seq {data-indent=5} | number | 收款序号
 | amount {data-required data-indent=5} | number | 单笔收款金额
 | paid_type {data-indent=5} | string | 收款成功渠道
 | paid_time {data-required data-indent=5} | string | 收款成功时间
 | transaction_id {data-indent=5} | string | 微信支付交易单号
-| promotion_detail {data-indent=5} | object[] | 优惠功能
+| promotion_detail {data-indent=5} | object[] {data-tooltip="对应PHP的Array"} | 优惠功能
 | coupon_id {data-required data-indent=6} | string | 券ID
 | name {data-indent=6} | string | 优惠名称
 | scope {data-indent=6} | string | 优惠范围
@@ -95,7 +95,7 @@ description: 支付分服务用户支付成功通知
 | merchant_contribute {data-indent=6} | number | 商户出资
 | other_contribute {data-indent=6} | number | 其他出资
 | currency {data-indent=6} | string | 优惠币种
-| goods_detail {data-indent=6} | object[] | 单品列表
+| goods_detail {data-indent=6} | object[] {data-tooltip="对应PHP的Array"} | 单品列表
 | goods_id {data-required data-indent=7} | string | 商品编码
 | quantity {data-indent=7} | number | 商品数量
 | unit_price {data-indent=7} | number | 商品价格
@@ -189,7 +189,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

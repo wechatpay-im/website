@@ -30,7 +30,7 @@ description: 当有发票冲红成功时，微信后台会把相关确认结果�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`FAPIAO.REVERSED` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -39,7 +39,7 @@ description: 当有发票冲红成功时，微信后台会把相关确认结果�
 | {colspan=3 .im-table-line}
 | mchid {data-required data-indent=3} | string | 微信支付分配的商户号
 | fapiao_apply_id {data-required data-indent=3} | string | 开票时指定的发票申请单号
-| fapiao_information {data-required data-indent=3} | object[] | 发票申请单下关联的所有发票信息
+| fapiao_information {data-required data-indent=3} | object[] {data-tooltip="对应PHP的Array"} | 发票申请单下关联的所有发票信息
 | fapiao_id {data-required data-indent=4} | string | 商户发票单号，唯一标识一张发票
 | fapiao_status {data-required data-indent=4} | string | 发票状态<br/>`ISSUE_ACCEPTED` \| `ISSUED` \| `REVERSE_ACCEPTED` \| `REVERSED` 枚举值之一
 | card_status {data-required data-indent=4} | string | 发票状态<br/>`INSERT_ACCEPTED` \| `INSERTED` \| `DISCARD_ACCEPTED` \| `DISCARDED` 枚举值之一
@@ -127,7 +127,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

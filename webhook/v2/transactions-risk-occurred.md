@@ -31,7 +31,7 @@ description: 推送涉及高风险诈骗（尤其是来源订单/客服电话投
 | sub_mch_id {data-required data-indent=1} | string | 有风险交易的商户号
 | transaction_id_list {data-required data-indent=1} | string | 风险交易的微信订单号列表`JSON`格式
 | {colspan=3 .im-table-line}
-| data {data-required data-indent=2} | object | 微信订单号列表
+| data {data-required data-indent=2} | object {data-tooltip="对应PHP的Array"} | 微信订单号列表
 | transaction_id {data-required data-indent=3} | string[] | 微信订单号
 
 {.im-table #request}
@@ -77,7 +77,7 @@ $xml = \WeChatPay\Transformer::toXml([
 
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | 应答的`XML`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`XML`数据结构
 | return_code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-indent=1} | string | 业务处理附加信息
 

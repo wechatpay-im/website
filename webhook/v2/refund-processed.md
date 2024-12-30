@@ -27,7 +27,7 @@ description: 当商户申请的退款有结果后（退款状态为：退款成�
 | sub_mch_id {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
 | nonce_str {data-required data-indent=1} | string | 随机字符串
-| req_info {data-required data-indent=1} | string {data-tooltip=商户API密钥加密后的BASE64字符串 data-encrypted=by-aes-ecb} | 加密的`XML`信息
+| req_info {data-required data-indent=1} | string {data-tooltip=经「MD5后的API密钥」加密后的BASE64字符串 data-encrypted=by-aes-ecb} | 加密的`XML`信息
 | {colspan=3 .im-table-line}
 | out_refund_no {data-required data-indent=2} | string | 商户退款单号
 | out_trade_no {data-required data-indent=2} | string | 商户订单号
@@ -91,7 +91,7 @@ $xml = \WeChatPay\Transformer::toXml([
 
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | 应答的`XML`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`XML`数据结构
 | return_code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-indent=1} | string | 业务处理附加信息
 

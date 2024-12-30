@@ -29,7 +29,7 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`COUPON.USE` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -39,9 +39,9 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 | stock_creator_mchid {data-required data-indent=3} | string | 批次创建方商户号。
 | stock_id {data-required data-indent=3} | string | 微信为每个代金券批次分配的唯一ID。
 | coupon_id {data-required data-indent=3} | string | 微信为代金券或消费金唯一分配的id。
-| singleitem_discount_off {data-indent=3} | object | 单品优惠特定信息。
+| singleitem_discount_off {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 单品优惠特定信息。
 | single_price_max {data-indent=4} | number | 单品最高优惠价格，单位：分。
-| discount_to {data-indent=3} | object | 减至优惠限定字段，仅减至优惠场景有返回。
+| discount_to {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 减至优惠限定字段，仅减至优惠场景有返回。
 | cut_to_price {data-indent=4} | number | 减至后优惠单价，单位：分。
 | max_price {data-indent=4} | number | 可享受优惠的最高价格，单位：分。
 | coupon_name {data-required data-indent=3} | string | 券或消费金名称
@@ -53,15 +53,15 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 | available_begin_time {data-required data-indent=3} | string | 可用开始时间
 | available_end_time {data-required data-indent=3} | string | 可用结束时间
 | singleitem {data-required data-indent=3} | boolean | 是否单品优惠
-| normal_coupon_information {data-indent=3} | object | 普通满减券或消费金面额、门槛信息。
+| normal_coupon_information {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 普通满减券或消费金面额、门槛信息。
 | coupon_amount {data-required data-indent=4} | number | 面额，单位：分。
 | transaction_minimum {data-required data-indent=4} | number | 使用券或消费金金额门槛，单位：分。
-| consume_information {data-indent=3} | object | 已实扣代金券或消费金信息。
+| consume_information {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 已实扣代金券或消费金信息。
 | consume_time {data-required data-indent=4} | string | 代金券核销时间
 | consume_mchid {data-required data-indent=4} | string | 核销代金券的商户号。<br/>校验规则：<br/>该参数目前现在返回的是收款商户号，间连模式下，目前传的是银联和网联的商户号<br/>
 | transaction_id {data-required data-indent=4} | string | 微信支付系统生成的订单号。
 | consume_amount {data-required data-indent=4} | number | 核销金额，仅有当business_type=`MULTIUSE`时，才会返回。单位，分
-| goods_detail {data-indent=4} | object[] | 商户下单接口传的单品信息。
+| goods_detail {data-indent=4} | object[] {data-tooltip="对应PHP的Array"} | 商户下单接口传的单品信息。
 | goods_id {data-required data-indent=5} | string | 单品券创建时录入的单品编码。
 | quantity {data-required data-indent=5} | number | 单品数据
 | price {data-required data-indent=5} | number | 单品单价
@@ -150,7 +150,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

@@ -29,7 +29,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`ENTRUST.SIGNING` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -39,7 +39,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | appid {data-required data-indent=3} | string | 微信公众平台为商户的应用分配的ID，与服务商商户号存在绑定关系
 | openid {data-indent=3} | string | 用户在服务商AppID下的唯一标识
 | plan_id {data-indent=3} | string | 签约模板号，签约模板唯一标识
-| contract_information {data-indent=3} | object | 签约信息
+| contract_information {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 签约信息
 | contract_id {data-indent=4} | string | 标识用户与某签约模板的一次签约，具有唯一性
 | contract_status {data-indent=4} | string | 枚举值：<br/>`ADD`：签约<br/>`DELETE`：解约
 | create_time {data-indent=4} | string | 签约完成时间
@@ -50,18 +50,18 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | success_time {data-indent=3} | string | 支付成功时返回
 | trade_state {data-required data-indent=3} | string | 枚举值：<br/>`SUCCESS`：支付成功<br/>`REFUND`：转入退款<br/>`ACCEPTED`：已受理，未支付<br/>`PAY_FAIL`：支付失败(其他原因，如银行返回失败)
 | trade_state_description {data-indent=3} | string | 对当前订单状态的描述和下一步操作的指引
-| payer {data-indent=3} | object | 支付者
+| payer {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 支付者
 | openid {data-indent=4} | string | 用户在服务商AppID下的唯一标识
 | sub_openid {data-indent=4} | string | 用户在子商户AppID下的唯一标识，如果是直连商户模式接入，该字段返回为空
-| amount {data-indent=3} | object | 订单金额信息
+| amount {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 订单金额信息
 | total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数
 | payer_total {data-indent=4} | number | 用户实际支付金额，单位为分，只能为整数
 | discount_total {data-indent=4} | number | 订单折扣
 | currency {data-indent=4} | string | 符合ISO 4217标准的三位字母代码，目前只支持人民币：`CNY`
-| device_information {data-required data-indent=3} | object | 设备信息
+| device_information {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 设备信息
 | device_id {data-indent=4} | string | 商户设备号
 | payer_total {data-required data-indent=4} | string | 商户端设备IP（发起扣款请求的商户服务器IP）
-| promotion_detail {data-indent=3} | object[] | 优惠详情
+| promotion_detail {data-indent=3} | object[] {data-tooltip="对应PHP的Array"} | 优惠详情
 | coupon_id {data-indent=4} | string | 券ID
 | name {data-indent=4} | string | 优惠名称
 | scope {data-indent=4} | string | 枚举值：<br/>`GLOBAL`：全场代金券<br/>`SINGLE`：单品优惠
@@ -158,7 +158,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

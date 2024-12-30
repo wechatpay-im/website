@@ -27,7 +27,7 @@ description: H5支付域名修改申请，微信会把相关审核结果和申�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`APPLYMENT_STATE.APPROVED` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型<br/>`applyment` 枚举值
 | summary {data-required data-indent=1} | string | 回调摘要<br/>固定值 `H5支付域名修改申请通知`
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -128,7 +128,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

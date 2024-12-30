@@ -27,7 +27,7 @@ description: 微信支付分通过商户预下单通知告知商户对待支付�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`PAYSCORE.MCH_PREPAY` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -44,7 +44,7 @@ description: 微信支付分通过商户预下单通知告知商户对待支付�
 | openid {data-indent=3} | string | 微信用户在商户对应AppID下的唯一标识。（传了sub_appid的情况下则只返回sub_openid）
 | sub_openid {data-indent=3} | string | 微信用户在商户对应sub_appid下的唯一标识。（传了sub_appid的情况下则只返回sub_openid）
 | total_amount {data-required data-indent=3} | number | 总金额，大于等于0的数字，单位为分，只能为整数。
-| prepay_req_body {data-required data-indent=3} | object | 预下单请求部分输入参数。  <br/>注意：商户请求预下单接口时需要使用本对象中同名字段值，若字段在本对象中不存在则由商户根据实际情况填写。
+| prepay_req_body {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 预下单请求部分输入参数。  <br/>注意：商户请求预下单接口时需要使用本对象中同名字段值，若字段在本对象中不存在则由商户根据实际情况填写。
 | device_info {data-required data-indent=4} | string | 终端设备号，PC网页或公众号内支付请传`WEB`
 | nonce_str {data-required data-indent=4} | string | 微信支付分配给收单服务商的ID
 | body {data-required data-indent=4} | string | 商品或支付单简要描述
@@ -145,7 +145,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

@@ -27,7 +27,7 @@ description: 微信支付通过该接口将充值资金退回的结果通知给�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`RECHARGE.FUND_RETURNED` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -40,7 +40,7 @@ description: 微信支付通过该接口将充值资金退回的结果通知给�
 | out_recharge_no {data-required data-indent=3} | string | 商户充值单号
 | recharge_id {data-required data-indent=3} | string | 微信支付充值单号
 | recharge_channel {data-required data-indent=3} | string | 充值渠道
-| detail {data-indent=3} | object | 充值退回详情
+| detail {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 充值退回详情
 | bank_name {data-required data-indent=4} | string | 开户银行名称
 | bank_card_tail {data-required data-indent=4} | string | 银行卡尾号
 | bank_account_name {data-indent=4} | string | 银行账户名称
@@ -132,7 +132,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

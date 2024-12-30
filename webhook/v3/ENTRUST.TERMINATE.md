@@ -29,7 +29,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`ENTRUST.TERMINATE` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
@@ -49,20 +49,20 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | contract_expired_time {data-required data-indent=3} | string | 协议到期时间
 | sp_openid {data-indent=3} | string | 商户AppID下的用户唯一标识
 | sub_openid {data-indent=3} | string | 子商户AppID对应的用户OpenID，商户AppID下的用户唯一标识
-| contract_terminate_info {data-required data-indent=3} | object | 协议解约信息，仅当contract_state=`TERMINATED`时，该值有效。
+| contract_terminate_info {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 协议解约信息，仅当contract_state=`TERMINATED`时，该值有效。
 | contract_termination_mode {data-required data-indent=4} | string | 协议解约方式<br/>`USER_TERMINATE` \| `MCH_API_TERMINATE` \| `API` \| `WEPAY_WEB_TERMINATE` \| `CUSTOMER_SERVICE_TERMINATE` \| `SYSTEM_TERMINATE` 枚举值之一
 | contract_terminated_time {data-indent=4} | string | 协议解约时间
 | contract_termination_remark {data-indent=4} | string | 解约原因的备注说明，如：签约信息有误，须重新签约。
-| deduct_schedule {data-indent=3} | object | 预约扣费场景的预约信息，仅当模板类型为预约扣费时，该值有效。
+| deduct_schedule {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 预约扣费场景的预约信息，仅当模板类型为预约扣费时，该值有效。
 | estimated_deduct_date {data-required data-indent=4} | string | 预约扣费场景下有效，预签约时指定的预计扣费的日期
-| estimated_deduct_amount {data-required data-indent=4} | object | 预约扣费场景下有效，预签约时指定的预计的扣费金额。
+| estimated_deduct_amount {data-required data-indent=4} | object {data-tooltip="对应PHP的Array"} | 预约扣费场景下有效，预签约时指定的预计的扣费金额。
 | amount {data-required data-indent=5} | number | 总金额，单位为分，只能为整数。
 | currency {data-required data-indent=5} | string | 枚举类型，符合ISO 4217标准的三位字母代码，默认为`CNY`，目前只支持`CNY`
 | schedule_state {data-required data-indent=4} | string | 扣费预约状态<br/>`NO_SCHEDULED` \| `SCHEDULED` \| `PAID` \| `EXPIRED` 枚举值之一
-| scheduled_amount {data-indent=4} | object | 已预约的扣费金额信息，当状态为已预约或已扣费时有返回。
+| scheduled_amount {data-indent=4} | object {data-tooltip="对应PHP的Array"} | 已预约的扣费金额信息，当状态为已预约或已扣费时有返回。
 | amount {data-required data-indent=5} | number | 总金额，单位为分，只能为整数。
 | currency {data-required data-indent=5} | string | 枚举类型，符合ISO 4217标准的三位字母代码，默认为`CNY`，目前只支持`CNY`
-| deduct_amount {data-indent=4} | object | 实际扣费金额，当状态为已扣费时有返回。
+| deduct_amount {data-indent=4} | object {data-tooltip="对应PHP的Array"} | 实际扣费金额，当状态为已扣费时有返回。
 | amount {data-required data-indent=5} | number | 总金额，单位为分，只能为整数。
 | currency {data-required data-indent=5} | string | 枚举类型，符合ISO 4217标准的三位字母代码，默认为`CNY`，目前只支持`CNY`
 | deduct_date {data-required data-indent=4} | string | 实际扣费的日期
@@ -149,7 +149,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 

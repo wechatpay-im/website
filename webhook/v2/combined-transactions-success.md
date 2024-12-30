@@ -46,7 +46,7 @@ description: 合单支付的支付结果将只通知给合单支付发起方（�
 | sub_order_list {data-required data-indent=1} | string | `JSON` 序列化的子订单集合
 | {colspan=3 .im-table-line}
 | order_num {data-required data-indent=2} | number | 子订单数
-| order_list {data-required data-indent=2} | object[] | 子订单列表
+| order_list {data-required data-indent=2} | object[] {data-tooltip="对应PHP的Array"} | 子订单列表
 | appid {data-required data-indent=3} | string | 公众账号ID
 | mch_id {data-required data-indent=3} | string | 商户号
 | openid {data-required data-indent=3} | string | 用户标识
@@ -103,7 +103,7 @@ $xml = \WeChatPay\Transformer::toXml([
 
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| body | object | 应答的`XML`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`XML`数据结构
 | return_code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | return_msg {data-indent=1} | string | 业务处理附加信息
 

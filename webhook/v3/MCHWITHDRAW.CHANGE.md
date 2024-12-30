@@ -29,14 +29,14 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 | event_type {data-required data-indent=1} | string | 通知的类型<br/>`MCHWITHDRAW.CHANGE` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
-| resource {data-required data-indent=1} | object | 通知资源数据
+| resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据<br/>`mch_withdraw` 枚举值
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型<br/>`mch_withdraw` 枚举值
 | {colspan=3 .im-table-line}
-| original_data {data-indent=2} | object | 平台预约提现结果
+| original_data {data-indent=2} | object {data-tooltip="对应PHP的Array"} | 平台预约提现结果
 | status {data-required data-indent=3} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
 | withdraw_id {data-required data-indent=3} | string | 微信支付提现单号
 | out_request_no {data-required data-indent=3} | string | 商户提现单号
@@ -49,7 +49,7 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 | account_type {data-required data-indent=3} | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | solution {data-required data-indent=3} | string | 提现失败解决方案
 | {colspan=3 .im-table-line}
-| original_data {data-indent=2} | object | 二级商户预约提现结果
+| original_data {data-indent=2} | object {data-tooltip="对应PHP的Array"} | 二级商户预约提现结果
 | sub_mchid {data-indent=3} | string | 二级商户号
 | sp_mchid {data-required data-indent=3} | string | 电商平台商户号
 | status {data-required data-indent=3} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
@@ -66,7 +66,7 @@ description: 商户调用商户提现API中，当提现状态发生变更时微�
 | account_bank {data-indent=3} | string | 入账银行
 | bank_name {data-indent=3} | string | 入账银行全称（含支行）
 | {colspan=3 .im-table-line}
-| original_data {data-indent=2} | object | 二级商户按日终余额预约提现结果<Badge type="warning" text="特殊申请" />
+| original_data {data-indent=2} | object {data-tooltip="对应PHP的Array"} | 二级商户按日终余额预约提现结果<Badge type="warning" text="特殊申请" />
 | sub_mchid {data-indent=3} | string | 二级商户号
 | sp_mchid {data-required data-indent=3} | string | 电商平台商户号
 | status {data-required data-indent=3} | string | 提现单状态<br/>`CREATE_SUCCESS` \| `SUCCESS` \| `FAIL` \| `REFUND` \| `CLOSE` \| `INIT` 枚举值之一
@@ -165,7 +165,7 @@ $json = \json_encode([
 | 应答规范 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | status | number | `HTTP`状态码<br/>`20X` `4XX` `5XX` 枚举值之一
-| body | object | 应答的`JSON`数据结构
+| body | object {data-tooltip="对应PHP的Array"} | 应答的`JSON`数据结构
 | code {data-indent=1} | string | 业务处理状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | message {data-indent=1} | string | 业务处理附加信息
 
