@@ -919,6 +919,20 @@ function openapiSidebar() {
                 ['平台明细单号查询明细单', '/openapi/v3/platsolution/mch-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'],
               ].map(transArrayItem),
             },
+            {
+              text: '用户确认模式',
+              collapsed: true,
+              items: [
+                ['发起转账', '/openapi/v3/fund-app/mch-transfer/transfer-bills'],
+                ['撤销转账', '/openapi/v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
+                ['微信转账单号查询转账单', '/openapi/v3/fund-app/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no}'],
+                ['商户单号查询转账单', '/openapi/v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}'],
+                ['微信单号申请电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/transfer-bill-no'],
+                ['商户单号申请电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no'],
+                ['微信单号查询电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/transfer-bill-no/{transfer_bill_no}'],
+                ['商户单号查询电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no/{out_bill_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {

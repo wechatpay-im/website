@@ -323,7 +323,7 @@ next:
 | | [申请商家转账明细电子回单](/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}/apply)
 | | [查询商家转账明细电子回单](/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no})
 | | [平台转账明细单号查询明细单](/openapi/v3/platsolution/mch-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id})
-| 转账须确认模式v3 {rowspan=8} | [发起转账](/openapi/v3/fund-app/mch-transfer/transfer-bills)
+| 商家转账v3<Badge type="warning" text="新"/><br/>(用户确认模式) {rowspan=8} | [发起转账](/openapi/v3/fund-app/mch-transfer/transfer-bills)
 | [撤销转账](/openapi/v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel)
 | [微信转账单号查询转账单](/openapi/v3/fund-app/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no})
 | [商户单号查询转账单](/openapi/v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no})
