@@ -1228,6 +1228,7 @@ function openapiSidebar() {
                 ['查询保险自动续费协议', '/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
                 ['解除保险自动续费协议', '/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate'],
                 ['查询保险扣费周期列表', '/openapi/v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
+                ['修改保险扣费周期列表', '/openapi/v3/papay/insurance-sign/policy-periods/plan-id/{plan_id}/contract-id/{contract_id}/modify'],
                 ['App预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/app'],
                 ['H5预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/h5'],
                 ['JSAPI预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi'],
