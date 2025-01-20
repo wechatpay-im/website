@@ -34,7 +34,7 @@ jobs:
         run: npm ci
       - name: Build with VitePress
         run: |
-          patch -p1 -i .vitepress/vitepress+1.5.0.patch
+          patch -p1 -i .vitepress/vitepress+1.6.0.patch
           npm run build
           touch .vitepress/dist/.nojekyll
           cp CNAME .vitepress/dist/
