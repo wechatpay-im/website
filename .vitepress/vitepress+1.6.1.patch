@@ -1,8 +1,8 @@
-diff --git a/node_modules/vitepress/dist/node/chunk-BZEQqoFe.js b/node_modules/vitepress/dist/node/chunk-BZEQqoFe.js
-index c0dd185..50fdeb0 100644
---- a/node_modules/vitepress/dist/node/chunk-BZEQqoFe.js
-+++ b/node_modules/vitepress/dist/node/chunk-BZEQqoFe.js
-@@ -35146,16 +35146,17 @@ function createContainer(klass, defaultTitle, md) {
+diff --git a/node_modules/vitepress/dist/node/chunk-Fcjkb921.js b/node_modules/vitepress/dist/node/chunk-Fcjkb921.js
+index 0208581..2f2eb90 100644
+--- a/node_modules/vitepress/dist/node/chunk-Fcjkb921.js
++++ b/node_modules/vitepress/dist/node/chunk-Fcjkb921.js
+@@ -35149,16 +35149,17 @@ function createContainer(klass, defaultTitle, md) {
      {
        render(tokens, idx, _options, env) {
          const token = tokens[idx];
@@ -24,7 +24,7 @@ index c0dd185..50fdeb0 100644
  `;
          } else return klass === "details" ? `</details>
  ` : `</div>
-@@ -35728,8 +35729,12 @@ async function createMarkdownRenderer(srcDir, options = {}, base = "/", logger =
+@@ -35731,8 +35732,12 @@ async function createMarkdownRenderer(srcDir, options = {}, base = "/", logger =
      { target: "_blank", rel: "noreferrer", ...options.externalLinks },
      base
    ).use(lineNumberPlugin, options.lineNumbers);
