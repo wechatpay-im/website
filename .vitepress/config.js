@@ -1057,6 +1057,28 @@ function openapiSidebar() {
                 ['商户单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}'],
               ].map(transArrayItem),
             },
+            {
+              text: '售后赔付',
+              collapsed: true,
+              items: [
+                ['请求赔付', '/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills'],
+                ['请求赔付预下单', '/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/pre-transfer'],
+                ['请求撤销赔付', '/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/out-bill-no/{out_bill_no}/cancel'],
+                ['按商户单号查询赔付结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/out-bill-no/{out_bill_no}'],
+                ['按微信单号查询赔付结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill_id}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '保险理赔',
+              collapsed: true,
+              items: [
+                ['请求保险理赔', '/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills'],
+                ['请求保险理赔预下单', '/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/pre-transfer'],
+                ['请求撤销保险理赔', '/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/out-bill-no/{out_bill_no}/cancel'],
+                ['按商户单号查询理赔结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/out-bill-no/{out_bill_no}'],
+                ['按微信单号查询理赔结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/bill-id/{bill_id}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {

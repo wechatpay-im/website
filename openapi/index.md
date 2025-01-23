@@ -300,7 +300,7 @@ next:
 | | [发起批量转账](/openapi/v3/payroll-card/transfer-batches)
 | 商家充值v3 {rowspan=2} | [申请银行转账充值](/openapi/v3/recharge/bank-transfer-recharges/apply) {colspan=2}
 | [查询银行转账充值结果](/openapi/v3/recharge/bank-transfer-recharges/out-recharge-no/{out_recharge_no}) {colspan=2}
-| 商家转账v3{rowspan=23} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
+| 商家转账v3{rowspan=10} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
 | [查询批次单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}) | [查询批次单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id})
 | [查询批次单(商家批次单号)](/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}) | [查询批次单(商家批次单号)](/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no})
 | [查询明细单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}) | [查询明细单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id})
@@ -310,7 +310,7 @@ next:
 | [申请转账明细电子回单](/openapi/v3/transfer-detail/electronic-receipts#post) {colspan=2}
 | [查询明细回单受理结果](/openapi/v3/transfer-detail/electronic-receipts#get) {colspan=2}
 | [下载电子回单文件](/openapi/v3/transferdownload/signfile) {colspan=2}
-| | [受理商家转账](/openapi/v3/platsolution/mch-transfer/batches/apply)
+| 商家转账v3<br/>(预约模式) {rowspan=13} | | [受理商家转账](/openapi/v3/platsolution/mch-transfer/batches/apply)
 | | [受理单次预约商家转账](/openapi/v3/platsolution/mch-transfer/reservation/apply)
 | | [关闭预约商家转账记录](/openapi/v3/platsolution/mch-transfer/reservation/out-reservation-no/{out_reservation_no}/close)
 | | [平台预约单号查询预约商家转账记录](/openapi/v3/platsolution/mch-transfer/reservation/reservation-id/{reservation_id})
@@ -323,7 +323,7 @@ next:
 | | [申请商家转账明细电子回单](/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}/apply)
 | | [查询商家转账明细电子回单](/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no})
 | | [平台转账明细单号查询明细单](/openapi/v3/platsolution/mch-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id})
-| 商家转账v3<Badge type="warning" text="新"/><br/>(用户确认模式) {rowspan=8} | [发起转账](/openapi/v3/fund-app/mch-transfer/transfer-bills)
+| 商家转账v3<br/>(用户确认模式) {rowspan=8} | [发起转账](/openapi/v3/fund-app/mch-transfer/transfer-bills)
 | [撤销转账](/openapi/v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel)
 | [微信转账单号查询转账单](/openapi/v3/fund-app/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no})
 | [商户单号查询转账单](/openapi/v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no})
@@ -391,6 +391,16 @@ next:
 | | [撤销转账](/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel)
 | | [微信转账单号查询转账单](/openapi/v3/ecommerce/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no})
 | | [商户单号查询转账单](/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no})
+| 平台收付通v3<br/>售后赔付 {rowspan=5} | | [请求赔付](/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills)
+| | [请求赔付预下单](/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/pre-transfer)
+| | [请求撤销赔付](/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/out-bill-no/{out_bill_no}/cancel)
+| | [查询赔付结果(按商户赔付单号)](/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/out-bill-no/{out_bill_no})
+| | [查询赔付结果(微信支付赔付单号)](/openapi/v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill_id})
+| 平台收付通v3<br/>保险理赔 {rowspan=5} | | [请求保险理赔](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills)
+| | [请求保险理赔预下单](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/pre-transfer)
+| | [请求撤销保险理赔](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/out-bill-no/{out_bill_no}/cancel)
+| | [查询保险理赔结果(按商户赔付单号)](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/out-bill-no/{out_bill_no})
+| | [查询保险理赔结果(按微信支付赔付单号)](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/bill-id/{bill_id})
 | 商户提现v3{rowspan=6} | | [合作伙伴预约提现](/openapi/v3/merchant/fund/withdraw)
 | | [查询预约提现状态(商户单号)](/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no})
 | | [查询预约提现状态(平台单号)](/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id})
