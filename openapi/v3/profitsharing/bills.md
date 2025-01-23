@@ -7,6 +7,12 @@ description: 微信支付按天提供分账账单文件，商户可以通过该�
 
 {{ $frontmatter.description }}
 
+::: warning :rocket: {.im-specific}
+
+下载到的账单文件已于 `2025.01.15`(北京时间)修复部分数据没有展示“`”(数据列前导重音符)的问题
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
@@ -103,4 +109,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_1_11.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012529628) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761140) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715572) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715572) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715572) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715572) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715572) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_1_11.shtml)
