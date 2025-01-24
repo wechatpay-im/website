@@ -29,7 +29,7 @@ description: 商户可以通过请求此接口唤起微信委托代扣的页面�
 ::: code-group
 
 ```php [标准PSR7]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 use GuzzleHttp\Psr7\Uri;
 use GuzzleHttp\Psr7\Query;
