@@ -9,7 +9,7 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 
 ::: danger :no_entry_sign: {.im-deprecated}
 
-本接口服务已于 `2020.11.27` (北京时间)下线，文档仅做留存参考。
+本接口服务已于 `2021.01.08` (北京时间)下线，新接口见[这里](/openapi/v3/merchant-service/complaints-v2)，此文档仅做留存参考。
 
 :::
 

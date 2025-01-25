@@ -9,7 +9,7 @@ description: 商户上传反馈处理结果的接口。 包括商户反馈类型
 
 ::: danger :no_entry_sign: {.im-deprecated}
 
-本接口服务已于 `2021.01.08` (北京时间)下线，文档仅做留存参考。
+本接口服务已于 `2021.01.08` (北京时间)下线，新接口见[这里](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response) [这里](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete)，此文档仅做留存参考。
 
 :::
 
