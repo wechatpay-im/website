@@ -38,7 +38,7 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 ::: code-group
 
 ```php [异步纯链式]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 
 $params = [
@@ -81,7 +81,7 @@ $instance->v2->papay->partner->h5entrustweb->getAsync([
 ```
 
 ```php [异步声明式]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 
 $params = [
@@ -124,7 +124,7 @@ $instance->chain('v2/papay/partner/h5entrustweb')->getAsync([
 ```
 
 ```php [异步属性式]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 
 $params = [
@@ -167,7 +167,7 @@ $instance['v2/papay/partner/h5entrustweb']->getAsync([
 ```
 
 ```php [同步纯链式]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 
 $params = [
@@ -207,7 +207,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 
 $params = [
@@ -247,7 +247,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
-use WeChatPay\Hash;
+use WeChatPay\Crypto\Hash;
 use WeChatPay\Formatter;
 
 $params = [
