@@ -7,8 +7,20 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 
 {{ $frontmatter.description }}
 
+::: warning :closed_lock_with_key: {.im-privated}
+
+- 如果签约成功，微信会异步通知给商户（`notify_url`为通知路径），如果签约失败则不通知。
+- 调用此接口后获得`redirect_url`，需要在前端跳转到`redirect_url`，在商户的前端页面`<head>`处需要添加声明`<meta name="referrer" content="no-referrer-when-downgrade">`
+- 此外，不能使用`window.location.replace(redirect_url)`的方式跳转，而要通过`window.location.href = redirect_url`的方式跳转。
+- 在`redirect_url`页面，会唤起微信。无论用户是否同意，`redirect_url`的页面会在3秒后自动回到`refer`页面。
+- 如果获取的refer只有域名没有路径，那么签约完成后，需要用户手动回到浏览器。
+- **特别提醒**：H5纯签约接口暂未对外开放，如有需要请咨询对接的业务人员，额外申请开通。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| nonceless {data-required} | `true` | 声明请求的`query`无随机字符串参数
 | query | object {data-required data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | appid {data-required data-indent=1} | string | 应用ID
 | mch_id {data-required data-indent=1} | string | 商户号
@@ -52,6 +64,7 @@ $params = [
   'contract_display_account' => '微信代扣',
   'notify_url'               => 'https://weixin.qq.com',
   'version'                  => '1.0',
+  'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
   'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
@@ -72,6 +85,7 @@ $params['sign'] = Hash::sign(
 );
 
 $instance->v2->papay->partner->h5entrustweb->getAsync([
+  'nonceless' => true,
   'query' => $params
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,6 +109,7 @@ $params = [
   'contract_display_account' => '微信代扣',
   'notify_url'               => 'https://weixin.qq.com',
   'version'                  => '1.0',
+  'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
   'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
@@ -115,6 +130,7 @@ $params['sign'] = Hash::sign(
 );
 
 $instance->chain('v2/papay/partner/h5entrustweb')->getAsync([
+  'nonceless' => true,
   'query' => $params
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -138,6 +154,7 @@ $params = [
   'contract_display_account' => '微信代扣',
   'notify_url'               => 'https://weixin.qq.com',
   'version'                  => '1.0',
+  'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
   'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
@@ -158,6 +175,7 @@ $params['sign'] = Hash::sign(
 );
 
 $instance['v2/papay/partner/h5entrustweb']->getAsync([
+  'nonceless' => true,
   'query' => $params
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -181,6 +199,7 @@ $params = [
   'contract_display_account' => '微信代扣',
   'notify_url'               => 'https://weixin.qq.com',
   'version'                  => '1.0',
+  'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
   'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
@@ -201,6 +220,7 @@ $params['sign'] = Hash::sign(
 );
 
 $response = $instance->v2->papay->partner->h5entrustweb->get([
+  'nonceless' => true,
   'query' => $params
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -221,6 +241,7 @@ $params = [
   'contract_display_account' => '微信代扣',
   'notify_url'               => 'https://weixin.qq.com',
   'version'                  => '1.0',
+  'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
   'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
@@ -241,6 +262,7 @@ $params['sign'] = Hash::sign(
 );
 
 $response = $instance->chain('v2/papay/partner/h5entrustweb')->get([
+  'nonceless' => true,
   'query' => $params
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -261,6 +283,7 @@ $params = [
   'contract_display_account' => '微信代扣',
   'notify_url'               => 'https://weixin.qq.com',
   'version'                  => '1.0',
+  'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
   'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
@@ -281,6 +304,7 @@ $params['sign'] = Hash::sign(
 );
 
 $response = $instance['v2/papay/partner/h5entrustweb']->get([
+  'nonceless' => true,
   'query' => $params
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -298,4 +322,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter5_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011988368) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter5_4.shtml)
