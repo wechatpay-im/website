@@ -868,6 +868,14 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '商家充值',
+          collapsed: true,
+          items: [
+            ['申请银行转账充值', '/openapi/v3/recharge/bank-transfer-recharges/apply'],
+            ['查询银行转账充值结果', '/openapi/v3/recharge/bank-transfer-recharges/out-recharge-no/{out_recharge_no}'],
+          ].map(transArrayItem),
+        },
+        {
           text: '商家转账',
           collapsed: true,
           items: [
@@ -1000,6 +1008,8 @@ function openapiSidebar() {
                 ['申请充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
                 ['查询充值结果', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}'],
                 ['关闭充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
+                ['申请银行转账充值', '/openapi/v3/platsolution/ecommerce/bank-transfer-recharges/apply'],
+                ['查询银行转账充值结果', '/openapi/v3/platsolution/ecommerce/bank-transfer-recharges/out-recharge-no/{out_recharge_no}'],
               ].map(transArrayItem),
             },
             {
