@@ -38,23 +38,13 @@ description: 商家转账单据到终态后 （转账完成、转账失败和已
 | {colspan=3 .im-table-line}
 | out_bill_no {data-required data-indent=3} | string | 商户单号
 | transfer_bill_no {data-required data-indent=3} | string | 商家转账订单号
-| state {data-required data-indent=3} | string | 单据状态
-| mchid {data-required data-indent=3} | string | 商户号
+| state {data-required data-indent=3} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
+| mch_id {data-required data-indent=3} | string | 商户号
 | transfer_amount {data-required data-indent=3} | number | 转账金额
 | openid {data-indent=3} | string | 收款用户OpenID
 | fail_reason {data-indent=3} | string | 失败原因
 | create_time {data-required data-indent=3} | string | 单据创建时间
-| update_time {data-required data-indent=3} | string | 批次更新时间
-| out_batch_no {data-required data-indent=3} | string | 商家批次单号
-| batch_id {data-required data-indent=3} | string | 微信批次单号
-| batch_status {data-required data-indent=3} | string | 批次状态
-| total_num {data-required data-indent=3} | number | 批次总笔数
-| total_amount {data-required data-indent=3} | number | 批次总金额
-| success_amount {data-required data-indent=3} | number | 转账成功金额
-| success_num {data-required data-indent=3} | number | 转账成功笔数
-| fail_amount {data-required data-indent=3} | number | 转账失败金额
-| fail_num {data-required data-indent=3} | number | 转账失败笔数
-| close_reason {data-required data-indent=3} | string | 批次关闭原因
+| update_time {data-required data-indent=3} | string | 最后一次状态变更时间
 
 {.im-table #request}
 
@@ -145,5 +135,6 @@ $json = \json_encode([
 {.im-table #response}
 
 参阅
+- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012712115)
 - [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/batch-transfer-to-balance/callback-notice.html)
 - [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/batch-transfer-to-balance/transfer-batch-callback-notice.html)
