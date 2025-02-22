@@ -1002,7 +1002,7 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
-              text: '充值',
+              text: '二级商户充值',
               collapsed: true,
               items: [
                 ['申请充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
@@ -1010,6 +1010,9 @@ function openapiSidebar() {
                 ['关闭充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
                 ['申请银行转账充值', '/openapi/v3/platsolution/ecommerce/bank-transfer-recharges/apply'],
                 ['查询银行转账充值结果', '/openapi/v3/platsolution/ecommerce/bank-transfer-recharges/out-recharge-no/{out_recharge_no}'],
+                ['添加可扫码充值员工', '/openapi/v3/platsolution/ecommerce/recharge-employees'],
+                ['删除可扫码充值员工', '/openapi/v3/platsolution/ecommerce/recharge-employees/sub-mchid/{sub_mchid}/sp-openid/{sp_openid}/delete'],
+                ['查询可扫码充值员工列表', '/openapi/v3/platsolution/ecommerce/recharge-employees/sub-mchid/{sub_mchid}'],
               ].map(transArrayItem),
             },
             {
