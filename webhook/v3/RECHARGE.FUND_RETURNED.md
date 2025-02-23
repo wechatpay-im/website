@@ -39,14 +39,25 @@ description: 微信支付通过该接口将充值资金退回的结果通知给�
 | sub_mchid {data-required data-indent=3} | string | 二级商户号
 | out_recharge_no {data-required data-indent=3} | string | 商户充值单号
 | recharge_id {data-required data-indent=3} | string | 微信支付充值单号
-| recharge_channel {data-required data-indent=3} | string | 充值渠道
-| detail {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 充值退回详情
+| recharge_channel {data-required data-indent=3} | string | 充值渠道 `BANK_TRANSFER` \| `ONLINE_BANK` 枚举值之一
+| {colspan=3 .im-table-line}
+| detail {data-indent=3} | object {data-tooltip="对应PHP的Array"} | `BANK_TRANSFER` 银行转账充值退回详情
 | bank_name {data-required data-indent=4} | string | 开户银行名称
 | bank_card_tail {data-required data-indent=4} | string | 银行卡尾号
 | bank_account_name {data-indent=4} | string | 银行账户名称
 | amount {data-indent=4} | number | 充值金额
 | currency {data-indent=4} | string | 充值币种
 | memo {data-required data-indent=4} | string | 银行附言
+| return_time {data-required data-indent=4} | string | 退回时间
+| return_reason {data-required data-indent=4} | string | 退回原因
+| {colspan=3 .im-table-line}
+| detail {data-indent=3} | object {data-tooltip="对应PHP的Array"} | `ONLINE_BANK` 网银充值退回详情
+| online_bank_type {data-required data-indent=4} | string | 网银类型 `ONLINE_BANK_TYPE_CORPORATE` \| `ONLINE_BANK_TYPE_PERSONAL` 枚举值之一
+| bank_name {data-required data-indent=4} | string | 开户银行名称
+| bank_card_tail {data-required data-indent=4} | string | 银行卡尾号
+| bank_account_name {data-indent=4} | string | 银行账户名称
+| amount {data-indent=4} | number | 充值金额
+| currency {data-indent=4} | string | 充值币种
 | return_time {data-required data-indent=4} | string | 退回时间
 | return_reason {data-required data-indent=4} | string | 退回原因
 
