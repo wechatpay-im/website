@@ -1,6 +1,6 @@
 ---
-title: 查询赔付结果（按微信支付赔付单号）
-description: 微信支付单号查询赔付记录。
+title: 查询保证金赔付结果（按微信支付赔付单号）
+description: 微信支付单号查询商户付款记录。 注：接口频率限制为100次/s
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -10,14 +10,19 @@ description: 微信支付单号查询赔付记录。
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | bill_id {data-required} | string | 微信支付单号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| business_type {data-indent=1} | string | 业务类型<br/>`DEPOSIT_COMPENSATION` \| `PLATFORM_AFTER_SALES_COMPENSATION` \| `INSURANCE_CLAIM` \| `DEPOSIT_AFTER_SALES_COMPENSATION` 枚举值之一
 
 {.im-table #request}
 
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v3->platsolution->ecommerce->mchTransfer->compensateBills->billId->_bill_id_->getAsync([
+$instance->v3->platsolution->ecommerce->mchTransfer->transferBills->billId->_bill_id_->getAsync([
   'bill_id' => '1330000071100999991182020050700019480001',
+  'query' => [
+    'business_type' => 'DEPOSIT_COMPENSATION',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -26,8 +31,11 @@ $instance->v3->platsolution->ecommerce->mchTransfer->compensateBills->billId->_b
 ```
 
 ```php [异步声明式]
-$instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill_id}')->getAsync([
+$instance->chain('v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_id}')->getAsync([
   'bill_id' => '1330000071100999991182020050700019480001',
+  'query' => [
+    'business_type' => 'DEPOSIT_COMPENSATION',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -36,8 +44,11 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-i
 ```
 
 ```php [异步属性式]
-$instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill_id}']->getAsync([
+$instance['v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_id}']->getAsync([
   'bill_id' => '1330000071100999991182020050700019480001',
+  'query' => [
+    'business_type' => 'DEPOSIT_COMPENSATION',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -46,22 +57,31 @@ $instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill
 ```
 
 ```php [同步纯链式]
-$response = $instance->v3->platsolution->ecommerce->mchTransfer->compensateBills->billId->_bill_id_->get([
+$response = $instance->v3->platsolution->ecommerce->mchTransfer->transferBills->billId->_bill_id_->get([
   'bill_id' => '1330000071100999991182020050700019480001',
+  'query' => [
+    'business_type' => 'DEPOSIT_COMPENSATION',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill_id}')->get([
+$response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_id}')->get([
   'bill_id' => '1330000071100999991182020050700019480001',
+  'query' => [
+    'business_type' => 'DEPOSIT_COMPENSATION',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$response = $instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/bill-id/{bill_id}']->get([
+$response = $instance['v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_id}']->get([
   'bill_id' => '1330000071100999991182020050700019480001',
+  'query' => [
+    'business_type' => 'DEPOSIT_COMPENSATION',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -71,14 +91,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sp_mchid {data-required} | string | 服务商商户号
+| business_type | string | 业务类型<br/>`DEPOSIT_COMPENSATION` \| `PLATFORM_AFTER_SALES_COMPENSATION` \| `INSURANCE_CLAIM` \| `DEPOSIT_AFTER_SALES_COMPENSATION` 枚举值之一
 | receiver_detail {data-required} | object {data-tooltip="对应PHP的array"} | 转账接收方信息
 | receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 转账接收者信息
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
-| transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
-| transaction_id {data-required data-indent=3} | string | 交易订单号
+| mch_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方商户信息
+| mch_id {data-indent=3} | string | 商户号
 | out_bill_no {data-required} | string | 商户单号
 | amount | number | 赔付金额
 | transfer_remark | string | 赔付原因
+| receiver_remark | string | 收款方备注
 | bill_id {data-required} | string | 微信支付转账单号
 | state {data-required} | string | 赔付状态<br/>`ACCEPTED` \| `SUCCESS` \| `CLOSED` \| `WAIT_USER_CONFIRM` \| `CANCELING` \| `CANCELLED` 枚举值之一
 | accept_time {data-required} | string | 受理时间
@@ -90,4 +112,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504179)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504200)

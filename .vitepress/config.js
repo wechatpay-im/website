@@ -850,6 +850,20 @@ function openapiSidebar() {
                 ['将出租车电子发票插入卡包', '/openapi/v3/taxi-invoice/cards'],
               ].map(transArrayItem),
             },
+            {
+              text: '平台保证金',
+              collapsed: true,
+              items: [
+                ['请求售后赔付给用户', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-compensation-bills'],
+                ['查询赔付用户结果(商户单)', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-compensation-bills/out-bill-no/{out_bill_no}'],
+                ['查询赔付用户结果(微信单)', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-compensation-bills/bill-id/{bill_id}'],
+                ['请求赔付给商户', '/openapi/v3/platsolution/ecommerce/mch-transfer/transfer-bills'],
+                ['查询赔付商户结果(商户单)', '/openapi/v3/platsolution/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}'],
+                ['查询赔付商户结果(微信单)', '/openapi/v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_id}'],
+                ['请求赔付用户运费', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-shipping-cost-compensation-bills'],
+                ['查询赔付运费结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-shipping-cost-compensation-bills/out-bill-no/{out_bill_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
