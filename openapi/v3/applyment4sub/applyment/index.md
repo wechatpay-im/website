@@ -26,6 +26,27 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | contact_email {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系邮箱
 | subject_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 主体资料
 | subject_type {data-required data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
+| finance_institution {data-indent=2} | boolean | 是否是金融机构
+| micro_store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 小微辅助证明材料
+| micro_biz_type {data-required data-indent=3} | string | 小微经营类型<br/>`MICRO_TYPE_STORE` \| `MICRO_TYPE_MOBILE` \| `MICRO_TYPE_ONLINE` 枚举值之一
+| micro_store_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 门店场所
+| micro_name {data-required data-indent=4} | string | 门店名称
+| micro_address_code {data-required data-indent=4} | string | 门店省市编码
+| micro_address {data-required data-indent=4} | string | 门店地址
+| store_entrance_pic {data-required data-indent=4} | string | 门店门头照片
+| micro_indoor_copy {data-required data-indent=4} | string | 店内环境照片
+| store_longitude {data-indent=4} | string | 门店经度
+| store_latitude {data-indent=4} | string | 门店纬度
+| micro_mobile_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 流动经营/便民服务
+| micro_mobile_name {data-required data-indent=4} | string | 经营/服务名称
+| micro_mobile_city {data-required data-indent=4} | string | 经营/服务所在地省市
+| micro_mobile_address {data-required data-indent=4} | string | 经营/服务所在地（不含省市）
+| micro_mobile_pics {data-required data-indent=4} | string[] | 经营/服务现场照片
+| micro_online_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 线上商品/服务交易
+| micro_online_store {data-required data-indent=4} | string | 线上店铺名称
+| micro_ec_name {data-required data-indent=4} | string | 电商平台名称
+| micro_qrcode {data-indent=4} | string | 店铺二维码
+| micro_link {data-indent=4} | string | 店铺链接
 | business_license_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 营业执照
 | license_copy {data-required data-indent=3} | string | 营业执照照片
 | license_number {data-required data-indent=3} | string | 注册号/统一社会信用代码
@@ -162,6 +183,31 @@ $instance->v3->applyment4sub->applyment->_empty_->postAsync([
     ],
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
+      'finance_institution'      => true,
+      'micro_store_info'         => [
+        'micro_biz_type'    => 'MICRO_TYPE_STORE',
+        'micro_store_info'  => [
+          'micro_name'         => '',
+          'micro_address_code' => '',
+          'micro_address'      => '',
+          'store_entrance_pic' => '',
+          'micro_indoor_copy'  => '',
+          'store_longitude'    => '',
+          'store_latitude'     => '',
+        ],
+        'micro_mobile_info' => [
+          'micro_mobile_name'    => '',
+          'micro_mobile_city'    => '',
+          'micro_mobile_address' => '',
+          'micro_mobile_pics'    => ['MediaId'],
+        ],
+        'micro_online_info' => [
+          'micro_online_store' => '',
+          'micro_ec_name'      => '',
+          'micro_qrcode'       => '',
+          'micro_link'         => '',
+        ],
+      ],
       'business_license_info'    => [
         'license_copy'    => '',
         'license_number'  => '',
@@ -322,6 +368,31 @@ $instance->chain('v3/applyment4sub/applyment/{empty}')->postAsync([
     ],
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
+      'finance_institution'      => true,
+      'micro_store_info'         => [
+        'micro_biz_type'    => 'MICRO_TYPE_STORE',
+        'micro_store_info'  => [
+          'micro_name'         => '',
+          'micro_address_code' => '',
+          'micro_address'      => '',
+          'store_entrance_pic' => '',
+          'micro_indoor_copy'  => '',
+          'store_longitude'    => '',
+          'store_latitude'     => '',
+        ],
+        'micro_mobile_info' => [
+          'micro_mobile_name'    => '',
+          'micro_mobile_city'    => '',
+          'micro_mobile_address' => '',
+          'micro_mobile_pics'    => ['MediaId'],
+        ],
+        'micro_online_info' => [
+          'micro_online_store' => '',
+          'micro_ec_name'      => '',
+          'micro_qrcode'       => '',
+          'micro_link'         => '',
+        ],
+      ],
       'business_license_info'    => [
         'license_copy'    => '',
         'license_number'  => '',
@@ -482,6 +553,31 @@ $instance['v3/applyment4sub/applyment/{empty}']->postAsync([
     ],
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
+      'finance_institution'      => true,
+      'micro_store_info'         => [
+        'micro_biz_type'    => 'MICRO_TYPE_STORE',
+        'micro_store_info'  => [
+          'micro_name'         => '',
+          'micro_address_code' => '',
+          'micro_address'      => '',
+          'store_entrance_pic' => '',
+          'micro_indoor_copy'  => '',
+          'store_longitude'    => '',
+          'store_latitude'     => '',
+        ],
+        'micro_mobile_info' => [
+          'micro_mobile_name'    => '',
+          'micro_mobile_city'    => '',
+          'micro_mobile_address' => '',
+          'micro_mobile_pics'    => ['MediaId'],
+        ],
+        'micro_online_info' => [
+          'micro_online_store' => '',
+          'micro_ec_name'      => '',
+          'micro_qrcode'       => '',
+          'micro_link'         => '',
+        ],
+      ],
       'business_license_info'    => [
         'license_copy'    => '',
         'license_number'  => '',
@@ -642,6 +738,31 @@ $response = $instance->v3->applyment4sub->applyment->_empty_->post([
     ],
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
+      'finance_institution'      => true,
+      'micro_store_info'         => [
+        'micro_biz_type'    => 'MICRO_TYPE_STORE',
+        'micro_store_info'  => [
+          'micro_name'         => '',
+          'micro_address_code' => '',
+          'micro_address'      => '',
+          'store_entrance_pic' => '',
+          'micro_indoor_copy'  => '',
+          'store_longitude'    => '',
+          'store_latitude'     => '',
+        ],
+        'micro_mobile_info' => [
+          'micro_mobile_name'    => '',
+          'micro_mobile_city'    => '',
+          'micro_mobile_address' => '',
+          'micro_mobile_pics'    => ['MediaId'],
+        ],
+        'micro_online_info' => [
+          'micro_online_store' => '',
+          'micro_ec_name'      => '',
+          'micro_qrcode'       => '',
+          'micro_link'         => '',
+        ],
+      ],
       'business_license_info'    => [
         'license_copy'    => '',
         'license_number'  => '',
@@ -799,6 +920,31 @@ $response = $instance->chain('v3/applyment4sub/applyment/{empty}')->post([
     ],
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
+      'finance_institution'      => true,
+      'micro_store_info'         => [
+        'micro_biz_type'    => 'MICRO_TYPE_STORE',
+        'micro_store_info'  => [
+          'micro_name'         => '',
+          'micro_address_code' => '',
+          'micro_address'      => '',
+          'store_entrance_pic' => '',
+          'micro_indoor_copy'  => '',
+          'store_longitude'    => '',
+          'store_latitude'     => '',
+        ],
+        'micro_mobile_info' => [
+          'micro_mobile_name'    => '',
+          'micro_mobile_city'    => '',
+          'micro_mobile_address' => '',
+          'micro_mobile_pics'    => ['MediaId'],
+        ],
+        'micro_online_info' => [
+          'micro_online_store' => '',
+          'micro_ec_name'      => '',
+          'micro_qrcode'       => '',
+          'micro_link'         => '',
+        ],
+      ],
       'business_license_info'    => [
         'license_copy'    => '',
         'license_number'  => '',
@@ -956,6 +1102,31 @@ $response = $instance['v3/applyment4sub/applyment/{empty}']->post([
     ],
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
+      'finance_institution'      => true,
+      'micro_store_info'         => [
+        'micro_biz_type'    => 'MICRO_TYPE_STORE',
+        'micro_store_info'  => [
+          'micro_name'         => '',
+          'micro_address_code' => '',
+          'micro_address'      => '',
+          'store_entrance_pic' => '',
+          'micro_indoor_copy'  => '',
+          'store_longitude'    => '',
+          'store_latitude'     => '',
+        ],
+        'micro_mobile_info' => [
+          'micro_mobile_name'    => '',
+          'micro_mobile_city'    => '',
+          'micro_mobile_address' => '',
+          'micro_mobile_pics'    => ['MediaId'],
+        ],
+        'micro_online_info' => [
+          'micro_online_store' => '',
+          'micro_ec_name'      => '',
+          'micro_qrcode'       => '',
+          'micro_link'         => '',
+        ],
+      ],
       'business_license_info'    => [
         'license_copy'    => '',
         'license_number'  => '',
