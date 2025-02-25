@@ -20,8 +20,12 @@ description: 下载电子回单API为通用接口，商家转账等业务电子�
 $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
+$stack = clone $instance->getDriver()->select()->getConfig('handler');
+$stack->remove('verifier');
+
 $instance->v3->transferdownload->signfile->getAsync([
   'sink' => $stream,
+  'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
@@ -33,8 +37,12 @@ $instance->v3->transferdownload->signfile->getAsync([
 $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
+$stack = clone $instance->getDriver()->select()->getConfig('handler');
+$stack->remove('verifier');
+
 $instance->chain('v3/transferdownload/signfile')->getAsync([
   'sink' => $stream,
+  'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
@@ -46,8 +54,12 @@ $instance->chain('v3/transferdownload/signfile')->getAsync([
 $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
+$stack = clone $instance->getDriver()->select()->getConfig('handler');
+$stack->remove('verifier');
+
 $instance['v3/transferdownload/signfile']->getAsync([
   'sink' => $stream,
+  'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
@@ -59,8 +71,12 @@ $instance['v3/transferdownload/signfile']->getAsync([
 $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
+$stack = clone $instance->getDriver()->select()->getConfig('handler');
+$stack->remove('verifier');
+
 $instance->v3->transferdownload->signfile->get([
   'sink' => $stream,
+  'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
@@ -73,6 +89,7 @@ $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $instance->chain('v3/transferdownload/signfile')->get([
   'sink' => $stream,
+  'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],
@@ -83,8 +100,12 @@ $instance->chain('v3/transferdownload/signfile')->get([
 $savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
 $stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
+$stack = clone $instance->getDriver()->select()->getConfig('handler');
+$stack->remove('verifier');
+
 $instance['v3/transferdownload/signfile']->get([
   'sink' => $stream,
+  'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
   ],

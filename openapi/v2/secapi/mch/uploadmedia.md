@@ -22,7 +22,7 @@ description: 服务商操作员调用 API 接口，上传证件照片。支持 j
 ::: code-group
 
 ```php [异步纯链式]
-$stack = $instance->getDriver()->select('v2')->getConfig('handler');
+$stack = clone $instance->getDriver()->select('v2')->getConfig('handler');
 $stack->remove('transform_request');
 $stream = new \GuzzleHttp\Psr7\LazyOpenStream('file:///path/to/image.jpg', 'rb');
 $mediaMd5Digest = \GuzzleHttp\Psr7\Utils::hash($stream, 'md5');
@@ -47,7 +47,7 @@ $instance->v2->secapi->mch->uploadmedia->postAsync([
 ```
 
 ```php [异步声明式]
-$stack = $instance->getDriver()->select('v2')->getConfig('handler');
+$stack = clone $instance->getDriver()->select('v2')->getConfig('handler');
 $stack->remove('transform_request');
 $stream = new \GuzzleHttp\Psr7\LazyOpenStream('file:///path/to/image.jpg', 'rb');
 $mediaMd5Digest = \GuzzleHttp\Psr7\Utils::hash($stream, 'md5');
@@ -72,7 +72,7 @@ $instance->chain('v2/secapi/mch/uploadmedia')->postAsync([
 ```
 
 ```php [异步属性式]
-$stack = $instance->getDriver()->select('v2')->getConfig('handler');
+$stack = clone $instance->getDriver()->select('v2')->getConfig('handler');
 $stack->remove('transform_request');
 $stream = new \GuzzleHttp\Psr7\LazyOpenStream('file:///path/to/image.jpg', 'rb');
 $mediaMd5Digest = \GuzzleHttp\Psr7\Utils::hash($stream, 'md5');
@@ -97,7 +97,7 @@ $instance['v2/secapi/mch/uploadmedia']->postAsync([
 ```
 
 ```php [同步纯链式]
-$stack = $instance->getDriver()->select('v2')->getConfig('handler');
+$stack =clone $instance->getDriver()->select('v2')->getConfig('handler');
 $stack->remove('transform_request');
 $stream = new \GuzzleHttp\Psr7\LazyOpenStream('file:///path/to/image.jpg', 'rb');
 $mediaMd5Digest = \GuzzleHttp\Psr7\Utils::hash($stream, 'md5');
@@ -119,7 +119,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步声明式]
-$stack = $instance->getDriver()->select('v2')->getConfig('handler');
+$stack = clone $instance->getDriver()->select('v2')->getConfig('handler');
 $stack->remove('transform_request');
 $stream = new \GuzzleHttp\Psr7\LazyOpenStream('file:///path/to/image.jpg', 'rb');
 $mediaMd5Digest = \GuzzleHttp\Psr7\Utils::hash($stream, 'md5');
@@ -141,7 +141,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```
 
 ```php [同步属性式]
-$stack = $instance->getDriver()->select('v2')->getConfig('handler');
+$stack = clone $instance->getDriver()->select('v2')->getConfig('handler');
 $stack->remove('transform_request');
 $stream = new \GuzzleHttp\Psr7\LazyOpenStream('file:///path/to/image.jpg', 'rb');
 $mediaMd5Digest = \GuzzleHttp\Psr7\Utils::hash($stream, 'md5');
