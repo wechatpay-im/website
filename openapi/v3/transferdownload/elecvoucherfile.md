@@ -35,9 +35,6 @@ $instance->v3->transferdownload->elecvoucherfile->getAsync([
     'source' => 'elecsign',
   ],
 ])
-->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(json_decode((string) $response->getBody(), true));
-})
 ->wait();
 ```
 
@@ -53,9 +50,6 @@ $instance->chain('v3/transferdownload/elecvoucherfile')->getAsync([
     'source' => 'elecsign',
   ],
 ])
-->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(json_decode((string) $response->getBody(), true));
-})
 ->wait();
 ```
 
@@ -71,9 +65,6 @@ $instance['v3/transferdownload/elecvoucherfile']->getAsync([
     'source' => 'elecsign',
   ],
 ])
-->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(json_decode((string) $response->getBody(), true));
-})
 ->wait();
 ```
 
@@ -81,7 +72,7 @@ $instance['v3/transferdownload/elecvoucherfile']->getAsync([
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
-$response = $instance->v3->transferdownload->elecvoucherfile->get([
+$instance->v3->transferdownload->elecvoucherfile->get([
   'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
@@ -89,14 +80,13 @@ $response = $instance->v3->transferdownload->elecvoucherfile->get([
     'source' => 'elecsign',
   ],
 ]);
-print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
-$response = $instance->chain('v3/transferdownload/elecvoucherfile')->get([
+$instance->chain('v3/transferdownload/elecvoucherfile')->get([
   'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
@@ -104,14 +94,13 @@ $response = $instance->chain('v3/transferdownload/elecvoucherfile')->get([
     'source' => 'elecsign',
   ],
 ]);
-print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
-$response = $instance['v3/transferdownload/elecvoucherfile']->get([
+$instance['v3/transferdownload/elecvoucherfile']->get([
   'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
@@ -119,7 +108,6 @@ $response = $instance['v3/transferdownload/elecvoucherfile']->get([
     'source' => 'elecsign',
   ],
 ]);
-print_r(json_decode((string) $response->getBody(), true));
 ```
 
 :::
