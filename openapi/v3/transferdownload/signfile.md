@@ -17,14 +17,12 @@ description: 下载电子回单API为通用接口，商家转账等业务电子�
 ::: code-group
 
 ```php [异步纯链式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
 $instance->v3->transferdownload->signfile->getAsync([
-  'sink' => $stream,
+  'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
@@ -34,14 +32,12 @@ $instance->v3->transferdownload->signfile->getAsync([
 ```
 
 ```php [异步声明式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
 $instance->chain('v3/transferdownload/signfile')->getAsync([
-  'sink' => $stream,
+  'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
@@ -51,14 +47,12 @@ $instance->chain('v3/transferdownload/signfile')->getAsync([
 ```
 
 ```php [异步属性式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
 $instance['v3/transferdownload/signfile']->getAsync([
-  'sink' => $stream,
+  'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
@@ -68,14 +62,12 @@ $instance['v3/transferdownload/signfile']->getAsync([
 ```
 
 ```php [同步纯链式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
 $instance->v3->transferdownload->signfile->get([
-  'sink' => $stream,
+  'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
@@ -84,11 +76,9 @@ $instance->v3->transferdownload->signfile->get([
 ```
 
 ```php [同步声明式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $instance->chain('v3/transferdownload/signfile')->get([
-  'sink' => $stream,
+  'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',
@@ -97,14 +87,12 @@ $instance->chain('v3/transferdownload/signfile')->get([
 ```
 
 ```php [同步属性式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
 
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
 $instance['v3/transferdownload/signfile']->get([
-  'sink' => $stream,
+  'sink' => './saved-sign-file.pdf',
   'handler' => $stack,
   'query' => [
     'token' => 'X8Uk3sD4a4eZVPTBvqNDoUqcYMlZ9uuD',

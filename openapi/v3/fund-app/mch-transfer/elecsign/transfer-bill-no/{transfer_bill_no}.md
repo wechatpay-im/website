@@ -70,14 +70,14 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| state {data-required} | string | 申请单状态
+| state {data-required} | string | 申请单状态<br/>`GENERATING` \| `FINISHED` \| `FAILED` 枚举值之一
 | create_time {data-required} | string | 申请单创建时间
 | update_time {data-required} | string | 申请单更新时间
-| hash_type | string | 回单文件摘要类型
+| hash_type | string | 回单文件摘要类型<br/>`SHA256` \| `SM3` 枚举值之一
 | hash_value | string | 回单文件摘要值
 | download_url | string | 回单文件下载地址
 | fail_reason | string | 失败原因
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-trans/elecsign/query-elecsign-by-no.html)
+参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-trans/elecsign/query-elecsign-by-no.html) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716455)

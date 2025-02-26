@@ -953,6 +953,7 @@ function openapiSidebar() {
                 ['商户单号申请电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no'],
                 ['微信单号查询电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/transfer-bill-no/{transfer_bill_no}'],
                 ['商户单号查询电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no/{out_bill_no}'],
+                ['下载电子回单文件', '/openapi/v3/transferdownload/elecvoucherfile'],
               ].map(transArrayItem),
             },
           ],
