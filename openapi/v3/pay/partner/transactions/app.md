@@ -45,6 +45,13 @@ description: 商户系统先调用该接口在微信支付服务后台生成预�
 | name {data-required data-indent=3} | string | 门店名称
 | area_code {data-required data-indent=3} | string | 地区编码
 | address {data-required data-indent=3} | string | 详细地址
+| payer {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
+| identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付(需单独申请权限)
+| type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` 枚举值之一
+| number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
+| name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -94,6 +101,16 @@ $instance->v3->pay->partner->transactions->app->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'payer'          => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -146,6 +163,16 @@ $instance->chain('v3/pay/partner/transactions/app')->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'payer'          => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -198,6 +225,16 @@ $instance['v3/pay/partner/transactions/app']->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'payer'          => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -250,6 +287,16 @@ $response = $instance->v3->pay->partner->transactions->app->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'payer'          => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -299,6 +346,16 @@ $response = $instance->chain('v3/pay/partner/transactions/app')->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'payer'          => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -348,6 +405,16 @@ $response = $instance['v3/pay/partner/transactions/app']->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'payer'          => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -361,4 +428,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_1.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_1.shtml) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012523526)

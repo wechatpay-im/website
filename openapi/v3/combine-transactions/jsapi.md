@@ -34,10 +34,16 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | combine_payer_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=2} | string | 用户标识
 | sub_openid {data-indent=2} | string | 用户子标识
+| identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付(需单独申请权限)
+| type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
+| number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
+| name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-required data-indent=1} | string | 通知地址
 | limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_debit` \| `balance_only` 枚举值之一
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -74,11 +80,19 @@ $instance->v3->combineTransactions->jsapi->postAsync([
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'identity'   => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
     'limit_pay'            => ['no_balance'],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -118,11 +132,19 @@ $instance->chain('v3/combine-transactions/jsapi')->postAsync([
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'identity'   => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
     'limit_pay'            => ['no_balance'],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -162,11 +184,19 @@ $instance['v3/combine-transactions/jsapi']->postAsync([
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'identity'   => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
     'limit_pay'            => ['no_balance'],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -206,11 +236,19 @@ $response = $instance->v3->combineTransactions->jsapi->post([
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'identity'   => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
     'limit_pay'            => ['no_balance'],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -247,11 +285,19 @@ $response = $instance->chain('v3/combine-transactions/jsapi')->post([
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'identity'   => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
     'limit_pay'            => ['no_balance'],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -288,11 +334,19 @@ $response = $instance['v3/combine-transactions/jsapi']->post([
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'identity'   => [
+        'type'   => 'IDCARD',
+        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+      ],
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
     'limit_pay'            => ['no_balance'],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -306,4 +360,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760633) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556926) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012757938) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760615) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545654) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707323)
