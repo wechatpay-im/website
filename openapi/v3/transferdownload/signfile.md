@@ -104,7 +104,7 @@ $instance['v3/transferdownload/signfile']->get([
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| 文件流(需解析为对应数据) {align=center colspan=3}
+| 文件流(保存后按本地PDF文件查看) {align=center colspan=3}
 
 {.im-table #response}
 
