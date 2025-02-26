@@ -1050,6 +1050,8 @@ function openapiSidebar() {
                 ['申请资金出境', '/openapi/v3/funds-to-oversea/orders'],
                 ['查询出境结果', '/openapi/v3/funds-to-oversea/orders/{out_order_id}'],
                 ['获取购付汇账单', '/openapi/v3/funds-to-oversea/bill-download-url'],
+                ['申请资金出境退回', '/openapi/v3/funds-to-oversea/return/return-orders'],
+                ['查询出境退回结果', '/openapi/v3/funds-to-oversea/return/return-orders/out-return-no/{out_return_no}'],
               ].map(transArrayItem),
             },
             {
