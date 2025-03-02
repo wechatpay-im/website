@@ -20,11 +20,8 @@ $mediaUrl = 'https://api.mch.weixin.qq.com/v3/merchant-service/images/xxxxx';
 $uri = new \GuzzleHttp\Psr7\Uri($mediaUrl);
 $segment = \substr($uri->getPath(), 28);
 
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./image.jpg', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->v3->merchantService->images->_media_id_->getAsync([
-  'sink' => $stream,
+  'sink' => './image.jpg',
   'media_id' => \rawurldecode($segment),
 ])
 ->wait();
@@ -35,11 +32,8 @@ $mediaUrl = 'https://api.mch.weixin.qq.com/v3/merchant-service/images/xxxxx';
 $uri = new \GuzzleHttp\Psr7\Uri($mediaUrl);
 $segment = \substr($uri->getPath(), 28);
 
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./image.jpg', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->chain('v3/merchant-service/images/{media_id}')->getAsync([
-  'sink' => $stream,
+  'sink' => './image.jpg',
   'media_id' => \rawurldecode($segment),
 ])
 ->wait();
@@ -50,11 +44,8 @@ $mediaUrl = 'https://api.mch.weixin.qq.com/v3/merchant-service/images/xxxxx';
 $uri = new \GuzzleHttp\Psr7\Uri($mediaUrl);
 $segment = \substr($uri->getPath(), 28);
 
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./image.jpg', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance['v3/merchant-service/images/{media_id}']->getAsync([
-  'sink' => $stream,
+  'sink' => './image.jpg',
   'media_id' => \rawurldecode($segment),
 ])
 ->wait();
@@ -65,11 +56,8 @@ $mediaUrl = 'https://api.mch.weixin.qq.com/v3/merchant-service/images/xxxxx';
 $uri = new \GuzzleHttp\Psr7\Uri($mediaUrl);
 $segment = \substr($uri->getPath(), 28);
 
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./image.jpg', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->v3->merchantService->images->_media_id_->get([
-  'sink' => $stream,
+  'sink' => './image.jpg',
   'media_id' => \rawurldecode($segment),
 ]);
 ```
@@ -79,11 +67,8 @@ $mediaUrl = 'https://api.mch.weixin.qq.com/v3/merchant-service/images/xxxxx';
 $uri = new \GuzzleHttp\Psr7\Uri($mediaUrl);
 $segment = \substr($uri->getPath(), 28);
 
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./image.jpg', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->chain('v3/merchant-service/images/{media_id}')->get([
-  'sink' => $stream,
+  'sink' => './image.jpg',
   'media_id' => \rawurldecode($segment),
 ]);
 ```
@@ -93,11 +78,8 @@ $mediaUrl = 'https://api.mch.weixin.qq.com/v3/merchant-service/images/xxxxx';
 $uri = new \GuzzleHttp\Psr7\Uri($mediaUrl);
 $segment = \substr($uri->getPath(), 28);
 
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./image.jpg', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance['v3/merchant-service/images/{media_id}']->get([
-  'sink' => $stream,
+  'sink' => './image.jpg',
   'media_id' => \rawurldecode($segment),
 ]);
 ```
@@ -110,4 +92,8 @@ $instance['v3/merchant-service/images/{media_id}']->get([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/images/query-images.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/images/query-images.html)
+参阅
+- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/images/query-images.html)
+- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/images/query-images.html)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012467251)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467223)

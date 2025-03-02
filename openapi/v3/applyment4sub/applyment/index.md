@@ -27,7 +27,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | subject_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 主体资料
 | subject_type {data-required data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
 | finance_institution {data-indent=2} | boolean | 是否是金融机构
-| micro_store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 小微辅助证明材料
+| micro_biz_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 小微辅助证明材料
 | micro_biz_type {data-required data-indent=3} | string | 小微经营类型<br/>`MICRO_TYPE_STORE` \| `MICRO_TYPE_MOBILE` \| `MICRO_TYPE_ONLINE` 枚举值之一
 | micro_store_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 门店场所
 | micro_name {data-required data-indent=4} | string | 门店名称
@@ -184,7 +184,7 @@ $instance->v3->applyment4sub->applyment->_empty_->postAsync([
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
       'finance_institution'      => true,
-      'micro_store_info'         => [
+      'micro_biz_info'           => [
         'micro_biz_type'    => 'MICRO_TYPE_STORE',
         'micro_store_info'  => [
           'micro_name'         => '',
@@ -369,7 +369,7 @@ $instance->chain('v3/applyment4sub/applyment/{empty}')->postAsync([
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
       'finance_institution'      => true,
-      'micro_store_info'         => [
+      'micro_biz_info'           => [
         'micro_biz_type'    => 'MICRO_TYPE_STORE',
         'micro_store_info'  => [
           'micro_name'         => '',
@@ -554,7 +554,7 @@ $instance['v3/applyment4sub/applyment/{empty}']->postAsync([
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
       'finance_institution'      => true,
-      'micro_store_info'         => [
+      'micro_biz_info'           => [
         'micro_biz_type'    => 'MICRO_TYPE_STORE',
         'micro_store_info'  => [
           'micro_name'         => '',
@@ -739,7 +739,7 @@ $response = $instance->v3->applyment4sub->applyment->_empty_->post([
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
       'finance_institution'      => true,
-      'micro_store_info'         => [
+      'micro_biz_info'           => [
         'micro_biz_type'    => 'MICRO_TYPE_STORE',
         'micro_store_info'  => [
           'micro_name'         => '',
@@ -921,7 +921,7 @@ $response = $instance->chain('v3/applyment4sub/applyment/{empty}')->post([
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
       'finance_institution'      => true,
-      'micro_store_info'         => [
+      'micro_biz_info'           => [
         'micro_biz_type'    => 'MICRO_TYPE_STORE',
         'micro_store_info'  => [
           'micro_name'         => '',
@@ -1103,7 +1103,7 @@ $response = $instance['v3/applyment4sub/applyment/{empty}']->post([
     'subject_info'      => [
       'subject_type'             => 'SUBJECT_TYPE_INDIVIDUAL',
       'finance_institution'      => true,
-      'micro_store_info'         => [
+      'micro_biz_info'           => [
         'micro_biz_type'    => 'MICRO_TYPE_STORE',
         'micro_store_info'  => [
           'micro_name'         => '',

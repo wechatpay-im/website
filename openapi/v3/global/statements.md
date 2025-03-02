@@ -21,12 +21,9 @@ description: 商户可以通过该接口下载历史交易清单。比如掉单�
 ::: code-group
 
 ```php [异步纯链式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->v3->global->statements->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'query' => [
     'date'  => '20180130',
     'mchid' => '1900000109',
@@ -39,12 +36,9 @@ $instance->v3->global->statements->getAsync([
 ```
 
 ```php [异步声明式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->chain('v3/global/statements')->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'query' => [
     'date'  => '20180130',
     'mchid' => '1900000109',
@@ -57,12 +51,9 @@ $instance->chain('v3/global/statements')->getAsync([
 ```
 
 ```php [异步属性式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance['v3/global/statements']->getAsync([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'query' => [
     'date'  => '20180130',
     'mchid' => '1900000109',
@@ -75,12 +66,9 @@ $instance['v3/global/statements']->getAsync([
 ```
 
 ```php [同步纯链式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $response = $instance->v3->global->statements->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'query' => [
     'date'  => '20180130',
     'mchid' => '1900000109',
@@ -92,12 +80,9 @@ $response = $instance->v3->global->statements->get([
 ```
 
 ```php [同步声明式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $response = $instance->chain('v3/global/statements')->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'query' => [
     'date'  => '20180130',
     'mchid' => '1900000109',
@@ -109,12 +94,9 @@ $response = $instance->chain('v3/global/statements')->get([
 ```
 
 ```php [同步属性式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $response = $instance['v3/global/statements']->get([
   'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'query' => [
     'date'  => '20180130',
     'mchid' => '1900000109',

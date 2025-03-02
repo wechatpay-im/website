@@ -23,11 +23,8 @@ description: 商户可以通过该接口下载自2017年6月1日起 的历史资
 ::: code-group
 
 ```php [异步纯链式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->v2->pay->downloadfundflow->postAsync([
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'security' => true,
   'xml' => [
     'appid'        => 'wx8888888888888888',
@@ -50,11 +47,8 @@ $instance->v2->pay->downloadfundflow->postAsync([
 ```
 
 ```php [异步声明式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance->chain('v2/pay/downloadfundflow')->postAsync([
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'security' => true,
   'xml' => [
     'appid'        => 'wx8888888888888888',
@@ -77,11 +71,8 @@ $instance->chain('v2/pay/downloadfundflow')->postAsync([
 ```
 
 ```php [异步属性式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $instance['v2/pay/downloadfundflow']->postAsync([
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'security' => true,
   'xml' => [
     'appid'        => 'wx8888888888888888',
@@ -104,11 +95,8 @@ $instance['v2/pay/downloadfundflow']->postAsync([
 ```
 
 ```php [同步纯链式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $response = $instance->v2->pay->downloadfundflow->post([
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'security' => true,
   'xml' => [
     'appid'        => 'wx8888888888888888',
@@ -129,11 +117,8 @@ if ('<xml>' === $firstFiveBytes) {
 ```
 
 ```php [同步声明式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $response = $instance->chain('v2/pay/downloadfundflow')->post([
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'security' => true,
   'xml' => [
     'appid'        => 'wx8888888888888888',
@@ -154,11 +139,8 @@ if ('<xml>' === $firstFiveBytes) {
 ```
 
 ```php [同步属性式]
-$savedTo = \GuzzleHttp\Psr7\Utils::tryFopen('./somehowfile.csv.gz', 'w+');
-$stream  = \GuzzleHttp\Psr7\Utils::streamFor($savedTo);
-
 $response = $instance['v2/pay/downloadfundflow']->post([
-  'sink' => $stream,
+  'sink' => './somehowfile.csv.gz',
   'security' => true,
   'xml' => [
     'appid'        => 'wx8888888888888888',
@@ -190,4 +172,17 @@ if ('<xml>' === $firstFiveBytes) {
 
 {.im-table #response}
 
-参阅 [官方付款码文档](https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_18&index=7) [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_18&index=7) [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_18&index=7) [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_18&index=9) [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_18&index=7) [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_18&index=7)
+参阅
+- [官方付款码文档](https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_18&index=7)
+- [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_18&index=7)
+- [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_18&index=7)
+- [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_18&index=9)
+- [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_18&index=7)
+- [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_18&index=7)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011939779)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011935220)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937075)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011939788)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937603)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011941526)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4012181559)

@@ -17,7 +17,6 @@ description: 下载电子回单API为通用接口，商家转账等业务电子�
 ::: code-group
 
 ```php [异步纯链式]
-
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
@@ -32,7 +31,6 @@ $instance->v3->transferdownload->signfile->getAsync([
 ```
 
 ```php [异步声明式]
-
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
@@ -47,7 +45,6 @@ $instance->chain('v3/transferdownload/signfile')->getAsync([
 ```
 
 ```php [异步属性式]
-
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
@@ -62,7 +59,6 @@ $instance['v3/transferdownload/signfile']->getAsync([
 ```
 
 ```php [同步纯链式]
-
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
@@ -76,6 +72,8 @@ $instance->v3->transferdownload->signfile->get([
 ```
 
 ```php [同步声明式]
+$stack = clone $instance->getDriver()->select()->getConfig('handler');
+$stack->remove('verifier');
 
 $instance->chain('v3/transferdownload/signfile')->get([
   'sink' => './saved-sign-file.pdf',
@@ -87,7 +85,6 @@ $instance->chain('v3/transferdownload/signfile')->get([
 ```
 
 ```php [同步属性式]
-
 $stack = clone $instance->getDriver()->select()->getConfig('handler');
 $stack->remove('verifier');
 
@@ -108,4 +105,9 @@ $instance['v3/transferdownload/signfile']->get([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_15.shtml)
+参阅
+- [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_15.shtml)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012269010)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012158314)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012163403)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012163705)
