@@ -119,7 +119,11 @@ ZW5wYXkuY29tIHNpZ24xEzARBgNVBAoMClRlbnBheS5jb20xHTAbBgNVBAsMFFRl
 
 ### 初始化 {#init}
 
-```php
+请按照你的商户号所能接入的方式选择对应实例化客户端， APIv2 & APIv3 可以融合进同一个实例，本站默认以 **融合客户端实例($instance)** 方式介绍每一个接口的请求用法。
+
+::: code-group
+
+```php [APIv3 微信支付公钥 模式]
 require_once('vendor/autoload.php');
 
 use WeChatPay\Builder;
@@ -132,46 +136,93 @@ $merchantId = '190000****';
 $merchantPrivateKeyFilePath = 'file:///path/to/merchant/apiclient_key.pem';
 $merchantPrivateKeyInstance = Rsa::from($merchantPrivateKeyFilePath, Rsa::KEY_TYPE_PRIVATE);
 
-// 「商户API证书」，文件路径假定为 `/path/to/merchant/apiclient_cert.pem`
-$merchantCertificateFilePath = '/path/to/merchant/apiclient_cert.pem';
+// 「商户API证书」的「证书序列号」
+$merchantCertificateSerial = '3775B6A45ACD588826D15E583A95F5DD********';
+
+// 从本地文件中加载「微信支付公钥」，用来验证微信支付应答的签名
+$platformPublicKeyFilePath = 'file:///path/to/wechatpay/publickey.pem';
+$platformPublicKeyInstance = Rsa::from($platformPublicKeyFilePath, Rsa::KEY_TYPE_PUBLIC);
+
+// 「微信支付公钥」的「微信支付公钥ID」
+// 需要在 商户平台 -> 账户中心 -> API安全 查询
+$platformPublicKeyId = 'PUB_KEY_ID_01142321349124100000000000********';
+
+// 构造一个 APIv3 客户端实例(微信支付公钥模式)
+$instance = Builder::factory([
+  'mchid'      => $merchantId,
+  'serial'     => $merchantCertificateSerial,
+  'privateKey' => $merchantPrivateKeyInstance,
+  'certs'      => [
+    $platformPublicKeyId => $platformPublicKeyInstance,
+  ]
+]);
+```
+
+```php [APIv3 平台证书 模式]
+require_once('vendor/autoload.php');
+
+use WeChatPay\Builder;
+use WeChatPay\Crypto\Rsa;
+
+// 商户号
+$merchantId = '190000****';
+
+// 从本地文件中加载「商户API私钥」，用于生成请求的签名
+$merchantPrivateKeyFilePath = 'file:///path/to/merchant/apiclient_key.pem';
+$merchantPrivateKeyInstance = Rsa::from($merchantPrivateKeyFilePath, Rsa::KEY_TYPE_PRIVATE);
 
 // 「商户API证书」的「证书序列号」
 $merchantCertificateSerial = '3775B6A45ACD588826D15E583A95F5DD********';
 
 // 从本地文件中加载「微信支付平台证书」，可由内置的CLI工具下载到，用来验证微信支付应答的签名
 $platformCertificateFilePath  = 'file:///path/to/wechatpay/certificate.pem';
-$onePlatformPublicKeyInstance = Rsa::from($platformCertificateFilePath, Rsa::KEY_TYPE_PUBLIC);
+$platformPublicKeyInstance    = Rsa::from($platformCertificateFilePath, Rsa::KEY_TYPE_PUBLIC);
 
 // 「微信支付平台证书」的「证书序列号」
 // 可以从「微信支付平台证书」文件解析，也可以在 商户平台 -> 账户中心 -> API安全 查询到
 $platformCertificateSerial = '7132D72A03E93CDDF8C03BBD1F37EEDF********';
 
-// 从本地文件中加载「微信支付公钥」，用来验证微信支付应答的签名
-$platformPublicKeyFilePath    = 'file:///path/to/wechatpay/publickey.pem';
-$twoPlatformPublicKeyInstance = Rsa::from($platformPublicKeyFilePath, Rsa::KEY_TYPE_PUBLIC);
-
-// 「微信支付公钥」的「微信支付公钥ID」
-// 需要在 商户平台 -> 账户中心 -> API安全 查询
-$platformPublicKeyId = 'PUB_KEY_ID_01142321349124100000000000********';
-
-// 构造一个 APIv2 & APIv3 客户端实例
+// 构造一个 APIv3 客户端实例(平台证书模式)
 $instance = Builder::factory([
   'mchid'      => $merchantId,
   'serial'     => $merchantCertificateSerial,
   'privateKey' => $merchantPrivateKeyInstance,
   'certs'      => [
-    $platformCertificateSerial => $onePlatformPublicKeyInstance,
-    $platformPublicKeyId       => $twoPlatformPublicKeyInstance,
-  ],
-  // 使用APIv2(密钥32字节)时，需要至少设置 `secret`字段
+    $platformCertificateSerial => $platformPublicKeyInstance,
+  ]
+]);
+```
+
+```php [APIv2 客户端]
+require_once('vendor/autoload.php');
+
+use WeChatPay\Builder;
+
+// 商户号
+$merchantId = '190000****';
+
+// 「商户API私钥」的本地文件路径
+$merchantPrivateKeyFilePath = '/path/to/merchant/apiclient_key.pem';
+
+// 「商户API证书」的本地文件路径
+$merchantCertificateFilePath = '/path/to/merchant/apiclient_cert.pem';
+
+// 构造一个 APIv2 客户端实例
+$instance = Builder::factory([
+  'mchid'      => $merchantId,
+  'serial'     => '',
+  'certs'      => [''],
+  // APIv2(密钥32字节)
   'secret'     => $apiv2Key,
-  // 接口不要求「商户API证书」的场景，例如仅收款merchant对象参数可选
+  // 部分接口要求使用「商户API证书」的场景，需要额外配置如下参数
   'merchant'   => [
     'cert' => $merchantCertificateFilePath,
     'key'  => $merchantPrivateKeyFilePath
   ]
 ]);
 ```
+
+:::
 
 ### Native下单 {#v3.pay.transactions.native.post}
 

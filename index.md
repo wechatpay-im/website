@@ -12,8 +12,8 @@ hero:
   tagline: WeChat Pay PHP Community Edition
   actions:
     - theme: brand
-      text: 指南
-      link: /guide/
+      text: 快速开始
+      link: /guide/getting-started
   image:
       src: /avatar.webp
       alt: elephant-bubble
