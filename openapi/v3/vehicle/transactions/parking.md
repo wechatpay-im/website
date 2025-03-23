@@ -22,7 +22,7 @@ description: 商户请求扣费受理接口，会完成订单受理。微信支�
 | profit_sharing {data-indent=1} | string | 分账标识<br/>`Y` \| `N` 枚举值之一
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=2} | integer | 订单金额
-| currency {data-required data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | parking_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 停车场景信息
 | parking_id {data-required data-indent=2} | string | 停车入场id
 | plate_number {data-required data-indent=2} | string | 车牌号
@@ -271,21 +271,21 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_openid {data-indent=1} | string | 用户在sub_appid下的标识
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 订单金额信息
 | total {data-required data-indent=1} | integer | 订单金额
-| currency {data-indent=1} | string | 货币类型
+| currency {data-required data-indent=1} | string | 货币类型<br/>`CNY` 枚举值
 | payer_total {data-indent=1} | integer | 用户实际支付金额
 | discount_total {data-indent=1} | integer | 折扣
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠信息
 | coupon_id {data-required data-indent=1} | string | 券ID
 | name {data-indent=1} | string | 优惠名称
-| scope {data-indent=1} | string | 优惠范围
-| type {data-indent=1} | string | 优惠类型
+| scope {data-indent=1} | string | 优惠范围<br/>`SINGLE` \| `GLOBAL` 枚举值之一
+| type {data-indent=1} | string | 优惠类型<br/>`CASH` \| `NOCASH` 枚举值之一
 | stock_id {data-indent=1} | string | 活动ID
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | wechatpay_contribute {data-indent=1} | integer | 微信出资
 | merchant_contribute {data-indent=1} | integer | 商户出资
 | other_contribute {data-indent=1} | integer | 其他出资
-| currency {data-indent=1} | string | 优惠币种
+| currency {data-indent=1} | string | 优惠币种<br/>`CNY` 枚举值
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534352) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012534427) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_3.shtml)

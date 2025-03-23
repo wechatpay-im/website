@@ -36,6 +36,10 @@
 | notify_url {data-required data-indent=1} | string | 商户回调地址
 | openid {data-indent=1} | string | 用户标识
 | need_user_confirm {data-indent=1} | boolean | 是否需要用户确认
+| device {data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
+| start_device_id {data-indent=2} | string | 服务开始的设备ID
+| end_device_id {data-indent=2} | string | 服务结束的设备ID
+| materiel_no {data-indent=2} | string | 物料编码
 
 {.im-table #request}
 
@@ -78,6 +82,11 @@ $instance->v3->payscore->serviceorder->postAsync([
     'notify_url'           => 'https://api.test.com',
     'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'need_user_confirm'    => true,
+    'device'               => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -123,6 +132,11 @@ $instance->chain('v3/payscore/serviceorder')->postAsync([
     'notify_url'           => 'https://api.test.com',
     'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'need_user_confirm'    => true,
+    'device'               => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -168,6 +182,11 @@ $instance['v3/payscore/serviceorder']->postAsync([
     'notify_url'           => 'https://api.test.com',
     'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'need_user_confirm'    => true,
+    'device'               => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -213,6 +232,11 @@ $response = $instance->v3->payscore->serviceorder->post([
     'notify_url'           => 'https://api.test.com',
     'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'need_user_confirm'    => true,
+    'device'               => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -255,6 +279,11 @@ $response = $instance->chain('v3/payscore/serviceorder')->post([
     'notify_url'           => 'https://api.test.com',
     'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'need_user_confirm'    => true,
+    'device'               => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -297,6 +326,11 @@ $response = $instance['v3/payscore/serviceorder']->post([
     'notify_url'           => 'https://api.test.com',
     'openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'need_user_confirm'    => true,
+    'device'               => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -311,8 +345,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_order_no {data-required} | string | 商户服务订单号
 | service_id {data-required} | string | 服务ID
 | service_introduction {data-required} | string | 服务信息
-| state {data-required} | string | 服务订单状态
-| state_description | string | 订单状态说明
+| state {data-required} | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description | string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费名称
 | amount {data-indent=1} | number | 付费金额
@@ -324,7 +358,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-indent=1} | number | 优惠金额
 | count {data-indent=1} | number | 优惠数量
 | risk_fund | object {data-tooltip="对应PHP的array"} | 服务风险金
-| name {data-required data-indent=1} | string | 风险名称
+| name {data-required data-indent=1} | string | 风险名称<br/>`DEPOSIT` \| `ADVANCE` \| `CASH_DEPOSIT` \| `ESTIMATE_ORDER_COST` 枚举值之一
 | amount {data-required data-indent=1} | number | 风险金额
 | description {data-indent=1} | string | 风险说明
 | time_range | object {data-tooltip="对应PHP的array"} | 服务时间段
@@ -342,7 +376,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/create-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587900) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647418) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/create-service-order.html)
 
 ## 查询支付分订单 {#get}
 
@@ -450,8 +484,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-required} | string | 服务商公众号ID
 | mchid {data-required} | string | 服务商商户号
 | service_introduction {data-required} | string | 服务信息
-| state {data-required} | string | 服务订单状态
-| state_description | string | 订单状态说明
+| state {data-required} | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description | string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费名称
 | amount {data-indent=1} | number | 付费金额
@@ -463,27 +497,27 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-indent=1} | number | 优惠金额
 | count {data-indent=1} | number | 优惠数量
 | risk_fund | object {data-tooltip="对应PHP的array"} | 服务风险金
-| name {data-required data-indent=1} | string | 风险名称
+| name {data-required data-indent=1} | string | 风险名称<br/>`DEPOSIT` \| `ADVANCE` \| `CASH_DEPOSIT` \| `ESTIMATE_ORDER_COST` 枚举值之一
 | amount {data-required data-indent=1} | number | 风险金额
 | description {data-indent=1} | string | 风险说明
 | total_amount | number | 总金额
 | need_collection | boolean | 是否需要收款
 | collection | object {data-tooltip="对应PHP的array"} | 收款信息
-| state {data-required data-indent=1} | string | 收款状态
+| state {data-required data-indent=1} | string | 收款状态<br/>`USER_PAYING` \| `USER_PAID` 枚举值之一
 | total_amount {data-indent=1} | number | 总收款金额
 | paying_amount {data-indent=1} | number | 待收金额
 | paid_amount {data-indent=1} | number | 已收金额
 | details {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 收款明细列表
 | seq {data-indent=2} | number | 收款序号
 | amount {data-indent=2} | number | 单笔收款金额
-| paid_type {data-indent=2} | string | 收款成功渠道
+| paid_type {data-indent=2} | string | 收款成功渠道<br/>`NEWTON` \| `MCH` 枚举值之一
 | paid_time {data-indent=2} | string | 收款成功时间
 | transaction_id {data-indent=2} | string | 微信支付交易单号
 | promotion_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 优惠功能
 | coupon_id {data-required data-indent=3} | string | 券ID
 | name {data-indent=3} | string | 优惠名称
-| scope {data-indent=3} | string | 优惠范围
-| type {data-indent=3} | string | 优惠类型
+| scope {data-indent=3} | string | 优惠范围<br/>`SINGLE` \| `GLOBAL` 枚举值之一
+| type {data-indent=3} | string | 优惠类型<br/>`CASH` \| `NOCASH` 枚举值之一
 | amount {data-required data-indent=3} | number | 优惠券面额
 | stock_id {data-indent=3} | string | 活动ID
 | wechatpay_contribute {data-indent=3} | number | 微信出资

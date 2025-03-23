@@ -10,22 +10,23 @@ description: 连锁品牌方案，是微信支付为「连锁经营品牌商家�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sub_mchid {data-required data-indent=1} | string | 子商户号
-| store_basics {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店基础信息
+| sub_mchid {data-indent=1} | string | 子商户号
+| store_basics {data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店基础信息
 | store_reference_id {data-indent=2} | string | 商家门店编号
-| brand_name {data-required data-indent=2} | string | 品牌名称
+| brand_name {data-indent=2} | string | 品牌名称
 | store_name {data-required data-indent=2} | string | 门店名称
 | branch_name {data-indent=2} | string | 分店名称
-| store_address {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店地址信息
-| address_code {data-indent=2} | string | 门店省市编码
+| brand_id {data-indent=2} | number | 品牌ID
+| store_address {data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店地址信息
+| address_code {data-required data-indent=2} | string | 门店省市编码
 | address_detail {data-required data-indent=2} | string | 门店地址
 | address_complements {data-indent=2} | string | 门店地址辅助描述
 | longitude {data-indent=2} | string | 门店经度
 | latitude {data-indent=2} | string | 门店纬度
-| store_business {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店经营信息
+| store_business {data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店经营信息
 | service_phone {data-indent=2} | string | 门店服务电话
 | business_hours {data-indent=2} | string | 门店经营时间
-| store_recipient {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 门店收款信息
+| store_recipient {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 门店收款信息
 | mchid {data-required data-indent=2} | string | 门店收款商户号
 | company_name {data-indent=2} | string | 门店收款主体
 
@@ -38,25 +39,26 @@ $instance->v3->merchantStore->stores->postAsync([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_basics'    => [
-      'store_reference_id' => '',
-      'brand_name'         => '',
-      'store_name'         => '',
-      'branch_name'        => '',
+      'store_reference_id' => 'MDL001',
+      'brand_name'         => '麦当劳',
+      'store_name'         => '麦当劳',
+      'branch_name'        => '海岸城店',
+      'brand_id'           => 1001,
     ],
     'store_address'   => [
       'address_code'        => '440305',
-      'address_detail'      => '',
-      'address_complements' => '',
-      'longitude'           => '',
-      'latitude'            => '',
+      'address_detail'      => '深南大道10000号腾讯大厦1楼',
+      'address_complements' => '地铁A口右侧100米',
+      'longitude'           => '112.63484',
+      'latitude'            => '37.75464',
     ],
     'store_business'  => [
       'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -71,25 +73,26 @@ $instance->chain('v3/merchant-store/stores')->postAsync([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_basics'    => [
-      'store_reference_id' => '',
-      'brand_name'         => '',
-      'store_name'         => '',
-      'branch_name'        => '',
+      'store_reference_id' => 'MDL001',
+      'brand_name'         => '麦当劳',
+      'store_name'         => '麦当劳',
+      'branch_name'        => '海岸城店',
+      'brand_id'           => 1001,
     ],
     'store_address'   => [
       'address_code'        => '440305',
-      'address_detail'      => '',
-      'address_complements' => '',
-      'longitude'           => '',
-      'latitude'            => '',
+      'address_detail'      => '深南大道10000号腾讯大厦1楼',
+      'address_complements' => '地铁A口右侧100米',
+      'longitude'           => '112.63484',
+      'latitude'            => '37.75464',
     ],
     'store_business'  => [
       'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -104,25 +107,26 @@ $instance['v3/merchant-store/stores']->postAsync([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_basics'    => [
-      'store_reference_id' => '',
-      'brand_name'         => '',
-      'store_name'         => '',
-      'branch_name'        => '',
+      'store_reference_id' => 'MDL001',
+      'brand_name'         => '麦当劳',
+      'store_name'         => '麦当劳',
+      'branch_name'        => '海岸城店',
+      'brand_id'           => 1001,
     ],
     'store_address'   => [
       'address_code'        => '440305',
-      'address_detail'      => '',
-      'address_complements' => '',
-      'longitude'           => '',
-      'latitude'            => '',
+      'address_detail'      => '深南大道10000号腾讯大厦1楼',
+      'address_complements' => '地铁A口右侧100米',
+      'longitude'           => '112.63484',
+      'latitude'            => '37.75464',
     ],
     'store_business'  => [
       'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -137,25 +141,26 @@ $response = $instance->v3->merchantStore->stores->post([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_basics'    => [
-      'store_reference_id' => '',
-      'brand_name'         => '',
-      'store_name'         => '',
-      'branch_name'        => '',
+      'store_reference_id' => 'MDL001',
+      'brand_name'         => '麦当劳',
+      'store_name'         => '麦当劳',
+      'branch_name'        => '海岸城店',
+      'brand_id'           => 1001,
     ],
     'store_address'   => [
       'address_code'        => '440305',
-      'address_detail'      => '',
-      'address_complements' => '',
-      'longitude'           => '',
-      'latitude'            => '',
+      'address_detail'      => '深南大道10000号腾讯大厦1楼',
+      'address_complements' => '地铁A口右侧100米',
+      'longitude'           => '112.63484',
+      'latitude'            => '37.75464',
     ],
     'store_business'  => [
       'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -167,25 +172,26 @@ $response = $instance->chain('v3/merchant-store/stores')->post([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_basics'    => [
-      'store_reference_id' => '',
-      'brand_name'         => '',
-      'store_name'         => '',
-      'branch_name'        => '',
+      'store_reference_id' => 'MDL001',
+      'brand_name'         => '麦当劳',
+      'store_name'         => '麦当劳',
+      'branch_name'        => '海岸城店',
+      'brand_id'           => 1001,
     ],
     'store_address'   => [
       'address_code'        => '440305',
-      'address_detail'      => '',
-      'address_complements' => '',
-      'longitude'           => '',
-      'latitude'            => '',
+      'address_detail'      => '深南大道10000号腾讯大厦1楼',
+      'address_complements' => '地铁A口右侧100米',
+      'longitude'           => '112.63484',
+      'latitude'            => '37.75464',
     ],
     'store_business'  => [
       'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -197,25 +203,26 @@ $response = $instance['v3/merchant-store/stores']->post([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_basics'    => [
-      'store_reference_id' => '',
-      'brand_name'         => '',
-      'store_name'         => '',
-      'branch_name'        => '',
+      'store_reference_id' => 'MDL001',
+      'brand_name'         => '麦当劳',
+      'store_name'         => '麦当劳',
+      'branch_name'        => '海岸城店',
+      'brand_id'           => 1001,
     ],
     'store_address'   => [
       'address_code'        => '440305',
-      'address_detail'      => '',
-      'address_complements' => '',
-      'longitude'           => '',
-      'latitude'            => '',
+      'address_detail'      => '深南大道10000号腾讯大厦1楼',
+      'address_complements' => '地铁A口右侧100米',
+      'longitude'           => '112.63484',
+      'latitude'            => '37.75464',
     ],
     'store_business'  => [
       'service_phone'  => '0755-86013388',
       'business_hours' => '周一至周五 09:00-20:00|周六至周日 10:00-22:00',
     ],
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -230,4 +237,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://kf.qq.com/faq/2009096ZF7Jf200909UVbY73.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013948546) [官方文档](https://kf.qq.com/faq/2009096ZF7Jf200909UVbY73.html)

@@ -35,6 +35,10 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 | profit_sharing {data-indent=1} | boolean | 微信支付服务分账标记
 | complete_time {data-indent=1} | string | 完结服务时间
 | goods_tag {data-indent=1} | string | 订单优惠标记
+| device {data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
+| start_device_id {data-indent=2} | string | 服务开始的设备ID
+| end_device_id {data-indent=2} | string | 服务结束的设备ID
+| materiel_no {data-indent=2} | string | 物料编码
 
 {.im-table #request}
 
@@ -72,6 +76,11 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->complete->postAs
     'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -112,6 +121,11 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/complete')->po
     'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -152,6 +166,11 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/complete']->postAsync
     'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -192,6 +211,11 @@ $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->comp
     'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -229,6 +253,11 @@ $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/co
     'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -266,6 +295,11 @@ $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/complete'
     'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -279,4 +313,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_5.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/complete-partner-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012692408) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013138598) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_5.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/complete-partner-service-order.html)

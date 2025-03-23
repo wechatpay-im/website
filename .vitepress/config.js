@@ -206,7 +206,7 @@ function openapiSidebar() {
   return [
     {
       text: 'APIv2',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: '沙箱环境',

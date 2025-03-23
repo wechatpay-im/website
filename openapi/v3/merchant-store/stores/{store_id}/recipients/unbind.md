@@ -1,6 +1,6 @@
 ---
 title: 解除门店收款信息绑定
-description: 
+description: 该API接口可用于给一个特定的门店解除收款商户号。解除成功后，商户号不能再为门店收款。目前只支持解除此前收款方拒绝的收款商户号。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -11,8 +11,8 @@ description:
 | --- | --- | ---
 | store_id {data-required} | integer | 微信支付商户门店ID
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sub_mchid {data-required data-indent=1} | string | 子商户号
-| store_recipient {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 收款门店信息
+| sub_mchid {data-indent=1} | string | 子商户号
+| store_recipient {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 收款门店信息
 | mchid {data-required data-indent=2} | string | 门店收款商户号
 | company_name {data-indent=2} | string | 门店收款主体
 
@@ -26,8 +26,8 @@ $instance->v3->merchantStore->stores->_store_id_->recipients->unbind->postAsync(
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -43,8 +43,8 @@ $instance->chain('v3/merchant-store/stores/{store_id}/recipients/unbind')->postA
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -60,8 +60,8 @@ $instance['v3/merchant-store/stores/{store_id}/recipients/unbind']->postAsync([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -77,8 +77,8 @@ $response = $instance->v3->merchantStore->stores->_store_id_->recipients->unbind
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -91,8 +91,8 @@ $response = $instance->chain('v3/merchant-store/stores/{store_id}/recipients/unb
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -105,8 +105,8 @@ $response = $instance['v3/merchant-store/stores/{store_id}/recipients/unbind']->
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -122,3 +122,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | failed_reason {data-indent=1} | string | 绑定当前收款信息失败的原因
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013948580)

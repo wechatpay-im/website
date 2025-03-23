@@ -1,6 +1,6 @@
 ---
 title: 绑定门店收款信息
-description: 
+description: 该API接口可用于给一个特定的门店添加收款商户号。添加绑定成功后，商户号可为门店收款。一个门店目前最多只能添加绑定三个收款商户号，且添加绑定收款主体必须与品牌主主体或已有收款商户主体保持一致。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -26,8 +26,8 @@ $instance->v3->merchantStore->stores->_store_id_->recipients->bind->postAsync([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -43,8 +43,8 @@ $instance->chain('v3/merchant-store/stores/{store_id}/recipients/bind')->postAsy
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -60,8 +60,8 @@ $instance['v3/merchant-store/stores/{store_id}/recipients/bind']->postAsync([
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ])
@@ -77,8 +77,8 @@ $response = $instance->v3->merchantStore->stores->_store_id_->recipients->bind->
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -91,8 +91,8 @@ $response = $instance->chain('v3/merchant-store/stores/{store_id}/recipients/bin
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -105,8 +105,8 @@ $response = $instance['v3/merchant-store/stores/{store_id}/recipients/bind']->po
   'json' => [
     'sub_mchid'       => '1900000109',
     'store_recipient' => [[
-      'mchid'        => '',
-      'company_name' => '',
+      'mchid'        => '1230000109',
+      'company_name' => '腾讯科技（深圳）有限公司',
     ],],
   ],
 ]);
@@ -122,3 +122,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | failed_reason {data-indent=1} | string | 绑定当前收款信息失败的原因
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013948579)

@@ -1,6 +1,6 @@
 ---
 title: 完结支付分订单
-description: 完结微信支付分订单。用户使用服务完成后，商户可通过此接口完结订单。**前置条件：**服务订单状态为“进行中”且订单状态说明需为
+description: 完结微信支付分订单。用户使用服务完成后，商户可通过此接口完结订单。**前置条件：** 服务订单状态为“进行中”且订单状态说明需为
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -33,6 +33,10 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 | end_location {data-indent=2} | string | 服务结束地点
 | profit_sharing {data-indent=1} | boolean | 微信支付服务分账标记
 | goods_tag {data-indent=1} | string | 订单优惠标记
+| device {data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
+| start_device_id {data-indent=2} | string | 服务开始的设备ID
+| end_device_id {data-indent=2} | string | 服务结束的设备ID
+| materiel_no {data-indent=2} | string | 物料编码
 
 {.im-table #request}
 
@@ -68,6 +72,11 @@ $instance->v3->payscore->serviceorder->_out_order_no_->complete->postAsync([
     ],
     'profit_sharing' => true,
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -106,6 +115,11 @@ $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->postAsync(
     ],
     'profit_sharing' => true,
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -144,6 +158,11 @@ $instance['v3/payscore/serviceorder/{out_order_no}/complete']->postAsync([
     ],
     'profit_sharing' => true,
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -182,6 +201,11 @@ $response = $instance->v3->payscore->serviceorder->_out_order_no_->complete->pos
     ],
     'profit_sharing' => true,
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -217,6 +241,11 @@ $response = $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')
     ],
     'profit_sharing' => true,
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -252,6 +281,11 @@ $response = $instance['v3/payscore/serviceorder/{out_order_no}/complete']->post(
     ],
     'profit_sharing' => true,
     'goods_tag'      => 'goods_tag',
+    'device'         => [
+      'start_device_id' => 'HG123456',
+      'end_device_id'   => 'HG123456',
+      'materiel_no'     => 'example_materiel_no',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -266,8 +300,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_order_no {data-required} | string | 商户服务订单号
 | service_id {data-required} | string | 服务ID
 | service_introduction {data-required} | string | 服务信息
-| state {data-required} | string | 服务订单状态
-| state_description | string | 订单状态说明
+| state {data-required} | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description | string | 订单状态说明<br/>`USER_CONFIRM` \| `MCH_COMPLETE` 枚举值之一
 | total_amount {data-required} | number | 商户收款总金额
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-required data-indent=1} | string | 付费名称
@@ -280,7 +314,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-required data-indent=1} | number | 优惠金额
 | count {data-indent=1} | number | 优惠数量
 | risk_fund {data-required} | object {data-tooltip="对应PHP的array"} | 服务风险金
-| name {data-required data-indent=1} | string | 风险名称
+| name {data-required data-indent=1} | string | 风险名称<br/>`DEPOSIT` \| `ADVANCE` \| `CASH_DEPOSIT` \| `ESTIMATE_ORDER_COST` 枚举值之一
 | amount {data-required data-indent=1} | number | 风险金额
 | description {data-indent=1} | string | 风险说明
 | time_range | object {data-tooltip="对应PHP的array"} | 服务时间段
@@ -295,4 +329,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [USER_CONFIRM:用户确认] [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_5.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/complete-service-order.html)
+参阅 [USER_CONFIRM:用户确认] [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587955) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647421) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_5.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/complete-service-order.html)
