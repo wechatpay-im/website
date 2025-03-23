@@ -338,6 +338,81 @@ print_r(json_decode((string) $response->getBody(), true));
 
 :::
 
+::: tip 后付费项目(`post_payments`) 商户需要按照所属行业规程，有如下固定传参要求:
+:::
+
+::: code-group
+
+```php [二轮电动车充电桩]
+'post_payments' => [
+  [
+    'name'        => '收费标准',  // 固定值
+    'description' => '1元/1小时', // 示例值
+  ],
+],
+```
+
+```php [充电宝]
+'post_payments' => [
+  [
+    'name'        => '收费标准',                   // 固定值
+    'description' => '3元/60分钟，每24小时封顶30元', // 示例值
+  ],
+],
+```
+
+```php [共享单车]
+'post_payments' => [
+  [
+    'name'        => '计费规则',            // 固定值
+    'description' => '骑行费用1.5元/30分钟', // 示例值
+  ],
+],
+```
+
+```php [快递行业]
+'post_payments' => [
+  [
+    'name'   => '预估金额', // 固定值
+    'amount' => 1200,      // 示例值
+  ],
+],
+```
+
+```php [智慧零售(无人设备)]
+'post_payments' => [], // 固定传空值，或者不传键值
+```
+
+```php [汽车充电桩]
+'post_payments' => [
+  [
+    'name'        => '计费规则',     // 固定值
+    'description' => '电费0.1元/度', // 示例值
+  ],
+],
+```
+
+```php [汽车租赁]
+'post_payments' => [
+  [
+    'name'        => '免押租车规则',                                        // 固定值
+    'description' => '还车后30天内按费用标准核查车损、违章等费用，按实际费用扣费', // 示例值
+  ],
+],
+```
+
+```php [酒店行业]
+'post_payments' => [
+  [
+    'name'        => '酒店房费',             // 固定值
+    'amount'      => 1200,                 // 示例值
+    'description' => '北京中关村某酒店标准间', // 示例值
+  ],
+],
+```
+
+:::
+
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | appid {data-required} | string | 公众账号ID
