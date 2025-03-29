@@ -1538,6 +1538,8 @@ function openapiSidebar() {
                 ['查询所有退款', '/openapi/v3/global/refunds#get'],
                 ['查询单笔退款(商户单号)', '/openapi/v3/global/refunds/out-refund-no/{out_refund_no}'],
                 ['查询单笔退款(平台单号)', '/openapi/v3/global/refunds/id/{refund_id}'],
+                ['充值退款余额查询(直连)', '/openapi/v3/global/refund/recharge-balance'],
+                ['充值退款余额查询(机构)', '/openapi/v3/global/refund/partner/recharge-balance/sub-mchid/{sub_mchid}'],
               ].map(transArrayItem),
             },
             {
