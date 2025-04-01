@@ -70,8 +70,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| result {data-required} | string | 撤销状态
+| result {data-required} | string | 撤销状态<br/>`SUCCESS` \| `FAIL` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014090672)

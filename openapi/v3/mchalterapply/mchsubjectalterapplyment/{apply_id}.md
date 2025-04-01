@@ -73,7 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | merchant_code {data-required} | string | 微信支付商户号
 | apply_id {data-required} | string | 申请单号
 | out_request_no {data-required} | string | 业务申请编号
-| state {data-required} | string | 申请单状态
+| state {data-required} | string | 申请单状态<br/>`APPLYMENT_STATE_AUDITING` \| `APPLYMENT_STATE_REJECTED` \| `APPLYMENT_STATE_MODIFING` \| `APPLYMENT_STATE_FINISHED` \| `APPLYMENT_STATE_CANCELED` \| `APPLYMENT_STATE_EDITTING` 枚举值之一
 | audit_reject_reason | string | 总体驳回原因
 | audit_reject_detail | object[] {data-tooltip="对应PHP的array"} | 驳回原因详情
 | param_name {data-indent=1} | string | 参数名称
@@ -81,4 +81,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014090655)

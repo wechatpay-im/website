@@ -12,7 +12,7 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | merchant_code {data-required data-indent=1} | string | 商户号
 | out_request_no {data-required data-indent=1} | string | 业务申请编号
-| organization_type {data-required data-indent=1} | string | 主体类型
+| organization_type {data-required data-indent=1} | string | 主体类型<br/>`SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` \| `SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_MICRO` 枚举值之一
 | finance_institution {data-required data-indent=1} | boolean | 是否金融机构
 | business_license_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 营业执照信息
 | license_number {data-required data-indent=2} | string | 营业执照注册号
@@ -23,7 +23,7 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | license_period_begin {data-indent=2} | string | 有效期开始时间
 | license_period_end {data-indent=2} | string | 有效期结束时间
 | certificate_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 登记证书信息
-| cert_type {data-required data-indent=2} | string | 证书类型
+| cert_type {data-required data-indent=2} | string | 证书类型<br/>`CERTIFICATE_TYPE_2388` \| `CERTIFICATE_TYPE_2389` \| `CERTIFICATE_TYPE_2389` \| `CERTIFICATE_TYPE_2394` \| `CERTIFICATE_TYPE_2395` \| `CERTIFICATE_TYPE_2396` \| `CERTIFICATE_TYPE_2520` \| `CERTIFICATE_TYPE_2521` \| `CERTIFICATE_TYPE_2522` \| `CERTIFICATE_TYPE_2399` \| `CERTIFICATE_TYPE_2400` 枚举值之一
 | cert_number {data-required data-indent=2} | string | 证书编号
 | cert_copy {data-required data-indent=2} | string | 证书照片
 | merchant_name {data-required data-indent=2} | string | 商户名称
@@ -32,27 +32,27 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | cert_period_begin {data-required data-indent=2} | string | 有效期开始时间
 | cert_period_end {data-required data-indent=2} | string | 有效期结束时间
 | finance_institution_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 金融机构许可证
-| finance_type {data-required data-indent=2} | string | 金融机构类型
+| finance_type {data-required data-indent=2} | string | 金融机构类型<br/>`FINANCE_TYPE_BANK_AGENT` \| `FINANCE_TYPE_PAYMENT_AGENT` \| `FINANCE_TYPE_INSURANCE` \| `FINANCE_TYPE_TRADE_AND_SETTLE` \| `FINANCE_TYPE_OTHER` 枚举值之一
 | finance_license_pics {data-required data-indent=2} | string[] | 金融机构许可证图片
 | legal_person_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 法人身份信息
-| id_holder_type {data-required data-indent=2} | string | 证件持有人类型
-| id_doc_type {data-indent=2} | string | 证件类型
+| id_holder_type {data-required data-indent=2} | string | 证件持有人类型<br/>`LEGAL` \| `SUPER` 枚举值之一
+| id_doc_type {data-indent=2} | string | 证件类型<br/>`IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | authorize_letter_copy {data-indent=2} | string | 法定代表人说明函
 | card_front {data-indent=2} | string | 证件正面照片
 | card_back {data-indent=2} | string | 证件反面照片
-| card_name {data-indent=2} | string | 证件姓名
-| card_number {data-indent=2} | string | 证件号码
-| card_address {data-indent=2} | string | 证件居住地址
+| card_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
+| card_address {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件居住地址
 | card_period_begin {data-indent=2} | string | 证件有效期开始时间
 | card_period_end {data-indent=2} | string | 证件有效期结束时间
 | as_ubo {data-indent=2} | boolean | 经营者/法人是否为受益人
 | ubo_info_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 最终受益人信息列表
-| id_doc_type {data-required data-indent=2} | string | 证件类型
+| id_doc_type {data-required data-indent=2} | string | 证件类型<br/>`IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
 | card_front {data-required data-indent=2} | string | 证件正面照片
 | card_back {data-indent=2} | string | 证件反面照片
-| card_name {data-required data-indent=2} | string | 证件姓名
-| card_number {data-required data-indent=2} | string | 证件号码
-| card_address {data-required data-indent=2} | string | 证件居住地址
+| card_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件姓名
+| card_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
+| card_address {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件居住地址
 | card_period_begin {data-required data-indent=2} | string | 证件有效期开始时间
 | card_period_end {data-required data-indent=2} | string | 证件有效期结束时间
 | addition {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料列表
@@ -60,6 +60,8 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | openaccount_approval {data-indent=2} | string[] | 开户核准通知书
 | legal_other_prove {data-indent=2} | string[] | 法人身份辅助证明
 | agency_prove {data-indent=2} | string[] | 发证机关证明
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -124,6 +126,9 @@ $instance->v3->mchalterapply->mchsubjectalterapplyment->postAsync([
       'legal_other_prove'        => ['MediaId'],
       'agency_prove'             => ['MediaId'],
     ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -192,6 +197,9 @@ $instance->chain('v3/mchalterapply/mchsubjectalterapplyment')->postAsync([
       'agency_prove'             => ['MediaId'],
     ],
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -258,6 +266,9 @@ $instance['v3/mchalterapply/mchsubjectalterapplyment']->postAsync([
       'legal_other_prove'        => ['MediaId'],
       'agency_prove'             => ['MediaId'],
     ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -326,6 +337,9 @@ $response = $instance->v3->mchalterapply->mchsubjectalterapplyment->post([
       'agency_prove'             => ['MediaId'],
     ],
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -389,6 +403,9 @@ $response = $instance->chain('v3/mchalterapply/mchsubjectalterapplyment')->post(
       'legal_other_prove'        => ['MediaId'],
       'agency_prove'             => ['MediaId'],
     ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -454,6 +471,9 @@ $response = $instance['v3/mchalterapply/mchsubjectalterapplyment']->post([
       'agency_prove'             => ['MediaId'],
     ],
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -466,4 +486,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_3_1.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014090649)
