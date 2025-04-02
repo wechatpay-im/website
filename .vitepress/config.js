@@ -862,6 +862,8 @@ function openapiSidebar() {
                 ['查询赔付商户结果(微信单)', '/openapi/v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_id}'],
                 ['请求赔付用户运费', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-shipping-cost-compensation-bills'],
                 ['查询赔付运费结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-shipping-cost-compensation-bills/out-bill-no/{out_bill_no}'],
+                ['发起赔付保司保费', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills'],
+                ['查询赔付保费结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills/{out_bill_no}'],
               ].map(transArrayItem),
             },
           ],

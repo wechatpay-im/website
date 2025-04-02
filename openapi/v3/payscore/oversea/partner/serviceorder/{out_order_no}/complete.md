@@ -43,6 +43,7 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 
 ```php [异步纯链式]
 $instance->v3->payscore->oversea->partner->serviceorder->_out_order_no_->complete->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
@@ -84,6 +85,7 @@ $instance->v3->payscore->oversea->partner->serviceorder->_out_order_no_->complet
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete')->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
@@ -125,6 +127,7 @@ $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_order_no}/comple
 
 ```php [异步属性式]
 $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete']->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
@@ -166,6 +169,7 @@ $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete']->p
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->oversea->partner->serviceorder->_out_order_no_->complete->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
@@ -204,6 +208,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete')->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
@@ -242,6 +247,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete']->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',

@@ -48,6 +48,9 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | name {data-indent=3} | string | 门店名称
 | area_code {data-indent=3} | string | 门店行政区划码
 | address {data-indent=3} | string | 门店详细地址
+| user_type {data-indent=1} | string | 证件类型(指定身份支付)<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` 枚举值之一
+| user_creid {data-indent=1} | string | 证件号(指定身份支付)
+| user_truename {data-indent=1} | string | 姓名(指定身份支付)
 
 {.im-table #request}
 
@@ -96,6 +99,9 @@ $instance->v2->pay->unifiedorder->postAsync([
         'address'   => '科技园中一路腾讯大厦',
       ],
     ]),
+    'user_type'        => 'IDCARD',
+    'user_creid'       => '43102119910910512X',
+    'user_truename'    => '周星星',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -147,6 +153,9 @@ $instance->chain('v2/pay/unifiedorder')->postAsync([
         'address'   => '科技园中一路腾讯大厦',
       ],
     ]),
+    'user_type'        => 'IDCARD',
+    'user_creid'       => '43102119910910512X',
+    'user_truename'    => '周星星',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -198,6 +207,9 @@ $instance['v2/pay/unifiedorder']->postAsync([
         'address'   => '科技园中一路腾讯大厦',
       ],
     ]),
+    'user_type'        => 'IDCARD',
+    'user_creid'       => '43102119910910512X',
+    'user_truename'    => '周星星',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -249,6 +261,9 @@ $response = $instance->v2->pay->unifiedorder->post([
         'address'   => '科技园中一路腾讯大厦',
       ],
     ]),
+    'user_type'        => 'IDCARD',
+    'user_creid'       => '43102119910910512X',
+    'user_truename'    => '周星星',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -297,6 +312,9 @@ $response = $instance->chain('v2/pay/unifiedorder')->post([
         'address'   => '科技园中一路腾讯大厦',
       ],
     ]),
+    'user_type'        => 'IDCARD',
+    'user_creid'       => '43102119910910512X',
+    'user_truename'    => '周星星',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -345,6 +363,9 @@ $response = $instance['v2/pay/unifiedorder']->post([
         'address'   => '科技园中一路腾讯大厦',
       ],
     ]),
+    'user_type'        => 'IDCARD',
+    'user_creid'       => '43102119910910512X',
+    'user_truename'    => '周星星',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -388,4 +409,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1) [Native官方文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_1) [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1) [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1) [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011935214) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011936530) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011936987) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937163) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011940985) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011936644) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989255) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941377) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011939925) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011983228) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011983265)

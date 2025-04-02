@@ -48,6 +48,7 @@
 
 ```php [异步纯链式]
 $instance->v3->payscore->oversea->partner->serviceorder->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'service_id'           => '2002000000000558128851361561536',
     'appid'                => 'wxd678efh567hg6787',
@@ -98,6 +99,7 @@ $instance->v3->payscore->oversea->partner->serviceorder->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/oversea/partner/serviceorder')->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'service_id'           => '2002000000000558128851361561536',
     'appid'                => 'wxd678efh567hg6787',
@@ -148,6 +150,7 @@ $instance->chain('v3/payscore/oversea/partner/serviceorder')->postAsync([
 
 ```php [异步属性式]
 $instance['v3/payscore/oversea/partner/serviceorder']->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'service_id'           => '2002000000000558128851361561536',
     'appid'                => 'wxd678efh567hg6787',
@@ -198,6 +201,7 @@ $instance['v3/payscore/oversea/partner/serviceorder']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->oversea->partner->serviceorder->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'service_id'           => '2002000000000558128851361561536',
     'appid'                => 'wxd678efh567hg6787',
@@ -245,6 +249,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/oversea/partner/serviceorder')->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'service_id'           => '2002000000000558128851361561536',
     'appid'                => 'wxd678efh567hg6787',
@@ -292,6 +297,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/oversea/partner/serviceorder']->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'json' => [
     'service_id'           => '2002000000000558128851361561536',
     'appid'                => 'wxd678efh567hg6787',
@@ -399,6 +405,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [异步纯链式]
 $instance->v3->payscore->oversea->partner->serviceorder->getAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
@@ -414,6 +421,7 @@ $instance->v3->payscore->oversea->partner->serviceorder->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/oversea/partner/serviceorder')->getAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
@@ -429,6 +437,7 @@ $instance->chain('v3/payscore/oversea/partner/serviceorder')->getAsync([
 
 ```php [异步属性式]
 $instance['v3/payscore/oversea/partner/serviceorder']->getAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
@@ -444,6 +453,7 @@ $instance['v3/payscore/oversea/partner/serviceorder']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->oversea->partner->serviceorder->get([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
@@ -456,6 +466,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/oversea/partner/serviceorder')->get([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
@@ -468,6 +479,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/oversea/partner/serviceorder']->get([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
