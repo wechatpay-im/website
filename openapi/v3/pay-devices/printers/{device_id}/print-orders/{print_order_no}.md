@@ -1,6 +1,6 @@
 ---
 title: 查询订单
-description: 
+description: 服务商查询设备下的打印订单详情
 ---
 
 # {{ $frontmatter.title }} {#get}

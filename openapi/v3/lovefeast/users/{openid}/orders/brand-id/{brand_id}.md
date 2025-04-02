@@ -1,6 +1,6 @@
 ---
 title: 查询用户捐赠单列表
-description: 
+description: 商户可根据品牌ID与用户标识查询捐赠单列表
 ---
 
 # {{ $frontmatter.title }} {#get}

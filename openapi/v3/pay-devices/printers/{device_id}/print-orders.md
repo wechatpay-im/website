@@ -1,6 +1,6 @@
 ---
 title: 小票机打印
-description: 
+description: 服务商控制小票机进行打印。
 ---
 
 # {{ $frontmatter.title }} {#post}

@@ -1580,6 +1580,17 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '微信支付分',
+              collapsed: true,
+              items: [
+                ['创建支付分订单', '/openapi/v3/payscore/oversea/partner/serviceorder#post'],
+                ['查询支付分订单', '/openapi/v3/payscore/oversea/partner/serviceorder#get'],
+                ['取消支付分订单', '/openapi/v3/payscore/oversea/partner/serviceorder/{out_order_no}/cancel'],
+                ['完结支付分订单', '/openapi/v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete'],
+                ['同步支付分订单', '/openapi/v3/payscore/oversea/partner/serviceorder/{out_order_no}/sync'],
+              ].map(transArrayItem),
+            },
+            {
               text: '账单',
               collapsed: true,
               items: [

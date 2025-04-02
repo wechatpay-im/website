@@ -1,6 +1,6 @@
 ---
 title: 扣费受理
-description: 
+description: 商户请求扣费受理接口，会完成订单受理。微信支付进行异步扣款，支付完成后，会将订单支付结果发送给商户。
 ---
 
 # {{ $frontmatter.title }} {#post}

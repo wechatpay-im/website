@@ -1,6 +1,6 @@
 ---
 title: 查询订单
-description: 
+description: 商户通过商户订单号，来查询订单信息
 ---
 
 # {{ $frontmatter.title }} {#get}

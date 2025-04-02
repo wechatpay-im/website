@@ -1,6 +1,6 @@
 ---
 title: 查询用户捐赠单详情
-description: 
+description: 商户根据商户订单号与用户标识查询捐赠单详情
 ---
 
 # {{ $frontmatter.title }} {#get}
