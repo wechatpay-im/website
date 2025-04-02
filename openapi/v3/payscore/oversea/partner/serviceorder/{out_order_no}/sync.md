@@ -13,8 +13,7 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | service_id {data-required data-indent=1} | string | 服务ID
 | sub_mchid {data-required data-indent=1} | string | 子商户号
-| channel_id {data-indent=1} | string | 渠道商商户号
-| type {data-required data-indent=1} | string | 场景类型
+| type {data-required data-indent=1} | string | 场景类型<br/>`Order_Paid` 枚举值
 | detail {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 内容信息详情
 | seq {data-indent=2} | integer | 收款序号
 | paid_time {data-required data-indent=2} | string | 收款成功时间
@@ -30,7 +29,6 @@ $instance->v3->payscore->oversea->partner->serviceorder->_out_order_no_->sync->p
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'sub_mchid'  => '1900000109',
-    'channel_id' => '1230000109',
     'type'       => 'Order_Paid',
     'detail'     => [
       'seq'         => 1,
@@ -51,7 +49,6 @@ $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_order_no}/sync')
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'sub_mchid'  => '1900000109',
-    'channel_id' => '1230000109',
     'type'       => 'Order_Paid',
     'detail'     => [
       'seq'         => 1,
@@ -72,7 +69,6 @@ $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/sync']->postA
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'sub_mchid'  => '1900000109',
-    'channel_id' => '1230000109',
     'type'       => 'Order_Paid',
     'detail'     => [
       'seq'         => 1,
@@ -93,7 +89,6 @@ $response = $instance->v3->payscore->oversea->partner->serviceorder->_out_order_
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'sub_mchid'  => '1900000109',
-    'channel_id' => '1230000109',
     'type'       => 'Order_Paid',
     'detail'     => [
       'seq'         => 1,
@@ -111,7 +106,6 @@ $response = $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_orde
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'sub_mchid'  => '1900000109',
-    'channel_id' => '1230000109',
     'type'       => 'Order_Paid',
     'detail'     => [
       'seq'         => 1,
@@ -129,7 +123,6 @@ $response = $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/s
   'json' => [
     'service_id' => '2002000000000558128851361561536',
     'sub_mchid'  => '1900000109',
-    'channel_id' => '1230000109',
     'type'       => 'Order_Paid',
     'detail'     => [
       'seq'         => 1,

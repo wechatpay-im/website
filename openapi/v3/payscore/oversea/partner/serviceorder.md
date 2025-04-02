@@ -537,7 +537,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_amount {data-indent=4} | integer | 商品优惠金额
 | goods_remark {data-indent=4} | string | 商品备注
 | time_range {data-required} | object {data-tooltip="对应PHP的array"} | 服务时间段
-| start_time {data-required data-indent=1} | string | 服务开始时间
+| start_time {data-indent=1} | string | 服务开始时间
 | start_time_remark {data-indent=1} | string | 服务开始时间备注
 | end_time {data-indent=1} | string | 服务结束时间
 | end_time_remark {data-indent=1} | string | 服务结束时间备注

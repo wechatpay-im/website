@@ -12,7 +12,6 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 | out_order_no {data-required} | string | 商户服务订单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | service_id {data-required data-indent=1} | string | 服务ID
-| channel_id {data-indent=1} | string | 渠道商商户号
 | sub_mchid {data-required data-indent=1} | string | 子商户号
 | post_payments {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-required data-indent=2} | string | 付费名称
@@ -27,7 +26,7 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 | total_amount {data-required data-indent=1} | integer | 总金额
 | currency {data-indent=1} | string | 货币类型
 | time_range {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际服务时间
-| start_time {data-required data-indent=2} | string | 服务开始时间
+| start_time {data-indent=2} | string | 服务开始时间
 | end_time {data-indent=2} | string | 服务结束时间
 | start_time_remark {data-indent=2} | string | 服务开始时间备注
 | end_time_remark {data-indent=2} | string | 服务结束时间备注
@@ -47,7 +46,6 @@ $instance->v3->payscore->oversea->partner->serviceorder->_out_order_no_->complet
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
-    'channel_id'     => '1230000109',
     'sub_mchid'      => '1900000109',
     'post_payments'  => [[
       'name'        => '就餐费用',
@@ -89,7 +87,6 @@ $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_order_no}/comple
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
-    'channel_id'     => '1230000109',
     'sub_mchid'      => '1900000109',
     'post_payments'  => [[
       'name'        => '就餐费用',
@@ -131,7 +128,6 @@ $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/complete']->p
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
-    'channel_id'     => '1230000109',
     'sub_mchid'      => '1900000109',
     'post_payments'  => [[
       'name'        => '就餐费用',
@@ -173,7 +169,6 @@ $response = $instance->v3->payscore->oversea->partner->serviceorder->_out_order_
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
-    'channel_id'     => '1230000109',
     'sub_mchid'      => '1900000109',
     'post_payments'  => [[
       'name'        => '就餐费用',
@@ -212,7 +207,6 @@ $response = $instance->chain('v3/payscore/oversea/partner/serviceorder/{out_orde
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
-    'channel_id'     => '1230000109',
     'sub_mchid'      => '1900000109',
     'post_payments'  => [[
       'name'        => '就餐费用',
@@ -251,7 +245,6 @@ $response = $instance['v3/payscore/oversea/partner/serviceorder/{out_order_no}/c
   'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'service_id'     => '2002000000000558128851361561536',
-    'channel_id'     => '1230000109',
     'sub_mchid'      => '1900000109',
     'post_payments'  => [[
       'name'        => '就餐费用',
