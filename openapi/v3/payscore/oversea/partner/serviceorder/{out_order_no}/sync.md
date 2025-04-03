@@ -9,6 +9,7 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
 | out_order_no {data-required} | string | 商户服务订单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | service_id {data-required data-indent=1} | string | 服务ID
