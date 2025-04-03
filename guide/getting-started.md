@@ -113,7 +113,7 @@ ZW5wYXkuY29tIHNpZ24xEzARBgNVBAoMClRlbnBheS5jb20xHTAbBgNVBAsMFFRl
 `./wechatpay_7132D72A03E93CDDF8C03BBD1F37EEDF********.pem` 即为 `微信支付平台证书` 文件。
 
 > [!IMPORTANT] 重要提示
-> 当下载证书后，屏显有几条证书信息，就在应用中配置**certs**几条，尤其是在[新旧平台证书交替灰度时](https://pay.weixin.qq.com/docs/merchant/development/interface-rules/wechatpay-certificates-rotation.html)，需要把新旧证书都配上，应用才不会出现事故。
+> 当下载证书后，屏显有几条证书信息，就在应用中配置**certs**几条，尤其是在[新旧平台证书交替灰度时](https://pay.weixin.qq.com/doc/v3/merchant/4012068829)，需要把新旧证书都配上，应用才不会出现事故。
 
 ## 应用代码 {#sample}
 

@@ -1,6 +1,6 @@
 ---
 title: 数据签名
-description: 微信支付目前现行两大类数据签名方法，对称算法基于MD5及HMAC-SHA256数据摘要算法，非对称算法基于RSA-OAEP(模数2048)算法。
+description: 微信支付目前现行两大类数据签名方法，对称密钥算法基于MD5及HMAC-SHA256数据摘要算法，非对称密钥算法基于RSA-OAEP(模数2048)算法。
 head:
   - - meta
     - name: keywords
@@ -12,7 +12,7 @@ aside: true
 
 {{ $frontmatter.description }}
 
-## 对称算法 {#symmetric}
+## 对称密钥算法 {#symmetric}
 
 签名生成的**通用步骤**如下：
 
@@ -39,7 +39,7 @@ aside: true
 
 微信支付API接口协议中包含字段**nonce_str**，主要保证签名不可预测。微信支付官方推荐生成随机数算法如下：**调用随机数函数生成，将得到的值转换为字符串**。
 
-以[官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)举的例子，用`PHP`实现：
+以[官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011985891)举的例子，用`PHP`实现：
 
 ### 后台数据交换 {#symmetric.backend}
 
@@ -92,7 +92,7 @@ $collection = [
 ];
 ```
 
-APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML`文本格式如下:
+APIv2是以`XML`格式作为数据交换方式，最终传输时需转换上述数据为`XML`文本格式如下:
 
 ```xml
 <xml>
@@ -157,7 +157,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($collection);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=5)
+> [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011935213) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011936643) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011986456)
 
 > [!TIP] APP 唤起微信支付收银台场景
 > ```php hl8,18
@@ -182,7 +182,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($collection);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_12&index=2)
+> [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937148) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941437)
 
 #### 小程序红包 <Badge type="warning" text="特殊规则" /> {#symmetric.frontend.wxaredpack}
 
@@ -212,7 +212,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($collection);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_xcx.php?chapter=18_3&index=4)
+> [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937428) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941288)
 
 #### 代金券/商家券 {#symmetric.frontend.favors}
 
@@ -241,7 +241,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($collection);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/offer-coupons-by-mini-program/mini-program-coupons.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/offer-coupons-by-mini-program/mini-program-coupons.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285674) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285878)
 
 > [!TIP] 通过Url跳转，由商户H5重定向至指定微信支付H5页面
 > ```php
@@ -266,7 +266,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >  ->withQuery(Query::build($collection))
 >  ->withFragment('wechat_pay&wechat_redirect');
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_4_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/offer-coupons-by-h5/h5-coupon.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/offer-coupons-by-h5/h5-coupon.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285783) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285900)
 
 #### 微信支付分 {#symmetric.frontend.payscore}
 
@@ -300,7 +300,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_11.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-confirm.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-confirm.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587909) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596359)
 
 > [!TIP] APP 唤起微信支付分小程序订单详情场景
 > ```php
@@ -333,7 +333,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/app-order.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/app-open-details.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587980) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596423)
 
 > [!TIP] JSAPI 唤起微信支付分小程序确认订单场景
 > ```php
@@ -362,7 +362,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_12.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-confirm.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-confirm-new.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587945)
 
 > [!TIP] JSAPI 唤起微信支付分小程序订单详情场景
 > ```php
@@ -392,7 +392,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/jsapi-order-new.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/jsapi-open-details.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587983)
 
 > [!TIP] 微信小程序 唤起微信支付分小程序确认订单场景
 > ```php
@@ -420,7 +420,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_13.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/applets-confirm.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596371)
 
 > [!TIP] 微信小程序 唤起微信支付分小程序订单详情场景
 > ```php
@@ -449,11 +449,11 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_25.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/applets-order.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/miniprogram-open-details.html)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596433)
 
-## 非对称算法 {#asymmetric}
+## 非对称密钥算法 {#asymmetric}
 
-此种签名方法，[官方文档介绍](https://pay.weixin.qq.com/docs/merchant/development/interface-rules/signature-generation.html) 已经很明晰，这里不再细述规则，仅做实现介绍如下：
+此种签名方法，[官方文档介绍](https://pay.weixin.qq.com/doc/v3/merchant/4012365342) 已经很明晰，这里不再细述规则，仅做实现介绍如下：
 
 ### 后台数据交换 {#asymmetric.backend}
 
@@ -539,7 +539,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_1_4.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791857)
 
 > [!TIP] APP 唤起微信支付收银台场景
 > ```php
@@ -566,4 +566,4 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_2_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter5_1_6.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013070351)
