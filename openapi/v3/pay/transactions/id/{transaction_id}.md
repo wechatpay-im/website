@@ -19,9 +19,9 @@ description: 商户可以通过查询订单接口主动查询订单状态，完�
 
 ```php [异步纯链式]
 $instance->v3->pay->transactions->id->_transaction_id_->getAsync([
-  'transaction_id' => '',
+  'transaction_id' => '1217752501201407033233368018',
   'query' => [
-    'mchid' => '',
+    'mchid' => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -32,9 +32,9 @@ $instance->v3->pay->transactions->id->_transaction_id_->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/pay/transactions/id/{transaction_id}')->getAsync([
-  'transaction_id' => '',
+  'transaction_id' => '1217752501201407033233368018',
   'query' => [
-    'mchid' => '',
+    'mchid' => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,9 +45,9 @@ $instance->chain('v3/pay/transactions/id/{transaction_id}')->getAsync([
 
 ```php [异步属性式]
 $instance['v3/pay/transactions/id/{transaction_id}']->getAsync([
-  'transaction_id' => '',
+  'transaction_id' => '1217752501201407033233368018',
   'query' => [
-    'mchid' => '',
+    'mchid' => '1230000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,9 +58,9 @@ $instance['v3/pay/transactions/id/{transaction_id}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->pay->transactions->id->_transaction_id_->get([
-  'transaction_id' => '',
+  'transaction_id' => '1217752501201407033233368018',
   'query' => [
-    'mchid' => '',
+    'mchid' => '1230000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -68,9 +68,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/pay/transactions/id/{transaction_id}')->get([
-  'transaction_id' => '',
+  'transaction_id' => '1217752501201407033233368018',
   'query' => [
-    'mchid' => '',
+    'mchid' => '1230000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -78,9 +78,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/pay/transactions/id/{transaction_id}']->get([
-  'transaction_id' => '',
+  'transaction_id' => '1217752501201407033233368018',
   'query' => [
-    'mchid' => '',
+    'mchid' => '1230000109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -129,4 +129,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_5.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791858)

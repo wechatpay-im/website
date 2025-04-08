@@ -20,7 +20,7 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 
 ```php [异步纯链式]
 $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->close->postAsync([
-  'out_trade_no' => '',
+  'out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
@@ -34,7 +34,7 @@ $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->close->po
 
 ```php [异步声明式]
 $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close')->postAsync([
-  'out_trade_no' => '',
+  'out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
@@ -48,7 +48,7 @@ $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'
 
 ```php [异步属性式]
 $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close']->postAsync([
-  'out_trade_no' => '',
+  'out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
@@ -62,7 +62,7 @@ $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close']->post
 
 ```php [同步纯链式]
 $response = $instance->v3->pay->partner->transactions->outTradeNo->_out_trade_no_->close->post([
-  'out_trade_no' => '',
+  'out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
@@ -73,7 +73,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close')->post([
-  'out_trade_no' => '',
+  'out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
@@ -84,7 +84,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close']->post([
-  'out_trade_no' => '',
+  'out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'sp_mchid'  => '1230000109',
     'sub_mchid' => '1900000109',
@@ -101,4 +101,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_6.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012526949)
