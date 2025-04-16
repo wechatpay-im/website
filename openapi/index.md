@@ -342,7 +342,7 @@ next:
 | [微信单号查询电子回单](/openapi/v3/fund-app/mch-transfer/elecsign/transfer-bill-no/{transfer_bill_no})
 | [商户单号查询电子回单](/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no/{out_bill_no})
 | [下载电子回单文件](/openapi/v3/transferdownload/elecvoucherfile)
-| 商家转账v3<br/>(互联QQ钱包) {rowspan=3} | [发起转账到QQ钱包](/openapi/v3/fund-app/transfer-to-qq-wallet-bills)
+| 商家转账v3<br/>(互联QQ钱包) {rowspan=3} | [发起转账到QQ钱包](/openapi/v3/fund-app/mch-transfer/transfer-to-qq-wallet-bills)
 | [撤销转账到QQ钱包](/openapi/v3/fund-app/mch-transfer/transfer-to-qq-wallet-bills/{out_bill_no}/cancel)
 | [查询转账到QQ钱包的结果](/openapi/v3/fund-app/mch-transfer/transfer-to-qq-wallet-bills/{out_bill_no})
 | 平台收付通v3{rowspan=3} | | [二级商户进件](/openapi/v3/ecommerce/applyments/)
