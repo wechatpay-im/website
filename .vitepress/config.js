@@ -959,6 +959,15 @@ function openapiSidebar() {
                 ['下载电子回单文件', '/openapi/v3/transferdownload/elecvoucherfile'],
               ].map(transArrayItem),
             },
+            {
+              text: '互联QQ钱包',
+              collapsed: true,
+              items: [
+                ['发起转账到QQ钱包', '/openapi/v3/fund-app/mch-transfer/transfer-to-qq-wallet-bills'],
+                ['撤销转账到QQ钱包', '/openapi/v3/fund-app/mch-transfer/transfer-to-qq-wallet-bills/{out_bill_no}/cancel'],
+                ['查询转账到QQ钱包的结果', '/openapi/v3/fund-app/mch-transfer/transfer-to-qq-wallet-bills/{out_bill_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -2024,6 +2033,7 @@ function webhookSidebar() {
             ['转账批次完成通知', '/webhook/v3/MCHTRANSFER.BATCH.FINISHED'],
             ['转账批次关闭通知', '/webhook/v3/MCHTRANSFER.BATCH.CLOSED'],
             ['转账单据终态通知', '/webhook/v3/MCHTRANSFER.BILL.FINISHED'],
+            ['转账到QQ钱包终态通知', '/webhook/v3/MCHTRANSFER.QQWALLETBILL.FINISHED'],
           ].map(transArrayItem),
         },
         {
