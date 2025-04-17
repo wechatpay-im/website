@@ -45,7 +45,11 @@ description: 退款状态改变后，微信会把相关退款结果发送给商�
 | refund_status {data-required data-indent=3} | string | 退款状态<br/>`SUCCESS` \| `CLOSED` \| `ABNORMAL` 枚举值之一
 | success_time {data-indent=3} | string | 1、退款成功时间
 | user_received_account {data-required data-indent=3} | string | 取当前退款单的退款入账方。<br/>1、退回银行卡：{银行名称}{卡类型}{卡尾号}<br/>2、退回支付用户零钱: 支付用户零钱<br/>3、退还商户: 商户基本账户、商户结算银行账户<br/>4、退回支付用户零钱通：支付用户零钱通<br/>5、退回用户经营账户：用户经营账户<br/>6、退回支付用户银行电子账户：支付用户银行电子账户<br/>7、退回支付用户零花钱：支付用户零花钱<br/>8、退回支付用户来华零钱包：支付用户来华零钱包<br/>9、退回企业支付商户：企业支付商户
+| recv_account {data-indent=3} | string | 退款入账账户
+| fund_source {data-indent=3} | string | 退款资金来源<br/>`REFUND_SOURCE_UNSETTLED_FUNDS` \| `REFUND_SOURCE_RECHARGE_FUNDS` 枚举值之一
 | amount {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 金额信息
+| settlement_refund {data-indent=4} | number | 结算币种退款金额
+| settlement_currency {data-indent=4} | string | 结算币种
 | total {data-required data-indent=4} | number | 订单总金额，单位为分，只能为整数
 | currency {data-required data-indent=4} | string | 货币类型
 | refund {data-required data-indent=4} | number | 退款金额，币种的最小单位，只能为整数，不能超过原订单支付金额，如果有使用券，后台会按比例退。
@@ -53,7 +57,7 @@ description: 退款状态改变后，微信会把相关退款结果发送给商�
 | payer_currency {data-required data-indent=4} | string | 用户支付币种
 | payer_refund {data-required data-indent=4} | number | 退款给用户的金额，不包含所有优惠券金额
 | exchange_rate {data-indent=4} | object {data-tooltip="对应PHP的Array"} | 汇率信息
-| type {data-indent=5} | string | 汇率类型
+| type {data-indent=5} | string | 汇率类型<br/>`USERPAYMENT_RATE` \| `SETTLEMENT_RATE` 枚举值之一
 | rate {data-indent=5} | integer | 汇率值
 | sp_mchid {data-indent=3} | string | 服务商户号，由微信支付生成并下发 。
 | sub_mchid {data-indent=3} | string | 子商户的商户号，由微信支付生成并下发。

@@ -200,7 +200,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | payer_refund {data-required data-indent=1} | integer | 用户退款金额
 | payer_currency {data-required data-indent=1} | string | 支付币种
 | exchange_rate {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 汇率
-| type {data-indent=2} | string | 汇率类型<br/>`SETTLEMENT_RATE` 枚举值
+| type {data-indent=2} | string | 汇率类型<br/>`USERPAYMENT_RATE` \| `SETTLEMENT_RATE` 枚举值之一
 | rate {data-indent=2} | integer | 汇率值
 | detail | object {data-tooltip="对应PHP的array"} | 优惠退款详情
 | promotion_id {data-required data-indent=1} | string | 券ID
@@ -212,7 +212,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter5_1_11.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354681)
 
 ## 查询所有退款 {#get}
 
@@ -368,7 +368,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | payer_refund {data-required data-indent=2} | integer | 用户退款金额
 | payer_currency {data-required data-indent=2} | string | 支付币种
 | exchange_rate {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 汇率
-| type {data-indent=3} | string | 汇率类型<br/>`SETTLEMENT_RATE` 枚举值
+| type {data-indent=3} | string | 汇率类型<br/>`USERPAYMENT_RATE` \| `SETTLEMENT_RATE` 枚举值之一
 | rate {data-indent=3} | integer | 汇率值
 | refund_detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠退款详情
 | promotion_id {data-required data-indent=2} | string | 券ID
@@ -382,4 +382,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter5_1_13.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354686)

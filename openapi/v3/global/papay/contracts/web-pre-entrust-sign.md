@@ -21,6 +21,7 @@ description: 该方式适用于PC等使用浏览器的设备场景使用微信�
 | user_display_name {data-indent=1} | string | 用户账户展示名称
 | success_notify_url {data-indent=1} | string | 签约成功通知url
 | expired_time {data-indent=1} | string | 过期时间
+| return_url {data-indent=1} | string | 签约完成跳转URL
 
 {.im-table #request}
 
@@ -40,6 +41,7 @@ $instance->v3->global->papay->contracts->webPreEntrustSign->postAsync([
     'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
     'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,6 +64,7 @@ $instance->chain('v3/global/papay/contracts/web-pre-entrust-sign')->postAsync([
     'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
     'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -84,6 +87,7 @@ $instance['v3/global/papay/contracts/web-pre-entrust-sign']->postAsync([
     'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
     'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -106,6 +110,7 @@ $response = $instance->v3->global->papay->contracts->webPreEntrustSign->post([
     'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
     'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -125,6 +130,7 @@ $response = $instance->chain('v3/global/papay/contracts/web-pre-entrust-sign')->
     'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
     'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -144,6 +150,7 @@ $response = $instance['v3/global/papay/contracts/web-pre-entrust-sign']->post([
     'user_display_name'  => '张三',
     'success_notify_url' => 'https://pay.weixin.qq.com',
     'expired_time'       => '2021-11-20T13:29:35+08:00',
+    'return_url'         => 'https://pay.weixin.qq.com',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -153,8 +160,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| sign_url {data-required} | string | 签约跳转URL
+| show_code_url {data-required} | string | 展码页面URL
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter5_1_16.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013015464)
