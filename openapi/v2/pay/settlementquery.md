@@ -160,7 +160,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | refund_fee {data-required} | integer | 退款金额
 | pay_net_fee {data-required} | integer | 支付净额
 | poundage_fee {data-required} | integer | 手续费金额
+| split_settlement_fee | integer | 分账划账金额
+| split_unsettlement_fee | integer | 分账未划账金额
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay/ch/pay/In-AppPay/chapter8_9.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634920) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634968) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635001) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635256) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636497) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636618)
