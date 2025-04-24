@@ -600,6 +600,17 @@ function openapiSidebar() {
                 ['解绑收款商户号', '/openapi/v3/merchant-store/stores/{store_id}/recipients/unbind'],
               ].map(transArrayItem),
             },
+            {
+              text: '红包',
+              collapsed: true,
+              items: [
+                ['品牌商户发放红包', '/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches'],
+                ['查询批次单(商家批次单号)', '/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no}'],
+                ['查询批次单(微信批次单号)', '/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}'],
+                ['查询明细单(商家明细单号)', '/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no}/out-details/{out_detail_no}'],
+                ['查询明细单(微信明细单号)', '/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}/details/{detail_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {

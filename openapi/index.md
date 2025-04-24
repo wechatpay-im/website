@@ -142,6 +142,11 @@ next:
 | [修改门店](/openapi/v3/merchant-store/stores/{store_id}#patch) {colspan=2}
 | [给门店绑定收款商户号](/openapi/v3/merchant-store/stores/{store_id}/recipients/bind) {colspan=2}
 | [解绑门店无效的收款商户号](/openapi/v3/merchant-store/stores/{store_id}/recipients/unbind) {colspan=2}
+| 品牌红包v3 {rowspan=5} | [品牌商户发放红包](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches)
+| [商家批次单号查询批次单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no})
+| [商家明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no}/out-details/{out_detail_no})
+| [微信支付批次单号查询批次单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no})
+| [微信支付明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}/details/{detail_no})
 | 平台账单v3{rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
