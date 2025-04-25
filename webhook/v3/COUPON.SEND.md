@@ -41,8 +41,9 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | send_time {data-required data-indent=3} | string | 发放时间
 | openid {data-indent=3} | string | 微信用户在AppID下的唯一标识。
 | unionid {data-indent=3} | string | 微信用户在同一个微信开放平台账号下的唯一用户标识
-| send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` 枚举值之一
+| send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` \| `BUSICOUPON_SEND_CHANNEL_SHAKE` 枚举值之一
 | send_merchant {data-required data-indent=3} | string | 发券商户号
+| act_id {data-indent=3} | string | 摇一摇活动ID
 | attach_info {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 仅在支付有礼、扫码领券（营销馆）、会员有礼发放渠道，才有该信息
 | transaction_id {data-indent=4} | string | 仅在支付有礼渠道，才有该信息，对应支付有礼曝光支付订单编号信息
 | act_code {data-indent=4} | string | 仅在扫码领券（营销馆）渠道，才有该信息，对应领券的营销馆领券活动ID信息信息。该字段并不会和支付有礼活动编码(act_code)同时出现。
@@ -51,6 +52,8 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | card_id {data-indent=4} | string | 仅在会员卡活动渠道，才有该信息，对应会员卡Card_ID信息
 | code {data-indent=4} | string | 仅在会员卡活动渠道，才有该信息，对应用户卡包会员卡Code信息
 | activity_id {data-indent=4} | string | 仅在会员卡活动渠道，才有该信息，对应会员有礼活动ID信息
+| phone_number {data-indent=4} | string | 领券手机号。仅在商户接入了摇一摇有优惠的《核销组件》的情况下，才会返回该字段
+| country_code {data-indent=4} | string | 领券手机区号。仅在商户接入了摇一摇有优惠的《核销组件》的情况下，才会返回该字段
 
 {.im-table #request}
 
@@ -141,5 +144,5 @@ $json = \json_encode([
 {.im-table #response}
 
 参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/merchant-exclusive-coupon/coupon/busicoupon-send.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/merchant-exclusive-coupon/coupon/busicoupon-send.html)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285279)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285839)
