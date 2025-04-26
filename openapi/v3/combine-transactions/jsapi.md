@@ -360,4 +360,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760633) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556926) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012757938) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760615) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545654) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707323)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556926) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556931) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545654) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012757938) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012758246) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707323) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760615) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760633)

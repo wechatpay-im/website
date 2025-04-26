@@ -74,4 +74,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/applysubject/chapter5_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697627)

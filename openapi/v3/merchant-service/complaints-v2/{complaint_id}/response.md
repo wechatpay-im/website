@@ -156,4 +156,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/response-complaint-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_14.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012467254) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467213)

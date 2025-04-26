@@ -428,4 +428,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_3.shtml) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012523551)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012738659) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012523551) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714902)

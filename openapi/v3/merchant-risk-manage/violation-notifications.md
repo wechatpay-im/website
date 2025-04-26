@@ -144,7 +144,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012471327)
 
 ## 修改商户违规通知回调地址 {#put}
 

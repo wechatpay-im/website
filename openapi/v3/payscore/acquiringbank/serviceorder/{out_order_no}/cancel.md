@@ -115,4 +115,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-order/cancel-acquiring-bank-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012458146) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013194058)

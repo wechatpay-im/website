@@ -142,4 +142,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/close-order.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012577452) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421130) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421225) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421330) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421404) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012551793) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761079) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462102) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462171) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462247) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462566) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709095) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012602237) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761093)

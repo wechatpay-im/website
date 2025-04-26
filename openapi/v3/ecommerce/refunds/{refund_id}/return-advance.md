@@ -99,7 +99,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_6_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-return-advance.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476927)
 
 ## 查询垫付回补结果 {#get}
 

@@ -206,4 +206,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-payscore-plan/partner-user-sign-plan/create-partner-user-sign-plan.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012463521)

@@ -122,4 +122,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-order/register-deduct-info.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012458414) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013194100)

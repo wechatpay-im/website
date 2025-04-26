@@ -115,4 +115,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/sub-merchant-fund-flow-bill/get-sub-merchant-fund-flow-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_5.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760697)

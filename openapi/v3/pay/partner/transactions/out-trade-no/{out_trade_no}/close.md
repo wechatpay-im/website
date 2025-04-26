@@ -101,4 +101,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012526949)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012526949) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012739019) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013080236) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012759669) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012759725) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760518) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012886167) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760574)

@@ -122,4 +122,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/sub-mch-fund-flow-bill/get-sub-mch-fund-flow-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_25.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_1_12.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012710630) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012886329) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760249) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720204) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719583) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715220)

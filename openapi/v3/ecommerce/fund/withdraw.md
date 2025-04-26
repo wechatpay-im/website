@@ -125,4 +125,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_22.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/fund/chapter3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476652) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719526) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720157) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714461)

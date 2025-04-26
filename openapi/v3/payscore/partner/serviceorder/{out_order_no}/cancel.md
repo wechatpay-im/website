@@ -108,4 +108,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/cancel-partner-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012458758) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013138589)

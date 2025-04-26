@@ -155,4 +155,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/insurance/apply-renew-contract.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012489588)

@@ -143,4 +143,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/smart-business-circle/points/notify-points.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/smart-business-circle/points/notify-points.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534698) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474133)

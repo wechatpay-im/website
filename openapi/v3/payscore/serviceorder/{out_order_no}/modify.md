@@ -457,4 +457,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587957) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647427) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/modify-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587957) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647427)

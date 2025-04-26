@@ -197,4 +197,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/send-partner-order-pending-message.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013394914)

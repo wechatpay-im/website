@@ -221,7 +221,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/shopping-receipts/upload-shopping-receipt.html)
-- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553506)
-- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012698614)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553506) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012698614)

@@ -451,7 +451,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587900) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647418) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/create-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647418)
 
 ## 查询支付分订单 {#get}
 

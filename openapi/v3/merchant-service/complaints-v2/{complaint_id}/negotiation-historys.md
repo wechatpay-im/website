@@ -115,4 +115,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/query-negotiation-history-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_12.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012533439) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012691802)

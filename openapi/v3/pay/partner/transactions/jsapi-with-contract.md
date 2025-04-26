@@ -394,4 +394,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/hide-partner-jsapi-payment/partner-jsons/partner-jsapi-contract-prepay.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012688481) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012526951)

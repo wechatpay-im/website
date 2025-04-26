@@ -323,4 +323,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/brand/chapter3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467002)

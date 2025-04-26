@@ -135,4 +135,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-recharge/bank-recharge/bank-transfer-recharge-apply.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012585425)

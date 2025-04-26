@@ -183,4 +183,4 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 > 4. 此接口第二参数 **headers** 字段为可选字段，按需显式传递 *Wechatpay-Negative-Test* 对应的用例名称；
 > 5. 此接口有QPS限制(官方未公布)，高频请求会被官方重定向到腾讯[公益404](https://wx.gtimg.com/core/404.html)页面；
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/sp_coupon.php?chapter=23_1&index=2)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011984810)

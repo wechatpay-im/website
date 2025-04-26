@@ -95,4 +95,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_21.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-balance/accounts/query-day-end-balance.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476702) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720989) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721446)

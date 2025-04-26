@@ -556,4 +556,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-card-base/list-member-card.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/membership-card/member-card-base/list-member-card.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709010)

@@ -258,7 +258,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-store-act/delete-stores.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384431)
 
 ## 查询小店活动门店列表 {#get}
 

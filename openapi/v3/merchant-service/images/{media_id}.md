@@ -92,8 +92,4 @@ $instance['v3/merchant-service/images/{media_id}']->get([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/images/query-images.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/images/query-images.html)
-- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012467251)
-- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467223)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012467251) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467223)

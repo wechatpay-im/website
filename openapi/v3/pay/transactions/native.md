@@ -407,4 +407,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_3.shtml) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012525171)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791877) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012525171)

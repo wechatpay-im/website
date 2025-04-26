@@ -103,4 +103,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_24.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/fund/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476678) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720060) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719776) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715087)

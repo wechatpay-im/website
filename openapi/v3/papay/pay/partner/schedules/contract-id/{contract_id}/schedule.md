@@ -144,4 +144,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/entrusted-payment/partner/partner-schedule-deduction.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012468581)

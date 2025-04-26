@@ -109,4 +109,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/complaints/query-complaint-v2.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/query-complaint-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_13.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012533436) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012691648)

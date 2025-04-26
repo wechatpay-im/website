@@ -126,4 +126,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/personal-collections/query-refund-by-out-refund-no.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/query-refund-by-out-refund-no.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012650314) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476911)

@@ -172,4 +172,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [FINISHED:商户完结订单] [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/sync-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587962) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647431)

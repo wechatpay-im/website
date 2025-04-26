@@ -328,4 +328,4 @@ print_r($response->getStatusCode() === 202);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/Offline/apis/chapter4_8_8.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538301) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474060)

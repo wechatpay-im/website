@@ -161,4 +161,4 @@ print_r(\WeChatPay\Transformer::toArray((string)$response->getBody()));
 > 6. [支付异常用例](https://pay.weixin.qq.com/wiki/doc/api/download/sandbox-micropay-ERROR.docx)中要求限定客户端超时时间的，请求参数增加 **timeout** 参数，按需显式设置；
 > 7. 此接口有QPS限制(官方未公布)，高频请求会被官方重定向到腾讯[公益404](https://wx.gtimg.com/core/404.html)页面；
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/sp_coupon.php?chapter=23_1&index=2)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011984810)

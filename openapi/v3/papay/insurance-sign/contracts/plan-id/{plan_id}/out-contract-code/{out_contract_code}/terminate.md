@@ -115,4 +115,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/operate-contract/terminate-contract-by-code.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012472767)
