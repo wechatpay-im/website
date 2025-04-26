@@ -128,7 +128,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-store-act/add-stores.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012384359) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384421)
 
 ## 删除小店活动门店 {#delete}
 
@@ -258,7 +258,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384431)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012384363) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384431)
 
 ## 查询小店活动门店列表 {#get}
 
@@ -363,4 +363,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-store-act/list-store.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012384355) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384414)

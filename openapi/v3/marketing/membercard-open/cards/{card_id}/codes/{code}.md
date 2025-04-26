@@ -96,7 +96,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012547768) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709442)
 
 ## 修改用户会员卡信息 {#patch}
 
@@ -258,4 +258,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709735)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549292) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709735)

@@ -115,4 +115,4 @@ $response = $instance['v3/global/statements']->get([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter3_1_6.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013013869) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354444) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354484) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354538) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354574) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354602) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4014096532)

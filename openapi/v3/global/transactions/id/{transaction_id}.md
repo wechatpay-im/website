@@ -157,4 +157,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter3_1_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013013913) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354440) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354480) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354534) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354570) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354598) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013026988) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354793) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013024982)

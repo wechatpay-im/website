@@ -372,7 +372,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-order/create-acquiring-bank-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012691326) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013194023)
 
 ## 从业机构查询微信支付分订单 {#get}
 
@@ -552,4 +552,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013194035)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012691343) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013194035)

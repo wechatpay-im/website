@@ -105,7 +105,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_13.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transfer_partner/chapter4_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012458967) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012718748) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012727951)
 
 ## 查询转账明细电子回单受理结果 {#get}
 
@@ -212,4 +212,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721353)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012458972) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012718815) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721353)

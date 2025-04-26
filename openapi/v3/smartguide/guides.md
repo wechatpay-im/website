@@ -153,7 +153,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012688564)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535138) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012688564)
 
 ## 服务人员查询 {#get}
 
@@ -310,4 +310,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/smartguide/chapter3_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535123) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012688558)

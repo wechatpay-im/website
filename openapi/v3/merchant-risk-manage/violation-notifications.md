@@ -84,7 +84,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_1.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012471333)
 
 ## 查询商户违规通知回调地址 {#get}
 
@@ -230,7 +230,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012471330)
 
 ## 删除商户违规通知回调地址 {#delete}
 
@@ -290,4 +290,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012471334)

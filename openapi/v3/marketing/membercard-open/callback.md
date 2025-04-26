@@ -85,7 +85,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714353)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012552251) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714353)
 
 ## 查询回调地址 {#get}
 
@@ -146,4 +146,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter6_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012552275) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714354)

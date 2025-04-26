@@ -129,4 +129,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter5_1_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013015478)

@@ -1,4 +1,4 @@
-# 查询及修改H5支付域名修改申请单 {#mix}
+# 查询及修改H5支付权限申请单 {#mix}
 
 ## 查询H5支付权限申请单详情 {#get}
 
@@ -91,7 +91,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_4_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013025107)
 
 ## 修改H5支付权限申请单 {#patch}
 
@@ -246,4 +246,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_4_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013025109)

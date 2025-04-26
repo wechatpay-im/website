@@ -481,7 +481,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012692136) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013138534) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/create-partner-service-order.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012692136) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013138534)
 
 ## 查询支付分订单 {#get}
 
@@ -654,4 +654,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013138559)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012692256) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013138559)

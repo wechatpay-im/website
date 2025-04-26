@@ -115,4 +115,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter3_2_7.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013014140) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354485) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354539) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354575) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354603) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4012354794)

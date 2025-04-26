@@ -176,7 +176,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_3_1.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013025127)
 
 ## 报关查询 {#get}
 
@@ -331,7 +331,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_3_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013025131)
 
 ## 报关信息修改 {#patch}
 
@@ -503,4 +503,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api_external/ch/apis/chapter4_3_5.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013025136)

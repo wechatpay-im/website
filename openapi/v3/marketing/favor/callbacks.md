@@ -85,7 +85,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_12.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012464070) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012464155)
 
 ## 设置消息通知地址 {#post}
 
@@ -186,4 +186,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012464176)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012464198) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012464176)

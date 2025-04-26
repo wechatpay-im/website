@@ -75,4 +75,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013068934)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4013068962)

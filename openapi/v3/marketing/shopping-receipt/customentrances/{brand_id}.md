@@ -83,7 +83,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/custom-entrances/query-custom-entrance.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012526406) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012698331)
 
 ## 更新自定义入口 {#patch}
 
@@ -257,4 +257,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697769)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012526475) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697769)

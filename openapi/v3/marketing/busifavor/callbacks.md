@@ -93,7 +93,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_7.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465431) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465425)
 
 ## 查询商家券事件通知地址 {#get}
 
@@ -180,4 +180,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465557)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465507) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465557)

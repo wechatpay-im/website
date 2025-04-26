@@ -126,7 +126,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/coupon/list-coupons-by-filter.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/coupon/list-coupons-by-filter.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012463767) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012463807)
 
 ## 根据商户号查用户的券 {#get}
 
@@ -277,4 +277,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012494237)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534690) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012494237)

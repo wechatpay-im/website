@@ -121,7 +121,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-stores/add-representative.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012384327) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384386)
 
 ## 删除零售小店活动业务代理 {#delete}
 
@@ -244,4 +244,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384399)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012384344) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384399)

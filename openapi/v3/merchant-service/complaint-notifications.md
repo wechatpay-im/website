@@ -85,7 +85,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/create-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012458679) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012458106)
 
 ## 查询投诉通知回调 {#get}
 
@@ -146,7 +146,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/query-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012459014) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012459065)
 
 ## 更新投诉通知回调 {#put}
 
@@ -233,7 +233,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/update-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012459282) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012459287)
 
 ## 删除投诉通知回调 {#delete}
 
@@ -293,4 +293,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012460474)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012460452) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012460474)
