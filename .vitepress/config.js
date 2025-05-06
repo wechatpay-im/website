@@ -10,7 +10,7 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
-  buildConcurrency: 28,
+  buildConcurrency: 24,
   srcExclude: ['**/README.md'],
   sitemap: {
     hostname: baseUri,
