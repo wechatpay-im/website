@@ -1310,6 +1310,13 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '鸿蒙委托代扣',
+              collapsed: true,
+              items: [
+                ['代扣受理扣款', '/openapi/v3/papay/pay/harmony/transactions/apply'],
+              ].map(transArrayItem),
+            },
+            {
               text: '校园轻松付',
               collapsed: true,
               items: [
