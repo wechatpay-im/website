@@ -984,11 +984,15 @@ function openapiSidebar() {
           text: '平台收付通',
           collapsed: true,
           items: [
-            ...[
-              ['二级商户进件', '/openapi/v3/ecommerce/applyments/'],
-              ['查询进件状态(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}'],
-              ['查询进件状态(业务申请编号)', '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}'],
-            ].map(transArrayItem),
+            {
+              text: '进件',
+              collapsed: true,
+              items: [
+                ['申请进件', '/openapi/v3/ecommerce/applyments/'],
+                ['查询状态(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}'],
+                ['查询状态(业务申请编号)', '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}'],
+              ].map(transArrayItem),
+            },
             {
               text: '补差',
               collapsed: true,
@@ -1101,13 +1105,50 @@ function openapiSidebar() {
               text: '商家转账',
               collapsed: true,
               items: [
-                ['申请二级商户授权', '/openapi/v3/ecommerce/mch-transfer/authorizations'],
-                ['查询二级商户授权状态', '/openapi/v3/ecommerce/mch-transfer/authorizations/{sub_mchid}'],
-                ['发起转账', '/openapi/v3/ecommerce/mch-transfer/transfer-bills'],
-                ['撤销转账', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
-                ['平台单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no}'],
-                ['商户单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}'],
-              ].map(transArrayItem),
+                {
+                  text: '二级商户授权',
+                  collapsed: true,
+                  items: [
+                    ['申请授权', '/openapi/v3/ecommerce/mch-transfer/authorizations'],
+                    ['查询授权状态', '/openapi/v3/ecommerce/mch-transfer/authorizations/{sub_mchid}'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '即时(需用户确认)模式',
+                  collapsed: true,
+                  items: [
+                    ['发起转账', '/openapi/v3/ecommerce/mch-transfer/transfer-bills'],
+                    ['撤销转账', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
+                    ['平台单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no}'],
+                    ['商户单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '预约模式',
+                  collapsed: true,
+                  items: [
+                    ['受理单次预约', '/openapi/v3/platsolution/insurance/mch-transfer/reservation/apply'],
+                    ['关闭单次预约', '/openapi/v3/platsolution/insurance/mch-transfer/reservation/out-reservation-no/{out_reservation_no}/close'],
+                    ['平台单号查询预约记录', '/openapi/v3/platsolution/insurance/mch-transfer/reservation/reservation-id/{reservation_id}'],
+                    ['商户单号查询预约记录', '/openapi/v3/platsolution/insurance/mch-transfer/reservation/out-reservation-no/{out_reservation_no}'],
+                    ['受理商家转账', '/openapi/v3/platsolution/insurance/mch-transfer/batches/apply'],
+                    ['平台批次单号查询批次单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/batch-id/{batch_id}'],
+                    ['商户批次单号查询批次单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/out-batch-no/{out_batch_no}'],
+                    ['平台明细单号查询明细单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'],
+                    ['商户明细单号查询明细单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '电子回单',
+                  collapsed: true,
+                  items: [
+                    ['申请商家转账批次回单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/summary-receipts/out-batch-no/{out_batch_no}/apply'],
+                    ['查询商家转账批次回单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/summary-receipts/out-batch-no/{out_batch_no}'],
+                    ['申请商家转账明细回单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}/apply'],
+                    ['查询商家转账明细回单', '/openapi/v3/platsolution/insurance/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}'],
+                  ].map(transArrayItem),
+                },
+              ],
             },
             {
               text: '售后赔付',
