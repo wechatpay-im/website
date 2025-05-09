@@ -970,6 +970,15 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '用户授权自动收款',
+              collapsed: true,
+              items: [
+                ['发起转账并完成自动收授权', '/openapi/v3/fund-app/mch-transfer/transfer-bills/pre-transfer-with-authorization'],
+                ['转账(用户自动收款)', '/openapi/v3/fund-app/mch-transfer/transfer-bills/transfer'],
+                ['商户单号查询自动收款授权', '/openapi/v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}'],
+              ].map(transArrayItem),
+            },
+            {
               text: '互联QQ钱包',
               collapsed: true,
               items: [
@@ -2091,6 +2100,8 @@ function webhookSidebar() {
             ['转账批次完成通知', '/webhook/v3/MCHTRANSFER.BATCH.FINISHED'],
             ['转账批次关闭通知', '/webhook/v3/MCHTRANSFER.BATCH.CLOSED'],
             ['转账单据终态通知', '/webhook/v3/MCHTRANSFER.BILL.FINISHED'],
+            ['用户确认自动收款授权通知', '/webhook/v3/MCHTRANSFER.AUTHORIZATION.CONFIRMED'],
+            ['用户关闭自动收款授权通知', '/webhook/v3/MCHTRANSFER.AUTHORIZATION.CLOSED'],
             ['转账到QQ钱包终态通知', '/webhook/v3/MCHTRANSFER.QQWALLETBILL.FINISHED'],
           ].map(transArrayItem),
         },
