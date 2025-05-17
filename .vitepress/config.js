@@ -731,6 +731,14 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '银行立减',
+              collapsed: true,
+              items: [
+                ['给用户报名多笔立减活动', '/openapi/v3/marketing/bank-favor/users/{openid}/bank-multi-activity'],
+                ['查询绑定的多笔立减券详情', '/openapi/v3/marketing/bank-favor/users/{openid}/coupons/{coupon_id}'],
+              ].map(transArrayItem),
+            },
+            {
               text: '委托营销',
               collapsed: true,
               items: [
