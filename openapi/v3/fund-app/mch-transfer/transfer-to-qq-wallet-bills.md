@@ -20,8 +20,8 @@ description: 当QQ用户参与商户提供的活动并且商户需要转账到QQ
 | notify_url {data-indent=1} | string | 通知地址
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID<br/>`1401` 枚举值
 | transfer_scene_report_infos {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账场景报备信息
-| info_type {data-indent=2} | string | 信息类型
-| info_content {data-indent=2} | string | 信息内容
+| info_type {data-required data-indent=2} | string | 信息类型
+| info_content {data-required data-indent=2} | string | 信息内容
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 

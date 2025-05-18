@@ -20,8 +20,8 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 | user_recv_perception {data-indent=1} | string | 用户收款感知
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID<br/>`1000` \| `1002` \| `1004` \| `1005` \| `1009` \| `1010` \| `1011` \| `1013` 枚举值之一
 | transfer_scene_report_infos {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账场景报备信息
-| info_type {data-indent=2} | string | 信息类型
-| info_content {data-indent=2} | string | 信息内容
+| info_type {data-required data-indent=2} | string | 信息类型
+| info_content {data-required data-indent=2} | string | 信息内容
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
