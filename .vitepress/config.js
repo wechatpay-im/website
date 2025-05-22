@@ -154,6 +154,7 @@ export default defineConfig({
       '/openapi/v3/marketing/bank/': acquiringBankMixedSidebar(),
       '/openapi/v3/merchant-settlement/': acquiringBankMixedSidebar(),
       '/openapi/v3/payscore/acquiringbank/': acquiringBankMixedSidebar(),
+      '/openapi/v3/pay/acquiring-bank/': acquiringBankMixedSidebar(),
       '/webhook/v3/PAYSCORE.MCH_PREPAY': acquiringBankMixedSidebar(),
       '/openapi/v3/combine-transactions/miniprogram': personalCollectionsSidebar(),
       '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close#INDIVIDUAL': personalCollectionsSidebar(),
@@ -553,6 +554,26 @@ function openapiSidebar() {
               ['通过商户协议号查询协议', '/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}'],
               ['通过商户协议号解约协议', '/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}/terminate'],
             ].map(transArrayItem),
+          ],
+        },
+        {
+          text: '微信分付',
+          collapsed: true,
+          items: [
+            {
+              text: '直连商户模式',
+              collapsed: true,
+              items: [
+                ['支付方式前置曝光查询', '/openapi//v3/pay/transactions/exposure'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '合作伙伴模式',
+              collapsed: true,
+              items: [
+                ['支付方式前置曝光查询', '/openapi/v3/pay/partner/transactions/exposure'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -1974,7 +1995,7 @@ function acquiringBankMixedSidebar() {
         },
         {
           text: '从业机构特约商户结算规则',
-          collapsed: false,
+          collapsed: true,
           items: [
             ['提交修改申请单', '/openapi/v3/merchant-settlement/merchant-settle-rule-applications'],
             ['查询申请单结果', '/openapi/v3/merchant-settlement/merchant-settle-rule-applications/{application_id}'],
@@ -1982,7 +2003,7 @@ function acquiringBankMixedSidebar() {
         },
         {
           text: '从业机构子商户优惠费率活动',
-          collapsed: false,
+          collapsed: true,
           items: [
             ['提交费率优惠活动报名申请', '/openapi/v3/rate-activity/applications'],
             ['查询费率优惠申请结果', '/openapi/v3/rate-activity/applications/id/{application_id}#get'],
@@ -2009,6 +2030,13 @@ function acquiringBankMixedSidebar() {
             ['商户预下单通知', '/webhook/v3/PAYSCORE.MCH_PREPAY'],
             ['用户支付成功通知', '/webhook/v3/PAYSCORE.USER_PAID#ACQUIRINGBANK'],
             ['用户确认成功通知', '/webhook/v3/PAYSCORE.USER_CONFIRM#ACQUIRINGBANK'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '微信分付(从业机构模式)',
+          collapsed: false,
+          items: [
+            ['支付方式前置曝光查询', '/openapi/v3/pay/acquiring-bank/transactions/exposure'],
           ].map(transArrayItem),
         },
       ],
