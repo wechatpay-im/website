@@ -147,4 +147,4 @@ print_r(json_decode((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/realnameauth.php?chapter=60_2&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987607) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987273)

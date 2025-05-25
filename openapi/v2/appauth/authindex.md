@@ -1,6 +1,9 @@
 ---
 title: 授权获取code
 description: 使用标准OAuth2.0协议接入微信支付，在用户授权的条件下，将可以做到访问用户资源，使用接口调用用户功能（如获取用户实名信息等）
+prev:
+  text: 数据签名
+  link: /guide/digital-signature
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -53,4 +56,4 @@ $uri = $entry->withQuery($query)->withFragment('#wechat_redirect');
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/realnameauth.php?chapter=60_1&index=2)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987607) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987273)

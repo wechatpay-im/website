@@ -1,6 +1,9 @@
 ---
 title: 微信支付实名授权
 description: 由于实名信息属于敏感数据，不能以明文数据传输，所以开发者需要用私钥对请求进行签名(sha256后base64编码). 微信支付会对用户的姓名和身份证信息用开发者的公钥加密 , 加密的padding算法为RSA_PKCS1_PADDING, 开发者可以使用私钥解密出明文。
+next:
+  text: 回调通知
+  link: /webhook/
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -211,4 +214,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/realnameauthorization.php?chapter=60_5&index=1)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987792)

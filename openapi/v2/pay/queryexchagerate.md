@@ -123,4 +123,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay/ch/pay/In-AppPay/chapter8_10.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634970) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635002) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635261) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636500) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636620)
