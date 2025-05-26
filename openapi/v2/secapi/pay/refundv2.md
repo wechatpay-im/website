@@ -305,4 +305,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [这里](https://pay.weixin.qq.com/wiki/doc/api/jsapi_sl.php?chapter=9_4)，本接口支持单品优惠订单全额退款和单品优惠订单部分退款，推荐使用本接口，[官方文档](https://pay.weixin.qq.com/wiki/doc/api/danpin.php?chapter=9_103&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011983308)

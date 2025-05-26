@@ -337,4 +337,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [渠道商模式](https://pay.weixin.qq.com/wiki/doc/apiv3/catering_sl.php?chapter=26_3&index=1) [服务商模式](https://pay.weixin.qq.com/wiki/doc/apiv3/catering.php?chapter=26_1)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011939936) [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011941011)

@@ -134,4 +134,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_24_2&index=2&p=901)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4014115404) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4014115410) [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011985201) [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011985217)

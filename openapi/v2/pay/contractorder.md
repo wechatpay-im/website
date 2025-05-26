@@ -261,4 +261,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_5.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987320)

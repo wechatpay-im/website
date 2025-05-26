@@ -140,4 +140,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_17&index=11) [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_17&index=11) [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_99&index=12) [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_17&index=11) [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_17&index=11)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4014326528)

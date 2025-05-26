@@ -120,4 +120,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_295)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011986497)

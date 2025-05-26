@@ -147,4 +147,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方付款码文档](https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_11&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937361) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4012218602) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634900)

@@ -116,4 +116,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_9&index=10)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937195) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989264) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634974)

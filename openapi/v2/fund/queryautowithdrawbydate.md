@@ -138,4 +138,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=21_1)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4014115346)

@@ -139,4 +139,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon.php?chapter=13_6&index=5)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011981612) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937431) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011983160) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941290)

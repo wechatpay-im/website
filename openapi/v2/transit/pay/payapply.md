@@ -325,4 +325,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/pap_jt_v2.php?chapter=19_99&index=5)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011984781)

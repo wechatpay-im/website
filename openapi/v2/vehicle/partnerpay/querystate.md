@@ -164,4 +164,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/vehicle_v2_sl.php?chapter=20_93&index=9&p=202)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011988212)

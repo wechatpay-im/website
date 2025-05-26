@@ -379,4 +379,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay/ch/sub_merchant_entry/chapter3_3.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636644)

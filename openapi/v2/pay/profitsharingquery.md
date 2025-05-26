@@ -140,4 +140,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation.php?chapter=27_2&index=3) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_2&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011983179) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011984717)

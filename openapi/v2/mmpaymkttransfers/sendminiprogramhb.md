@@ -182,4 +182,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_xcx.php?chapter=18_2&index=3)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011974053) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937425) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941282)
