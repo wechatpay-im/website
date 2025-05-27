@@ -97,9 +97,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 {.im-table #response}
 
-参阅
-- [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_16&index=10)
-- [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_16&index=11)
-- [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_16&index=11)
-- [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_16&index=10)
-- [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_16&index=10)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011940955) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011935223) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937201) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011939959) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011939475) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011941681) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011985425) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987569) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941745) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011936652) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989265) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011984153) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4012297550) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011984440) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989912) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011988218) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634915) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634966) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635000) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635254) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636494) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636617)

@@ -84,4 +84,4 @@ $xml = \WeChatPay\Transformer::toXml([
 {.im-table #response}
 
 参阅
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/api/mch_bank.php?chapter=9_292)
+- [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011986354)

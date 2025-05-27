@@ -104,10 +104,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 {.im-table #response}
 
-参阅
-- [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7&index=8)
-- [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_7&index=8)
-- [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_7&index=3)
-- [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_3&index=8)
-- [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_7&index=8)
-- [扣款结果通知](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter4_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011935221) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937152) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937248) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011938508) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011941607) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011985057) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011985480) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011936650) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989262) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941679) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941306) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011984334) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989906) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011988207) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011984263) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634962) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013634999) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013635250) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636492) [官方文档](https://pay.weixin.qq.com/doc/global/v2/zh/4013636612) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987465) [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011985484) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011989913) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011988376)
