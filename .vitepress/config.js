@@ -1287,6 +1287,8 @@ function openapiSidebar() {
                 ['查询风险信息', '/openapi/v3/merchant-risk-manage/trade-risk-information'],
                 ['处置结果回传', '/openapi/v3/merchant-risk-manage/trade-risk-result'],
                 ['查询子商户管控情况', '/openapi/v3/mch-operation-manage/merchant-limitations/sub-mchid/{sub_mchid}'],
+                ['查询风险订单', '/openapi/v3/merchant-risk-manage/ec-trade-risk/query-risk-trades'],
+                ['回传处置结果', '/openapi/v3/merchant-risk-manage/ec-trade-risk/recv-dispose-result'],
               ].map(transArrayItem),
             },
             ...[
