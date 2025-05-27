@@ -95,7 +95,8 @@ next:
 | [先享卡扣费状态变化通知](/webhook/v3/DISCOUNT_CARD.USER_PAID)
 | [先享卡用户结算通知](/webhook/v3/DISCOUNT_CARD.SETTLEMENT)
 | JSON {rowspan=1} | [隔夜归还保险订单状态变化通知](/webhook/v3/HIRE_POWER_BANK.RECEIVE_INSURANCE)
-| JSON {rowspan=3} | | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
+| JSON {rowspan=4} | [风险订单回调通知](/webhook/v3/RISKTRADE.IDENTIFICATION) {colspan=2}
+| | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
 | | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)
 | JSON {rowspan=5} | [跨境/全球-H5支付权限申请事件回调通知](/webhook/v3/APPLYMENT_STATE.APPROVED) {colspan=2}

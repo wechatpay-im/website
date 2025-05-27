@@ -467,7 +467,7 @@ next:
 | | [撤销申请单(业务申请编号)](/openapi/v3/apply4subject/applyment/{business_code}/cancel)
 | 文件上传v3{rowspan=2} | | [商户图片文件上传](/openapi/v3/merchant/media/upload)
 | | [商户视频文件上传](/openapi/v3/merchant/media/video_upload)
-| 商户风险管理v3{rowspan=8} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
+| 商户风险管理v3{rowspan=10} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
 | [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}
 | [修改接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#put) {colspan=2}
 | [删除接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#delete) {colspan=2}
@@ -475,6 +475,8 @@ next:
 | [处置结果回传](/openapi/v3/merchant-risk-manage/trade-risk-result) {colspan=2}
 | [查询风险信息](/openapi/v3/merchant-risk-manage/trade-risk-information) {colspan=2}
 | | [查询子商户管控情况](/openapi/v3/mch-operation-manage/merchant-limitations/sub-mchid/{sub_mchid})
+| [查询风险订单](/openapi/v3/merchant-risk-manage/ec-trade-risk/query-risk-trades) {colspan=2}
+| [回传处置结果](/openapi/v3/merchant-risk-manage/ec-trade-risk/recv-dispose-result) {colspan=2}
 | 商户身份核实v3{rowspan=2} | | [发起不活跃商户身份核实](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants)
 | | [查询不活跃商户身份核实结果](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id})
 | 银行组件v3{rowspan=6} | | [查询省份列表](/openapi/v3/capital/capitallhh/areas/provinces)
