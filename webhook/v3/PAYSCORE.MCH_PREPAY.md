@@ -151,5 +151,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-order/mch-prepay-callback.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012084127) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012084127)

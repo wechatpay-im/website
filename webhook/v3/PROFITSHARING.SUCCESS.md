@@ -138,9 +138,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_9&index=11)
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_6.shtml)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-profit-sharing/notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/profit-sharing/notice-division.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/profit-sharing/notice-division.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012289679) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012116672) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012075216) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012075400)

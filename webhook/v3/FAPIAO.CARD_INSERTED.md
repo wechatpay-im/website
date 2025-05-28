@@ -133,6 +133,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/fapiao/fapiao-applications/invoice-insert-bag-success-notice.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/fapiao/fapiao-applications/invoice-insert-bag-success-notice.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286082) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012072011)

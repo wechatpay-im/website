@@ -134,6 +134,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/violation-notice/violation-notifications/disposal-record-notice.html)
-- [商户平台处置记录回调通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_3_5.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012079216)

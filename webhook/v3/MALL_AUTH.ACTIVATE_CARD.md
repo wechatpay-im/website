@@ -129,7 +129,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/smart-business-circle/authorization-services.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/smart-business-circle/authorization-services.html)
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_6_6.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285836) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012076406)

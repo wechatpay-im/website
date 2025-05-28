@@ -139,7 +139,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/wexin-pay-score-parking/parking-status-notification.html)
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_5.shtml)
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_5.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012284177) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012085798)

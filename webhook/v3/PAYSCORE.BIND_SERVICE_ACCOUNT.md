@@ -134,6 +134,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/binding-result.html)
-- [服务账户绑定结果通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_15.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012156110)

@@ -140,10 +140,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-auth/auth-order-callback.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/authorization-de-authorization-service-callback-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/open/disable-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score-no-confirm/disable-notification.html)
-- [授权/解除授权服务回调通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_23.shtml)
-- [校园轻松付签约结果通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_3_10.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012160692) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012155288) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012086446)

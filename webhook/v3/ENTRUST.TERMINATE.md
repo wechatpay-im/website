@@ -155,5 +155,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/entrusted-payment/contract-alter-notify.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012160323)

@@ -133,5 +133,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/termination-retention/termination-retention-information.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012312222)

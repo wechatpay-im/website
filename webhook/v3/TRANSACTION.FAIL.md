@@ -191,13 +191,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/contracts-result-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/transactions-result-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/entrusted-payment/deduct-result-notify.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/entrusted-payment/deduct-result-notify.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/deduct-result-notify.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/wexin-pay-score-parking/payment-result-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/wexin-pay-score-parking/payment-result-notification.html)
-- [停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml)
-- [服务商停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012159706)

@@ -132,6 +132,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-notice/user-management-member-card-notice.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/membership-card/member-notice/user-management-member-card-notice.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012288215) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012163936)

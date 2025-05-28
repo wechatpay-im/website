@@ -144,6 +144,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/batch-transfer-to-balance/callback-notice.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/batch-transfer-to-balance/transfer-batch-callback-notice.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012269028)

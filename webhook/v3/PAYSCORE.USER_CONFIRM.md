@@ -196,12 +196,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-confirm-order/confirm-order-callback.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-institution-weixin-pay-score/acquiring-bank-service-order/paysuccess-callback.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/authorization-de-authorization-service-callback-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/order-confirmation-notice.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/payment-success-callback.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/confirm-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/open/disable-notification.html)
-- [支付分服务用户确认成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_9.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587953) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012586137) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625482) [官方文档](https://pay.weixin.qq.com/doc/global/v3/zh/4014096520)

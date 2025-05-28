@@ -164,7 +164,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/transactions-result-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/contracts-result-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/transactions-result-notification.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286235) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012160192)

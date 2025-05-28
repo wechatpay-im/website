@@ -172,10 +172,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/campus-easy-pay/transactions/order-repayment-notice.html)
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/wexin-pay-score-parking/payment-result-notification.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/wexin-pay-score-parking/payment-result-notification.html)
-- [停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml)
-- [服务商停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
-- [校园轻松付订单还款通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_3_12.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012160841)
