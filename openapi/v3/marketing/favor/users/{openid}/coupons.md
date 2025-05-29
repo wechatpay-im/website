@@ -138,7 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | appid {data-required data-indent=1} | string | 公众账号ID
 | stock_id {data-indent=1} | string | 批次号
-| status {data-indent=1} | string | 代金券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
+| status {data-indent=1} | string | 券或消费金状态<br/>`SENDED` \| `USED` 枚举值之一
 | creator_mchid {data-indent=1} | string | 创建批次的商户号
 | sender_mchid {data-indent=1} | string | 批次发放商户号
 | available_mchid {data-indent=1} | string | 可用商户号

@@ -101,7 +101,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | stock_id | string | 批次号
 | coupon_id | string | 代金券id
 | coupon_name | string | 代金券名称
-| status | string | 代金券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
+| status | string | 代金券状态<br/>`SENDED` \| `USED` \| `EXPIRED` \| `RECOVER` 枚举值之一
 | description | string | 使用说明
 | create_time | string | 领券时间
 | coupon_type | string | 券类型<br/>`NORMAL` \| `CUT_TO` 枚举值之一
