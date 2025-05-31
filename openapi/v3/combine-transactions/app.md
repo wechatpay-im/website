@@ -18,12 +18,14 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | payer_client_ip {data-required data-indent=2} | string | 用户终端IP
 | sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
 | mchid {data-required data-indent=2} | string | 子单商户号
+| individual_auth_id {data-indent=2} | string | 商品单个人收款方受理授权ID
+| individual_name {data-indent=2} | string | 商品单个人收款方平台昵称
 | attach {data-required data-indent=2} | string | 附加数据
 | amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total_amount {data-required data-indent=3} | integer | 标价金额
 | currency {data-required data-indent=3} | string | 标价币种
 | out_trade_no {data-required data-indent=2} | string | 子单商户订单号
-| sub_mchid {data-required data-indent=2} | string | 二级商户号
+| sub_mchid {data-indent=2} | string | 二级商户号
 | detail {data-indent=2} | string | 商品详情
 | goods_tag {data-indent=2} | string | 订单优惠标记
 | description {data-required data-indent=2} | string | 商品描述
@@ -66,22 +68,24 @@ $instance->v3->combineTransactions->app->postAsync([
       'payer_client_ip' => '14.17.22.32',
     ],
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'              => '1900000109',
+      'individual_auth_id' => '1900000109',
+      'individual_name'    => '哈哈哈小店',
+      'attach'             => '深圳分店',
+      'amount'             => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'detail'       => '买单费用',
-      'goods_tag'    => 'WXG',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'       => '20150806125346',
+      'sub_mchid'          => '1900000109',
+      'detail'             => '买单费用',
+      'goods_tag'          => 'WXG',
+      'description'        => '腾讯充值中心-QQ会员充值',
+      'settle_info'        => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
-      'sub_appid'    => 'wxd678efh567hg6999',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
     'combine_payer_info'   => [
       'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -125,22 +129,24 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
       'payer_client_ip' => '14.17.22.32',
     ],
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'              => '1900000109',
+      'individual_auth_id' => '1900000109',
+      'individual_name'    => '哈哈哈小店',
+      'attach'             => '深圳分店',
+      'amount'             => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'detail'       => '买单费用',
-      'goods_tag'    => 'WXG',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'       => '20150806125346',
+      'sub_mchid'          => '1900000109',
+      'detail'             => '买单费用',
+      'goods_tag'          => 'WXG',
+      'description'        => '腾讯充值中心-QQ会员充值',
+      'settle_info'        => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
-      'sub_appid'    => 'wxd678efh567hg6999',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
     'combine_payer_info'   => [
       'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -184,22 +190,24 @@ $instance['v3/combine-transactions/app']->postAsync([
       'payer_client_ip' => '14.17.22.32',
     ],
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'              => '1900000109',
+      'individual_auth_id' => '1900000109',
+      'individual_name'    => '哈哈哈小店',
+      'attach'             => '深圳分店',
+      'amount'             => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'detail'       => '买单费用',
-      'goods_tag'    => 'WXG',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'       => '20150806125346',
+      'sub_mchid'          => '1900000109',
+      'detail'             => '买单费用',
+      'goods_tag'          => 'WXG',
+      'description'        => '腾讯充值中心-QQ会员充值',
+      'settle_info'        => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
-      'sub_appid'    => 'wxd678efh567hg6999',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
     'combine_payer_info'   => [
       'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -243,22 +251,24 @@ $response = $instance->v3->combineTransactions->app->post([
       'payer_client_ip' => '14.17.22.32',
     ],
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'              => '1900000109',
+      'individual_auth_id' => '1900000109',
+      'individual_name'    => '哈哈哈小店',
+      'attach'             => '深圳分店',
+      'amount'             => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'detail'       => '买单费用',
-      'goods_tag'    => 'WXG',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'       => '20150806125346',
+      'sub_mchid'          => '1900000109',
+      'detail'             => '买单费用',
+      'goods_tag'          => 'WXG',
+      'description'        => '腾讯充值中心-QQ会员充值',
+      'settle_info'        => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
-      'sub_appid'    => 'wxd678efh567hg6999',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
     'combine_payer_info'   => [
       'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -299,22 +309,24 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
       'payer_client_ip' => '14.17.22.32',
     ],
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'              => '1900000109',
+      'individual_auth_id' => '1900000109',
+      'individual_name'    => '哈哈哈小店',
+      'attach'             => '深圳分店',
+      'amount'             => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'detail'       => '买单费用',
-      'goods_tag'    => 'WXG',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'       => '20150806125346',
+      'sub_mchid'          => '1900000109',
+      'detail'             => '买单费用',
+      'goods_tag'          => 'WXG',
+      'description'        => '腾讯充值中心-QQ会员充值',
+      'settle_info'        => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
-      'sub_appid'    => 'wxd678efh567hg6999',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
     'combine_payer_info'   => [
       'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -355,22 +367,24 @@ $response = $instance['v3/combine-transactions/app']->post([
       'payer_client_ip' => '14.17.22.32',
     ],
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'              => '1900000109',
+      'individual_auth_id' => '1900000109',
+      'individual_name'    => '哈哈哈小店',
+      'attach'             => '深圳分店',
+      'amount'             => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'detail'       => '买单费用',
-      'goods_tag'    => 'WXG',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'       => '20150806125346',
+      'sub_mchid'          => '1900000109',
+      'detail'             => '买单费用',
+      'goods_tag'          => 'WXG',
+      'description'        => '腾讯充值中心-QQ会员充值',
+      'settle_info'        => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
-      'sub_appid'    => 'wxd678efh567hg6999',
+      'sub_appid'          => 'wxd678efh567hg6999',
     ],],
     'combine_payer_info'   => [
       'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -411,4 +425,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556944) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545465) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012758021) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707307) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760622) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884108)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556944) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545465) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012758021) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707307) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760622) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015001933)
