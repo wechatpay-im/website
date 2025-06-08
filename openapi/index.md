@@ -316,7 +316,7 @@ next:
 | | [发起门店主体匹配](/openapi/v3/webizpay/stores/entity-matches)
 | | [查询门店主体匹配结果](/openapi/v3/webizpay/stores/entity-matches/{batch_id})
 | | [申请企业支付出资凭证](/openapi/v3/webizpay/bill/proof)
-| | [申请企业支付业务账单](/openapi/v3/webizpay/bill/trade-bil)
+| | [申请企业支付业务账单](/openapi/v3/webizpay/bill/trade-bill)
 | 微工卡v3{rowspan=9} | | [生成用户授权token](/openapi/v3/payroll-card/tokens)
 | | [查询微工卡授权关系](/openapi/v3/payroll-card/relations/{openid})
 | | [微工卡核身预下单](/openapi/v3/payroll-card/authentications/pre-order)
