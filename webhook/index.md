@@ -45,6 +45,7 @@ next:
 | [发票插入用户卡包成功通知](/webhook/v3/FAPIAO.CARD_INSERTED) {colspan=2}
 | [发票开具成功通知](/webhook/v3/FAPIAO.ISSUED) {colspan=2}
 | [发票冲红成功通知](/webhook/v3/FAPIAO.REVERSED) {colspan=2}
+| JSON {rowspan=1} | | [企业支付关系授权完成通知](/webhook/v3/WEBIZPAY.AUTHORIZED)
 | JSON {rowspan=3} | [商家转账批次完成通知](/webhook/v3/MCHTRANSFER.BATCH.FINISHED)
 | [商家转账批次关闭通知](/webhook/v3/MCHTRANSFER.BATCH.CLOSED)
 | [商家转账单据终态通知](/webhook/v3/MCHTRANSFER.BILL.FINISHED)

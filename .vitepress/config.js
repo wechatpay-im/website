@@ -907,6 +907,24 @@ function openapiSidebar() {
                 ['查询赔付保费结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills/{out_bill_no}'],
               ].map(transArrayItem),
             },
+            {
+              text: '企业支付',
+              collapsed: true,
+              items: [
+                ['发起员工开通企业支付授权', '/openapi/v3/webizpay/users/{user_id}/authorization-url'],
+                ['查询企业员工开通授权状态', '/openapi/v3/webizpay/users/{user_id}/authorization-state'],
+                ['下发企业支付额度卡', '/openapi/v3/webizpay/employees/{employee_id}/quota-cards'],
+                ['使用商户卡号查询额度卡', '/openapi/v3/webizpay/employees/{employee_id}/out-quota-cards/{out_card_no}'],
+                ['查询企业支付额度卡信息', '/openapi/v3/webizpay/employees/{employee_id}/quota-cards/{card_no}'],
+                ['作废员工企业支付额度卡', '/openapi/v3/webizpay/employees/{employee_id}/quota-cards/{card_no}/cancel'],
+                ['获取指定额度卡支付链接', '/openapi/v3/webizpay/employees/{employee_id}/quota-cards/{card_no}/payment-url'],
+                ['发起解除员工企业支付授权', '/openapi/v3/webizpay/employees/{employee_id}/revoke'],
+                ['发起门店主体匹配', '/openapi/v3/webizpay/stores/entity-matches'],
+                ['查询门店主体匹配结果', '/openapi/v3/webizpay/stores/entity-matches/{batch_id}'],
+                ['申请企业支付出资凭证', '/openapi/v3/webizpay/bill/proof'],
+                ['申请企业支付业务账单', '/openapi/v3/webizpay/bill/trade-bill'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -2208,6 +2226,13 @@ function webhookSidebar() {
             ['发票插入用户卡包成功通知', '/webhook/v3/FAPIAO.CARD_INSERTED'],
             ['发票开具成功通知', '/webhook/v3/FAPIAO.ISSUED'],
             ['发票冲红成功通知', '/webhook/v3/FAPIAO.REVERSED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '企业支付',
+          collapsed: true,
+          items: [
+            ['关系授权完成通知', '/webhook/v3/WEBIZPAY.AUTHORIZED'],
           ].map(transArrayItem),
         },
         {
