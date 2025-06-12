@@ -1414,6 +1414,7 @@ function openapiSidebar() {
               collapsed: true,
               items: [
                 ['代扣受理扣款', '/openapi/v3/papay/pay/harmony/transactions/apply'],
+                ['查询签约协议(商户协议号)', '/openapi/v3/papay/sign/contracts/harmony-plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
               ].map(transArrayItem),
             },
             {
