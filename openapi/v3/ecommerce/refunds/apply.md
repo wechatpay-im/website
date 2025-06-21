@@ -14,6 +14,8 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 | sub_mchid {data-indent=1} | string | 二级商户号
 | sp_appid {data-required data-indent=1} | string | 电商平台APPID
 | sub_appid {data-indent=1} | string | 二级商户APPID
+| combine_mchid {data-indent=1} | string | 还款服务商商户号
+| combine_out_trade_no {data-indent=1} | string | 还款订单号
 | combine_transaction_id {data-required data-indent=1} | string | 交易单微信支付订单号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_trade_no {data-indent=1} | string | 商户订单号
@@ -41,6 +43,8 @@ $instance->v3->ecommerce->refunds->apply->postAsync([
     'sub_mchid'              => '1900000109',
     'sp_appid'               => 'wx8888888888888888',
     'sub_appid'              => 'wx8888888888888888',
+    'combine_mchid'          => '1230000109',
+    'combine_out_trade_no'   => 'P20150806125346',
     'combine_transaction_id' => '1217752501201407033233368018',
     'transaction_id'         => '1217752501201407033233368018',
     'out_trade_no'           => '1217752501201407033233368018',
@@ -73,6 +77,8 @@ $instance->chain('v3/ecommerce/refunds/apply')->postAsync([
     'sub_mchid'              => '1900000109',
     'sp_appid'               => 'wx8888888888888888',
     'sub_appid'              => 'wx8888888888888888',
+    'combine_mchid'          => '1230000109',
+    'combine_out_trade_no'   => 'P20150806125346',
     'combine_transaction_id' => '1217752501201407033233368018',
     'transaction_id'         => '1217752501201407033233368018',
     'out_trade_no'           => '1217752501201407033233368018',
@@ -105,6 +111,8 @@ $instance['v3/ecommerce/refunds/apply']->postAsync([
     'sub_mchid'              => '1900000109',
     'sp_appid'               => 'wx8888888888888888',
     'sub_appid'              => 'wx8888888888888888',
+    'combine_mchid'          => '1230000109',
+    'combine_out_trade_no'   => 'P20150806125346',
     'combine_transaction_id' => '1217752501201407033233368018',
     'transaction_id'         => '1217752501201407033233368018',
     'out_trade_no'           => '1217752501201407033233368018',
@@ -137,6 +145,8 @@ $response = $instance->v3->ecommerce->refunds->apply->post([
     'sub_mchid'              => '1900000109',
     'sp_appid'               => 'wx8888888888888888',
     'sub_appid'              => 'wx8888888888888888',
+    'combine_mchid'          => '1230000109',
+    'combine_out_trade_no'   => 'P20150806125346',
     'combine_transaction_id' => '1217752501201407033233368018',
     'transaction_id'         => '1217752501201407033233368018',
     'out_trade_no'           => '1217752501201407033233368018',
@@ -166,6 +176,8 @@ $response = $instance->chain('v3/ecommerce/refunds/apply')->post([
     'sub_mchid'              => '1900000109',
     'sp_appid'               => 'wx8888888888888888',
     'sub_appid'              => 'wx8888888888888888',
+    'combine_mchid'          => '1230000109',
+    'combine_out_trade_no'   => 'P20150806125346',
     'combine_transaction_id' => '1217752501201407033233368018',
     'transaction_id'         => '1217752501201407033233368018',
     'out_trade_no'           => '1217752501201407033233368018',
@@ -195,6 +207,8 @@ $response = $instance['v3/ecommerce/refunds/apply']->post([
     'sub_mchid'              => '1900000109',
     'sp_appid'               => 'wx8888888888888888',
     'sub_appid'              => 'wx8888888888888888',
+    'combine_mchid'          => '1230000109',
+    'combine_out_trade_no'   => 'P20150806125346',
     'combine_transaction_id' => '1217752501201407033233368018',
     'transaction_id'         => '1217752501201407033233368018',
     'out_trade_no'           => '1217752501201407033233368018',
@@ -243,4 +257,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012649457) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476892)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012649457) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476892) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015251094) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015252418)

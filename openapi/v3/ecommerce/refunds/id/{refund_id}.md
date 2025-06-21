@@ -109,7 +109,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 退款金额信息
 | refund {data-required data-indent=1} | integer | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
-| account {data-required data-indent=2} | string | 出资账户类型
+| account {data-required data-indent=2} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
 | amount {data-required data-indent=2} | number | 出资金额
 | payer_refund {data-required data-indent=1} | integer | 用户退款金额
 | discount_refund {data-indent=1} | integer | 优惠退款金额
@@ -122,8 +122,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | refund_amount {data-required data-indent=1} | integer | 优惠退款金额
 | refund_account | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
-| funds_account | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` 枚举值之一
+| funds_account | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` \| `OPERATION` \| `BASIC` \| `ECNY_BASIC` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012650253) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476908)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012650253) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476908) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015252439)
