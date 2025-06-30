@@ -42,6 +42,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-required data-indent=1} | string | 通知地址
+| trade_scenario {data-indent=1} | string | 交易场景<br/>`RECOMMERCE` 枚举值
 | limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_debit` \| `balance_only` 枚举值之一
 | contract_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 预签约信息
 | mchid {data-required data-indent=2} | string | 签约商户号
@@ -98,6 +99,7 @@ $instance->v3->combineTransactions->app->postAsync([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
+    'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
@@ -159,6 +161,7 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
+    'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
@@ -220,6 +223,7 @@ $instance['v3/combine-transactions/app']->postAsync([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
+    'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
@@ -281,6 +285,7 @@ $response = $instance->v3->combineTransactions->app->post([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
+    'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
@@ -339,6 +344,7 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
+    'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
@@ -397,6 +403,7 @@ $response = $instance['v3/combine-transactions/app']->post([
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
+    'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
