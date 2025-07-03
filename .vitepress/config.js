@@ -1162,6 +1162,15 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '还款支付',
+              collapsed: true,
+              items: [
+                ['还款下单', '/openapi/v3/repayment/combine-transactions/partner/prepay'],
+                ['还款单查询', '/openapi/v3/repayment/combine-transactions/partner/out-trade-no/{combine_out_trade_no}'],
+                ['商户关单', '/openapi/v3/repayment/combine-transactions/partner/out-trade-no/{combine_out_trade_no}/close'],
+              ].map(transArrayItem),
+            },
+            {
               text: '商家转账',
               collapsed: true,
               items: [
