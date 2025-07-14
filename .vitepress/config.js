@@ -635,6 +635,27 @@ function openapiSidebar() {
                 ['查询明细单(微信明细单号)', '/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}/details/{detail_no}'],
               ].map(transArrayItem),
             },
+            {
+              text: '会员',
+              collapsed: true,
+              items: [
+                ['创建会员卡模板', '/openapi/v3/brand/partner/card-member/cards#post'],
+                ['查询会员卡模板列表', '/openapi/v3/brand/partner/card-member/cards#get'],
+                ['查询会员卡模板信息', '/openapi/v3/brand/partner/card-member/cards/{card_id}#get'],
+                ['修改会员卡模板信息', '/openapi/v3/brand/partner/card-member/cards/{card_id}#patch'],
+                ['删除会员卡模板信息', '/openapi/v3/brand/partner/card-member/cards/{card_id}#delete'],
+                ['作废会员卡模板', '/openapi/v3/brand/partner/card-member/cards/{card_id}/invalidate'],
+                ['查询品牌用户的所有会员卡', '/openapi/v3/brand/partner/card-member/user-cards'],
+                ['查询品牌用户会员卡信息', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}#get'],
+                ['修改品牌用户会员卡信息', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}#patch'],
+                ['作废品牌用户会员卡', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}/invalidate'],
+                ['入会组件预授权', '/openapi/v3/brand/partner/card-member/open-user-card-tokens'],
+                ['导入用户会员卡(OPENID)', '/openapi/v3/brand/partner/card-member/user-cards/import-by-openid'],
+                ['导入用户会员卡(手机号)', '/openapi/v3/brand/partner/card-member/user-cards/import-by-phone'],
+                ['同步会员开通结果', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}/confirm'],
+                ['创建用户动态信息', '/openapi/v3/brand/partner/card-member/user-feeds'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -2251,6 +2272,14 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['关系授权完成通知', '/webhook/v3/WEBIZPAY.AUTHORIZED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '商家名片会员',
+          collapsed: true,
+          items: [
+            ['用户开通会员卡事件通知', '/webhook/v3/MEMBERCARDSP.USER_CARD.CREATE'],
+            ['用户删除会员卡事件通知', '/webhook/v3/MEMBERCARDSP.USER_CARD.DELETE'],
           ].map(transArrayItem),
         },
         {
