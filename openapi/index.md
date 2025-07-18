@@ -217,7 +217,7 @@ next:
 | [下载批次核销明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/use-flow)
 | [下载批次发放明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/send-flow)
 | [下载批次退款明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/refund-flow)
-| 商家券v3{rowspan=24} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
+| 商家券v3{rowspan=25} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
 | [查询商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#get) {colspan=2}
 | [上传预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes#post) {colspan=2}
 | [查询预存code列表](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes#get) {colspan=2}
@@ -228,6 +228,7 @@ next:
 | [修改商家券基本信息](/openapi/v3/marketing/busifavor/stocks/{stock_id}#patch) {colspan=2}
 | [修改批次预算](/openapi/v3/marketing/busifavor/stocks/{stock_id}/budget) {colspan=2}
 | [向用户发券](/openapi/v3/marketing/busifavor/coupons/send) {colspan=2}
+| [向用户发商品券](/openapi/v3/marketing/busifavor/product-coupons/send) {colspan=2}
 | [使券失效](/openapi/v3/marketing/busifavor/coupons/deactivate) {colspan=2}
 | [申请退券](/openapi/v3/marketing/busifavor/coupons/return) {colspan=2}
 | [关联订单信息](/openapi/v3/marketing/busifavor/coupons/associate) {colspan=2}
