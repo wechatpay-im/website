@@ -104,6 +104,10 @@ export default defineConfig({
         activeMatch: '^/devkit/'
       },
       {
+        text: '开发者工具',
+        link: 'https://tools.aifuwu.net/',
+      },
+      {
         text: 'EasyWeChat',
         link: 'https://easywechat.com/',
       },
