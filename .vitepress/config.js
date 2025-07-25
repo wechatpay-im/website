@@ -1053,6 +1053,7 @@ function openapiSidebar() {
                 ['发起转账并完成自动收授权', '/openapi/v3/fund-app/mch-transfer/transfer-bills/pre-transfer-with-authorization'],
                 ['转账(用户自动收款)', '/openapi/v3/fund-app/mch-transfer/transfer-bills/transfer'],
                 ['商户单号查询自动收款授权', '/openapi/v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}'],
+                ['解除免确认收款授权', '/openapi/v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}/close'],
               ].map(transArrayItem),
             },
             {
