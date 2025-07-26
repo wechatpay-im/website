@@ -1089,6 +1089,8 @@ function openapiSidebar() {
                 ['申请进件', '/openapi/v3/ecommerce/applyments/'],
                 ['查询状态(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}'],
                 ['查询状态(业务申请编号)', '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}'],
+                ['撤销申请单(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}/revoke'],
+                ['撤销申请单(业务申请编号)', '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}/revoke'],
               ].map(transArrayItem),
             },
             {
