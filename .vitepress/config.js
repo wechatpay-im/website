@@ -1348,6 +1348,15 @@ function openapiSidebar() {
                 ['回传处置结果', '/openapi/v3/merchant-risk-manage/ec-trade-risk/recv-dispose-result'],
               ].map(transArrayItem),
             },
+            {
+              text: '商户尽职调查',
+              collapsed: true,
+              items: [
+                ['提交尽调资料','/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id}/submit'],
+                ['上传尽调资料文件','/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id}/upload'],
+                ['查询子商户强化尽调单信息','/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id}'],
+              ].map(transArrayItem),
+            },
             ...[
               ['查询省份列表', '/openapi/v3/capital/capitallhh/areas/provinces'],
               ['查询城市列表', '/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities'],

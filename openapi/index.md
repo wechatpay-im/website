@@ -509,6 +509,9 @@ next:
 | | [查询子商户管控情况](/openapi/v3/mch-operation-manage/merchant-limitations/sub-mchid/{sub_mchid})
 | [查询风险订单](/openapi/v3/merchant-risk-manage/ec-trade-risk/query-risk-trades) {colspan=2}
 | [回传处置结果](/openapi/v3/merchant-risk-manage/ec-trade-risk/recv-dispose-result) {colspan=2}
+| 商户尽职调查v3{rowspan=3} | | [提交尽调资料](/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id}/submit)
+| | [上传尽调资料文件](/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id}/upload)
+| | [查询子商户强化尽调单信息](/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id})
 | 商户身份核实v3{rowspan=2} | | [发起不活跃商户身份核实](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants)
 | | [查询不活跃商户身份核实结果](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id})
 | 银行组件v3{rowspan=6} | | [查询省份列表](/openapi/v3/capital/capitallhh/areas/provinces)

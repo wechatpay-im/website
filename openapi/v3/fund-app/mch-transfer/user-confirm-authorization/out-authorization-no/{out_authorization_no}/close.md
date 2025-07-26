@@ -82,3 +82,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | close_reason {data-required data-indent=1} | string | 自动收款授权的原因<br/>`CLOSE_VIA_MCH_API` 枚举值
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015653811)
