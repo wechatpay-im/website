@@ -1336,6 +1336,26 @@ function openapiSidebar() {
               ['商户视频文件上传', '/openapi/v3/merchant/media/video_upload'],
             ].map(transArrayItem),
             {
+              text: '商户资料变更',
+              collapsed: true,
+              items: [
+                ['提交资料变更申请单', '/openapi/v3/mchalterapply/mchsubjectalterapplyment'],
+                ['查询申请单状态(申请单号)', '/openapi/v3/mchalterapply/mchsubjectalterapplyment/{apply_id}'],
+                ['查询申请单状态(业务单号)', '/openapi/v3/mchalterapply/mchsubjectalterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no}'],
+                ['撤销资料变更申请单', '/openapi/v3/mchalterapply/mchsubjectalterapplyment/{apply_id}/revoke'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '商户超管变更',
+              collapsed: true,
+              items: [
+                ['提交超管变更申请单', '/openapi/v3/mchalterapply/mchcontactalterapplyment'],
+                ['查询申请单状态(申请单号)', '/openapi/v3/mchalterapply/mchcontactalterapplyment/{apply_id}'],
+                ['查询申请单状态(业务单号)', '/openapi/v3/mchalterapply/mchcontactalterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no}'],
+                ['撤销超管变更申请单', '/openapi/v3/mchalterapply/mchcontactalterapplyment/{apply_id}/revoke'],
+              ].map(transArrayItem),
+            },
+            {
               text: '商户风险管理',
               collapsed: true,
               items: [
