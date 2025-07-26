@@ -46,6 +46,9 @@ next:
 | [发票开具成功通知](/webhook/v3/FAPIAO.ISSUED) {colspan=2}
 | [发票冲红成功通知](/webhook/v3/FAPIAO.REVERSED) {colspan=2}
 | JSON {rowspan=1} | | [企业支付关系授权完成通知](/webhook/v3/WEBIZPAY.AUTHORIZED)
+| JSON {rowspan=3} | | [公益捐赠-预算申请锁定成功通知](/webhook/v3/BUDGET.LOCKED)
+| | [公益捐赠-预算申请关闭回调通知](/webhook/v3/BUDGET.CLOSED)
+| | [公益捐赠-预算申请完结回调通知](/webhook/v3/BUDGET.FINISHED)
 | JSON {rowspan=2} | | [用户开通商家名片会员卡事件通知](/webhook/v3/MEMBERCARDSP.USER_CARD.CREATE)
 | | [用户删除商家名片会员卡事件通知](/webhook/v3/MEMBERCARDSP.USER_CARD.DELETE)
 | JSON {rowspan=3} | [商家转账批次完成通知](/webhook/v3/MCHTRANSFER.BATCH.FINISHED)

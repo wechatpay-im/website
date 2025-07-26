@@ -954,6 +954,17 @@ function openapiSidebar() {
                 ['申请企业支付业务账单', '/openapi/v3/webizpay/bill/trade-bill'],
               ].map(transArrayItem),
             },
+            {
+              text: '公益捐赠',
+              collapsed: true,
+              items: [
+                ['申请公益捐赠预算', '/openapi/v3/fund-app/mch-transfer/partner/charity-budget'],
+                ['查询公益捐赠预算详情', '/openapi/v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}'],
+                ['解锁公益捐赠预算', '/openapi/v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unlock'],
+                ['发起公益捐赠付款', '/openapi/v3/fund-app/mch-transfer/partner/charity-transfer-bills'],
+                ['查询公益捐赠付款详情', '/openapi/v3/fund-app/mch-transfer/partner/charity-transfer-bills/out-transfer-no/{out_transfer_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -2307,6 +2318,15 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['关系授权完成通知', '/webhook/v3/WEBIZPAY.AUTHORIZED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '公益捐赠',
+          collapsed: true,
+          items: [
+            ['预算申请锁定成功通知', '/webhook/v3/BUDGET.LOCKED'],
+            ['预算申请关闭回调通知', '/webhook/v3/BUDGET.CLOSED'],
+            ['预算申请完结回调通知', '/webhook/v3/BUDGET.FINISHED'],
           ].map(transArrayItem),
         },
         {
