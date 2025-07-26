@@ -1088,6 +1088,7 @@ function openapiSidebar() {
               items: [
                 ['申请进件', '/openapi/v3/ecommerce/applyments/'],
                 ['提交进件申请单(全托模式)', '/openapi/v3/ecommerce/applyments/submit-account-hosting-applyment'],
+                ['平台代理签约核身', '/openapi/v3/ecommerce/applyments/submit-sign-verify-info'],
                 ['查询状态(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}'],
                 ['查询状态(业务申请编号)', '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}'],
                 ['撤销申请单(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}/revoke'],
