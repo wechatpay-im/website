@@ -178,6 +178,7 @@ export default defineConfig({
       '/webhook/v3/REFUND.ABNORMAL#INDIVIDUAL': personalCollectionsSidebar(),
       '/webhook/v3/REFUND.CLOSED#INDIVIDUAL': personalCollectionsSidebar(),
       '/webhook/v3/SETTLEMENT.SUCCESS': personalCollectionsSidebar(),
+      'openapi/v3/gov/subsidy': nationalConsumerGoodsSubsidySidebar(),
     },
   },
 })
@@ -2178,6 +2179,91 @@ function personalCollectionsSidebar() {
             ['查询在途异常资金付款结果', '/openapi/v3/abnormal-fund-processing/receipts/{receipt_id}'],
             ['异常转付处理结果回调通知', '/webhook/v3/ABNORMAL_FUND_PROCESSING.TRANSFER.SUCCESS'],
           ].map(transArrayItem),
+        },
+      ],
+    },
+  ]
+}
+
+function nationalConsumerGoodsSubsidySidebar() {
+  return [
+    {
+      text: '国家消费品换新补贴',
+      collapsed: true,
+      items: [
+        {
+          text: '浙江',
+          collapsed: true,
+          items: [
+            ['查询补贴资格', '/openapi/v3/gov/subsidy/zhejiang/qualifications/query'],
+            ['领取资格', '/openapi/v3/gov/subsidy/zhejiang/qualifications/claim'],
+            ['变更资格', '/openapi/v3/gov/subsidy/zhejiang/qualifications/alter'],
+            ['核销资格', '/openapi/v3/gov/subsidy/zhejiang/qualifications/sync'],
+            ['N品类核销', '/openapi/v3/gov/subsidy/zhejiang/n-qualifications/confirm'],
+            ['申请品类凭证码', '/openapi/v3/gov/subsidy/zhejiang/authcode/issue'],
+            ['预核销品类凭证码', '/openapi/v3/gov/subsidy/zhejiang/authcode/try'],
+            ['取消核销品类凭证码', '/openapi/v3/gov/subsidy/zhejiang/authcode/cancel'],
+            ['确认品类凭证码', '/openapi/v3/gov/subsidy/zhejiang/authcode/commit'],
+            ['撤销品类凭证码', '/openapi/v3/gov/subsidy/zhejiang/authcode/refund'],
+            ['查询商品信息', '/openapi/v3/gov/subsidy/zhejiang/goods/query'],
+            ['查询SN码状态', '/openapi/v3/gov/subsidy/zhejiang/sncode/query'],
+            ['SN码锁定', '/openapi/v3/gov/subsidy/zhejiang/sncode/lock'],
+            ['SN码解锁', '/openapi/v3/gov/subsidy/zhejiang/sncode/unlock'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '江苏',
+          collapsed: true,
+          items: [
+            ['查询补贴资格', '/openapi/v3/gov/subsidy/qualification'],
+            ['批量查询用户资格', '/openapi/v3/gov/subsidy/qualifications/query'],
+            ['同步资格核销信息', '/openapi/v3/gov/subsidy/qualifications/sync'],
+            ['N品类同步资格核销信息', '/openapi/v3/gov/subsidy/n-qualifications/sync'],
+            ['交易信息回传', '/openapi/v3/gov/subsidy/transactions/sync'],
+            ['交易信息查询', '/openapi/v3/gov/subsidy/transactions/query'],
+            ['查询单日交易汇总', '/openapi/v3/gov/subsidy/transactions/summary/query-day'],
+            ['查询SN码状态', '/openapi/v3/gov/subsidy/sncode/query'],
+            ['SN码锁定', '/openapi/v3/gov/subsidy/sncode/lock'],
+            ['SN码解锁', '/openapi/v3/gov/subsidy/sncode/unlock'],
+            ['商品信息上传', '/openapi/v3/gov/subsidy/goods/upload'],
+            ['企业信息查询', '/openapi/v3/gov/subsidy/companies/query'],
+          ].map(transArrayItem).concat({
+            text: '透传模式',
+            items: [
+              ['查询资格', '/openapi/v3/gov/subsidy/qualifications/passthrough/query'],
+              ['领取资格', '/openapi/v3/gov/subsidy/qualifications/passthrough/claim'],
+              ['取消资格', '/openapi/v3/gov/subsidy/qualifications/passthrough/cancel'],
+            ].map(transArrayItem),
+          }),
+        },
+        {
+          text: '上海/福建/重庆',
+          collapsed: true,
+          items: [
+            ['查询补贴资格', '/openapi/v3/gov/subsidy/qualification'],
+            ['批量查询用户资格', '/openapi/v3/gov/subsidy/qualifications/query'],
+            ['同步资格核销信息', '/openapi/v3/gov/subsidy/qualifications/sync'],
+            ['N品类同步资格核销信息', '/openapi/v3/gov/subsidy/n-qualifications/sync'],
+            ['交易信息回传', '/openapi/v3/gov/subsidy/transactions/sync'],
+            ['查询SN码状态', '/openapi/v3/gov/subsidy/sncode/query'],
+            ['SN码锁定', '/openapi/v3/gov/subsidy/sncode/lock'],
+          ].map(transArrayItem).concat({
+            text: '透传模式',
+            items: [
+              ['查询资格', '/openapi/v3/gov/subsidy/qualifications/passthrough/query'],
+              ['领取资格', '/openapi/v3/gov/subsidy/qualifications/passthrough/claim'],
+              ['取消资格', '/openapi/v3/gov/subsidy/qualifications/passthrough/cancel'],
+            ].map(transArrayItem),
+          }, {
+            text: '数据审核',
+            items: [
+              ['上传审核数据', '/openapi/v3/gov/subsidy/audit/cup/upload'],
+              ['更新审核数据', '/openapi/v3/gov/subsidy/audit/cup/update'],
+              ['查询审核结果', '/openapi/v3/gov/subsidy/audit/cup/query'],
+              ['作废审核数据', '/openapi/v3/gov/subsidy/audit/cup/invalid'],
+              ['同步退款信息', '/openapi/v3/gov/subsidy/audit/cup/refund/sync'],
+            ].map(transArrayItem),
+          }),
         },
       ],
     },
