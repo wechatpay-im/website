@@ -1447,7 +1447,6 @@ function openapiSidebar() {
               text: '直连商户模式',
               collapsed: true,
               items: [
-                ['代扣预签约', '/openapi/v3/papay/entrust-sign/contracts/pre-entrust-sign'],
                 ['JSAPI场景预约扣费预签约', '/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi'],
                 ['App场景预约扣费预签约', '/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/app'],
                 ['H5场景预约扣费预签约', '/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/h5'],
@@ -1498,8 +1497,9 @@ function openapiSidebar() {
               text: '鸿蒙委托代扣',
               collapsed: true,
               items: [
-                ['代扣受理扣款', '/openapi/v3/papay/pay/harmony/transactions/apply'],
+                ['代扣预签约', '/openapi/v3/papay/sign/contracts/pre-entrust-sign'],
                 ['查询签约协议(商户协议号)', '/openapi/v3/papay/sign/contracts/harmony-plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
+                ['代扣受理扣款', '/openapi/v3/papay/pay/harmony/transactions/apply'],
               ].map(transArrayItem),
             },
             {

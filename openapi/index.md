@@ -550,8 +550,7 @@ next:
 | [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}) :no_entry_sign: {colspan=2}
 | [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys) :no_entry_sign: {colspan=2}
 | [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks) :no_entry_sign: {colspan=2}
-| 委托代扣v3{rowspan=12} | [代扣预签约](/openapi/v3/papay/entrust-sign/contracts/pre-entrust-sign)
-| [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi) | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/jsapi)
+| 委托代扣v3{rowspan=11} | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi) | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/jsapi)
 | [App场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/app) | [App场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/app)
 | [H5场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/h5) | [H5场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/h5)
 | [小程序场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/mini-program) | [小程序场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program)
@@ -574,8 +573,9 @@ next:
 | [H5预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/h5)
 | [JSAPI预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi)
 | [小程序预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-program)
-| 鸿蒙委托代扣v3{rowspan=2} | [代扣受理扣款](/openapi/v3/papay/pay/harmony/transactions/apply)
+| 鸿蒙委托代扣v3{rowspan=3} | [代扣预签约](/openapi/v3/papay/sign/contracts/pre-entrust-sign)
 | [通过商户协议号查询签约协议](/openapi/v3/papay/sign/contracts/harmony-plan-id/{plan_id}/out-contract-code/{out_contract_code})
+| [代扣受理扣款](/openapi/v3/papay/pay/harmony/transactions/apply)
 | 校园轻松付v3{rowspan=8} | | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
 | | [预签约](/openapi/v3/eduschoolpay/contracts/presign)
 | | [商户主动解约](/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate)
