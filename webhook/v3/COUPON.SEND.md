@@ -29,11 +29,11 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | event_type {data-indent=3} | string | 业务细分事件类型<br/>`EVENT_TYPE_BUSICOUPON_SEND` 枚举值
 | coupon_code {data-required data-indent=3} | string | 券的唯一标识。
@@ -41,7 +41,7 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 | send_time {data-required data-indent=3} | string | 发放时间
 | openid {data-indent=3} | string | 微信用户在AppID下的唯一标识。
 | unionid {data-indent=3} | string | 微信用户在同一个微信开放平台账号下的唯一用户标识
-| send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` \| `BUSICOUPON_SEND_CHANNEL_SHAKE` 枚举值之一
+| send_channel {data-required data-indent=3} | string | 发放渠道<br/>`BUSICOUPON_SEND_CHANNEL_MINIAPP` \| `BUSICOUPON_SEND_CHANNEL_API` \| `BUSICOUPON_SEND_CHANNEL_PAYGIFT` \| `BUSICOUPON_SEND_CHANNEL_H5` \| `BUSICOUPON_SEND_CHANNEL_FTOF` \| `BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT` \| `BUSICOUPON_SEND_CHANNEL_HALL` \| `BUSICOUPON_SEND_CHANNEL_JSAPI` \| `JSAPI` \| `BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH` \| `BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT` \| `BUSICOUPON_SEND_CHANNEL_WECHAT_AD` \| `BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM` \| `BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT` \| `BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT` \| `BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL` \| `BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM` 枚举值之一
 | send_merchant {data-required data-indent=3} | string | 发券商户号
 | act_id {data-indent=3} | string | 摇一摇活动ID
 | attach_info {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 仅在支付有礼、扫码领券（营销馆）、会员有礼发放渠道，才有该信息
@@ -143,4 +143,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285279) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285839)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285279) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285839) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015717506)

@@ -19,7 +19,7 @@
 $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->postAsync([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list'  => ['string'],
+    'coupon_code_list'  => ['ABC9588200'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -33,7 +33,7 @@ $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->postAsync(
 $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->postAsync([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list'  => ['string'],
+    'coupon_code_list'  => ['ABC9588200'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -47,7 +47,7 @@ $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->postAs
 $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->postAsync([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list'  => ['string'],
+    'coupon_code_list'  => ['ABC9588200'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ])
@@ -61,7 +61,7 @@ $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->postAsync([
 $response = $instance->v3->marketing->busifavor->stocks->_stock_id_->couponcodes->post([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list'  => ['string'],
+    'coupon_code_list'  => ['ABC9588200'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -72,7 +72,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/busifavor/stocks/{stock_id}/couponcodes')->post([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list'  => ['string'],
+    'coupon_code_list'  => ['ABC9588200'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -83,7 +83,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/busifavor/stocks/{stock_id}/couponcodes']->post([
   'stock_id' => '98065001',
   'json' => [
-    'coupon_code_list'  => ['string'],
+    'coupon_code_list'  => ['ABC9588200'],
     'upload_request_no' => '100002322019090134234sfdf',
   ],
 ]);
@@ -109,7 +109,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012487038) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012492853)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012487038) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012492853) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015715946) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015717418)
 
 ## 查询预存code列表 {#get}
 

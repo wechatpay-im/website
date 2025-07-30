@@ -16,6 +16,9 @@ description: 在用户满足优惠门槛后，商户可通过该接口核销用�
 | use_time {data-required data-indent=1} | string | 请求核销时间
 | use_request_no {data-required data-indent=1} | string | 核销请求单据号
 | openid {data-indent=1} | string | 用户标识
+| out_trade_no {data-indent=1} | string | 商户订单号
+| mch_id {data-indent=1} | string | 下单商户号
+| transaction_id {data-indent=1} | string | 微信支付订单号
 
 {.im-table #request}
 
@@ -30,6 +33,9 @@ $instance->v3->marketing->busifavor->coupons->use->postAsync([
     'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
     'openid'         => 'xsd3434454567676',
+    'out_trade_no'   => '190000001',
+    'mch_id'         => '190000001',
+    'transaction_id' => '4200000001856498491',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,6 +53,9 @@ $instance->chain('v3/marketing/busifavor/coupons/use')->postAsync([
     'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
     'openid'         => 'xsd3434454567676',
+    'out_trade_no'   => '190000001',
+    'mch_id'         => '190000001',
+    'transaction_id' => '4200000001856498491',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,6 +73,9 @@ $instance['v3/marketing/busifavor/coupons/use']->postAsync([
     'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
     'openid'         => 'xsd3434454567676',
+    'out_trade_no'   => '190000001',
+    'mch_id'         => '190000001',
+    'transaction_id' => '4200000001856498491',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,6 +93,9 @@ $response = $instance->v3->marketing->busifavor->coupons->use->post([
     'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
     'openid'         => 'xsd3434454567676',
+    'out_trade_no'   => '190000001',
+    'mch_id'         => '190000001',
+    'transaction_id' => '4200000001856498491',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -95,6 +110,9 @@ $response = $instance->chain('v3/marketing/busifavor/coupons/use')->post([
     'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
     'openid'         => 'xsd3434454567676',
+    'out_trade_no'   => '190000001',
+    'mch_id'         => '190000001',
+    'transaction_id' => '4200000001856498491',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,6 +127,9 @@ $response = $instance['v3/marketing/busifavor/coupons/use']->post([
     'use_time'       => '2015-05-20T13:29:35+08:00',
     'use_request_no' => '1002600620019090123143254435',
     'openid'         => 'xsd3434454567676',
+    'out_trade_no'   => '190000001',
+    'mch_id'         => '190000001',
+    'transaction_id' => '4200000001856498491',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -124,4 +145,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465292) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465359)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465292) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465359) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015715894) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015717390)

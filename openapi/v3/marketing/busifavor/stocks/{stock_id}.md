@@ -71,14 +71,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | belong_merchant {data-required} | string | 批次归属商户号
 | comment | string | 批次备注
 | goods_name {data-required} | string | 适用商品范围
-| stock_type {data-required} | string | 批次类型
+| stock_type {data-required} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
 | coupon_use_rule {data-required} | object {data-tooltip="对应PHP的array"} | 核销规则
 | coupon_available_time {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 券可核销时间
 | available_begin_time {data-required data-indent=2} | string | 开始时间
 | available_end_time {data-required data-indent=2} | string | 结束时间
 | available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
 | available_week {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定周期有效时间段
-| week_day {data-indent=3} | string[] | 可用星期数
+| week_day {data-indent=3} | integer[] | 可用星期数
 | available_day_time {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
 | begin_time {data-indent=4} | integer | 当天可用开始时间
 | end_time {data-indent=4} | integer | 当天可用结束时间
@@ -95,7 +95,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | exchange_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 换购券使用规则
 | exchange_price {data-required data-indent=2} | integer | 单品换购价
 | transaction_minimum {data-required data-indent=2} | integer | 消费门槛
-| use_method {data-required data-indent=1} | string | 核销方式
+| use_method {data-required data-indent=1} | string | 核销方式<br/>`OFF_LINE` \| `MINI_PROGRAMS` \| `SELF_CONSUME` \| `PAYMENT_CODE` 枚举值之一
 | mini_programs_appid {data-indent=1} | string | 小程序appid
 | mini_programs_path {data-indent=1} | string | 小程序path
 | stock_send_rule {data-required} | object {data-tooltip="对应PHP的array"} | 发放规则
@@ -117,19 +117,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-indent=1} | string | 商户公众号appid
 | hall_id {data-indent=1} | string | 营销馆id
 | store_id {data-indent=1} | string | 可用门店id
-| code_display_mode {data-indent=1} | string | code展示模式
+| code_display_mode {data-indent=1} | string | code展示模式<br/>`NOT_SHOW` \| `BARCODE` \| `QRCODE` 枚举值之一
 | display_pattern_info | object {data-tooltip="对应PHP的array"} | 样式信息
 | description {data-indent=1} | string | 使用须知
 | merchant_logo_url {data-indent=1} | string | 商户logo
 | merchant_name {data-indent=1} | string | 商户名称
-| background_color {data-indent=1} | string | 背景颜色
+| background_color {data-indent=1} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
 | coupon_image_url {data-indent=1} | string | 券详情图片
 | finder_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 视频号相关信息
 | finder_id {data-required data-indent=2} | string | 视频号ID
 | finder_video_id {data-required data-indent=2} | string | 视频号视频ID
 | finder_video_cover_image_url {data-required data-indent=2} | string | 视频号封面图
-| stock_state {data-required} | string | 批次状态
-| coupon_code_mode {data-required} | string | 券code模式
+| stock_state {data-required} | string | 批次状态<br/>`UNAUDIT` \| `RUNNING` \| `STOPED` \| `PAUSED` 枚举值之一
+| coupon_code_mode {data-required} | string | 券code模式<br/>`WECHATPAY_MODE` \| `MERCHANT_API` \| `MERCHANT_UPLOAD` 枚举值之一
 | stock_id {data-required} | string | 批次号
 | coupon_code_count | object {data-tooltip="对应PHP的array"} | 券code数量
 | total_count {data-required data-indent=1} | integer | 该批次总共已上传的code总数
@@ -145,7 +145,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534928) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012693047)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534928) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012693047) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015715866) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015716977)
 
 ## 修改商家券基本信息 {#patch}
 
@@ -163,7 +163,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | guiding_words {data-indent=3} | string | 引导文案
 | appid {data-indent=2} | string | 商户公众号appid
 | hall_id {data-indent=2} | string | 营销馆id
-| code_display_mode {data-indent=2} | string | code展示模式
+| code_display_mode {data-indent=2} | string | code展示模式<br/>`NOT_SHOW` \| `BARCODE` \| `QRCODE` 枚举值之一
 | stock_name {data-indent=1} | string | 批次名称
 | comment {data-indent=1} | string | 批次备注
 | goods_name {data-indent=1} | string | 适用商品范围
@@ -172,14 +172,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-indent=2} | string | 使用须知
 | merchant_logo_url {data-indent=2} | string | 商户logo
 | merchant_name {data-indent=2} | string | 商户名称
-| background_color {data-indent=2} | string | 背景颜色
+| background_color {data-indent=2} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
 | coupon_image_url {data-indent=2} | string | 券详情图片
 | finder_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号相关信息
 | finder_id {data-required data-indent=3} | string | 视频号ID
 | finder_video_id {data-required data-indent=3} | string | 视频号视频ID
 | finder_video_cover_image_url {data-required data-indent=3} | string | 视频号封面图
 | coupon_use_rule {data-indent=1} | object {data-tooltip="对应PHP的array"} | 核销规则
-| use_method {data-indent=2} | string | 核销方式
+| use_method {data-indent=2} | string | 核销方式<br/>`OFF_LINE` \| `MINI_PROGRAMS` \| `SELF_CONSUME` \| `PAYMENT_CODE` 枚举值之一
 | mini_programs_appid {data-indent=2} | string | 小程序appid
 | mini_programs_path {data-indent=2} | string | 小程序path
 | stock_send_rule {data-indent=1} | object {data-tooltip="对应PHP的array"} | 发放规则
@@ -504,4 +504,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535020) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012696764)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535020) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012696764) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015716868) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4015717486)

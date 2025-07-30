@@ -107,7 +107,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | belong_merchant {data-required data-indent=1} | string | 批次归属商户号
 | comment {data-indent=1} | string | 批次备注
 | goods_name {data-required data-indent=1} | string | 适用商品范围
-| stock_type {data-required data-indent=1} | string | 批次类型
+| stock_type {data-required data-indent=1} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
 | transferable {data-indent=1} | boolean | 是否允许转赠
 | shareable {data-indent=1} | boolean | 是否允许分享领券链接
 | coupon_state {data-indent=1} | string | 券状态
@@ -117,7 +117,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_end_time {data-required data-indent=3} | string | 结束时间
 | available_day_after_receive {data-indent=3} | integer | 生效后N天内有效
 | available_week {data-indent=3} | object {data-tooltip="对应PHP的array"} | 固定周期有效时间段
-| week_day {data-indent=4} | string[] | 可用星期数
+| week_day {data-indent=4} | integer[] | 可用星期数
 | available_day_time {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
 | begin_time {data-indent=5} | integer | 当天可用开始时间
 | end_time {data-indent=5} | integer | 当天可用结束时间
@@ -134,7 +134,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | exchange_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 换购券使用规则
 | exchange_price {data-required data-indent=3} | integer | 单品换购价
 | transaction_minimum {data-required data-indent=3} | integer | 消费门槛
-| use_method {data-required data-indent=2} | string | 核销方式
+| use_method {data-required data-indent=2} | string | 核销方式<br/>`OFF_LINE` \| `MINI_PROGRAMS` \| `SELF_CONSUME` \| `PAYMENT_CODE` 枚举值之一
 | mini_programs_appid {data-indent=2} | string | 小程序appid
 | mini_programs_path {data-indent=2} | string | 小程序path
 | custom_entrance {data-indent=1} | object {data-tooltip="对应PHP的array"} | 自定义入口
@@ -146,12 +146,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-indent=2} | string | 商户公众号appid
 | hall_id {data-indent=2} | string | 营销馆id
 | store_id {data-indent=2} | string | 可用门店id
-| code_display_mode {data-indent=2} | string | code展示模式
+| code_display_mode {data-indent=2} | string | code展示模式<br/>`NOT_SHOW` \| `BARCODE` \| `QRCODE` 枚举值之一
 | display_pattern_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 样式信息
 | description {data-indent=2} | string | 使用须知
 | merchant_logo_url {data-indent=2} | string | 商户logo
 | merchant_name {data-indent=2} | string | 商户名称
-| background_color {data-indent=2} | string | 背景颜色
+| background_color {data-indent=2} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
 | coupon_image_url {data-indent=2} | string | 券详情图片
 | finder_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号相关信息
 | finder_id {data-required data-indent=3} | string | 视频号ID
