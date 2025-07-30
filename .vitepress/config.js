@@ -654,7 +654,7 @@ function openapiSidebar() {
                 ['查询品牌用户会员卡信息', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}#get'],
                 ['修改品牌用户会员卡信息', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}#patch'],
                 ['作废品牌用户会员卡', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}/invalidate'],
-                ['入会组件预授权', '/openapi/v3/brand/partner/card-member/open-user-card-tokens'],
+                ['入会组件预授权', '/openapi/v3/brand/partner/card-member/pre-auth-tokens'],
                 ['导入用户会员卡(OPENID)', '/openapi/v3/brand/partner/card-member/user-cards/import-by-openid'],
                 ['导入用户会员卡(手机号)', '/openapi/v3/brand/partner/card-member/user-cards/import-by-phone'],
                 ['同步会员开通结果', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}/confirm'],
