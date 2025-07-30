@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | sub_mchid {data-required} | string | 二级商户号
 | sp_openid | string | 员工OpenID
-| state | string | 员工状态<br/>`DELETED` 枚举值
+| state | string | 员工状态<br/>`EFFECTIVE` \| `DELETED` 枚举值之一
 | create_time | string | 添加员工时间
 | update_time | string | 最后更新时间
 

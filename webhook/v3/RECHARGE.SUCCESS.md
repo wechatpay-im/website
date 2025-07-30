@@ -28,20 +28,20 @@ description: 微信支付通过该接口将二级商户的充值结果通知给�
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | sp_mchid {data-required data-indent=3} | string | 平台商户号
 | sub_mchid {data-required data-indent=3} | string | 二级商户号
 | out_recharge_no {data-required data-indent=3} | string | 商户充值单号
 | recharge_id {data-required data-indent=3} | string | 微信支付充值单号
-| recharge_channel {data-required data-indent=3} | string | 充值渠道
-| account_type {data-required data-indent=3} | string | 充值入账账户
-| recharge_scene {data-required data-indent=3} | string | 充值场景
-| recharge_state {data-required data-indent=3} | string | 充值状态
+| recharge_channel {data-required data-indent=3} | string | 充值渠道<br/>`BANK_TRANSFER` \| `QR_RECHARGE` \| `ONLINE_BANK` 枚举值之一
+| account_type {data-required data-indent=3} | string | 充值入账账户<br/>`DEPOSIT` \| `OPERATION` 枚举值之一
+| recharge_scene {data-required data-indent=3} | string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_PAYMENT` 枚举值之一
+| recharge_state {data-required data-indent=3} | string | 充值状态<br/>`SUCCESS` \| `RECHARGING` \| `CLOSED` 枚举值之一
 | recharge_state_desc {data-indent=3} | string | 充值状态描述
 | recharge_amount {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} | 充值金额
 | amount {data-required data-indent=4} | number | 总金额
@@ -52,12 +52,22 @@ description: 微信支付通过该接口将二级商户的充值结果通知给�
 | bill_no {data-required data-indent=4} | string | 转入的银行流水单号
 | bank_name {data-required data-indent=4} | string | 开户银行名称
 | bank_card_tail {data-required data-indent=4} | string | 银行卡尾号
+| bank_account_name {data-required data-indent=4} | string | 银行账户名称
 | qr_recharge_info {data-indent=3} | object {data-tooltip="对应PHP的Array"} | 扫码充值信息
-| employee_type {data-required data-indent=4} | string | 员工类型
+| employee_type {data-required data-indent=4} | string | 员工类型<br/>`ADMIN` \| `STAFF` \| `LEGAL_PERSON` 枚举值之一
 | openid {data-required data-indent=4} | string | 用户openid
+| online_bank_recharge_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 网银充值的付款信息
+| bill_no {data-indent=4} | string | 银行交易订单号
+| return_time {data-indent=4} | string | 网银充值退回时间
+| return_reason {data-indent=4} | string | 网银充值退回原因
+| bank_name {data-indent=4} | string | 开户银行名称
+| online_bank_type {data-indent=4} | string | 网银类型<br/>`ONLINE_BANK_TYPE_CORPORATE` \| `ONLINE_BANK_TYPE_PERSONAL` 枚举值之一
+| bank_card_tail {data-indent=4} | string | 银行卡号后四位
+| bank_account_name {data-indent=4} | string | 银行账户名称
 | accept_time {data-required data-indent=3} | string | 受理充值时间
 | success_time {data-indent=3} | string | 充值成功时间
 | close_time {data-indent=3} | string | 关闭充值时间
+| available_recharge_channels {data-indent=3} | string[] | 可用充值渠道列表<br/>`BANK_TRANSFER` \| `QR_RECHARGE` \| `ONLINE_BANK` 枚举值之一
 
 {.im-table #request}
 

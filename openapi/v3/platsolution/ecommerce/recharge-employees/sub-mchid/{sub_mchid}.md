@@ -73,7 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | employees | object[] {data-tooltip="对应PHP的array"} | 员工列表
 | sub_mchid {data-required data-indent=1} | string | 二级商户号
 | sp_openid {data-indent=1} | string | 员工OpenID
-| state {data-indent=1} | string | 员工状态<br/>`EFFECTIVE` 枚举值
+| state {data-indent=1} | string | 员工状态<br/>`EFFECTIVE` \| `DELETED` 枚举值之一
 | create_time {data-indent=1} | string | 添加员工时间
 | update_time {data-indent=1} | string | 最后更新时间
 

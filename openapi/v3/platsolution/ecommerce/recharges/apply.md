@@ -12,12 +12,14 @@ description: 商户系统须通过调用此接口获取充值链接，随后发�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-required data-indent=1} | string | 二级商户号
 | out_recharge_no {data-required data-indent=1} | string | 商户充值单号
-| recharge_scene {data-required data-indent=1} | string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_BANK_TRANSFER` \| `NORMAL_BANK_TRANSFER` 枚举值之一
-| account_type {data-required data-indent=1} | string | 充值入账账户<br/>`DEPOSIT` \| `BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| recharge_scene {data-required data-indent=1} | string | 充值场景<br/>`ECOMMERCE_DEPOSIT` \| `ECOMMERCE_PAYMENT` 枚举值之一
+| account_type {data-required data-indent=1} | string | 充值入账账户<br/>`DEPOSIT` \| `OPERATION` 枚举值之一
 | recharge_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 充值金额
 | amount {data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型
 | notify_url {data-indent=1} | string | 商户回调地址
+| available_recharge_channels {data-indent=1} | string[] | 可用充值渠道列表<br/>`BANK_TRANSFER` \| `QR_RECHARGE` \| `ONLINE_BANK` 枚举值之一
+| remark {data-indent=1} | string | 充值备注
 
 {.im-table #request}
 
@@ -26,15 +28,17 @@ description: 商户系统须通过调用此接口获取充值链接，随后发�
 ```php [异步纯链式]
 $instance->v3->platsolution->ecommerce->recharges->apply->postAsync([
   'json' => [
-    'sub_mchid'       => '1900001109',
-    'out_recharge_no' => 'cz202407181234',
-    'recharge_scene'  => 'ECOMMERCE_DEPOSIT',
-    'account_type'    => 'DEPOSIT',
-    'recharge_amount' => [
+    'sub_mchid'                   => '1900001109',
+    'out_recharge_no'             => 'cz202407181234',
+    'recharge_scene'              => 'ECOMMERCE_DEPOSIT',
+    'account_type'                => 'DEPOSIT',
+    'recharge_amount'             => [
       'amount'   => 500000,
       'currency' => 'CNY',
     ],
-    'notify_url'      => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'available_recharge_channels' => ['BANK_TRANSFER'],
+    'remark'                      => 'example_remark',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -46,15 +50,17 @@ $instance->v3->platsolution->ecommerce->recharges->apply->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/platsolution/ecommerce/recharges/apply')->postAsync([
   'json' => [
-    'sub_mchid'       => '1900001109',
-    'out_recharge_no' => 'cz202407181234',
-    'recharge_scene'  => 'ECOMMERCE_DEPOSIT',
-    'account_type'    => 'DEPOSIT',
-    'recharge_amount' => [
+    'sub_mchid'                   => '1900001109',
+    'out_recharge_no'             => 'cz202407181234',
+    'recharge_scene'              => 'ECOMMERCE_DEPOSIT',
+    'account_type'                => 'DEPOSIT',
+    'recharge_amount'             => [
       'amount'   => 500000,
       'currency' => 'CNY',
     ],
-    'notify_url'      => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'available_recharge_channels' => ['BANK_TRANSFER'],
+    'remark'                      => 'example_remark',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -66,15 +72,17 @@ $instance->chain('v3/platsolution/ecommerce/recharges/apply')->postAsync([
 ```php [异步属性式]
 $instance['v3/platsolution/ecommerce/recharges/apply']->postAsync([
   'json' => [
-    'sub_mchid'       => '1900001109',
-    'out_recharge_no' => 'cz202407181234',
-    'recharge_scene'  => 'ECOMMERCE_DEPOSIT',
-    'account_type'    => 'DEPOSIT',
-    'recharge_amount' => [
+    'sub_mchid'                   => '1900001109',
+    'out_recharge_no'             => 'cz202407181234',
+    'recharge_scene'              => 'ECOMMERCE_DEPOSIT',
+    'account_type'                => 'DEPOSIT',
+    'recharge_amount'             => [
       'amount'   => 500000,
       'currency' => 'CNY',
     ],
-    'notify_url'      => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'available_recharge_channels' => ['BANK_TRANSFER'],
+    'remark'                      => 'example_remark',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,15 +94,17 @@ $instance['v3/platsolution/ecommerce/recharges/apply']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->platsolution->ecommerce->recharges->apply->post([
   'json' => [
-    'sub_mchid'       => '1900001109',
-    'out_recharge_no' => 'cz202407181234',
-    'recharge_scene'  => 'ECOMMERCE_DEPOSIT',
-    'account_type'    => 'DEPOSIT',
-    'recharge_amount' => [
+    'sub_mchid'                   => '1900001109',
+    'out_recharge_no'             => 'cz202407181234',
+    'recharge_scene'              => 'ECOMMERCE_DEPOSIT',
+    'account_type'                => 'DEPOSIT',
+    'recharge_amount'             => [
       'amount'   => 500000,
       'currency' => 'CNY',
     ],
-    'notify_url'      => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'available_recharge_channels' => ['BANK_TRANSFER'],
+    'remark'                      => 'example_remark',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,15 +113,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/platsolution/ecommerce/recharges/apply')->post([
   'json' => [
-    'sub_mchid'       => '1900001109',
-    'out_recharge_no' => 'cz202407181234',
-    'recharge_scene'  => 'ECOMMERCE_DEPOSIT',
-    'account_type'    => 'DEPOSIT',
-    'recharge_amount' => [
+    'sub_mchid'                   => '1900001109',
+    'out_recharge_no'             => 'cz202407181234',
+    'recharge_scene'              => 'ECOMMERCE_DEPOSIT',
+    'account_type'                => 'DEPOSIT',
+    'recharge_amount'             => [
       'amount'   => 500000,
       'currency' => 'CNY',
     ],
-    'notify_url'      => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'available_recharge_channels' => ['BANK_TRANSFER'],
+    'remark'                      => 'example_remark',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -120,15 +132,17 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/platsolution/ecommerce/recharges/apply']->post([
   'json' => [
-    'sub_mchid'       => '1900001109',
-    'out_recharge_no' => 'cz202407181234',
-    'recharge_scene'  => 'ECOMMERCE_DEPOSIT',
-    'account_type'    => 'DEPOSIT',
-    'recharge_amount' => [
+    'sub_mchid'                   => '1900001109',
+    'out_recharge_no'             => 'cz202407181234',
+    'recharge_scene'              => 'ECOMMERCE_DEPOSIT',
+    'account_type'                => 'DEPOSIT',
+    'recharge_amount'             => [
       'amount'   => 500000,
       'currency' => 'CNY',
     ],
-    'notify_url'      => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'available_recharge_channels' => ['BANK_TRANSFER'],
+    'remark'                      => 'example_remark',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
