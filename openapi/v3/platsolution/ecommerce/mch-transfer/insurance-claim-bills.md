@@ -15,6 +15,7 @@ description: 商户可调用该接口赔付给用户。
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
+| type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | amount {data-indent=1} | number | 赔付金额
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
@@ -31,6 +32,7 @@ $instance->v3->platsolution->ecommerce->mchTransfer->insuranceClaimBills->postAs
       'type'             => 'MERCHANT',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -52,6 +54,7 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills')
       'type'             => 'MERCHANT',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -73,6 +76,7 @@ $instance['v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills']->postA
       'type'             => 'MERCHANT',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -94,6 +98,7 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->insuranceClaimB
       'type'             => 'MERCHANT',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -112,6 +117,7 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/insurance-c
       'type'             => 'MERCHANT',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -130,6 +136,7 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/insurance-claim-bi
       'type'             => 'MERCHANT',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -151,6 +158,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
+| type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
 | out_bill_no {data-required} | string | 商户单号
 | amount {data-required} | number | 赔付金额
 | transfer_remark | string | 赔付原因

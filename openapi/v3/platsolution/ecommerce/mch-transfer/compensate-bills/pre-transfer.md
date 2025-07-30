@@ -12,9 +12,10 @@ description: 商户可调用该接口进行赔付预下单，并锁定商户资�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sp_appid {data-indent=1} | string | 公众账号ID
 | receiver {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款方信息
-| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
+| type {data-indent=2} | string | 转账接收方类型<br/>`TRANSACTION_USER` 枚举值
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
+| type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | amount {data-indent=1} | number | 赔付金额
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
@@ -32,9 +33,10 @@ $instance->v3->platsolution->ecommerce->mchTransfer->compensateBills->preTransfe
   'json' => [
     'sp_appid'             => 'wx8888888888888888',
     'receiver'             => [
-      'type'             => 'MERCHANT',
+      'type'             => 'TRANSACTION_USER',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -57,9 +59,10 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-bills/pre-tr
   'json' => [
     'sp_appid'             => 'wx8888888888888888',
     'receiver'             => [
-      'type'             => 'MERCHANT',
+      'type'             => 'TRANSACTION_USER',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -82,9 +85,10 @@ $instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/pre-transfer'
   'json' => [
     'sp_appid'             => 'wx8888888888888888',
     'receiver'             => [
-      'type'             => 'MERCHANT',
+      'type'             => 'TRANSACTION_USER',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -107,9 +111,10 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->compensateBills
   'json' => [
     'sp_appid'             => 'wx8888888888888888',
     'receiver'             => [
-      'type'             => 'MERCHANT',
+      'type'             => 'TRANSACTION_USER',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -129,9 +134,10 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-
   'json' => [
     'sp_appid'             => 'wx8888888888888888',
     'receiver'             => [
-      'type'             => 'MERCHANT',
+      'type'             => 'TRANSACTION_USER',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -151,9 +157,10 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/p
   'json' => [
     'sp_appid'             => 'wx8888888888888888',
     'receiver'             => [
-      'type'             => 'MERCHANT',
+      'type'             => 'TRANSACTION_USER',
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',

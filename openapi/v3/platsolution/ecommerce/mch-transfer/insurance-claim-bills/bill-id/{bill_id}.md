@@ -97,6 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
+| type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
 | out_bill_no {data-required} | string | 商户单号
 | amount | number | 赔付金额
 | transfer_remark | string | 赔付原因
