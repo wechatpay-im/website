@@ -1062,6 +1062,8 @@ function openapiSidebar() {
               text: '(合作伙伴)用户确认模式',
               collapsed: true,
               items: [
+                ['申请子商户商家转账授权', '/openapi/v3/fund-app/mch-transfer/partner/sub-mch-authorizations'],
+                ['查询子商户商转授权状态', '/openapi/v3/fund-app/mch-transfer/partner/sub-mch-authorizations/{sub_mchid}'],
                 ['发起转账', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills'],
                 ['撤销转账', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
                 ['商户单号查询转账单', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}'],

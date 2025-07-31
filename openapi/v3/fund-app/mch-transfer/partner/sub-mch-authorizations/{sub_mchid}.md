@@ -73,11 +73,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-required} | string | 二级商户号
 | state {data-required} | string | 授权状态<br/>`AUTHORIZED` \| `UNAUTHORIZED` \| `CANCELED` 枚举值之一
 | apply_order | object {data-tooltip="对应PHP的array"} | 授权申请单
-| sub_mchid {data-indent=1} | string | 二级商户号
-| out_apply_no {data-indent=1} | string | 商户申请单号
-| state {data-indent=1} | string | 授权申请单状态<br/>`INVITED` \| `PASSED` \| `REJECTED` \| `EXPIRED` 枚举值之一
-| accept_time {data-indent=1} | string | 授权申请受理时间
-| update_time {data-indent=1} | string | 最后一次状态变更时间
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
+| out_apply_no {data-required data-indent=1} | string | 商户申请单号
+| state {data-required data-indent=1} | string | 授权申请单状态<br/>`INVITED` \| `PASSED` \| `REJECTED` \| `EXPIRED` 枚举值之一
+| accept_time {data-required data-indent=1} | string | 授权申请受理时间
+| update_time {data-required data-indent=1} | string | 最后一次状态变更时间
 | authorization_time | string | 授权时间
 | cancel_authorization_time | string | 解除授权时间
 
