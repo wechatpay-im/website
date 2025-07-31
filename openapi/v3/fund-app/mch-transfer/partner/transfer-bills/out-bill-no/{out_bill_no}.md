@@ -10,14 +10,19 @@ description: 商家转账用户确认模式下，根据商户单号查询转账�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | out_bill_no {data-required} | string | 商户单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v3->fundApp->mchTransfer->transferBills->outBillNo->_out_bill_no_->getAsync([
+$instance->v3->fundApp->mchTransfer->partner->transferBills->outBillNo->_out_bill_no_->getAsync([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001121',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -26,8 +31,11 @@ $instance->v3->fundApp->mchTransfer->transferBills->outBillNo->_out_bill_no_->ge
 ```
 
 ```php [异步声明式]
-$instance->chain('v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}')->getAsync([
+$instance->chain('v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}')->getAsync([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001121',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -36,8 +44,11 @@ $instance->chain('v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_
 ```
 
 ```php [异步属性式]
-$instance['v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}']->getAsync([
+$instance['v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}']->getAsync([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001121',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -46,22 +57,31 @@ $instance['v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}']->
 ```
 
 ```php [同步纯链式]
-$response = $instance->v3->fundApp->mchTransfer->transferBills->outBillNo->_out_bill_no_->get([
+$response = $instance->v3->fundApp->mchTransfer->partner->transferBills->outBillNo->_out_bill_no_->get([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001121',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}')->get([
+$response = $instance->chain('v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}')->get([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001121',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$response = $instance['v3/fund-app/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}']->get([
+$response = $instance['v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}']->get([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001121',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -70,11 +90,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| mch_id {data-required} | string | 商户号
+| sub_mchid {data-required} | string | 二级商户号
+| mchid {data-required} | string | 商户号
 | out_bill_no {data-required} | string | 商户单号
 | transfer_bill_no {data-required} | string | 商家转账订单号
 | appid {data-required} | string | 商户AppID
-| state {data-required} | string | 单据状态
+| state {data-required} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
 | transfer_amount {data-required} | number | 转账金额
 | transfer_remark {data-required} | string | 转账备注
 | fail_reason | string | 失败原因
@@ -85,4 +106,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716437)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015469131)

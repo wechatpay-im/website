@@ -1044,7 +1044,7 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
-              text: '用户确认模式',
+              text: '(直连商户)用户确认模式',
               collapsed: true,
               items: [
                 ['发起转账', '/openapi/v3/fund-app/mch-transfer/transfer-bills'],
@@ -1056,6 +1056,15 @@ function openapiSidebar() {
                 ['微信单号查询电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/transfer-bill-no/{transfer_bill_no}'],
                 ['商户单号查询电子回单', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no/{out_bill_no}'],
                 ['下载电子回单文件', '/openapi/v3/transferdownload/elecvoucherfile'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '(合作伙伴)用户确认模式',
+              collapsed: true,
+              items: [
+                ['发起转账', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills'],
+                ['撤销转账', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
+                ['商户单号查询转账单', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}'],
               ].map(transArrayItem),
             },
             {
