@@ -2042,6 +2042,7 @@ function offlineFacepaySidebar() {
     {
       items: [
         transArrayItem(['刷脸智能设备列表', '/openapi/v3/iotmanage/devices']),
+        transArrayItem(['获取出厂检查结果', '/openapi/v3/iotmanage/device-inspections/{device_sn}']),
         transArrayItem(['查询用户授权的实名信息', '/openapi/v3/facemch/users/{face_sid}']),
         {
           text: 'K12刷脸代扣',

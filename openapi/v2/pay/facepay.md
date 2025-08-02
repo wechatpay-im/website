@@ -333,4 +333,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方人脸支付文档](https://share.weiyun.com/5dxUgCw)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/wxfacepay/develop/android/facepay.html)
