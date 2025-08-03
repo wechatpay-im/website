@@ -354,7 +354,7 @@ function openapiSidebar() {
                     ['APP预签约', '/openapi/v2/papay/partner/preentrustweb'],
                     ['查询签约关系', '/openapi/v2/papay/partner/querycontract'],
                     ['申请扣款', '/openapi/v2/pay/partner/pappayapply'],
-                    ['查询订单', '/openapi/v2/papay/partner/paporderquery'],
+                    ['查询订单', '/openapi/v2/pay/partner/paporderquery'],
                   ].map(transArrayItem),
                 },
                 transArrayItem(
