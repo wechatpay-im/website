@@ -2421,6 +2421,10 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['关系授权完成通知', '/webhook/v3/WEBIZPAY.AUTHORIZED'],
+            ['关系解除授权后通知', '/webhook/v3/WEBIZPAY.REVOKED'],
+            ['额度卡失效后通知', '/webhook/v3/WEBIZPAY.QUOTACARDEXPIRED'],
+            ['额度卡支付成功后通知', '/webhook/v3/WEBIZPAY.PAYMENTSUCCESS'],
+            ['额度卡退款成功后通知', '/webhook/v3/WEBIZPAY.PAYMENTREFUNDSUCCESS'],
           ].map(transArrayItem),
         },
         {

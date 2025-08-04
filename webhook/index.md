@@ -45,7 +45,11 @@ next:
 | [发票插入用户卡包成功通知](/webhook/v3/FAPIAO.CARD_INSERTED) {colspan=2}
 | [发票开具成功通知](/webhook/v3/FAPIAO.ISSUED) {colspan=2}
 | [发票冲红成功通知](/webhook/v3/FAPIAO.REVERSED) {colspan=2}
-| JSON {rowspan=1} | | [企业支付关系授权完成通知](/webhook/v3/WEBIZPAY.AUTHORIZED)
+| JSON {rowspan=5} | | [企业支付关系授权完成通知](/webhook/v3/WEBIZPAY.AUTHORIZED)
+| | [企业支付关系解除授权后通知](/webhook/v3/WEBIZPAY.REVOKED)
+| | [企业支付额度卡失效后通知](/webhook/v3/WEBIZPAY.QUOTACARDEXPIRED)
+| | [企业支付额度卡支付成功后通知](/webhook/v3/WEBIZPAY.PAYMENTSUCCESS)
+| | [企业支付额度卡退款成功后通知](/webhook/v3/WEBIZPAY.PAYMENTREFUNDSUCCESS)
 | JSON {rowspan=3} | | [公益捐赠-预算申请锁定成功通知](/webhook/v3/BUDGET.LOCKED)
 | | [公益捐赠-预算申请关闭回调通知](/webhook/v3/BUDGET.CLOSED)
 | | [公益捐赠-预算申请完结回调通知](/webhook/v3/BUDGET.FINISHED)

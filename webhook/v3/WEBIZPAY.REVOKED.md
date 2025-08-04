@@ -1,6 +1,6 @@
 ---
-title: 关系授权完成(WEBIZPAY.AUTHORIZED)通知(JSON)
-description: 当有用户完成企业支付关系授权时，微信支付会通知服务商，服务商需要接收处理，并返回应答。
+title: 企业支付关系解除授权后(WEBIZPAY.REVOKED)通知(JSON)
+description: 当有用户完成企业支付关系解除授权时，微信支付会通知服务商，服务商需要接收处理，并返回应答。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -25,7 +25,7 @@ description: 当有用户完成企业支付关系授权时，微信支付会通�
 | body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`JSON`数据结构
 | id {data-required data-indent=1} | string | 通知的唯一ID
 | create_time {data-required data-indent=1} | string | 通知创建的时间
-| event_type {data-required data-indent=1} | string | 通知的类型<br/>`WEBIZPAY.AUTHORIZED` 枚举值
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`WEBIZPAY.REVOKED` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
@@ -38,8 +38,9 @@ description: 当有用户完成企业支付关系授权时，微信支付会通�
 | sp_mchid {data-required data-indent=3} | string | 服务商商户号
 | sub_mchid {data-required data-indent=3} | string | 出资子商户号
 | user_id {data-required data-indent=3} | string | 企业员工ID
-| employee_id {data-required data-indent=3} | string | 微信授权关系ID
-| authorization_time {data-required data-indent=3} | string | 授权时间
+| authorization_state {data-required data-indent=3} | string | 员工企业支付权限状态<br/>`AUTHORIZED` \| `REVOKED` 枚举值之一
+| authorization_revoked_time {data-required data-indent=3} | string | 授权解除时间
+| reason {data-required data-indent=3} | string | 授权解除原因<br/>`企业发起` \| `员工注销` 枚举值之一
 
 {.im-table #request}
 
@@ -130,4 +131,4 @@ $json = \json_encode([
 {.im-table #response}
 
 参阅
-- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014612130)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015764414)

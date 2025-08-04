@@ -1,6 +1,6 @@
 ---
-title: 关系授权完成(WEBIZPAY.AUTHORIZED)通知(JSON)
-description: 当有用户完成企业支付关系授权时，微信支付会通知服务商，服务商需要接收处理，并返回应答。
+title: 企业支付额度卡退款成功后(WEBIZPAY.PAYMENTREFUNDSUCCESS)通知(JSON)
+description: 当企业支付额度卡退款成功时，微信支付会通知服务商，服务商需要接收处理，并返回应答。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -25,7 +25,7 @@ description: 当有用户完成企业支付关系授权时，微信支付会通�
 | body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`JSON`数据结构
 | id {data-required data-indent=1} | string | 通知的唯一ID
 | create_time {data-required data-indent=1} | string | 通知创建的时间
-| event_type {data-required data-indent=1} | string | 通知的类型<br/>`WEBIZPAY.AUTHORIZED` 枚举值
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`WEBIZPAY.PAYMENTREFUNDSUCCESS` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
@@ -37,9 +37,19 @@ description: 当有用户完成企业支付关系授权时，微信支付会通�
 | {colspan=3 .im-table-line}
 | sp_mchid {data-required data-indent=3} | string | 服务商商户号
 | sub_mchid {data-required data-indent=3} | string | 出资子商户号
-| user_id {data-required data-indent=3} | string | 企业员工ID
+| card_no {data-required data-indent=3} | string | 企业支付额度卡卡号
 | employee_id {data-required data-indent=3} | string | 微信授权关系ID
-| authorization_time {data-required data-indent=3} | string | 授权时间
+| transaction_id {data-required data-indent=3} | string | 微信支付订单号
+| out_trade_no {data-required data-indent=3} | string | 商户订单号
+| refund_id {data-required data-indent=3} | string | 微信支付退款单号
+| out_refund_no {data-required data-indent=3} | string | 商户退款单号
+| amount {data-required data-indent=3} | number | 金额
+| pay_success_time {data-required data-indent=3} | number | 支付完成时间
+| refunded_amount {data-required data-indent=3} | number | 已退款金额
+| refund_amount {data-required data-indent=3} | number | 退款金额
+| refund_state {data-required data-indent=3} | string | 退款状态<br/>`SUCCESS` 枚举值
+| refund_create_time {data-required data-indent=3} | number | 退款创建时间
+| refund_success_time {data-required data-indent=3} | number | 退款成功时间
 
 {.im-table #request}
 
@@ -130,4 +140,4 @@ $json = \json_encode([
 {.im-table #response}
 
 参阅
-- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014612130)
+- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015764405)

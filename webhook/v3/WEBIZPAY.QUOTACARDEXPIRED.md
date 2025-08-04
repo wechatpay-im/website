@@ -1,6 +1,6 @@
 ---
-title: 关系授权完成(WEBIZPAY.AUTHORIZED)通知(JSON)
-description: 当有用户完成企业支付关系授权时，微信支付会通知服务商，服务商需要接收处理，并返回应答。
+title: 企业支付额度卡失效后(WEBIZPAY.QUOTACARDEXPIRED)通知(JSON)
+description: 当有企业支付额度卡失效时，微信支付会通知服务商，服务商需要接收处理，并返回应答。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -25,7 +25,7 @@ description: 当有用户完成企业支付关系授权时，微信支付会通�
 | body {data-required} | object {data-tooltip="对应PHP的Array"} | 通知的`JSON`数据结构
 | id {data-required data-indent=1} | string | 通知的唯一ID
 | create_time {data-required data-indent=1} | string | 通知创建的时间
-| event_type {data-required data-indent=1} | string | 通知的类型<br/>`WEBIZPAY.AUTHORIZED` 枚举值
+| event_type {data-required data-indent=1} | string | 通知的类型<br/>`WEBIZPAY.QUOTACARDEXPIRED` 枚举值
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
@@ -37,9 +37,11 @@ description: 当有用户完成企业支付关系授权时，微信支付会通�
 | {colspan=3 .im-table-line}
 | sp_mchid {data-required data-indent=3} | string | 服务商商户号
 | sub_mchid {data-required data-indent=3} | string | 出资子商户号
-| user_id {data-required data-indent=3} | string | 企业员工ID
+| card_no {data-required data-indent=3} | string | 企业支付额度卡卡号
 | employee_id {data-required data-indent=3} | string | 微信授权关系ID
-| authorization_time {data-required data-indent=3} | string | 授权时间
+| card_state {data-required data-indent=3} | string | 卡片状态<br/>`ACTIVE` \| `DISABLED` 枚举值之一
+| card_disabled_time {data-required data-indent=3} | string | 卡片失效时间
+| reason {data-indent=3} | string | 失效原因
 
 {.im-table #request}
 
