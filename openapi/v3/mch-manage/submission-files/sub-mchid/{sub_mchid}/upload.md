@@ -146,3 +146,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | file_id {data-required} | string | 文件标识ID
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014940425)

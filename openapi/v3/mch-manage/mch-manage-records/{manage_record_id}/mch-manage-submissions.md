@@ -265,3 +265,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | manage_submission_id | string | 商户管理提交资料记录ID
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014940417)

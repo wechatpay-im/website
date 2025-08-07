@@ -155,3 +155,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | need_encrypt {data-indent=3} | boolean | 提交内容需要加密
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014940381)
