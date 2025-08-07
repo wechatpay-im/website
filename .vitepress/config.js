@@ -1405,6 +1405,20 @@ function openapiSidebar() {
                 ['查询子商户强化尽调单信息','/openapi/v3/mch-operation-manage/enhanced-due-diligence/{due_diligence_id}'],
               ].map(transArrayItem),
             },
+            {
+              text: '商户管理记录',
+              collapsed: true,
+              items: [
+                ['列表查询子商户被管控记录', '/openapi/v3/mch-manage/mch-manage-records/sub-mchid/{sub_mchid}'],
+                ['查询子商户被管控记录详情', '/openapi/v3/mch-manage/mch-manage-records/{manage_record_id}'],
+                ['上传商户提交资料文件', '/openapi/v3/mch-manage/submission-files/sub-mchid/{sub_mchid}/upload'],
+                ['对指定被管控记录提交资料', '/openapi/v3/mch-manage/mch-manage-records/{manage_record_id}/mch-manage-submissions'],
+                ['查询交易拦截记录列表', '/openapi/v3/transaction-block/transaction-block-records/sub-mchid/{sub_mchid}'],
+                ['查询交易拦截记录详情', '/openapi/v3/transaction-block/transaction-block-records/{block_record_id}'],
+                ['发起交易拦截申诉', '/openapi/v3/transaction-block/transaction-block-submissions/sub-mchid/{sub_mchid}'],
+                ['查询交易拦截申诉详情', '/openapi/v3/transaction-block/transaction-block-submissions/{block_submission_id}'],
+              ].map(transArrayItem),
+            },
             ...[
               ['查询省份列表', '/openapi/v3/capital/capitallhh/areas/provinces'],
               ['查询城市列表', '/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities'],
@@ -2542,6 +2556,15 @@ function webhookSidebar() {
             ['处罚二级商户通知', '/webhook/v3/VIOLATION.PUNISH'],
             ['拦截二级商户通知', '/webhook/v3/VIOLATION.INTERCEPT'],
             ['二级商户申诉通知', '/webhook/v3/VIOLATION.APPEAL'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '商户管理记录',
+          collapsed: true,
+          items: [
+            ['商户管理记录通知', '/webhook/v3/MANAGERECORD.CHANGE'],
+            ['交易拦截记录通知', '/webhook/v3/BLOCKRECORD.CHANGE'],
+            ['交易拦截申诉通知', '/webhook/v3/BLOCKSUBMISSION.CHANGE'],
           ].map(transArrayItem),
         },
         {

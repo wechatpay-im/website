@@ -109,6 +109,9 @@ next:
 | | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
 | | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)
+| JSON {rowspan=3} | | [商户管理记录通知](/webhook/v3/MANAGERECORD.CHANGE)
+| | [交易拦截记录通知](/webhook/v3/BLOCKRECORD.CHANGE)
+| | [交易拦截申诉通知](/webhook/v3/BLOCKSUBMISSION.CHANGE)
 | JSON {rowspan=5} | [跨境/全球-H5支付权限申请事件回调通知](/webhook/v3/APPLYMENT_STATE.APPROVED) {colspan=2}
 | [跨境/全球-支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#GLOBAL) {colspan=2}
 | [跨境/全球-退款成功通知](/webhook/v3/REFUND.SUCCESS#GLOBAL) {colspan=2}
