@@ -412,7 +412,7 @@ function openapiSidebar() {
               ],
             },
             {
-              text: '免压租借',
+              text: '免押租借',
               collapsed: true,
               items: [
                 ['创建租借订单', '/openapi/v2/wxv/createrentbill'],
@@ -423,7 +423,7 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
-              text: '免压速住',
+              text: '免押速住',
               collapsed: true,
               items: [
                 ['创建速住订单', '/openapi/v2/wxv/createhotelbill'],
@@ -2308,7 +2308,7 @@ function webhookSidebar() {
         ['车牌状态变更通知', '/webhook/v2/vehicle-state-changed-for-parking'],
         ['签/解约扣款服务通知', '/webhook/v2/pap-contract-state-changed'],
       ].map(transArrayItem).concat({
-        text: '免压租借/速住',
+        text: '免押租借/速住',
         collapsed: true,
         items: [
           ['确认成功通知', '/webhook/v2/CHECK.SUCCESS'],
