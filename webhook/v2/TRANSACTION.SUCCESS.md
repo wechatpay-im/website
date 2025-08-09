@@ -51,7 +51,7 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 {.im-table #request}
 
 - 免押租借 event_ciphertext 解密后含 **goods_name** 字段
-- 免压速住 event_ciphertext 解密后含 **room** 字段
+- 免押速住 event_ciphertext 解密后含 **room** 字段
 
 ::: code-group
 
@@ -122,4 +122,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 参阅
 - [免押租借订单支付成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=18_8&index=8)
-- [免压速住订单支付成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_8&index=7)
+- [免押速住订单支付成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_8&index=7)

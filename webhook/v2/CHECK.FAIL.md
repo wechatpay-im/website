@@ -117,4 +117,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 参阅
 - [免押租借确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=18_7&index=7)
-- [免压速住确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_7&index=6)
+- [免押速住确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_7&index=6)
