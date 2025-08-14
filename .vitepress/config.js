@@ -169,7 +169,7 @@ export default defineConfig({
       '/openapi/v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund#INDIVIDUAL': personalCollectionsSidebar(),
       '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}#INDIVIDUAL': personalCollectionsSidebar(),
       '/openapi/v3/ecommerce/refunds/id/{refund_id}#INDIVIDUAL': personalCollectionsSidebar(),
-      '/openapi/v3/ecommerce/individual-contracts/{openid}': personalCollectionsSidebar(),
+      '/openapi/v3/ecommerce/individual-contracts/': personalCollectionsSidebar(),
       '/openapi/v3/platsolution/ecommerce/settle/': personalCollectionsSidebar(),
       '/openapi/v3/abnormal-fund-processing/receipts/': personalCollectionsSidebar(),
       '/webhook/v3/ABNORMAL_FUND_PROCESSING.TRANSFER.SUCCESS': personalCollectionsSidebar(),
@@ -2185,6 +2185,8 @@ function personalCollectionsSidebar() {
           collapsed: false,
           items: [
             ['查询个人收款方授权结果', '/openapi/v3/ecommerce/individual-contracts/{openid}'],
+            ['根据业务申请单号查签约信息', '/openapi/v3/ecommerce/individual-contracts/out-contract-code/{out_contract_code}'],
+            ['APP场景预签约', '/openapi/v3/ecommerce/individual-contracts/pre-entrust-sign/app'],
             ['微信小程序下单', '/openapi/v3/combine-transactions/miniprogram'],
             ['APP下单', '/openapi/v3/combine-transactions/app#INDIVIDUAL'],
             ['交易关单', '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close#INDIVIDUAL'],
