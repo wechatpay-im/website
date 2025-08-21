@@ -178,7 +178,9 @@ export default defineConfig({
       '/webhook/v3/REFUND.ABNORMAL#INDIVIDUAL': personalCollectionsSidebar(),
       '/webhook/v3/REFUND.CLOSED#INDIVIDUAL': personalCollectionsSidebar(),
       '/webhook/v3/SETTLEMENT.SUCCESS': personalCollectionsSidebar(),
-      'openapi/v3/gov/subsidy': nationalConsumerGoodsSubsidySidebar(),
+      '/openapi/v3/gov/subsidy': nationalConsumerGoodsSubsidySidebar(),
+      '/openapi/v3/med-ins/': medicalInsuranceSidebar(),
+      '/webhook/v3/MEDICAL_INSURANCE.SUCCESS': medicalInsuranceSidebar(),
     },
   },
 })
@@ -2297,6 +2299,21 @@ function nationalConsumerGoodsSubsidySidebar() {
       ],
     },
   ]
+}
+
+function medicalInsuranceSidebar() {
+  return [
+    {
+      text: '医保支付',
+      items: [
+        ['医保自费混合收款下单', '/openapi/v3/med-ins/orders'],
+        ['查单(医保自费混合订单号)', '/openapi/v3/med-ins/orders/mix-trade-no/{mix_trade_no}'],
+        ['查单(从业机构订单号)', '/openapi/v3/med-ins/orders/out-trade-no/{out_trade_no}'],
+        ['医保退款通知', '/openapi/v3/med-ins/refunds/notify'],
+        ['医保混合收款成功通知', '/webhook/v3/MEDICAL_INSURANCE.SUCCESS'],
+      ].map(transArrayItem),
+    },
+  ];
 }
 
 function webhookSidebar() {
