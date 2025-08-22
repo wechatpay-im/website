@@ -131,7 +131,7 @@ export default defineConfig({
       '/guide/': guideSidebar(),
       '/openapi/': openapiSidebar(),
       '/webhook/': webhookSidebar(),
-      '/devkit/': divkitSidebar(),
+      '/devkit/': devkitSidebar(),
       '/openapi/v2/applyment/': microMerchantMixedSidebar(),
       '/openapi/v2/fund/': microMerchantMixedSidebar(),
       '/openapi/v2/appauth/': oauthIdentifierSidebar(),
@@ -661,6 +661,8 @@ function openapiSidebar() {
                 ['导入用户会员卡(手机号)', '/openapi/v3/brand/partner/card-member/user-cards/import-by-phone'],
                 ['同步会员开通结果', '/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}/confirm'],
                 ['创建用户动态信息', '/openapi/v3/brand/partner/card-member/user-feeds'],
+                ['同步积分余额', '/openapi/v3/brand/partner/card-member/user-points/sync'],
+                ['同步积分兑券结果', '/openapi/v3/brand/partner/card-member/user-points/exchange-coupon/confirm'],
               ].map(transArrayItem),
             },
           ],
@@ -2474,8 +2476,9 @@ function webhookSidebar() {
           text: '商家名片会员',
           collapsed: true,
           items: [
-            ['用户开通会员卡事件通知', '/webhook/v3/MEMBERCARDSP.USER_CARD.CREATE'],
-            ['用户删除会员卡事件通知', '/webhook/v3/MEMBERCARDSP.USER_CARD.DELETE'],
+            ['用户开通会员卡事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.USER_CARD.CREATE'],
+            ['用户删除会员卡事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.USER_CARD.DELETE'],
+            ['用户积分兑券事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.POINT_EXCHANGE_COUPON'],
           ].map(transArrayItem),
         },
         {
@@ -2603,7 +2606,7 @@ function webhookSidebar() {
   ];
 }
 
-function divkitSidebar() {
+function devkitSidebar() {
   return [
     {
       text: '核心代码包',
