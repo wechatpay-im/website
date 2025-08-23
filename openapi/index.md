@@ -148,7 +148,7 @@ next:
 | [商家明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no}/out-details/{out_detail_no})
 | [微信支付批次单号查询批次单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no})
 | [微信支付明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}/details/{detail_no})
-| 商家名片会员v3{rowspan=15} | | [创建会员卡模板](/openapi/v3/brand/partner/card-member/cards#post)
+| 商家名片会员v3{rowspan=17} | | [创建会员卡模板](/openapi/v3/brand/partner/card-member/cards#post)
 | | [查询会员卡模板列表](/openapi/v3/brand/partner/card-member/cards#get)
 | | [查询会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#get)
 | | [修改会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#patch)
@@ -163,6 +163,8 @@ next:
 | | [导入用户会员卡(手机号)](/openapi/v3/brand/partner/card-member/user-cards/import-by-phone)
 | | [同步会员开通结果](/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}/confirm)
 | | [创建用户动态信息](/openapi/v3/brand/partner/card-member/user-feeds)
+| | [同步积分余额](/openapi/v3/brand/partner/card-member/user-points/sync)
+| | [同步积分兑券结果](/openapi/v3/brand/partner/card-member/user-points/exchange-coupon/confirm)
 | 平台账单v3{rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)

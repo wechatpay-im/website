@@ -17,7 +17,7 @@ description: 当用户触发积分兑券后，微信支付将通过用户积分�
 | openid {data-required data-indent=1} | string | 用户标识
 | user_card_code {data-required data-indent=1} | string | 会员卡code
 | state {data-required data-indent=1} | string | 积分兑券状态<br/>`POINT_EXCHANGE_COUPON_SUCCESS` \| `POINT_EXCHANGE_COUPON_FAIL` 枚举值之一
-| coupon_code {data-indent=1} | string | 积分余额
+| coupon_code {data-indent=1} | string | 兑券成功的券code
 | fail_reason {data-indent=1} | string | 兑券失败原因
 
 {.im-table #request}
@@ -146,9 +146,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | openid {data-required} | string | 用户标识
 | user_card_code {data-required} | string | 会员卡code
 | state {data-required} | string | 积分兑券状态<br/>`POINT_EXCHANGE_COUPON_SUCCESS` \| `POINT_EXCHANGE_COUPON_FAIL` 枚举值之一
-| coupon_code | string | 积分余额
+| coupon_code | string | 兑券成功的券code
 | fail_reason | string | 兑券失败原因
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015897280)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015897268)
