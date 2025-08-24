@@ -13,7 +13,7 @@ description: 服务商可通过此接口添加分账接收方，建立分账接�
 | brand_mchid {data-required data-indent=1} | string | 品牌主商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| type {data-required data-indent=1} | string | 分账接收方类型
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方账号
 | name {data-indent=1} | string | 接收方名称
 | relation_type {data-required data-indent=1} | string | 与品牌主商户的的关系类型<br/>`SUPPLIER` \| `DISTRIBUTOR` \| `SERVICE_PROVIDER` \| `PLATFORM` \| `STAFF` \| `OTHERS` 枚举值之一
@@ -126,7 +126,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | brand_mchid {data-required} | string | 品牌主商户号
-| type {data-required} | string | 分账接收方类型
+| type {data-required} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required} | string | 分账接收方账号
 
 {.im-table #response}

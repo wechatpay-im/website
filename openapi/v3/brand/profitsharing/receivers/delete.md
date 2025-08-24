@@ -13,7 +13,7 @@ description: 服务商发起删除分账接收方请求。删除后，不再支�
 | brand_mchid {data-required data-indent=1} | string | 品牌主商户号
 | appid {data-required data-indent=1} | string | 公众账号ID
 | sub_appid {data-indent=1} | string | 子商户公众账号ID
-| type {data-required data-indent=1} | string | 分账接收方类型
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方账号
 
 {.im-table #request}
@@ -112,7 +112,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | brand_mchid {data-required} | string | 品牌主商户号
-| type {data-required} | string | 分账接收方类型
+| type {data-required} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required} | string | 分账接收方账号
 
 {.im-table #response}

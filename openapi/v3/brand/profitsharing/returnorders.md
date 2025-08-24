@@ -129,8 +129,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_mchid {data-required} | string | 回退商户号
 | amount {data-required} | integer | 回退金额
 | return_no {data-required} | string | 微信回退单号
-| result {data-required} | string | 回退结果
-| fail_reason | string | 失败原因
+| result {data-required} | string | 回退结果<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
+| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` 枚举值之一
 | finish_time {data-required} | string | 完成时间
 
 {.im-table #response}
@@ -245,8 +245,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_mchid {data-required} | string | 回退商户号
 | return_no {data-required} | string | 微信回退单号
 | amount {data-required} | integer | 回退金额
-| result {data-required} | string | 回退结果
-| fail_reason | string | 失败原因
+| result {data-required} | string | 回退结果<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
+| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | finish_time {data-required} | string | 完成时间
 
 {.im-table #response}
