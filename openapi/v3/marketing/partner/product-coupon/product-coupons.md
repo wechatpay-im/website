@@ -1173,7 +1173,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-required data-indent=3} | string | 小程序appid
 | path {data-required data-indent=3} | string | 小程序跳转路径
 | entrance_wording {data-required data-indent=3} | string | 入口文案
-| guidance_wording {data-indent=3} | string | 引导文案
+| guidance_wording {data-required data-indent=3} | string | 引导文案
 | entrance_official_account {data-indent=2} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=3} | string | 公众号AppID
 | entrance_finder {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号入口

@@ -1,5 +1,5 @@
 ---
-title: 商品券领券通知(PRODUCT_COUPON_SP.SEND)通知(JSON)
+title: 商品券领券(PRODUCT_COUPON_SP.SEND)通知(JSON)
 description: 用户商品券发放成功后，微信支付会将相关领券结果与用户信息发送给品牌方，品牌方需要接收处理，在品牌侧内部系统为用户发放同样的券。品牌侧发券完成后，还需要调用【确认发放用户商品券】接口进行确认。
 ---
 

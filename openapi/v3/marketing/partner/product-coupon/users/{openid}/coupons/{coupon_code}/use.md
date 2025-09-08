@@ -17,7 +17,7 @@ description: 品牌方可以通过本接口核销已经发放给用户的商品�
 | stock_id {data-required data-indent=1} | string | 批次ID
 | appid {data-required data-indent=1} | string | 公众账号AppID
 | use_time {data-required data-indent=1} | string | 核销时间
-| associated_order_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 关联微信支付订单信息
+| associated_order_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 关联微信支付订单信息
 | transaction_id {data-indent=2} | string | 微信支付单号
 | out_trade_no {data-indent=2} | string | 商户订单号
 | mchid {data-indent=2} | string | 商户号
@@ -203,12 +203,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_request_no {data-indent=1} | string | 退券请求单号
 | return_time {data-indent=1} | string | 退券时间
 | sequential_usage_detail | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
-| total_count {data-indent=1} | integer | 总可使用次数
-| used_count {data-indent=1} | integer | 已使用次数
+| total_count {data-required data-indent=1} | integer | 总可使用次数
+| used_count {data-required data-indent=1} | integer | 已使用次数
 | detail_item_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 轮次使用详情列表
-| detail_state {data-indent=2} | string | 轮次使用详情状态<br/>`PENDING` \| `EFFECTIVE` \| `USED` \| `EXPIRED` \| `DELETED` \| `DEACTIVATED` 枚举值之一
-| valid_begin_time {data-indent=2} | string | 有效期开始时间
-| valid_end_time {data-indent=2} | string | 有效期结束时间
+| detail_state {data-required data-indent=2} | string | 轮次使用详情状态<br/>`PENDING` \| `EFFECTIVE` \| `USED` \| `EXPIRED` \| `DELETED` \| `DEACTIVATED` 枚举值之一
+| valid_begin_time {data-required data-indent=2} | string | 有效期开始时间
+| valid_end_time {data-required data-indent=2} | string | 有效期结束时间
 | use_request_no {data-indent=2} | string | 核销请求单号
 | use_time {data-indent=2} | string | 核销时间
 | associated_order_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 关联微信支付订单信息

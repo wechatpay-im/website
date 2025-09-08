@@ -14,7 +14,7 @@ description: 品牌方可以通过该接口为商品券批次预上传券Code �
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | brand_id {data-required data-indent=1} | string | 品牌ID
 | out_request_no {data-required data-indent=1} | string | 请求单号
-| code_list {data-required data-indent=1} | string[] | 失效原因
+| code_list {data-required data-indent=1} | string[] | 券Code列表
 
 {.im-table #request}
 
