@@ -139,6 +139,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | net {data-required data-indent=2} | integer | 支付净额
 | fee {data-required data-indent=2} | integer | 手续费金额
 | wallet_region {data-indent=1} | string | 钱包主体<br/>`CHINA_MAINLAND` \| `CHINA_HONGKONG` 枚举值之一
+| split_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 分账业务金额
+| settled {data-required data-indent=2} | integer | 已结算金额
+| unsettle {data-required data-indent=2} | integer | 未结算金额
+| currency {data-required data-indent=2} | string | 结算币种
+| pay {data-required data-indent=2} | integer | 支付金额
+| refund {data-required data-indent=2} | integer | 退款金额
 | total_count {data-required} | integer | 总记录条数
 | offset {data-required} | integer | 记录起始位置
 | limit {data-required} | integer | 本次返回条数

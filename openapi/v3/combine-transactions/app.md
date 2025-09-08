@@ -41,6 +41,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
+| prepay_id {data-indent=1} | string | 预支付交易会话标识
 | notify_url {data-required data-indent=1} | string | 通知地址
 | trade_scenario {data-indent=1} | string | 交易场景<br/>`RECOMMERCE` 枚举值
 | limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_debit` \| `balance_only` 枚举值之一
@@ -98,6 +99,7 @@ $instance->v3->combineTransactions->app->postAsync([
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
+    'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
     'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
@@ -160,6 +162,7 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
+    'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
     'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
@@ -222,6 +225,7 @@ $instance['v3/combine-transactions/app']->postAsync([
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
+    'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
     'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
@@ -284,6 +288,7 @@ $response = $instance->v3->combineTransactions->app->post([
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
+    'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
     'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
@@ -343,6 +348,7 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
+    'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
     'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],
@@ -402,6 +408,7 @@ $response = $instance['v3/combine-transactions/app']->post([
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
+    'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
     'trade_scenario'       => 'RECOMMERCE',
     'limit_pay'            => ['no_balance'],

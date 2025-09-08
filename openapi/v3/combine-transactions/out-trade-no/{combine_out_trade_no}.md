@@ -80,8 +80,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-required data-indent=1} | string | 子单商户号
 | individual_auth_id {data-indent=1} | string | 商品单个人收款方受理授权ID
 | individual_name {data-indent=1} | string | 商品单个人收款方平台昵称
-| trade_type {data-indent=1} | string | 交易类型
-| trade_state {data-indent=1} | string | 交易状态
+| trade_type {data-indent=1} | string | 交易类型<br/>`NATIVE` \| `JSAPI` \| `APP` \| `MWEB` 枚举值之一
+| trade_state {data-indent=1} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `PAYERROR` 枚举值之一
 | bank_type {data-indent=1} | string | 付款银行
 | attach {data-indent=1} | string | 附加数据
 | success_time {data-indent=1} | string | 支付完成时间
@@ -90,6 +90,23 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-indent=1} | string | 二级商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
 | sub_openid {data-indent=1} | string | 用户子标识
+| promotion_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 优惠信息列表
+| coupon_id {data-indent=2} | string | 券ID
+| name {data-indent=2} | string | 优惠名称
+| scope {data-indent=2} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-indent=2} | string | 优惠类型<br/>`CASH` \| `NOCASH` 枚举值之一
+| amount {data-indent=2} | integer | 优惠券面额
+| stock_id {data-indent=2} | string | 活动批次ID
+| wechatpay_contribute {data-indent=2} | integer | 微信出资
+| merchant_contribute {data-indent=2} | integer | 商户出资
+| other_contribute {data-indent=2} | integer | 其他出资
+| currency {data-indent=2} | string | 优惠币种
+| goods_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-required data-indent=3} | string | 商品编码
+| quantity {data-required data-indent=3} | integer | 商品数量
+| unit_price {data-required data-indent=3} | integer | 商品单价
+| discount_amount {data-indent=3} | integer | 商品优惠金额
+| goods_remark {data-indent=3} | string | 商品备注
 | amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total_amount {data-required data-indent=2} | integer | 标价金额
 | currency {data-indent=2} | string | 标价币种

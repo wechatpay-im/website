@@ -587,6 +587,14 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '微信刷掌',
+          collapsed: true,
+          items: [
+            ['查询刷掌授权', '/openapi/v3/palmservice/authorization/openid/{openid}'],
+            ['服务关联预授权', '/openapi/v3/palmservice/authorization/preauthorize'],
+          ].map(transArrayItem),
+        },
+        {
           text: '分账',
           collapsed: true,
           items: [
@@ -2323,6 +2331,7 @@ function webhookSidebar() {
   return [
     {
       text: 'XML格式报文',
+      collapsed: true,
       items: [
         ['普通支付通知', '/webhook/v2/transaction-success'],
         ['合单支付通知', '/webhook/v2/combined-transactions-success'],
@@ -2342,6 +2351,7 @@ function webhookSidebar() {
     },
     {
       text: 'JSON格式报文',
+      collapsed: false,
       items: [
         {
           text: '支付',

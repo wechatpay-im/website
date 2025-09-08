@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | log_id {data-required data-indent=1} | string | 操作流水号
 | operator {data-required data-indent=1} | string | 操作人
 | operate_time {data-required data-indent=1} | string | 操作时间
-| operate_type {data-required data-indent=1} | string | 操作类型
+| operate_type {data-required data-indent=1} | string | 操作类型<br/>`USER_CREATE_COMPLAINT` \| `USER_CONTINUE_COMPLAINT` \| `USER_RESPONSE` \| `PLATFORM_RESPONSE` \| `MERCHANT_RESPONSE` \| `MERCHANT_CONFIRM_COMPLETE` \| `USER_CREATE_COMPLAINT_SYSTEM_MESSAGE` \| `COMPLAINT_FULL_REFUNDED_SYSTEM_MESSAGE` \| `USER_CONTINUE_COMPLAINT_SYSTEM_MESSAGE` \| `USER_REVOKE_COMPLAINT` \| `USER_COMFIRM_COMPLAINT` \| `PLATFORM_HELP_APPLICATION` \| `USER_APPLY_PLATFORM_HELP` \| `MERCHANT_APPROVE_REFUND` \| `MERCHANT_REFUSE_RERUND` \| `USER_SUBMIT_SATISFACTION` \| `SERVICE_ORDER_CANCEL` \| `SERVICE_ORDER_COMPLETE` \| `COMPLAINT_PARTIAL_REFUNDED_SYSTEM_MESSAGE` \| `COMPLAINT_REFUND_RECEIVED_SYSTEM_MESSAGE` \| `COMPLAINT_ENTRUSTED_REFUND_SYSTEM_MESSAGE` \| `USER_APPLY_PLATFORM_SERVICE` \| `USER_CANCEL_PLATFORM_SERVICE` \| `PLATFORM_SERVICE_FINISHED` 枚举值之一
 | operate_details {data-indent=1} | string | 操作内容
 | image_list {data-indent=1} | string[] | 图片凭证
 | user_appy_platform_service_reason {data-indent=1} | string | 用户申请平台协助原因

@@ -73,7 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | complaint_id {data-required} | string | 投诉单号
 | complaint_time {data-required} | string | 投诉时间
 | complaint_detail {data-required} | string | 投诉详情
-| complaint_state {data-required} | string | 投诉单状态
+| complaint_state {data-required} | string | 投诉单状态<br/>`PENDING` \| `PROCESSING` \| `PROCESSED` 枚举值之一
 | complainted_mchid {data-required} | string | 被诉商户号
 | payer_phone | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 投诉人联系方式
 | payer_openid | string | 投诉人openid
@@ -92,11 +92,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | incoming_user_response {data-required} | boolean | 是否有待回复的用户留言
 | problem_description {data-required} | string | 问题描述
 | user_complaint_times {data-required} | integer | 用户投诉次数
-| problem_type | string | 问题类型
+| problem_type | string | 问题类型<br/>`REFUND` \| `SERVICE_NOT_WORK` \| `OTHERS` 枚举值之一
 | apply_refund_amount | integer | 申请退款金额
-| user_tag_list | string[] | 用户标签列表
+| user_tag_list | string[] | 用户标签列表<br/>`TRUSTED` \| `HIGH_RISK` 枚举值之一
 | additional_info | object {data-tooltip="对应PHP的array"} | 补充信息
-| type {data-indent=1} | string | 补充信息类型
+| type {data-indent=1} | string | 补充信息类型<br/>`SHARE_POWER_TYPE` 枚举值
 | share_power_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 充电宝投诉相关信息
 | return_time {data-indent=2} | string | 归还时间
 | return_address_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 归还地点信息
