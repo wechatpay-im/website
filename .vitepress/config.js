@@ -673,6 +673,23 @@ function openapiSidebar() {
                 ['同步积分兑券结果', '/openapi/v3/brand/partner/card-member/user-points/exchange-coupon/confirm'],
               ].map(transArrayItem),
             },
+            {
+              text: '品牌门店',
+              collapsed: true,
+              items: [
+                ['创建门店', '/openapi/v3/brand/partner/store/brandstores'],
+                ['管理门店', '/openapi/v3/brand/partner/store/brandstores/{store_id}'],
+                ['绑定收款商户号', '/openapi/v3/brand/partner/store/brandstores/{store_id}/bindrecipient'],
+                ['解绑收款商户号', '/openapi/v3/brand/partner/store/brandstores/{store_id}/unbindrecipient'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '摇优惠活动',
+              collapsed: true,
+              items: [
+                ['查询摇优惠活动列表', '/openapi/v3/brand/marketing/shake-activities/activities'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -791,6 +808,35 @@ function openapiSidebar() {
                 ['查询营销补差付款单详情', '/openapi/v3/marketing/busifavor/subsidy/pay-receipts/{subsidy_receipt_id}'],
                 ['营销补差回退', '/openapi/v3/marketing/busifavor/subsidy/return-receipts'],
                 ['查询营销补差回退单详情', '/openapi/v3/marketing/busifavor/subsidy/return-receipts/{subsidy_return_receipt_id}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '商品券',
+              collapsed: true,
+              items: [
+                ['管理商品券事件通知地址', '/openapi/v3/marketing/partner/product-coupon/notify-configs'],
+                ['图片上传', '/openapi/v3/marketing/partner/product-coupon/media/upload-image'],
+                ['创建商品券', '/openapi/v3/marketing/partner/product-coupon/product-coupons'],
+                ['修改商品券', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}#post'],
+                ['查询商品券', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}#get'],
+                ['失效商品券', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/deactivate'],
+                ['添加商品券批次', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks#post'],
+                ['查询商品券批次列表', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks#get'],
+                ['修改商品券指定批次', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}#post'],
+                ['查询商品券指定批次', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}#get'],
+                ['修改商品券批次发放预算', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/update-budget'],
+                ['失效商品券批次', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/deactivate'],
+                ['预上传券Code', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/upload-coupon-codes'],
+                ['批次关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/associate-stores'],
+                ['查询批次关联门店列表', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/associated-stores'],
+                ['批次取消关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/disassociate-stores'],
+                ['向用户发放商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons#post'],
+                ['按券状态查询用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons#get'],
+                ['查询用户商品券详情', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}'],
+                ['确认发放用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/confirm'],
+                ['核销用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use'],
+                ['失效用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/deactivate'],
+                ['退券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/return'],
               ].map(transArrayItem),
             },
             {
@@ -2449,6 +2495,13 @@ function webhookSidebar() {
           items: [
             ['核销事件回调通知', '/webhook/v3/COUPON.USE'],
             ['领券事件回调通知', '/webhook/v3/COUPON.SEND'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '商品券',
+          collapsed: true,
+          items: [
+            ['商品券领券通知', '/webhook/v3/PRODUCT_COUPON_SP.SEND'],
           ].map(transArrayItem),
         },
         {

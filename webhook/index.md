@@ -40,6 +40,7 @@ next:
 | [商圈会员退款成功通知](/webhook/v3/MALL_REFUND.SUCCESS) {colspan=2}
 | JSON {rowspan=1} | [核销事件回调通知](/webhook/v3/COUPON.USE) {colspan=2}
 | JSON {rowspan=1} | [领券事件回调通知](/webhook/v3/COUPON.SEND) {colspan=2}
+| JSON {rowspan=1} | | [商品券领券通知](/webhook/v3/PRODUCT_COUPON_SP.SEND)
 | JSON {rowspan=5} | [用户发票抬头填写完成通知](/webhook/v3/FAPIAO.USER_APPLIED) {colspan=2}
 | [发票卡券作废通知](/webhook/v3/FAPIAO.CARD_DISCARDED) {colspan=2}
 | [发票插入用户卡包成功通知](/webhook/v3/FAPIAO.CARD_INSERTED) {colspan=2}
