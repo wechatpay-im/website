@@ -941,6 +941,16 @@ function openapiSidebar() {
                 ['获取抬头填写链接', '/openapi/v3/new-tax-control-fapiao/user-title/title-url'],
                 ['获取用户填写的抬头', '/openapi/v3/new-tax-control-fapiao/user-title'],
               ].map(transArrayItem).concat({
+                text: '腾讯数电发票模式',
+                collapsed: true,
+                items: [
+                  ['邀请子商户开通服务', '/openapi/v3/new-tax-control-fapiao/fapiaomerchant/getspinviteurl'],
+                  ['获取开通的子商户信息', '/openapi/v3/new-tax-control-fapiao/fapiaomerchant/listspinvitemchinfo'],
+                  ['检查子商户开票功能状态', '/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check-status'],
+                  ['开具通用行业票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/issue-general'],
+                  ['开具不动产租赁行业票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/real-estate-leasing'],
+                ].map(transArrayItem),
+              }, {
                 text: '区块链电子发票',
                 collapsed: true,
                 items: [
