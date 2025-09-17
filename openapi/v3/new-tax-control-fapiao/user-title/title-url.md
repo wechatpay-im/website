@@ -12,7 +12,7 @@ description: 非微信支付场景中，商户需先调用本接口获取抬头�
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
 | fapiao_apply_id {data-required data-indent=1} | string | 发票申请单号
-| source {data-required data-indent=1} | string | 开票来源
+| source {data-required data-indent=1} | string | 开票来源<br/>`WEB` \| `MINIPROGRAM` 枚举值之一
 | appid {data-required data-indent=1} | string | 商户AppID
 | openid {data-required data-indent=1} | string | 用户OpenID
 | total_amount {data-required data-indent=1} | integer | 总金额
@@ -160,4 +160,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538106) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474040)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538106) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474040) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015770776)

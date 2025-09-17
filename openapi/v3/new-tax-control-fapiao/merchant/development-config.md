@@ -2,7 +2,7 @@
 
 ## 配置开发选项 {#patch}
 
-配置开发选项(例如回调地址等)
+配置开发选项（例如回调地址、全部账单展示开发票入口开关），该配置对其绑定的同主体商户号也生效。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
@@ -10,6 +10,7 @@
 | callback_url {data-indent=1} | string | 商户回调地址
 | sub_mch_code {data-indent=1} | string | 子商户号
 | show_fapiao_cell {data-indent=1} | boolean | 全部账单展示开发票入口开关
+| support_vat_fapiao {data-indent=1} | boolean | 商户是否支持开电子专票
 
 {.im-table #request}
 
@@ -18,9 +19,10 @@
 ```php [异步纯链式]
 $instance->v3->newTaxControlFapiao->merchant->developmentConfig->patchAsync([
   'json' => [
-    'callback_url'     => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code'     => '1900000109',
-    'show_fapiao_cell' => true,
+    'callback_url'       => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'       => '1900000109',
+    'show_fapiao_cell'   => true,
+    'support_vat_fapiao' => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -32,9 +34,10 @@ $instance->v3->newTaxControlFapiao->merchant->developmentConfig->patchAsync([
 ```php [异步声明式]
 $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->patchAsync([
   'json' => [
-    'callback_url'     => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code'     => '1900000109',
-    'show_fapiao_cell' => true,
+    'callback_url'       => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'       => '1900000109',
+    'show_fapiao_cell'   => true,
+    'support_vat_fapiao' => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -46,9 +49,10 @@ $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->patch
 ```php [异步属性式]
 $instance['v3/new-tax-control-fapiao/merchant/development-config']->patchAsync([
   'json' => [
-    'callback_url'     => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code'     => '1900000109',
-    'show_fapiao_cell' => true,
+    'callback_url'       => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'       => '1900000109',
+    'show_fapiao_cell'   => true,
+    'support_vat_fapiao' => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,9 +64,10 @@ $instance['v3/new-tax-control-fapiao/merchant/development-config']->patchAsync([
 ```php [同步纯链式]
 $response = $instance->v3->newTaxControlFapiao->merchant->developmentConfig->patch([
   'json' => [
-    'callback_url'     => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code'     => '1900000109',
-    'show_fapiao_cell' => true,
+    'callback_url'       => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'       => '1900000109',
+    'show_fapiao_cell'   => true,
+    'support_vat_fapiao' => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -71,9 +76,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->patch([
   'json' => [
-    'callback_url'     => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code'     => '1900000109',
-    'show_fapiao_cell' => true,
+    'callback_url'       => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'       => '1900000109',
+    'show_fapiao_cell'   => true,
+    'support_vat_fapiao' => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -82,9 +88,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/new-tax-control-fapiao/merchant/development-config']->patch([
   'json' => [
-    'callback_url'     => 'https://pay.weixin.qq.com/callback',
-    'sub_mch_code'     => '1900000109',
-    'show_fapiao_cell' => true,
+    'callback_url'       => 'https://pay.weixin.qq.com/callback',
+    'sub_mch_code'       => '1900000109',
+    'show_fapiao_cell'   => true,
+    'support_vat_fapiao' => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -96,10 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | callback_url {data-required} | string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
+| support_vat_fapiao | boolean | 商户是否支持开电子专票
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012529457) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474031)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012529457) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474031) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792563)
 
 ## 查询商户配置的开发选项 {#get}
 
@@ -157,6 +165,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | callback_url {data-required} | string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
+| support_vat_fapiao | boolean | 商户是否支持开电子专票
 
 {.im-table #response}
 

@@ -1,6 +1,6 @@
 ---
 title: 冲红电子发票
-description: 商户对已开具的电子发票进行冲红（开具红票），并将其从微信用户的卡包中删除。
+description: 商户对已开具的电子发票进行冲红（开具红票），并将其从微信用户的卡包中删除。仅在微信支付侧开具的电子发票才允许发起冲红。注意：本接口成功返回仅代表冲红请求已被受理，当冲红完成时，微信支付会根据商户配置的回调地址进行回调通知，商户也可以通过【查询电子发票】接口获取冲红结果及红票信息。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -12,10 +12,10 @@ description: 商户对已开具的电子发票进行冲红（开具红票），�
 | fapiao_apply_id {data-required} | string | 发票申请单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| reverse_reason {data-required data-indent=1} | string | 冲红原因
+| reverse_reason {data-required data-indent=1} | string | 冲红原因<br/>`ISSUE_ERROR` \| `SALES_RETURN` \| `SERVICE_SUSPENTION` \| `SALES_DISCOUNT` 枚举值之一
 | fapiao_information {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 需要冲红的发票信息
 | fapiao_id {data-required data-indent=2} | string | 商户发票单号
-| fapiao_code {data-required data-indent=2} | string | 发票代码
+| fapiao_code {data-indent=2} | string | 发票代码
 | fapiao_number {data-required data-indent=2} | string | 发票号码
 
 {.im-table #request}
@@ -135,4 +135,4 @@ print_r($response->getStatusCode() === 202);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538327) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474062)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538327) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474062) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792575)

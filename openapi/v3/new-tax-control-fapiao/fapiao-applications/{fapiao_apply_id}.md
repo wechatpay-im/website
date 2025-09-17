@@ -100,7 +100,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | total_count {data-required} | integer | 发票数量
 | fapiao_information {data-required} | object[] {data-tooltip="对应PHP的array"} | 发票信息
 | fapiao_id {data-required data-indent=1} | string | 商户发票单号
-| status {data-required data-indent=1} | string | 发票状态
+| status {data-required data-indent=1} | string | 发票状态<br/>`ISSUE_ACCEPTED` \| `ISSUED` \| `REVERSE_ACCEPTED` \| `REVERSED` \| `ISSUE_FAILED` \| `REVERSE_FAILED` 枚举值之一
 | blue_fapiao {data-indent=1} | object {data-tooltip="对应PHP的array"} | 蓝字发票信息
 | fapiao_code {data-required data-indent=2} | string | 发票代码
 | fapiao_number {data-required data-indent=2} | string | 发票号码
@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | card_openid {data-required data-indent=2} | string | 用户在插卡公众号下的OpenID
 | card_id {data-indent=2} | string | 电子发票卡券模板ID
 | card_code {data-indent=2} | string | 电子发票在卡包中的编码
-| card_status {data-required data-indent=2} | string | 发票卡券状态
+| card_status {data-required data-indent=2} | string | 发票卡券状态<br/>`INSERT_ACCEPTED` \| `INSERTED` \| `DISCARD_ACCEPTED` \| `DISCARDED` 枚举值之一
 | total_amount {data-required data-indent=1} | integer | 总价税合计
 | tax_amount {data-required data-indent=1} | integer | 总税额
 | amount {data-required data-indent=1} | integer | 总金额
@@ -130,15 +130,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_name {data-indent=2} | string | 开户银行
 | bank_account {data-indent=2} | string | 银行账号
 | buyer_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 购买方信息
-| type {data-required data-indent=2} | string | 购买方类型
+| type {data-required data-indent=2} | string | 购买方类型<br/>`INDIVIDUAL` \| `ORGANIZATION` 枚举值之一
 | name {data-required data-indent=2} | string | 名称
 | taxpayer_id {data-indent=2} | string | 纳税人识别号
 | address {data-indent=2} | string | 地址
 | telephone {data-indent=2} | string | 电话
 | bank_name {data-indent=2} | string | 开户银行
 | bank_account {data-indent=2} | string | 银行账号
-| phone {data-indent=2} | string | 手机号
-| email {data-indent=2} | string | 邮箱地址
+| phone {data-indent=2} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号
+| email {data-indent=2} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 邮箱地址
+| amount {data-indent=2} | integer | 订单金额
+| out_trade_no {data-indent=2} | string | 商户订单号
+| fapiao_bill_type {data-indent=2} | string | 开具的发票类型<br/>`COMM_FAPIAO` \| `VAT_FAPIAO` 枚举值之一
+| user_apply_message {data-indent=2} | string | 留言信息
 | extra_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 附加信息
 | payee {data-indent=2} | string | 收款人
 | reviewer {data-indent=2} | string | 复核人
@@ -154,10 +158,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | tax_amount {data-required data-indent=2} | integer | 单行税额
 | total_amount {data-required data-indent=2} | integer | 单行金额合计
 | tax_rate {data-required data-indent=2} | integer | 税率
-| tax_prefer_mark {data-required data-indent=2} | string | 税收优惠政策标识
+| tax_prefer_mark {data-required data-indent=2} | string | 税收优惠政策标识<br/>`NO_FAVORABLE` \| `OUTSIDE_VAT` \| `VAT_EXEMPT` \| `NORMAL_ZERO_RATED` \| `EXPORT_ZERO_RATED` 枚举值之一
 | discount {data-required data-indent=2} | boolean | 是否折扣行
 | remark {data-indent=1} | string | 备注信息
+| fapiao_error_code {data-indent=1} | string | 开票失败错误码
+| fapiao_error_message {data-indent=1} | string | 开票失败原因
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012531753) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012489258)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012531753) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012489258) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792567)

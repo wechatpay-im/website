@@ -31,16 +31,16 @@ description: 当用户完成发票抬头信息填写后，微信支付将通知�
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | mchid {data-required data-indent=3} | string | 微信支付分配的商户号
+| sub_mchid {data-indent=3} | string | 微信支付分配的子商户号，服务商模式下存在
 | fapiao_apply_id {data-required data-indent=3} | string | 发票申请单号，唯一标识一次开票行为。微信支付场景下，为微信支付订单号；非微信支付场景下，为调用获取抬头填写链接
 | apply_time {data-required data-indent=3} | string | 用户完成发票抬头填写的时间
-| sub_mchid {data-indent=3} | string | 微信支付分配的子商户号，服务商模式下存在
 
 {.im-table #request}
 
@@ -130,4 +130,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286009) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012070348)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286009) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012070348) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792559)

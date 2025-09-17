@@ -31,19 +31,19 @@ description: 当有发票卡券作废后，微信后台会把相关确认结果�
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | mchid {data-required data-indent=3} | string | 微信支付分配的商户号
+| sub_mchid {data-indent=3} | string | 微信支付分配的子商户号，服务商模式下存在
 | fapiao_apply_id {data-required data-indent=3} | string | 冲红时指定的发票申请单号
 | fapiao_information {data-required data-indent=3} | object[] {data-tooltip="对应PHP的Array"} | 发票申请单下关联的所有发票信息
 | fapiao_id {data-required data-indent=4} | string | 商户发票单号，唯一标识一张发票
 | fapiao_status {data-required data-indent=4} | string | 发票状态<br/>`ISSUE_ACCEPTED` \| `ISSUED` \| `REVERSE_ACCEPTED` \| `REVERSED` 枚举值之一
 | card_status {data-required data-indent=4} | string | 发票状态<br/>`INSERT_ACCEPTED` \| `INSERTED` \| `DISCARD_ACCEPTED` \| `DISCARDED` 枚举值之一
-| sub_mchid {data-indent=3} | string | 微信支付分配的子商户号，服务商模式下存在
 
 {.im-table #request}
 
@@ -133,4 +133,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286035) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012071609)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286035) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012071609) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792560)

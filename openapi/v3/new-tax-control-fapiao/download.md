@@ -18,6 +18,7 @@ description: 调用【获取发票下载信息】接口后，调用该接口下�
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | token {data-required data-indent=1} | string | 前序`download_url`的查询参数
 | mchid {data-required data-indent=1} | string | 商户号
+| sub_mchid {data-indent=1} | string | 子商户号
 | openid {data-required data-indent=1} | string | 通过查询电子发票接口获取的`card_openid`
 | invoice_code {data-required data-indent=1} | string | 发票代码
 | invoice_no {data-required data-indent=1} | string | 发票号码
@@ -52,8 +53,4 @@ $client->get($downloadUrl, [
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/fapiao/fapiao-applications/download-invoice-file.html)
-- [官方文档](https://pay.weixin.qq.com/docs/partner/apis/fapiao/fapiao-applications/download-invoice-file.html)
-- [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286040)
-- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012071750)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012286040) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012071750) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792569)

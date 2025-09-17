@@ -12,9 +12,9 @@ description: 商户自行开具电子发票后，可调用本接口将电子发�
 | fapiao_apply_id {data-required} | string | 发票申请单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| scene {data-required data-indent=1} | string | 插卡场景
+| scene {data-required data-indent=1} | string | 插卡场景<br/>`WITH_WECHATPAY` \| `WITHOUT_WECHATPAY` 枚举值之一
 | buyer_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 购买方信息
-| type {data-required data-indent=2} | string | 购买方类型
+| type {data-required data-indent=2} | string | 购买方类型<br/>`INDIVIDUAL` \| `ORGANIZATION` 枚举值之一
 | name {data-required data-indent=2} | string | 名称
 | taxpayer_id {data-indent=2} | string | 纳税人识别号
 | address {data-indent=2} | string | 地址
@@ -23,6 +23,10 @@ description: 商户自行开具电子发票后，可调用本接口将电子发�
 | bank_account {data-indent=2} | string | 银行账号
 | phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号
 | email {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 邮箱地址
+| amount {data-indent=2} | integer | 订单金额
+| out_trade_no {data-indent=2} | string | 商户订单号
+| fapiao_bill_type {data-indent=2} | string | 开具的发票类型<br/>`COMM_FAPIAO` \| `VAT_FAPIAO` 枚举值之一
+| user_apply_message {data-indent=2} | string | 留言信息
 | fapiao_card_information {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 电子发票卡券信息列表
 | fapiao_media_id {data-required data-indent=2} | string | 电子发票文件ID
 | fapiao_number {data-required data-indent=2} | string | 发票号码
@@ -55,7 +59,7 @@ description: 商户自行开具电子发票后，可调用本接口将电子发�
 | tax_amount {data-required data-indent=3} | integer | 单行税额
 | total_amount {data-required data-indent=3} | integer | 单行金额合计
 | tax_rate {data-required data-indent=3} | integer | 税率
-| tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识
+| tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识<br/>`NO_FAVORABLE` \| `OUTSIDE_VAT` \| `VAT_EXEMPT` \| `NORMAL_ZERO_RATED` \| `EXPORT_ZERO_RATED` 枚举值之一
 | discount {data-required data-indent=3} | boolean | 是否折扣行
 | remark {data-indent=2} | string | 备注信息
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
@@ -72,15 +76,19 @@ $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_apply_id_->inser
     'sub_mchid'               => '1900000109',
     'scene'                   => 'WITH_WECHATPAY',
     'buyer_information'       => [
-      'type'         => 'ORGANIZATION',
-      'name'         => '深圳市南山区测试企业',
-      'taxpayer_id'  => '202003261233701778',
-      'address'      => '深圳市南山区深南大道10000号',
-      'telephone'    => '075512345678',
-      'bank_name'    => '测试银行',
-      'bank_account' => '62001234567890',
-      'phone'        => '18507550000',
-      'email'        => '123110@qq.com',
+      'type'               => 'ORGANIZATION',
+      'name'               => '深圳市南山区测试企业',
+      'taxpayer_id'        => '202003261233701778',
+      'address'            => '深圳市南山区深南大道10000号',
+      'telephone'          => '075512345678',
+      'bank_name'          => '测试银行',
+      'bank_account'       => '62001234567890',
+      'phone'              => '18507550000',
+      'email'              => '123110@qq.com',
+      'amount'             => 1000,
+      'out_trade_no'       => 'order_20200701_123456',
+      'fapiao_bill_type'   => 'COMM_FAPIAO',
+      'user_apply_message' => '用户留言',
     ],
     'fapiao_card_information' => [[
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
@@ -139,15 +147,19 @@ $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id
     'sub_mchid'               => '1900000109',
     'scene'                   => 'WITH_WECHATPAY',
     'buyer_information'       => [
-      'type'         => 'ORGANIZATION',
-      'name'         => '深圳市南山区测试企业',
-      'taxpayer_id'  => '202003261233701778',
-      'address'      => '深圳市南山区深南大道10000号',
-      'telephone'    => '075512345678',
-      'bank_name'    => '测试银行',
-      'bank_account' => '62001234567890',
-      'phone'        => '18507550000',
-      'email'        => '123110@qq.com',
+      'type'               => 'ORGANIZATION',
+      'name'               => '深圳市南山区测试企业',
+      'taxpayer_id'        => '202003261233701778',
+      'address'            => '深圳市南山区深南大道10000号',
+      'telephone'          => '075512345678',
+      'bank_name'          => '测试银行',
+      'bank_account'       => '62001234567890',
+      'phone'              => '18507550000',
+      'email'              => '123110@qq.com',
+      'amount'             => 1000,
+      'out_trade_no'       => 'order_20200701_123456',
+      'fapiao_bill_type'   => 'COMM_FAPIAO',
+      'user_apply_message' => '用户留言',
     ],
     'fapiao_card_information' => [[
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
@@ -206,15 +218,19 @@ $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/inser
     'sub_mchid'               => '1900000109',
     'scene'                   => 'WITH_WECHATPAY',
     'buyer_information'       => [
-      'type'         => 'ORGANIZATION',
-      'name'         => '深圳市南山区测试企业',
-      'taxpayer_id'  => '202003261233701778',
-      'address'      => '深圳市南山区深南大道10000号',
-      'telephone'    => '075512345678',
-      'bank_name'    => '测试银行',
-      'bank_account' => '62001234567890',
-      'phone'        => '18507550000',
-      'email'        => '123110@qq.com',
+      'type'               => 'ORGANIZATION',
+      'name'               => '深圳市南山区测试企业',
+      'taxpayer_id'        => '202003261233701778',
+      'address'            => '深圳市南山区深南大道10000号',
+      'telephone'          => '075512345678',
+      'bank_name'          => '测试银行',
+      'bank_account'       => '62001234567890',
+      'phone'              => '18507550000',
+      'email'              => '123110@qq.com',
+      'amount'             => 1000,
+      'out_trade_no'       => 'order_20200701_123456',
+      'fapiao_bill_type'   => 'COMM_FAPIAO',
+      'user_apply_message' => '用户留言',
     ],
     'fapiao_card_information' => [[
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
@@ -273,15 +289,19 @@ $response = $instance->v3->newTaxControlFapiao->fapiaoApplications->_fapiao_appl
     'sub_mchid'               => '1900000109',
     'scene'                   => 'WITH_WECHATPAY',
     'buyer_information'       => [
-      'type'         => 'ORGANIZATION',
-      'name'         => '深圳市南山区测试企业',
-      'taxpayer_id'  => '202003261233701778',
-      'address'      => '深圳市南山区深南大道10000号',
-      'telephone'    => '075512345678',
-      'bank_name'    => '测试银行',
-      'bank_account' => '62001234567890',
-      'phone'        => '18507550000',
-      'email'        => '123110@qq.com',
+      'type'               => 'ORGANIZATION',
+      'name'               => '深圳市南山区测试企业',
+      'taxpayer_id'        => '202003261233701778',
+      'address'            => '深圳市南山区深南大道10000号',
+      'telephone'          => '075512345678',
+      'bank_name'          => '测试银行',
+      'bank_account'       => '62001234567890',
+      'phone'              => '18507550000',
+      'email'              => '123110@qq.com',
+      'amount'             => 1000,
+      'out_trade_no'       => 'order_20200701_123456',
+      'fapiao_bill_type'   => 'COMM_FAPIAO',
+      'user_apply_message' => '用户留言',
     ],
     'fapiao_card_information' => [[
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
@@ -337,15 +357,19 @@ $response = $instance->chain('v3/new-tax-control-fapiao/fapiao-applications/{fap
     'sub_mchid'               => '1900000109',
     'scene'                   => 'WITH_WECHATPAY',
     'buyer_information'       => [
-      'type'         => 'ORGANIZATION',
-      'name'         => '深圳市南山区测试企业',
-      'taxpayer_id'  => '202003261233701778',
-      'address'      => '深圳市南山区深南大道10000号',
-      'telephone'    => '075512345678',
-      'bank_name'    => '测试银行',
-      'bank_account' => '62001234567890',
-      'phone'        => '18507550000',
-      'email'        => '123110@qq.com',
+      'type'               => 'ORGANIZATION',
+      'name'               => '深圳市南山区测试企业',
+      'taxpayer_id'        => '202003261233701778',
+      'address'            => '深圳市南山区深南大道10000号',
+      'telephone'          => '075512345678',
+      'bank_name'          => '测试银行',
+      'bank_account'       => '62001234567890',
+      'phone'              => '18507550000',
+      'email'              => '123110@qq.com',
+      'amount'             => 1000,
+      'out_trade_no'       => 'order_20200701_123456',
+      'fapiao_bill_type'   => 'COMM_FAPIAO',
+      'user_apply_message' => '用户留言',
     ],
     'fapiao_card_information' => [[
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
@@ -401,15 +425,19 @@ $response = $instance['v3/new-tax-control-fapiao/fapiao-applications/{fapiao_app
     'sub_mchid'               => '1900000109',
     'scene'                   => 'WITH_WECHATPAY',
     'buyer_information'       => [
-      'type'         => 'ORGANIZATION',
-      'name'         => '深圳市南山区测试企业',
-      'taxpayer_id'  => '202003261233701778',
-      'address'      => '深圳市南山区深南大道10000号',
-      'telephone'    => '075512345678',
-      'bank_name'    => '测试银行',
-      'bank_account' => '62001234567890',
-      'phone'        => '18507550000',
-      'email'        => '123110@qq.com',
+      'type'               => 'ORGANIZATION',
+      'name'               => '深圳市南山区测试企业',
+      'taxpayer_id'        => '202003261233701778',
+      'address'            => '深圳市南山区深南大道10000号',
+      'telephone'          => '075512345678',
+      'bank_name'          => '测试银行',
+      'bank_account'       => '62001234567890',
+      'phone'              => '18507550000',
+      'email'              => '123110@qq.com',
+      'amount'             => 1000,
+      'out_trade_no'       => 'order_20200701_123456',
+      'fapiao_bill_type'   => 'COMM_FAPIAO',
+      'user_apply_message' => '用户留言',
     ],
     'fapiao_card_information' => [[
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
@@ -466,4 +494,4 @@ print_r($response->getStatusCode() === 202);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538365) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474078)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538365) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474078) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792579)

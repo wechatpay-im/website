@@ -100,8 +100,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | fapiao_download_info_list | object[] {data-tooltip="对应PHP的array"} | 发票列表
 | fapiao_id {data-indent=1} | string | 商户发票单号
 | download_url {data-indent=1} | string | 发票文件下载地址
-| status {data-indent=1} | string | 发票状态
+| status {data-indent=1} | string | 发票状态<br/>`ISSUE_ACCEPTED` \| `ISSUED` \| `REVERSE_ACCEPTED` \| `REVERSED` \| `ISSUE_FAILED` \| `REVERSE_FAILED` 枚举值之一
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538335) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474067)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012538335) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474067) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015792576)
