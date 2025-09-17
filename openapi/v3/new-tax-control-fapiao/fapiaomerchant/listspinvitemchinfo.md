@@ -12,8 +12,8 @@ description: 通过时间范围，邀请的code等参数查询服务商邀请的
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | query_time_start {data-required data-indent=1} | string | 查询时间起
 | query_time_end {data-required data-indent=1} | string | 查询时间止
-| offset {data-required data-indent=1} | integer | 服务商邀请渠道
-| limit {data-required data-indent=1} | integer | 操作人员
+| offset {data-required data-indent=1} | integer | 本次查询的起始位置
+| limit {data-required data-indent=1} | integer | 本次查询的最大数量
 | invite_code {data-indent=1} | string | 服务商邀请code
 | mch_invite_status {data-required data-indent=1} | string | 商户邀请状态<br/>`MCH_INVITE_SUCC` \| `MCH_INVITE_FAILED` 枚举值之一
 
