@@ -2664,6 +2664,13 @@ function webhookSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '订阅服务通知',
+          collapsed: true,
+          items: [
+            ['合作伙伴订阅通知', '/webhook/v3/MERCHANT_NOTIFY.NOTIFY'],
+          ].map(transArrayItem),
+        },
+        {
           text: '跨境/全球',
           collapsed: true,
           items: [

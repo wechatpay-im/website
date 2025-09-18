@@ -71,12 +71,18 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | mchid {data-required} | string | 商户号
-| limited_functions | string[] | 商户被管控能力列表<br/>`NO_PAYMENT` \| `NO_WITHDRAWAL` \| `NO_REFUND` \| `NO_TRANSACTION` \| `NO_PROFIT_SHARING` \| `NO_PAYMENT_POINT_COMPLETE_ORDER` 枚举值之一
+| limited_functions | string[] | 商户被管控能力列表<br/>`NO_TRANSACTION_AND_RECHARGE` \| `NO_PAYMENT` \| `NO_WITHDRAWAL` \| `NO_REFUND` \| `NO_TRANSACTION` \| `NO_PROFIT_SHARING` \| `NO_PAYMENT_POINT_COMPLETE_ORDER` 枚举值之一
 | recovery_specifications | object[] {data-tooltip="对应PHP的array"} | 被管控原因及解脱路径列表
-| limitation_reason {data-indent=1} | string | 商户被管控原因描述
-| recover_way {data-indent=1} | string | 商户被该原因管控的解脱路径
+| limitation_case_id {data-indent=1} | string | 商户被该原因管控的单据号
+| limitation_reason {data-indent=1} | string | 商户被管控原因
+| limitation_reason_describe {data-indent=1} | string | 商户被管控原因描述
+| recover_way {data-indent=1} | string | 商户被该原因管控的解脱路径<br/>`IRRECOVERABLE` \| `MODIFY_SUBJECT_INFORMATION` \| `MODIFY_SETTLE_ACCOUNT_INFORMATION` \| `VERIFY_INACTIVE_MERCHANT_IDENTITY` \| `SUBMIT_OFFLINE_BUSINESS_SCENARIO_INFORMATION` \| `SUBMIT_INFORMATION_FOR_APPEAL` \| `RESOLVE_TRANSACTION_DISPUTES` \| `MODIFY_ADMINISTRATOR_INFORMATION` \| `CALL_CUSTOMER_SERVICE_AT_95017` \| `UPDATE_BUSINESS_SCENARIO_INFORMATION` \| `SUBMIT_CDD_INFORMATION` \| `WAITING_FOR_PLATFORM_REVIEW` \| `SUBMIT_UBO_INFORMATION` 枚举值之一
+| recover_way_param {data-indent=1} | string | 商户被该原因管控的解脱路径参数
 | recover_help_url {data-indent=1} | string | 商户被该原因管控的解脱帮助链接
-| limitation_reason_type {data-indent=1} | string | 商户被管控原因类型<br/>`LICENSE_ABNORMAL` \| `NO_TRADE` \| `SETTLE_ACCOUNT_ABNORMAL` \| `RISK_ABNORMAL` \| `OTHER` 枚举值之一
+| limitation_action_type {data-indent=1} | string | 处置方式<br/>`LIMIT_ACTION_TYPE_IMMEDIATE_CONTROL` \| `LIMIT_ACTION_TYPE_DELAY_CONTROL` 枚举值之一
+| limitation_start_date {data-indent=1} | string | 预计管控开始时间
+| limitation_date {data-indent=1} | string | 商户被该原因管控的时间
+| limitation_reason_type {data-indent=1} | string | 商户被管控原因类型<br/>`LICENSE_ABNORMAL` \| `NO_TRADE` \| `SETTLE_ACCOUNT_ABNORMAL` \| `RISK_ABNORMAL` \| `OTHER` \| `INSPECT_ABNORMAL` \| `INVALID_REPRESENTATIVE_INFORMATION` \| `INVALID_BUSINESS_STATUS` \| `INVALID_BUSINESS_LICENSE` \| `INVALID_BENEFICIARY_INFORMATION` 枚举值之一
 | relate_limitations {data-indent=1} | string[] | 商户被该原因管控的能力列表<br/>`NO_TRANSACTION_AND_RECHARGE` \| `NO_PAYMENT` \| `NO_WITHDRAWAL` \| `NO_REFUND` \| `NO_TRANSACTION` \| `NO_PROFIT_SHARING` \| `NO_PAYMENT_POINT_COMPLETE_ORDER` 枚举值之一
 | other_relate_limitations {data-indent=1} | string | 商户被该原因管控的其他能力描述
 | other_limited_functions | string | 商户其他被管控能力描述
