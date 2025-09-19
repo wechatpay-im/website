@@ -2552,6 +2552,7 @@ function webhookSidebar() {
             ['用户开通会员卡事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.USER_CARD.CREATE'],
             ['用户删除会员卡事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.USER_CARD.DELETE'],
             ['用户积分兑券事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.POINT_EXCHANGE_COUPON'],
+            ['用户积分同步事件通知', '/webhook/v3/BRAND_MEMBER_CARD_SP.SYNC_USER_POINT'],
           ].map(transArrayItem),
         },
         {
