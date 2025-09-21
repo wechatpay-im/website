@@ -18,18 +18,18 @@ next:
 | 沙箱环境v2 {rowspan=3} | [获取沙箱环境密钥](/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey) {colspan=2}
 | [沙箱付款码支付](/openapi/v2/xdc/apiv2sandbox/pay/micropay) {colspan=2}
 | [沙箱订单查询](/openapi/v2/xdc/apiv2sandbox/pay/orderquery) {colspan=2}
-| 基础支付v2 {rowspan=12} | [付款码支付](/openapi/v2/pay/micropay) {colspan=2}
+| 基础支付v2 {rowspan=8} | [付款码支付](/openapi/v2/pay/micropay) {colspan=2}
 | [撤销订单](/openapi/v2/secapi/pay/reverse) {colspan=2}
 | [授权码查询openid](/openapi/v2/tools/authcodetoopenid) {colspan=2}
 | [统一下单](/openapi/v2/pay/unifiedorder) {colspan=2}
 | [转换短链接](/openapi/v2/tools/shorturl) {colspan=2}
 | [查询订单](/openapi/v2/pay/orderquery) {colspan=2}
 | [关闭订单](/openapi/v2/pay/closeorder) {colspan=2}
-| [申请退款](/openapi/v2/secapi/pay/refund) {colspan=2}
+| [交易保障](/openapi/v2/payitil/report) {colspan=2}
+| 退款v2 {rowspan=4} | [申请退款](/openapi/v2/secapi/pay/refund) {colspan=2}
 | [申请退款(单品优惠)](/openapi/v2/secapi/pay/refundv2) {colspan=2}
 | [查询退款](/openapi/v2/pay/refundquery) {colspan=2}
 | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2) {colspan=2}
-| [交易保障](/openapi/v2/payitil/report) {colspan=2}
 | 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) :closed_lock_with_key: {colspan=2}
 | [合单查单](/openapi/v2/pay/querycombinedorder) :closed_lock_with_key: {colspan=2}
 | [合单关单](/openapi/v2/pay/closecombinedorder) :closed_lock_with_key: {colspan=2}
@@ -47,7 +47,7 @@ next:
 | [完结分账](/openapi/v2/secapi/pay/profitsharingfinish) {colspan=2}
 | [分账回退](/openapi/v2/secapi/pay/profitsharingreturn) {colspan=2}
 | [回退结果查询](/openapi/v2/pay/profitsharingreturnquery) {colspan=2}
-| 平台账单v2{rowspan=2} | [下载交易账单](/openapi/v2/pay/downloadbill) {colspan=2}
+| 账单v2{rowspan=2} | [下载交易账单](/openapi/v2/pay/downloadbill) {colspan=2}
 | [下载资金账单](/openapi/v2/pay/downloadfundflow) {colspan=2}
 | 现金红包v2{rowspan=4} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) {colspan=2}
 | [~~发放裂变红包~~](/openapi/v2/mmpaymkttransfers/sendgroupredpack) :no_entry_sign: {colspan=2}
@@ -94,7 +94,7 @@ next:
 | 清关报关v2{rowspan=3} | [提交订单附加信息](/openapi/v2/cgi-bin/mch/customs/customdeclareorder)
 | [查询订单附加信息](/openapi/v2/cgi-bin/mch/customs/customdeclarequery)
 | [重推订单附加信息](/openapi/v2/cgi-bin/mch/newcustoms/customdeclareredeclare)
-| 基础支付v3{rowspan=14} | [付款码支付](/openapi/v3/pay/transactions/codepay) | [付款码支付](/openapi/v3/pay/partner/transactions/codepay)
+| 基础支付v3{rowspan=11} | [付款码支付](/openapi/v3/pay/transactions/codepay) | [付款码支付](/openapi/v3/pay/partner/transactions/codepay)
 | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
 | [JSAPI下单](/openapi/v3/pay/transactions/jsapi) | [JSAPI下单](/openapi/v3/pay/partner/transactions/jsapi)
@@ -105,7 +105,7 @@ next:
 | [按商户单号查单](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}) | [按商户单号查单](/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no})
 | [撤销订单](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/reverse) | [撤销订单](/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/reverse)
 | [关闭订单](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close) | [关闭订单](/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close)
-| [发起退款申请](/openapi/v3/refund/domestic/refunds) {colspan=2}
+| 退款v3 {rowspan=3} | [发起退款申请](/openapi/v3/refund/domestic/refunds) {colspan=2}
 | [查询单笔退款](/openapi/v3/refund/domestic/refunds/{out_refund_no}) {colspan=2}
 | [发起异常退款](/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund) {colspan=2}
 | 合单支付v3{rowspan=6} | [合单APP下单](/openapi/v3/combine-transactions/app) {colspan=2}
@@ -170,7 +170,7 @@ next:
 | | [绑定收款商户号](/openapi/v3/brand/partner/store/brandstores/{store_id}/bindrecipient)
 | | [解绑收款商户号](/openapi/v3/brand/partner/store/brandstores/{store_id}/unbindrecipient)
 | 摇优惠活动v3{rowspan=1} | | [查询摇优惠活动列表](/openapi/v3/brand/marketing/shake-activities/activities)
-| 平台账单v3{rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
+| 账单v3{rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
 | [下载账单文件](/openapi/v3/billdownload/file) {colspan=2}

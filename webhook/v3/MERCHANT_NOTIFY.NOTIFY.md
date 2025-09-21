@@ -34,11 +34,11 @@ description: 在订阅某个消息主题后，当商户发生该主题下的业�
 | topic_english_name {data-required data-indent=4} | string |
 | topic_chinese_name {data-required data-indent=4} | string |
 | message_content {data-required data-indent=3} | object {data-tooltip="对应PHP的Array"} |
-| merchant_code {data-required data-indent=4} | string |
-| merchant_company_name {data-required data-indent=4} | string |
-| business_time {data-required data-indent=4} | string |
-| business_code {data-required data-indent=4} | string |
-| business_state {data-required data-indent=4} | string |
+| merchant_code {data-required data-indent=4} | string | 商户号
+| merchant_company_name {data-required data-indent=4} | string | 商户全称
+| business_time {data-required data-indent=4} | string | 业务发生时间
+| business_code {data-required data-indent=4} | string | 业务单据
+| business_state {data-required data-indent=4} | string | 业务状态
 
 {.im-table #request}
 

@@ -14,6 +14,7 @@ export default defineConfig({
   sitemap: {
     hostname: baseUri,
     xslUrl: '/sitemap.xsl',
+    transformItems: items => Promise.resolve(items.filter(item => Boolean(item?.lastmod))),
   },
   head: [
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
@@ -239,11 +240,17 @@ function openapiSidebar() {
             ['转换短链接', '/openapi/v2/tools/shorturl'],
             ['查询订单', '/openapi/v2/pay/orderquery'],
             ['关闭订单', '/openapi/v2/pay/closeorder'],
+            ['交易保障', '/openapi/v2/payitil/report'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '退款',
+          collapsed: true,
+          items: [
             ['申请退款', '/openapi/v2/secapi/pay/refund'],
             ['申请退款(单品优惠)', '/openapi/v2/secapi/pay/refundv2'],
             ['查询退款', '/openapi/v2/pay/refundquery'],
             ['查询退款(单品优惠)', '/openapi/v2/pay/refundqueryv2'],
-            ['交易保障', '/openapi/v2/payitil/report'],
           ].map(transArrayItem),
         },
         {
@@ -282,7 +289,7 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
-          text: '平台账单',
+          text: '账单',
           collapsed: true,
           items: [
             ['下载交易账单', '/openapi/v2/pay/downloadbill'],
@@ -458,6 +465,12 @@ function openapiSidebar() {
                 ['统一下单', '/openapi/v2/pay/unifiedorder#global'],
                 ['查询订单', '/openapi/v2/pay/orderquery#global'],
                 ['关闭订单', '/openapi/v2/pay/closeorder#global'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '退款',
+              collapsed: true,
+              items: [
                 ['申请退款', '/openapi/v2/secapi/pay/refund#global'],
                 ['查询退款', '/openapi/v2/pay/refundquery#global'],
               ].map(transArrayItem),
@@ -519,12 +532,16 @@ function openapiSidebar() {
                 ['关闭订单', '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'],
               ].map(transArrayItem),
             },
-            ...[
-              ['发起退款申请', '/openapi/v3/refund/domestic/refunds'],
-              ['查询单笔退款', '/openapi/v3/refund/domestic/refunds/{out_refund_no}'],
-              ['发起异常退款', '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'],
-            ].map(transArrayItem),
-          ]
+          ],
+        },
+        {
+          text: '退款',
+          collapsed: true,
+          items: [
+            ['发起退款申请', '/openapi/v3/refund/domestic/refunds'],
+            ['查询单笔退款', '/openapi/v3/refund/domestic/refunds/{out_refund_no}'],
+            ['发起异常退款', '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'],
+          ].map(transArrayItem),
         },
         {
           text: '合单支付',
@@ -693,7 +710,7 @@ function openapiSidebar() {
           ],
         },
         {
-          text: '平台账单',
+          text: '账单',
           collapsed: true,
           items: [
             ['申请交易账单', '/openapi/v3/bill/tradebill'],
@@ -1843,6 +1860,12 @@ function openapiSidebar() {
                 ['查询订单(平台单号)', '/openapi/v3/global/transactions/id/{transaction_id}'],
                 ['关闭订单(商户单号)', '/openapi/v3/global/transactions/out-trade-no/{out_trade_no}/close'],
                 ['关闭订单(平台单号)', '/openapi/v3/global/transactions/id/{transaction_id}/close'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '退款',
+              collapsed: true,
+              items: [
                 ['申请退款', '/openapi/v3/global/refunds#post'],
                 ['查询所有退款', '/openapi/v3/global/refunds#get'],
                 ['查询单笔退款(商户单号)', '/openapi/v3/global/refunds/out-refund-no/{out_refund_no}'],
@@ -1946,6 +1969,12 @@ function openapiSidebar() {
                     ['查询订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}'],
                     ['关闭订单(商户单号)', '/openapi/v3/transactions/out-trade-no/{out_trade_no}/close'],
                     ['关闭订单(平台单号)', '/openapi/v3/transactions/id/{transaction_id}/close'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '退款',
+                  collapsed: true,
+                  items: [
                     ['申请退款', '/openapi/v3/refunds#post'],
                     ['查询所有退款', '/openapi/v3/refunds#get'],
                     ['查询单笔退款(商户单号)', '/openapi/v3/refunds/out-refund-no/{out_refund_no}'],
