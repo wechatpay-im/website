@@ -185,6 +185,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_mch_id {data-required} | string | 子商户号
 | nonce_str {data-required} | string | 随机字符串
 | sign {data-required} | string | 签名
+| miniprogram_username | string | 跳转签约小程序的username
+| miniprogram_path | string | 跳转签约小程序的path
 | pre_entrustweb_id {data-required} | string | 预签约id
 
 {.im-table #response}
