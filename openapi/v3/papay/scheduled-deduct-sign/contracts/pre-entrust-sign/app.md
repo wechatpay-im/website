@@ -180,6 +180,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | pre_entrustweb_id {data-required} | string | 预签约ID
+| miniprogram_username | string | 跳转签约小程序的username
+| miniprogram_path | string | 跳转签约小程序的path
 
 {.im-table #response}
 
