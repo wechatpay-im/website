@@ -122,4 +122,4 @@ next:
 | [跨境/全球-委托代扣签约成功通知](/webhook/v3/PAPAY.SIGN) {colspan=2}
 | [跨境/全球-委托代扣解约成功通知](/webhook/v3/PAPAY.TERMINATE) {colspan=2}
 
-{.im-table}
+{.im-table .centered}

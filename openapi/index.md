@@ -718,4 +718,4 @@ next:
 | [身份信息校验](/openapi/v3/global/customs/verify-certificate)
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
-{.im-table}
+{.im-table .centered}

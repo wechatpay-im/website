@@ -166,6 +166,11 @@
   margin: 0;
 }
 
+.centered tr th,
+.centered tr td {
+  text-align: center;
+}
+
 .im-table thead tr,
 .im-table tbody tr:nth-child(2n) {
   background: linear-gradient(to right, transparent 0%, var(--vp-c-bg-soft) 10%, var(--vp-c-bg-soft) 90%, transparent 100%);
@@ -176,7 +181,6 @@
   border-left: none;
   border-right: none;
   background-color: transparent;
-  text-align: center;
 }
 
 .im-table[id] tr th,
