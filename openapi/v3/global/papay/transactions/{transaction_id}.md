@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sp_appid {data-required} | string | 机构APPID
 | sub_appid | string | 子商户APPID
 | out_trade_no {data-required} | string | 商户订单号
-| id {data-required} | string | 微信支付订单号
+| transaction_id {data-required} | string | 微信支付订单号
 | attach | string | 商户数据
 | trade_type {data-required} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` \| `MICROPAY` 枚举值之一
 | bank_type {data-required} | string | 付款银行
