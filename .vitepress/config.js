@@ -182,6 +182,7 @@ export default defineConfig({
       '/openapi/v3/gov/subsidy': nationalConsumerGoodsSubsidySidebar(),
       '/openapi/v3/med-ins/': medicalInsuranceSidebar(),
       '/webhook/v3/MEDICAL_INSURANCE.SUCCESS': medicalInsuranceSidebar(),
+      '/openapi/v3/aggracct-bc/wb-channel': aggregatedAccountsForWeBankSidebar(),
     },
   },
 })
@@ -2407,6 +2408,23 @@ function medicalInsuranceSidebar() {
         ['查单(从业机构订单号)', '/openapi/v3/med-ins/orders/out-trade-no/{out_trade_no}'],
         ['医保退款通知', '/openapi/v3/med-ins/refunds/notify'],
         ['医保混合收款成功通知', '/webhook/v3/MEDICAL_INSURANCE.SUCCESS'],
+      ].map(transArrayItem),
+    },
+  ];
+}
+
+function aggregatedAccountsForWeBankSidebar() {
+  return [
+    {
+      text: '聚合账户银行渠道服务',
+      items: [
+        ['发起微众台账管控', '/openapi/v3/aggracct-bc/wb-channel/control-orders/punish'],
+        ['解除对微众台账的管控', '/openapi/v3/aggracct-bc/wb-channel/control-orders/recover'],
+        ['查询控制单', '/openapi/v3/aggracct-bc/wb-channel/control-orders/{out_request_no}'],
+        ['特殊减额', '/openapi/v3/aggracct-bc/wb-channel/special-reduction'],
+        ['查询特殊减额结果', '/openapi/v3/aggracct-bc/wb-channel/special-reduction/{out_request_no}'],
+        ['查询渠道额度', '/openapi/v3/aggracct-bc/wb-channel/account/balance'],
+        ['同步资料更新请求审核结果', '/openapi/v3/aggracct-bc/wb-channel/control-orders/info/update/result/notify'],
       ].map(transArrayItem),
     },
   ];
