@@ -176,6 +176,7 @@
   border-left: none;
   border-right: none;
   background-color: transparent;
+  text-align: center;
 }
 
 .im-table[id] tr th,

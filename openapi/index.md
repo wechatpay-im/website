@@ -14,7 +14,7 @@ next:
 ---
 
 | 业务标签 | 直连商户模式 | 合作伙伴模式
-| :----: | :------: | :--------:
+| --- | --- | ---
 | 沙箱环境v2 {rowspan=3} | [获取沙箱环境密钥](/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey) {colspan=2}
 | [沙箱付款码支付](/openapi/v2/xdc/apiv2sandbox/pay/micropay) {colspan=2}
 | [沙箱订单查询](/openapi/v2/xdc/apiv2sandbox/pay/orderquery) {colspan=2}
@@ -541,6 +541,10 @@ next:
 | | [查询超管变更申请单状态(申请单号)](/openapi/v3/mchalterapply/mchcontactalterapplyment/{apply_id})
 | | [查询超管变更申请单状态(业务单号)](/openapi/v3/mchalterapply/mchcontactalterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no})
 | | [撤销超管变更申请单](/openapi/v3/mchalterapply/mchcontactalterapplyment/{apply_id}/revoke)
+| 商户简称变更v3{rowspan=4} | | [提交商户简称变更申请单](/openapi/v3/mchalterapply/merchantnamealterapplyment)
+| | [查询商户简称变更申请单状态(申请单号)](/openapi/v3/mchalterapply/merchantnamealterapplyment/{apply_id})
+| | [查询商户简称变更申请单状态(业务单号)](/openapi/v3/mchalterapply/merchantnamealterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no})
+| | [撤销商户简称变更申请单](/openapi/v3/mchalterapply/merchantnamealterapplyment/{apply_id}/revoke)
 | 结算账户v3{rowspan=3} | | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
 | | [修改结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement)
 | | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})

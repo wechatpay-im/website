@@ -1471,6 +1471,16 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '商户简称变更',
+              collapsed: true,
+              items: [
+                ['提交商户简称变更申请单', '/openapi/v3/mchalterapply/merchantnamealterapplyment'],
+                ['查询申请单状态(申请单号)', '/openapi/v3/mchalterapply/merchantnamealterapplyment/{apply_id}'],
+                ['查询申请单状态(业务单号)', '/openapi/v3/mchalterapply/merchantnamealterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no}'],
+                ['撤销商户简称变更申请单', '/openapi/v3/mchalterapply/merchantnamealterapplyment/{apply_id}/revoke'],
+              ].map(transArrayItem),
+            },
+            {
               text: '商户风险管理',
               collapsed: true,
               items: [
