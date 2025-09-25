@@ -1,6 +1,6 @@
 ---
 title: 支付中签约
-description: 通过此接口在支付的同时完成扣费服务的签约
+description: 支付的同时完成代扣协议的签约。用户完成支付，微信通过支付中签约接口中商户上传的通知回调地址（对应参数：notify_url），将支付结果返回给商户，同时将签约结果通过contract_notify_url通知给商户，两次通知皆为异步通知。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -19,18 +19,19 @@ description: 通过此接口在支付的同时完成扣费服务的签约
 | body {data-required data-indent=1} | string | 商品描述
 | detail {data-indent=1} | string | 商品详情
 | attach {data-indent=1} | string | 附加数据
-| notify_url {data-required data-indent=1} | string | 回调通知ur
+| notify_url {data-required data-indent=1} | string | 回调通知url
 | total_fee {data-required data-indent=1} | integer | 总金额
 | spbill_create_ip {data-required data-indent=1} | string | 终端IP
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | goods_tag {data-indent=1} | string | 商品标记
-| trade_type {data-required data-indent=1} | string | 交易类型
+| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
 | product_id {data-indent=1} | string | 商品ID
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
 | plan_id {data-required data-indent=1} | integer | 模板id
 | contract_code {data-required data-indent=1} | string | 签约协议号
+| request_serial {data-required data-indent=1} | integer | 请求序列号
 | contract_display_account {data-required data-indent=1} | string | 用户账户展示名称
 | contract_notify_url {data-required data-indent=1} | string | 签约信息通知url
 
@@ -62,6 +63,7 @@ $instance->v2->pay->contractorder->postAsync([
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
+    'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
   ],
@@ -96,6 +98,7 @@ $instance->chain('v2/pay/contractorder')->postAsync([
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
+    'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
   ],
@@ -130,6 +133,7 @@ $instance['v2/pay/contractorder']->postAsync([
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
+    'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
   ],
@@ -164,6 +168,7 @@ $response = $instance->v2->pay->contractorder->post([
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
+    'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
   ],
@@ -195,6 +200,7 @@ $response = $instance->chain('v2/pay/contractorder')->post([
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
+    'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
   ],
@@ -226,6 +232,7 @@ $response = $instance['v2/pay/contractorder']->post([
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
+    'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
   ],
