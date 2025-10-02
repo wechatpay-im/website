@@ -2,7 +2,7 @@
 
 ## 创建支付分订单 {#post}
 
-用户申请使用服务时，商户可通过此接口申请创建微信支付分订单。
+当用户申请使用服务时，商户可通过此接口申请创建微信支付分订单，创单成功后，订单状态state为CREATED已创建。注意：该接口支持原参重入，相同参数重复调用可以返回成功。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
@@ -24,7 +24,7 @@
 | amount {data-indent=2} | integer | 优惠金额
 | count {data-indent=2} | integer | 优惠数量
 | risk_fund {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单风险金
-| name {data-required data-indent=2} | string | 风险金名称
+| name {data-required data-indent=2} | string | 风险金名称<br/>`DEPOSIT` \| `ADVANCE` \| `CASH_DEPOSIT` \| `ESTIMATE_ORDER_COST` 枚举值之一
 | amount {data-required data-indent=2} | integer | 风险金额
 | description {data-indent=2} | string | 风险说明
 | time_range {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务时间
