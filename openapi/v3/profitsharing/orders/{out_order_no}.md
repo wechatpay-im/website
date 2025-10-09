@@ -10,9 +10,9 @@ description: 发起分账请求后，可调用此接口查询分账结果
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | out_order_no {data-required} | string | 商户分账单号
-| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | sub_mchid {data-indent=1} | string | 子商户号
-| transaction_id {data-indent=1} | string | 微信订单号
+| transaction_id {data-required data-indent=1} | string | 微信订单号
 
 {.im-table #request}
 
@@ -101,14 +101,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | transaction_id {data-required} | string | 微信订单号
 | out_order_no {data-required} | string | 商户分账单号
 | order_id {data-required} | string | 微信分账单号
-| state {data-required} | string | 分账单状态
+| state {data-required} | string | 分账单状态<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 | receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | amount {data-required data-indent=1} | integer | 分账金额
 | description {data-required data-indent=1} | string | 分账描述
-| type {data-required data-indent=1} | string | 分账接收方类型
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方帐号
-| result {data-required data-indent=1} | string | 分账结果
-| fail_reason {data-required data-indent=1} | string | 分账失败原因
+| result {data-required data-indent=1} | string | 分账结果<br/>`ACCOUNT_ABNORMAL` \| `NO_RELATION` \| `RECEIVER_HIGH_RISK` \| `RECEIVER_REAL_NAME_NOT_VERIFIED` \| `NO_AUTH` \| `RECEIVER_RECEIPT_LIMIT` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
+| fail_reason {data-indent=1} | string | 分账失败原因
 | detail_id {data-indent=1} | string | 分账明细单号
 | create_time {data-required data-indent=1} | string | 分账创建时间
 | finish_time {data-required data-indent=1} | string | 分账完成时间

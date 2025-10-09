@@ -11,7 +11,7 @@ description: 商户需要核实回退结果，可调用此接口查询回退结�
 | --- | --- | ---
 | out_return_no {data-required} | string | 商户回退单号
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| sub_mchid {data-required data-indent=1} | string | 子商户号
+| sub_mchid {data-indent=1} | string | 子商户号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
 
 {.im-table #request}
@@ -105,8 +105,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_mchid {data-required} | string | 回退商户号
 | amount {data-required} | integer | 回退金额
 | description {data-required} | string | 回退描述
-| result {data-required} | string | 回退结果
-| fail_reason | string | 失败原因
+| result {data-required} | string | 回退结果<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` 枚举值之一
+| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `BALANCE_NOT_ENOUGH` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | create_time {data-required} | string | 创建时间
 | finish_time {data-required} | string | 完成时间
 

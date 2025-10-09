@@ -133,8 +133,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_mchid {data-required} | string | 回退商户号
 | amount {data-required} | integer | 回退金额
 | description {data-required} | string | 回退描述
-| result {data-required} | string | 回退结果
-| fail_reason | string | 失败原因
+| result {data-required} | string | 回退结果<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` 枚举值之一
+| fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `BALANCE_NOT_ENOUGH` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | create_time {data-required} | string | 创建时间
 | finish_time {data-required} | string | 完成时间
 
