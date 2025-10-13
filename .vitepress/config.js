@@ -785,6 +785,8 @@ function openapiSidebar() {
                 ['查询代金券详情', '/openapi/v3/marketing/favor/users/{openid}/coupons/{coupon_id}'],
                 ['下载批次核销明细', '/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow'],
                 ['下载批次退款明细', '/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow'],
+                ['获取核销明细下载链接', '/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow-by-day'],
+                ['获取退款明细下载链接', '/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow-by-day'],
               ].map(transArrayItem),
             },
             {

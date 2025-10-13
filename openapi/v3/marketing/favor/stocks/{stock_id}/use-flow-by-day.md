@@ -1,0 +1,97 @@
+---
+title: 获取批次核销明细下载链接
+description: 注意：1. 核销账单明细新增合单相关字段:【是否合单订单】【微信支付合单单号】【合单优惠 总金额】【合单订单总金额】；2. 账单明细设备号字段格式采用base64，消除历史乱码问题；3. 账单文件下载链接响应不包含微信接口响应的签名值，因此需要跳过验签的流程；
+---
+
+# {{ $frontmatter.title }} {#get}
+
+{{ $frontmatter.description }}
+
+| 请求参数 | 类型 {.type} | 描述 {.desc}
+| --- | --- | ---
+| stock_id {data-required} | string | 批次号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| bill_date {data-required data-indent=1} | string | 账单日期
+
+{.im-table #request}
+
+::: code-group
+
+```php [异步纯链式]
+$instance->v3->marketing->favor->stocks->_stock_id_->useFlowByDay->getAsync([
+  'stock_id' => '12356458',
+  'query' => [
+    'bill_date' => '2025-08-09',
+  ],
+])
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
+  print_r(json_decode((string) $response->getBody(), true));
+})
+->wait();
+```
+
+```php [异步声明式]
+$instance->chain('v3/marketing/favor/stocks/{stock_id}/use-flow-by-day')->getAsync([
+  'stock_id' => '12356458',
+  'query' => [
+    'bill_date' => '2025-08-09',
+  ],
+])
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
+  print_r(json_decode((string) $response->getBody(), true));
+})
+->wait();
+```
+
+```php [异步属性式]
+$instance['v3/marketing/favor/stocks/{stock_id}/use-flow-by-day']->getAsync([
+  'stock_id' => '12356458',
+  'query' => [
+    'bill_date' => '2025-08-09',
+  ],
+])
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
+  print_r(json_decode((string) $response->getBody(), true));
+})
+->wait();
+```
+
+```php [同步纯链式]
+$response = $instance->v3->marketing->favor->stocks->_stock_id_->useFlowByDay->get([
+  'stock_id' => '12356458',
+  'query' => [
+    'bill_date' => '2025-08-09',
+  ],
+]);
+print_r(json_decode((string) $response->getBody(), true));
+```
+
+```php [同步声明式]
+$response = $instance->chain('v3/marketing/favor/stocks/{stock_id}/use-flow-by-day')->get([
+  'stock_id' => '12356458',
+  'query' => [
+    'bill_date' => '2025-08-09',
+  ],
+]);
+print_r(json_decode((string) $response->getBody(), true));
+```
+
+```php [同步属性式]
+$response = $instance['v3/marketing/favor/stocks/{stock_id}/use-flow-by-day']->get([
+  'stock_id' => '12356458',
+  'query' => [
+    'bill_date' => '2025-08-09',
+  ],
+]);
+print_r(json_decode((string) $response->getBody(), true));
+```
+
+:::
+
+| 返回字典 | 类型 {.type} | 描述 {.desc}
+| --- | --- | ---
+| url {data-required} | string | 下载链接
+| stock_useflow_hash {data-required} | string | 账单文件摘要
+| stock_useflow_count {data-required} | string | 账单记录总条数
+
+{.im-table #response}

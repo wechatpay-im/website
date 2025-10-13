@@ -204,7 +204,7 @@ next:
 | [查询活动列表](/openapi/v3/marketing/membercard-activity/activities#get) {colspan=2}
 | [查询活动详情](/openapi/v3/marketing/membercard-activity/activities/{activity_id}) {colspan=2}
 | [终止活动](/openapi/v3/marketing/membercard-activity/activities/{activity_id}/terminate) {colspan=2}
-| 代金券v3{rowspan=16} | [设置消息通知地址](/openapi/v3/marketing/favor/callbacks#post) {colspan=2}
+| 代金券v3{rowspan=18} | [设置消息通知地址](/openapi/v3/marketing/favor/callbacks#post) {colspan=2}
 | [获取已设置的消息通知地址](/openapi/v3/marketing/favor/callbacks#get) {colspan=2}
 | [创建代金券批次](/openapi/v3/marketing/favor/coupon-stocks) {colspan=2}
 | [条件查询批次列表](/openapi/v3/marketing/favor/stocks) {colspan=2}
@@ -220,6 +220,8 @@ next:
 | [下载批次核销明细](/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow) {colspan=2}
 | [下载批次退款明细](/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow) {colspan=2}
 | [（营销）图片上传](/openapi/v3/marketing/favor/media/image-upload) {colspan=2}
+| [获取核销明细下载链接](/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow-by-day) {colspan=2}
+| [获取退款明细下载链接](/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow-by-day) {colspan=2}
 | 消费金v3{rowspan=4} | [发放指定批次的消费金](/openapi/v3/multiuse/users/{openid}/coupons)
 | [下载批次核销明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/use-flow)
 | [下载批次发放明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/send-flow)
