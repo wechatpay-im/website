@@ -200,6 +200,16 @@
 .im-table tbody tr td[rowspan]:first-child {
   cursor: default;
   white-space: nowrap;
+  position: relative;
+}
+
+.im-table tbody tr td[rowspan]:first-child::after {
+  content: attr(data-protocol);
+  position: absolute;
+  right: .25em;
+  top: .25em;
+  transform: scale(.65);
+  color: var(--vp-c-text-3);
 }
 
 .im-table tbody tr:nth-child(1n) td[rowspan]:first-child {

@@ -7,6 +7,13 @@ description: 注意：1. 核销账单明细新增合单相关字段:【是否合
 
 {{ $frontmatter.description }}
 
+::: warning :beginner: {.im-need-accessment}
+
+1. 账单后续会根据需求新增明细字段，接入需考虑做好兼容，否则可能导致账单不可用;
+2. 如需申请返回合单支付订单核销信息，请联系对应的微信支付行业运营经理;
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | stock_id {data-required} | string | 批次号
