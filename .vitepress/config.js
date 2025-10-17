@@ -702,10 +702,15 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
-              text: '摇优惠活动',
+              text: '品牌活动',
               collapsed: true,
               items: [
                 ['查询摇优惠活动列表', '/openapi/v3/brand/marketing/shake-activities/activities'],
+                ['设置投放计划回调地址', '/openapi/v3/marketing/partner/delivery-plan/{sp_mchid}/notify-url'],
+                ['创建投放计划', '/openapi/v3/marketing/partner/delivery-plan/delivery-plans'],
+                ['更新投放计划', '/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}'],
+                ['终止投放计划', '/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}/terminate'],
+                ['查询投放计划列表', '/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{brand_id}/delivery-plans'],
               ].map(transArrayItem),
             },
           ],
@@ -2574,6 +2579,7 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['商品券领券通知', '/webhook/v3/PRODUCT_COUPON_SP.SEND'],
+            ['投放计划状态变更通知', '/webhook/v3/DELIVERY_PLAN_STATE.DELIVER'],
           ].map(transArrayItem),
         },
         {

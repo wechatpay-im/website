@@ -169,7 +169,12 @@ next:
 | | [管理门店](/openapi/v3/brand/partner/store/brandstores/{store_id})
 | | [绑定收款商户号](/openapi/v3/brand/partner/store/brandstores/{store_id}/bindrecipient)
 | | [解绑收款商户号](/openapi/v3/brand/partner/store/brandstores/{store_id}/unbindrecipient)
-| 品牌活动 {data-protocol=v3 rowspan=1} | | [查询摇优惠活动列表](/openapi/v3/brand/marketing/shake-activities/activities)
+| 品牌活动 {data-protocol=v3 rowspan=6} | | [查询摇优惠活动列表](/openapi/v3/brand/marketing/shake-activities/activities)
+| | [设置投放计划回调地址](/openapi/v3/marketing/partner/delivery-plan/{sp_mchid}/notify-url)
+| | [创建投放计划](/openapi/v3/marketing/partner/delivery-plan/delivery-plans)
+| | [更新投放计划](/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{plan_id})
+| | [终止投放计划](/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}/terminate)
+| | [查询投放计划列表](/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{brand_id}/delivery-plans)
 | 账单 {data-protocol=v3 rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
