@@ -110,6 +110,9 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 | out_trade_no {data-required data-indent=5} | string | 商品单订单号
 | combine_payer_info {data-indent=4} | object {data-tooltip="对应PHP的Array"} | 支付者信息
 | openid {data-required data-indent=5} | string | 用户标识
+| installment_info {data-indent=4} | object {data-tooltip="对应PHP的array"} | 使用的商户贴息信息(微信分付)
+| use_subsidy {data-required data-indent=5} | boolean | 是否使用了商户贴息
+| selected_installment_number {data-required data-indent=5} | integer | 用户实际选择分期期数
 
 {.im-table #request}
 
@@ -128,6 +131,8 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 1. 跨境/全球会返回**exchange_rate**字典 {#GLOBAL}
 
 1. 平台收付通-个人收款场景会返回**individual_auth_id**字典 {#INDIVIDUAL}
+
+1. 微信分付-商户补贴-用户选择了贴息方案信息才会返回**installment_info**字典
 
 ::: code-group
 

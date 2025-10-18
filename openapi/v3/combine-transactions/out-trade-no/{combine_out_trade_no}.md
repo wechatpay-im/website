@@ -116,6 +116,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | combine_payer_info | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-required data-indent=1} | string | 用户标识
 | trade_scenario | string | 交易场景<br/>`RECOMMERCE` 枚举值
+| installment_info | object {data-tooltip="对应PHP的array"} | 使用的商户贴息信息(微信分付)
+| use_subsidy {data-required data-indent=1} | boolean | 是否使用了商户贴息
+| selected_installment_number {data-required data-indent=1} | integer | 用户实际选择分期期数
 
 {.im-table #response}
 

@@ -52,6 +52,12 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` 枚举值之一
 | number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
+| subsidy_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 贴息信息(微信分付)
+| subsidy_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 贴息详情列表
+| subsidy_period_type {data-required data-indent=3} | string | 贴息方案类型<br/>`DAILY` \| `PERIOD` 枚举值之一
+| subsidy_plan {data-required data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 贴息方案列表
+| subsidy_installment_num {data-required data-indent=4} | integer | 贴息期数<br/>`3` \| `6` \| `12` 枚举值之一
+| subsidy_percent {data-required data-indent=4} | integer | 贴息比例<br/>`0` \| `100` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -111,6 +117,15 @@ $instance->v3->pay->partner->transactions->jsapi->postAsync([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+    ],
+    'subsidy_info'   => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
     ],
   ],
   'headers' => [
@@ -176,6 +191,15 @@ $instance->chain('v3/pay/partner/transactions/jsapi')->postAsync([
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
     ],
+    'subsidy_info'   => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
+    ],
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -239,6 +263,15 @@ $instance['v3/pay/partner/transactions/jsapi']->postAsync([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+    ],
+    'subsidy_info'   => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
     ],
   ],
   'headers' => [
@@ -304,6 +337,15 @@ $response = $instance->v3->pay->partner->transactions->jsapi->post([
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
     ],
+    'subsidy_info'   => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
+    ],
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -365,6 +407,15 @@ $response = $instance->chain('v3/pay/partner/transactions/jsapi')->post([
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
     ],
+    'subsidy_info'   => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
+    ],
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -425,6 +476,15 @@ $response = $instance['v3/pay/partner/transactions/jsapi']->post([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+    ],
+    'subsidy_info'   => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
     ],
   ],
   'headers' => [

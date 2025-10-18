@@ -524,7 +524,8 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需转换上述�
 >
 > $nonceStr = Formatter::nonce();
 > $timeStamp = (string) Formatter::timestamp();
-> $package = 'prepay_id=' . $prepayId;
+> $extra = $usedWeixinCreditPaySubsidy ? "&subsidy_period_type=PERIOD&selected_installment_number={$num}" : ''; //微信分付(商户补贴)额外传参
+> $package = 'prepay_id=' . $prepayId . $exta;
 > $data = [
 >   'appId' => $appId,
 >   'timeStamp' => $timeStamp,
@@ -539,7 +540,7 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需转换上述�
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791857)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791857) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016196709) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016196818)
 
 > [!TIP] APP 唤起微信支付收银台场景
 > ```php
@@ -551,11 +552,12 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需转换上述�
 >
 > $noncestr = Formatter::nonce();
 > $timestamp = (string) Formatter::timestamp();
+> $extra = $usedWeixinCreditPaySubsidy ? "&subsidy_period_type=PERIOD&selected_installment_number={$num}" : ''; //微信分付(商户补贴)额外传参
 > $data = {
 >   'appid' => $appId,
 >   'partnerid' => $mchId,
 >   'prepayid' => $prepayId,
->   'package' => 'Sign=WXPay',
+>   'package' => 'Sign=WXPay' . $extra,
 >   'timestamp' => $timestamp,
 >   'noncestr' => $noncestr,
 >   'sign' => Rsa::sign( // [!code hl:4]
@@ -566,4 +568,4 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需转换上述�
 >
 > echo \json_encode($data);
 > ```
-> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013070351)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013070351) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016196709) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016196818)

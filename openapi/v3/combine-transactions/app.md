@@ -52,6 +52,12 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | plan_id {data-required data-indent=2} | number | 委托代扣协议模板ID
 | contract_display_account {data-required data-indent=2} | string | 用户账户展示名称
 | notify_url {data-required data-indent=2} | string | 回调通知地址
+| subsidy_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 贴息信息(微信分付)
+| subsidy_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 贴息详情列表
+| subsidy_period_type {data-required data-indent=3} | string | 贴息方案类型<br/>`DAILY` \| `PERIOD` 枚举值之一
+| subsidy_plan {data-required data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 贴息方案列表
+| subsidy_installment_num {data-required data-indent=4} | integer | 贴息期数<br/>`3` \| `6` \| `12` 枚举值之一
+| subsidy_percent {data-required data-indent=4} | integer | 贴息比例<br/>`0` \| `100` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -110,6 +116,15 @@ $instance->v3->combineTransactions->app->postAsync([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
+    ],
+    'subsidy_info'         => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
     ],
   ],
   'headers' => [
@@ -174,6 +189,15 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
     ],
+    'subsidy_info'         => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
+    ],
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -236,6 +260,15 @@ $instance['v3/combine-transactions/app']->postAsync([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
+    ],
+    'subsidy_info'         => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
     ],
   ],
   'headers' => [
@@ -300,6 +333,15 @@ $response = $instance->v3->combineTransactions->app->post([
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
     ],
+    'subsidy_info'         => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
+    ],
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -360,6 +402,15 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
     ],
+    'subsidy_info'         => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
+    ],
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -419,6 +470,15 @@ $response = $instance['v3/combine-transactions/app']->post([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
+    ],
+    'subsidy_info'         => [
+      'subsidy_detail' => [[
+        'subsidy_period_type' => 'PERIOD',
+        'subsidy_plan'        => [[
+          'subsidy_installment_num' => 3,
+          'subsidy_percent'         => 100,
+        ],],
+      ],],
     ],
   ],
   'headers' => [
