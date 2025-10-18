@@ -592,7 +592,8 @@ function openapiSidebar() {
               text: '直连商户模式',
               collapsed: true,
               items: [
-                ['支付方式前置曝光查询', '/openapi//v3/pay/transactions/exposure'],
+                ['支付方式前置曝光查询', '/openapi/v3/pay/transactions/exposure'],
+                ['获取曝光建议(商户贴息)', '/openapi/v3/pay/instal/exposure'],
               ].map(transArrayItem),
             },
             {
@@ -600,6 +601,7 @@ function openapiSidebar() {
               collapsed: true,
               items: [
                 ['支付方式前置曝光查询', '/openapi/v3/pay/partner/transactions/exposure'],
+                ['获取曝光建议(商户贴息)', '/openapi/v3/pay/instal/partner/exposure'],
               ].map(transArrayItem),
             },
           ],
