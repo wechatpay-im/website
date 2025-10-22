@@ -1059,6 +1059,8 @@ function openapiSidebar() {
                 ['解锁公益捐赠预算', '/openapi/v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unlock'],
                 ['发起公益捐赠付款', '/openapi/v3/fund-app/mch-transfer/partner/charity-transfer-bills'],
                 ['查询公益捐赠付款详情', '/openapi/v3/fund-app/mch-transfer/partner/charity-transfer-bills/out-transfer-no/{out_transfer_no}'],
+                ['申请出资预算的电子回单', '/openapi/v3/fund-app/mch-transfer/partner/budget/{out_budget_no}/electronic-receipts#post'],
+                ['查询出资预算的电子回单', '/openapi/v3/fund-app/mch-transfer/partner/budget/{out_budget_no}/electronic-receipts#get'],
               ].map(transArrayItem),
             },
           ],
