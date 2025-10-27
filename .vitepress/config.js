@@ -2257,7 +2257,7 @@ function bankTransferSidebar() {
 }
 
 function acquiringBankMixedSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'acquiringBankMixedSidebar';
   cache.has(key) || cache.set(key, [
     {
       items: [
@@ -2485,7 +2485,7 @@ function aggregatedAccountsForWeBankSidebar() {
 }
 
 function webhookSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'webhookSidebar';
   cache.has(key) || cache.set(key, [
     {
       text: 'XML格式报文',
