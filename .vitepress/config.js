@@ -3,6 +3,8 @@ import { defineConfig } from 'vitepress'
 const baseUri = 'https://wechatpay.im'
 const lastPathMdPattern = /(?:(?<=\/)index)?\.md$/
 
+const cache = new Map();
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'wechatpay.im',
@@ -193,7 +195,8 @@ export default defineConfig({
 function transArrayItem([text, link]) { return { text, link }; }
 
 function guideSidebar() {
-  return [
+  const key = 'guideSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: '指南',
       link: '/guide/',
@@ -212,11 +215,13 @@ function guideSidebar() {
       link: '/webhook/',
       items: [],
     },
-  ];
+  ]);
+  return cache.get(key);
 }
 
 function openapiSidebar() {
-  return [
+  const key = 'openapiSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: 'APIv2',
       collapsed: true,
@@ -2037,11 +2042,13 @@ function openapiSidebar() {
         ),
       ]
     },
-  ];
+  ]);
+  return cache.get(key);
 }
 
 function oauthIdentifierSidebar() {
-  return [
+  const key = 'oauthIdentifierSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2056,11 +2063,13 @@ function oauthIdentifierSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function depositSidebar() {
-  return [
+  const key = 'depositSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2079,11 +2088,13 @@ function depositSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function microMerchantMixedSidebar() {
-  return [
+  const key = 'microMerchantMixedSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2113,11 +2124,13 @@ function microMerchantMixedSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function acquiringBankMgrSidebar() {
-  return [
+  const key = 'acquiringBankMgrSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2149,11 +2162,13 @@ function acquiringBankMgrSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function ebikeInstitutionSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2171,11 +2186,13 @@ function ebikeInstitutionSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function offlineFacepaySidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         transArrayItem(['刷脸智能设备列表', '/openapi/v3/iotmanage/devices']),
@@ -2202,11 +2219,13 @@ function offlineFacepaySidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function bankTransferSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2233,11 +2252,13 @@ function bankTransferSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function acquiringBankMixedSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2296,11 +2317,13 @@ function acquiringBankMixedSidebar() {
         },
       ],
     }
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function personalCollectionsSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       items: [
         {
@@ -2334,11 +2357,13 @@ function personalCollectionsSidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function nationalConsumerGoodsSubsidySidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: '国家消费品换新补贴',
       collapsed: true,
@@ -2419,11 +2444,13 @@ function nationalConsumerGoodsSubsidySidebar() {
         },
       ],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
 
 function medicalInsuranceSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: '医保支付',
       items: [
@@ -2434,11 +2461,13 @@ function medicalInsuranceSidebar() {
         ['医保混合收款成功通知', '/webhook/v3/MEDICAL_INSURANCE.SUCCESS'],
       ].map(transArrayItem),
     },
-  ];
+  ]);
+  return cache.get(key);
 }
 
 function aggregatedAccountsForWeBankSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: '聚合账户银行渠道服务',
       items: [
@@ -2451,11 +2480,13 @@ function aggregatedAccountsForWeBankSidebar() {
         ['同步资料更新请求审核结果', '/openapi/v3/aggracct-bc/wb-channel/control-orders/info/update/result/notify'],
       ].map(transArrayItem),
     },
-  ];
+  ]);
+  return cache.get(key);
 }
 
 function webhookSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: 'XML格式报文',
       collapsed: true,
@@ -2756,11 +2787,13 @@ function webhookSidebar() {
         },
       ],
     },
-  ];
+  ]);
+  return cache.get(key);
 }
 
 function devkitSidebar() {
-  return [
+  const key = 'ebikeInstitutionSidebar';
+  cache.has(key) || cache.set(key, [
     {
       text: '核心代码包',
       link: '#core',
@@ -2779,5 +2812,6 @@ function devkitSidebar() {
       collapsed: false,
       items: [],
     },
-  ]
+  ]);
+  return cache.get(key);
 }
