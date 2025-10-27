@@ -2191,7 +2191,7 @@ function ebikeInstitutionSidebar() {
 }
 
 function offlineFacepaySidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'offlineFacepaySidebar';
   cache.has(key) || cache.set(key, [
     {
       items: [
@@ -2224,7 +2224,7 @@ function offlineFacepaySidebar() {
 }
 
 function bankTransferSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'bankTransferSidebar';
   cache.has(key) || cache.set(key, [
     {
       items: [
@@ -2322,7 +2322,7 @@ function acquiringBankMixedSidebar() {
 }
 
 function personalCollectionsSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'personalCollectionsSidebar';
   cache.has(key) || cache.set(key, [
     {
       items: [
@@ -2362,7 +2362,7 @@ function personalCollectionsSidebar() {
 }
 
 function nationalConsumerGoodsSubsidySidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'nationalConsumerGoodsSubsidySidebar';
   cache.has(key) || cache.set(key, [
     {
       text: '国家消费品换新补贴',
@@ -2449,7 +2449,7 @@ function nationalConsumerGoodsSubsidySidebar() {
 }
 
 function medicalInsuranceSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'medicalInsuranceSidebar';
   cache.has(key) || cache.set(key, [
     {
       text: '医保支付',
@@ -2466,7 +2466,7 @@ function medicalInsuranceSidebar() {
 }
 
 function aggregatedAccountsForWeBankSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'aggregatedAccountsForWeBankSidebar';
   cache.has(key) || cache.set(key, [
     {
       text: '聚合账户银行渠道服务',
@@ -2792,7 +2792,7 @@ function webhookSidebar() {
 }
 
 function devkitSidebar() {
-  const key = 'ebikeInstitutionSidebar';
+  const key = 'devkitSidebar';
   cache.has(key) || cache.set(key, [
     {
       text: '核心代码包',
