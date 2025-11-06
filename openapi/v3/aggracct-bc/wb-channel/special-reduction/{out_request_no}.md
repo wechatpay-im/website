@@ -130,3 +130,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | fail_reason | string | 失败原因<br/>`BALANCE_NOT_ENOUGH` \| `RECEIPT_NOT_EXIST_CLOSED` \| `TIME_OUT_CLOSED` 枚举值之一
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016061196)

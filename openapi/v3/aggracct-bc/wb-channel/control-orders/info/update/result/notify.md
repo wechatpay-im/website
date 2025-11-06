@@ -128,3 +128,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | ret_msg | string | 接口返回信息
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016080141)

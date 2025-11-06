@@ -1169,6 +1169,8 @@ function openapiSidebar() {
                 ['发起转账', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills'],
                 ['撤销转账', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
                 ['商户单号查询转账单', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/out-bill-no/{out_bill_no}'],
+                ['申请单笔转账电子回单', '/openapi/v3/fund-app/mch-transfer/partner/electronic-receipts'],
+                ['查询单笔转账电子回单', '/openapi/v3/fund-app/mch-transfer/partner/electronic-receipts/{out_bill_no}'],
               ].map(transArrayItem),
             },
             {
@@ -1495,7 +1497,7 @@ function openapiSidebar() {
               items: [
                 ['提交商户简称变更申请单', '/openapi/v3/mchalterapply/merchantnamealterapplyment'],
                 ['查询申请单状态(申请单号)', '/openapi/v3/mchalterapply/merchantnamealterapplyment/{apply_id}'],
-                ['查询申请单状态(业务单号)', '/openapi/v3/mchalterapply/merchantnamealterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no}'],
+                ['查询申请单状态(业务单号)', '/openapi/v3/mchalterapply/merchantnamealterapplyment/merchant/{sub_mchid}/out-request-no/{out_request_no}'],
                 ['撤销商户简称变更申请单', '/openapi/v3/mchalterapply/merchantnamealterapplyment/{apply_id}/revoke'],
               ].map(transArrayItem),
             },

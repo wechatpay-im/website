@@ -499,4 +499,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556944) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545465) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012758021) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707307) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760622) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015001933)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556944) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545465) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012758021) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707307) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760622) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015001933) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015973099)
