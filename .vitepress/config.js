@@ -2617,7 +2617,7 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['商品券领券通知', '/webhook/v3/PRODUCT_COUPON_SP.SEND'],
-            ['投放计划状态变更通知', '/webhook/v3/DELIVERY_PLAN_STATE.DELIVER'],
+            ['投放计划状态变更通知', '/webhook/v3/DELIVERY_PLAN.CHANGE'],
           ].map(transArrayItem),
         },
         {
