@@ -1335,6 +1335,15 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '自动还款',
+              collapsed: true,
+              items: [
+                ['APP预签约', '/openapi/v3/credit-repayment/partner/contracts/app-presign'],
+                ['查询协议', '/openapi/v3/credit-repayment/partner/contracts/{out_contract_code}'],
+                ['解除协议', '/openapi/v3/credit-repayment/partner/contracts/terminate'],
+              ].map(transArrayItem),
+            },
+            {
               text: '商家转账',
               collapsed: true,
               items: [
