@@ -864,6 +864,7 @@ function openapiSidebar() {
                 ['批次取消关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/disassociate-stores'],
                 ['向用户发放商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons#post'],
                 ['按券状态查询用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons#get'],
+                ['向用户预发放商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/pre-send-coupon'],
                 ['查询用户商品券详情', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}'],
                 ['确认发放用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/confirm'],
                 ['核销用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use'],

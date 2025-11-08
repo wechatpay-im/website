@@ -256,7 +256,7 @@ next:
 | [查询营销补差付款单详情](/openapi/v3/marketing/busifavor/subsidy/pay-receipts/{subsidy_receipt_id}) {colspan=2}
 | [营销补差回退](/openapi/v3/marketing/busifavor/subsidy/return-receipts) {colspan=2}
 | [查询营销补差回退单详情](/openapi/v3/marketing/busifavor/subsidy/return-receipts/{subsidy_return_receipt_id}) {colspan=2}
-| 商品券 {data-protocol=v3 rowspan=23} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
+| 商品券 {data-protocol=v3 rowspan=24} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
 | | [图片上传](/openapi/v3/marketing/partner/product-coupon/media/upload-image)
 | | [创建商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons)
 | | [修改商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}#patch)
@@ -274,6 +274,7 @@ next:
 | | [批次取消关联门店](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks/{stock_id}/disassociate-stores)
 | | [向用户发放商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons#post)
 | | [按券状态查询用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons#get)
+| | [向用户预发放商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/pre-send-coupon)
 | | [查询用户商品券详情](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code})
 | | [确认发放用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/confirm)
 | | [核销用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use)
