@@ -1,5 +1,5 @@
 ---
-title: Moved to /openapi/v3/mchalterapply/merchantnamealterapplyment/merchant/{sub_mchid}/out-request-no/{out_request_no}
+title: Moved to /openapi/v3/mchalterapply/merchantnamealterapplyment/merchant/%7Bsub_mchid%7D/out-request-no/%7Bout_request_no%7D
 head:
   - - meta
     - http-equiv: refresh
