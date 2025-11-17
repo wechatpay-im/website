@@ -175,6 +175,10 @@ next:
 | | [更新投放计划](/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{plan_id})
 | | [终止投放计划](/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}/terminate)
 | | [查询投放计划列表](/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{brand_id}/delivery-plans)
+| 品牌入驻 {data-protocol=v3 rowspan=4} | | [提交入驻申请](/openapi/v3/brand/applyments)
+| | [撤销入驻申请](/openapi/v3/brand/applyments/cancel-applyment)
+| | [查询申请状态(微信单号)](/openapi/v3/brand/applyments/applyment-id/{applyment_id})
+| | [查询申请状态(业务编号)](/openapi/v3/brand/applyments/business-code/{business_code})
 | 账单 {data-protocol=v3 rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)

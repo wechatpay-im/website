@@ -720,6 +720,16 @@ function openapiSidebar() {
                 ['查询投放计划列表', '/openapi/v3/marketing/partner/delivery-plan/delivery-plans/{brand_id}/delivery-plans'],
               ].map(transArrayItem),
             },
+            {
+              text: '品牌入驻',
+              collapsed: true,
+              items: [
+                ['提交入驻申请', '/openapi/v3/brand/applyments'],
+                ['撤销入驻申请', '/openapi/v3/brand/applyments/cancel-applyment'],
+                ['查询申请状态(微信单号)', '/openapi/v3/brand/applyments/applyment-id/{applyment_id}'],
+                ['查询申请状态(业务编号)', '/openapi/v3/brand/applyments/business-code/{business_code}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
