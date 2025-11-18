@@ -109,3 +109,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016588028)

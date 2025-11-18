@@ -1,3 +1,5 @@
+# 创建及列表查询品牌会员发券活动 {#mix}
+
 ## 创建品牌会员发券活动 {#post}
 
 通过此接口可以创建一个品牌会员发券活动，创建成功将获得活动ID。该接口需要配合品牌会员组件使用，创建活动的中的券，将会在品牌会员组件调用时展示。
@@ -181,6 +183,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016464918)
+
 ## 查询品牌会员发券活动列表 {#get}
 
 查询符合条件的品牌会员发券活动列表 接口限频：按服务商商户号维度 5次/秒
@@ -312,3 +316,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | total_count {data-required} | integer | 资源总条数
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016588039)

@@ -1,3 +1,5 @@
+# 修改及查询品牌会员发券活动信息 {#mix}
+
 ## 修改品牌会员发券活动信息 {#patch}
 
 修改品牌会员发券活动信息，包括活动标题、活动时间、活动库存等。接口限频：按服务商商户号维度 5次/秒
@@ -133,6 +135,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016588044)
+
 ## 查询品牌会员发券活动 {#get}
 
 通过此接口可查询指定品牌会员发券活动的信息。接口限频：按服务商商户号维度 5次/秒
@@ -239,3 +243,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016588015)
