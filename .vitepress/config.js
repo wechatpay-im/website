@@ -699,6 +699,17 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '发券活动',
+              collapsed: true,
+              items: [
+                ['创建活动', '/openapi/v3/brand/partner/card-member/membership-activities#post'],
+                ['查询活动列表', '/openapi/v3/brand/partner/card-member/membership-activities#get'],
+                ['修改活动信息', '/openapi/v3/brand/partner/card-member/membership-activities/{activity_id}#patch'],
+                ['查询活动详情', '/openapi/v3/brand/partner/card-member/membership-activities/{activity_id}#get'],
+                ['终止活动', '/openapi/v3/brand/partner/card-member/membership-activities/{activity_id}/terminate'],
+              ].map(transArrayItem),
+            },
+            {
               text: '品牌门店',
               collapsed: true,
               items: [
@@ -709,7 +720,7 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
-              text: '品牌活动',
+              text: '摇优惠活动',
               collapsed: true,
               items: [
                 ['查询摇优惠活动列表', '/openapi/v3/brand/marketing/shake-activities/activities'],
