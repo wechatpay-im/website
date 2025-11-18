@@ -184,6 +184,11 @@ next:
 | | [撤销入驻申请](/openapi/v3/brand/applyments/cancel-applyment)
 | | [查询申请状态(微信单号)](/openapi/v3/brand/applyments/applyment-id/{applyment_id})
 | | [查询申请状态(业务编号)](/openapi/v3/brand/applyments/business-code/{business_code})
+| 连接交易 {data-protocol=v3 rowspan=5} | | [添加规则申请](/openapi/v3/brand/card/card-links#post)
+| | [列表查询已生效规则](/openapi/v3/brand/card/card-links#get)
+| | [撤销规则配置申请](/openapi/v3/brand/card/card-links/cancel-applyment)
+| | [解除已生效规则](/openapi/v3/brand/card/card-links/unbind-card-link)
+| | [查询规则申请状态](/openapi/v3/brand/card/card-links/business-code/{business_code})
 | 账单 {data-protocol=v3 rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)

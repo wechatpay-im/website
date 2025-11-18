@@ -741,6 +741,17 @@ function openapiSidebar() {
                 ['查询申请状态(业务编号)', '/openapi/v3/brand/applyments/business-code/{business_code}'],
               ].map(transArrayItem),
             },
+            {
+              text: '连接交易',
+              collapsed: true,
+              items: [
+                ['添加规则申请', '/openapi/v3/brand/card/card-links#post'],
+                ['列表查询已生效规则', '/openapi/v3/brand/card/card-links#get'],
+                ['撤销规则配置申请', '/openapi/v3/brand/card/card-links/cancel-applyment'],
+                ['解除已生效规则', '/openapi/v3/brand/card/card-links/unbind-card-link'],
+                ['查询规则申请状态', '/openapi/v3/brand/card/card-links/business-code/{business_code}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
