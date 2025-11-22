@@ -265,7 +265,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015781296)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015781296) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016434633)
 
 ## 查询商品券 {#get}
 
@@ -395,4 +395,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015781292)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015781292) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016434632)
