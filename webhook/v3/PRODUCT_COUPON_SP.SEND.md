@@ -39,12 +39,16 @@ description: 用户商品券发放成功后，微信支付会将相关领券结�
 | coupon_code {data-required data-indent=3} | string | 用户券Code
 | product_coupon_id {data-required data-indent=3} | string | 商品券ID
 | stock_id {data-required data-indent=3} | string | 商品券批次ID
+| stock_bundle_id {data-indent=3} | string | 商品券批次组ID
+| user_coupon_bundle_id {data-indent=3} | string | 用户券组ID
 | appid {data-required data-indent=3} | string | 事件通知AppID
 | openid {data-required data-indent=3} | string | 用户OpenID
 | unionid {data-required data-indent=3} | string | 用户UnionID
 | receive_time {data-required data-indent=3} | string | 领券时间
 | send_request_no {data-required data-indent=3} | string | 发券请求单号
-| send_channel {data-required data-indent=3} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MERCHANT_CARD` \| `MEMBER` \| `SMALL_ACTIVITY` 枚举值之一
+| send_channel {data-required data-indent=3} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `RECEIVE_COMPONENT` 枚举值之一
+| valid_begin_time {data-required data-indent=3} | string | 有效期开始时间
+| valid_end_time {data-required data-indent=3} | string | 有效期结束时间
 | phone_number {data-indent=3} | string | 领券手机号。
 | country_code {data-indent=3} | string | 领券手机区号。
 | attach {data-indent=3} | string | 自定义附加信息
@@ -138,4 +142,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015780862)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4015780862) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016435717)
