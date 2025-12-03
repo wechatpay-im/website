@@ -270,7 +270,7 @@ next:
 | [查询营销补差付款单详情](/openapi/v3/marketing/busifavor/subsidy/pay-receipts/{subsidy_receipt_id}) {colspan=2}
 | [营销补差回退](/openapi/v3/marketing/busifavor/subsidy/return-receipts) {colspan=2}
 | [查询营销补差回退单详情](/openapi/v3/marketing/busifavor/subsidy/return-receipts/{subsidy_return_receipt_id}) {colspan=2}
-| 商品券 {data-protocol=v3 rowspan=24} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
+| 商品券 {data-protocol=v3 rowspan=31} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
 | | [图片上传](/openapi/v3/marketing/partner/product-coupon/media/upload-image)
 | | [创建商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons)
 | | [修改商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}#patch)
@@ -294,6 +294,13 @@ next:
 | | [核销用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use)
 | | [失效用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/deactivate)
 | | [退券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/return)
+| | [向用户发放批次组](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles)
+| | [失效用户商品券组](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles/{user_coupon_bundle_id}/deactivate)
+| | [添加商品券批次组](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles)
+| | [修改批次组基本信息](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id})
+| | [修改批次组发放预算](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/update-budget)
+| | [批次组批量关联门店](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/associate-stores)
+| | [批次组取消关联门店](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/disassociate-stores)
 | 委托营销 {data-protocol=v3 rowspan=3} | [查询合作关系列表](/openapi/v3/marketing/partnerships) {colspan=2}
 | [建立合作关系](/openapi/v3/marketing/partnerships/build) {colspan=2}
 | [终止合作关系](/openapi/v3/marketing/partnerships/terminate) {colspan=2}

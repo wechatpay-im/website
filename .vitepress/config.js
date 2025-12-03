@@ -902,6 +902,13 @@ function openapiSidebar() {
                 ['核销用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use'],
                 ['失效用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/deactivate'],
                 ['退券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/return'],
+                ['向用户发放批次组', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles'],
+                ['失效用户商品券组', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles/{user_coupon_bundle_id}/deactivate'],
+                ['添加商品券批次组', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles'],
+                ['修改批次组基本信息', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}'],
+                ['修改批次组发放预算', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/update-budget'],
+                ['批次组批量关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/associate-stores'],
+                ['批次组取消关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/disassociate-stores'],
               ].map(transArrayItem),
             },
             {
