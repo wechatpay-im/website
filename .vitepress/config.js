@@ -1021,6 +1021,7 @@ function openapiSidebar() {
                   ['检查子商户开票功能状态', '/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check-status'],
                   ['开具通用行业票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/issue-general'],
                   ['开具不动产租赁行业票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/real-estate-leasing'],
+                  ['开具成品油行业电子发票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/issue-refined-oil'],
                 ].map(transArrayItem),
               }, {
                 text: '区块链电子发票',

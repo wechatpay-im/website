@@ -359,11 +359,12 @@ next:
 | [下载发票文件](/openapi/v3/new-tax-control-fapiao/download) {colspan=2}
 | [上传电子发票文件](/openapi/v3/new-tax-control-fapiao/fapiao-applications/upload-fapiao-file) {colspan=2}
 | [将电子发票插入微信用户卡包](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/insert-cards) {colspan=2}
-| 电子发票<br/>腾讯数电发票模式 {data-protocol=v3 rowspan=5} | | [邀请子商户开通服务](/openapi/v3/new-tax-control-fapiao/fapiaomerchant/getspinviteurl)
+| 电子发票<br/>腾讯数电发票模式 {data-protocol=v3 rowspan=6} | | [邀请子商户开通服务](/openapi/v3/new-tax-control-fapiao/fapiaomerchant/getspinviteurl)
 | | [获取开通的子商户信息](/openapi/v3/new-tax-control-fapiao/fapiaomerchant/listspinvitemchinfo)
 | | [检查子商户开票功能状态](/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check-status)
 | | [开具通用行业电子发票](/openapi/v3/new-tax-control-fapiao/fapiao-applications/issue-general)
 | | [开具不动产租赁行业电子发票](/openapi/v3/new-tax-control-fapiao/fapiao-applications/real-estate-leasing)
+| | [开具成品油行业电子发票](/openapi/v3/new-tax-control-fapiao/fapiao-applications/issue-refined-oil)
 | 出租车电子发票 {data-protocol=v3 rowspan=11} | | [新增出租车公司](/openapi/v3/taxi-invoice/taxi-company/create-taxi-company)
 | | [获取出租车公司商户信息](/openapi/v3/taxi-invoice/taxi-companies/{company_mchid})
 | | [更新出租车信息](/openapi/v3/taxi-invoice/taxi/update-taxi)
