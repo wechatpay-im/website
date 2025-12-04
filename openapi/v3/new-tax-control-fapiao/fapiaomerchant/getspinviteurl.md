@@ -12,7 +12,7 @@ description: 服务商通过填写发票模式，发票开通能力等信息，�
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | operation_type {data-required data-indent=1} | string | 操作类型<br/>`AUTH_BINDING` 枚举值
 | fapiao_mode {data-required data-indent=1} | string | 开票模式<br/>`THIRD_OR_SELF_FAPIAO` \| `TENCENT_DIGITAL_TAX` 枚举值之一
-| fapiao_ability_type_list {data-indent=1} | string[] | 发票能力类型<br/>`BASE_ABILITY` \| `REAL_ESTATE_ABILITY` 枚举值之一
+| fapiao_ability_type_list {data-indent=1} | string[] | 发票能力类型<br/>`BASE_ABILITY` \| `REAL_ESTATE_ABILITY` \| `REFINED_OIL_ABILITY` 枚举值之一
 | invite_channel {data-indent=1} | string | 服务商邀请渠道
 | operate_user {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 操作人员
 | invite_code {data-required data-indent=1} | string | 服务商邀请code
