@@ -1330,6 +1330,8 @@ function openapiSidebar() {
                 ['查询提现结果(平台单号)', '/openapi/v3/ecommerce/fund/withdraw/{withdraw_id}'],
                 ['查询账户实时余额', '/openapi/v3/ecommerce/fund/balance/{sub_mchid}'],
                 ['查询账户日终余额', '/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid}'],
+                ['按日终余额预约提现', '/openapi/v3/platsolution/ecommerce/withdraw/day-end-balance-withdraw'],
+                ['查询日终余额提现状态', '/openapi/v3/platsolution/ecommerce/withdraw/day-end-balance-withdraw/out-request-no/{out_request_no}'],
                 ['申请资金账单', '/openapi/v3/ecommerce/bill/fundflowbill'],
               ].map(transArrayItem),
             },
