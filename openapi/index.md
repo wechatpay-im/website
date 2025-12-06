@@ -339,6 +339,12 @@ next:
 | [上传电子小票图片文件](/openapi/v3/marketing/shopping-receipt/shoppingreceipts) {colspan=2}
 | 小票打印 {data-protocol=v3 rowspan=2} | | [按小票机设备号打印订单](/openapi/v3/pay-devices/printers/{device_id}/print-orders)
 | | [按小票机打印单号查询订单](/openapi/v3/pay-devices/printers/{device_id}/print-orders/{print_order_no})
+| 码牌音箱 {data-protocol=v3 rowspan=6} | | [查询音箱绑定信息](/openapi/v3/pay-devices/open-scenario-speaker/{device_sn})
+| | [绑定音箱设备码牌](/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}/bind)
+| | [解绑音箱设备码牌](/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}/unbind)
+| | [预绑定音箱和码牌](/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}/prebind)
+| | [支付结果上报](/openapi/v3/pay-devices/open-scenario-speakerorder/{transaction_id}/report)
+| | [码牌交易回传](/openapi/v3/industry-rebate/transactions/{transaction_id})
 | 点金计划 {data-protocol=v3 rowspan=5} | | [点金计划管理](/openapi/v3/goldplan/merchants/changegoldplanstatus)
 | | [商家小票管理](/openapi/v3/goldplan/merchants/changecustompagestatus)
 | | [同业过滤标签管理](/openapi/v3/goldplan/merchants/set-advertising-industry-filter)
