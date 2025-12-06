@@ -1,6 +1,6 @@
 ---
 title: 使用医保自费混合订单号查看下单结果
-description: 从业机构使用混合下单订单号，通过该接口主动查询订单状态，完成下一步的业务逻辑。
+description: 商户使用混合下单订单号，通过该接口主动查询订单状态，完成下一步的业务逻辑。
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -10,8 +10,8 @@ description: 从业机构使用混合下单订单号，通过该接口主动查�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | mix_trade_no {data-required} | string | 医保自费混合订单号
-| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| sub_mchid {data-required data-indent=1} | string | 医疗机构的商户号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-indent=1} | string | 医疗机构的商户号
 
 {.im-table #request}
 
@@ -103,9 +103,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | mix_pay_type {data-required} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
 | order_type {data-required} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required} | string | 从业机构的公众号ID
-| sub_appid {data-required} | string | 医疗机构的公众号ID
-| sub_mchid {data-required} | string | 医疗机构的商户号
-| sub_openid {data-required} | string | 用户在医疗机构AppID下的唯一标识
+| sub_appid | string | 医疗机构的公众号ID
+| sub_mchid | string | 医疗机构的商户号
+| openid | string | 用户在appid下的唯一标识
+| sub_openid | string | 用户在医疗机构AppID下的唯一标识
 | pay_for_relatives | boolean | 是否代亲属支付
 | out_trade_no {data-required} | string | 从业机构订单号
 | serial_no {data-required} | string | 医疗机构订单号
@@ -142,4 +143,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012503155)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016781479) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012503155)

@@ -49,9 +49,10 @@ description: 当有医保混合收款成功后，微信后台会把相关确认�
 | mix_pay_type {data-required data-indent=3} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
 | order_type {data-indent=3} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required data-indent=3} | string | 从业机构的公众号ID
-| sub_appid {data-required data-indent=3} | string | 医疗机构的公众号ID
-| sub_mchid {data-required data-indent=3} | string | 医疗机构的商户号
-| sub_openid {data-required data-indent=3} | string | 用户在医疗机构AppID下的唯一标识
+| sub_appid {data-indent=3} | string | 医疗机构的公众号ID
+| sub_mchid {data-indent=3} | string | 医疗机构的商户号
+| openid {data-indent=3} | string | 用户在appid下的唯一标识
+| sub_openid {data-indent=3} | string | 用户在医疗机构AppID下的唯一标识
 | pay_for_relatives {data-indent=3} | boolean | 是否代亲属支付，不传默认替本人支付
 | out_trade_no {data-required data-indent=3} | string | 从业机构订单号
 | serial_no {data-indent=3} | string | 医疗机构订单号
@@ -166,4 +167,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012165722)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016781554) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012165722)

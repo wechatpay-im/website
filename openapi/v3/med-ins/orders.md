@@ -1,6 +1,6 @@
 ---
 title: 医保自费混合收款下单
-description: 从业机构调用该接口向微信医保后台下单
+description: 商户调用该接口向微信医保后台下单
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -13,9 +13,10 @@ description: 从业机构调用该接口向微信医保后台下单
 | mix_pay_type {data-required data-indent=1} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
 | order_type {data-required data-indent=1} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required data-indent=1} | string | 从业机构的公众号ID
-| sub_appid {data-required data-indent=1} | string | 医疗机构的公众号ID
-| sub_mchid {data-required data-indent=1} | string | 医疗机构的商户号
-| sub_openid {data-required data-indent=1} | string | 用户在医疗机构AppID下的唯一标识
+| sub_appid {data-indent=1} | string | 医疗机构的公众号ID
+| sub_mchid {data-indent=1} | string | 医疗机构的商户号
+| openid {data-indent=1} | string | 用户在appid下的唯一标识
+| sub_openid {data-indent=1} | string | 用户在医疗机构AppID下的唯一标识
 | payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付人身份信息
 | name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 真实姓名
 | id_digest {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 个人身份ID摘要
@@ -28,6 +29,7 @@ description: 从业机构调用该接口向微信医保后台下单
 | out_trade_no {data-required data-indent=1} | string | 从业机构订单号
 | serial_no {data-required data-indent=1} | string | 医疗机构订单号
 | pay_order_id {data-indent=1} | string | 医保局返回的支付单ID
+| pay_auth_no {data-indent=1} | string | 医保局返回的支付授权码
 | geo_location {data-indent=1} | string | 用户定位信息
 | city_id {data-required data-indent=1} | string | 城市ID
 | med_inst_name {data-required data-indent=1} | string | 医疗机构名称
@@ -71,6 +73,7 @@ $instance->v3->medIns->orders->postAsync([
     'appid'                       => 'wx8888888888888888',
     'sub_appid'                   => 'wxd678efh567hg6999',
     'sub_mchid'                   => '1900000109',
+    'openid'                      => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'payer'                       => [
       'name'      => '',
@@ -86,6 +89,7 @@ $instance->v3->medIns->orders->postAsync([
     'out_trade_no'                => '202204022005169952975171534816',
     'serial_no'                   => '1217752501201',
     'pay_order_id'                => 'ORD530100202204022006350000021',
+    'pay_auth_no'                 => 'AUTH530100202204022006310000034',
     'geo_location'                => '102.682296,25.054260',
     'city_id'                     => '530100',
     'med_inst_name'               => '北大医院',
@@ -135,6 +139,7 @@ $instance->chain('v3/med-ins/orders')->postAsync([
     'appid'                       => 'wx8888888888888888',
     'sub_appid'                   => 'wxd678efh567hg6999',
     'sub_mchid'                   => '1900000109',
+    'openid'                      => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'payer'                       => [
       'name'      => '',
@@ -150,6 +155,7 @@ $instance->chain('v3/med-ins/orders')->postAsync([
     'out_trade_no'                => '202204022005169952975171534816',
     'serial_no'                   => '1217752501201',
     'pay_order_id'                => 'ORD530100202204022006350000021',
+    'pay_auth_no'                 => 'AUTH530100202204022006310000034',
     'geo_location'                => '102.682296,25.054260',
     'city_id'                     => '530100',
     'med_inst_name'               => '北大医院',
@@ -199,6 +205,7 @@ $instance['v3/med-ins/orders']->postAsync([
     'appid'                       => 'wx8888888888888888',
     'sub_appid'                   => 'wxd678efh567hg6999',
     'sub_mchid'                   => '1900000109',
+    'openid'                      => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'payer'                       => [
       'name'      => '',
@@ -214,6 +221,7 @@ $instance['v3/med-ins/orders']->postAsync([
     'out_trade_no'                => '202204022005169952975171534816',
     'serial_no'                   => '1217752501201',
     'pay_order_id'                => 'ORD530100202204022006350000021',
+    'pay_auth_no'                 => 'AUTH530100202204022006310000034',
     'geo_location'                => '102.682296,25.054260',
     'city_id'                     => '530100',
     'med_inst_name'               => '北大医院',
@@ -263,6 +271,7 @@ $response = $instance->v3->medIns->orders->post([
     'appid'                       => 'wx8888888888888888',
     'sub_appid'                   => 'wxd678efh567hg6999',
     'sub_mchid'                   => '1900000109',
+    'openid'                      => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'payer'                       => [
       'name'      => '',
@@ -278,6 +287,7 @@ $response = $instance->v3->medIns->orders->post([
     'out_trade_no'                => '202204022005169952975171534816',
     'serial_no'                   => '1217752501201',
     'pay_order_id'                => 'ORD530100202204022006350000021',
+    'pay_auth_no'                 => 'AUTH530100202204022006310000034',
     'geo_location'                => '102.682296,25.054260',
     'city_id'                     => '530100',
     'med_inst_name'               => '北大医院',
@@ -324,6 +334,7 @@ $response = $instance->chain('v3/med-ins/orders')->post([
     'appid'                       => 'wx8888888888888888',
     'sub_appid'                   => 'wxd678efh567hg6999',
     'sub_mchid'                   => '1900000109',
+    'openid'                      => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'payer'                       => [
       'name'      => '',
@@ -339,6 +350,7 @@ $response = $instance->chain('v3/med-ins/orders')->post([
     'out_trade_no'                => '202204022005169952975171534816',
     'serial_no'                   => '1217752501201',
     'pay_order_id'                => 'ORD530100202204022006350000021',
+    'pay_auth_no'                 => 'AUTH530100202204022006310000034',
     'geo_location'                => '102.682296,25.054260',
     'city_id'                     => '530100',
     'med_inst_name'               => '北大医院',
@@ -385,6 +397,7 @@ $response = $instance['v3/med-ins/orders']->post([
     'appid'                       => 'wx8888888888888888',
     'sub_appid'                   => 'wxd678efh567hg6999',
     'sub_mchid'                   => '1900000109',
+    'openid'                      => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'sub_openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'payer'                       => [
       'name'      => '',
@@ -400,6 +413,7 @@ $response = $instance['v3/med-ins/orders']->post([
     'out_trade_no'                => '202204022005169952975171534816',
     'serial_no'                   => '1217752501201',
     'pay_order_id'                => 'ORD530100202204022006350000021',
+    'pay_auth_no'                 => 'AUTH530100202204022006310000034',
     'geo_location'                => '102.682296,25.054260',
     'city_id'                     => '530100',
     'med_inst_name'               => '北大医院',
@@ -455,9 +469,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | mix_pay_type {data-required} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
 | order_type {data-required} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required} | string | 从业机构的公众号ID
-| sub_appid {data-required} | string | 医疗机构的公众号ID
-| sub_mchid {data-required} | string | 医疗机构的商户号
-| sub_openid {data-required} | string | 用户在医疗机构AppID下的唯一标识
+| sub_appid | string | 医疗机构的公众号ID
+| sub_mchid | string | 医疗机构的商户号
+| openid | string | 用户在appid下的唯一标识
+| sub_openid | string | 用户在医疗机构AppID下的唯一标识
 | pay_for_relatives | boolean | 是否代亲属支付
 | out_trade_no {data-required} | string | 从业机构订单号
 | serial_no {data-required} | string | 医疗机构订单号
@@ -494,4 +509,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012503131)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016781466) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012503131)
