@@ -17,8 +17,20 @@ description: APP预签约
 | contract_notify_url {data-required data-indent=1} | string | 签约结果通知地址
 | repayment_day {data-required data-indent=1} | integer | 还款日
 | repayment_amount_limit {data-required data-indent=1} | string | 还款金额上限
-| sub_merchant_code {data-indent=1} | string | 子商户号
+| sub_mchid {data-indent=1} | string | 子商户号
 | sub_appid {data-indent=1} | string | 子商户AppID
+| real_identity {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户实名信息
+| identity_type {data-required data-indent=2} | string | 实名验证类型<br/>`REAL_IDENTITY_TYPE_INVALID` \| `REAL_IDENTITY_TYPE_ID_CARD` 枚举值之一
+| identity_id {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 自然人证件号码
+| real_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 自然人姓名
+| trade_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 交易信息
+| out_trade_no {data-required data-indent=2} | string | 商户侧交易单号
+| deduct_amount {data-required data-indent=2} | integer | 还款金额
+| description {data-indent=2} | string | 产品描述
+| attach {data-indent=2} | string | 商户数据包
+| notify_url {data-indent=2} | string | 商户回调地址
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -34,8 +46,23 @@ $instance->v3->creditRepayment->partner->contracts->appPresign->postAsync([
     'contract_notify_url'    => 'https://pay.weixin.qq.com',
     'repayment_day'          => 1,
     'repayment_amount_limit' => '10000',
-    'sub_merchant_code'      => 'example_sub_merchant_code',
+    'sub_mchid'              => '1000000109',
     'sub_appid'              => 'example_sub_appid',
+    'real_identity'          => [
+      'identity_type' => 'REAL_IDENTITY_TYPE_INVALID',
+      'identity_id'   => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
+      'real_name'     => 'OEimkKuua8igpd+0YDgqF2Z61leeGD7x87j3Ph==',
+    ],
+    'trade_info'             => [
+      'out_trade_no'  => '1217752501201407033233368018',
+      'deduct_amount' => 10000,
+      'description'   => '信贷还款',
+      'attach'        => '备注信息',
+      'notify_url'    => 'https://www.test.com',
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,8 +81,23 @@ $instance->chain('v3/credit-repayment/partner/contracts/app-presign')->postAsync
     'contract_notify_url'    => 'https://pay.weixin.qq.com',
     'repayment_day'          => 1,
     'repayment_amount_limit' => '10000',
-    'sub_merchant_code'      => 'example_sub_merchant_code',
+    'sub_mchid'              => '1000000109',
     'sub_appid'              => 'example_sub_appid',
+    'real_identity'          => [
+      'identity_type' => 'REAL_IDENTITY_TYPE_INVALID',
+      'identity_id'   => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
+      'real_name'     => 'OEimkKuua8igpd+0YDgqF2Z61leeGD7x87j3Ph==',
+    ],
+    'trade_info'             => [
+      'out_trade_no'  => '1217752501201407033233368018',
+      'deduct_amount' => 10000,
+      'description'   => '信贷还款',
+      'attach'        => '备注信息',
+      'notify_url'    => 'https://www.test.com',
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -74,8 +116,23 @@ $instance['v3/credit-repayment/partner/contracts/app-presign']->postAsync([
     'contract_notify_url'    => 'https://pay.weixin.qq.com',
     'repayment_day'          => 1,
     'repayment_amount_limit' => '10000',
-    'sub_merchant_code'      => 'example_sub_merchant_code',
+    'sub_mchid'              => '1000000109',
     'sub_appid'              => 'example_sub_appid',
+    'real_identity'          => [
+      'identity_type' => 'REAL_IDENTITY_TYPE_INVALID',
+      'identity_id'   => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
+      'real_name'     => 'OEimkKuua8igpd+0YDgqF2Z61leeGD7x87j3Ph==',
+    ],
+    'trade_info'             => [
+      'out_trade_no'  => '1217752501201407033233368018',
+      'deduct_amount' => 10000,
+      'description'   => '信贷还款',
+      'attach'        => '备注信息',
+      'notify_url'    => 'https://www.test.com',
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -94,8 +151,23 @@ $response = $instance->v3->creditRepayment->partner->contracts->appPresign->post
     'contract_notify_url'    => 'https://pay.weixin.qq.com',
     'repayment_day'          => 1,
     'repayment_amount_limit' => '10000',
-    'sub_merchant_code'      => 'example_sub_merchant_code',
+    'sub_mchid'              => '1000000109',
     'sub_appid'              => 'example_sub_appid',
+    'real_identity'          => [
+      'identity_type' => 'REAL_IDENTITY_TYPE_INVALID',
+      'identity_id'   => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
+      'real_name'     => 'OEimkKuua8igpd+0YDgqF2Z61leeGD7x87j3Ph==',
+    ],
+    'trade_info'             => [
+      'out_trade_no'  => '1217752501201407033233368018',
+      'deduct_amount' => 10000,
+      'description'   => '信贷还款',
+      'attach'        => '备注信息',
+      'notify_url'    => 'https://www.test.com',
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,8 +183,23 @@ $response = $instance->chain('v3/credit-repayment/partner/contracts/app-presign'
     'contract_notify_url'    => 'https://pay.weixin.qq.com',
     'repayment_day'          => 1,
     'repayment_amount_limit' => '10000',
-    'sub_merchant_code'      => 'example_sub_merchant_code',
+    'sub_mchid'              => '1000000109',
     'sub_appid'              => 'example_sub_appid',
+    'real_identity'          => [
+      'identity_type' => 'REAL_IDENTITY_TYPE_INVALID',
+      'identity_id'   => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
+      'real_name'     => 'OEimkKuua8igpd+0YDgqF2Z61leeGD7x87j3Ph==',
+    ],
+    'trade_info'             => [
+      'out_trade_no'  => '1217752501201407033233368018',
+      'deduct_amount' => 10000,
+      'description'   => '信贷还款',
+      'attach'        => '备注信息',
+      'notify_url'    => 'https://www.test.com',
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -128,8 +215,23 @@ $response = $instance['v3/credit-repayment/partner/contracts/app-presign']->post
     'contract_notify_url'    => 'https://pay.weixin.qq.com',
     'repayment_day'          => 1,
     'repayment_amount_limit' => '10000',
-    'sub_merchant_code'      => 'example_sub_merchant_code',
+    'sub_mchid'              => '1000000109',
     'sub_appid'              => 'example_sub_appid',
+    'real_identity'          => [
+      'identity_type' => 'REAL_IDENTITY_TYPE_INVALID',
+      'identity_id'   => '1axtI9EZUr0343c89xQznxau+cRWPKP4YhVAoj==',
+      'real_name'     => 'OEimkKuua8igpd+0YDgqF2Z61leeGD7x87j3Ph==',
+    ],
+    'trade_info'             => [
+      'out_trade_no'  => '1217752501201407033233368018',
+      'deduct_amount' => 10000,
+      'description'   => '信贷还款',
+      'attach'        => '备注信息',
+      'notify_url'    => 'https://www.test.com',
+    ],
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -42,7 +42,7 @@ description: 签约、解约成功后（包含用户主动解约），微信会�
 | plan_id {data-required data-indent=3} | number | 委托代扣协议模板ID
 | out_contract_code {data-required data-indent=3} | string | 商户侧的签约协议号，商户侧需保证唯一性。只能是数字、大小写字母的组合
 | contract_display_account {data-required data-indent=3} | string | 签约用户的名称，用于页面展示，在签约时由商户传入。
-| contract_state {data-required data-indent=3} | string | 委托代扣协议状态<br/>`SIGNED` \| `TERMINATED` 枚举值之一
+| contract_state {data-required data-indent=3} | string | 委托代扣协议状态<br/>`SIGNED` \| `TERMINATED` \| `SIGN_FAILED` \| `TO_BE_RENEWED` \| `TERMINATE_PENDING` 枚举值之一
 | contract_signed_time {data-required data-indent=3} | string | 协议签署时间
 | contract_expired_time {data-required data-indent=3} | string | 协议到期时间
 | openid {data-required data-indent=3} | string | 商户AppID下的用户唯一标识
@@ -158,4 +158,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012160323)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012160323) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016724543)

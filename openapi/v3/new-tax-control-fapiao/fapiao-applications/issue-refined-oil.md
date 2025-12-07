@@ -437,3 +437,5 @@ print_r($response->getStatusCode() === 202);
 | 空字符串(无返回内容) {align=center colspan=3}
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4016760559)

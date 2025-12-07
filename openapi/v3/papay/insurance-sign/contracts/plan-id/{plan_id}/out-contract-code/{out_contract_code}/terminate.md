@@ -103,11 +103,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | plan_id {data-required} | number | 委托代扣模板ID
 | out_contract_code {data-required} | string | 商户签约协议号
 | insured_display_name | string | 被保人姓名
-| contract_state {data-required} | string | 委托代扣协议状态
+| contract_state {data-required} | string | 委托代扣协议状态<br/>`SIGNED` \| `TERMINATED` \| `SIGN_FAILED` \| `TO_BE_RENEWED` \| `TERMINATE_PENDING` 枚举值之一
 | contract_signed_time | string | 协议签署时间
 | contract_expired_time | string | 协议到期时间
 | contract_terminate_info | object {data-tooltip="对应PHP的array"} | 协议解约信息
-| contract_termination_mode {data-required data-indent=1} | string | 协议解约方式
+| contract_termination_mode {data-required data-indent=1} | string | 协议解约方式<br/>`USER_TERMINATE` \| `MCH_API_TERMINATE` \| `WEPAY_WEB_TERMINATE` \| `CUSTOMER_SERVICE_TERMINATE` \| `SYSTEM_TERMINATE` 枚举值之一
 | contract_terminated_time {data-required data-indent=1} | string | 协议解约时间
 | contract_termination_remark {data-indent=1} | string | 解约备注
 | openid {data-required} | string | 用户OpenID
@@ -115,4 +115,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012472767)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012472767) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4016724542)
