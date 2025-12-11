@@ -71,6 +71,8 @@ next:
 | JSON {rowspan=3} | | [收付通充值成功通知](/webhook/v3/RECHARGE.SUCCESS)
 | | [收付通关闭充值通知](/webhook/v3/RECHARGE.CLOSED)
 | | [收付通充值资金退回通知](/webhook/v3/RECHARGE.FUND_RETURNED)
+| JSON {rowspan=2} | | [自动还款协议签约成功通知](/webhook/v3/CREDIT_REPAYMENT.SIGN_CONTRACT)
+| | [自动还款协议解约成功通知](/webhook/v3/CREDIT_REPAYMENT.TERMINATE_CONTRACT)
 | JSON {rowspan=2} | [产生新投诉通知](/webhook/v3/COMPLAINT.CREATE) {colspan=2}
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
 | JSON {rowspan=3} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}

@@ -1382,6 +1382,7 @@ function openapiSidebar() {
               collapsed: true,
               items: [
                 ['APP预签约', '/openapi/v3/credit-repayment/partner/contracts/app-presign'],
+                ['H5预签约', '/openapi/v3/credit-repayment/partner/contracts/h5-presign'],
                 ['查询协议', '/openapi/v3/credit-repayment/partner/contracts/{out_contract_code}'],
                 ['解除协议', '/openapi/v3/credit-repayment/partner/contracts/terminate'],
               ].map(transArrayItem),
@@ -2533,6 +2534,7 @@ function aggregatedAccountsForWeBankSidebar() {
         ['查询特殊减额结果', '/openapi/v3/aggracct-bc/wb-channel/special-reduction/{out_request_no}'],
         ['查询渠道额度', '/openapi/v3/aggracct-bc/wb-channel/account/balance'],
         ['同步资料更新请求审核结果', '/openapi/v3/aggracct-bc/wb-channel/control-orders/info/update/result/notify'],
+        ['查询商户资料', '/openapi/v3/aggracct-bc/wb-channel/account/mch_archives'],
       ].map(transArrayItem),
     },
   ]);
@@ -2634,6 +2636,13 @@ function webhookSidebar() {
                 ['充值成功通知', '/webhook/v3/RECHARGE.SUCCESS'],
                 ['关闭充值通知', '/webhook/v3/RECHARGE.CLOSED'],
                 ['充值资金退回通知', '/webhook/v3/RECHARGE.FUND_RETURNED'],
+              ].map(transArrayItem),
+            }, {
+              text: '自动还款',
+              collapsed: true,
+              items: [
+                ['协议签约成功通知', '/webhook/v3/CREDIT_REPAYMENT.SIGN_CONTRACT'],
+                ['协议解约成功通知', '/webhook/v3/CREDIT_REPAYMENT.TERMINATE_CONTRACT'],
               ].map(transArrayItem),
             }
           ],
