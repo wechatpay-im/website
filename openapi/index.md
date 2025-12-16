@@ -57,7 +57,7 @@ next:
 | [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo)
 | 付款到银行卡 {data-protocol=v2 rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
 | [发起付款](/openapi/v2/mmpaysptrans/pay_bank)
-| [查询付款](/openapi/v2/mmpaymkttransfers/query_bank)
+| [查询付款](/openapi/v2/mmpaysptrans/query_bank)
 | 企业微信 {data-protocol=v2 rowspan=4} | [向员工付款](/openapi/v2/mmpaymkttransfers/promotion/paywwsptrans2pocket)
 | [查询付款记录](/openapi/v2/mmpaymkttransfers/promotion/querywwsptrans2pocket)
 | [发放企业红包](/openapi/v2/mmpaymkttransfers/sendworkwxredpack)
