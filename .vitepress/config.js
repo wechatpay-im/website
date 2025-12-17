@@ -713,8 +713,11 @@ function openapiSidebar() {
               text: '品牌门店',
               collapsed: true,
               items: [
-                ['创建门店', '/openapi/v3/brand/partner/store/brandstores'],
+                ['创建门店', '/openapi/v3/brand/partner/store/brandstores#post'],
+                ['列表查询门店', '/openapi/v3/brand/partner/store/brandstores#get'],
                 ['管理门店', '/openapi/v3/brand/partner/store/brandstores/{store_id}'],
+                ['暂停营业', '/openapi/v3/brand/partner/store/brandstores/{store_id}/close'],
+                ['恢复营业', '/openapi/v3/brand/partner/store/brandstores/{store_id}/resume'],
                 ['绑定收款商户号', '/openapi/v3/brand/partner/store/brandstores/{store_id}/bindrecipient'],
                 ['解绑收款商户号', '/openapi/v3/brand/partner/store/brandstores/{store_id}/unbindrecipient'],
               ].map(transArrayItem),
