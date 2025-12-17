@@ -192,6 +192,11 @@ next:
 | | [撤销规则配置申请](/openapi/v3/brand/card/card-links/cancel-applyment)
 | | [解除已生效规则](/openapi/v3/brand/card/card-links/unbind-card-link)
 | | [查询规则申请状态](/openapi/v3/brand/card/card-links/business-code/{business_code})
+| 商家名片配置 {data-protocol=v3 rowspan=5} | | [提交商家名片配置申请](/openapi/v3/brand/card/card-configs#post)
+| | [查询商家名片配置申请状态](/openapi/v3/brand/card/card-configs#get)
+| | [发布商家名片配置](/openapi/v3/brand/card/card-configs/publish)
+| | [撤销商家名片配置申请](/openapi/v3/brand/card/card-configs/cancel-applyment)
+| | [获取商家名片预览二维码](/openapi/v3/brand/card/card-configs/preview-url)
 | 账单 {data-protocol=v3 rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)

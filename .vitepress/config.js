@@ -755,6 +755,17 @@ function openapiSidebar() {
                 ['查询规则申请状态', '/openapi/v3/brand/card/card-links/business-code/{business_code}'],
               ].map(transArrayItem),
             },
+            {
+              text: '商家名片配置',
+              collapsed: true,
+              items: [
+                ['提交商家名片配置申请', '/openapi/v3/brand/card/card-configs#post'],
+                ['查询商家名片配置申请状态', '/openapi/v3/brand/card/card-configs#get'],
+                ['发布商家名片配置', '/openapi/v3/brand/card/card-configs/publish'],
+                ['撤销商家名片配置申请', '/openapi/v3/brand/card/card-configs/cancel-applyment'],
+                ['获取商家名片预览二维码', '/openapi/v3/brand/card/card-configs/preview-url'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
