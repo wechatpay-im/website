@@ -148,7 +148,7 @@ next:
 | [商家明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no}/out-details/{out_detail_no})
 | [微信支付批次单号查询批次单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no})
 | [微信支付明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}/details/{detail_no})
-| 商家名片会员 {data-protocol=v3 rowspan=17} | | [创建会员卡模板](/openapi/v3/brand/partner/card-member/cards#post)
+| 商家名片会员 {data-protocol=v3 rowspan=18} | | [创建会员卡模板](/openapi/v3/brand/partner/card-member/cards#post)
 | | [查询会员卡模板列表](/openapi/v3/brand/partner/card-member/cards#get)
 | | [查询会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#get)
 | | [修改会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#patch)
@@ -165,6 +165,7 @@ next:
 | | [创建用户动态信息](/openapi/v3/brand/partner/card-member/user-feeds)
 | | [同步积分余额](/openapi/v3/brand/partner/card-member/user-points/sync)
 | | [同步积分兑券结果](/openapi/v3/brand/partner/card-member/user-points/exchange-coupon/confirm)
+| | [展示付款码组件预授权](/openapi/v3/brand/partner/card-member/pay-view-tokens)
 | 发券活动 {data-protocol=v3 rowspan=5} | | [创建活动](/openapi/v3/brand/partner/card-member/membership-activities#post)
 | | [查询活动列表](/openapi/v3/brand/partner/card-member/membership-activities#get)
 | | [修改活动信息](/openapi/v3/brand/partner/card-member/membership-activities/{activity_id}#patch)
@@ -278,7 +279,7 @@ next:
 | [查询营销补差付款单详情](/openapi/v3/marketing/busifavor/subsidy/pay-receipts/{subsidy_receipt_id}) {colspan=2}
 | [营销补差回退](/openapi/v3/marketing/busifavor/subsidy/return-receipts) {colspan=2}
 | [查询营销补差回退单详情](/openapi/v3/marketing/busifavor/subsidy/return-receipts/{subsidy_return_receipt_id}) {colspan=2}
-| 商品券 {data-protocol=v3 rowspan=31} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
+| 商品券 {data-protocol=v3 rowspan=32} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
 | | [图片上传](/openapi/v3/marketing/partner/product-coupon/media/upload-image)
 | | [创建商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons)
 | | [修改商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}#patch)
@@ -302,6 +303,7 @@ next:
 | | [核销用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use)
 | | [失效用户商品券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/deactivate)
 | | [退券](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/return)
+| | [向用户预发放批次组](/openapi/v3/marketing/partner/product-coupon/users/{openid}/pre-send-coupon-bundle)
 | | [向用户发放批次组](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles)
 | | [失效用户商品券组](/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles/{user_coupon_bundle_id}/deactivate)
 | | [添加商品券批次组](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles)

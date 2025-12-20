@@ -698,6 +698,7 @@ function openapiSidebar() {
                 ['创建用户动态信息', '/openapi/v3/brand/partner/card-member/user-feeds'],
                 ['同步积分余额', '/openapi/v3/brand/partner/card-member/user-points/sync'],
                 ['同步积分兑券结果', '/openapi/v3/brand/partner/card-member/user-points/exchange-coupon/confirm'],
+                ['展示付款码组件预授权', '/openapi/v3/brand/partner/card-member/pay-view-tokens'],
               ].map(transArrayItem),
             },
             {
@@ -918,6 +919,7 @@ function openapiSidebar() {
                 ['核销用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/use'],
                 ['失效用户商品券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/deactivate'],
                 ['退券', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_code}/return'],
+                ['向用户预发放批次组', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/pre-send-coupon-bundle'],
                 ['向用户发放批次组', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles'],
                 ['失效用户商品券组', '/openapi/v3/marketing/partner/product-coupon/users/{openid}/coupon-bundles/{user_coupon_bundle_id}/deactivate'],
                 ['添加商品券批次组', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles'],
