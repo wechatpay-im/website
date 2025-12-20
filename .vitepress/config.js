@@ -354,7 +354,6 @@ function openapiSidebar() {
                     ['公众号纯签约', '/openapi/v2/papay/entrustweb'],
                     ['H5纯签约', '/openapi/v2/papay/h5entrustweb'],
                     ['APP预签约', '/openapi/v2/papay/preentrustweb'],
-                    ['支付中签约', '/openapi/v2/pay/contractorder'],
                     ['查询签约关系', '/openapi/v2/papay/querycontract'],
                     ['申请扣款', '/openapi/v2/pay/pappayapply'],
                     ['查询订单', '/openapi/v2/pay/paporderquery'],
@@ -372,6 +371,9 @@ function openapiSidebar() {
                     ['查询订单', '/openapi/v2/pay/partner/paporderquery'],
                   ].map(transArrayItem),
                 },
+                transArrayItem(
+                  ['支付中签约', '/openapi/v2/pay/contractorder'],
+                ),
                 transArrayItem(
                   ['申请解约', '/openapi/v2/papay/deletecontract'],
                 )

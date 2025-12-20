@@ -12,6 +12,8 @@ description: 支付的同时完成代扣协议的签约。用户完成支付，�
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string | 请求appid
 | mch_id {data-required data-indent=1} | string | 商户号
+| sub_mch_id {data-indent=1} | string | 子商户号
+| sub_appid {data-indent=1} | string | 子商户公众账号ID
 | contract_mchid {data-required data-indent=1} | string | 签约商户号
 | contract_appid {data-required data-indent=1} | string | 签约appid
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
@@ -29,6 +31,7 @@ description: 支付的同时完成代扣协议的签约。用户完成支付，�
 | product_id {data-indent=1} | string | 商品ID
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识
+| sub_openid {data-indent=1} | string | 用户子标识
 | plan_id {data-required data-indent=1} | integer | 模板id
 | contract_code {data-required data-indent=1} | string | 签约协议号
 | request_serial {data-required data-indent=1} | integer | 请求序列号
@@ -44,6 +47,8 @@ $instance->v2->pay->contractorder->postAsync([
   'xml' => [
     'appid'                    => 'wxcbda96de0b165486',
     'mch_id'                   => '1200009811',
+    'sub_mch_id'               => '1900000100',
+    'sub_appid'                => 'wx8888888888888888',
     'contract_mchid'           => '1200009811',
     'contract_appid'           => 'wxcbda96de0b165486',
     'out_trade_no'             => '123456',
@@ -61,6 +66,7 @@ $instance->v2->pay->contractorder->postAsync([
     'product_id'               => '12235413214070356458058',
     'limit_pay'                => 'no_credit',
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
     'request_serial'           => '1695',
@@ -79,6 +85,8 @@ $instance->chain('v2/pay/contractorder')->postAsync([
   'xml' => [
     'appid'                    => 'wxcbda96de0b165486',
     'mch_id'                   => '1200009811',
+    'sub_mch_id'               => '1900000100',
+    'sub_appid'                => 'wx8888888888888888',
     'contract_mchid'           => '1200009811',
     'contract_appid'           => 'wxcbda96de0b165486',
     'out_trade_no'             => '123456',
@@ -96,6 +104,7 @@ $instance->chain('v2/pay/contractorder')->postAsync([
     'product_id'               => '12235413214070356458058',
     'limit_pay'                => 'no_credit',
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
     'request_serial'           => '1695',
@@ -114,6 +123,8 @@ $instance['v2/pay/contractorder']->postAsync([
   'xml' => [
     'appid'                    => 'wxcbda96de0b165486',
     'mch_id'                   => '1200009811',
+    'sub_mch_id'               => '1900000100',
+    'sub_appid'                => 'wx8888888888888888',
     'contract_mchid'           => '1200009811',
     'contract_appid'           => 'wxcbda96de0b165486',
     'out_trade_no'             => '123456',
@@ -131,6 +142,7 @@ $instance['v2/pay/contractorder']->postAsync([
     'product_id'               => '12235413214070356458058',
     'limit_pay'                => 'no_credit',
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
     'request_serial'           => '1695',
@@ -149,6 +161,8 @@ $response = $instance->v2->pay->contractorder->post([
   'xml' => [
     'appid'                    => 'wxcbda96de0b165486',
     'mch_id'                   => '1200009811',
+    'sub_mch_id'               => '1900000100',
+    'sub_appid'                => 'wx8888888888888888',
     'contract_mchid'           => '1200009811',
     'contract_appid'           => 'wxcbda96de0b165486',
     'out_trade_no'             => '123456',
@@ -166,6 +180,7 @@ $response = $instance->v2->pay->contractorder->post([
     'product_id'               => '12235413214070356458058',
     'limit_pay'                => 'no_credit',
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
     'request_serial'           => '1695',
@@ -181,6 +196,8 @@ $response = $instance->chain('v2/pay/contractorder')->post([
   'xml' => [
     'appid'                    => 'wxcbda96de0b165486',
     'mch_id'                   => '1200009811',
+    'sub_mch_id'               => '1900000100',
+    'sub_appid'                => 'wx8888888888888888',
     'contract_mchid'           => '1200009811',
     'contract_appid'           => 'wxcbda96de0b165486',
     'out_trade_no'             => '123456',
@@ -198,6 +215,7 @@ $response = $instance->chain('v2/pay/contractorder')->post([
     'product_id'               => '12235413214070356458058',
     'limit_pay'                => 'no_credit',
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
     'request_serial'           => '1695',
@@ -213,6 +231,8 @@ $response = $instance['v2/pay/contractorder']->post([
   'xml' => [
     'appid'                    => 'wxcbda96de0b165486',
     'mch_id'                   => '1200009811',
+    'sub_mch_id'               => '1900000100',
+    'sub_appid'                => 'wx8888888888888888',
     'contract_mchid'           => '1200009811',
     'contract_appid'           => 'wxcbda96de0b165486',
     'out_trade_no'             => '123456',
@@ -230,6 +250,7 @@ $response = $instance['v2/pay/contractorder']->post([
     'product_id'               => '12235413214070356458058',
     'limit_pay'                => 'no_credit',
     'openid'                   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    'sub_openid'               => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'plan_id'                  => '123',
     'contract_code'            => '100001256',
     'request_serial'           => '1695',
@@ -256,6 +277,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | contract_result_code {data-required} | string | 预签约结果
 | contract_err_code | string | 预签约错误代码
 | contract_err_code_des | string | 预签约错误描述
+| sub_mch_id | string | 子商户号
+| sub_appid | string | 子商户公众账号ID
 | prepay_id {data-required} | string | 预支付交易会话标识
 | trade_type {data-required} | string | 交易类型
 | code_url | string | 二维码链接
@@ -268,4 +291,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987320)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987320) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4016608528)

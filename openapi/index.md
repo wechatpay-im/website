@@ -65,9 +65,9 @@ next:
 | 扣款服务 {data-protocol=v2 rowspan=7} | [公众号纯签约](/openapi/v2/papay/entrustweb) | [公众号纯签约](/openapi/v2/papay/partner/entrustweb)
 | [H5纯签约](/openapi/v2/papay/h5entrustweb) | [H5纯签约](/openapi/v2/papay/partner/h5entrustweb)
 | [APP预签约](/openapi/v2/papay/preentrustweb) | [APP预签约](/openapi/v2/papay/partner/preentrustweb)
-| [支付中签约](/openapi/v2/pay/contractorder)
 | [查询签约关系](/openapi/v2/papay/querycontract) | [查询签约关系](/openapi/v2/papay/partner/querycontract)
 | [申请扣款](/openapi/v2/pay/pappayapply) | [申请扣款](/openapi/v2/pay/partner/pappayapply)
+| [支付中签约](/openapi/v2/pay/contractorder) {colspan=2}
 | [申请解约](/openapi/v2/papay/deletecontract) {colspan=2}
 | 酒店押金 {data-protocol=v2 rowspan=8} | [支付押金(付款码支付)](/openapi/v2/deposit/micropay) {colspan=2}
 | [支付押金(人脸支付)](/openapi/v2/deposit/facepay) {colspan=2}
