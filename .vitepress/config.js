@@ -107,16 +107,24 @@ export default defineConfig({
         activeMatch: '^/devkit/'
       },
       {
+        text: '开发工具箱',
+        link: 'https://www.devtools.cn/',
+        rel: 'opener',
+      },
+      {
         text: '开发者工具',
         link: 'https://tools.aifuwu.net/',
+        rel: 'opener',
       },
       {
         text: 'EasyWeChat',
         link: 'https://easywechat.com/',
+        rel: 'opener',
       },
       {
         text: 'NodeJS版',
         link: 'https://wechatpay.js.org/',
+        rel: 'opener',
       },
     ],
     socialLinks: [
