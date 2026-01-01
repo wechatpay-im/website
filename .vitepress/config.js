@@ -1411,6 +1411,10 @@ function openapiSidebar() {
                 ['H5预签约', '/openapi/v3/credit-repayment/partner/contracts/h5-presign'],
                 ['查询协议', '/openapi/v3/credit-repayment/partner/contracts/{out_contract_code}'],
                 ['解除协议', '/openapi/v3/credit-repayment/partner/contracts/terminate'],
+                ['预约还款', '/openapi/v3/credit-repayment/partner/schedule-records/batch-create'],
+                ['查询预约结果', '/openapi/v3/credit-repayment/partner/schedule-records/{out_record_id}'],
+                ['发起还款', '/openapi/v3/credit-repayment/partner/deduct-orders'],
+                ['查询还款结果', '/openapi/v3/credit-repayment/partner/deduct-orders/{out_trade_no}'],
               ].map(transArrayItem),
             },
             {
@@ -2669,6 +2673,7 @@ function webhookSidebar() {
               items: [
                 ['协议签约成功通知', '/webhook/v3/CREDIT_REPAYMENT.SIGN_CONTRACT'],
                 ['协议解约成功通知', '/webhook/v3/CREDIT_REPAYMENT.TERMINATE_CONTRACT'],
+                ['扣费还款成功通知', '/webhook/v3/CREDIT_REPAYMENT.DEDUCTION_PAY'],
               ].map(transArrayItem),
             }
           ],
