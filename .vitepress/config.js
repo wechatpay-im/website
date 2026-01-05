@@ -580,6 +580,7 @@ function openapiSidebar() {
               collapsed: true,
               items: [
                 ['JSAPI下单并授权', '/openapi/v3/pay/transactions/jsapi-with-contract'],
+                ['APP下单并签约', '/openapi/v3/pay/transactions/app-with-contract'],
                 ['小程序预签约', '/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/mini-program'],
                 ['支付后预签约', '/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/pay-redirect-sign'],
               ].map(transArrayItem),
@@ -589,6 +590,7 @@ function openapiSidebar() {
               collapsed: true,
               items: [
                 ['JSAPI下单并授权', '/openapi/v3/pay/partner/transactions/jsapi-with-contract'],
+                ['APP下单并签约', '/openapi/v3/pay/partner/transactions/app-with-contract'],
                 ['小程序预签约', '/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program'],
                 ['支付后预签约', '/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign'],
               ].map(transArrayItem),

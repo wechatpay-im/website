@@ -1,6 +1,6 @@
 ---
-title: JSAPI下单并授权/签约
-description: 商户系统先通过预签约生成token或者用户免密签约后，再调用该接口在微信支付服务后台生成预支付交易单，返回正确的预支付交易会话标识后再按JSAPI方式调起支付。
+title: APP下单并签约
+description: 调用该接口在微信支付服务后台生成预支付交易单，返回正确的预支付交易会话标识后再按APP方式调起支付。后续调起支付会引导用户签约。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -10,25 +10,18 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| sp_appid {data-required data-indent=1} | string | 服务商应用ID
-| sp_mchid {data-required data-indent=1} | string | 服务商户号
-| sub_appid {data-indent=1} | string | 子商户/二级商户应用ID
-| sub_mchid {data-required data-indent=1} | string | 子商户号/二级商户号
+| appid {data-required data-indent=1} | string | 公众号ID
+| mchid {data-required data-indent=1} | string | 直连商户号
 | description {data-required data-indent=1} | string | 商品描述
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | time_expire {data-indent=1} | string | 交易结束时间
 | attach {data-indent=1} | string | 附加数据
 | notify_url {data-required data-indent=1} | string | 通知地址
 | goods_tag {data-indent=1} | string | 订单优惠标记
-| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
-| profit_sharing {data-indent=2} | boolean | 是否指定分账
 | support_fapiao {data-indent=1} | boolean | 电子发票入口开放标识
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型
-| payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
-| sp_openid {data-indent=2} | string | 用户服务标识
-| sub_openid {data-indent=2} | string | 用户子标识
 | detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | number | 订单原价
 | invoice_id {data-indent=2} | string | 商品小票ID
@@ -46,15 +39,15 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 | name {data-indent=3} | string | 门店名称
 | area_code {data-indent=3} | string | 地区编码
 | address {data-indent=3} | string | 详细地址
+| settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
+| profit_sharing {data-indent=2} | boolean | 是否指定分账
 | contract_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约授权信息
-| password_free_contract_id {data-indent=2} | string | 免密协议ID
-| token {data-indent=2} | string | 扣费服务预授权token
-| plan_id {data-indent=2} | string | 模板ID
-| contract_mchid {data-indent=2} | string | 签约商户号
-| contract_appid {data-indent=2} | string | 签约AppID
-| contract_code {data-indent=2} | string | 签约协议号
-| request_serial {data-indent=2} | string | 请求序列号
-| contract_display_account {data-indent=2} | string | 用户账户展示名称
+| plan_id {data-required data-indent=2} | string | 模板ID
+| contract_mchid {data-required data-indent=2} | string | 签约商户号
+| contract_appid {data-required data-indent=2} | string | 签约AppID
+| contract_code {data-required data-indent=2} | string | 签约协议号
+| request_serial {data-required data-indent=2} | string | 请求序列号
+| contract_display_account {data-required data-indent=2} | string | 用户账户展示名称
 | contract_notify_url {data-indent=2} | string | 签约信息通知URL
 
 {.im-table #request}
@@ -62,29 +55,20 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
+$instance->v3->pay->transactions->appWithContract->postAsync([
   'json' => [
-    'sp_appid'       => 'wx8888888888888888',
-    'sp_mchid'       => '1230000109',
-    'sub_appid'      => 'wxd678efh567hg6999',
-    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
     'description'    => 'Image形象店-深圳腾大-QQ公仔',
     'out_trade_no'   => '1217752501201407033233368018',
     'time_expire'    => '2018-06-08T10:34:56+08:00',
-    'attach'         => '自定义数据',
+    'attach'         => '自定义数据说明',
     'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
     'goods_tag'      => 'WXG',
-    'settle_info'    => [
-      'profit_sharing' => true,
-    ],
     'support_fapiao' => true,
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -107,16 +91,17 @@ $instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ])
@@ -127,29 +112,20 @@ $instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
 ```
 
 ```php [异步声明式]
-$instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
+$instance->chain('v3/pay/transactions/app-with-contract')->postAsync([
   'json' => [
-    'sp_appid'       => 'wx8888888888888888',
-    'sp_mchid'       => '1230000109',
-    'sub_appid'      => 'wxd678efh567hg6999',
-    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
     'description'    => 'Image形象店-深圳腾大-QQ公仔',
     'out_trade_no'   => '1217752501201407033233368018',
     'time_expire'    => '2018-06-08T10:34:56+08:00',
-    'attach'         => '自定义数据',
+    'attach'         => '自定义数据说明',
     'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
     'goods_tag'      => 'WXG',
-    'settle_info'    => [
-      'profit_sharing' => true,
-    ],
     'support_fapiao' => true,
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -172,16 +148,17 @@ $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ])
@@ -192,29 +169,20 @@ $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
 ```
 
 ```php [异步属性式]
-$instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
+$instance['v3/pay/transactions/app-with-contract']->postAsync([
   'json' => [
-    'sp_appid'       => 'wx8888888888888888',
-    'sp_mchid'       => '1230000109',
-    'sub_appid'      => 'wxd678efh567hg6999',
-    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
     'description'    => 'Image形象店-深圳腾大-QQ公仔',
     'out_trade_no'   => '1217752501201407033233368018',
     'time_expire'    => '2018-06-08T10:34:56+08:00',
-    'attach'         => '自定义数据',
+    'attach'         => '自定义数据说明',
     'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
     'goods_tag'      => 'WXG',
-    'settle_info'    => [
-      'profit_sharing' => true,
-    ],
     'support_fapiao' => true,
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -237,16 +205,17 @@ $instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ])
@@ -257,29 +226,20 @@ $instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
 ```
 
 ```php [同步纯链式]
-$response = $instance->v3->pay->partner->transactions->jsapiWithContract->post([
+$response = $instance->v3->pay->transactions->appWithContract->post([
   'json' => [
-    'sp_appid'       => 'wx8888888888888888',
-    'sp_mchid'       => '1230000109',
-    'sub_appid'      => 'wxd678efh567hg6999',
-    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
     'description'    => 'Image形象店-深圳腾大-QQ公仔',
     'out_trade_no'   => '1217752501201407033233368018',
     'time_expire'    => '2018-06-08T10:34:56+08:00',
-    'attach'         => '自定义数据',
+    'attach'         => '自定义数据说明',
     'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
     'goods_tag'      => 'WXG',
-    'settle_info'    => [
-      'profit_sharing' => true,
-    ],
     'support_fapiao' => true,
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -302,16 +262,17 @@ $response = $instance->v3->pay->partner->transactions->jsapiWithContract->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ]);
@@ -319,29 +280,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->post([
+$response = $instance->chain('v3/pay/transactions/app-with-contract')->post([
   'json' => [
-    'sp_appid'       => 'wx8888888888888888',
-    'sp_mchid'       => '1230000109',
-    'sub_appid'      => 'wxd678efh567hg6999',
-    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
     'description'    => 'Image形象店-深圳腾大-QQ公仔',
     'out_trade_no'   => '1217752501201407033233368018',
     'time_expire'    => '2018-06-08T10:34:56+08:00',
-    'attach'         => '自定义数据',
+    'attach'         => '自定义数据说明',
     'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
     'goods_tag'      => 'WXG',
-    'settle_info'    => [
-      'profit_sharing' => true,
-    ],
     'support_fapiao' => true,
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -364,16 +316,17 @@ $response = $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')-
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ]);
@@ -381,29 +334,20 @@ print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$response = $instance['v3/pay/partner/transactions/jsapi-with-contract']->post([
+$response = $instance['v3/pay/transactions/app-with-contract']->post([
   'json' => [
-    'sp_appid'       => 'wx8888888888888888',
-    'sp_mchid'       => '1230000109',
-    'sub_appid'      => 'wxd678efh567hg6999',
-    'sub_mchid'      => '1900000109',
+    'appid'          => 'wxd678efh567hg6787',
+    'mchid'          => '1230000109',
     'description'    => 'Image形象店-深圳腾大-QQ公仔',
     'out_trade_no'   => '1217752501201407033233368018',
     'time_expire'    => '2018-06-08T10:34:56+08:00',
-    'attach'         => '自定义数据',
+    'attach'         => '自定义数据说明',
     'notify_url'     => 'https://www.weixin.qq.com/wxpay/pay.php',
     'goods_tag'      => 'WXG',
-    'settle_info'    => [
-      'profit_sharing' => true,
-    ],
     'support_fapiao' => true,
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -426,16 +370,17 @@ $response = $instance['v3/pay/partner/transactions/jsapi-with-contract']->post([
         'address'   => '广东省深圳市南山区科技中一道10000号',
       ],
     ],
+    'settle_info'    => [
+      'profit_sharing' => true,
+    ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ]);
@@ -450,4 +395,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012688481) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012526951) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017019937)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4017019923)

@@ -1,6 +1,6 @@
 ---
-title: JSAPI下单并授权/签约
-description: 商户系统先通过预签约生成token或者用户免密签约后，再调用该接口在微信支付服务后台生成预支付交易单，返回正确的预支付交易会话标识后再按JSAPI方式调起支付。
+title: APP下单并签约
+description: 调用该接口在微信支付服务后台生成预支付交易单，返回正确的预支付交易会话标识后再按APP方式调起支付。后续调起支付会引导用户签约。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -26,9 +26,6 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total {data-required data-indent=2} | number | 总金额
 | currency {data-indent=2} | string | 货币类型
-| payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
-| sp_openid {data-indent=2} | string | 用户服务标识
-| sub_openid {data-indent=2} | string | 用户子标识
 | detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 优惠功能
 | cost_price {data-indent=2} | number | 订单原价
 | invoice_id {data-indent=2} | string | 商品小票ID
@@ -47,14 +44,12 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 | area_code {data-indent=3} | string | 地区编码
 | address {data-indent=3} | string | 详细地址
 | contract_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约授权信息
-| password_free_contract_id {data-indent=2} | string | 免密协议ID
-| token {data-indent=2} | string | 扣费服务预授权token
-| plan_id {data-indent=2} | string | 模板ID
-| contract_mchid {data-indent=2} | string | 签约商户号
-| contract_appid {data-indent=2} | string | 签约AppID
-| contract_code {data-indent=2} | string | 签约协议号
-| request_serial {data-indent=2} | string | 请求序列号
-| contract_display_account {data-indent=2} | string | 用户账户展示名称
+| plan_id {data-required data-indent=2} | string | 模板ID
+| contract_mchid {data-required data-indent=2} | string | 签约商户号
+| contract_appid {data-required data-indent=2} | string | 签约AppID
+| contract_code {data-required data-indent=2} | string | 签约协议号
+| request_serial {data-required data-indent=2} | string | 请求序列号
+| contract_display_account {data-required data-indent=2} | string | 用户账户展示名称
 | contract_notify_url {data-indent=2} | string | 签约信息通知URL
 
 {.im-table #request}
@@ -62,7 +57,7 @@ description: 商户系统先通过预签约生成token或者用户免密签约�
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
+$instance->v3->pay->partner->transactions->appWithContract->postAsync([
   'json' => [
     'sp_appid'       => 'wx8888888888888888',
     'sp_mchid'       => '1230000109',
@@ -81,10 +76,6 @@ $instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -108,15 +99,13 @@ $instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
       ],
     ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ])
@@ -127,7 +116,7 @@ $instance->v3->pay->partner->transactions->jsapiWithContract->postAsync([
 ```
 
 ```php [异步声明式]
-$instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
+$instance->chain('v3/pay/partner/transactions/app-with-contract')->postAsync([
   'json' => [
     'sp_appid'       => 'wx8888888888888888',
     'sp_mchid'       => '1230000109',
@@ -146,10 +135,6 @@ $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -173,15 +158,13 @@ $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
       ],
     ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ])
@@ -192,7 +175,7 @@ $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->postAsync([
 ```
 
 ```php [异步属性式]
-$instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
+$instance['v3/pay/partner/transactions/app-with-contract']->postAsync([
   'json' => [
     'sp_appid'       => 'wx8888888888888888',
     'sp_mchid'       => '1230000109',
@@ -211,10 +194,6 @@ $instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -238,15 +217,13 @@ $instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
       ],
     ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ])
@@ -257,7 +234,7 @@ $instance['v3/pay/partner/transactions/jsapi-with-contract']->postAsync([
 ```
 
 ```php [同步纯链式]
-$response = $instance->v3->pay->partner->transactions->jsapiWithContract->post([
+$response = $instance->v3->pay->partner->transactions->appWithContract->post([
   'json' => [
     'sp_appid'       => 'wx8888888888888888',
     'sp_mchid'       => '1230000109',
@@ -276,10 +253,6 @@ $response = $instance->v3->pay->partner->transactions->jsapiWithContract->post([
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -303,15 +276,13 @@ $response = $instance->v3->pay->partner->transactions->jsapiWithContract->post([
       ],
     ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ]);
@@ -319,7 +290,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')->post([
+$response = $instance->chain('v3/pay/partner/transactions/app-with-contract')->post([
   'json' => [
     'sp_appid'       => 'wx8888888888888888',
     'sp_mchid'       => '1230000109',
@@ -338,10 +309,6 @@ $response = $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')-
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -365,15 +332,13 @@ $response = $instance->chain('v3/pay/partner/transactions/jsapi-with-contract')-
       ],
     ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ]);
@@ -381,7 +346,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$response = $instance['v3/pay/partner/transactions/jsapi-with-contract']->post([
+$response = $instance['v3/pay/partner/transactions/app-with-contract']->post([
   'json' => [
     'sp_appid'       => 'wx8888888888888888',
     'sp_mchid'       => '1230000109',
@@ -400,10 +365,6 @@ $response = $instance['v3/pay/partner/transactions/jsapi-with-contract']->post([
     'amount'         => [
       'total'    => 100,
       'currency' => 'CNY',
-    ],
-    'payer'          => [
-      'sp_openid'  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'detail'         => [
       'cost_price'   => 608800,
@@ -427,15 +388,13 @@ $response = $instance['v3/pay/partner/transactions/jsapi-with-contract']->post([
       ],
     ],
     'contract_info'  => [
-      'password_free_contract_id' => '201710180325670965',
-      'token'                     => '201710180325670965',
-      'plan_id'                   => '3484306348',
-      'contract_mchid'            => '1200009811',
-      'contract_appid'            => 'wxcbda96de0b165486',
-      'contract_code'             => '100001256',
-      'request_serial'            => '1695',
-      'contract_display_account'  => '123456',
-      'contract_notify_url'       => 'https://yoursite.com',
+      'plan_id'                  => '3484306348',
+      'contract_mchid'           => '1200009811',
+      'contract_appid'           => 'wxcbda96de0b165486',
+      'contract_code'            => '100001256',
+      'request_serial'           => '1695',
+      'contract_display_account' => '123456',
+      'contract_notify_url'      => 'https://yoursite.com',
     ],
   ],
 ]);
@@ -450,4 +409,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012688481) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012526951) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017019937)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017019941)

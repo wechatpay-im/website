@@ -114,7 +114,8 @@ next:
 | [合单Native下单](/openapi/v3/combine-transactions/native) {colspan=2}
 | [合单查单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}) {colspan=2}
 | [合单关单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close) {colspan=2}
-| 免密支付 {data-protocol=v3 rowspan=5} | [JSAPI下单并授权](/openapi/v3/pay/transactions/jsapi-with-contract) | [JSAPI下单并授权](/openapi/v3/pay/partner/transactions/jsapi-with-contract)
+| 免密支付 {data-protocol=v3 rowspan=6} | [JSAPI下单并授权](/openapi/v3/pay/transactions/jsapi-with-contract) | [JSAPI下单并授权](/openapi/v3/pay/partner/transactions/jsapi-with-contract)
+| [APP下单并签约](/openapi/v3/pay/transactions/app-with-contract) | [APP下单并签约](/openapi/v3/pay/partner/transactions/app-with-contract)
 | [小程序场景预签约](/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/mini-program) | [小程序场景预签约](/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program)
 | [支付后场景预签约](/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/pay-redirect-sign) | [支付后场景预签约](/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign)
 | [通过商户协议号查询协议](/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}) {colspan=2}
