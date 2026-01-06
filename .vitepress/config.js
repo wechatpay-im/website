@@ -1243,7 +1243,7 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
-              text: '用户授权自动收款',
+              text: '(直连商户)用户授权免确认',
               collapsed: true,
               items: [
                 ['发起转账并完成自动收授权', '/openapi/v3/fund-app/mch-transfer/transfer-bills/pre-transfer-with-authorization'],
@@ -1251,6 +1251,17 @@ function openapiSidebar() {
                 ['申请免确认收款授权', '/openapi/v3/fund-app/mch-transfer/user-confirm-authorization'],
                 ['商户单号查询自动收款授权', '/openapi/v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}'],
                 ['解除免确认收款授权', '/openapi/v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}/close'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '(合作伙伴)用户授权免确认',
+              collapsed: true,
+              items: [
+                ['发起转账并完成自动收授权', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/pre-transfer-with-authorization'],
+                ['转账(用户自动收款)', '/openapi/v3/fund-app/mch-transfer/partner/transfer-bills/transfer'],
+                ['申请免确认收款授权', '/openapi/v3/fund-app/mch-transfer/partner/user-confirm-authorizations'],
+                ['商户单号查询自动收款授权', '/openapi/v3/fund-app/mch-transfer/partner/user-confirm-authorizations/{out_authorization_no}'],
+                ['解除免确认收款授权', '/openapi/v3/fund-app/mch-transfer/partner/user-confirm-authorizations/{out_authorization_no}/close'],
               ].map(transArrayItem),
             },
             {
