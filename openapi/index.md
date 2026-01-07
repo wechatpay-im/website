@@ -586,7 +586,7 @@ next:
 | | [查询保险理赔结果(按商户赔付单号)](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/out-bill-no/{out_bill_no})
 | | [查询保险理赔结果(按微信支付赔付单号)](/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/bill-id/{bill_id})
 | 平台收付通<br/>赔付商家 {data-protocol=v3 rowspan=2} | | [请求赔付](/openapi/v3/platsolution/ecommerce/mch-transfer/sub-mch-compensation-bills)
-| | [查询赔付结果](/openapi/v3/platsolution/ecommerce/mch-transfer/sub-mch-compensation-bills/{out_bill_no)
+| | [查询赔付结果](/openapi/v3/platsolution/ecommerce/mch-transfer/sub-mch-compensation-bills/{out_bill_no})
 | 商户提现 {data-protocol=v3 rowspan=6} | | [合作伙伴预约提现](/openapi/v3/merchant/fund/withdraw)
 | | [查询预约提现状态(商户单号)](/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no})
 | | [查询预约提现状态(平台单号)](/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id})
