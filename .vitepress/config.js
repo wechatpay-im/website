@@ -1501,6 +1501,14 @@ function openapiSidebar() {
                 ['按微信单号查询理赔结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/insurance-claim-bills/bill-id/{bill_id}'],
               ].map(transArrayItem),
             },
+            {
+              text: '赔付商家',
+              collapsed: true,
+              items: [
+                ['请求赔付', '/openapi/v3/platsolution/ecommerce/mch-transfer/sub-mch-compensation-bills'],
+                ['查询赔付结果', '/openapi/v3/platsolution/ecommerce/mch-transfer/sub-mch-compensation-bills/{out_bill_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
