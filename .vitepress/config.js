@@ -1667,6 +1667,7 @@ function openapiSidebar() {
                 ['查询投诉单详情', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}'],
                 ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys'],
                 ['回复用户', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response'],
+                ['回复需要即时服务的投诉单', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response-immediate-service'],
                 ['反馈处理完成', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete'],
                 ['更新退款审批结果', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress'],
               ].map(transArrayItem),

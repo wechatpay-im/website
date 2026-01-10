@@ -106,6 +106,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | is_returned_to_same_machine {data-indent=2} | boolean | 是否归还同一柜机
 | in_platform_service | boolean | 是否在平台协助中
 | need_immediate_service | boolean | 是否需即时服务用户
+| is_agent_mode | boolean | 是否是智能体投诉
 
 {.im-table #response}
 

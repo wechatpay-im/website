@@ -649,7 +649,7 @@ next:
 | | [查询支持对公业务的银行列表](/openapi/v3/capital/capitallhh/banks/corporate-banking)
 | | [查询支持个人业务的银行列表](/openapi/v3/capital/capitallhh/banks/personal-banking)
 | | [获取对私银行卡号开户银行](/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account)
-| 消费者投诉 {data-protocol=v3 rowspan=16} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
+| 消费者投诉 {data-protocol=v3 rowspan=17} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
 | [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
 | [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
 | [删除投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#delete) {colspan=2}
@@ -657,6 +657,7 @@ next:
 | [查询投诉单详情](/openapi/v3/merchant-service/complaints-v2/{complaint_id}) {colspan=2}
 | [查询投诉单协商历史](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys) {colspan=2}
 | [回复用户](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response) {colspan=2}
+| [回复需要即时服务的投诉单](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response-immediate-service) {colspan=2}
 | [反馈处理完成](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete) {colspan=2}
 | [更新退款审批结果](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress) {colspan=2}
 | [上传商户反馈图片文件](/openapi/v3/merchant-service/images/upload) {colspan=2}
