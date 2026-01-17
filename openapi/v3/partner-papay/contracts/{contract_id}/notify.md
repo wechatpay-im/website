@@ -169,4 +169,4 @@ print_r($response->getStatusCode() === 204);
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/entrusted-payment/json/partner-deduct-notify.html)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011988373)

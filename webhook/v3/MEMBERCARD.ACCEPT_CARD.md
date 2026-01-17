@@ -37,12 +37,14 @@ description: 当会员卡批次或者用户的会员卡发生变化时，微信�
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
 | original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
-| event_type {data-required data-indent=3} | string | 事件类型<br/>`NEW_ACTIVATE` \| `RECOVER` 枚举值之一
+| event_type {data-required data-indent=3} | string | 事件类型<br/>`NEW_ACTIVATE` \| `RECOVER` \| `MEMBER_CARD_ACCEPT_BY_PHONE_NUMBER` 枚举值之一
 | card_id {data-required data-indent=3} | string | 会员卡ID
 | code {data-indent=3} | string | 会员卡code
 | event_time {data-required data-indent=3} | string | 激活时间
 | openid {data-required data-indent=3} | string | 用户标识
 | unionid {data-indent=3} | string | 用户统一标识
+| phone_number {data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密手机号
+| outer_str {data-indent=3} | string | 自定义场景值
 
 {.im-table #request}
 
@@ -132,4 +134,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012288215) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012163936)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012288215) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012163936) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4017166745)

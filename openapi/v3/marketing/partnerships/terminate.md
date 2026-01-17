@@ -29,16 +29,16 @@ $instance->v3->marketing->partnerships->terminate->postAsync([
   'json' => [
     'partner'         => [
       'type'        => 'APPID',
-      'appid'       => '',
-      'merchant_id' => '',
+      'appid'       => 'wx4e1916a585d1f4e9',
+      'merchant_id' => '2480029552',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id'      => '',
+      'stock_id'      => '2433405',
     ],
   ],
   'headers' => [
-    'Idempotency-Key' => '',
+    'Idempotency-Key' => '12345',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,16 +52,16 @@ $instance->chain('v3/marketing/partnerships/terminate')->postAsync([
   'json' => [
     'partner'         => [
       'type'        => 'APPID',
-      'appid'       => '',
-      'merchant_id' => '',
+      'appid'       => 'wx4e1916a585d1f4e9',
+      'merchant_id' => '2480029552',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id'      => '',
+      'stock_id'      => '2433405',
     ],
   ],
   'headers' => [
-    'Idempotency-Key' => '',
+    'Idempotency-Key' => '12345',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,16 +75,16 @@ $instance['v3/marketing/partnerships/terminate']->postAsync([
   'json' => [
     'partner'         => [
       'type'        => 'APPID',
-      'appid'       => '',
-      'merchant_id' => '',
+      'appid'       => 'wx4e1916a585d1f4e9',
+      'merchant_id' => '2480029552',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id'      => '',
+      'stock_id'      => '2433405',
     ],
   ],
   'headers' => [
-    'Idempotency-Key' => '',
+    'Idempotency-Key' => '12345',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -98,16 +98,16 @@ $response = $instance->v3->marketing->partnerships->terminate->post([
   'json' => [
     'partner'         => [
       'type'        => 'APPID',
-      'appid'       => '',
-      'merchant_id' => '',
+      'appid'       => 'wx4e1916a585d1f4e9',
+      'merchant_id' => '2480029552',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id'      => '',
+      'stock_id'      => '2433405',
     ],
   ],
   'headers' => [
-    'Idempotency-Key' => '',
+    'Idempotency-Key' => '12345',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -118,16 +118,16 @@ $response = $instance->chain('v3/marketing/partnerships/terminate')->post([
   'json' => [
     'partner'         => [
       'type'        => 'APPID',
-      'appid'       => '',
-      'merchant_id' => '',
+      'appid'       => 'wx4e1916a585d1f4e9',
+      'merchant_id' => '2480029552',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id'      => '',
+      'stock_id'      => '2433405',
     ],
   ],
   'headers' => [
-    'Idempotency-Key' => '',
+    'Idempotency-Key' => '12345',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -138,16 +138,16 @@ $response = $instance['v3/marketing/partnerships/terminate']->post([
   'json' => [
     'partner'         => [
       'type'        => 'APPID',
-      'appid'       => '',
-      'merchant_id' => '',
+      'appid'       => 'wx4e1916a585d1f4e9',
+      'merchant_id' => '2480029552',
     ],
     'authorized_data' => [
       'business_type' => 'FAVOR_STOCK',
-      'stock_id'      => '',
+      'stock_id'      => '2433405',
     ],
   ],
   'headers' => [
-    'Idempotency-Key' => '',
+    'Idempotency-Key' => '12345',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -161,4 +161,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/partnerships/chapter3_2.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4017164460) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017171868)

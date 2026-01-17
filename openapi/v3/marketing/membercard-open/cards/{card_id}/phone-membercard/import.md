@@ -11,9 +11,11 @@ description: 商户可通过加密后的用户手机号，将存量会员通过�
 | --- | --- | ---
 | card_id {data-required} | string | 会员卡ID
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| encrypted_phone_number {data-required data-indent=1} | string | 用户加密手机号
+| encrypted_phone_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 用户加密手机号
 | code {data-indent=1} | string | 会员卡code
 | out_request_no {data-required data-indent=1} | string | 商户请求单号
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -26,6 +28,9 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->phoneMembercard->imp
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
     'code'                   => '478515832665',
     'out_request_no'         => '100002322019090134234sfdf',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -42,6 +47,9 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/phone-membercard/
     'code'                   => '478515832665',
     'out_request_no'         => '100002322019090134234sfdf',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -56,6 +64,9 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/phone-membercard/import'
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
     'code'                   => '478515832665',
     'out_request_no'         => '100002322019090134234sfdf',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,6 +83,9 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->phoneMem
     'code'                   => '478515832665',
     'out_request_no'         => '100002322019090134234sfdf',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -84,6 +98,9 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/phone
     'code'                   => '478515832665',
     'out_request_no'         => '100002322019090134234sfdf',
   ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -95,6 +112,9 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/phone-member
     'encrypted_phone_number' => 'vvysDQeEaH3I+wRh14St0aaKSE2j4mAFON3kzNexb/SYkHZNJAuCittaW4wpGj7U+h9A==',
     'code'                   => '478515832665',
     'out_request_no'         => '100002322019090134234sfdf',
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

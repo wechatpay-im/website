@@ -145,7 +145,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_16.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4017147321) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017170057)
 
 ## 查询营销补差付款单列表 {#get}
 
@@ -258,4 +258,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_19.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4017147338) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017171346)

@@ -203,7 +203,7 @@ next:
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
 | [下载账单文件](/openapi/v3/billdownload/file) {colspan=2}
-| 会员卡 {data-protocol=v3 rowspan=30} | [设置回调地址](/openapi/v3/marketing/membercard-open/callback#patch) {colspan=2}
+| 会员卡 {data-protocol=v3 rowspan=34} | [设置回调地址](/openapi/v3/marketing/membercard-open/callback#patch) {colspan=2}
 | [查询回调地址](/openapi/v3/marketing/membercard-open/callback#get) {colspan=2}
 | [创建会员卡模板](/openapi/v3/marketing/membercard-open/cards#post) {colspan=2}
 | [查询会员卡模板列表](/openapi/v3/marketing/membercard-open/cards#get) {colspan=2}
@@ -229,6 +229,10 @@ next:
 | [设置会员权益](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/rights) {colspan=2}
 | [支付结果页展示会员积分](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/prepare) {colspan=2}
 | [设置支付后展示的积分到账](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/commit) {colspan=2}
+| [添加会员卡服务项](/openapi/v3/marketing/membercard-open/cards/{card_id}/service-modules) {colspan=2}
+| [修改会员卡服务项](/openapi/v3/marketing/membercard-open/cards/{card_id}/service-modules/{service_module_id}#patch) {colspan=2}
+| [移除会员卡服务项](/openapi/v3/marketing/membercard-open/cards/{card_id}/service-modules/{service_module_id}#delete) {colspan=2}
+| [设置会员服务项用户信息](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/set-service-module-data) {colspan=2}
 | [创建活动](/openapi/v3/marketing/membercard-activity/activities#post) {colspan=2}
 | [查询活动列表](/openapi/v3/marketing/membercard-activity/activities#get) {colspan=2}
 | [查询活动详情](/openapi/v3/marketing/membercard-activity/activities/{activity_id}) {colspan=2}

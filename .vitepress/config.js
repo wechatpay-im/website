@@ -822,6 +822,15 @@ function openapiSidebar() {
             ['支付结果页展示会员积分', '/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/prepare'],
             ['设置支付后展示的积分到账', '/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/commit'],
           ].map(transArrayItem).concat({
+            text: '会员卡服务项',
+            collapsed: true,
+            items: [
+              ['添加会员卡服务项', '/openapi/v3/marketing/membercard-open/cards/{card_id}/service-modules'],
+              ['修改会员卡服务项', '/openapi/v3/marketing/membercard-open/cards/{card_id}/service-modules/{service_module_id}#patch'],
+              ['移除会员卡服务项', '/openapi/v3/marketing/membercard-open/cards/{card_id}/service-modules/{service_module_id}#delete'],
+              ['设置会员服务项用户信息', '/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/set-service-module-data'],
+            ].map(transArrayItem),
+          }, {
             text: '会员有礼',
             collapsed: true,
             items: [
