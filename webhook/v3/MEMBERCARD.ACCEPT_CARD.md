@@ -31,11 +31,11 @@ description: 当会员卡批次或者用户的会员卡发生变化时，微信�
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | event_type {data-required data-indent=3} | string | 事件类型<br/>`NEW_ACTIVATE` \| `RECOVER` \| `MEMBER_CARD_ACCEPT_BY_PHONE_NUMBER` 枚举值之一
 | card_id {data-required data-indent=3} | string | 会员卡ID
@@ -43,7 +43,7 @@ description: 当会员卡批次或者用户的会员卡发生变化时，微信�
 | event_time {data-required data-indent=3} | string | 激活时间
 | openid {data-required data-indent=3} | string | 用户标识
 | unionid {data-indent=3} | string | 用户统一标识
-| phone_number {data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密手机号
+| phone_number {data-indent=3} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密手机号
 | outer_str {data-indent=3} | string | 自定义场景值
 
 {.im-table #request}
