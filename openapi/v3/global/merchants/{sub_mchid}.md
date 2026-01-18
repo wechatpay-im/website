@@ -129,6 +129,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | principal | object {data-tooltip="对应PHP的array"} | 负责人信息
 | name {data-indent=1} | string | 负责人姓名
 | number {data-indent=1} | string | 负责人证件号码
+| h5_payment | object {data-tooltip="对应PHP的array"} | H5支付权限详情
+| audit_reject_detail {data-indent=1} | string | H5驳回详情
+| h5_authorization_state {data-indent=1} | string | H5支付权限状态<br/>`APPROVED` \| `UNAUTHORIZED` \| `UNDER_REVIEW` \| `REJECTED` \| `UNDER_PUNISHMENT` \| `APPLICATION_FAILED` 枚举值之一
+| sub_merchant_state | object {data-tooltip="对应PHP的array"} | 子商户状态信息
+| sub_merchant_status {data-indent=1} | string | 子商户状态<br/>`OPERATING` \| `PENDING` \| `DEACTIVATED` \| `CLOSED` \| `INCOMPLETE_APPLICATION` 枚举值之一
+| application_status {data-indent=1} | string | 子商户入驻状态<br/>`INCOMPLETE_APPLICATION` \| `UNDER_REVIEW` \| `REJECTED` 枚举值之一
+| application_reject_detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 子商户入驻驳回详情
+| field {data-indent=2} | string | 驳回字段
+| reason {data-indent=2} | string | 驳回原因
+| attach | string | 附加信息
 
 {.im-table #response}
 

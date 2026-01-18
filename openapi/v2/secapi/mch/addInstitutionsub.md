@@ -49,6 +49,7 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | h5_domains {data-indent=1} | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | H5支付域名
 | {colspan=3 .im-table-line}
 | domain {data-required data-indent=2} | string[] | 域名列表
+| attach {data-indent=1} | string | 附加信息
 
 {.im-table #request}
 
@@ -99,6 +100,7 @@ $instance->v2->secapi->mch->_addinstitutionsub_->postAsync([
       'www.qq.com',
       'www.weixin.com',
     ]),
+    'attach'                          => '555588889999',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -152,6 +154,7 @@ $instance->chain('v2/secapi/mch/{addinstitutionsub}')->postAsync([
       'www.qq.com',
       'www.weixin.com',
     ]),
+    'attach'                          => '555588889999',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -205,6 +208,7 @@ $instance['v2/secapi/mch/{addinstitutionsub}']->postAsync([
       'www.qq.com',
       'www.weixin.com',
     ]),
+    'attach'                          => '555588889999',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -258,6 +262,7 @@ $response = $instance->v2->secapi->mch->_addinstitutionsub_->post([
       'www.qq.com',
       'www.weixin.com',
     ]),
+    'attach'                          => '555588889999',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -308,6 +313,7 @@ $response = $instance->chain('v2/secapi/mch/{addinstitutionsub}')->post([
       'www.qq.com',
       'www.weixin.com',
     ]),
+    'attach'                          => '555588889999',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -358,6 +364,7 @@ $response = $instance['v2/secapi/mch/{addinstitutionsub}']->post([
       'www.qq.com',
       'www.weixin.com',
     ]),
+    'attach'                          => '555588889999',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

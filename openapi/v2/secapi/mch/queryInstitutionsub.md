@@ -159,6 +159,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | reason {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 驳回原因列表
 | field {data-indent=2} | string | 字段
 | reason {data-indent=2} | string | 原因
+| attach | string | 附加信息
 
 {.im-table #response}
 

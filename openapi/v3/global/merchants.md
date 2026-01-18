@@ -49,6 +49,7 @@ description: 机构提交子商户资料，微信支付系统会为每个子商�
 | h5_payment_apply_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | H5申请资料
 | h5_website_url {data-required data-indent=2} | string | H5经营网址
 | domains {data-required data-indent=2} | string[] | 拉起H5支付的域名，不超过5个
+| attach {data-indent=1} | string | 附加信息
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Idempotency-Key {data-indent=1} | string | 由商户侧生成的唯一key，用来标识多次重试是否为同一请求
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
@@ -106,6 +107,7 @@ $instance->v3->global->merchants->postAsync([
       'h5_website_url' => 'https://qq.com',
       'domains'        => ['www.qq.com'],
     ],
+    'attach'                          => '555588889999',
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
@@ -167,6 +169,7 @@ $instance->chain('v3/global/merchants')->postAsync([
       'h5_website_url' => 'https://qq.com',
       'domains'        => ['www.qq.com'],
     ],
+    'attach'                          => '555588889999',
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
@@ -228,6 +231,7 @@ $instance['v3/global/merchants']->postAsync([
       'h5_website_url' => 'https://qq.com',
       'domains'        => ['www.qq.com'],
     ],
+    'attach'                          => '555588889999',
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
@@ -289,6 +293,7 @@ $response = $instance->v3->global->merchants->post([
       'h5_website_url' => 'https://qq.com',
       'domains'        => ['www.qq.com'],
     ],
+    'attach'                          => '555588889999',
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
@@ -347,6 +352,7 @@ $response = $instance->chain('v3/global/merchants')->post([
       'h5_website_url' => 'https://qq.com',
       'domains'        => ['www.qq.com'],
     ],
+    'attach'                          => '555588889999',
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
@@ -405,6 +411,7 @@ $response = $instance['v3/global/merchants']->post([
       'h5_website_url' => 'https://qq.com',
       'domains'        => ['www.qq.com'],
     ],
+    'attach'                          => '555588889999',
   ],
   'headers' => [
     'Idempotency-Key' => 'GzPCeo963zXKcO2hDVD8AjXIpgrj',
