@@ -29,8 +29,8 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | jump_url {data-indent=5} | string | 跳转链接
 | mini_program_jump_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=6} | string | 跳转小程序APPID
-| path {data-required data-indent=6} | string | 跳转小程序页面PATH
-| text {data-required data-indent=6} | string | 跳转小程序页面名称
+| path {data-indent=6} | string | 跳转小程序页面PATH
+| text {data-indent=6} | string | 跳转小程序页面名称
 | message_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=6} | string | 回复的消息内容
 | custom_data {data-indent=6} | string | 自定义透传字段
@@ -47,8 +47,8 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | jump_url {data-indent=6} | string | 跳转链接
 | mini_program_jump_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=7} | string | 跳转小程序APPID
-| path {data-required data-indent=7} | string | 跳转小程序页面PATH
-| text {data-required data-indent=7} | string | 跳转小程序页面名称
+| path {data-indent=7} | string | 跳转小程序页面PATH
+| text {data-indent=7} | string | 跳转小程序页面名称
 | message_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=7} | string | 回复的消息内容
 | custom_data {data-indent=7} | string | 自定义透传字段
@@ -60,8 +60,8 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | jump_url {data-indent=5} | string | 跳转链接
 | mini_program_jump_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=6} | string | 跳转小程序APPID
-| path {data-required data-indent=6} | string | 跳转小程序页面PATH
-| text {data-required data-indent=6} | string | 跳转小程序页面名称
+| path {data-indent=6} | string | 跳转小程序页面PATH
+| text {data-indent=6} | string | 跳转小程序页面名称
 | message_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=6} | string | 回复的消息内容
 | custom_data {data-indent=6} | string | 自定义透传字段
@@ -77,8 +77,8 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | jump_url {data-indent=6} | string | 跳转链接
 | mini_program_jump_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=7} | string | 跳转小程序APPID
-| path {data-required data-indent=7} | string | 跳转小程序页面PATH
-| text {data-required data-indent=7} | string | 跳转小程序页面名称
+| path {data-indent=7} | string | 跳转小程序页面PATH
+| text {data-indent=7} | string | 跳转小程序页面名称
 | message_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=7} | string | 回复的消息内容
 | custom_data {data-indent=7} | string | 自定义透传字段
