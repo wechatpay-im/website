@@ -61,6 +61,8 @@ Options:
 - `https://fraud.mch.weixin.qq.com/`
 - `https://payapp.mch.weixin.qq.com/`
 - `https://apihk.mch.weixin.qq.com/`
+- `https://apius.mch.weixin.qq.com/`
+- `https://apieu.mch.weixin.qq.com/`
 - `https://pay.wechatpay.cn/`
 
 本开发包在初始化阶段，内置了默认的接入点(**endpoint**)，在特殊接口，如[付款到银行卡获取加密敏感信息的RSA公钥](/openapi/v2/risk/getpublickey)，就需要显式声明所对应的接入点(**endpoint**)；
@@ -81,6 +83,35 @@ Options:
 6. 以 `v2` 开头的`segment`，其特殊标识为`APIv2`级联对象开始位，之后串接其他`segments`，如源 `pay/micropay` 即串接成 `v2->pay->micropay` 即以`XML`形式请求远端接口；
 
 [开放接口](/openapi/)包含了大量的使用示例代码，请按需参阅使用。
+
+### 海外接入点说明
+
+微信支付已经在全球各个区域部署了多个加速点及对应的访问域名，具体信息如下：
+
+| 域名 | 部署地址 | 对应 IP | 建议访问区域
+| --- | --- | --- | ---
+| apihk.mch.weixin.qq.com | 香港<br/>日本<br/>韩国<br/>新加坡<br/>北美-美国硅谷<br/>欧洲-法兰克福 | 43.153.249.93<br/>43.153.249.163<br/>43.133.89.171<br/>150.109.248.225<br/>124.156.236.113<br/>43.163.252.129<br/>43.154.252.25<br/>43.159.235.12<br/>43.130.30.190<br/>43.130.30.86<br/>43.131.7.109<br/>162.62.97.190 | 东亚<br/>东南亚<br/>中亚<br/>澳新<br/>中东
+| apius.mch.weixin.qq.com | 北美-美国硅谷 | 43.130.30.190<br/>43.130.30.86 | 北美洲<br/>南美洲
+| apieu.mch.weixin.qq.com | 欧洲-法兰克福 | 43.131.7.109<br/>162.62.97.190 | 欧洲<br/>非洲
+
+{.im-table}
+
+具体如何选择，可参考如下脚本做探测，介绍见[这里](https://pay.weixin.qq.com/doc/global/v3/zh/4017303715)。
+
+```shell:no-line-numbers
+domains=("api.mch.weixin.qq.com" "apihk.mch.weixin.qq.com" "apius.mch.weixin.qq.com" "apieu.mch.weixin.qq.com")
+
+for domain in "${domains[@]}"
+  do
+    echo $domain
+    for i in {1..1000}
+      do
+        curl -so /dev/null \
+          -w "DNS_lookup:%{time_namelookup}, TCP_handshake:%{time_connect}, SSL_handshake:%{time_appconnect}, TTFB:%{time_starttransfer}, Total:%{time_total}\n" \
+          "https://$domain/payitil/report"
+      done
+  done
+```
 
 ## SERVER 模式 {#server}
 
