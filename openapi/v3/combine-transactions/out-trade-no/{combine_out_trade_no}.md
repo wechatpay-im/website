@@ -76,7 +76,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | combine_transaction_id {data-required} | string | 交易单微信支付订单号
 | scene_info | object {data-tooltip="对应PHP的array"} | 场景信息
 | device_id {data-indent=1} | string | 商户端设备号
-| sub_orders | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| sub_orders | object[] {data-tooltip="对应PHP的array"} | 商品单信息
 | mchid {data-required data-indent=1} | string | 子单商户号
 | individual_auth_id {data-indent=1} | string | 商品单个人收款方受理授权ID
 | individual_name {data-indent=1} | string | 商品单个人收款方平台昵称
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | attach {data-indent=1} | string | 附加数据
 | success_time {data-indent=1} | string | 支付完成时间
 | transaction_id {data-indent=1} | string | 微信订单号
-| out_trade_no {data-required data-indent=1} | string | 子单商户订单号
+| out_trade_no {data-required data-indent=1} | string | 商品单商户订单号
 | sub_mchid {data-indent=1} | string | 二级商户号
 | sub_appid {data-indent=1} | string | 子商户应用ID
 | sub_openid {data-indent=1} | string | 用户子标识

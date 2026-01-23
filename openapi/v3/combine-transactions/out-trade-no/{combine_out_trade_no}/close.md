@@ -12,9 +12,9 @@ description: 合单支付订单只能使用此合单关单api完成关单。合�
 | combine_out_trade_no {data-required} | string | 合单商户订单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | combine_appid {data-required data-indent=1} | string | 合单商户appid
-| sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品单信息
 | mchid {data-required data-indent=2} | string | 子单商户号
-| out_trade_no {data-required data-indent=2} | string | 子单商户订单号
+| out_trade_no {data-required data-indent=2} | string | 商品单商户订单号
 | individual_auth_id {data-indent=2} | string | 商品单个人收款方受理授权ID
 | sub_mchid {data-indent=2} | string | 二级商户号
 | sub_appid {data-indent=2} | string | 子商户应用ID

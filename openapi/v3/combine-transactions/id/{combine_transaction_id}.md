@@ -78,11 +78,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | openid {data-indent=1} | string | 用户标识
 | scene_info | object {data-tooltip="对应PHP的array"} | 场景信息
 | device_id {data-indent=1} | string | 商户端设备号
-| sub_orders | object[] {data-tooltip="对应PHP的array"} | 商品单列表
+| sub_orders | object[] {data-tooltip="对应PHP的array"} | 商品单信息
 | mchid {data-required data-indent=1} | string | 商品单发起商户号
 | individual_auth_id {data-required data-indent=1} | string | 商品单个人收款方受理授权ID
 | individual_name {data-indent=1} | string | 商品单个人收款方平台昵称
-| out_trade_no {data-required data-indent=1} | string | 商品单订单号
+| out_trade_no {data-required data-indent=1} | string | 商品单商户订单号
 | transaction_id {data-indent=1} | string | 微信支付订单号
 | trade_type {data-indent=1} | string | 交易类型
 | trade_state {data-required data-indent=1} | string | 交易状态

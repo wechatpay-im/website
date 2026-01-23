@@ -16,13 +16,13 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
 | device_id {data-indent=2} | string | 商户端设备号
 | payer_client_ip {data-required data-indent=2} | string | 用户终端IP
-| sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 子单信息
+| sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品单信息
 | mchid {data-required data-indent=2} | string | 子单商户号
 | attach {data-required data-indent=2} | string | 附加数据
 | amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 订单金额
 | total_amount {data-required data-indent=3} | integer | 标价金额
 | currency {data-required data-indent=3} | string | 标价币种
-| out_trade_no {data-required data-indent=2} | string | 子单商户订单号
+| out_trade_no {data-required data-indent=2} | string | 商品单商户订单号
 | sub_mchid {data-required data-indent=2} | string | 二级商户号
 | detail {data-indent=2} | string | 商品详情
 | goods_tag {data-indent=2} | string | 订单优惠标记

@@ -22,7 +22,7 @@ description: 使用个人收款交易接口，可支持为个人收款方在微�
 | mchid {data-required data-indent=2} | string | 商品单发起商户号
 | individual_auth_id {data-required data-indent=2} | string | 商品单个人收款方受理授权ID
 | individual_name {data-indent=2} | string | 商品单个人收款方平台昵称
-| out_trade_no {data-required data-indent=2} | string | 商品单订单号
+| out_trade_no {data-required data-indent=2} | string | 商品单商户订单号
 | amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 商品单金额
 | total_amount {data-required data-indent=3} | number | 标价金额
 | currency {data-required data-indent=3} | string | 标价币种
