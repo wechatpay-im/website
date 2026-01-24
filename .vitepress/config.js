@@ -1752,6 +1752,17 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '微信保单服务',
+              collapsed: true,
+              items: [
+                ['提交保单授权信息', '/openapi/v3/inspolicymgr/deduct/authorizations'],
+                ['查询保单授权信息', '/openapi/v3/inspolicymgr/deduct/authorizations/{out_insurance_no}'],
+                ['上传保单', '/openapi/v3/inspolicymgr/deduct/policies'],
+                ['查询保单', '/openapi/v3/inspolicymgr/deduct/policies/{out_insurance_no}#get'],
+                ['更新保单', '/openapi/v3/inspolicymgr/deduct/policies/{out_insurance_no}#patch'],
+              ].map(transArrayItem),
+            },
+            {
               text: '鸿蒙委托代扣',
               collapsed: true,
               items: [
@@ -2809,6 +2820,12 @@ function webhookSidebar() {
               ['续期完成通知', '/webhook/v3/INSURANCE_ENTRUST.RENEW'],
               ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#INSURANCE_ENTRUST'],
               ['支付失败通知', '/webhook/v3/TRANSACTION.FAIL#INSURANCE_ENTRUST'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '微信保单服务',
+            collapsed: true,
+            items: [
+              ['用户授权成功通知', '/webhook/v3/INSURANCE_POLICY_MANAGEMENT.GRANTED'],
             ].map(transArrayItem),
           }).concat({
             text: '校园轻松付',

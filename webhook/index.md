@@ -84,6 +84,7 @@ next:
 | [保险商户委托代扣续期完成通知](/webhook/v3/INSURANCE_ENTRUST.RENEW)
 | [保险商户委托代扣成功支付通知](/webhook/v3/TRANSACTION.SUCCESS#INSURANCE_ENTRUST)
 | [保险商户委托代扣支付失败通知](/webhook/v3/TRANSACTION.FAIL#INSURANCE_ENTRUST)
+| JSON {rowspan=1} | [微信保单服务用户授权成功通知](/webhook/v3/INSURANCE_POLICY_MANAGEMENT.GRANTED)
 | JSON {rowspan=6} | | [校园轻松付用户签约成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY)
 | | [校园轻松付用户解约成功通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY)
 | | [校园轻松付订单支付成功通知](/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS)
