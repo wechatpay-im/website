@@ -33,6 +33,7 @@ description: 该方式适用于手机、平板电脑等使用H5浏览器的设�
 | sign {data-required data-indent=1} | string | 签名
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 | timestamp {data-required data-indent=1} | string | 时间戳
+| clientip {data-required data-indent=1} | string | 客户端 IP
 | return_appid {data-indent=1} | string | 回调应用appid
 
 {.im-table #request}
@@ -55,13 +56,6 @@ $params = [
   'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
-  'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'mobile'                   => '18933432355',
-  'email'                    => 'aobama@whitehouse.com',
-  'qq'                       => '100243',
-  'openid'                   => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'creid'                    => '110102199701011000',
-  'outerid'                  => 'user123',
   'return_appid'             => 'wxcbda96de0b165486',
 ];
 $params['sign'] = Hash::sign(
@@ -98,13 +92,6 @@ $params = [
   'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
-  'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'mobile'                   => '18933432355',
-  'email'                    => 'aobama@whitehouse.com',
-  'qq'                       => '100243',
-  'openid'                   => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'creid'                    => '110102199701011000',
-  'outerid'                  => 'user123',
   'return_appid'             => 'wxcbda96de0b165486',
 ];
 $params['sign'] = Hash::sign(
@@ -141,13 +128,6 @@ $params = [
   'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
-  'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'mobile'                   => '18933432355',
-  'email'                    => 'aobama@whitehouse.com',
-  'qq'                       => '100243',
-  'openid'                   => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'creid'                    => '110102199701011000',
-  'outerid'                  => 'user123',
   'return_appid'             => 'wxcbda96de0b165486',
 ];
 $params['sign'] = Hash::sign(
@@ -184,13 +164,6 @@ $params = [
   'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
-  'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'mobile'                   => '18933432355',
-  'email'                    => 'aobama@whitehouse.com',
-  'qq'                       => '100243',
-  'openid'                   => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'creid'                    => '110102199701011000',
-  'outerid'                  => 'user123',
   'return_appid'             => 'wxcbda96de0b165486',
 ];
 $params['sign'] = Hash::sign(
@@ -224,13 +197,6 @@ $params = [
   'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
-  'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'mobile'                   => '18933432355',
-  'email'                    => 'aobama@whitehouse.com',
-  'qq'                       => '100243',
-  'openid'                   => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'creid'                    => '110102199701011000',
-  'outerid'                  => 'user123',
   'return_appid'             => 'wxcbda96de0b165486',
 ];
 $params['sign'] = Hash::sign(
@@ -264,13 +230,6 @@ $params = [
   'sign_type'                => 'HMAC-SHA256',
   'timestamp'                => Formatter::timestamp(),
   'clientip'                 => '119.145.83.6',
-  'deviceid'                 => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'mobile'                   => '18933432355',
-  'email'                    => 'aobama@whitehouse.com',
-  'qq'                       => '100243',
-  'openid'                   => 'baf04e6bbbd06f7b1a197d18ed53b7f1',
-  'creid'                    => '110102199701011000',
-  'outerid'                  => 'user123',
   'return_appid'             => 'wxcbda96de0b165486',
 ];
 $params['sign'] = Hash::sign(
@@ -300,4 +259,4 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987295) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxpay_v2/papay/chapter3_4.shtml)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011987295)
