@@ -946,6 +946,8 @@ function openapiSidebar() {
                 ['修改批次组发放预算', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/update-budget'],
                 ['批次组批量关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/associate-stores'],
                 ['批次组取消关联门店', '/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/disassociate-stores'],
+                ['提交图片生成任务', '/openapi/v3/marketing/partner/product-coupon/image-generation-tasks'],
+                ['查询图片生成任务执行结果', '/openapi/v3/marketing/partner/product-coupon/image-generation-tasks/{task_id}'],
               ].map(transArrayItem),
             },
             {
@@ -2751,6 +2753,7 @@ function webhookSidebar() {
           collapsed: true,
           items: [
             ['商品券领券通知', '/webhook/v3/PRODUCT_COUPON_SP.SEND'],
+            ['商品券图片生成结果通知', '/webhook/v3/PRODUCT_COUPON_SP.IMAGE_GENERATION'],
             ['投放计划状态变更通知', '/webhook/v3/DELIVERY_PLAN.CHANGE'],
           ].map(transArrayItem),
         },

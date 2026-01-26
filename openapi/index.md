@@ -284,7 +284,7 @@ next:
 | [查询营销补差付款单详情](/openapi/v3/marketing/busifavor/subsidy/pay-receipts/{subsidy_receipt_id}) {colspan=2}
 | [营销补差回退](/openapi/v3/marketing/busifavor/subsidy/return-receipts) {colspan=2}
 | [查询营销补差回退单详情](/openapi/v3/marketing/busifavor/subsidy/return-receipts/{subsidy_return_receipt_id}) {colspan=2}
-| 商品券 {data-protocol=v3 rowspan=32} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
+| 商品券 {data-protocol=v3 rowspan=34} | | [管理商品券事件通知地址](/openapi/v3/marketing/partner/product-coupon/notify-configs)
 | | [图片上传](/openapi/v3/marketing/partner/product-coupon/media/upload-image)
 | | [创建商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons)
 | | [修改商品券](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}#patch)
@@ -316,6 +316,8 @@ next:
 | | [修改批次组发放预算](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/update-budget)
 | | [批次组批量关联门店](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/associate-stores)
 | | [批次组取消关联门店](/openapi/v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stock-bundles/{stock_bundle_id}/disassociate-stores)
+| | [提交图片生成任务](/openapi/v3/marketing/partner/product-coupon/image-generation-tasks)
+| | [查询图片生成任务执行结果](/openapi/v3/marketing/partner/product-coupon/image-generation-tasks/{task_id})
 | 委托营销 {data-protocol=v3 rowspan=3} | [查询合作关系列表](/openapi/v3/marketing/partnerships) {colspan=2}
 | [建立合作关系](/openapi/v3/marketing/partnerships/build) {colspan=2}
 | [终止合作关系](/openapi/v3/marketing/partnerships/terminate) {colspan=2}
