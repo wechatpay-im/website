@@ -49,7 +49,7 @@ description: 商户有在途异常资金时，可以发起在途异常资金付�
 | mchid {data-required data-indent=5} | string | 微信支付商户号
 | transfer_mode {data-required data-indent=4} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` 枚举值
 | success_time {data-required data-indent=4} | string | 入账成功时间
-| appid {data-required data-indent=4} | string[] | 商户AppID
+| instruction_instance_id {data-required data-indent=4} | string | 微信支付在途异常资金付款指令执行流水号
 
 {.im-table #request}
 

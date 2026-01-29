@@ -2481,6 +2481,7 @@ function personalCollectionsSidebar() {
             ['结算成功通知', '/webhook/v3/SETTLEMENT.SUCCESS'],
             ['申请异常结算批次单处理', '/openapi/v3/platsolution/ecommerce/settle/prepay-settle-orders/{settle_batch_no}/apply-abnormal-settle'],
             ['发起在途异常资金付款指令', '/openapi/v3/abnormal-fund-processing/receipts/{receipt_id}/transfer-instructions'],
+            ['查询在途异资付指令执行结果', '/openapi/v3/abnormal-fund-processing/receipts/{receipt_id}/transfer-instructions/{out_instruction_no}'],
             ['查询在途异常资金付款结果', '/openapi/v3/abnormal-fund-processing/receipts/{receipt_id}'],
             ['异常转付处理结果回调通知', '/webhook/v3/ABNORMAL_FUND_PROCESSING.TRANSFER.SUCCESS'],
           ].map(transArrayItem),
