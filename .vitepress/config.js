@@ -894,6 +894,7 @@ function openapiSidebar() {
                 ['修改商家券基本信息', '/openapi/v3/marketing/busifavor/stocks/{stock_id}#patch'],
                 ['修改批次预算', '/openapi/v3/marketing/busifavor/stocks/{stock_id}/budget'],
                 ['向用户发券', '/openapi/v3/marketing/busifavor/coupons/send'],
+                ['向用户预发商品券', '/openapi/v3/marketing/busifavor/product-coupons/pre-send'],
                 ['向用户发商品券', '/openapi/v3/marketing/busifavor/product-coupons/send'],
                 ['使券失效', '/openapi/v3/marketing/busifavor/coupons/deactivate'],
                 ['申请退券', '/openapi/v3/marketing/busifavor/coupons/return'],
