@@ -9,7 +9,7 @@ description: 获得品牌已授权且在生效中的产品权限信息
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id {data-required} | string | 品牌名称
+| brand_id {data-required} | string | 品牌ID
 
 {.im-table #request}
 
@@ -76,3 +76,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | update_time {data-required} | string | 更新时间
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4017410365)
