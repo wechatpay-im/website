@@ -779,6 +779,13 @@ function openapiSidebar() {
                 ['获取商家名片预览二维码', '/openapi/v3/brand/card/card-configs/preview-url'],
               ].map(transArrayItem),
             },
+            {
+              text: '品牌服务商授权',
+              collapsed: true,
+              items: [
+                ['查询已授权的产品权限信息', '/openapi/v3/brand-basic/partner/brands/{brand_id}/product-authorities'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {

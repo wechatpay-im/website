@@ -199,6 +199,7 @@ next:
 | | [发布商家名片配置](/openapi/v3/brand/card/card-configs/publish)
 | | [撤销商家名片配置申请](/openapi/v3/brand/card/card-configs/cancel-applyment)
 | | [获取商家名片预览二维码](/openapi/v3/brand/card/card-configs/preview-url)
+| 品牌服务商授权 {data-protocol=v3 rowspan=1} | | [查询已授权的产品权限信息](/openapi/v3/brand-basic/partner/brands/{brand_id}/product-authorities)
 | 账单 {data-protocol=v3 rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
