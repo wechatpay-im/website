@@ -43,7 +43,7 @@ description: 签约成功后，微信支付会向服务商发送相应的签约�
 | contract_state {data-required data-indent=3} | string | 委托代扣协议状态<br/>`CONTRACT_STATE_INVALID` \| `CONTRACT_STATE_EFFECTIVE` \| `CONTRACT_STATE_TERMINATED` 枚举值之一
 | contract_signed_time {data-required data-indent=3} | string | 协议签署时间
 | contract_terminated_time {data-indent=3} | string | 协议解约时间
-| contract_termination_mode {data-required data-indent=3} | string | 协议解约方式<br/>`TERMINATION_MODE_INVALID` \| `TERMINATION_MODE_BY_USER` \| `TERMINATION_MODE_BY_MERCHANT` \| `TERMINATION_MODE_BY_CUSTOMER_SERVICE` 枚举值之一
+| contract_terminated_mode {data-required data-indent=3} | string | 协议解约方式<br/>`TERMINATION_MODE_INVALID` \| `TERMINATION_MODE_BY_USER` \| `TERMINATION_MODE_BY_MERCHANT` \| `TERMINATION_MODE_BY_CUSTOMER_SERVICE` 枚举值之一
 | contract_termination_remark {data-indent=3} | string | 解约原因的备注说明，如：签约信息有误，须重新签约。
 | repayment_day {data-indent=3} | integer | 还款日
 | repayment_amount_limit {data-required data-indent=3} | string | 还款金额上限

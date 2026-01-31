@@ -98,9 +98,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | contract_state {data-required data-indent=1} | string | 协议状态<br/>`CONTRACT_STATE_INVALID` \| `CONTRACT_STATE_EFFECTIVE` \| `CONTRACT_STATE_TERMINATED` 枚举值之一
 | contract_signed_time {data-indent=1} | string | 协议签署时间
 | contract_terminated_time {data-indent=1} | string | 协议解约时间
-| contract_termination_mode {data-indent=1} | string | 协议解约方式<br/>`TERMINATION_MODE_INVALID` \| `TERMINATION_MODE_BY_USER` \| `TERMINATION_MODE_BY_MERCHANT` \| `TERMINATION_MODE_BY_CUSTOMER_SERVICE` 枚举值之一
+| contract_terminated_mode {data-indent=1} | string | 协议解约方式<br/>`TERMINATION_MODE_INVALID` \| `TERMINATION_MODE_BY_USER` \| `TERMINATION_MODE_BY_MERCHANT` \| `TERMINATION_MODE_BY_CUSTOMER_SERVICE` 枚举值之一
 | contract_termination_remark {data-indent=1} | string | 协议解约备注
 | repayment_day {data-indent=1} | integer | 还款日
+| openid {data-indent=1} | string | 用户服务商标识
+| appid {data-indent=1} | string | 服务商AppID
+| repayment_amount_limit {data-required data-indent=1} | integer | 还款金额上限
 
 {.im-table #response}
 

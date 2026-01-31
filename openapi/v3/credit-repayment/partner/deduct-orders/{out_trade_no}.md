@@ -73,7 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required} | string | 商户侧交易单号
 | out_record_id {data-required} | string | 商户侧预约还款单号
 | appid {data-required} | string | 商户AppID
-| sub_appid {data-required} | string | 子商户AppID
+| sub_appid | string | 子商户AppID
 | openid {data-required} | string | 用户标识
 | contract_id {data-required} | string | 还款协议ID
 | order_state {data-required} | string | 还款单状态<br/>`DEDUCT_ORDER_STATE_PENDING` \| `DEDUCT_ORDER_STATE_NOT_PAY` \| `DEDUCT_ORDER_STATE_PAY_SUCCESS` \| `DEDUCT_ORDER_STATE_PAY_FAIL` 枚举值之一

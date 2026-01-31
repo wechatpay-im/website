@@ -15,6 +15,8 @@ description: 商户在发起还款之前，需要先调用预约还款接口；�
 | out_record_id {data-required data-indent=1} | string | 商户侧预约还款单号
 | deduct_amount {data-required data-indent=1} | string | 还款金额
 | notify_url {data-required data-indent=1} | string | 商户回调地址
+| description {data-required data-indent=1} | string | 产品描述
+| attach {data-indent=1} | string | 商户数据包
 
 {.im-table #request}
 
@@ -28,6 +30,8 @@ $instance->v3->creditRepayment->partner->deductOrders->postAsync([
     'out_record_id' => '1234567abcde',
     'deduct_amount' => '10000',
     'notify_url'    => 'wxd678efh567hg6787',
+    'description'   => '信贷还款',
+    'attach'        => '备注',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,6 +48,8 @@ $instance->chain('v3/credit-repayment/partner/deduct-orders')->postAsync([
     'out_record_id' => '1234567abcde',
     'deduct_amount' => '10000',
     'notify_url'    => 'wxd678efh567hg6787',
+    'description'   => '信贷还款',
+    'attach'        => '备注',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,6 +66,8 @@ $instance['v3/credit-repayment/partner/deduct-orders']->postAsync([
     'out_record_id' => '1234567abcde',
     'deduct_amount' => '10000',
     'notify_url'    => 'wxd678efh567hg6787',
+    'description'   => '信贷还款',
+    'attach'        => '备注',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +84,8 @@ $response = $instance->v3->creditRepayment->partner->deductOrders->post([
     'out_record_id' => '1234567abcde',
     'deduct_amount' => '10000',
     'notify_url'    => 'wxd678efh567hg6787',
+    'description'   => '信贷还款',
+    'attach'        => '备注',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,6 +99,8 @@ $response = $instance->chain('v3/credit-repayment/partner/deduct-orders')->post(
     'out_record_id' => '1234567abcde',
     'deduct_amount' => '10000',
     'notify_url'    => 'wxd678efh567hg6787',
+    'description'   => '信贷还款',
+    'attach'        => '备注',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -102,6 +114,8 @@ $response = $instance['v3/credit-repayment/partner/deduct-orders']->post([
     'out_record_id' => '1234567abcde',
     'deduct_amount' => '10000',
     'notify_url'    => 'wxd678efh567hg6787',
+    'description'   => '信贷还款',
+    'attach'        => '备注',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -114,7 +128,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required} | string | 商户侧交易单号
 | out_record_id {data-required} | string | 商户侧预约还款单号
 | appid {data-required} | string | 商户AppID
-| sub_appid {data-required} | string | 子商户AppID
+| sub_appid | string | 子商户AppID
 | openid {data-required} | string | 用户标识
 | contract_id {data-required} | string | 还款协议ID
 | order_state {data-required} | string | 还款单状态<br/>`DEDUCT_ORDER_STATE_PENDING` \| `DEDUCT_ORDER_STATE_NOT_PAY` \| `DEDUCT_ORDER_STATE_PAY_SUCCESS` \| `DEDUCT_ORDER_STATE_PAY_FAIL` 枚举值之一

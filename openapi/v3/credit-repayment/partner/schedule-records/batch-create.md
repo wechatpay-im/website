@@ -16,12 +16,10 @@ description: 商户在发起还款前，需要调用该接口进行预约还款
 | schedule_items {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 预约还款项列表
 | out_record_id {data-required data-indent=2} | string | 商户侧预约还款单号
 | sub_mchid {data-required data-indent=2} | string | 子商户号
-| sub_appid {data-required data-indent=2} | string | 子商户AppID
+| sub_appid {data-indent=2} | string | 子商户AppID
 | repayment_amount {data-required data-indent=2} | string | 应还款金额
-| min_repayment_amount {data-required data-indent=2} | string | 最低还款金额
+| min_repayment_amount {data-indent=2} | string | 最低还款金额
 | repayment_date {data-required data-indent=2} | string | 还款日期
-| description {data-required data-indent=2} | string | 产品描述
-| attach {data-indent=2} | string | 商户数据包
 
 {.im-table #request}
 
@@ -40,8 +38,6 @@ $instance->v3->creditRepayment->partner->scheduleRecords->batchCreate->postAsync
       'repayment_amount'     => '10000',
       'min_repayment_amount' => '2000',
       'repayment_date'       => '2025-11-18',
-      'description'          => '信贷还款',
-      'attach'               => '备注信息',
     ],],
   ],
 ])
@@ -64,8 +60,6 @@ $instance->chain('v3/credit-repayment/partner/schedule-records/batch-create')->p
       'repayment_amount'     => '10000',
       'min_repayment_amount' => '2000',
       'repayment_date'       => '2025-11-18',
-      'description'          => '信贷还款',
-      'attach'               => '备注信息',
     ],],
   ],
 ])
@@ -88,8 +82,6 @@ $instance['v3/credit-repayment/partner/schedule-records/batch-create']->postAsyn
       'repayment_amount'     => '10000',
       'min_repayment_amount' => '2000',
       'repayment_date'       => '2025-11-18',
-      'description'          => '信贷还款',
-      'attach'               => '备注信息',
     ],],
   ],
 ])
@@ -112,8 +104,6 @@ $response = $instance->v3->creditRepayment->partner->scheduleRecords->batchCreat
       'repayment_amount'     => '10000',
       'min_repayment_amount' => '2000',
       'repayment_date'       => '2025-11-18',
-      'description'          => '信贷还款',
-      'attach'               => '备注信息',
     ],],
   ],
 ]);
@@ -133,8 +123,6 @@ $response = $instance->chain('v3/credit-repayment/partner/schedule-records/batch
       'repayment_amount'     => '10000',
       'min_repayment_amount' => '2000',
       'repayment_date'       => '2025-11-18',
-      'description'          => '信贷还款',
-      'attach'               => '备注信息',
     ],],
   ],
 ]);
@@ -154,8 +142,6 @@ $response = $instance['v3/credit-repayment/partner/schedule-records/batch-create
       'repayment_amount'     => '10000',
       'min_repayment_amount' => '2000',
       'repayment_date'       => '2025-11-18',
-      'description'          => '信贷还款',
-      'attach'               => '备注信息',
     ],],
   ],
 ]);
@@ -169,13 +155,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | schedule_records | object[] {data-tooltip="对应PHP的array"} | 预约还款记录列表
 | out_record_id {data-required data-indent=1} | string | 商户侧预约还款单号
 | appid {data-required data-indent=1} | string | 商户AppID
-| sub_appid {data-required data-indent=1} | string | 子商户AppID
+| sub_appid {data-indent=1} | string | 子商户AppID
 | contract_id {data-indent=1} | string | 还款协议ID
 | repayment_amount {data-required data-indent=1} | string | 应还款金额
 | min_repayment_amount {data-required data-indent=1} | string | 最低还款金额
 | repayment_date {data-required data-indent=1} | string | 还款日期
-| description {data-required data-indent=1} | string | 产品描述
-| attach {data-indent=1} | string | 商户数据包
 | openid {data-required data-indent=1} | string | 用户标识
 
 {.im-table #response}

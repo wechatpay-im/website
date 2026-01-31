@@ -1,6 +1,6 @@
 ---
-title: 查询预约还款结果
-description: 查询预约还款记录
+title: 查询预约还款记录
+description: 商户可调用该接口来查询之前发起的预约还款记录
 ---
 
 # {{ $frontmatter.title }} {#get}
@@ -92,13 +92,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | out_record_id {data-required} | string | 商户侧预约还款单号
 | appid {data-required} | string | 商户AppID
-| sub_appid {data-required} | string | 子商户AppID
+| sub_appid | string | 子商户AppID
 | contract_id | string | 还款协议ID
 | repayment_amount {data-required} | string | 应还款金额
 | min_repayment_amount {data-required} | string | 最低还款金额
 | repayment_date {data-required} | string | 还款日期
-| description {data-required} | string | 产品描述
-| attach | string | 商户数据包
 | openid {data-required} | string | 用户标识
 
 {.im-table #response}
