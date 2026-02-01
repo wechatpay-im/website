@@ -864,6 +864,7 @@ function openapiSidebar() {
                 ['查询批次详情', '/openapi/v3/marketing/favor/stocks/{stock_id}'],
                 ['查询代金券可用单品', '/openapi/v3/marketing/favor/stocks/{stock_id}/items'],
                 ['查询代金券可用商户', '/openapi/v3/marketing/favor/stocks/{stock_id}/merchants'],
+                ['修改可用单品编码', '/openapi/v3/marketing/favor/stocks/{stock_id}/modify-goods-id'],
                 ['激活代金券批次', '/openapi/v3/marketing/favor/stocks/{stock_id}/start'],
                 ['暂停代金券批次', '/openapi/v3/marketing/favor/stocks/{stock_id}/pause'],
                 ['重启代金券批次', '/openapi/v3/marketing/favor/stocks/{stock_id}/restart'],

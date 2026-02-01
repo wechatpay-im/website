@@ -238,13 +238,14 @@ next:
 | [查询活动列表](/openapi/v3/marketing/membercard-activity/activities#get) {colspan=2}
 | [查询活动详情](/openapi/v3/marketing/membercard-activity/activities/{activity_id}) {colspan=2}
 | [终止活动](/openapi/v3/marketing/membercard-activity/activities/{activity_id}/terminate) {colspan=2}
-| 代金券 {data-protocol=v3 rowspan=18} | [设置消息通知地址](/openapi/v3/marketing/favor/callbacks#post) {colspan=2}
+| 代金券 {data-protocol=v3 rowspan=19} | [设置消息通知地址](/openapi/v3/marketing/favor/callbacks#post) {colspan=2}
 | [获取已设置的消息通知地址](/openapi/v3/marketing/favor/callbacks#get) {colspan=2}
 | [创建代金券批次](/openapi/v3/marketing/favor/coupon-stocks) {colspan=2}
 | [条件查询批次列表](/openapi/v3/marketing/favor/stocks) {colspan=2}
 | [查询批次详情](/openapi/v3/marketing/favor/stocks/{stock_id}) {colspan=2}
 | [查询代金券可用单品](/openapi/v3/marketing/favor/stocks/{stock_id}/items) {colspan=2}
 | [查询代金券可用商户](/openapi/v3/marketing/favor/stocks/{stock_id}/merchants) {colspan=2}
+| [修改可用单品编码](/openapi/v3/marketing/favor/stocks/{stock_id}/modify-goods-id) {colspan=2}
 | [激活代金券批次](/openapi/v3/marketing/favor/stocks/{stock_id}/start) {colspan=2}
 | [暂停代金券批次](/openapi/v3/marketing/favor/stocks/{stock_id}/pause) {colspan=2}
 | [重启代金券批次](/openapi/v3/marketing/favor/stocks/{stock_id}/restart) {colspan=2}
