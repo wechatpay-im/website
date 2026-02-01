@@ -261,7 +261,7 @@ $instance->v3->pay->transactions
 
 ### 申请退款 {#v3.refund.domestic.refunds.post}
 
-```js
+```php
 $instance->v3->refund->domestic->refunds->post([
   'json' => []
 ]);

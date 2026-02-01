@@ -94,7 +94,7 @@ Options:
 | apius.mch.weixin.qq.com | 北美-美国硅谷 | 43.130.30.190<br/>43.130.30.86 | 北美洲<br/>南美洲
 | apieu.mch.weixin.qq.com | 欧洲-法兰克福 | 43.131.7.109<br/>162.62.97.190 | 欧洲<br/>非洲
 
-{.im-table}
+{.im-table .vw-768}
 
 具体如何选择，可参考如下脚本做探测，介绍见[这里](https://pay.weixin.qq.com/doc/global/v3/zh/4017303715)。
 

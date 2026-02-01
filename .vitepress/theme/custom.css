@@ -6,6 +6,8 @@
 
 @media (max-width: 768px) {
 
+  .im-table.vw-768 th:not(:first-child,:last-child),
+  .im-table.vw-768 td:not(:first-child,:last-child),
   #request th:nth-of-type(2),
   #request tbody td:nth-of-type(2),
   #response th:nth-of-type(2),
