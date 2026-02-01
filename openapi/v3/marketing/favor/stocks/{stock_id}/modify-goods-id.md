@@ -108,3 +108,5 @@ print_r(json_decode((string) $response->getBody(), true));
 | stock_id {data-required} | string | 批次号
 
 {.im-table #response}
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4017164667)
