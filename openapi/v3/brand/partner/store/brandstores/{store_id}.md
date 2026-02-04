@@ -8,7 +8,7 @@
 | --- | --- | ---
 | store_id {data-required} | string | 品牌门店ID
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| brand_id {data-indent=1} | string | 品牌ID
+| brand_id {data-required data-indent=1} | string | 品牌ID
 
 {.im-table #request}
 
@@ -101,6 +101,7 @@ print_r($response->getStatusCode() === 204);
 | --- | --- | ---
 | store_id {data-required} | string | 品牌门店ID
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| brand_id {data-required data-indent=1} | string | 品牌ID
 | store_basics {data-indent=1} | object {data-tooltip="对应PHP的array"} | 门店基础信息
 | store_reference_id {data-indent=2} | string | 商家门店编号
 | branch_name {data-indent=2} | string | 门店名称
@@ -122,6 +123,7 @@ print_r($response->getStatusCode() === 204);
 $instance->v3->brand->partner->store->brandstores->_store_id_->patchAsync([
   'store_id' => '20488000',
   'json' => [
+    'brand_id'       => '123456789',
     'store_basics'   => [
       'store_reference_id' => 'MDL001',
       'branch_name'        => '海岸城店',
@@ -149,6 +151,7 @@ $instance->v3->brand->partner->store->brandstores->_store_id_->patchAsync([
 $instance->chain('v3/brand/partner/store/brandstores/{store_id}')->patchAsync([
   'store_id' => '20488000',
   'json' => [
+    'brand_id'       => '123456789',
     'store_basics'   => [
       'store_reference_id' => 'MDL001',
       'branch_name'        => '海岸城店',
@@ -176,6 +179,7 @@ $instance->chain('v3/brand/partner/store/brandstores/{store_id}')->patchAsync([
 $instance['v3/brand/partner/store/brandstores/{store_id}']->patchAsync([
   'store_id' => '20488000',
   'json' => [
+    'brand_id'       => '123456789',
     'store_basics'   => [
       'store_reference_id' => 'MDL001',
       'branch_name'        => '海岸城店',
@@ -203,6 +207,7 @@ $instance['v3/brand/partner/store/brandstores/{store_id}']->patchAsync([
 $response = $instance->v3->brand->partner->store->brandstores->_store_id_->patch([
   'store_id' => '20488000',
   'json' => [
+    'brand_id'       => '123456789',
     'store_basics'   => [
       'store_reference_id' => 'MDL001',
       'branch_name'        => '海岸城店',
@@ -227,6 +232,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/brand/partner/store/brandstores/{store_id}')->patch([
   'store_id' => '20488000',
   'json' => [
+    'brand_id'       => '123456789',
     'store_basics'   => [
       'store_reference_id' => 'MDL001',
       'branch_name'        => '海岸城店',
@@ -251,6 +257,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/brand/partner/store/brandstores/{store_id}']->patch([
   'store_id' => '20488000',
   'json' => [
+    'brand_id'       => '123456789',
     'store_basics'   => [
       'store_reference_id' => 'MDL001',
       'branch_name'        => '海岸城店',
@@ -275,9 +282,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
+| brand_id {data-required} | string | 品牌ID
 | store_id {data-required} | string | 品牌门店ID
 | store_state | string | 门店状态<br/>`OPEN` \| `CREATING` \| `CLOSED` 枚举值之一
+| audit_state | string | 审核状态<br/>`SUCCESS` \| `PROCESSING` \| `REJECTED` 枚举值之一
 | review_reject_reason | string | 审核失败原因
 | store_basics | object {data-tooltip="对应PHP的array"} | 门店基础信息
 | store_reference_id {data-indent=1} | string | 商家门店编号
@@ -387,9 +395,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| brand_id | string | 品牌ID
+| brand_id {data-required} | string | 品牌ID
 | store_id {data-required} | string | 品牌门店ID
 | store_state | string | 门店状态<br/>`OPEN` \| `CREATING` \| `CLOSED` 枚举值之一
+| audit_state | string | 审核状态<br/>`SUCCESS` \| `PROCESSING` \| `REJECTED` 枚举值之一
 | review_reject_reason | string | 审核失败原因
 | store_basics | object {data-tooltip="对应PHP的array"} | 门店基础信息
 | store_reference_id {data-indent=1} | string | 商家门店编号
