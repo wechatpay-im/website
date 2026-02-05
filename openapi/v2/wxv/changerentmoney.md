@@ -20,7 +20,7 @@ description: 前置条件：商户完结订单后，用户支付成功前。用�
 | service_id {data-required data-indent=1} | string | 服务ID
 | total_amount {data-required data-indent=1} | integer | 总金额
 | rent_fee {data-required data-indent=1} | integer | 租金费用
-| compensation_fee {data-required data-indent=1} | string | 赔偿金费用
+| compensation_fee {data-required data-indent=1} | integer | 赔偿金费用
 | compensation_fee_desc {data-indent=1} | string | 赔偿金费用说明
 
 {.im-table #request}
@@ -40,7 +40,7 @@ $instance->v2->wxv->changerentmoney->postAsync([
     'service_id'            => '',
     'total_amount'          => '40000',
     'rent_fee'              => '5800',
-    'compensation_fee'      => '赔偿金费用和租金金额二者必须填写其中一个。赔偿金费用和赔偿金费用说明必须一起填写，单位：分必须>0，传入表示需要扣赔偿金传入表示需要扣赔偿金物品已归还——用户对物品产生了破坏行为造成的损失费用。物品未归还——未还物品费用。传入为0报错.',
+    'compensation_fee'      => '6000',
     'compensation_fee_desc' => '充电宝有轻微损坏，赔偿30%押金',
   ],
 ])
@@ -63,7 +63,7 @@ $instance->chain('v2/wxv/changerentmoney')->postAsync([
     'service_id'            => '',
     'total_amount'          => '40000',
     'rent_fee'              => '5800',
-    'compensation_fee'      => '赔偿金费用和租金金额二者必须填写其中一个。赔偿金费用和赔偿金费用说明必须一起填写，单位：分必须>0，传入表示需要扣赔偿金传入表示需要扣赔偿金物品已归还——用户对物品产生了破坏行为造成的损失费用。物品未归还——未还物品费用。传入为0报错.',
+    'compensation_fee'      => '6000',
     'compensation_fee_desc' => '充电宝有轻微损坏，赔偿30%押金',
   ],
 ])
@@ -86,7 +86,7 @@ $instance['v2/wxv/changerentmoney']->postAsync([
     'service_id'            => '',
     'total_amount'          => '40000',
     'rent_fee'              => '5800',
-    'compensation_fee'      => '赔偿金费用和租金金额二者必须填写其中一个。赔偿金费用和赔偿金费用说明必须一起填写，单位：分必须>0，传入表示需要扣赔偿金传入表示需要扣赔偿金物品已归还——用户对物品产生了破坏行为造成的损失费用。物品未归还——未还物品费用。传入为0报错.',
+    'compensation_fee'      => '6000',
     'compensation_fee_desc' => '充电宝有轻微损坏，赔偿30%押金',
   ],
 ])
@@ -109,7 +109,7 @@ $response = $instance->v2->wxv->changerentmoney->post([
     'service_id'            => '',
     'total_amount'          => '40000',
     'rent_fee'              => '5800',
-    'compensation_fee'      => '赔偿金费用和租金金额二者必须填写其中一个。赔偿金费用和赔偿金费用说明必须一起填写，单位：分必须>0，传入表示需要扣赔偿金传入表示需要扣赔偿金物品已归还——用户对物品产生了破坏行为造成的损失费用。物品未归还——未还物品费用。传入为0报错.',
+    'compensation_fee'      => '6000',
     'compensation_fee_desc' => '充电宝有轻微损坏，赔偿30%押金',
   ],
 ]);
@@ -129,7 +129,7 @@ $response = $instance->chain('v2/wxv/changerentmoney')->post([
     'service_id'            => '',
     'total_amount'          => '40000',
     'rent_fee'              => '5800',
-    'compensation_fee'      => '赔偿金费用和租金金额二者必须填写其中一个。赔偿金费用和赔偿金费用说明必须一起填写，单位：分必须>0，传入表示需要扣赔偿金传入表示需要扣赔偿金物品已归还——用户对物品产生了破坏行为造成的损失费用。物品未归还——未还物品费用。传入为0报错.',
+    'compensation_fee'      => '6000',
     'compensation_fee_desc' => '充电宝有轻微损坏，赔偿30%押金',
   ],
 ]);
@@ -149,7 +149,7 @@ $response = $instance['v2/wxv/changerentmoney']->post([
     'service_id'            => '',
     'total_amount'          => '40000',
     'rent_fee'              => '5800',
-    'compensation_fee'      => '赔偿金费用和租金金额二者必须填写其中一个。赔偿金费用和赔偿金费用说明必须一起填写，单位：分必须>0，传入表示需要扣赔偿金传入表示需要扣赔偿金物品已归还——用户对物品产生了破坏行为造成的损失费用。物品未归还——未还物品费用。传入为0报错.',
+    'compensation_fee'      => '6000',
     'compensation_fee_desc' => '充电宝有轻微损坏，赔偿30%押金',
   ],
 ]);
