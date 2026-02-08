@@ -1,0 +1,102 @@
+---
+title: 反馈处理完成
+description: 商户可通过调用此接口，反馈投诉单已处理完成。投诉单处理完成后系统将对用户下发满意度评价。请务必在真实处理完用户投诉后再调此接口，避免因投诉未妥善处理造成用户重复投诉。重复投诉率将是考核客诉处理质量的重要指标之一。
+---
+
+# {{ $frontmatter.title }} {#post}
+
+{{ $frontmatter.description }}
+
+| 请求参数 | 类型 {.type} | 描述 {.desc}
+| --- | --- | ---
+| base_uri | string | 声明接入点`https://apihk.mch.weixin.qq.com/`(香港接入)
+| complaint_id {data-required} | string | 投诉单号
+| json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
+| complainted_mchid {data-required data-indent=1} | string | 被诉商户号
+
+{.im-table #request}
+
+::: code-group
+
+```php [异步纯链式]
+$instance->v3->global->merchantService->complaints->_complaint_id_->complete->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
+  'complaint_id' => '200201820200101080076610000',
+  'json' => [
+    'complainted_mchid' => '1900012181',
+  ],
+])
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
+  print_r($response->getStatusCode() === 204);
+})
+->wait();
+```
+
+```php [异步声明式]
+$instance->chain('v3/global/merchant-service/complaints/{complaint_id}/complete')->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
+  'complaint_id' => '200201820200101080076610000',
+  'json' => [
+    'complainted_mchid' => '1900012181',
+  ],
+])
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
+  print_r($response->getStatusCode() === 204);
+})
+->wait();
+```
+
+```php [异步属性式]
+$instance['v3/global/merchant-service/complaints/{complaint_id}/complete']->postAsync([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
+  'complaint_id' => '200201820200101080076610000',
+  'json' => [
+    'complainted_mchid' => '1900012181',
+  ],
+])
+->then(static function(\Psr\Http\Message\ResponseInterface $response) {
+  print_r($response->getStatusCode() === 204);
+})
+->wait();
+```
+
+```php [同步纯链式]
+$response = $instance->v3->global->merchantService->complaints->_complaint_id_->complete->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
+  'complaint_id' => '200201820200101080076610000',
+  'json' => [
+    'complainted_mchid' => '1900012181',
+  ],
+]);
+print_r($response->getStatusCode() === 204);
+```
+
+```php [同步声明式]
+$response = $instance->chain('v3/global/merchant-service/complaints/{complaint_id}/complete')->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
+  'complaint_id' => '200201820200101080076610000',
+  'json' => [
+    'complainted_mchid' => '1900012181',
+  ],
+]);
+print_r($response->getStatusCode() === 204);
+```
+
+```php [同步属性式]
+$response = $instance['v3/global/merchant-service/complaints/{complaint_id}/complete']->post([
+  'base_uri' => 'https://apihk.mch.weixin.qq.com/', // 接入点(香港接入)
+  'complaint_id' => '200201820200101080076610000',
+  'json' => [
+    'complainted_mchid' => '1900012181',
+  ],
+]);
+print_r($response->getStatusCode() === 204);
+```
+
+:::
+
+| 返回字典 | 类型 {.type} | 描述 {.desc}
+| --- | --- | ---
+| 空字符串(无返回内容) {align=center colspan=3}
+
+{.im-table #response}

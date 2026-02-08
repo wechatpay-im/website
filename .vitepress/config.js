@@ -1677,7 +1677,7 @@ function openapiSidebar() {
           collapsed: true,
           items: [
             transArrayItem(
-              [' 维护接收投诉通知的URL', '/openapi/v3/merchant-service/complaint-notifications']
+              ['维护接收投诉通知的URL', '/openapi/v3/merchant-service/complaint-notifications']
             ),
             {
               text: ' 2.0',
@@ -2108,6 +2108,20 @@ function openapiSidebar() {
                 ['修改报关信息', '/openapi/v3/global/customs/orders#patch'],
                 ['重推报关信息', '/openapi/v3/global/customs/redeclare'],
                 ['身份信息校验', '/openapi/v3/global/customs/verify-certificate'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '消费者投诉',
+              collapsed: true,
+              items: [
+                ['维护接收投诉通知的URL', '/openapi/v3/global/merchant-service/complaint-notifications'],
+                ['查询投诉单列表', '/openapi/v3/global/merchant-service/complaints'],
+                ['查询投诉单详情', '/openapi/v3/global/merchant-service/complaints/{complaint_id}'],
+                ['查询投诉单协商历史', '/openapi/v3/global/merchant-service/complaints/{complaint_id}/negotiation-historys'],
+                ['回复用户', '/openapi/v3/global/merchant-service/complaints/{complaint_id}/response'],
+                ['反馈处理完成', '/openapi/v3/global/merchant-service/complaints/{complaint_id}/complete'],
+                ['上传商户反馈图片文件', '/openapi/v3/global/merchant-service/images/upload'],
+                ['投诉单详情图片文件下载', '/openapi/v3/global/merchant-service/images/{media_id}'],
               ].map(transArrayItem),
             },
             {
