@@ -1142,6 +1142,11 @@ function openapiSidebar() {
                 ['查询门店主体匹配结果', '/openapi/v3/webizpay/stores/entity-matches/{batch_id}'],
                 ['申请企业支付出资凭证', '/openapi/v3/webizpay/bill/proof'],
                 ['申请企业支付业务账单', '/openapi/v3/webizpay/bill/trade-bill'],
+                ['创建可用商户范围', '/openapi/v3/webizpay/avail-mch-ranges#post'],
+                ['查询可用商户范围列表', '/openapi/v3/webizpay/avail-mch-ranges#get'],
+                ['添加商户标识', '/openapi/v3/webizpay/avail-mch-ranges/{range_id}/merchant-identifiers#post'],
+                ['查询商户标识列表', '/openapi/v3/webizpay/avail-mch-ranges/{range_id}/merchant-identifiers#get'],
+                ['删除商户标识', '/openapi/v3/webizpay/avail-mch-ranges/{range_id}/merchant-identifiers/{merchant_identifier}'],
               ].map(transArrayItem),
             },
             {
