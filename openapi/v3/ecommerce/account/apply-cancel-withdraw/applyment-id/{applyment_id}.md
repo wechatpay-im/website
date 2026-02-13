@@ -70,10 +70,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| applyment_id | string | 微信支付注销提现申请单号
-| out_request_no | string | 商户注销提现申请单号
-| cancel_state | string | 注销提现申请单状态<br/>`ACCEPTED` \| `REVIEWING` \| `REJECTED` \| `WAITING_MERCHANT_CONFIRM` \| `REVOKED` \| `SYSTEM_PROCESSING` \| `CANCELED` \| `FUND_PROCESSING` \| `FINISH` 枚举值之一
-| cancel_state_description | string | 注销提现申请单状态描述
+| applyment_id {data-required} | string | 微信支付注销提现申请单号
+| out_request_no {data-required} | string | 商户注销提现申请单号
+| cancel_state {data-required} | string | 注销提现申请单状态<br/>`ACCEPTED` \| `REVIEWING` \| `REJECTED` \| `WAITING_MERCHANT_CONFIRM` \| `REVOKED` \| `SYSTEM_PROCESSING` \| `CANCELED` \| `FUND_PROCESSING` \| `FINISH` 枚举值之一
+| cancel_state_description {data-required} | string | 注销提现申请单状态描述
 | withdraw | string | 是否提取资金<br/>`APPLY_WITHDRAW` \| `NOT_APPLY_WITHDRAW` 枚举值之一
 | withdraw_state | string | 提现状态<br/>`WITHDRAW_PROCESSING` \| `WITHDRAW_EXCEPTION` \| `WITHDRAW_SUCCEED` 枚举值之一
 | account_withdraw_result | object[] {data-tooltip="对应PHP的array"} | 账户提现结果
@@ -81,10 +81,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | pay_state {data-required data-indent=1} | string | 付款状态<br/>`PAY_PROCESSING` \| `PAY_SUCCEED` \| `PAY_FAIL` \| `BANK_REFUNDED` 枚举值之一
 | state_description {data-required data-indent=1} | string | 付款状态描述
 | modify_time | string | 最后更新时间
-| sub_mchid | string | 申请注销的二级商户号
+| sub_mchid {data-required} | string | 申请注销的二级商户号
 | account_info | object[] {data-tooltip="对应PHP的array"} | 账户信息
 | out_account_type {data-required data-indent=1} | string | 二级商户号的出款子账户类型<br/>`BASIC_ACCOUNT` \| `OPERATE_ACCOUNT` \| `MARGIN_ACCOUNT` \| `TRADE_FEE_ACCOUNT` 枚举值之一
-| amount {data-indent=1} | integer | 账户金额
+| amount {data-required data-indent=1} | integer | 账户金额
+| confirm_cancel | object {data-tooltip="对应PHP的array"} | 用于引导商户超级管理员确认注销的信息
+| confirm_cancel_url {data-indent=1} | string | 确认商户注销的页面url
 
 {.im-table #response}
 
