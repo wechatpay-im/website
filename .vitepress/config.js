@@ -144,6 +144,7 @@ export default defineConfig({
       '/webhook/': webhookSidebar(),
       '/devkit/': devkitSidebar(),
       '/openapi/v2/applyment/': microMerchantMixedSidebar(),
+      '/openapi/v2/billcommentsp/': microMerchantMixedSidebar(),
       '/openapi/v2/fund/': microMerchantMixedSidebar(),
       '/openapi/v2/appauth/': oauthIdentifierSidebar(),
       '/openapi/v2/secsvc/': oauthIdentifierSidebar(),
@@ -1037,6 +1038,18 @@ function openapiSidebar() {
                 ['更新自定义入口', '/openapi/v3/marketing/shopping-receipt/customentrances/{brand_id}#patch'],
                 ['上传商家电子小票跳转信息', '/openapi/v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos'],
                 ['上传电子小票图片文件', '/openapi/v3/marketing/shopping-receipt/shoppingreceipts'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '码牌音箱',
+              collapsed: true,
+              items: [
+                ['查询音箱绑定信息', '/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}'],
+                ['绑定音箱设备码牌', '/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}/bind'],
+                ['解绑音箱设备码牌', '/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}/unbind'],
+                ['预绑定音箱和码牌', '/openapi/v3/pay-devices/open-scenario-speaker/{device_sn}/prebind'],
+                ['支付结果上报', '/openapi/v3/pay-devices/open-scenario-speakerorder/{transaction_id}/report'],
+                ['码牌交易回传', '/openapi/v3/industry-rebate/transactions/{transaction_id}'],
               ].map(transArrayItem),
             },
             {
@@ -2255,6 +2268,13 @@ function microMerchantMixedSidebar() {
   cache.has(key) || cache.set(key, [
     {
       items: [
+        {
+          text: '订单评价',
+          collapsed: false,
+          items: [
+            ['拉取订单评价数据', '/openapi/v2/billcommentsp/batchquerycomment'],
+          ].map(transArrayItem),
+        },
         {
           text: '代金券',
           collapsed: false,
