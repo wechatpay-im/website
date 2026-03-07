@@ -7,7 +7,7 @@
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| appid {data-required data-indent=1} | string | 公众账号ID
+| appid {data-indent=1} | string | 公众账号ID
 | sub_mchid {data-required data-indent=1} | string | 二级商户号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
@@ -16,7 +16,10 @@
 | receiver_account {data-required data-indent=2} | string | 分账接收方账号
 | amount {data-required data-indent=2} | integer | 分账金额
 | description {data-required data-indent=2} | string | 分账描述
+| receiver_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 分账个人接收方姓名
 | finish {data-required data-indent=1} | boolean | 是否分账完成
+| headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
+| Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
 {.im-table #request}
 
@@ -34,8 +37,12 @@ $instance->v3->ecommerce->profitsharing->orders->postAsync([
       'receiver_account' => '1900000109',
       'amount'           => 190,
       'description'      => '分给商户1900000109',
+      'receiver_name'    => 'hu89ohu89ohu89o',
     ],],
     'finish'         => true,
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,8 +63,12 @@ $instance->chain('v3/ecommerce/profitsharing/orders')->postAsync([
       'receiver_account' => '1900000109',
       'amount'           => 190,
       'description'      => '分给商户1900000109',
+      'receiver_name'    => 'hu89ohu89ohu89o',
     ],],
     'finish'         => true,
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,8 +89,12 @@ $instance['v3/ecommerce/profitsharing/orders']->postAsync([
       'receiver_account' => '1900000109',
       'amount'           => 190,
       'description'      => '分给商户1900000109',
+      'receiver_name'    => 'hu89ohu89ohu89o',
     ],],
     'finish'         => true,
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -100,8 +115,12 @@ $response = $instance->v3->ecommerce->profitsharing->orders->post([
       'receiver_account' => '1900000109',
       'amount'           => 190,
       'description'      => '分给商户1900000109',
+      'receiver_name'    => 'hu89ohu89ohu89o',
     ],],
     'finish'         => true,
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -119,8 +138,12 @@ $response = $instance->chain('v3/ecommerce/profitsharing/orders')->post([
       'receiver_account' => '1900000109',
       'amount'           => 190,
       'description'      => '分给商户1900000109',
+      'receiver_name'    => 'hu89ohu89ohu89o',
     ],],
     'finish'         => true,
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -138,8 +161,12 @@ $response = $instance['v3/ecommerce/profitsharing/orders']->post([
       'receiver_account' => '1900000109',
       'amount'           => 190,
       'description'      => '分给商户1900000109',
+      'receiver_name'    => 'hu89ohu89ohu89o',
     ],],
     'finish'         => true,
+  ],
+  'headers' => [
+    'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -153,6 +180,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | transaction_id {data-required} | string | 微信订单号
 | out_order_no {data-required} | string | 商户分账单号
 | order_id {data-required} | string | 微信分账单号
+| status | string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
+| receivers {data-required} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
+| amount {data-required data-indent=1} | integer | 分账金额
+| description {data-required data-indent=1} | string | 分账描述
+| result {data-indent=1} | string | 分账结果
+| finish_time {data-required data-indent=1} | string | 完成时间
+| fail_reason {data-indent=1} | string | 分账失败原因
+| type {data-required data-indent=1} | string | 分账接收方类型
+| receiver_account {data-required data-indent=1} | string | 分账接收方账号
+| detail_id {data-required data-indent=1} | string | 分账明细单号
 
 {.im-table #response}
 
@@ -258,7 +295,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | order_id {data-required} | string | 微信分账单号
 | status | string | 分账单状态
 | receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
-| receiver_mchid {data-required data-indent=1} | string | 分账接收商户号
+| receiver_mchid {data-indent=1} | string | 分账接收商户号
 | amount {data-required data-indent=1} | integer | 分账金额
 | description {data-required data-indent=1} | string | 分账描述
 | result {data-indent=1} | string | 分账结果
@@ -266,6 +303,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | fail_reason {data-indent=1} | string | 分账失败原因
 | type {data-required data-indent=1} | string | 分账接收方类型
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
+| detail_id {data-required data-indent=1} | string | 分账明细单号
 | close_reason | string | 关单原因描述，当分账单状态status为CLOSED（处理失败，已关单）时，返回该字段。
 | finish_amount | integer | 分账完结的分账金额，单位为分， 仅当查询分账完结的执行结果时，存在本字段。
 | finish_description | string | 分账完结的原因描述，仅当查询分账完结的执行结果时，存在本字段。
