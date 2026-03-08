@@ -200,11 +200,11 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | {colspan=3 .im-table-line}
 | receiver {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表`JSON`表达式
 | type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
-| account {data-required data-indent=2} | string | 分账接收方账号
 | amount {data-required data-indent=2} | number | 分账金额
 | description {data-required data-indent=2} | string | 分账描述
 | detail_id {data-required data-indent=2} | string | 分账明细单号
 | finish_time {data-required data-indent=2} | string | 分账完成时间
+| receiver_account {data-required data-indent=2} | string | 分账接收方账号
 | receiver_mchid {data-required data-indent=2} | string | 分账接收商户号
 | result {data-required data-indent=2} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 
