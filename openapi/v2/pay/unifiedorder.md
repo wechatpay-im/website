@@ -25,8 +25,12 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | goods_id {data-indent=3} | string | 商品编码
 | wxpay_goods_id {data-indent=3} | string | 微信支付商品编码
 | goods_name {data-indent=3} | string | 商品名称
-| quantity {data-required data-indent=3} | number | 商品数量
-| price {data-required data-indent=3} | number | 商品单价
+| quantity {data-indent=3} | number | 商品数量
+| price {data-indent=3} | number | 商品单价
+| goods_category {data-indent=3} | string | 商品种类
+| body {data-indent=3} | string | 商品描述
+| category {data-indent=3} | string | 商品种类
+| mcc {data-indent=3} | integer | 商品MCC码
 | attach {data-indent=1} | string | 附加数据
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | fee_type {data-indent=1} | string | 标价币种
@@ -75,6 +79,10 @@ $instance->v2->pay->unifiedorder->postAsync([
         'goods_name'     => 'iPhone6s 16G',
         'quantity'       => 1,
         'price'          => 528800,
+        'goods_category' => '123789',
+        'body'           => '苹果手机',
+        'category'       => 'FOOD_BEVERAGE',
+        'mcc'            => 5942,
       ],],
     ]),
     'attach'           => '深圳分店',
@@ -129,6 +137,10 @@ $instance->chain('v2/pay/unifiedorder')->postAsync([
         'goods_name'     => 'iPhone6s 16G',
         'quantity'       => 1,
         'price'          => 528800,
+        'goods_category' => '123789',
+        'body'           => '苹果手机',
+        'category'       => 'FOOD_BEVERAGE',
+        'mcc'            => 5942,
       ],],
     ]),
     'attach'           => '深圳分店',
@@ -183,6 +195,10 @@ $instance['v2/pay/unifiedorder']->postAsync([
         'goods_name'     => 'iPhone6s 16G',
         'quantity'       => 1,
         'price'          => 528800,
+        'goods_category' => '123789',
+        'body'           => '苹果手机',
+        'category'       => 'FOOD_BEVERAGE',
+        'mcc'            => 5942,
       ],],
     ]),
     'attach'           => '深圳分店',
@@ -237,6 +253,10 @@ $response = $instance->v2->pay->unifiedorder->post([
         'goods_name'     => 'iPhone6s 16G',
         'quantity'       => 1,
         'price'          => 528800,
+        'goods_category' => '123789',
+        'body'           => '苹果手机',
+        'category'       => 'FOOD_BEVERAGE',
+        'mcc'            => 5942,
       ],],
     ]),
     'attach'           => '深圳分店',
@@ -288,6 +308,10 @@ $response = $instance->chain('v2/pay/unifiedorder')->post([
         'goods_name'     => 'iPhone6s 16G',
         'quantity'       => 1,
         'price'          => 528800,
+        'goods_category' => '123789',
+        'body'           => '苹果手机',
+        'category'       => 'FOOD_BEVERAGE',
+        'mcc'            => 5942,
       ],],
     ]),
     'attach'           => '深圳分店',
@@ -339,6 +363,10 @@ $response = $instance['v2/pay/unifiedorder']->post([
         'goods_name'     => 'iPhone6s 16G',
         'quantity'       => 1,
         'price'          => 528800,
+        'goods_category' => '123789',
+        'body'           => '苹果手机',
+        'category'       => 'FOOD_BEVERAGE',
+        'mcc'            => 5942,
       ],],
     ]),
     'attach'           => '深圳分店',
@@ -402,6 +430,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | other_contribute {data-indent=1} | string | 其他出资
 | goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
 | goods_id {data-indent=2} | string | 商品编码
+| goods_remark {data-indent=2} | string | 商品备注
+| discount_amount {data-indent=2} | number | 商品优惠金额
 | wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
 | goods_name {data-indent=2} | string | 商品名称
 | quantity {data-required data-indent=2} | number | 商品数量
