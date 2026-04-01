@@ -25,7 +25,7 @@ description: 服务商（银行、支付机构、电商平台不可用）使用�
 | trademark {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 品牌商标资料
 | trademark_exists {data-required data-indent=2} | string | 有无商标<br/>`TRADEMARK_EXISTS` \| `TRADEMARK_NONE` 枚举值之一
 | trademark_registration_certificate {data-indent=2} | object {data-tooltip="对应PHP的array"} | 商标注册证
-| certificate {data-required data-indent=3} | string | 商标注册证
+| certificate {data-indent=3} | string | 商标注册证
 | name {data-required data-indent=3} | string | 商标名称
 | number {data-required data-indent=3} | string | 商标注册号
 | valid_begin_time {data-required data-indent=3} | string | 商标有效期开始时间
@@ -35,8 +35,10 @@ description: 服务商（银行、支付机构、电商平台不可用）使用�
 | license {data-indent=3} | string | 商标许可使用授权书
 | authorization_begin_time {data-indent=3} | string | 商标授权有效期开始时间
 | authorization_end_time {data-indent=3} | string | 商标授权有效期结束时间
+| certificate_list {data-indent=3} | string[] | 商标注册证列表
+| license_list {data-indent=3} | string[] | 商标许可使用授权书列表
 | logo_trademark_registration_certificate {data-indent=2} | object {data-tooltip="对应PHP的array"} | Logo商标注册证
-| certificate {data-required data-indent=3} | string | Logo商标注册证
+| certificate {data-indent=3} | string | Logo商标注册证
 | name {data-required data-indent=3} | string | Logo商标名称
 | number {data-required data-indent=3} | string | Logo商标注册号
 | valid_begin_time {data-required data-indent=3} | string | Logo商标有效期开始时间
@@ -46,7 +48,10 @@ description: 服务商（银行、支付机构、电商平台不可用）使用�
 | license {data-indent=3} | string | Logo商标许可使用授权书
 | authorization_begin_time {data-indent=3} | string | Logo商标授权有效期开始时间
 | authorization_end_time {data-indent=3} | string | Logo商标授权有效期结束时间
+| certificate_list {data-indent=3} | string[] | Logo商标注册证列表
+| license_list {data-indent=3} | string[] | Logo商标许可使用授权书列表
 | no_trademark_addition_prove {data-indent=2} | string | 无商标额外证明材料
+| no_trademark_addition_prove_list {data-indent=2} | string[] | 无商标额外证明材料列表
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -85,6 +90,8 @@ $instance->v3->brand->applyments->postAsync([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'logo_trademark_registration_certificate' => [
         'certificate'              => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -97,8 +104,11 @@ $instance->v3->brand->applyments->postAsync([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'no_trademark_addition_prove'             => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
+      'no_trademark_addition_prove_list'        => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
     ],
   ],
   'headers' => [
@@ -142,6 +152,8 @@ $instance->chain('v3/brand/applyments')->postAsync([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'logo_trademark_registration_certificate' => [
         'certificate'              => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -154,8 +166,11 @@ $instance->chain('v3/brand/applyments')->postAsync([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'no_trademark_addition_prove'             => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
+      'no_trademark_addition_prove_list'        => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
     ],
   ],
   'headers' => [
@@ -199,6 +214,8 @@ $instance['v3/brand/applyments']->postAsync([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'logo_trademark_registration_certificate' => [
         'certificate'              => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -211,8 +228,11 @@ $instance['v3/brand/applyments']->postAsync([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'no_trademark_addition_prove'             => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
+      'no_trademark_addition_prove_list'        => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
     ],
   ],
   'headers' => [
@@ -256,6 +276,8 @@ $response = $instance->v3->brand->applyments->post([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'logo_trademark_registration_certificate' => [
         'certificate'              => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -268,8 +290,11 @@ $response = $instance->v3->brand->applyments->post([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'no_trademark_addition_prove'             => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
+      'no_trademark_addition_prove_list'        => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
     ],
   ],
   'headers' => [
@@ -310,6 +335,8 @@ $response = $instance->chain('v3/brand/applyments')->post([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'logo_trademark_registration_certificate' => [
         'certificate'              => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -322,8 +349,11 @@ $response = $instance->chain('v3/brand/applyments')->post([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'no_trademark_addition_prove'             => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
+      'no_trademark_addition_prove_list'        => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
     ],
   ],
   'headers' => [
@@ -364,6 +394,8 @@ $response = $instance['v3/brand/applyments']->post([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'logo_trademark_registration_certificate' => [
         'certificate'              => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -376,8 +408,11 @@ $response = $instance['v3/brand/applyments']->post([
         'license'                  => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
         'authorization_begin_time' => '2025-09-08',
         'authorization_end_time'   => '2035-09-08',
+        'certificate_list'         => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
+        'license_list'             => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
       ],
       'no_trademark_addition_prove'             => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
+      'no_trademark_addition_prove_list'        => ['jTpGmxUX3FBWVQ5NJTZvvDujqhThn4Re'],
     ],
   ],
   'headers' => [

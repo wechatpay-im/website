@@ -145,9 +145,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-indent=2} | string | 商户订单号
 | mchid {data-indent=2} | string | 商户号
 | sub_mchid {data-indent=2} | string | 子商户号
+| associated_pay_score_order_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 券核销的关联微信支付分订单信息
+| order_id {data-indent=2} | string | 微信支付服务订单号
+| out_trade_no {data-indent=2} | string | 商户订单号
+| mchid {data-indent=2} | string | 商户号
+| sub_mchid {data-indent=2} | string | 子商户号
+| saved_amount {data-indent=1} | number | 优惠金额
 | return_request_no {data-indent=1} | string | 退券请求单号
 | return_time {data-indent=1} | string | 退券时间
-| sequential_usage_detail | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
+| progressive_bundle_usage_detail | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
 | total_count {data-indent=1} | integer | 总可使用次数
 | used_count {data-indent=1} | integer | 已使用次数
 | detail_item_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 轮次使用详情列表
