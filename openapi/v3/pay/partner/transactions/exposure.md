@@ -17,6 +17,7 @@ description: 服务商查询微信分付曝光建议
 | payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | sp_openid {data-indent=2} | string | 用户服务商标识
 | phone_number_hash {data-indent=2} | string | 用户手机号的哈希值
+| sub_openid {data-indent=2} | string | 用户子商户标识
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 
 {.im-table #request}
@@ -33,6 +34,7 @@ $instance->v3->pay->partner->transactions->exposure->postAsync([
     'payer'        => [
       'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash' => 'ABDEF3445546456B',
+      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no' => '1217752501201407033233368018',
   ],
@@ -53,6 +55,7 @@ $instance->chain('v3/pay/partner/transactions/exposure')->postAsync([
     'payer'        => [
       'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash' => 'ABDEF3445546456B',
+      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no' => '1217752501201407033233368018',
   ],
@@ -73,6 +76,7 @@ $instance['v3/pay/partner/transactions/exposure']->postAsync([
     'payer'        => [
       'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash' => 'ABDEF3445546456B',
+      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no' => '1217752501201407033233368018',
   ],
@@ -93,6 +97,7 @@ $response = $instance->v3->pay->partner->transactions->exposure->post([
     'payer'        => [
       'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash' => 'ABDEF3445546456B',
+      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no' => '1217752501201407033233368018',
   ],
@@ -110,6 +115,7 @@ $response = $instance->chain('v3/pay/partner/transactions/exposure')->post([
     'payer'        => [
       'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash' => 'ABDEF3445546456B',
+      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no' => '1217752501201407033233368018',
   ],
@@ -127,6 +133,7 @@ $response = $instance['v3/pay/partner/transactions/exposure']->post([
     'payer'        => [
       'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash' => 'ABDEF3445546456B',
+      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no' => '1217752501201407033233368018',
   ],

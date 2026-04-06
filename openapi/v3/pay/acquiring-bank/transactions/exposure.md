@@ -18,6 +18,7 @@ description: 从业机构查询微信分付曝光建议
 | payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | acquiring_bank_openid {data-indent=2} | string | 用户标识
 | phone_number_hash {data-indent=2} | string | 用户手机号的哈希值
+| merchant_openid {data-indent=2} | string | 用户标识（商户）
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 
 {.im-table #request}
@@ -35,6 +36,7 @@ $instance->v3->pay->acquiringBank->transactions->exposure->postAsync([
     'payer'                => [
       'acquiring_bank_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash'     => 'ABDEF3445546456B',
+      'merchant_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no'         => '1217752501201407033233368018',
   ],
@@ -56,6 +58,7 @@ $instance->chain('v3/pay/acquiring-bank/transactions/exposure')->postAsync([
     'payer'                => [
       'acquiring_bank_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash'     => 'ABDEF3445546456B',
+      'merchant_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no'         => '1217752501201407033233368018',
   ],
@@ -77,6 +80,7 @@ $instance['v3/pay/acquiring-bank/transactions/exposure']->postAsync([
     'payer'                => [
       'acquiring_bank_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash'     => 'ABDEF3445546456B',
+      'merchant_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no'         => '1217752501201407033233368018',
   ],
@@ -98,6 +102,7 @@ $response = $instance->v3->pay->acquiringBank->transactions->exposure->post([
     'payer'                => [
       'acquiring_bank_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash'     => 'ABDEF3445546456B',
+      'merchant_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no'         => '1217752501201407033233368018',
   ],
@@ -116,6 +121,7 @@ $response = $instance->chain('v3/pay/acquiring-bank/transactions/exposure')->pos
     'payer'                => [
       'acquiring_bank_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash'     => 'ABDEF3445546456B',
+      'merchant_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no'         => '1217752501201407033233368018',
   ],
@@ -134,6 +140,7 @@ $response = $instance['v3/pay/acquiring-bank/transactions/exposure']->post([
     'payer'                => [
       'acquiring_bank_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'phone_number_hash'     => 'ABDEF3445546456B',
+      'merchant_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'out_trade_no'         => '1217752501201407033233368018',
   ],
