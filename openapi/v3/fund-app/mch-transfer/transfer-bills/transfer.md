@@ -12,7 +12,6 @@ description: 商户可调用该接口转账给自动收款授权对应的用户�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-required data-indent=1} | string | 商户AppID
 | out_bill_no {data-required data-indent=1} | string | 商户单号
-| openid {data-required data-indent=1} | string | 收款用户OpenID
 | user_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | transfer_amount {data-required data-indent=1} | number | 转账金额
 | transfer_remark {data-required data-indent=1} | string | 转账备注
@@ -36,7 +35,6 @@ $instance->v3->fundApp->mchTransfer->transferBills->transfer->postAsync([
   'json' => [
     'appid'                       => 'wxf636efh567hg4356',
     'out_bill_no'                 => 'plfk2020042013',
-    'openid'                      => 'o-MYE42l80oelYMDE34nYD456Xoy',
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
@@ -65,7 +63,6 @@ $instance->chain('v3/fund-app/mch-transfer/transfer-bills/transfer')->postAsync(
   'json' => [
     'appid'                       => 'wxf636efh567hg4356',
     'out_bill_no'                 => 'plfk2020042013',
-    'openid'                      => 'o-MYE42l80oelYMDE34nYD456Xoy',
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
@@ -94,7 +91,6 @@ $instance['v3/fund-app/mch-transfer/transfer-bills/transfer']->postAsync([
   'json' => [
     'appid'                       => 'wxf636efh567hg4356',
     'out_bill_no'                 => 'plfk2020042013',
-    'openid'                      => 'o-MYE42l80oelYMDE34nYD456Xoy',
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
@@ -123,7 +119,6 @@ $response = $instance->v3->fundApp->mchTransfer->transferBills->transfer->post([
   'json' => [
     'appid'                       => 'wxf636efh567hg4356',
     'out_bill_no'                 => 'plfk2020042013',
-    'openid'                      => 'o-MYE42l80oelYMDE34nYD456Xoy',
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
@@ -149,7 +144,6 @@ $response = $instance->chain('v3/fund-app/mch-transfer/transfer-bills/transfer')
   'json' => [
     'appid'                       => 'wxf636efh567hg4356',
     'out_bill_no'                 => 'plfk2020042013',
-    'openid'                      => 'o-MYE42l80oelYMDE34nYD456Xoy',
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
@@ -175,7 +169,6 @@ $response = $instance['v3/fund-app/mch-transfer/transfer-bills/transfer']->post(
   'json' => [
     'appid'                       => 'wxf636efh567hg4356',
     'out_bill_no'                 => 'plfk2020042013',
-    'openid'                      => 'o-MYE42l80oelYMDE34nYD456Xoy',
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
