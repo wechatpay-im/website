@@ -801,6 +801,7 @@ next:
 | [修改报关信息](/openapi/v3/global/customs/orders#patch)
 | [重推报关信息](/openapi/v3/global/customs/redeclare)
 | [身份信息校验](/openapi/v3/global/customs/verify-certificate)
+| 商户测试 {data-protocol=v3 rowspan=1} | [商户签名验签／加解密测试](/openapi/v3/security/echo) {colspan=2}
 | 平台证书 {data-protocol=v3 rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.im-table .centered}

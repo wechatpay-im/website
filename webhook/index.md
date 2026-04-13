@@ -122,6 +122,7 @@ next:
 | | [交易拦截记录通知](/webhook/v3/BLOCKRECORD.CHANGE)
 | | [交易拦截申诉通知](/webhook/v3/BLOCKSUBMISSION.CHANGE)
 | JSON {rowspan=1} | | [合作伙伴订阅通知](/webhook/v3/MERCHANT_NOTIFY.NOTIFY)
+| JSON {rowspan=1} | [商户签名验签／加解密测试回调通知](/webhook/v3/SECURITY_ECHO.SUCCESS) {colspan=2}
 | JSON {rowspan=5} | [跨境/全球-H5支付权限申请事件回调通知](/webhook/v3/APPLYMENT_STATE.APPROVED) {colspan=2}
 | [跨境/全球-支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#GLOBAL) {colspan=2}
 | [跨境/全球-退款成功通知](/webhook/v3/REFUND.SUCCESS#GLOBAL) {colspan=2}

@@ -2209,6 +2209,9 @@ function openapiSidebar() {
           ],
         },
         transArrayItem(
+          ['商户签名验签／加解密测试', '/openapi/v3/security/echo'],
+        ),
+        transArrayItem(
           ['获取平台证书列表', '/openapi/v3/certificates'],
         ),
       ]
@@ -2693,6 +2696,9 @@ function webhookSidebar() {
       text: 'JSON格式报文',
       collapsed: false,
       items: [
+        transArrayItem(
+          ['商户签名验签／加解密测试通知', '/webhook/v3/SECURITY_ECHO.SUCCESS'],
+        ),
         {
           text: '支付',
           collapsed: true,
