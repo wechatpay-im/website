@@ -30,11 +30,11 @@ description: 商家转账单据到终态后 （转账完成、转账失败和已
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型<br/>`mch_payment` 枚举值
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | out_bill_no {data-required data-indent=3} | string | 商户单号
 | transfer_bill_no {data-required data-indent=3} | string | 商家转账订单号
@@ -43,8 +43,8 @@ description: 商家转账单据到终态后 （转账完成、转账失败和已
 | mchid {data-indent=3} | string | 商户号
 | sub_mchid {data-indent=3} | string | 子商户号
 | transfer_amount {data-required data-indent=3} | number | 转账金额
-| openid {data-indent=3} | string | 收款用户OpenID
-| fail_reason {data-indent=3} | string | 失败原因
+| openid {data-required data-indent=3} | string | 收款用户OpenID
+| fail_reason {data-indent=3} | string | 失败原因<br/>`ACCOUNT_FROZEN` \| `ACCOUNT_NOT_EXIST` \| `BANK_CARD_ACCOUNT_ABNORMAL` \| `BANK_CARD_BANK_INFO_WRONG` \| `BANK_CARD_CARD_INFO_WRONG` \| `BANK_CARD_COLLECTIONS_ABOVE_QUOTA` \| `BANK_CARD_PARAM_ERROR` \| `BANK_CARD_STATUS_ABNORMAL` \| `BLOCK_B2C_USERLIMITAMOUNT_BSRULE_MONTH` \| `BLOCK_B2C_USERLIMITAMOUNT_MONTH` \| `DAY_RECEIVED_COUNT_EXCEED` \| `DAY_RECEIVED_QUOTA_EXCEED` \| `EXCEEDED_ESTIMATED_AMOUNT` \| `ID_CARD_NOT_CORRECT` \| `MCH_CANCEL` \| `MERCHANT_REJECT` \| `MERCHANT_NOT_CONFIRM` \| `NAME_NOT_CORRECT` \| `OPENID_INVALID` \| `OTHER_FAIL_REASON_TYPE` \| `OVERDUE_CLOSE` \| `PAYEE_ACCOUNT_ABNORMAL` \| `PAYER_ACCOUNT_ABNORMAL` \| `PRODUCT_AUTH_CHECK_FAIL` \| `REALNAME_ACCOUNT_RECEIVED_QUOTA_EXCEED` \| `REAL_NAME_CHECK_FAIL` \| `RECEIVE_ACCOUNT_NOT_CONFIGURE` \| `RESERVATION_INFO_NOT_MATCH` \| `RESERVATION_SCENE_NOT_MATCH` \| `RESERVATION_STATE_INVALID` \| `TRANSFER_QUOTA_EXCEED` \| `TRANSFER_REMARK_SET_FAIL` \| `TRANSFER_RISK` \| `TRANSFER_SCENE_INVALID` \| `TRANSFER_SCENE_UNAVAILABLE` \| `RELATED_ORDER_TRANSFER_AMOUNT_EXCEED` \| `RELATED_ORDER_TRANSFER_COUNT_EXCEED` \| `BUDGET_NOT_ENOUGH` 枚举值之一
 | create_time {data-required data-indent=3} | string | 单据创建时间
 | update_time {data-required data-indent=3} | string | 最后一次状态变更时间
 

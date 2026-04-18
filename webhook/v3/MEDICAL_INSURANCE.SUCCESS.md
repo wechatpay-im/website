@@ -1,5 +1,5 @@
 ---
-title: 医保混合收款成功通知
+title: 医保混合收款成功(MEDICAL_INSURANCE.SUCCESS)通知(JSON)
 description: 当有医保混合收款成功后，微信后台会把相关确认结果和订单信息发送给商户，商户需要接收处理该消息，并返回应答。
 ---
 

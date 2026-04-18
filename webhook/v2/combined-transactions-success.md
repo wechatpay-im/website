@@ -109,5 +109,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/wiki/doc/api/combine.php?chapter=24_4&index=5)
+参阅 [官方文档](https://pay.weixin.qq.com/wiki/doc/api/combine.php?chapter=24_4&index=5)

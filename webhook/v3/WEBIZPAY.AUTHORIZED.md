@@ -129,5 +129,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014612130)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4014612130)

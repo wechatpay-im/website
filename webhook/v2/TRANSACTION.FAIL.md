@@ -120,6 +120,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 {.im-table #response}
 
-参阅
-- [免押租借订单支付失败通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=18_8&index=8)
-- [免押速住订单支付失败通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_8&index=7)
+参阅 [免押租借订单支付失败通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=18_8&index=8) [免押速住订单支付失败通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_8&index=7)

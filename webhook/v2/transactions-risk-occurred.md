@@ -83,5 +83,4 @@ $xml = \WeChatPay\Transformer::toXml([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011986354)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011986354)

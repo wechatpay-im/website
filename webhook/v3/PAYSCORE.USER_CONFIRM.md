@@ -31,11 +31,11 @@ description: 支付分服务用户确认成功通知
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型<br/>`payscore` 枚举值
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | service_id {data-required data-indent=3} | string | 调用授权服务接口提交的服务ID。
 | appid {data-required data-indent=3} | string | 调用授权服务接口提交的应用ID。

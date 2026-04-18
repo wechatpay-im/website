@@ -31,11 +31,11 @@ description: 租用充电宝-隔夜归还保险订单领取状态变化后，微
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | order_id {data-required data-indent=3} | string | 保险订单ID
 | out_order_no {data-required data-indent=3} | string | 商户保险订单号
@@ -135,5 +135,4 @@ $json = \json_encode([
 
 {.im-table #response}
 
-参阅
-- [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/hire-power-bank-insurance/insurance-orders/status-change-notice.html)
+参阅 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/hire-power-bank-insurance/insurance-orders/status-change-notice.html)

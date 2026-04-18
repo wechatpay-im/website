@@ -31,11 +31,11 @@ description: 商户创建投诉通知回调URL 后，当有新的投诉事件发
 | resource_type {data-required data-indent=1} | string | 通知的资源数据类型
 | summary {data-required data-indent=1} | string | 回调摘要
 | resource {data-required data-indent=1} | object {data-tooltip="对应PHP的Array"} | 通知资源数据
+| original_type {data-required data-indent=2} | string | 原始回调类型<br/>`complaint` 枚举值
 | algorithm {data-required data-indent=2} | string | 对数据进行加密的加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | associated_data {data-indent=2} | string | 数据加密的附加数据
 | nonce {data-required data-indent=2} | string | 加密使用的随机串
 | ciphertext {data-required data-indent=2} | string {data-tooltip=APIv3密钥加密后的BASE64字符串 data-encrypted=by-aes-gcm} | 加密后的密文数据
-| original_type {data-required data-indent=2} | string | 原始回调类型
 | {colspan=3 .im-table-line}
 | complaint_id {data-required data-indent=3} | string | 投诉单对应的投诉单号
 | action_type {data-required data-indent=3} | string | 触发本次投诉通知回调的具体动作类型<br/>`CREATE_COMPLAINT` \| `CONTINUE_COMPLAINT` \| `USER_RESPONSE` \| `RESPONSE_BY_PLATFORM` \| `SELLER_REFUND` \| `MERCHANT_RESPONSE` \| `MERCHANT_CONFIRM_COMPLETE` \| `USER_APPLY_PLATFORM_SERVICE` \| `USER_CANCEL_PLATFORM_SERVICE` \| `PLATFORM_SERVICE_FINISHED` \| `MERCHANT_APPROVE_REFUND` \| `MERCHANT_REJECT_REFUND` \| `REFUND_SUCCESS` 枚举值之一
