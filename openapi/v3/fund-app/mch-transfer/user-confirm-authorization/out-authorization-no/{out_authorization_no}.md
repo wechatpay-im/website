@@ -74,12 +74,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-required} | string | 商户AppID
 | openid {data-required} | string | 收款用户OpenID
 | user_display_name {data-required} | string | 用户展示名称
-| authorization_id {data-required} | string | 微信自动收款授权单号
-| state {data-required} | string | 单据状态<br/>`TAKING_EFFECT` \| `CLOSED` 枚举值之一
-| authorize_time {data-required} | string | 用户确认授权的时间
+| authorization_id | string | 微信自动收款授权单号
+| state {data-required} | string | 单据状态<br/>`TAKING_EFFECT` \| `CLOSED` \| `WAIT_USER_CONFIRM` 枚举值之一
+| authorize_time | string | 用户确认授权的时间
 | close_info | object {data-tooltip="对应PHP的array"} | 自动收款授权的关闭信息
 | close_time {data-required data-indent=1} | string | 关闭时间
-| close_reason {data-required data-indent=1} | string | 自动收款授权的原因<br/>`CLOSE_VIA_MCH_API` \| `USER_CLOSE` 枚举值之一
+| close_reason {data-required data-indent=1} | string | 自动收款授权的原因<br/>`CLOSE_VIA_MCH_API` \| `USER_CLOSE` \| `USER_OVERDUE_UNCONFIRMED` \| `TRANSFER_RISK` \| `USER_ACCOUNT_ABNORMAL` 枚举值之一
+| transfer_scene_id | string | 转账场景ID
+| user_recv_perception | string | 用户收款感知
+| create_time | string | 单据创建时间
 
 {.im-table #response}
 

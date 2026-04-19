@@ -17,6 +17,10 @@ description: 商户调用该接口申请免确认收款授权，用户需在24�
 | user_display_name {data-required data-indent=1} | string | 用户展示名称
 | user_recv_perception {data-indent=1} | string | 用户收款感知
 | authorization_notify_url {data-required data-indent=1} | string | 授权结果通知地址
+| scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
+| client_ip {data-indent=2} | string | 用户终端IP
+| device_id {data-indent=2} | string | 用户设备ID
+| device_type {data-indent=2} | string | 用户设备类型<br/>`IOS` \| `ANDROID` \| `HARMONY` \| `OTHER` 枚举值之一
 
 {.im-table #request}
 
@@ -32,6 +36,11 @@ $instance->v3->fundApp->mchTransfer->userConfirmAuthorization->postAsync([
     'user_display_name'        => 'wx_123456',
     'user_recv_perception'     => '现金奖励',
     'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_info'               => [
+      'client_ip'   => '113.84.136.9',
+      'device_id'   => '8d67f169fe104008cd20b72573a0c8c9',
+      'device_type' => 'IOS',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,6 +59,11 @@ $instance->chain('v3/fund-app/mch-transfer/user-confirm-authorization')->postAsy
     'user_display_name'        => 'wx_123456',
     'user_recv_perception'     => '现金奖励',
     'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_info'               => [
+      'client_ip'   => '113.84.136.9',
+      'device_id'   => '8d67f169fe104008cd20b72573a0c8c9',
+      'device_type' => 'IOS',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,6 +82,11 @@ $instance['v3/fund-app/mch-transfer/user-confirm-authorization']->postAsync([
     'user_display_name'        => 'wx_123456',
     'user_recv_perception'     => '现金奖励',
     'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_info'               => [
+      'client_ip'   => '113.84.136.9',
+      'device_id'   => '8d67f169fe104008cd20b72573a0c8c9',
+      'device_type' => 'IOS',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,6 +105,11 @@ $response = $instance->v3->fundApp->mchTransfer->userConfirmAuthorization->post(
     'user_display_name'        => 'wx_123456',
     'user_recv_perception'     => '现金奖励',
     'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_info'               => [
+      'client_ip'   => '113.84.136.9',
+      'device_id'   => '8d67f169fe104008cd20b72573a0c8c9',
+      'device_type' => 'IOS',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -101,6 +125,11 @@ $response = $instance->chain('v3/fund-app/mch-transfer/user-confirm-authorizatio
     'user_display_name'        => 'wx_123456',
     'user_recv_perception'     => '现金奖励',
     'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_info'               => [
+      'client_ip'   => '113.84.136.9',
+      'device_id'   => '8d67f169fe104008cd20b72573a0c8c9',
+      'device_type' => 'IOS',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -116,6 +145,11 @@ $response = $instance['v3/fund-app/mch-transfer/user-confirm-authorization']->po
     'user_display_name'        => 'wx_123456',
     'user_recv_perception'     => '现金奖励',
     'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'scene_info'               => [
+      'client_ip'   => '113.84.136.9',
+      'device_id'   => '8d67f169fe104008cd20b72573a0c8c9',
+      'device_type' => 'IOS',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

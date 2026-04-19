@@ -16,12 +16,14 @@
 | coupon_usage_method_list {data-required data-indent=2} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=2} | string | 小程序AppID
 | mini_program_path {data-indent=2} | string | 小程序跳转路径
-| app_path {data-indent=2} | string | APP跳转路径
+| app_path {data-indent=2} | string | APP的H5跳转路径
 | usage_description {data-required data-indent=2} | string | 券使用说明
 | coupon_available_store_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可用门店信息
 | description {data-required data-indent=3} | string | 券可用门店描述
 | mini_program_appid {data-indent=3} | string | 小程序AppID
 | mini_program_path {data-indent=3} | string | 小程序跳转路径
+| app_jump_type {data-indent=2} | string | APP跳转类型<br/>`H5` \| `PASSCODE_LINK` 枚举值之一
+| passcode_link {data-indent=2} | string | 口令链接
 | coupon_display_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户商品券展示信息
 | code_display_mode {data-indent=2} | string | 用户商品券Code展示模式<br/>`INVISIBLE` \| `BARCODE` \| `QRCODE` 枚举值之一
 | background_color {data-indent=2} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
@@ -56,13 +58,15 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
       'coupon_usage_method_list'    => ['OFFLINE'],
       'mini_program_appid'          => 'wx1234567890',
       'mini_program_path'           => '/pages/index/product',
-      'app_path'                    => '',
+      'app_path'                    => 'https://weixin.qq.com/jump-to-app',
       'usage_description'           => '工作日可用',
       'coupon_available_store_info' => [
         'description'        => '所有门店可用，可使用小程序查看门店列表',
         'mini_program_appid' => 'wx1234567890',
         'mini_program_path'  => '/pages/index/product',
       ],
+      'app_jump_type'               => 'H5',
+      'passcode_link'               => 'passcode_link.example',
     ],
     'coupon_display_info'     => [
       'code_display_mode'         => 'QRCODE',
@@ -106,13 +110,15 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
       'coupon_usage_method_list'    => ['OFFLINE'],
       'mini_program_appid'          => 'wx1234567890',
       'mini_program_path'           => '/pages/index/product',
-      'app_path'                    => '',
+      'app_path'                    => 'https://weixin.qq.com/jump-to-app',
       'usage_description'           => '工作日可用',
       'coupon_available_store_info' => [
         'description'        => '所有门店可用，可使用小程序查看门店列表',
         'mini_program_appid' => 'wx1234567890',
         'mini_program_path'  => '/pages/index/product',
       ],
+      'app_jump_type'               => 'H5',
+      'passcode_link'               => 'passcode_link.example',
     ],
     'coupon_display_info'     => [
       'code_display_mode'         => 'QRCODE',
@@ -156,13 +162,15 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
       'coupon_usage_method_list'    => ['OFFLINE'],
       'mini_program_appid'          => 'wx1234567890',
       'mini_program_path'           => '/pages/index/product',
-      'app_path'                    => '',
+      'app_path'                    => 'https://weixin.qq.com/jump-to-app',
       'usage_description'           => '工作日可用',
       'coupon_available_store_info' => [
         'description'        => '所有门店可用，可使用小程序查看门店列表',
         'mini_program_appid' => 'wx1234567890',
         'mini_program_path'  => '/pages/index/product',
       ],
+      'app_jump_type'               => 'H5',
+      'passcode_link'               => 'passcode_link.example',
     ],
     'coupon_display_info'     => [
       'code_display_mode'         => 'QRCODE',
@@ -206,13 +214,15 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_p
       'coupon_usage_method_list'    => ['OFFLINE'],
       'mini_program_appid'          => 'wx1234567890',
       'mini_program_path'           => '/pages/index/product',
-      'app_path'                    => '',
+      'app_path'                    => 'https://weixin.qq.com/jump-to-app',
       'usage_description'           => '工作日可用',
       'coupon_available_store_info' => [
         'description'        => '所有门店可用，可使用小程序查看门店列表',
         'mini_program_appid' => 'wx1234567890',
         'mini_program_path'  => '/pages/index/product',
       ],
+      'app_jump_type'               => 'H5',
+      'passcode_link'               => 'passcode_link.example',
     ],
     'coupon_display_info'     => [
       'code_display_mode'         => 'QRCODE',
@@ -253,13 +263,15 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
       'coupon_usage_method_list'    => ['OFFLINE'],
       'mini_program_appid'          => 'wx1234567890',
       'mini_program_path'           => '/pages/index/product',
-      'app_path'                    => '',
+      'app_path'                    => 'https://weixin.qq.com/jump-to-app',
       'usage_description'           => '工作日可用',
       'coupon_available_store_info' => [
         'description'        => '所有门店可用，可使用小程序查看门店列表',
         'mini_program_appid' => 'wx1234567890',
         'mini_program_path'  => '/pages/index/product',
       ],
+      'app_jump_type'               => 'H5',
+      'passcode_link'               => 'passcode_link.example',
     ],
     'coupon_display_info'     => [
       'code_display_mode'         => 'QRCODE',
@@ -300,13 +312,15 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{prod
       'coupon_usage_method_list'    => ['OFFLINE'],
       'mini_program_appid'          => 'wx1234567890',
       'mini_program_path'           => '/pages/index/product',
-      'app_path'                    => '',
+      'app_path'                    => 'https://weixin.qq.com/jump-to-app',
       'usage_description'           => '工作日可用',
       'coupon_available_store_info' => [
         'description'        => '所有门店可用，可使用小程序查看门店列表',
         'mini_program_appid' => 'wx1234567890',
         'mini_program_path'  => '/pages/index/product',
       ],
+      'app_jump_type'               => 'H5',
+      'passcode_link'               => 'passcode_link.example',
     ],
     'coupon_display_info'     => [
       'code_display_mode'         => 'QRCODE',
@@ -400,12 +414,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | coupon_usage_method_list {data-required data-indent=1} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=1} | string | 小程序AppID
 | mini_program_path {data-indent=1} | string | 小程序跳转路径
-| app_path {data-indent=1} | string | APP跳转路径
+| app_path {data-indent=1} | string | APP的H5跳转路径
 | usage_description {data-required data-indent=1} | string | 券使用说明
 | coupon_available_store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 券可用门店信息
 | description {data-required data-indent=2} | string | 券可用门店描述
 | mini_program_appid {data-indent=2} | string | 小程序AppID
 | mini_program_path {data-indent=2} | string | 小程序跳转路径
+| app_jump_type {data-indent=1} | string | APP跳转类型<br/>`H5` \| `PASSCODE_LINK` 枚举值之一
+| passcode_link {data-indent=1} | string | 口令链接
 | coupon_display_info {data-required} | object {data-tooltip="对应PHP的array"} | 用户商品券展示信息
 | code_display_mode {data-indent=1} | string | 用户商品券Code展示模式<br/>`INVISIBLE` \| `BARCODE` \| `QRCODE` 枚举值之一
 | background_color {data-indent=1} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
@@ -591,12 +607,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | coupon_usage_method_list {data-required data-indent=1} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=1} | string | 小程序AppID
 | mini_program_path {data-indent=1} | string | 小程序跳转路径
-| app_path {data-indent=1} | string | APP跳转路径
+| app_path {data-indent=1} | string | APP的H5跳转路径
 | usage_description {data-required data-indent=1} | string | 券使用说明
 | coupon_available_store_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 券可用门店信息
 | description {data-required data-indent=2} | string | 券可用门店描述
 | mini_program_appid {data-indent=2} | string | 小程序AppID
 | mini_program_path {data-indent=2} | string | 小程序跳转路径
+| app_jump_type {data-indent=1} | string | APP跳转类型<br/>`H5` \| `PASSCODE_LINK` 枚举值之一
+| passcode_link {data-indent=1} | string | 口令链接
 | coupon_display_info {data-required} | object {data-tooltip="对应PHP的array"} | 用户商品券展示信息
 | code_display_mode {data-indent=1} | string | 用户商品券Code展示模式<br/>`INVISIBLE` \| `BARCODE` \| `QRCODE` 枚举值之一
 | background_color {data-indent=1} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
