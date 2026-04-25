@@ -395,7 +395,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
 | openid {data-required} | string | 用户标识
-| is_subscribe {data-required} | string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
+| is_subscribe {data-required} | string | 是否关注公众账号<br/>`N` 枚举值
 | trade_type {data-required} | string | 交易类型
 | bank_type {data-required} | string | 付款银行
 | fee_type | string | 货币类型
