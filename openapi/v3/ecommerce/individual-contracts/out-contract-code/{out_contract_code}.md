@@ -94,6 +94,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | signed_time {data-required} | string | 签约时间
 | auth_state {data-required} | string | 授权状态<br/>`AUTHORIZED` \| `UNAUTHORIZED` 枚举值之一
 | individual_openid | string | 用户OpenID
+| real_name_auth_result | object {data-tooltip="对应PHP的array"} | 实名授权结果
+| scope {data-required data-indent=1} | string | 应用授权作用域<br/>`pay_realname` 枚举值
+| access_token {data-required data-indent=1} | string | 访问令牌
+| access_token_expire_time {data-required data-indent=1} | string | 访问令牌过期时间
 
 {.im-table #response}
 

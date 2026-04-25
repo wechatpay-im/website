@@ -116,7 +116,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | individual_auth_id {data-required} | string | 商品单个人收款方受理授权ID
 | description {data-required} | string | 收款方描述
 | state {data-required} | string | 批次状态<br/>`ACCEPTED` \| `RECEIVED` \| `SUCCESS` \| `DEDUCT_FEE_FAIL` \| `ABNORMAL` \| `ABNORMAL_SETTLE_SUCCESS` 枚举值之一
-| trade_scenario {data-required} | string | 交易场景<br/>`RECOMMERCE` 枚举值
+| trade_scenario {data-required} | string | 交易场景<br/>`RECOMMERCE` \| `INDIVIDUALTRADE` 枚举值之一
 | create_time {data-required} | string | 批次创建时间
 | finish_time | string | 批次完成时间
 | abnormal_type | string | 异常原因类型<br/>`AUTH_RELATIONSHIP_INVALID` \| `USER_PAY_QUOTA_LIMIT` 枚举值之一

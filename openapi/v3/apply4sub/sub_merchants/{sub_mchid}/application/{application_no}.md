@@ -11,6 +11,8 @@ description: 服务商/电商平台（不包括支付机构、银行），可使
 | --- | --- | ---
 | sub_mchid {data-required} | string | 特约商户/二级商户号
 | application_no {data-required} | string | 修改结算账户申请单号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| account_number_rule {data-indent=1} | string | 银行账号展示规则<br/>`ACCOUNT_NUMBER_RULE_MASK_V1` \| `ACCOUNT_NUMBER_RULE_MASK_V2` 枚举值之一
 
 {.im-table #request}
 
@@ -20,6 +22,9 @@ description: 服务商/电商平台（不包括支付机构、银行），可使
 $instance->v3->apply4sub->sub_merchants->_sub_mchid_->application->_application_no_->getAsync([
   'sub_mchid' => '1511101111',
   'application_no' => '102329389XXXX',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -31,6 +36,9 @@ $instance->v3->apply4sub->sub_merchants->_sub_mchid_->application->_application_
 $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}')->getAsync([
   'sub_mchid' => '1511101111',
   'application_no' => '102329389XXXX',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -42,6 +50,9 @@ $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/application/{applicatio
 $instance['v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}']->getAsync([
   'sub_mchid' => '1511101111',
   'application_no' => '102329389XXXX',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -53,6 +64,9 @@ $instance['v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}']
 $response = $instance->v3->apply4sub->sub_merchants->_sub_mchid_->application->_application_no_->get([
   'sub_mchid' => '1511101111',
   'application_no' => '102329389XXXX',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -61,6 +75,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}')->get([
   'sub_mchid' => '1511101111',
   'application_no' => '102329389XXXX',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -69,6 +86,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}']->get([
   'sub_mchid' => '1511101111',
   'application_no' => '102329389XXXX',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
