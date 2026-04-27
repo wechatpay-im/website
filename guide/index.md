@@ -101,16 +101,14 @@ Options:
 ```shell:no-line-numbers
 domains=("api.mch.weixin.qq.com" "apihk.mch.weixin.qq.com" "apius.mch.weixin.qq.com" "apieu.mch.weixin.qq.com")
 
-for domain in "${domains[@]}"
-  do
-    echo $domain
-    for i in {1..1000}
-      do
-        curl -so /dev/null \
-          -w "DNS_lookup:%{time_namelookup}, TCP_handshake:%{time_connect}, SSL_handshake:%{time_appconnect}, TTFB:%{time_starttransfer}, Total:%{time_total}\n" \
-          "https://$domain/payitil/report"
-      done
+for domain in "${domains[@]}"; do
+  echo $domain
+  for i in {1..1000}; do
+    curl -so /dev/null \
+      -w "DNS_lookup:%{time_namelookup}, TCP_handshake:%{time_connect}, SSL_handshake:%{time_appconnect}, TTFB:%{time_starttransfer}, Total:%{time_total}\n" \
+      "https://$domain/payitil/report"
   done
+done
 ```
 
 ## SERVER 模式 {#server}

@@ -246,7 +246,7 @@ $instance->v3->pay->transactions
 
 详细见[这里](/openapi/v3/pay/transactions/id/{transaction_id})
 
-### 关闭订单 {#v3/pay.transactions.outTradeNo.$out_trade_no$.close.post}
+### 关闭订单 {#v3.pay.transactions.outTradeNo.$out_trade_no$.close.post}
 
 ```php
 $instance->v3->pay->transactions
