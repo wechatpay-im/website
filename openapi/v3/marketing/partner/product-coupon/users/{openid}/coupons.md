@@ -233,6 +233,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=4} | string | 开始时间
 | end_time {data-required data-indent=4} | string | 结束时间
+| available_seconds {data-indent=3} | integer | 领取后N秒内有效
 | normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | discount_amount {data-required data-indent=3} | integer | 固定减免金额
@@ -255,6 +256,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=4} | string | 开始时间
 | end_time {data-required data-indent=4} | string | 结束时间
+| available_seconds {data-indent=3} | integer | 领取后N秒内有效
 | normal_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | discount_amount {data-required data-indent=3} | integer | 固定减免金额
@@ -546,6 +548,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=5} | string | 开始时间
 | end_time {data-required data-indent=5} | string | 结束时间
+| available_seconds {data-indent=4} | integer | 领取后N秒内有效
 | normal_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | discount_amount {data-required data-indent=4} | integer | 固定减免金额
@@ -568,6 +571,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=5} | string | 开始时间
 | end_time {data-required data-indent=5} | string | 结束时间
+| available_seconds {data-indent=4} | integer | 领取后N秒内有效
 | normal_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | discount_amount {data-required data-indent=4} | integer | 固定减免金额

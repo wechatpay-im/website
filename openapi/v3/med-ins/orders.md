@@ -506,6 +506,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | attach | string | 附加数据
 | channel_no | string | 渠道号
 | med_ins_test_env | boolean | 是否到医保局测试环境下单
+| med_ins_fail_reason | string | 医保支付失败原因
 
 {.im-table #response}
 
