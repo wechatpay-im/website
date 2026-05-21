@@ -121,7 +121,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | authorization_type {data-required} | string | 特约商户授权类型
 | batch_name {data-required} | string | 批次名称
 | batch_remark {data-required} | string | 批次备注
-| close_reason | string | 批次关闭原因
+| close_reason | string | 批次关闭原因<br/>`MERCHANT_REVOCATION` \| `OVERDUE_CLOSE` \| `PAYER_ACCOUNT_ABNORMAL` 枚举值之一
 | total_amount {data-required} | integer | 转账总金额
 | total_num {data-required} | integer | 转账总笔数
 | create_time | string | 批次创建时间
