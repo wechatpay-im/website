@@ -6,6 +6,9 @@
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
+  "overrides": {
+    "esbuild": "0.26.0"
+  },
   "dependencies": {
     "vitepress": "^1.6.4"
   }
