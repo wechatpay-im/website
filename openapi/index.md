@@ -632,7 +632,7 @@ next:
 | | [查询申请单审核结果](/openapi/v3/apply4subject/applyment#get)
 | | [撤销申请单(申请单编号)](/openapi/v3/apply4subject/applyment/{applyment_id}/cancel)
 | | [撤销申请单(业务申请编号)](/openapi/v3/apply4subject/applyment/{business_code}/cancel)
-| 文件上传 {data-protocol=v3 rowspan=2} | | [商户图片文件上传](/openapi/v3/merchant/media/upload)
+| 文件上传 {data-protocol=v3 rowspan=2} | | [商户文件上传](/openapi/v3/merchant/media/upload)
 | | [商户视频文件上传](/openapi/v3/merchant/media/video_upload)
 | 商户风险管理 {data-protocol=v3 rowspan=10} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
 | [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}

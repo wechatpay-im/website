@@ -1611,7 +1611,7 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             ...[
-              ['商户图片文件上传', '/openapi/v3/merchant/media/upload'],
+              ['商户文件上传', '/openapi/v3/merchant/media/upload'],
               ['商户视频文件上传', '/openapi/v3/merchant/media/video_upload'],
             ].map(transArrayItem),
             {
@@ -2018,7 +2018,7 @@ function openapiSidebar() {
                 ['进件子商户', '/openapi/v3/global/merchants'],
                 ['查询子商户', '/openapi/v3/global/merchants/{sub_mchid}#get'],
                 ['修改子商户', '/openapi/v3/global/merchants/{sub_mchid}#patch'],
-                ['上传图片', '/openapi/v3/merchant/media/upload#global'],
+                ['文件上传', '/openapi/v3/merchant/media/upload#global'],
               ].map(transArrayItem),
             },
             {
@@ -2465,7 +2465,7 @@ function acquiringBankMixedSidebar() {
             ['提交费率优惠活动报名申请', '/openapi/v3/rate-activity/applications'],
             ['查询费率优惠申请结果', '/openapi/v3/rate-activity/applications/id/{application_id}#get'],
             ['修改费率优惠申请单信息', '/openapi/v3/rate-activity/applications/id/{application_id}#patch'],
-            ['申请单图片资料上传', '/openapi/v3/merchant/media/upload'],
+            ['申请单文件上传', '/openapi/v3/merchant/media/upload'],
           ].map(transArrayItem),
         },
         {
