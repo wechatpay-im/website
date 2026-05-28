@@ -135,7 +135,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | finder_video_id {data-required data-indent=2} | string | 视频号视频ID
 | finder_video_cover_image_url {data-required data-indent=2} | string | 视频号封面图
 | coupon_code | string | 券code
-| coupon_state | string | 券状态<br/>`SENDED` \| `USED` \| `EXPIRED` 枚举值之一
+| coupon_state | string | 券状态<br/>`SENDED` \| `USED` \| `EXPIRED` \| `DELETED` \| `DEACTIVATED` \| `PENDING_REDEEM` \| `REDEEM_CONFIRMING` \| `REDEEM_FAILED` \| `REDEEM_EXPIRED` 枚举值之一
 | stock_id | string | 批次号
 | transferable | boolean | 是否允许转赠
 | shareable | boolean | 是否允许分享链接
