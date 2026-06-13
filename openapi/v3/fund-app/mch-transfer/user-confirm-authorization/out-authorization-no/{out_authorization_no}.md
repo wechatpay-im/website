@@ -10,6 +10,8 @@ description: 根据商户单号用户自动收款授权的详细信息。
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | out_authorization_no {data-required} | string | 商户侧授权单号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| is_display_authorization {data-indent=1} | boolean | 是否展示用户授权信息
 
 {.im-table #request}
 
@@ -18,6 +20,9 @@ description: 根据商户单号用户自动收款授权的详细信息。
 ```php [异步纯链式]
 $instance->v3->fundApp->mchTransfer->userConfirmAuthorization->outAuthorizationNo->_out_authorization_no_->getAsync([
   'out_authorization_no' => 'plfk2020042013',
+  'query' => [
+    'is_display_authorization' => true,
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -28,6 +33,9 @@ $instance->v3->fundApp->mchTransfer->userConfirmAuthorization->outAuthorizationN
 ```php [异步声明式]
 $instance->chain('v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}')->getAsync([
   'out_authorization_no' => 'plfk2020042013',
+  'query' => [
+    'is_display_authorization' => true,
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -38,6 +46,9 @@ $instance->chain('v3/fund-app/mch-transfer/user-confirm-authorization/out-author
 ```php [异步属性式]
 $instance['v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}']->getAsync([
   'out_authorization_no' => 'plfk2020042013',
+  'query' => [
+    'is_display_authorization' => true,
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -48,6 +59,9 @@ $instance['v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization
 ```php [同步纯链式]
 $response = $instance->v3->fundApp->mchTransfer->userConfirmAuthorization->outAuthorizationNo->_out_authorization_no_->get([
   'out_authorization_no' => 'plfk2020042013',
+  'query' => [
+    'is_display_authorization' => true,
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -55,6 +69,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}')->get([
   'out_authorization_no' => 'plfk2020042013',
+  'query' => [
+    'is_display_authorization' => true,
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -62,6 +79,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/fund-app/mch-transfer/user-confirm-authorization/out-authorization-no/{out_authorization_no}']->get([
   'out_authorization_no' => 'plfk2020042013',
+  'query' => [
+    'is_display_authorization' => true,
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -83,6 +103,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | transfer_scene_id | string | 转账场景ID
 | user_recv_perception | string | 用户收款感知
 | create_time | string | 单据创建时间
+| package_info | string | 跳转领取页面的package信息
 
 {.im-table #response}
 

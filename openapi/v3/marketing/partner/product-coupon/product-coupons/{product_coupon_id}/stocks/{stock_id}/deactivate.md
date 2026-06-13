@@ -178,7 +178,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-required data-indent=2} | string | 券可用门店描述
 | mini_program_appid {data-indent=2} | string | 小程序AppID
 | mini_program_path {data-indent=2} | string | 小程序跳转路径
-| app_jump_type {data-indent=1} | string | APP跳转类型<br/>`H5` \| `PASSCODE_LINK` 枚举值之一
+| app_jump_type {data-indent=1} | string | APP跳转类型<br/>`H5` \| `PASSCODE_LINK` \| `USAGE_GUIDE` 枚举值之一
 | passcode_link {data-indent=1} | string | 口令链接
 | coupon_display_info {data-required} | object {data-tooltip="对应PHP的array"} | 用户商品券展示信息
 | code_display_mode {data-indent=1} | string | 用户商品券Code展示模式<br/>`INVISIBLE` \| `BARCODE` \| `QRCODE` 枚举值之一

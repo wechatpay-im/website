@@ -39,7 +39,7 @@
 | device {data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
 | start_device_id {data-indent=2} | string | 服务开始的设备ID
 | end_device_id {data-indent=2} | string | 服务结束的设备ID
-| materiel_no {data-indent=2} | string | 物料编码
+| materiel_no {data-indent=2} | string | 物料URL
 
 {.im-table #request}
 
