@@ -78,6 +78,7 @@
   --im-feature-shadow: rgba(0, 0, 0, 0.1);
   --im-feature-shadow-hover: rgba(0, 0, 0, 0.3);
   --vp-c-bg-soft: rgba(255, 255, 245, .6);
+  --vp-c-bg-alt: transparent;
   background: linear-gradient(-40deg, var(--im-gradient-p1), var(--im-gradient-p2), var(--im-gradient-p3), var(--im-gradient-p4));
   background-size: 120% 120%;
   --vp-c-bg: transparent;

@@ -80,6 +80,31 @@ export default defineConfig({
         forceLocale: false,
       },
     },
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            displayDetails: '显示详细列表',
+            noResultsText: '没有结果',
+            backButtonTitle: '关闭搜索',
+            resetButtonTitle: '重置搜索',
+            footer: {
+              selectText: '选择',
+              selectKeyAriaLabel: '输入',
+              navigateText: '导航',
+              navigateUpKeyAriaLabel: '上箭头',
+              navigateDownKeyAriaLabel: '下箭头',
+              closeText: '关闭',
+            },
+          },
+        },
+      },
+    },
     nav: [
       {
         text: '指南',

@@ -1,5 +1,5 @@
 diff --git a/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js b/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js
-index fcc35e8..c3fba2b 100644
+index fcc35e8..29df7d4 100644
 --- a/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js
 +++ b/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js
 @@ -35149,16 +35149,17 @@ function createContainer(klass, defaultTitle, md) {
@@ -38,3 +38,43 @@ index fcc35e8..c3fba2b 100644
    };
    if (options.gfmAlerts !== false) {
      md.use(gitHubAlertsPlugin);
+@@ -40453,11 +40458,14 @@ async function localSearchPlugin(siteConfig) {
+     const env = { path: file, relativePath, cleanUrls };
+     const md_raw = await fs.promises.readFile(file, "utf-8");
+     const md_src = processIncludes(srcDir, md_raw, file, []);
+-    if (options._render) return await options._render(md_src, env, md);
++    let html;
++    if (options._render) html = await options._render(md_src, env, md);
+     else {
+-      const html = md.render(md_src, env);
+-      return env.frontmatter?.search === false ? "" : html;
++      html = md.render(md_src, env);
++      if (env.frontmatter?.search === false) return "";
+     }
++    if (env.frontmatter) html = resolveFrontmatterExpressions(html, env.frontmatter);
++    return html;
+   }
+   const indexByLocales = /* @__PURE__ */ new Map();
+   function getIndexByLocale(locale) {
+@@ -40617,6 +40625,21 @@ function getSearchableText(content) {
+ function clearHtmlTags(str) {
+   return str.replace(/<[^>]*>/g, "");
+ }
++function resolveFrontmatterExpressions(html, frontmatter) {
++  return html.replace(
++    /\{\{\s*\$frontmatter\.(\S+?)\s*\}\}/g,
++    (match, key) => {
++      const value = key
++        .split('.')
++        .reduce(
++          (object, key) => (object != null ? object[key] : undefined),
++          frontmatter
++        )
++
++      return value != null ? String(value) : match
++    }
++  );
++}
+ 
+ var utils$2 = {};
+ 
