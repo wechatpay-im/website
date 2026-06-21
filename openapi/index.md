@@ -49,10 +49,10 @@ next:
 | [回退结果查询](/openapi/v2/pay/profitsharingreturnquery) {colspan=2}
 | 账单 {data-protocol=v2 rowspan=2} | [下载交易账单](/openapi/v2/pay/downloadbill) {colspan=2}
 | [下载资金账单](/openapi/v2/pay/downloadfundflow) {colspan=2}
-| 现金红包 {data-protocol=v2 rowspan=4} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) {colspan=2}
+| 现金红包 {data-protocol=v2 rowspan=4} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) :closed_lock_with_key: {colspan=2}
 | [~~发放裂变红包~~](/openapi/v2/mmpaymkttransfers/sendgroupredpack) :no_entry_sign: {colspan=2}
-| [查询红包记录](/openapi/v2/mmpaymkttransfers/gethbinfo) {colspan=2}
-| [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb) {colspan=2}
+| [查询红包记录](/openapi/v2/mmpaymkttransfers/gethbinfo) :closed_lock_with_key: {colspan=2}
+| [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb) :closed_lock_with_key: {colspan=2}
 | 付款到零钱 {data-protocol=v2 rowspan=2} | [发起付款](/openapi/v2/mmpaymkttransfers/promotion/transfers)
 | [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo)
 | 付款到银行卡 {data-protocol=v2 rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
