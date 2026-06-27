@@ -83,9 +83,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | address | string | 地址信息
 | policy_state {data-required} | string | 保单状态<br/>`POLICY_STATE_ISSUING` \| `POLICY_STATE_APPROVED` \| `POLICY_STATE_DECLINED` \| `POLICY_STATE_INACTIVE` 枚举值之一
 | policy_code | string | 保司保单号
-| plan_id {data-required} | number | 委托代扣模板ID
+| plan_id {data-required} | string | 委托代扣模板ID
 | out_contract_code {data-required} | string | 商户签约协议号
 | policy_periods {data-required} | number[] | 保单的扣费周期列表
+| free_insurance {data-required} | boolean | 是否为赠险
+| combined_payment | boolean | 是否与其它保单合并扣费
+| payment_method | string | 缴费方式<br/>`PAYMENT_METHOD_OTHER` \| `PAYMENT_METHOD_PERIOD` \| `PAYMENT_METHOD_LUMP_SUM` 枚举值之一
+| period_premium_mode | string | 期交保费模式<br/>`PERIOD_PREMIUM_MODE_EQUAL` \| `PERIOD_PREMIUM_MODE_FIRST_DIFF` \| `PERIOD_PREMIUM_MODE_MULTI_DIFF` 枚举值之一
+| payment_period | string | 缴费周期<br/>`PAYMENT_PERIOD_DAY` \| `PAYMENT_PERIOD_WEEK` \| `PAYMENT_PERIOD_BIWEEKLY` \| `PAYMENT_PERIOD_MONTH` \| `PAYMENT_PERIOD_QUARTER` \| `PAYMENT_PERIOD_HALF_YEAR` \| `PAYMENT_PERIOD_YEAR` 枚举值之一
+| first_period_amount | integer | 首期保费金额
+| subsequent_period_amount | integer | 后续每期保费金额
+| coverage_term_type | string | 保障期限类型<br/>`COVERAGE_TERM_TYPE_FIXED_DATE` \| `COVERAGE_TERM_TYPE_LIFETIME` 枚举值之一
 
 {.im-table #response}
 
@@ -113,9 +121,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | address {data-indent=1} | string | 地址信息
 | policy_state {data-indent=1} | string | 保单状态<br/>`POLICY_STATE_ISSUING` \| `POLICY_STATE_APPROVED` \| `POLICY_STATE_DECLINED` \| `POLICY_STATE_INACTIVE` 枚举值之一
 | policy_code {data-indent=1} | string | 保司保单号
-| plan_id {data-indent=1} | number | 委托代扣模板ID
+| plan_id {data-indent=1} | string | 委托代扣模板ID
 | out_contract_code {data-indent=1} | string | 商户签约协议号
 | policy_periods {data-indent=1} | number[] | 保单的扣费周期列表
+| free_insurance {data-indent=1} | boolean | 是否为赠险
+| combined_payment {data-indent=1} | boolean | 是否与其它保单合并扣费
+| payment_method {data-indent=1} | string | 缴费方式<br/>`PAYMENT_METHOD_OTHER` \| `PAYMENT_METHOD_PERIOD` \| `PAYMENT_METHOD_LUMP_SUM` 枚举值之一
+| period_premium_mode {data-indent=1} | string | 期交保费模式<br/>`PERIOD_PREMIUM_MODE_EQUAL` \| `PERIOD_PREMIUM_MODE_FIRST_DIFF` \| `PERIOD_PREMIUM_MODE_MULTI_DIFF` 枚举值之一
+| payment_period {data-indent=1} | string | 缴费周期<br/>`PAYMENT_PERIOD_DAY` \| `PAYMENT_PERIOD_WEEK` \| `PAYMENT_PERIOD_BIWEEKLY` \| `PAYMENT_PERIOD_MONTH` \| `PAYMENT_PERIOD_QUARTER` \| `PAYMENT_PERIOD_HALF_YEAR` \| `PAYMENT_PERIOD_YEAR` 枚举值之一
+| first_period_amount {data-indent=1} | integer | 首期保费金额
+| subsequent_period_amount {data-indent=1} | integer | 后续每期保费金额
+| coverage_term_type {data-indent=1} | string | 保障期限类型<br/>`COVERAGE_TERM_TYPE_FIXED_DATE` \| `COVERAGE_TERM_TYPE_LIFETIME` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -127,23 +143,31 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->inspolicymgr->deduct->policies->_out_insurance_no_->patchAsync([
   'out_insurance_no' => 'Auisihsiahishishi4hihsid123418id',
   'json' => [
-    'insured_name_list'  => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
-    'insurance_name'     => '微医保·百万医疗险',
-    'effective_time'     => '2025-09-21T17:11:12+08:00',
-    'expired_time'       => '2025-09-21T17:11:12+08:00',
-    'coverage_detail'    => '可保190种疾病，确诊一次性赔付',
-    'support_renewal'    => true,
-    'start_renewal_time' => '2025-09-21T17:11:12+08:00',
-    'end_renewal_time'   => '2025-09-21T17:11:12+08:00',
-    'policy_type'        => 'POLICY_TYPE_OTHER',
-    'car_number'         => '粤B·AB123',
-    'pet_name'           => '小狗',
-    'address'            => '上海市浦东新区晨晖路1001号',
-    'policy_state'       => 'POLICY_STATE_ISSUING',
-    'policy_code'        => 'Coisihsiaxishishi4hihsid1ii411co',
-    'plan_id'            => 12535,
-    'out_contract_code'  => 'wxwtdk20200910100000',
-    'policy_periods'     => [1],
+    'insured_name_list'        => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
+    'insurance_name'           => '微医保·百万医疗险',
+    'effective_time'           => '2025-09-21T17:11:12+08:00',
+    'expired_time'             => '2025-09-21T17:11:12+08:00',
+    'coverage_detail'          => '可保190种疾病，确诊一次性赔付',
+    'support_renewal'          => true,
+    'start_renewal_time'       => '2025-09-21T17:11:12+08:00',
+    'end_renewal_time'         => '2025-09-21T17:11:12+08:00',
+    'policy_type'              => 'POLICY_TYPE_OTHER',
+    'car_number'               => '粤B·AB123',
+    'pet_name'                 => '小狗',
+    'address'                  => '上海市浦东新区晨晖路1001号',
+    'policy_state'             => 'POLICY_STATE_ISSUING',
+    'policy_code'              => 'Coisihsiaxishishi4hihsid1ii411co',
+    'plan_id'                  => '12535',
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'policy_periods'           => [1],
+    'free_insurance'           => true,
+    'combined_payment'         => true,
+    'payment_method'           => 'PAYMENT_METHOD_OTHER',
+    'period_premium_mode'      => 'PERIOD_PREMIUM_MODE_EQUAL',
+    'payment_period'           => 'PAYMENT_PERIOD_DAY',
+    'first_period_amount'      => 8000,
+    'subsequent_period_amount' => 5000,
+    'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -159,23 +183,31 @@ $instance->v3->inspolicymgr->deduct->policies->_out_insurance_no_->patchAsync([
 $instance->chain('v3/inspolicymgr/deduct/policies/{out_insurance_no}')->patchAsync([
   'out_insurance_no' => 'Auisihsiahishishi4hihsid123418id',
   'json' => [
-    'insured_name_list'  => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
-    'insurance_name'     => '微医保·百万医疗险',
-    'effective_time'     => '2025-09-21T17:11:12+08:00',
-    'expired_time'       => '2025-09-21T17:11:12+08:00',
-    'coverage_detail'    => '可保190种疾病，确诊一次性赔付',
-    'support_renewal'    => true,
-    'start_renewal_time' => '2025-09-21T17:11:12+08:00',
-    'end_renewal_time'   => '2025-09-21T17:11:12+08:00',
-    'policy_type'        => 'POLICY_TYPE_OTHER',
-    'car_number'         => '粤B·AB123',
-    'pet_name'           => '小狗',
-    'address'            => '上海市浦东新区晨晖路1001号',
-    'policy_state'       => 'POLICY_STATE_ISSUING',
-    'policy_code'        => 'Coisihsiaxishishi4hihsid1ii411co',
-    'plan_id'            => 12535,
-    'out_contract_code'  => 'wxwtdk20200910100000',
-    'policy_periods'     => [1],
+    'insured_name_list'        => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
+    'insurance_name'           => '微医保·百万医疗险',
+    'effective_time'           => '2025-09-21T17:11:12+08:00',
+    'expired_time'             => '2025-09-21T17:11:12+08:00',
+    'coverage_detail'          => '可保190种疾病，确诊一次性赔付',
+    'support_renewal'          => true,
+    'start_renewal_time'       => '2025-09-21T17:11:12+08:00',
+    'end_renewal_time'         => '2025-09-21T17:11:12+08:00',
+    'policy_type'              => 'POLICY_TYPE_OTHER',
+    'car_number'               => '粤B·AB123',
+    'pet_name'                 => '小狗',
+    'address'                  => '上海市浦东新区晨晖路1001号',
+    'policy_state'             => 'POLICY_STATE_ISSUING',
+    'policy_code'              => 'Coisihsiaxishishi4hihsid1ii411co',
+    'plan_id'                  => '12535',
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'policy_periods'           => [1],
+    'free_insurance'           => true,
+    'combined_payment'         => true,
+    'payment_method'           => 'PAYMENT_METHOD_OTHER',
+    'period_premium_mode'      => 'PERIOD_PREMIUM_MODE_EQUAL',
+    'payment_period'           => 'PAYMENT_PERIOD_DAY',
+    'first_period_amount'      => 8000,
+    'subsequent_period_amount' => 5000,
+    'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -191,23 +223,31 @@ $instance->chain('v3/inspolicymgr/deduct/policies/{out_insurance_no}')->patchAsy
 $instance['v3/inspolicymgr/deduct/policies/{out_insurance_no}']->patchAsync([
   'out_insurance_no' => 'Auisihsiahishishi4hihsid123418id',
   'json' => [
-    'insured_name_list'  => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
-    'insurance_name'     => '微医保·百万医疗险',
-    'effective_time'     => '2025-09-21T17:11:12+08:00',
-    'expired_time'       => '2025-09-21T17:11:12+08:00',
-    'coverage_detail'    => '可保190种疾病，确诊一次性赔付',
-    'support_renewal'    => true,
-    'start_renewal_time' => '2025-09-21T17:11:12+08:00',
-    'end_renewal_time'   => '2025-09-21T17:11:12+08:00',
-    'policy_type'        => 'POLICY_TYPE_OTHER',
-    'car_number'         => '粤B·AB123',
-    'pet_name'           => '小狗',
-    'address'            => '上海市浦东新区晨晖路1001号',
-    'policy_state'       => 'POLICY_STATE_ISSUING',
-    'policy_code'        => 'Coisihsiaxishishi4hihsid1ii411co',
-    'plan_id'            => 12535,
-    'out_contract_code'  => 'wxwtdk20200910100000',
-    'policy_periods'     => [1],
+    'insured_name_list'        => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
+    'insurance_name'           => '微医保·百万医疗险',
+    'effective_time'           => '2025-09-21T17:11:12+08:00',
+    'expired_time'             => '2025-09-21T17:11:12+08:00',
+    'coverage_detail'          => '可保190种疾病，确诊一次性赔付',
+    'support_renewal'          => true,
+    'start_renewal_time'       => '2025-09-21T17:11:12+08:00',
+    'end_renewal_time'         => '2025-09-21T17:11:12+08:00',
+    'policy_type'              => 'POLICY_TYPE_OTHER',
+    'car_number'               => '粤B·AB123',
+    'pet_name'                 => '小狗',
+    'address'                  => '上海市浦东新区晨晖路1001号',
+    'policy_state'             => 'POLICY_STATE_ISSUING',
+    'policy_code'              => 'Coisihsiaxishishi4hihsid1ii411co',
+    'plan_id'                  => '12535',
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'policy_periods'           => [1],
+    'free_insurance'           => true,
+    'combined_payment'         => true,
+    'payment_method'           => 'PAYMENT_METHOD_OTHER',
+    'period_premium_mode'      => 'PERIOD_PREMIUM_MODE_EQUAL',
+    'payment_period'           => 'PAYMENT_PERIOD_DAY',
+    'first_period_amount'      => 8000,
+    'subsequent_period_amount' => 5000,
+    'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -223,23 +263,31 @@ $instance['v3/inspolicymgr/deduct/policies/{out_insurance_no}']->patchAsync([
 $response = $instance->v3->inspolicymgr->deduct->policies->_out_insurance_no_->patch([
   'out_insurance_no' => 'Auisihsiahishishi4hihsid123418id',
   'json' => [
-    'insured_name_list'  => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
-    'insurance_name'     => '微医保·百万医疗险',
-    'effective_time'     => '2025-09-21T17:11:12+08:00',
-    'expired_time'       => '2025-09-21T17:11:12+08:00',
-    'coverage_detail'    => '可保190种疾病，确诊一次性赔付',
-    'support_renewal'    => true,
-    'start_renewal_time' => '2025-09-21T17:11:12+08:00',
-    'end_renewal_time'   => '2025-09-21T17:11:12+08:00',
-    'policy_type'        => 'POLICY_TYPE_OTHER',
-    'car_number'         => '粤B·AB123',
-    'pet_name'           => '小狗',
-    'address'            => '上海市浦东新区晨晖路1001号',
-    'policy_state'       => 'POLICY_STATE_ISSUING',
-    'policy_code'        => 'Coisihsiaxishishi4hihsid1ii411co',
-    'plan_id'            => 12535,
-    'out_contract_code'  => 'wxwtdk20200910100000',
-    'policy_periods'     => [1],
+    'insured_name_list'        => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
+    'insurance_name'           => '微医保·百万医疗险',
+    'effective_time'           => '2025-09-21T17:11:12+08:00',
+    'expired_time'             => '2025-09-21T17:11:12+08:00',
+    'coverage_detail'          => '可保190种疾病，确诊一次性赔付',
+    'support_renewal'          => true,
+    'start_renewal_time'       => '2025-09-21T17:11:12+08:00',
+    'end_renewal_time'         => '2025-09-21T17:11:12+08:00',
+    'policy_type'              => 'POLICY_TYPE_OTHER',
+    'car_number'               => '粤B·AB123',
+    'pet_name'                 => '小狗',
+    'address'                  => '上海市浦东新区晨晖路1001号',
+    'policy_state'             => 'POLICY_STATE_ISSUING',
+    'policy_code'              => 'Coisihsiaxishishi4hihsid1ii411co',
+    'plan_id'                  => '12535',
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'policy_periods'           => [1],
+    'free_insurance'           => true,
+    'combined_payment'         => true,
+    'payment_method'           => 'PAYMENT_METHOD_OTHER',
+    'period_premium_mode'      => 'PERIOD_PREMIUM_MODE_EQUAL',
+    'payment_period'           => 'PAYMENT_PERIOD_DAY',
+    'first_period_amount'      => 8000,
+    'subsequent_period_amount' => 5000,
+    'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -252,23 +300,31 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/inspolicymgr/deduct/policies/{out_insurance_no}')->patch([
   'out_insurance_no' => 'Auisihsiahishishi4hihsid123418id',
   'json' => [
-    'insured_name_list'  => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
-    'insurance_name'     => '微医保·百万医疗险',
-    'effective_time'     => '2025-09-21T17:11:12+08:00',
-    'expired_time'       => '2025-09-21T17:11:12+08:00',
-    'coverage_detail'    => '可保190种疾病，确诊一次性赔付',
-    'support_renewal'    => true,
-    'start_renewal_time' => '2025-09-21T17:11:12+08:00',
-    'end_renewal_time'   => '2025-09-21T17:11:12+08:00',
-    'policy_type'        => 'POLICY_TYPE_OTHER',
-    'car_number'         => '粤B·AB123',
-    'pet_name'           => '小狗',
-    'address'            => '上海市浦东新区晨晖路1001号',
-    'policy_state'       => 'POLICY_STATE_ISSUING',
-    'policy_code'        => 'Coisihsiaxishishi4hihsid1ii411co',
-    'plan_id'            => 12535,
-    'out_contract_code'  => 'wxwtdk20200910100000',
-    'policy_periods'     => [1],
+    'insured_name_list'        => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
+    'insurance_name'           => '微医保·百万医疗险',
+    'effective_time'           => '2025-09-21T17:11:12+08:00',
+    'expired_time'             => '2025-09-21T17:11:12+08:00',
+    'coverage_detail'          => '可保190种疾病，确诊一次性赔付',
+    'support_renewal'          => true,
+    'start_renewal_time'       => '2025-09-21T17:11:12+08:00',
+    'end_renewal_time'         => '2025-09-21T17:11:12+08:00',
+    'policy_type'              => 'POLICY_TYPE_OTHER',
+    'car_number'               => '粤B·AB123',
+    'pet_name'                 => '小狗',
+    'address'                  => '上海市浦东新区晨晖路1001号',
+    'policy_state'             => 'POLICY_STATE_ISSUING',
+    'policy_code'              => 'Coisihsiaxishishi4hihsid1ii411co',
+    'plan_id'                  => '12535',
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'policy_periods'           => [1],
+    'free_insurance'           => true,
+    'combined_payment'         => true,
+    'payment_method'           => 'PAYMENT_METHOD_OTHER',
+    'period_premium_mode'      => 'PERIOD_PREMIUM_MODE_EQUAL',
+    'payment_period'           => 'PAYMENT_PERIOD_DAY',
+    'first_period_amount'      => 8000,
+    'subsequent_period_amount' => 5000,
+    'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -281,23 +337,31 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/inspolicymgr/deduct/policies/{out_insurance_no}']->patch([
   'out_insurance_no' => 'Auisihsiahishishi4hihsid123418id',
   'json' => [
-    'insured_name_list'  => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
-    'insurance_name'     => '微医保·百万医疗险',
-    'effective_time'     => '2025-09-21T17:11:12+08:00',
-    'expired_time'       => '2025-09-21T17:11:12+08:00',
-    'coverage_detail'    => '可保190种疾病，确诊一次性赔付',
-    'support_renewal'    => true,
-    'start_renewal_time' => '2025-09-21T17:11:12+08:00',
-    'end_renewal_time'   => '2025-09-21T17:11:12+08:00',
-    'policy_type'        => 'POLICY_TYPE_OTHER',
-    'car_number'         => '粤B·AB123',
-    'pet_name'           => '小狗',
-    'address'            => '上海市浦东新区晨晖路1001号',
-    'policy_state'       => 'POLICY_STATE_ISSUING',
-    'policy_code'        => 'Coisihsiaxishishi4hihsid1ii411co',
-    'plan_id'            => 12535,
-    'out_contract_code'  => 'wxwtdk20200910100000',
-    'policy_periods'     => [1],
+    'insured_name_list'        => ['tCk1JSUV2QUlCQURBTkJna3Foa2lHOXc'],
+    'insurance_name'           => '微医保·百万医疗险',
+    'effective_time'           => '2025-09-21T17:11:12+08:00',
+    'expired_time'             => '2025-09-21T17:11:12+08:00',
+    'coverage_detail'          => '可保190种疾病，确诊一次性赔付',
+    'support_renewal'          => true,
+    'start_renewal_time'       => '2025-09-21T17:11:12+08:00',
+    'end_renewal_time'         => '2025-09-21T17:11:12+08:00',
+    'policy_type'              => 'POLICY_TYPE_OTHER',
+    'car_number'               => '粤B·AB123',
+    'pet_name'                 => '小狗',
+    'address'                  => '上海市浦东新区晨晖路1001号',
+    'policy_state'             => 'POLICY_STATE_ISSUING',
+    'policy_code'              => 'Coisihsiaxishishi4hihsid1ii411co',
+    'plan_id'                  => '12535',
+    'out_contract_code'        => 'wxwtdk20200910100000',
+    'policy_periods'           => [1],
+    'free_insurance'           => true,
+    'combined_payment'         => true,
+    'payment_method'           => 'PAYMENT_METHOD_OTHER',
+    'period_premium_mode'      => 'PERIOD_PREMIUM_MODE_EQUAL',
+    'payment_period'           => 'PAYMENT_PERIOD_DAY',
+    'first_period_amount'      => 8000,
+    'subsequent_period_amount' => 5000,
+    'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -326,9 +390,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | address | string | 地址信息
 | policy_state {data-required} | string | 保单状态<br/>`POLICY_STATE_ISSUING` \| `POLICY_STATE_APPROVED` \| `POLICY_STATE_DECLINED` \| `POLICY_STATE_INACTIVE` 枚举值之一
 | policy_code | string | 保司保单号
-| plan_id {data-required} | number | 委托代扣模板ID
+| plan_id {data-required} | string | 委托代扣模板ID
 | out_contract_code {data-required} | string | 商户签约协议号
 | policy_periods {data-required} | number[] | 保单的扣费周期列表
+| free_insurance {data-required} | boolean | 是否为赠险
+| combined_payment | boolean | 是否与其它保单合并扣费
+| payment_method | string | 缴费方式<br/>`PAYMENT_METHOD_OTHER` \| `PAYMENT_METHOD_PERIOD` \| `PAYMENT_METHOD_LUMP_SUM` 枚举值之一
+| period_premium_mode | string | 期交保费模式<br/>`PERIOD_PREMIUM_MODE_EQUAL` \| `PERIOD_PREMIUM_MODE_FIRST_DIFF` \| `PERIOD_PREMIUM_MODE_MULTI_DIFF` 枚举值之一
+| payment_period | string | 缴费周期<br/>`PAYMENT_PERIOD_DAY` \| `PAYMENT_PERIOD_WEEK` \| `PAYMENT_PERIOD_BIWEEKLY` \| `PAYMENT_PERIOD_MONTH` \| `PAYMENT_PERIOD_QUARTER` \| `PAYMENT_PERIOD_HALF_YEAR` \| `PAYMENT_PERIOD_YEAR` 枚举值之一
+| first_period_amount | integer | 首期保费金额
+| subsequent_period_amount | integer | 后续每期保费金额
+| coverage_term_type | string | 保障期限类型<br/>`COVERAGE_TERM_TYPE_FIXED_DATE` \| `COVERAGE_TERM_TYPE_LIFETIME` 枚举值之一
 
 {.im-table #response}
 
