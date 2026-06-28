@@ -19,7 +19,7 @@ description: 接口适用场景：服务商申请添加交易连接名片规则�
 
 ```php [异步纯链式]
 $instance->v3->brand->card->cardLinks->businessCode->_business_code_->getAsync([
-  'business_code' => '190001351110000',
+  'business_code' => '1900013511_10000',
   'query' => [
     'brand_id' => '120344',
   ],
@@ -32,7 +32,7 @@ $instance->v3->brand->card->cardLinks->businessCode->_business_code_->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/brand/card/card-links/business-code/{business_code}')->getAsync([
-  'business_code' => '190001351110000',
+  'business_code' => '1900013511_10000',
   'query' => [
     'brand_id' => '120344',
   ],
@@ -45,7 +45,7 @@ $instance->chain('v3/brand/card/card-links/business-code/{business_code}')->getA
 
 ```php [异步属性式]
 $instance['v3/brand/card/card-links/business-code/{business_code}']->getAsync([
-  'business_code' => '190001351110000',
+  'business_code' => '1900013511_10000',
   'query' => [
     'brand_id' => '120344',
   ],
@@ -58,7 +58,7 @@ $instance['v3/brand/card/card-links/business-code/{business_code}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->brand->card->cardLinks->businessCode->_business_code_->get([
-  'business_code' => '190001351110000',
+  'business_code' => '1900013511_10000',
   'query' => [
     'brand_id' => '120344',
   ],
@@ -68,7 +68,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/card/card-links/business-code/{business_code}')->get([
-  'business_code' => '190001351110000',
+  'business_code' => '1900013511_10000',
   'query' => [
     'brand_id' => '120344',
   ],
@@ -78,7 +78,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/brand/card/card-links/business-code/{business_code}']->get([
-  'business_code' => '190001351110000',
+  'business_code' => '1900013511_10000',
   'query' => [
     'brand_id' => '120344',
   ],

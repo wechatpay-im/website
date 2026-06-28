@@ -21,7 +21,7 @@
 ```php [异步纯链式]
 $instance->v3->brand->card->cardLinks->postAsync([
   'json' => [
-    'business_code'   => '190001351110000',
+    'business_code'   => '1900013511_10000',
     'brand_id'        => '1004',
     'payment_scene'   => 'MINI_PROGRAM',
     'appid'           => 'wxea9c30890f48d5ae',
@@ -38,7 +38,7 @@ $instance->v3->brand->card->cardLinks->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/brand/card/card-links')->postAsync([
   'json' => [
-    'business_code'   => '190001351110000',
+    'business_code'   => '1900013511_10000',
     'brand_id'        => '1004',
     'payment_scene'   => 'MINI_PROGRAM',
     'appid'           => 'wxea9c30890f48d5ae',
@@ -55,7 +55,7 @@ $instance->chain('v3/brand/card/card-links')->postAsync([
 ```php [异步属性式]
 $instance['v3/brand/card/card-links']->postAsync([
   'json' => [
-    'business_code'   => '190001351110000',
+    'business_code'   => '1900013511_10000',
     'brand_id'        => '1004',
     'payment_scene'   => 'MINI_PROGRAM',
     'appid'           => 'wxea9c30890f48d5ae',
@@ -72,7 +72,7 @@ $instance['v3/brand/card/card-links']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->brand->card->cardLinks->post([
   'json' => [
-    'business_code'   => '190001351110000',
+    'business_code'   => '1900013511_10000',
     'brand_id'        => '1004',
     'payment_scene'   => 'MINI_PROGRAM',
     'appid'           => 'wxea9c30890f48d5ae',
@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/card/card-links')->post([
   'json' => [
-    'business_code'   => '190001351110000',
+    'business_code'   => '1900013511_10000',
     'brand_id'        => '1004',
     'payment_scene'   => 'MINI_PROGRAM',
     'appid'           => 'wxea9c30890f48d5ae',
@@ -100,7 +100,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/brand/card/card-links']->post([
   'json' => [
-    'business_code'   => '190001351110000',
+    'business_code'   => '1900013511_10000',
     'brand_id'        => '1004',
     'payment_scene'   => 'MINI_PROGRAM',
     'appid'           => 'wxea9c30890f48d5ae',

@@ -37,7 +37,7 @@
 ```php [异步纯链式]
 $instance->v3->brand->card->cardConfigs->postAsync([
   'json' => [
-    'business_code'           => '190001351110000',
+    'business_code'           => '1900013511_10000',
     'brand_id'                => '1004',
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
@@ -67,7 +67,7 @@ $instance->v3->brand->card->cardConfigs->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/brand/card/card-configs')->postAsync([
   'json' => [
-    'business_code'           => '190001351110000',
+    'business_code'           => '1900013511_10000',
     'brand_id'                => '1004',
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
@@ -97,7 +97,7 @@ $instance->chain('v3/brand/card/card-configs')->postAsync([
 ```php [异步属性式]
 $instance['v3/brand/card/card-configs']->postAsync([
   'json' => [
-    'business_code'           => '190001351110000',
+    'business_code'           => '1900013511_10000',
     'brand_id'                => '1004',
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
@@ -127,7 +127,7 @@ $instance['v3/brand/card/card-configs']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->brand->card->cardConfigs->post([
   'json' => [
-    'business_code'           => '190001351110000',
+    'business_code'           => '1900013511_10000',
     'brand_id'                => '1004',
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
@@ -154,7 +154,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/card/card-configs')->post([
   'json' => [
-    'business_code'           => '190001351110000',
+    'business_code'           => '1900013511_10000',
     'brand_id'                => '1004',
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
@@ -181,7 +181,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/brand/card/card-configs']->post([
   'json' => [
-    'business_code'           => '190001351110000',
+    'business_code'           => '1900013511_10000',
     'brand_id'                => '1004',
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
@@ -236,7 +236,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->brand->card->cardConfigs->getAsync([
   'query' => [
-    'business_code' => '190001351110000',
+    'business_code' => '1900013511_10000',
     'applyment_id'  => '1111111111',
     'brand_id'      => '120344',
   ],
@@ -250,7 +250,7 @@ $instance->v3->brand->card->cardConfigs->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/brand/card/card-configs')->getAsync([
   'query' => [
-    'business_code' => '190001351110000',
+    'business_code' => '1900013511_10000',
     'applyment_id'  => '1111111111',
     'brand_id'      => '120344',
   ],
@@ -264,7 +264,7 @@ $instance->chain('v3/brand/card/card-configs')->getAsync([
 ```php [异步属性式]
 $instance['v3/brand/card/card-configs']->getAsync([
   'query' => [
-    'business_code' => '190001351110000',
+    'business_code' => '1900013511_10000',
     'applyment_id'  => '1111111111',
     'brand_id'      => '120344',
   ],
@@ -278,7 +278,7 @@ $instance['v3/brand/card/card-configs']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->brand->card->cardConfigs->get([
   'query' => [
-    'business_code' => '190001351110000',
+    'business_code' => '1900013511_10000',
     'applyment_id'  => '1111111111',
     'brand_id'      => '120344',
   ],
@@ -289,7 +289,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/card/card-configs')->get([
   'query' => [
-    'business_code' => '190001351110000',
+    'business_code' => '1900013511_10000',
     'applyment_id'  => '1111111111',
     'brand_id'      => '120344',
   ],
@@ -300,7 +300,7 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/brand/card/card-configs']->get([
   'query' => [
-    'business_code' => '190001351110000',
+    'business_code' => '1900013511_10000',
     'applyment_id'  => '1111111111',
     'brand_id'      => '120344',
   ],
