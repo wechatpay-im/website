@@ -132,16 +132,6 @@ export default defineConfig({
         activeMatch: '^/devkit/'
       },
       {
-        text: '开发工具箱',
-        link: 'https://www.devtools.cn/',
-        rel: 'opener',
-      },
-      {
-        text: '开发者工具',
-        link: 'https://tools.aifuwu.net/',
-        rel: 'opener',
-      },
-      {
         text: 'EasyWeChat',
         link: 'https://easywechat.com/',
         rel: 'opener',
@@ -153,6 +143,14 @@ export default defineConfig({
       },
     ],
     socialLinks: [
+      {
+        icon: 'devtools',
+        link: 'https://www.devtools.cn/',
+      },
+      {
+        icon: 'devbox',
+        link: 'https://tools.aifuwu.net/',
+      },
       {
         icon: 'github',
         link: 'https://github.com/wechatpay-im',
@@ -389,6 +387,7 @@ function openapiSidebar() {
                     ['H5纯签约', '/openapi/v2/papay/h5entrustweb'],
                     ['APP预签约', '/openapi/v2/papay/preentrustweb'],
                     ['查询签约关系', '/openapi/v2/papay/querycontract'],
+                    ['申请解约', '/openapi/v2/papay/deletecontract'],
                     ['申请扣款', '/openapi/v2/pay/pappayapply'],
                     ['查询订单', '/openapi/v2/pay/paporderquery'],
                   ].map(transArrayItem),
@@ -401,6 +400,7 @@ function openapiSidebar() {
                     ['H5纯签约', '/openapi/v2/papay/partner/h5entrustweb'],
                     ['APP预签约', '/openapi/v2/papay/partner/preentrustweb'],
                     ['查询签约关系', '/openapi/v2/papay/partner/querycontract'],
+                    ['申请解约', '/openapi/v2/papay/partner/deletecontract'],
                     ['申请扣款', '/openapi/v2/pay/partner/pappayapply'],
                     ['查询订单', '/openapi/v2/pay/partner/paporderquery'],
                   ].map(transArrayItem),
@@ -408,9 +408,6 @@ function openapiSidebar() {
                 transArrayItem(
                   ['支付中签约', '/openapi/v2/pay/contractorder'],
                 ),
-                transArrayItem(
-                  ['申请解约', '/openapi/v2/papay/deletecontract'],
-                )
               ],
             },
             ...(depositSidebar()?.[0]?.items ?? []),
@@ -1714,6 +1711,22 @@ function openapiSidebar() {
               ['获取对私银行卡号开户银行', '/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account'],
             ].map(transArrayItem),
           ],
+        },
+        {
+          text: '停车缴费服务',
+          collapsed: true,
+          items: [
+            ['提交停车场进件申请', '/openapi/v3/parking/reminders/application'],
+            ['查询停车场进件申请单', '/openapi/v3/parking/reminders/application/query'],
+            ['查询停车场进件申请单列表', '/openapi/v3/parking/reminders/applications'],
+            ['撤回停车场进件申请', '/openapi/v3/parking/reminders/application/withdraw'],
+            ['同步车辆入场通知', '/openapi/v3/parking/reminders/entry'],
+            ['同步车辆离场通知', '/openapi/v3/parking/reminders/exit'],
+            ['同步支付结果通知', '/openapi/v3/parking/reminders/payment'],
+            ['同步非临停扩展支付', '/openapi/v3/parking/reminders/ext-payment'],
+            ['查询停车场信息', '/openapi/v3/parking/reminders/parking-lot'],
+            ['查询停车费用', '/openapi/v3/parking/reminders/parking-fee'],
+          ].map(transArrayItem),
         },
         {
           text: '消费者投诉',

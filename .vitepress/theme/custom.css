@@ -154,6 +154,10 @@
   margin: 0 .25em .25em 0;
 }
 
+.vpi-social-devtools {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='m10 10-2 2 2 2'/%3E%3Cpath d='m14 14 2-2-2-2'/%3E%3C/svg%3E")
+}
+
 .vp-doc table.im-table {
   display: table;
   width: 100%;

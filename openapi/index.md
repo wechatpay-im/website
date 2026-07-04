@@ -62,13 +62,14 @@ next:
 | [查询付款记录](/openapi/v2/mmpaymkttransfers/promotion/querywwsptrans2pocket)
 | [发放企业红包](/openapi/v2/mmpaymkttransfers/sendworkwxredpack)
 | [查询红包记录](/openapi/v2/mmpaymkttransfers/queryworkwxredpack)
-| 扣款服务 {data-protocol=v2 rowspan=7} | [公众号纯签约](/openapi/v2/papay/entrustweb) | [公众号纯签约](/openapi/v2/papay/partner/entrustweb)
+| 扣款服务 {data-protocol=v2 rowspan=8} | [公众号纯签约](/openapi/v2/papay/entrustweb) | [公众号纯签约](/openapi/v2/papay/partner/entrustweb)
 | [H5纯签约](/openapi/v2/papay/h5entrustweb) | [H5纯签约](/openapi/v2/papay/partner/h5entrustweb)
 | [APP预签约](/openapi/v2/papay/preentrustweb) | [APP预签约](/openapi/v2/papay/partner/preentrustweb)
 | [查询签约关系](/openapi/v2/papay/querycontract) | [查询签约关系](/openapi/v2/papay/partner/querycontract)
+| [申请解约](/openapi/v2/papay/deletecontract) | [申请解约](/openapi/v2/papay/partner/deletecontract)
 | [申请扣款](/openapi/v2/pay/pappayapply) | [申请扣款](/openapi/v2/pay/partner/pappayapply)
+| [查询订单](/openapi/v2/pay/paporderquery) | [查询订单](/openapi/v2/pay/partner/paporderquery)
 | [支付中签约](/openapi/v2/pay/contractorder) {colspan=2}
-| [申请解约](/openapi/v2/papay/deletecontract) {colspan=2}
 | 酒店押金 {data-protocol=v2 rowspan=8} | [支付押金(付款码支付)](/openapi/v2/deposit/micropay) {colspan=2}
 | [支付押金(人脸支付)](/openapi/v2/deposit/facepay) {colspan=2}
 | [支付押金(统一下单)](/openapi/v2/deposit/unifiedorder) {colspan=2}
@@ -663,6 +664,16 @@ next:
 | | [查询支持对公业务的银行列表](/openapi/v3/capital/capitallhh/banks/corporate-banking)
 | | [查询支持个人业务的银行列表](/openapi/v3/capital/capitallhh/banks/personal-banking)
 | | [获取对私银行卡号开户银行](/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account)
+| 停车缴费服务 {data-protocol=v3 rowspan=10} | | [提交停车场进件申请](/openapi/v3/parking/reminders/application)
+| | [查询停车场进件申请单](/openapi/v3/parking/reminders/application/query)
+| | [查询停车场进件申请单列表](/openapi/v3/parking/reminders/applications)
+| | [撤回停车场进件申请](/openapi/v3/parking/reminders/application/withdraw)
+| | [同步车辆入场通知](/openapi/v3/parking/reminders/entry)
+| | [同步车辆离场通知](/openapi/v3/parking/reminders/exit)
+| | [同步支付结果通知](/openapi/v3/parking/reminders/payment)
+| | [同步非临停扩展支付](/openapi/v3/parking/reminders/ext-payment)
+| | [查询停车场信息](/openapi/v3/parking/reminders/parking-lot)
+| | [查询停车费用](/openapi/v3/parking/reminders/parking-fee)
 | 消费者投诉 {data-protocol=v3 rowspan=17} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
 | [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
 | [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
