@@ -12,6 +12,9 @@ description: 查询最新商户资料 接口限频：单商户号10次/分钟
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | mchid {data-required data-indent=1} | string | 微信支付商户号
 | bal_account_no {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 额度台账号
+| card_no {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 卡号
+| sgn_no {data-indent=1} | string | 商户子账户协议号
+| req_scene {data-indent=1} | string | 请求场景<br/>`SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` \| `SJT_MICRO_MERCHANT` \| `WX_SHOP_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -24,6 +27,9 @@ $instance->v3->aggracctBc->wbChannel->account->mch_archives->getAsync([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -40,6 +46,9 @@ $instance->chain('v3/aggracct-bc/wb-channel/account/mch_archives')->getAsync([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -56,6 +65,9 @@ $instance['v3/aggracct-bc/wb-channel/account/mch_archives']->getAsync([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -72,6 +84,9 @@ $response = $instance->v3->aggracctBc->wbChannel->account->mch_archives->get([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -85,6 +100,9 @@ $response = $instance->chain('v3/aggracct-bc/wb-channel/account/mch_archives')->
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -98,6 +116,9 @@ $response = $instance['v3/aggracct-bc/wb-channel/account/mch_archives']->get([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -112,10 +133,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | mchid | string | 微信支付商户号
 | bal_account_no | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 额度台账号
-| merchant_type | string | 主体类型<br/>`1` \| `2` 枚举值之一
+| merchant_type | string | 主体类型<br/>`1` \| `2` \| `3` 枚举值之一
 | merchant_id_type | string | 主体证件类型<br/>`12` 枚举值
-| merchant_name | string | 主体证件登记名称
-| merchant_id_no | string | 主体证件号码
+| merchant_name | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 主体证件登记名称
+| merchant_id_no | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 主体证件号码
 | effective_date | string | 主体证件有效期起始日
 | expire_date | string | 主体证件有效期结束日
 | merchant_img_front_id | string | 主体证件正面影像ID
@@ -130,6 +151,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | legal_representative_img_front_id {data-required data-indent=1} | string | 法定代表人证件正面影像ID
 | legal_representative_img_back_id {data-required data-indent=1} | string | 法定代表人证件反面影像ID
 | legal_representative_address {data-required data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 法定代表人居住地址
+| legal_representative_issue_authority {data-indent=1} | string | 法定代表人发证机关
+| legal_representative_nation {data-indent=1} | string | 法定代表人民族
 | beneficial_owner | object[] {data-tooltip="对应PHP的array"} | 受益所有人信息列表
 | beneficial_owner_no {data-required data-indent=1} | string | 受益所有人编号
 | beneficial_owner_id_type {data-required data-indent=1} | string | 受益所有人证件类型<br/>`01` 枚举值
@@ -140,6 +163,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | beneficial_owner_img_front_id {data-required data-indent=1} | string | 受益所有人证件正面影像ID
 | beneficial_owner_img_back_id {data-required data-indent=1} | string | 受益所有人证件反面影像ID
 | beneficial_owner_address {data-required data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 受益所有人居住地址
+| card_no | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 卡号
+| sgn_no | string | 商户子账户协议号
 
 {.im-table #response}
 

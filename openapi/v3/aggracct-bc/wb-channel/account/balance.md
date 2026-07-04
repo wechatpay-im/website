@@ -12,6 +12,9 @@ description: 接口限频：单查询渠道额度目标商户号100qps
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | mchid {data-required data-indent=1} | string | 微信支付商户号
 | bal_account_no {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 额度台账号
+| card_no {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 卡号
+| sgn_no {data-indent=1} | string | 商户子账户协议号
+| req_scene {data-indent=1} | string | 请求场景<br/>`SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` \| `SJT_MICRO_MERCHANT` \| `WX_SHOP_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -24,6 +27,9 @@ $instance->v3->aggracctBc->wbChannel->account->balance->getAsync([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -40,6 +46,9 @@ $instance->chain('v3/aggracct-bc/wb-channel/account/balance')->getAsync([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -56,6 +65,9 @@ $instance['v3/aggracct-bc/wb-channel/account/balance']->getAsync([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -72,6 +84,9 @@ $response = $instance->v3->aggracctBc->wbChannel->account->balance->get([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -85,6 +100,9 @@ $response = $instance->chain('v3/aggracct-bc/wb-channel/account/balance')->get([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -98,6 +116,9 @@ $response = $instance['v3/aggracct-bc/wb-channel/account/balance']->get([
   'query' => [
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
+    'card_no'        => 'example_card_no',
+    'sgn_no'         => 'example_sgn_no',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

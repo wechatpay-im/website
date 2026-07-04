@@ -16,6 +16,10 @@ description: 接口仅受理，管控成功或失败后，可以通知发起方�
 | punish_scene {data-required data-indent=1} | integer | 管控场景
 | punish_reason {data-indent=1} | string | 管控原因
 | punish_end_time {data-indent=1} | string | 管控结束时间
+| card_no {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 目标下管卡号
+| sgn_no {data-indent=1} | string | 目标下管商户子账户协议号
+| req_scene {data-indent=1} | string | 请求场景<br/>`SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` \| `SJT_MICRO_MERCHANT` \| `WX_SHOP_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` 枚举值之一
+| fund_repatriation_strategy {data-indent=1} | string | 微众资金划回策略<br/>`ALL_FORBIDDEN` \| `ALL_ALLOWED_WHEN_UNIQUE` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -26,12 +30,16 @@ description: 接口仅受理，管控成功或失败后，可以通知发起方�
 ```php [异步纯链式]
 $instance->v3->aggracctBc->wbChannel->controlOrders->punish->postAsync([
   'json' => [
-    'out_request_no'  => 'example_out_request_no',
-    'mchid'           => 'example_mchid',
-    'bal_account_no'  => 'example_bal_account_no',
-    'punish_scene'    => 1,
-    'punish_reason'   => 'example_punish_reason',
-    'punish_end_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'             => 'example_out_request_no',
+    'mchid'                      => 'example_mchid',
+    'bal_account_no'             => 'example_bal_account_no',
+    'punish_scene'               => 1,
+    'punish_reason'              => 'example_punish_reason',
+    'punish_end_time'            => '2015-05-20T13:29:35+08:00',
+    'card_no'                    => 'example_card_no',
+    'sgn_no'                     => 'example_sgn_no',
+    'req_scene'                  => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
+    'fund_repatriation_strategy' => 'ALL_FORBIDDEN',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -46,12 +54,16 @@ $instance->v3->aggracctBc->wbChannel->controlOrders->punish->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/aggracct-bc/wb-channel/control-orders/punish')->postAsync([
   'json' => [
-    'out_request_no'  => 'example_out_request_no',
-    'mchid'           => 'example_mchid',
-    'bal_account_no'  => 'example_bal_account_no',
-    'punish_scene'    => 1,
-    'punish_reason'   => 'example_punish_reason',
-    'punish_end_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'             => 'example_out_request_no',
+    'mchid'                      => 'example_mchid',
+    'bal_account_no'             => 'example_bal_account_no',
+    'punish_scene'               => 1,
+    'punish_reason'              => 'example_punish_reason',
+    'punish_end_time'            => '2015-05-20T13:29:35+08:00',
+    'card_no'                    => 'example_card_no',
+    'sgn_no'                     => 'example_sgn_no',
+    'req_scene'                  => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
+    'fund_repatriation_strategy' => 'ALL_FORBIDDEN',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -66,12 +78,16 @@ $instance->chain('v3/aggracct-bc/wb-channel/control-orders/punish')->postAsync([
 ```php [异步属性式]
 $instance['v3/aggracct-bc/wb-channel/control-orders/punish']->postAsync([
   'json' => [
-    'out_request_no'  => 'example_out_request_no',
-    'mchid'           => 'example_mchid',
-    'bal_account_no'  => 'example_bal_account_no',
-    'punish_scene'    => 1,
-    'punish_reason'   => 'example_punish_reason',
-    'punish_end_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'             => 'example_out_request_no',
+    'mchid'                      => 'example_mchid',
+    'bal_account_no'             => 'example_bal_account_no',
+    'punish_scene'               => 1,
+    'punish_reason'              => 'example_punish_reason',
+    'punish_end_time'            => '2015-05-20T13:29:35+08:00',
+    'card_no'                    => 'example_card_no',
+    'sgn_no'                     => 'example_sgn_no',
+    'req_scene'                  => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
+    'fund_repatriation_strategy' => 'ALL_FORBIDDEN',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -86,12 +102,16 @@ $instance['v3/aggracct-bc/wb-channel/control-orders/punish']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->aggracctBc->wbChannel->controlOrders->punish->post([
   'json' => [
-    'out_request_no'  => 'example_out_request_no',
-    'mchid'           => 'example_mchid',
-    'bal_account_no'  => 'example_bal_account_no',
-    'punish_scene'    => 1,
-    'punish_reason'   => 'example_punish_reason',
-    'punish_end_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'             => 'example_out_request_no',
+    'mchid'                      => 'example_mchid',
+    'bal_account_no'             => 'example_bal_account_no',
+    'punish_scene'               => 1,
+    'punish_reason'              => 'example_punish_reason',
+    'punish_end_time'            => '2015-05-20T13:29:35+08:00',
+    'card_no'                    => 'example_card_no',
+    'sgn_no'                     => 'example_sgn_no',
+    'req_scene'                  => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
+    'fund_repatriation_strategy' => 'ALL_FORBIDDEN',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -103,12 +123,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/aggracct-bc/wb-channel/control-orders/punish')->post([
   'json' => [
-    'out_request_no'  => 'example_out_request_no',
-    'mchid'           => 'example_mchid',
-    'bal_account_no'  => 'example_bal_account_no',
-    'punish_scene'    => 1,
-    'punish_reason'   => 'example_punish_reason',
-    'punish_end_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'             => 'example_out_request_no',
+    'mchid'                      => 'example_mchid',
+    'bal_account_no'             => 'example_bal_account_no',
+    'punish_scene'               => 1,
+    'punish_reason'              => 'example_punish_reason',
+    'punish_end_time'            => '2015-05-20T13:29:35+08:00',
+    'card_no'                    => 'example_card_no',
+    'sgn_no'                     => 'example_sgn_no',
+    'req_scene'                  => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
+    'fund_repatriation_strategy' => 'ALL_FORBIDDEN',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -120,12 +144,16 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/aggracct-bc/wb-channel/control-orders/punish']->post([
   'json' => [
-    'out_request_no'  => 'example_out_request_no',
-    'mchid'           => 'example_mchid',
-    'bal_account_no'  => 'example_bal_account_no',
-    'punish_scene'    => 1,
-    'punish_reason'   => 'example_punish_reason',
-    'punish_end_time' => '2015-05-20T13:29:35+08:00',
+    'out_request_no'             => 'example_out_request_no',
+    'mchid'                      => 'example_mchid',
+    'bal_account_no'             => 'example_bal_account_no',
+    'punish_scene'               => 1,
+    'punish_reason'              => 'example_punish_reason',
+    'punish_end_time'            => '2015-05-20T13:29:35+08:00',
+    'card_no'                    => 'example_card_no',
+    'sgn_no'                     => 'example_sgn_no',
+    'req_scene'                  => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
+    'fund_repatriation_strategy' => 'ALL_FORBIDDEN',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
