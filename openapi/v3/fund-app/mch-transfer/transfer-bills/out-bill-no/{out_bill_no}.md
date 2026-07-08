@@ -74,7 +74,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_bill_no {data-required} | string | 商户单号
 | transfer_bill_no {data-required} | string | 商家转账订单号
 | appid {data-required} | string | 商户AppID
-| state {data-required} | string | 单据状态
+| state {data-required} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
 | transfer_amount {data-required} | number | 转账金额
 | transfer_remark {data-required} | string | 转账备注
 | fail_reason | string | 失败原因
@@ -85,4 +85,4 @@ print_r(json_decode((string) $response->getBody(), true));
 
 {.im-table #response}
 
-参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716437)
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716437) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4024814206)
