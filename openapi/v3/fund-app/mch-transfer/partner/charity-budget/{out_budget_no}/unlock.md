@@ -108,6 +108,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | unlock_remark {data-required} | string | 撤销说明
 | locked_time {data-required} | string | 资金锁定时间
 | finished_time {data-required} | string | 完成时间
+| unlocked_amount | integer | 解锁金额
 
 {.im-table #response}
 

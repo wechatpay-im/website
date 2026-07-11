@@ -227,7 +227,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | product_coupon_id {data-required} | string | 商品券ID
 | state {data-required} | string | 商品券状态<br/>`AUDITING` \| `EFFECTIVE` \| `DEACTIVATED` 枚举值之一
 | brand_id {data-required} | string | 品牌ID
-| scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` 枚举值之一
+| scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
 | usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` 枚举值之一
 | single_usage_info | object {data-tooltip="对应PHP的array"} | 单券模式信息
@@ -357,7 +357,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | product_coupon_id {data-required} | string | 商品券ID
 | state {data-required} | string | 商品券状态<br/>`AUDITING` \| `EFFECTIVE` \| `DEACTIVATED` 枚举值之一
 | brand_id {data-required} | string | 品牌ID
-| scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` 枚举值之一
+| scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
 | usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` 枚举值之一
 | single_usage_info | object {data-tooltip="对应PHP的array"} | 单券模式信息
