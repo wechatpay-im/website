@@ -20,6 +20,7 @@ description: 针对微众台账发起渠道结算银行账户更名申请。
 | mchid {data-required data-indent=1} | string | 目标商户号
 | bal_account_no {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 台账ID
 | change_scene {data-required data-indent=1} | string | 变更类型<br/>`SUBJECT_INFO_RENAME` 枚举值
+| req_scene {data-indent=1} | string | 请求场景<br/>`SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` \| `SJT_MICRO_MERCHANT` \| `WX_SHOP_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -34,6 +35,7 @@ $instance->v3->aggracctBc->wbChannel->bankChannelAccount->rename->postAsync([
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
     'change_scene'   => 'SUBJECT_INFO_RENAME',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -52,6 +54,7 @@ $instance->chain('v3/aggracct-bc/wb-channel/bank-channel-account/rename')->postA
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
     'change_scene'   => 'SUBJECT_INFO_RENAME',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -70,6 +73,7 @@ $instance['v3/aggracct-bc/wb-channel/bank-channel-account/rename']->postAsync([
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
     'change_scene'   => 'SUBJECT_INFO_RENAME',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -88,6 +92,7 @@ $response = $instance->v3->aggracctBc->wbChannel->bankChannelAccount->rename->po
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
     'change_scene'   => 'SUBJECT_INFO_RENAME',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -103,6 +108,7 @@ $response = $instance->chain('v3/aggracct-bc/wb-channel/bank-channel-account/ren
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
     'change_scene'   => 'SUBJECT_INFO_RENAME',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -118,6 +124,7 @@ $response = $instance['v3/aggracct-bc/wb-channel/bank-channel-account/rename']->
     'mchid'          => '1900016681',
     'bal_account_no' => '8609cb22e1774a50a930e414cc71eca06121bc',
     'change_scene'   => 'SUBJECT_INFO_RENAME',
+    'req_scene'      => 'SJT_CONVENIENT_SETTLEMENT_SERVICE_MERCHANT',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

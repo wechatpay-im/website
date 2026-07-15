@@ -2702,6 +2702,7 @@ function aggregatedAccountsForWeBankSidebar() {
         ['查询渠道额度', '/openapi/v3/aggracct-bc/wb-channel/account/balance'],
         ['同步资料更新请求审核结果', '/openapi/v3/aggracct-bc/wb-channel/control-orders/info/update/result/notify'],
         ['查询商户资料', '/openapi/v3/aggracct-bc/wb-channel/account/mch_archives'],
+        ['查询商户影像件资料', '/openapi/v3/aggracct-bc/wb-channel/account/mch_media'],
         ['受理渠道结算银行账户更名申请', '/openapi/v3/aggracct-bc/wb-channel/bank-channel-account/rename'],
         ['查询渠道结算银行账户更名申请', '/openapi/v3/aggracct-bc/wb-channel/bank-channel-account/rename/{application_id}'],
       ].map(transArrayItem),
