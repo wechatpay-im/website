@@ -82,7 +82,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | expired_time {data-indent=1} | string | 过期时间
 | access_fail_reason {data-indent=1} | string | 接入失败原因
 | ability_info {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 能力信息
-| type {data-required data-indent=2} | string | 能力类型<br/>`BASE_ABILITY` \| `REAL_ESTATE_ABILITY` 枚举值之一
+| type {data-required data-indent=2} | string | 能力类型<br/>`BASE_ABILITY` \| `PASSENGER_TRANSPORT_ABILITY` \| `REAL_ESTATE_ABILITY` 枚举值之一
 | status {data-required data-indent=2} | string | 能力授权状态<br/>`AUTHORIZED` \| `AUTHORIZE_PENDING` \| `DEAUTHORIZED` \| `AUTHORIZE_FAILED` 枚举值之一
 | authorize_fail_reason {data-indent=2} | string | 能力授权失败原因
 
