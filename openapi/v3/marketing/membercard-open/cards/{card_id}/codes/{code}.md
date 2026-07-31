@@ -116,6 +116,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | balance {data-required data-indent=2} | integer | 更新后用户储值余额
 | add_balance {data-required data-indent=2} | integer | 本次余额变动值
 | balance_remark {data-indent=2} | string | 储值消耗记录
+| need_inform_balance {data-indent=1} | boolean | 是否发送储值变更通知
+| need_inform_level {data-indent=1} | boolean | 是否发送等级变更通知
 
 {.im-table #request}
 
@@ -136,6 +138,8 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_code_->patch
       'add_balance'    => 100,
       'balance_remark' => '购买一杯珍珠奶茶，消耗30元',
     ],
+    'need_inform_balance'    => true,
+    'need_inform_level'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -159,6 +163,8 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes/{code}')->p
       'add_balance'    => 100,
       'balance_remark' => '购买一杯珍珠奶茶，消耗30元',
     ],
+    'need_inform_balance'    => true,
+    'need_inform_level'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -182,6 +188,8 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}']->patchAsy
       'add_balance'    => 100,
       'balance_remark' => '购买一杯珍珠奶茶，消耗30元',
     ],
+    'need_inform_balance'    => true,
+    'need_inform_level'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -205,6 +213,8 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_
       'add_balance'    => 100,
       'balance_remark' => '购买一杯珍珠奶茶，消耗30元',
     ],
+    'need_inform_balance'    => true,
+    'need_inform_level'      => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -225,6 +235,8 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes
       'add_balance'    => 100,
       'balance_remark' => '购买一杯珍珠奶茶，消耗30元',
     ],
+    'need_inform_balance'    => true,
+    'need_inform_level'      => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -245,6 +257,8 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}
       'add_balance'    => 100,
       'balance_remark' => '购买一杯珍珠奶茶，消耗30元',
     ],
+    'need_inform_balance'    => true,
+    'need_inform_level'      => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);

@@ -28,6 +28,20 @@ description: 通过此接口商家可设置是否在用户的会员卡详情页�
 | member_price_word {data-indent=2} | string | 会员专享价文案
 | member_price_appid {data-indent=2} | string | 会员专享价跳转appid
 | member_price_path {data-indent=2} | string | 会员专享价跳转path
+| member_price_title {data-indent=2} | string | 会员专享价标题<br/>`MEMBER_PRICE` \| `MEMBER_ACTIVITY` 枚举值之一
+| favor_module_title {data-indent=2} | string | 会员优惠栏目名称<br/>`FAVOR` \| `VIP` 枚举值之一
+| show_fapiao {data-indent=1} | boolean | 是否展示会员发票
+| fapiao {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员发票
+| fapiao_jump_word {data-indent=2} | string | 发票跳转文案
+| fapiao_jump_appid {data-indent=2} | string | 发票跳转AppID
+| fapiao_jump_path {data-indent=2} | string | 发票跳转path
+| show_guide {data-indent=1} | boolean | 是否展示会员专属咨询
+| guide {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员专属咨询信息
+| staff_name {data-indent=2} | string | 联系人名字
+| head_image_url {data-indent=2} | string | 联系人头像
+| contact_information_name {data-indent=2} | string | 联系方式
+| contact_information_value {data-indent=2} | string | 联系信息值
+| phone_number {data-indent=2} | string | 联系电话
 
 {.im-table #request}
 
@@ -37,9 +51,9 @@ description: 通过此接口商家可设置是否在用户的会员卡详情页�
 $instance->v3->marketing->membercardOpen->cards->_card_id_->rights->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'show_bonus' => true,
-    'show_favor' => true,
-    'bonus'      => [
+    'show_bonus'  => true,
+    'show_favor'  => true,
+    'bonus'       => [
       'init_bonus'          => 100,
       'bonus_value_word'    => '我的积分',
       'bonus_cost_title'    => '积分兑换',
@@ -50,11 +64,27 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->rights->patchAsync([
       'bonus_support_appid' => 'wxea9c30a90fs8d3fe',
       'bonus_support_path'  => 'pages/selfbonus/selfbonus',
     ],
-    'favor'      => [
+    'favor'       => [
       'show_coupon'        => true,
       'member_price_word'  => '周二会员全场八折',
       'member_price_appid' => 'wxea9c30a90fs8d3fe',
       'member_price_path'  => 'pages/favor/favor',
+      'member_price_title' => 'MEMBER_PRICE',
+      'favor_module_title' => 'FAVOR',
+    ],
+    'show_fapiao' => true,
+    'fapiao'      => [
+      'fapiao_jump_word'  => '查看我的发票',
+      'fapiao_jump_appid' => 'wxea9c30a90fs8d3fe',
+      'fapiao_jump_path'  => 'pages/fapiao/fapiao',
+    ],
+    'show_guide'  => true,
+    'guide'       => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
     ],
   ],
 ])
@@ -68,9 +98,9 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->rights->patchAsync([
 $instance->chain('v3/marketing/membercard-open/cards/{card_id}/rights')->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'show_bonus' => true,
-    'show_favor' => true,
-    'bonus'      => [
+    'show_bonus'  => true,
+    'show_favor'  => true,
+    'bonus'       => [
       'init_bonus'          => 100,
       'bonus_value_word'    => '我的积分',
       'bonus_cost_title'    => '积分兑换',
@@ -81,11 +111,27 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/rights')->patchAs
       'bonus_support_appid' => 'wxea9c30a90fs8d3fe',
       'bonus_support_path'  => 'pages/selfbonus/selfbonus',
     ],
-    'favor'      => [
+    'favor'       => [
       'show_coupon'        => true,
       'member_price_word'  => '周二会员全场八折',
       'member_price_appid' => 'wxea9c30a90fs8d3fe',
       'member_price_path'  => 'pages/favor/favor',
+      'member_price_title' => 'MEMBER_PRICE',
+      'favor_module_title' => 'FAVOR',
+    ],
+    'show_fapiao' => true,
+    'fapiao'      => [
+      'fapiao_jump_word'  => '查看我的发票',
+      'fapiao_jump_appid' => 'wxea9c30a90fs8d3fe',
+      'fapiao_jump_path'  => 'pages/fapiao/fapiao',
+    ],
+    'show_guide'  => true,
+    'guide'       => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
     ],
   ],
 ])
@@ -99,9 +145,9 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/rights')->patchAs
 $instance['v3/marketing/membercard-open/cards/{card_id}/rights']->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'show_bonus' => true,
-    'show_favor' => true,
-    'bonus'      => [
+    'show_bonus'  => true,
+    'show_favor'  => true,
+    'bonus'       => [
       'init_bonus'          => 100,
       'bonus_value_word'    => '我的积分',
       'bonus_cost_title'    => '积分兑换',
@@ -112,11 +158,27 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/rights']->patchAsync([
       'bonus_support_appid' => 'wxea9c30a90fs8d3fe',
       'bonus_support_path'  => 'pages/selfbonus/selfbonus',
     ],
-    'favor'      => [
+    'favor'       => [
       'show_coupon'        => true,
       'member_price_word'  => '周二会员全场八折',
       'member_price_appid' => 'wxea9c30a90fs8d3fe',
       'member_price_path'  => 'pages/favor/favor',
+      'member_price_title' => 'MEMBER_PRICE',
+      'favor_module_title' => 'FAVOR',
+    ],
+    'show_fapiao' => true,
+    'fapiao'      => [
+      'fapiao_jump_word'  => '查看我的发票',
+      'fapiao_jump_appid' => 'wxea9c30a90fs8d3fe',
+      'fapiao_jump_path'  => 'pages/fapiao/fapiao',
+    ],
+    'show_guide'  => true,
+    'guide'       => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
     ],
   ],
 ])
@@ -130,9 +192,9 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/rights']->patchAsync([
 $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->rights->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'show_bonus' => true,
-    'show_favor' => true,
-    'bonus'      => [
+    'show_bonus'  => true,
+    'show_favor'  => true,
+    'bonus'       => [
       'init_bonus'          => 100,
       'bonus_value_word'    => '我的积分',
       'bonus_cost_title'    => '积分兑换',
@@ -143,11 +205,27 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->rights->
       'bonus_support_appid' => 'wxea9c30a90fs8d3fe',
       'bonus_support_path'  => 'pages/selfbonus/selfbonus',
     ],
-    'favor'      => [
+    'favor'       => [
       'show_coupon'        => true,
       'member_price_word'  => '周二会员全场八折',
       'member_price_appid' => 'wxea9c30a90fs8d3fe',
       'member_price_path'  => 'pages/favor/favor',
+      'member_price_title' => 'MEMBER_PRICE',
+      'favor_module_title' => 'FAVOR',
+    ],
+    'show_fapiao' => true,
+    'fapiao'      => [
+      'fapiao_jump_word'  => '查看我的发票',
+      'fapiao_jump_appid' => 'wxea9c30a90fs8d3fe',
+      'fapiao_jump_path'  => 'pages/fapiao/fapiao',
+    ],
+    'show_guide'  => true,
+    'guide'       => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
     ],
   ],
 ]);
@@ -158,9 +236,9 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/rights')->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'show_bonus' => true,
-    'show_favor' => true,
-    'bonus'      => [
+    'show_bonus'  => true,
+    'show_favor'  => true,
+    'bonus'       => [
       'init_bonus'          => 100,
       'bonus_value_word'    => '我的积分',
       'bonus_cost_title'    => '积分兑换',
@@ -171,11 +249,27 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/right
       'bonus_support_appid' => 'wxea9c30a90fs8d3fe',
       'bonus_support_path'  => 'pages/selfbonus/selfbonus',
     ],
-    'favor'      => [
+    'favor'       => [
       'show_coupon'        => true,
       'member_price_word'  => '周二会员全场八折',
       'member_price_appid' => 'wxea9c30a90fs8d3fe',
       'member_price_path'  => 'pages/favor/favor',
+      'member_price_title' => 'MEMBER_PRICE',
+      'favor_module_title' => 'FAVOR',
+    ],
+    'show_fapiao' => true,
+    'fapiao'      => [
+      'fapiao_jump_word'  => '查看我的发票',
+      'fapiao_jump_appid' => 'wxea9c30a90fs8d3fe',
+      'fapiao_jump_path'  => 'pages/fapiao/fapiao',
+    ],
+    'show_guide'  => true,
+    'guide'       => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
     ],
   ],
 ]);
@@ -186,9 +280,9 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/marketing/membercard-open/cards/{card_id}/rights']->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'show_bonus' => true,
-    'show_favor' => true,
-    'bonus'      => [
+    'show_bonus'  => true,
+    'show_favor'  => true,
+    'bonus'       => [
       'init_bonus'          => 100,
       'bonus_value_word'    => '我的积分',
       'bonus_cost_title'    => '积分兑换',
@@ -199,11 +293,27 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/rights']->pa
       'bonus_support_appid' => 'wxea9c30a90fs8d3fe',
       'bonus_support_path'  => 'pages/selfbonus/selfbonus',
     ],
-    'favor'      => [
+    'favor'       => [
       'show_coupon'        => true,
       'member_price_word'  => '周二会员全场八折',
       'member_price_appid' => 'wxea9c30a90fs8d3fe',
       'member_price_path'  => 'pages/favor/favor',
+      'member_price_title' => 'MEMBER_PRICE',
+      'favor_module_title' => 'FAVOR',
+    ],
+    'show_fapiao' => true,
+    'fapiao'      => [
+      'fapiao_jump_word'  => '查看我的发票',
+      'fapiao_jump_appid' => 'wxea9c30a90fs8d3fe',
+      'fapiao_jump_path'  => 'pages/fapiao/fapiao',
+    ],
+    'show_guide'  => true,
+    'guide'       => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
     ],
   ],
 ]);

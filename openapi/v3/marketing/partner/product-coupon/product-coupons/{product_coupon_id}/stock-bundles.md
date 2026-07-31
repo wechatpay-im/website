@@ -34,6 +34,7 @@ description: 服务商可以通过该接口为已有的「多次优惠」商品�
 | irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=5} | string | 开始时间
 | end_time {data-required data-indent=5} | string | 结束时间
+| available_seconds {data-indent=4} | integer | 领取后N秒内有效
 | normal_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | discount_amount {data-required data-indent=4} | integer | 固定减免金额
@@ -108,6 +109,7 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
             'begin_time' => '2025-08-01T00:00:00+08:00',
             'end_time'   => '2025-08-31T23:59:59+08:00',
           ],],
+          'available_seconds'               => 0,
         ],
         'normal_coupon_list'      => [[
           'threshold'       => 10000,
@@ -198,6 +200,7 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
             'begin_time' => '2025-08-01T00:00:00+08:00',
             'end_time'   => '2025-08-31T23:59:59+08:00',
           ],],
+          'available_seconds'               => 0,
         ],
         'normal_coupon_list'      => [[
           'threshold'       => 10000,
@@ -288,6 +291,7 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
             'begin_time' => '2025-08-01T00:00:00+08:00',
             'end_time'   => '2025-08-31T23:59:59+08:00',
           ],],
+          'available_seconds'               => 0,
         ],
         'normal_coupon_list'      => [[
           'threshold'       => 10000,
@@ -378,6 +382,7 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_p
             'begin_time' => '2025-08-01T00:00:00+08:00',
             'end_time'   => '2025-08-31T23:59:59+08:00',
           ],],
+          'available_seconds'               => 0,
         ],
         'normal_coupon_list'      => [[
           'threshold'       => 10000,
@@ -465,6 +470,7 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
             'begin_time' => '2025-08-01T00:00:00+08:00',
             'end_time'   => '2025-08-31T23:59:59+08:00',
           ],],
+          'available_seconds'               => 0,
         ],
         'normal_coupon_list'      => [[
           'threshold'       => 10000,
@@ -552,6 +558,7 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{prod
             'begin_time' => '2025-08-01T00:00:00+08:00',
             'end_time'   => '2025-08-31T23:59:59+08:00',
           ],],
+          'available_seconds'               => 0,
         ],
         'normal_coupon_list'      => [[
           'threshold'       => 10000,

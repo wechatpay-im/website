@@ -30,6 +30,9 @@ description: 通过调用此接口可创建代金券批次，包括预充值&免
 | merchant_name {data-indent=2} | string | 商户名称
 | background_color {data-indent=2} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
 | coupon_image {data-indent=2} | string | 券详情图片
+| jump_target {data-indent=2} | string | 卡包跳转目标<br/>`PAYMENT_CODE` \| `MINI_PROGRAM` \| `DEFAULT_PAGE` 枚举值之一
+| mini_program_appid {data-indent=2} | string | 小程序appid
+| mini_program_path {data-indent=2} | string | 小程序path
 | coupon_use_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 核销规则
 | coupon_available_time {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
 | available_begin_time {data-indent=3} | string | 开始时间
@@ -59,6 +62,7 @@ description: 通过调用此接口可创建代金券批次，包括预充值&免
 | available_items {data-indent=2} | string[] | 可核销商品编码
 | unavailable_items {data-indent=2} | string[] | 不参与优惠商品编码
 | available_merchants {data-indent=2} | string[] | 可核销商户号
+| combine_use {data-indent=2} | boolean | 是否可叠加其他优惠
 | out_request_no {data-required data-indent=1} | string | 商户单据号
 | ext_info {data-indent=1} | string | 扩展属性
 
@@ -85,11 +89,14 @@ $instance->v3->marketing->favor->couponStocks->postAsync([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'      => '',
-      'merchant_logo'    => '',
-      'merchant_name'    => '',
-      'background_color' => 'Color010',
-      'coupon_image'     => '',
+      'description'        => '',
+      'merchant_logo'      => '',
+      'merchant_name'      => '',
+      'background_color'   => 'Color010',
+      'coupon_image'       => '',
+      'jump_target'        => 'PAYMENT_CODE',
+      'mini_program_appid' => '',
+      'mini_program_path'  => '',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -126,6 +133,7 @@ $instance->v3->marketing->favor->couponStocks->postAsync([
       'available_items'       => ['123321'],
       'unavailable_items'     => ['789987'],
       'available_merchants'   => ['9856000'],
+      'combine_use'           => true,
     ],
     'out_request_no'       => '',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
@@ -156,11 +164,14 @@ $instance->chain('v3/marketing/favor/coupon-stocks')->postAsync([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'      => '',
-      'merchant_logo'    => '',
-      'merchant_name'    => '',
-      'background_color' => 'Color010',
-      'coupon_image'     => '',
+      'description'        => '',
+      'merchant_logo'      => '',
+      'merchant_name'      => '',
+      'background_color'   => 'Color010',
+      'coupon_image'       => '',
+      'jump_target'        => 'PAYMENT_CODE',
+      'mini_program_appid' => '',
+      'mini_program_path'  => '',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -197,6 +208,7 @@ $instance->chain('v3/marketing/favor/coupon-stocks')->postAsync([
       'available_items'       => ['123321'],
       'unavailable_items'     => ['789987'],
       'available_merchants'   => ['9856000'],
+      'combine_use'           => true,
     ],
     'out_request_no'       => '',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
@@ -227,11 +239,14 @@ $instance['v3/marketing/favor/coupon-stocks']->postAsync([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'      => '',
-      'merchant_logo'    => '',
-      'merchant_name'    => '',
-      'background_color' => 'Color010',
-      'coupon_image'     => '',
+      'description'        => '',
+      'merchant_logo'      => '',
+      'merchant_name'      => '',
+      'background_color'   => 'Color010',
+      'coupon_image'       => '',
+      'jump_target'        => 'PAYMENT_CODE',
+      'mini_program_appid' => '',
+      'mini_program_path'  => '',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -268,6 +283,7 @@ $instance['v3/marketing/favor/coupon-stocks']->postAsync([
       'available_items'       => ['123321'],
       'unavailable_items'     => ['789987'],
       'available_merchants'   => ['9856000'],
+      'combine_use'           => true,
     ],
     'out_request_no'       => '',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
@@ -298,11 +314,14 @@ $response = $instance->v3->marketing->favor->couponStocks->post([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'      => '',
-      'merchant_logo'    => '',
-      'merchant_name'    => '',
-      'background_color' => 'Color010',
-      'coupon_image'     => '',
+      'description'        => '',
+      'merchant_logo'      => '',
+      'merchant_name'      => '',
+      'background_color'   => 'Color010',
+      'coupon_image'       => '',
+      'jump_target'        => 'PAYMENT_CODE',
+      'mini_program_appid' => '',
+      'mini_program_path'  => '',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -339,6 +358,7 @@ $response = $instance->v3->marketing->favor->couponStocks->post([
       'available_items'       => ['123321'],
       'unavailable_items'     => ['789987'],
       'available_merchants'   => ['9856000'],
+      'combine_use'           => true,
     ],
     'out_request_no'       => '',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
@@ -366,11 +386,14 @@ $response = $instance->chain('v3/marketing/favor/coupon-stocks')->post([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'      => '',
-      'merchant_logo'    => '',
-      'merchant_name'    => '',
-      'background_color' => 'Color010',
-      'coupon_image'     => '',
+      'description'        => '',
+      'merchant_logo'      => '',
+      'merchant_name'      => '',
+      'background_color'   => 'Color010',
+      'coupon_image'       => '',
+      'jump_target'        => 'PAYMENT_CODE',
+      'mini_program_appid' => '',
+      'mini_program_path'  => '',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -407,6 +430,7 @@ $response = $instance->chain('v3/marketing/favor/coupon-stocks')->post([
       'available_items'       => ['123321'],
       'unavailable_items'     => ['789987'],
       'available_merchants'   => ['9856000'],
+      'combine_use'           => true,
     ],
     'out_request_no'       => '',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
@@ -434,11 +458,14 @@ $response = $instance['v3/marketing/favor/coupon-stocks']->post([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'      => '',
-      'merchant_logo'    => '',
-      'merchant_name'    => '',
-      'background_color' => 'Color010',
-      'coupon_image'     => '',
+      'description'        => '',
+      'merchant_logo'      => '',
+      'merchant_name'      => '',
+      'background_color'   => 'Color010',
+      'coupon_image'       => '',
+      'jump_target'        => 'PAYMENT_CODE',
+      'mini_program_appid' => '',
+      'mini_program_path'  => '',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -475,6 +502,7 @@ $response = $instance['v3/marketing/favor/coupon-stocks']->post([
       'available_items'       => ['123321'],
       'unavailable_items'     => ['789987'],
       'available_merchants'   => ['9856000'],
+      'combine_use'           => true,
     ],
     'out_request_no'       => '',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',

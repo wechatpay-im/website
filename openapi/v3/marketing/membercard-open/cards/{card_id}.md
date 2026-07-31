@@ -133,6 +133,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_end_time {data-indent=2} | string | 有效期结束时间
 | available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
 | wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
+| available_begin_time {data-indent=2} | string | 有效期开始时间
 | need_display_level {data-indent=1} | boolean | 是否展示会员等级
 | init_level {data-indent=1} | string | 会员初始等级
 | balance_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 储值信息
@@ -152,6 +153,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | url {data-indent=2} | string | 跳转url
 | appid {data-indent=2} | string | 跳转小程序appid
 | path {data-indent=2} | string | 跳转小程序path
+| code_mode {data-indent=1} | string | 会员卡code分配类型<br/>`SYSTEM_ALLOCATE` \| `MERCHANT_DEPOSIT` \| `REAL_TIME` 枚举值之一
+| code_type {data-indent=1} | string | 会员码型<br/>`BAR_CODE` \| `QRCODE` \| `BAR_CODE_AND_QRCODE` \| `NONE_CODE` 枚举值之一
+| need_dynamic_code {data-indent=1} | boolean | 是否启用动态码
 
 {.im-table #request}
 
@@ -173,6 +177,7 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->patchAsync([
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
       'wait_days_after_receive'     => 2,
+      'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
     'need_display_level'     => true,
     'init_level'             => '白银会员',
@@ -197,6 +202,9 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->patchAsync([
       'appid' => 'wxea9c30890f48d5ae',
       'path'  => 'pages/statement/statement',
     ],
+    'code_mode'              => 'SYSTEM_ALLOCATE',
+    'code_type'              => 'BAR_CODE',
+    'need_dynamic_code'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -221,6 +229,7 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patchAsync([
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
       'wait_days_after_receive'     => 2,
+      'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
     'need_display_level'     => true,
     'init_level'             => '白银会员',
@@ -245,6 +254,9 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patchAsync([
       'appid' => 'wxea9c30890f48d5ae',
       'path'  => 'pages/statement/statement',
     ],
+    'code_mode'              => 'SYSTEM_ALLOCATE',
+    'code_type'              => 'BAR_CODE',
+    'need_dynamic_code'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -269,6 +281,7 @@ $instance['v3/marketing/membercard-open/cards/{card_id}']->patchAsync([
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
       'wait_days_after_receive'     => 2,
+      'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
     'need_display_level'     => true,
     'init_level'             => '白银会员',
@@ -293,6 +306,9 @@ $instance['v3/marketing/membercard-open/cards/{card_id}']->patchAsync([
       'appid' => 'wxea9c30890f48d5ae',
       'path'  => 'pages/statement/statement',
     ],
+    'code_mode'              => 'SYSTEM_ALLOCATE',
+    'code_type'              => 'BAR_CODE',
+    'need_dynamic_code'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -317,6 +333,7 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->patch([
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
       'wait_days_after_receive'     => 2,
+      'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
     'need_display_level'     => true,
     'init_level'             => '白银会员',
@@ -341,6 +358,9 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->patch([
       'appid' => 'wxea9c30890f48d5ae',
       'path'  => 'pages/statement/statement',
     ],
+    'code_mode'              => 'SYSTEM_ALLOCATE',
+    'code_type'              => 'BAR_CODE',
+    'need_dynamic_code'      => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -362,6 +382,7 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->pa
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
       'wait_days_after_receive'     => 2,
+      'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
     'need_display_level'     => true,
     'init_level'             => '白银会员',
@@ -386,6 +407,9 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->pa
       'appid' => 'wxea9c30890f48d5ae',
       'path'  => 'pages/statement/statement',
     ],
+    'code_mode'              => 'SYSTEM_ALLOCATE',
+    'code_type'              => 'BAR_CODE',
+    'need_dynamic_code'      => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -407,6 +431,7 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}']->patch([
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
       'wait_days_after_receive'     => 2,
+      'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
     'need_display_level'     => true,
     'init_level'             => '白银会员',
@@ -431,6 +456,9 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}']->patch([
       'appid' => 'wxea9c30890f48d5ae',
       'path'  => 'pages/statement/statement',
     ],
+    'code_mode'              => 'SYSTEM_ALLOCATE',
+    'code_type'              => 'BAR_CODE',
+    'need_dynamic_code'      => true,
   ],
 ]);
 print_r($response->getStatusCode() === 204);

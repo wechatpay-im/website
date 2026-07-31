@@ -37,6 +37,9 @@ description: 商户可以创建满额送活动，用户支付后送全场券，�
 | payment_method {data-indent=4} | string | 支付方式<br/>`CFT` \| `SPECIFIC_BANK_CARD` 枚举值之一
 | bank_abbreviation {data-indent=4} | string | 银行简称
 | goods_tags {data-indent=2} | string[] | 订单优惠标记
+| payment_method_information {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付方式信息
+| payment_method {data-indent=3} | string | 支付方式<br/>`CFT` \| `SPECIFIC_BANK_CARD` 枚举值之一
+| bank_abbreviation {data-indent=3} | string | 银行简称
 | award_send_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动奖品发放规则
 | award_type {data-required data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_option {data-required data-indent=2} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一
@@ -78,16 +81,20 @@ $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->postAsync([
       'mini_programs_path'    => '',
     ],
     'advanced_setting'   => [
-      'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid'  => '',
-      'payment_mode'           => [
+      'delivery_user_category'     => 'BUSIFAVOR',
+      'merchant_member_appid'      => '',
+      'payment_mode'               => [
         'payment_scene_list'         => ['APP_SCENE'],
         'payment_method_information' => [
           'payment_method'    => 'CFT',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags'             => ['string'],
+      'goods_tags'                 => ['string'],
+      'payment_method_information' => [
+        'payment_method'    => 'CFT',
+        'bank_abbreviation' => '',
+      ],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
@@ -135,16 +142,20 @@ $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->post
       'mini_programs_path'    => '',
     ],
     'advanced_setting'   => [
-      'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid'  => '',
-      'payment_mode'           => [
+      'delivery_user_category'     => 'BUSIFAVOR',
+      'merchant_member_appid'      => '',
+      'payment_mode'               => [
         'payment_scene_list'         => ['APP_SCENE'],
         'payment_method_information' => [
           'payment_method'    => 'CFT',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags'             => ['string'],
+      'goods_tags'                 => ['string'],
+      'payment_method_information' => [
+        'payment_method'    => 'CFT',
+        'bank_abbreviation' => '',
+      ],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
@@ -192,16 +203,20 @@ $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->postAsync([
       'mini_programs_path'    => '',
     ],
     'advanced_setting'   => [
-      'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid'  => '',
-      'payment_mode'           => [
+      'delivery_user_category'     => 'BUSIFAVOR',
+      'merchant_member_appid'      => '',
+      'payment_mode'               => [
         'payment_scene_list'         => ['APP_SCENE'],
         'payment_method_information' => [
           'payment_method'    => 'CFT',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags'             => ['string'],
+      'goods_tags'                 => ['string'],
+      'payment_method_information' => [
+        'payment_method'    => 'CFT',
+        'bank_abbreviation' => '',
+      ],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
@@ -249,16 +264,20 @@ $response = $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->
       'mini_programs_path'    => '',
     ],
     'advanced_setting'   => [
-      'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid'  => '',
-      'payment_mode'           => [
+      'delivery_user_category'     => 'BUSIFAVOR',
+      'merchant_member_appid'      => '',
+      'payment_mode'               => [
         'payment_scene_list'         => ['APP_SCENE'],
         'payment_method_information' => [
           'payment_method'    => 'CFT',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags'             => ['string'],
+      'goods_tags'                 => ['string'],
+      'payment_method_information' => [
+        'payment_method'    => 'CFT',
+        'bank_abbreviation' => '',
+      ],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
@@ -303,16 +322,20 @@ $response = $instance->chain('v3/marketing/paygiftactivity/unique-threshold-acti
       'mini_programs_path'    => '',
     ],
     'advanced_setting'   => [
-      'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid'  => '',
-      'payment_mode'           => [
+      'delivery_user_category'     => 'BUSIFAVOR',
+      'merchant_member_appid'      => '',
+      'payment_mode'               => [
         'payment_scene_list'         => ['APP_SCENE'],
         'payment_method_information' => [
           'payment_method'    => 'CFT',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags'             => ['string'],
+      'goods_tags'                 => ['string'],
+      'payment_method_information' => [
+        'payment_method'    => 'CFT',
+        'bank_abbreviation' => '',
+      ],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
@@ -357,16 +380,20 @@ $response = $instance['v3/marketing/paygiftactivity/unique-threshold-activity']-
       'mini_programs_path'    => '',
     ],
     'advanced_setting'   => [
-      'delivery_user_category' => 'BUSIFAVOR',
-      'merchant_member_appid'  => '',
-      'payment_mode'           => [
+      'delivery_user_category'     => 'BUSIFAVOR',
+      'merchant_member_appid'      => '',
+      'payment_mode'               => [
         'payment_scene_list'         => ['APP_SCENE'],
         'payment_method_information' => [
           'payment_method'    => 'CFT',
           'bank_abbreviation' => '',
         ],
       ],
-      'goods_tags'             => ['string'],
+      'goods_tags'                 => ['string'],
+      'payment_method_information' => [
+        'payment_method'    => 'CFT',
+        'bank_abbreviation' => '',
+      ],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',

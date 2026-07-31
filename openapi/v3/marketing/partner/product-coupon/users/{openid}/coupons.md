@@ -15,6 +15,10 @@
 | appid {data-required data-indent=1} | string | 公众账号AppID
 | send_request_no {data-required data-indent=1} | string | 发券请求单号
 | attach {data-indent=1} | string | 自定义附加信息
+| coupon_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
+| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` 枚举值
+| member_tag_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 会员标签信息
+| member_card_id {data-indent=3} | string | 会员卡模板ID
 
 {.im-table #request}
 
@@ -31,6 +35,12 @@ $instance->v3->marketing->partner->productCoupon->users->_openid_->coupons->post
     'appid'             => 'wx233544546545989',
     'send_request_no'   => '34657_20250101_123456',
     'attach'            => 'example_attach',
+    'coupon_tag_info'   => [
+      'coupon_tag_list' => ['MEMBER'],
+      'member_tag_info' => [
+        'member_card_id' => '',
+      ],
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,6 +60,12 @@ $instance->chain('v3/marketing/partner/product-coupon/users/{openid}/coupons')->
     'appid'             => 'wx233544546545989',
     'send_request_no'   => '34657_20250101_123456',
     'attach'            => 'example_attach',
+    'coupon_tag_info'   => [
+      'coupon_tag_list' => ['MEMBER'],
+      'member_tag_info' => [
+        'member_card_id' => '',
+      ],
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -69,6 +85,12 @@ $instance['v3/marketing/partner/product-coupon/users/{openid}/coupons']->postAsy
     'appid'             => 'wx233544546545989',
     'send_request_no'   => '34657_20250101_123456',
     'attach'            => 'example_attach',
+    'coupon_tag_info'   => [
+      'coupon_tag_list' => ['MEMBER'],
+      'member_tag_info' => [
+        'member_card_id' => '',
+      ],
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -88,6 +110,12 @@ $response = $instance->v3->marketing->partner->productCoupon->users->_openid_->c
     'appid'             => 'wx233544546545989',
     'send_request_no'   => '34657_20250101_123456',
     'attach'            => 'example_attach',
+    'coupon_tag_info'   => [
+      'coupon_tag_list' => ['MEMBER'],
+      'member_tag_info' => [
+        'member_card_id' => '',
+      ],
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,6 +132,12 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/users/{openid}
     'appid'             => 'wx233544546545989',
     'send_request_no'   => '34657_20250101_123456',
     'attach'            => 'example_attach',
+    'coupon_tag_info'   => [
+      'coupon_tag_list' => ['MEMBER'],
+      'member_tag_info' => [
+        'member_card_id' => '',
+      ],
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -120,6 +154,12 @@ $response = $instance['v3/marketing/partner/product-coupon/users/{openid}/coupon
     'appid'             => 'wx233544546545989',
     'send_request_no'   => '34657_20250101_123456',
     'attach'            => 'example_attach',
+    'coupon_tag_info'   => [
+      'coupon_tag_list' => ['MEMBER'],
+      'member_tag_info' => [
+        'member_card_id' => '',
+      ],
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

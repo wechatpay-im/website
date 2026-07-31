@@ -16,6 +16,15 @@ description: 通过此接口商家可设置是否在用户的会员卡详情页�
 | bonus_value {data-indent=1} | integer | 变更后的会员积分值
 | add_bonus_value {data-indent=1} | integer | 会员积分变动值
 | out_request_no {data-required data-indent=1} | string | 商户请求单号
+| need_inform_bonus {data-indent=1} | boolean | 是否发送积分变更通知
+| member_price_word {data-indent=1} | string | 会员专享价文案
+| fapiao_jump_word {data-indent=1} | string | 会员发票跳转文案
+| guide {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员专属咨询信息
+| staff_name {data-indent=2} | string | 联系人名字
+| head_image_url {data-indent=2} | string | 联系人头像
+| contact_information_name {data-indent=2} | string | 联系方式
+| contact_information_value {data-indent=2} | string | 联系信息值
+| phone_number {data-indent=2} | string | 联系电话
 
 {.im-table #request}
 
@@ -30,6 +39,16 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_code_->right
     'bonus_value'        => 600,
     'add_bonus_value'    => 100,
     'out_request_no'     => '100002322019090134234sfdf',
+    'need_inform_bonus'  => true,
+    'member_price_word'  => '钻石会员尊享8折',
+    'fapiao_jump_word'   => '3张发票可开',
+    'guide'              => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,6 +66,16 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes/{code}/righ
     'bonus_value'        => 600,
     'add_bonus_value'    => 100,
     'out_request_no'     => '100002322019090134234sfdf',
+    'need_inform_bonus'  => true,
+    'member_price_word'  => '钻石会员尊享8折',
+    'fapiao_jump_word'   => '3张发票可开',
+    'guide'              => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,6 +93,16 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}/rights']->p
     'bonus_value'        => 600,
     'add_bonus_value'    => 100,
     'out_request_no'     => '100002322019090134234sfdf',
+    'need_inform_bonus'  => true,
+    'member_price_word'  => '钻石会员尊享8折',
+    'fapiao_jump_word'   => '3张发票可开',
+    'guide'              => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,6 +120,16 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_
     'bonus_value'        => 600,
     'add_bonus_value'    => 100,
     'out_request_no'     => '100002322019090134234sfdf',
+    'need_inform_bonus'  => true,
+    'member_price_word'  => '钻石会员尊享8折',
+    'fapiao_jump_word'   => '3张发票可开',
+    'guide'              => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
+    ],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -95,6 +144,16 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes
     'bonus_value'        => 600,
     'add_bonus_value'    => 100,
     'out_request_no'     => '100002322019090134234sfdf',
+    'need_inform_bonus'  => true,
+    'member_price_word'  => '钻石会员尊享8折',
+    'fapiao_jump_word'   => '3张发票可开',
+    'guide'              => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
+    ],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -109,6 +168,16 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}
     'bonus_value'        => 600,
     'add_bonus_value'    => 100,
     'out_request_no'     => '100002322019090134234sfdf',
+    'need_inform_bonus'  => true,
+    'member_price_word'  => '钻石会员尊享8折',
+    'fapiao_jump_word'   => '3张发票可开',
+    'guide'              => [
+      'staff_name'                => '酒店管家-何小明',
+      'head_image_url'            => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+      'contact_information_name'  => '微信号',
+      'contact_information_value' => 'weixin123',
+      'phone_number'              => '0755-12345677',
+    ],
   ],
 ]);
 print_r($response->getStatusCode() === 204);

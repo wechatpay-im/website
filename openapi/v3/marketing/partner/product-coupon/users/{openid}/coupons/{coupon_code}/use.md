@@ -24,6 +24,13 @@ description: 品牌方可以通过本接口核销已经发放给用户的商品�
 | sub_mchid {data-indent=2} | string | 子商户号
 | out_request_no {data-required data-indent=1} | string | 核销请求单号
 | sequential_coupon_index {data-indent=1} | integer | 多次优惠索引
+| store_id {data-indent=1} | string | 核销门店ID
+| associated_pay_score_order_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 关联微信支付分订单信息
+| order_id {data-indent=2} | string | 微信支付服务订单号
+| out_order_no {data-indent=2} | string | 商户服务订单号
+| mchid {data-indent=2} | string | 商户号
+| sub_mchid {data-indent=2} | string | 子商户号
+| saved_amount {data-indent=1} | integer | 优惠金额
 
 {.im-table #request}
 
@@ -34,19 +41,27 @@ $instance->v3->marketing->partner->productCoupon->users->_openid_->coupons->_cou
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'coupon_code' => '123446565767',
   'json' => [
-    'brand_id'                => '120344',
-    'product_coupon_id'       => '1000000013',
-    'stock_id'                => '1000000013001',
-    'appid'                   => 'wx233544546545989',
-    'use_time'                => '2025-07-24T00:00+08:00',
-    'associated_order_info'   => [
+    'brand_id'                        => '120344',
+    'product_coupon_id'               => '1000000013',
+    'stock_id'                        => '1000000013001',
+    'appid'                           => 'wx233544546545989',
+    'use_time'                        => '2025-07-24T00:00+08:00',
+    'associated_order_info'           => [
       'transaction_id' => '4200000000123456789123456789',
       'out_trade_no'   => 'trade_no_20250724123456',
       'mchid'          => '1234567890',
       'sub_mchid'      => '1234567890',
     ],
-    'out_request_no'          => '34657_20250101_123456',
-    'sequential_coupon_index' => 0,
+    'out_request_no'                  => '34657_20250101_123456',
+    'sequential_coupon_index'         => 0,
+    'store_id'                        => '',
+    'associated_pay_score_order_info' => [
+      'order_id'     => '',
+      'out_order_no' => '',
+      'mchid'        => '',
+      'sub_mchid'    => '',
+    ],
+    'saved_amount'                    => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,19 +75,27 @@ $instance->chain('v3/marketing/partner/product-coupon/users/{openid}/coupons/{co
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'coupon_code' => '123446565767',
   'json' => [
-    'brand_id'                => '120344',
-    'product_coupon_id'       => '1000000013',
-    'stock_id'                => '1000000013001',
-    'appid'                   => 'wx233544546545989',
-    'use_time'                => '2025-07-24T00:00+08:00',
-    'associated_order_info'   => [
+    'brand_id'                        => '120344',
+    'product_coupon_id'               => '1000000013',
+    'stock_id'                        => '1000000013001',
+    'appid'                           => 'wx233544546545989',
+    'use_time'                        => '2025-07-24T00:00+08:00',
+    'associated_order_info'           => [
       'transaction_id' => '4200000000123456789123456789',
       'out_trade_no'   => 'trade_no_20250724123456',
       'mchid'          => '1234567890',
       'sub_mchid'      => '1234567890',
     ],
-    'out_request_no'          => '34657_20250101_123456',
-    'sequential_coupon_index' => 0,
+    'out_request_no'                  => '34657_20250101_123456',
+    'sequential_coupon_index'         => 0,
+    'store_id'                        => '',
+    'associated_pay_score_order_info' => [
+      'order_id'     => '',
+      'out_order_no' => '',
+      'mchid'        => '',
+      'sub_mchid'    => '',
+    ],
+    'saved_amount'                    => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,19 +109,27 @@ $instance['v3/marketing/partner/product-coupon/users/{openid}/coupons/{coupon_co
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'coupon_code' => '123446565767',
   'json' => [
-    'brand_id'                => '120344',
-    'product_coupon_id'       => '1000000013',
-    'stock_id'                => '1000000013001',
-    'appid'                   => 'wx233544546545989',
-    'use_time'                => '2025-07-24T00:00+08:00',
-    'associated_order_info'   => [
+    'brand_id'                        => '120344',
+    'product_coupon_id'               => '1000000013',
+    'stock_id'                        => '1000000013001',
+    'appid'                           => 'wx233544546545989',
+    'use_time'                        => '2025-07-24T00:00+08:00',
+    'associated_order_info'           => [
       'transaction_id' => '4200000000123456789123456789',
       'out_trade_no'   => 'trade_no_20250724123456',
       'mchid'          => '1234567890',
       'sub_mchid'      => '1234567890',
     ],
-    'out_request_no'          => '34657_20250101_123456',
-    'sequential_coupon_index' => 0,
+    'out_request_no'                  => '34657_20250101_123456',
+    'sequential_coupon_index'         => 0,
+    'store_id'                        => '',
+    'associated_pay_score_order_info' => [
+      'order_id'     => '',
+      'out_order_no' => '',
+      'mchid'        => '',
+      'sub_mchid'    => '',
+    ],
+    'saved_amount'                    => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -112,19 +143,27 @@ $response = $instance->v3->marketing->partner->productCoupon->users->_openid_->c
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'coupon_code' => '123446565767',
   'json' => [
-    'brand_id'                => '120344',
-    'product_coupon_id'       => '1000000013',
-    'stock_id'                => '1000000013001',
-    'appid'                   => 'wx233544546545989',
-    'use_time'                => '2025-07-24T00:00+08:00',
-    'associated_order_info'   => [
+    'brand_id'                        => '120344',
+    'product_coupon_id'               => '1000000013',
+    'stock_id'                        => '1000000013001',
+    'appid'                           => 'wx233544546545989',
+    'use_time'                        => '2025-07-24T00:00+08:00',
+    'associated_order_info'           => [
       'transaction_id' => '4200000000123456789123456789',
       'out_trade_no'   => 'trade_no_20250724123456',
       'mchid'          => '1234567890',
       'sub_mchid'      => '1234567890',
     ],
-    'out_request_no'          => '34657_20250101_123456',
-    'sequential_coupon_index' => 0,
+    'out_request_no'                  => '34657_20250101_123456',
+    'sequential_coupon_index'         => 0,
+    'store_id'                        => '',
+    'associated_pay_score_order_info' => [
+      'order_id'     => '',
+      'out_order_no' => '',
+      'mchid'        => '',
+      'sub_mchid'    => '',
+    ],
+    'saved_amount'                    => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -135,19 +174,27 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/users/{openid}
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'coupon_code' => '123446565767',
   'json' => [
-    'brand_id'                => '120344',
-    'product_coupon_id'       => '1000000013',
-    'stock_id'                => '1000000013001',
-    'appid'                   => 'wx233544546545989',
-    'use_time'                => '2025-07-24T00:00+08:00',
-    'associated_order_info'   => [
+    'brand_id'                        => '120344',
+    'product_coupon_id'               => '1000000013',
+    'stock_id'                        => '1000000013001',
+    'appid'                           => 'wx233544546545989',
+    'use_time'                        => '2025-07-24T00:00+08:00',
+    'associated_order_info'           => [
       'transaction_id' => '4200000000123456789123456789',
       'out_trade_no'   => 'trade_no_20250724123456',
       'mchid'          => '1234567890',
       'sub_mchid'      => '1234567890',
     ],
-    'out_request_no'          => '34657_20250101_123456',
-    'sequential_coupon_index' => 0,
+    'out_request_no'                  => '34657_20250101_123456',
+    'sequential_coupon_index'         => 0,
+    'store_id'                        => '',
+    'associated_pay_score_order_info' => [
+      'order_id'     => '',
+      'out_order_no' => '',
+      'mchid'        => '',
+      'sub_mchid'    => '',
+    ],
+    'saved_amount'                    => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -158,19 +205,27 @@ $response = $instance['v3/marketing/partner/product-coupon/users/{openid}/coupon
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'coupon_code' => '123446565767',
   'json' => [
-    'brand_id'                => '120344',
-    'product_coupon_id'       => '1000000013',
-    'stock_id'                => '1000000013001',
-    'appid'                   => 'wx233544546545989',
-    'use_time'                => '2025-07-24T00:00+08:00',
-    'associated_order_info'   => [
+    'brand_id'                        => '120344',
+    'product_coupon_id'               => '1000000013',
+    'stock_id'                        => '1000000013001',
+    'appid'                           => 'wx233544546545989',
+    'use_time'                        => '2025-07-24T00:00+08:00',
+    'associated_order_info'           => [
       'transaction_id' => '4200000000123456789123456789',
       'out_trade_no'   => 'trade_no_20250724123456',
       'mchid'          => '1234567890',
       'sub_mchid'      => '1234567890',
     ],
-    'out_request_no'          => '34657_20250101_123456',
-    'sequential_coupon_index' => 0,
+    'out_request_no'                  => '34657_20250101_123456',
+    'sequential_coupon_index'         => 0,
+    'store_id'                        => '',
+    'associated_pay_score_order_info' => [
+      'order_id'     => '',
+      'out_order_no' => '',
+      'mchid'        => '',
+      'sub_mchid'    => '',
+    ],
+    'saved_amount'                    => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

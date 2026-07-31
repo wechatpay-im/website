@@ -18,6 +18,7 @@ description: 更新投放计划
 | user_limit {data-indent=2} | integer | 单用户限领
 | daily_limit {data-indent=2} | integer | 单日限领
 | recommend_word {data-indent=2} | string | 营销标签
+| out_request_no {data-indent=1} | string | 修改请求单号
 
 {.im-table #request}
 
@@ -35,6 +36,7 @@ $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->_plan_id_->patch
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
+    'out_request_no' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,6 +57,7 @@ $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}')-
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
+    'out_request_no' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,6 +78,7 @@ $instance['v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}']->patchA
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
+    'out_request_no' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,6 +99,7 @@ $response = $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->_pla
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
+    'out_request_no' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -112,6 +117,7 @@ $response = $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans/
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
+    'out_request_no' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -129,6 +135,7 @@ $response = $instance['v3/marketing/partner/delivery-plan/delivery-plans/{plan_i
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
+    'out_request_no' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

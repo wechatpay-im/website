@@ -21,6 +21,9 @@ description: 创建投放计划
 | delivery_start_time {data-indent=1} | string | 开始可用时间
 | delivery_end_time {data-indent=1} | string | 结束可用时间
 | recommend_word {data-indent=1} | string | 营销标签
+| reuse_coupon_config {data-indent=1} | boolean | 是否复用商品券和批次信息
+| usage_mode {data-indent=1} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
+| stock_bundle_id {data-indent=1} | string | 投放批次组ID
 
 {.im-table #request}
 
@@ -40,6 +43,9 @@ $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->postAsync([
     'delivery_start_time' => '2025-01-01T00:00:00+08:00',
     'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
     'recommend_word'      => '天天有惊喜',
+    'reuse_coupon_config' => true,
+    'usage_mode'          => 'SINGLE',
+    'stock_bundle_id'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,6 +68,9 @@ $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans')->postAsync
     'delivery_start_time' => '2025-01-01T00:00:00+08:00',
     'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
     'recommend_word'      => '天天有惊喜',
+    'reuse_coupon_config' => true,
+    'usage_mode'          => 'SINGLE',
+    'stock_bundle_id'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -84,6 +93,9 @@ $instance['v3/marketing/partner/delivery-plan/delivery-plans']->postAsync([
     'delivery_start_time' => '2025-01-01T00:00:00+08:00',
     'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
     'recommend_word'      => '天天有惊喜',
+    'reuse_coupon_config' => true,
+    'usage_mode'          => 'SINGLE',
+    'stock_bundle_id'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -106,6 +118,9 @@ $response = $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->post
     'delivery_start_time' => '2025-01-01T00:00:00+08:00',
     'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
     'recommend_word'      => '天天有惊喜',
+    'reuse_coupon_config' => true,
+    'usage_mode'          => 'SINGLE',
+    'stock_bundle_id'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -125,6 +140,9 @@ $response = $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans'
     'delivery_start_time' => '2025-01-01T00:00:00+08:00',
     'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
     'recommend_word'      => '天天有惊喜',
+    'reuse_coupon_config' => true,
+    'usage_mode'          => 'SINGLE',
+    'stock_bundle_id'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -144,6 +162,9 @@ $response = $instance['v3/marketing/partner/delivery-plan/delivery-plans']->post
     'delivery_start_time' => '2025-01-01T00:00:00+08:00',
     'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
     'recommend_word'      => '天天有惊喜',
+    'reuse_coupon_config' => true,
+    'usage_mode'          => 'SINGLE',
+    'stock_bundle_id'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
