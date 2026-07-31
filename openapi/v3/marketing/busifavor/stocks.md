@@ -29,6 +29,7 @@ description: 商户可以通过该接口创建商家券。
 | begin_time {data-indent=4} | string | 开始时间
 | end_time {data-indent=4} | string | 结束时间
 | wait_days_after_receive {data-indent=3} | integer | 领取后N天开始生效
+| available_second_after_receive {data-indent=3} | integer | 领取后N秒内有效
 | fixed_normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
 | discount_amount {data-required data-indent=3} | integer | 优惠金额
 | transaction_minimum {data-required data-indent=3} | integer | 消费门槛
@@ -91,21 +92,22 @@ $instance->v3->marketing->busifavor->stocks->postAsync([
     'stock_type'           => 'NORMAL',
     'coupon_use_rule'      => [
       'coupon_available_time' => [
-        'available_begin_time'        => '2015-05-20T13:29:35+08:00',
-        'available_end_time'          => '2015-05-20T13:29:35+08:00',
-        'available_day_after_receive' => 3,
-        'available_week'              => [
+        'available_begin_time'           => '2015-05-20T13:29:35+08:00',
+        'available_end_time'             => '2015-05-20T13:29:35+08:00',
+        'available_day_after_receive'    => 3,
+        'available_week'                 => [
           'week_day'           => [1],
           'available_day_time' => [[
             'begin_time' => 3600,
             'end_time'   => 86399,
           ],],
         ],
-        'irregulary_avaliable_time'   => [[
+        'irregulary_avaliable_time'      => [[
           'begin_time' => '2015-05-20T13:29:35+08:00',
           'end_time'   => '2015-05-20T13:29:35+08:00',
         ],],
-        'wait_days_after_receive'     => 7,
+        'wait_days_after_receive'        => 7,
+        'available_second_after_receive' => 3600,
       ],
       'fixed_normal_coupon'   => [
         'discount_amount'     => 5,
@@ -182,21 +184,22 @@ $instance->chain('v3/marketing/busifavor/stocks')->postAsync([
     'stock_type'           => 'NORMAL',
     'coupon_use_rule'      => [
       'coupon_available_time' => [
-        'available_begin_time'        => '2015-05-20T13:29:35+08:00',
-        'available_end_time'          => '2015-05-20T13:29:35+08:00',
-        'available_day_after_receive' => 3,
-        'available_week'              => [
+        'available_begin_time'           => '2015-05-20T13:29:35+08:00',
+        'available_end_time'             => '2015-05-20T13:29:35+08:00',
+        'available_day_after_receive'    => 3,
+        'available_week'                 => [
           'week_day'           => [1],
           'available_day_time' => [[
             'begin_time' => 3600,
             'end_time'   => 86399,
           ],],
         ],
-        'irregulary_avaliable_time'   => [[
+        'irregulary_avaliable_time'      => [[
           'begin_time' => '2015-05-20T13:29:35+08:00',
           'end_time'   => '2015-05-20T13:29:35+08:00',
         ],],
-        'wait_days_after_receive'     => 7,
+        'wait_days_after_receive'        => 7,
+        'available_second_after_receive' => 3600,
       ],
       'fixed_normal_coupon'   => [
         'discount_amount'     => 5,
@@ -273,21 +276,22 @@ $instance['v3/marketing/busifavor/stocks']->postAsync([
     'stock_type'           => 'NORMAL',
     'coupon_use_rule'      => [
       'coupon_available_time' => [
-        'available_begin_time'        => '2015-05-20T13:29:35+08:00',
-        'available_end_time'          => '2015-05-20T13:29:35+08:00',
-        'available_day_after_receive' => 3,
-        'available_week'              => [
+        'available_begin_time'           => '2015-05-20T13:29:35+08:00',
+        'available_end_time'             => '2015-05-20T13:29:35+08:00',
+        'available_day_after_receive'    => 3,
+        'available_week'                 => [
           'week_day'           => [1],
           'available_day_time' => [[
             'begin_time' => 3600,
             'end_time'   => 86399,
           ],],
         ],
-        'irregulary_avaliable_time'   => [[
+        'irregulary_avaliable_time'      => [[
           'begin_time' => '2015-05-20T13:29:35+08:00',
           'end_time'   => '2015-05-20T13:29:35+08:00',
         ],],
-        'wait_days_after_receive'     => 7,
+        'wait_days_after_receive'        => 7,
+        'available_second_after_receive' => 3600,
       ],
       'fixed_normal_coupon'   => [
         'discount_amount'     => 5,
@@ -364,21 +368,22 @@ $response = $instance->v3->marketing->busifavor->stocks->post([
     'stock_type'           => 'NORMAL',
     'coupon_use_rule'      => [
       'coupon_available_time' => [
-        'available_begin_time'        => '2015-05-20T13:29:35+08:00',
-        'available_end_time'          => '2015-05-20T13:29:35+08:00',
-        'available_day_after_receive' => 3,
-        'available_week'              => [
+        'available_begin_time'           => '2015-05-20T13:29:35+08:00',
+        'available_end_time'             => '2015-05-20T13:29:35+08:00',
+        'available_day_after_receive'    => 3,
+        'available_week'                 => [
           'week_day'           => [1],
           'available_day_time' => [[
             'begin_time' => 3600,
             'end_time'   => 86399,
           ],],
         ],
-        'irregulary_avaliable_time'   => [[
+        'irregulary_avaliable_time'      => [[
           'begin_time' => '2015-05-20T13:29:35+08:00',
           'end_time'   => '2015-05-20T13:29:35+08:00',
         ],],
-        'wait_days_after_receive'     => 7,
+        'wait_days_after_receive'        => 7,
+        'available_second_after_receive' => 3600,
       ],
       'fixed_normal_coupon'   => [
         'discount_amount'     => 5,
@@ -452,21 +457,22 @@ $response = $instance->chain('v3/marketing/busifavor/stocks')->post([
     'stock_type'           => 'NORMAL',
     'coupon_use_rule'      => [
       'coupon_available_time' => [
-        'available_begin_time'        => '2015-05-20T13:29:35+08:00',
-        'available_end_time'          => '2015-05-20T13:29:35+08:00',
-        'available_day_after_receive' => 3,
-        'available_week'              => [
+        'available_begin_time'           => '2015-05-20T13:29:35+08:00',
+        'available_end_time'             => '2015-05-20T13:29:35+08:00',
+        'available_day_after_receive'    => 3,
+        'available_week'                 => [
           'week_day'           => [1],
           'available_day_time' => [[
             'begin_time' => 3600,
             'end_time'   => 86399,
           ],],
         ],
-        'irregulary_avaliable_time'   => [[
+        'irregulary_avaliable_time'      => [[
           'begin_time' => '2015-05-20T13:29:35+08:00',
           'end_time'   => '2015-05-20T13:29:35+08:00',
         ],],
-        'wait_days_after_receive'     => 7,
+        'wait_days_after_receive'        => 7,
+        'available_second_after_receive' => 3600,
       ],
       'fixed_normal_coupon'   => [
         'discount_amount'     => 5,
@@ -540,21 +546,22 @@ $response = $instance['v3/marketing/busifavor/stocks']->post([
     'stock_type'           => 'NORMAL',
     'coupon_use_rule'      => [
       'coupon_available_time' => [
-        'available_begin_time'        => '2015-05-20T13:29:35+08:00',
-        'available_end_time'          => '2015-05-20T13:29:35+08:00',
-        'available_day_after_receive' => 3,
-        'available_week'              => [
+        'available_begin_time'           => '2015-05-20T13:29:35+08:00',
+        'available_end_time'             => '2015-05-20T13:29:35+08:00',
+        'available_day_after_receive'    => 3,
+        'available_week'                 => [
           'week_day'           => [1],
           'available_day_time' => [[
             'begin_time' => 3600,
             'end_time'   => 86399,
           ],],
         ],
-        'irregulary_avaliable_time'   => [[
+        'irregulary_avaliable_time'      => [[
           'begin_time' => '2015-05-20T13:29:35+08:00',
           'end_time'   => '2015-05-20T13:29:35+08:00',
         ],],
-        'wait_days_after_receive'     => 7,
+        'wait_days_after_receive'        => 7,
+        'available_second_after_receive' => 3600,
       ],
       'fixed_normal_coupon'   => [
         'discount_amount'     => 5,

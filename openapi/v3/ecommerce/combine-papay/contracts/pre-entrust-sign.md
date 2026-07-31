@@ -16,6 +16,7 @@ description: 电商服务商从外部App拉起微信客户端发起签约前，�
 | contract_display_account {data-required data-indent=1} | string | 用户账户展示名称
 | notify_url {data-required data-indent=1} | string | 回调通知地址
 | return_app {data-indent=1} | boolean | 返回app标识
+| attach {data-indent=1} | string | 商户数据包
 
 {.im-table #request}
 
@@ -30,6 +31,7 @@ $instance->v3->ecommerce->combinePapay->contracts->preEntrustSign->postAsync([
     'contract_display_account' => '微信代扣用户A',
     'notify_url'               => 'https://yourapp.com/notify',
     'return_app'               => true,
+    'attach'                   => 'example_attach',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,6 +49,7 @@ $instance->chain('v3/ecommerce/combine-papay/contracts/pre-entrust-sign')->postA
     'contract_display_account' => '微信代扣用户A',
     'notify_url'               => 'https://yourapp.com/notify',
     'return_app'               => true,
+    'attach'                   => 'example_attach',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,6 +67,7 @@ $instance['v3/ecommerce/combine-papay/contracts/pre-entrust-sign']->postAsync([
     'contract_display_account' => '微信代扣用户A',
     'notify_url'               => 'https://yourapp.com/notify',
     'return_app'               => true,
+    'attach'                   => 'example_attach',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,6 +85,7 @@ $response = $instance->v3->ecommerce->combinePapay->contracts->preEntrustSign->p
     'contract_display_account' => '微信代扣用户A',
     'notify_url'               => 'https://yourapp.com/notify',
     'return_app'               => true,
+    'attach'                   => 'example_attach',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -95,6 +100,7 @@ $response = $instance->chain('v3/ecommerce/combine-papay/contracts/pre-entrust-s
     'contract_display_account' => '微信代扣用户A',
     'notify_url'               => 'https://yourapp.com/notify',
     'return_app'               => true,
+    'attach'                   => 'example_attach',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,6 +115,7 @@ $response = $instance['v3/ecommerce/combine-papay/contracts/pre-entrust-sign']->
     'contract_display_account' => '微信代扣用户A',
     'notify_url'               => 'https://yourapp.com/notify',
     'return_app'               => true,
+    'attach'                   => 'example_attach',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

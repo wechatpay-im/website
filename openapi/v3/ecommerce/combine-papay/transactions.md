@@ -27,6 +27,8 @@ description: 商户可以通过该接口发起免密的合单支付
 | settle_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 结算信息
 | profit_sharing {data-indent=3} | boolean | 是否指定分账
 | subsidy_amount {data-indent=3} | integer | 补差金额
+| sub_risk_info {data-indent=2} | string | 子单风控信息
+| risk_info {data-indent=1} | string | 风控信息
 
 {.im-table #request}
 
@@ -40,21 +42,23 @@ $instance->v3->ecommerce->combinePapay->transactions->postAsync([
     'combine_out_trade_no' => 'P20150806125346',
     'contract_id'          => '123124412412423431',
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'         => '1900000109',
+      'attach'        => '深圳分店',
+      'amount'        => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'sub_appid'    => 'wxd678efh567hg6787',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'  => '20150806125346',
+      'sub_mchid'     => '1900000109',
+      'sub_appid'     => 'wxd678efh567hg6787',
+      'description'   => '腾讯充值中心-QQ会员充值',
+      'settle_info'   => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
+      'sub_risk_info' => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
     ],],
+    'risk_info'            => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,21 +75,23 @@ $instance->chain('v3/ecommerce/combine-papay/transactions')->postAsync([
     'combine_out_trade_no' => 'P20150806125346',
     'contract_id'          => '123124412412423431',
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'         => '1900000109',
+      'attach'        => '深圳分店',
+      'amount'        => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'sub_appid'    => 'wxd678efh567hg6787',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'  => '20150806125346',
+      'sub_mchid'     => '1900000109',
+      'sub_appid'     => 'wxd678efh567hg6787',
+      'description'   => '腾讯充值中心-QQ会员充值',
+      'settle_info'   => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
+      'sub_risk_info' => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
     ],],
+    'risk_info'            => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -102,21 +108,23 @@ $instance['v3/ecommerce/combine-papay/transactions']->postAsync([
     'combine_out_trade_no' => 'P20150806125346',
     'contract_id'          => '123124412412423431',
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'         => '1900000109',
+      'attach'        => '深圳分店',
+      'amount'        => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'sub_appid'    => 'wxd678efh567hg6787',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'  => '20150806125346',
+      'sub_mchid'     => '1900000109',
+      'sub_appid'     => 'wxd678efh567hg6787',
+      'description'   => '腾讯充值中心-QQ会员充值',
+      'settle_info'   => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
+      'sub_risk_info' => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
     ],],
+    'risk_info'            => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -133,21 +141,23 @@ $response = $instance->v3->ecommerce->combinePapay->transactions->post([
     'combine_out_trade_no' => 'P20150806125346',
     'contract_id'          => '123124412412423431',
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'         => '1900000109',
+      'attach'        => '深圳分店',
+      'amount'        => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'sub_appid'    => 'wxd678efh567hg6787',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'  => '20150806125346',
+      'sub_mchid'     => '1900000109',
+      'sub_appid'     => 'wxd678efh567hg6787',
+      'description'   => '腾讯充值中心-QQ会员充值',
+      'settle_info'   => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
+      'sub_risk_info' => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
     ],],
+    'risk_info'            => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -161,21 +171,23 @@ $response = $instance->chain('v3/ecommerce/combine-papay/transactions')->post([
     'combine_out_trade_no' => 'P20150806125346',
     'contract_id'          => '123124412412423431',
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'         => '1900000109',
+      'attach'        => '深圳分店',
+      'amount'        => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'sub_appid'    => 'wxd678efh567hg6787',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'  => '20150806125346',
+      'sub_mchid'     => '1900000109',
+      'sub_appid'     => 'wxd678efh567hg6787',
+      'description'   => '腾讯充值中心-QQ会员充值',
+      'settle_info'   => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
+      'sub_risk_info' => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
     ],],
+    'risk_info'            => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -189,21 +201,23 @@ $response = $instance['v3/ecommerce/combine-papay/transactions']->post([
     'combine_out_trade_no' => 'P20150806125346',
     'contract_id'          => '123124412412423431',
     'sub_orders'           => [[
-      'mchid'        => '1900000109',
-      'attach'       => '深圳分店',
-      'amount'       => [
+      'mchid'         => '1900000109',
+      'attach'        => '深圳分店',
+      'amount'        => [
         'total_amount' => 100,
         'currency'     => 'CNY',
       ],
-      'out_trade_no' => '20150806125346',
-      'sub_mchid'    => '1900000109',
-      'sub_appid'    => 'wxd678efh567hg6787',
-      'description'  => '腾讯充值中心-QQ会员充值',
-      'settle_info'  => [
+      'out_trade_no'  => '20150806125346',
+      'sub_mchid'     => '1900000109',
+      'sub_appid'     => 'wxd678efh567hg6787',
+      'description'   => '腾讯充值中心-QQ会员充值',
+      'settle_info'   => [
         'profit_sharing' => true,
         'subsidy_amount' => 10,
       ],
+      'sub_risk_info' => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
     ],],
+    'risk_info'            => 'ip:202.106.196.115;last_oid:ox6zi6jKVxWVxxxx-xWlkMxxxx7E;device:%27Android%3B12%3BHUAWEI%3BADA-AL00%27;',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

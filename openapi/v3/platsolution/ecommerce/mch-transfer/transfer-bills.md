@@ -17,6 +17,7 @@ description: 商户可调用该接口付款给商户。注：接口频率限制�
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
 | mch_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方商户信息
 | mch_id {data-indent=3} | string | 商户号
+| mchid {data-indent=3} | string | 商户号
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | amount {data-indent=1} | number | 赔付金额
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
@@ -36,6 +37,7 @@ $instance->v3->platsolution->ecommerce->mchTransfer->transferBills->postAsync([
       'type'     => 'MERCHANT',
       'mch_info' => [
         'mch_id' => '1900001108',
+        'mchid'  => '1900001108',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -60,6 +62,7 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/transfer-bills')->postA
       'type'     => 'MERCHANT',
       'mch_info' => [
         'mch_id' => '1900001108',
+        'mchid'  => '1900001108',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -84,6 +87,7 @@ $instance['v3/platsolution/ecommerce/mch-transfer/transfer-bills']->postAsync([
       'type'     => 'MERCHANT',
       'mch_info' => [
         'mch_id' => '1900001108',
+        'mchid'  => '1900001108',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -108,6 +112,7 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->transferBills->
       'type'     => 'MERCHANT',
       'mch_info' => [
         'mch_id' => '1900001108',
+        'mchid'  => '1900001108',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -129,6 +134,7 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/transfer-bi
       'type'     => 'MERCHANT',
       'mch_info' => [
         'mch_id' => '1900001108',
+        'mchid'  => '1900001108',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -150,6 +156,7 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/transfer-bills']->
       'type'     => 'MERCHANT',
       'mch_info' => [
         'mch_id' => '1900001108',
+        'mchid'  => '1900001108',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',

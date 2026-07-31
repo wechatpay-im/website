@@ -24,6 +24,11 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 | estimated_deduct_amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 预计扣费金额
 | total {data-required data-indent=3} | number | 金额
 | currency {data-indent=3} | string | 货币类型
+| policy_coverage_detail {data-indent=2} | object {data-tooltip="对应PHP的array"} | 保障详情
+| policy_amount {data-indent=3} | string | 保单额度
+| policy_clauses {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 保险条款列表
+| clause_name {data-indent=4} | string | 条款内容
+| clause_quota {data-indent=4} | string | 条款额度
 | amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 扣费金额信息
 | total {data-required data-indent=2} | number | 金额
 | currency {data-indent=2} | string | 货币类型
@@ -64,6 +69,13 @@ $instance->v3->papay->insuranceSign->contracts->preEntrustSign->jsapi->postAsync
       'estimated_deduct_amount' => [
         'total'    => 1,
         'currency' => 'CNY',
+      ],
+      'policy_coverage_detail'  => [
+        'policy_amount'  => '50000',
+        'policy_clauses' => [[
+          'clause_name'  => 'example_clause_name',
+          'clause_quota' => 'example_clause_quota',
+        ],],
       ],
     ],],
     'amount'                       => [
@@ -113,6 +125,13 @@ $instance->chain('v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi')->po
         'total'    => 1,
         'currency' => 'CNY',
       ],
+      'policy_coverage_detail'  => [
+        'policy_amount'  => '50000',
+        'policy_clauses' => [[
+          'clause_name'  => 'example_clause_name',
+          'clause_quota' => 'example_clause_quota',
+        ],],
+      ],
     ],],
     'amount'                       => [
       'total'    => 1,
@@ -160,6 +179,13 @@ $instance['v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi']->postAsync
       'estimated_deduct_amount' => [
         'total'    => 1,
         'currency' => 'CNY',
+      ],
+      'policy_coverage_detail'  => [
+        'policy_amount'  => '50000',
+        'policy_clauses' => [[
+          'clause_name'  => 'example_clause_name',
+          'clause_quota' => 'example_clause_quota',
+        ],],
       ],
     ],],
     'amount'                       => [
@@ -209,6 +235,13 @@ $response = $instance->v3->papay->insuranceSign->contracts->preEntrustSign->jsap
         'total'    => 1,
         'currency' => 'CNY',
       ],
+      'policy_coverage_detail'  => [
+        'policy_amount'  => '50000',
+        'policy_clauses' => [[
+          'clause_name'  => 'example_clause_name',
+          'clause_quota' => 'example_clause_quota',
+        ],],
+      ],
     ],],
     'amount'                       => [
       'total'    => 1,
@@ -254,6 +287,13 @@ $response = $instance->chain('v3/papay/insurance-sign/contracts/pre-entrust-sign
         'total'    => 1,
         'currency' => 'CNY',
       ],
+      'policy_coverage_detail'  => [
+        'policy_amount'  => '50000',
+        'policy_clauses' => [[
+          'clause_name'  => 'example_clause_name',
+          'clause_quota' => 'example_clause_quota',
+        ],],
+      ],
     ],],
     'amount'                       => [
       'total'    => 1,
@@ -298,6 +338,13 @@ $response = $instance['v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi'
       'estimated_deduct_amount' => [
         'total'    => 1,
         'currency' => 'CNY',
+      ],
+      'policy_coverage_detail'  => [
+        'policy_amount'  => '50000',
+        'policy_clauses' => [[
+          'clause_name'  => 'example_clause_name',
+          'clause_quota' => 'example_clause_quota',
+        ],],
       ],
     ],],
     'amount'                       => [

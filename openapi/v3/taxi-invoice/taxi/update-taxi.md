@@ -17,6 +17,7 @@ description: 商户可通过调用该接口新增、更新出租车信息，出�
 | deputy_license {data-indent=1} | string | 副班司机资格证号
 | region_id {data-required data-indent=1} | integer | 行政区划ID
 | invoice_flag {data-indent=1} | string | 开票标记
+| taxi_state {data-indent=1} | string | 出租车状态<br/>`IN_OPERATION` \| `OUT_OPERATION` 枚举值之一
 
 {.im-table #request}
 
@@ -32,6 +33,7 @@ $instance->v3->taxiInvoice->taxi->updateTaxi->postAsync([
     'deputy_license' => '6298416',
     'region_id'      => 510100,
     'invoice_flag'   => 'INVOICE',
+    'taxi_state'     => 'IN_OPERATION',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,6 +52,7 @@ $instance->chain('v3/taxi-invoice/taxi/update-taxi')->postAsync([
     'deputy_license' => '6298416',
     'region_id'      => 510100,
     'invoice_flag'   => 'INVOICE',
+    'taxi_state'     => 'IN_OPERATION',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,6 +71,7 @@ $instance['v3/taxi-invoice/taxi/update-taxi']->postAsync([
     'deputy_license' => '6298416',
     'region_id'      => 510100,
     'invoice_flag'   => 'INVOICE',
+    'taxi_state'     => 'IN_OPERATION',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,6 +90,7 @@ $response = $instance->v3->taxiInvoice->taxi->updateTaxi->post([
     'deputy_license' => '6298416',
     'region_id'      => 510100,
     'invoice_flag'   => 'INVOICE',
+    'taxi_state'     => 'IN_OPERATION',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -101,6 +106,7 @@ $response = $instance->chain('v3/taxi-invoice/taxi/update-taxi')->post([
     'deputy_license' => '6298416',
     'region_id'      => 510100,
     'invoice_flag'   => 'INVOICE',
+    'taxi_state'     => 'IN_OPERATION',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -116,6 +122,7 @@ $response = $instance['v3/taxi-invoice/taxi/update-taxi']->post([
     'deputy_license' => '6298416',
     'region_id'      => 510100,
     'invoice_flag'   => 'INVOICE',
+    'taxi_state'     => 'IN_OPERATION',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

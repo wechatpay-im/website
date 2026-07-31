@@ -1,6 +1,6 @@
 ---
 title: 电商平台提现
-description: 电商平台通过该接口可将其平台的收入进行提现
+description: 收付通平台通过该接口可将其平台的收入进行预约提现。该预约提现申请提交后，系统将在次日发起提现，预计当日到账。具体到账时间以实际银行处理为准。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -15,6 +15,7 @@ description: 电商平台通过该接口可将其平台的收入进行提现
 | remark {data-indent=1} | string | 备注
 | bank_memo {data-indent=1} | string | 银行附言
 | account_type {data-required data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| notify_url {data-indent=1} | string | 提现结果通知地址
 
 {.im-table #request}
 
@@ -28,6 +29,7 @@ $instance->v3->merchant->fund->withdraw->postAsync([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,6 +46,7 @@ $instance->chain('v3/merchant/fund/withdraw')->postAsync([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,6 +63,7 @@ $instance['v3/merchant/fund/withdraw']->postAsync([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +80,7 @@ $response = $instance->v3->merchant->fund->withdraw->post([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,6 +94,7 @@ $response = $instance->chain('v3/merchant/fund/withdraw')->post([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -102,6 +108,7 @@ $response = $instance['v3/merchant/fund/withdraw']->post([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

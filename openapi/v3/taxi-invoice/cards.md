@@ -60,6 +60,7 @@ description: 服务商开具出租车电子发票后，调用本接口将发票�
 | tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识
 | discount {data-required data-indent=3} | boolean | 是否折扣行
 | remark {data-indent=2} | string | 备注信息
+| token {data-indent=1} | string | 获取乘客行程单详情的凭证
 
 {.im-table #request}
 
@@ -123,6 +124,7 @@ $instance->v3->taxiInvoice->cards->postAsync([
       ],],
       'remark'             => '备注',
     ],
+    'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -189,6 +191,7 @@ $instance->chain('v3/taxi-invoice/cards')->postAsync([
       ],],
       'remark'             => '备注',
     ],
+    'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -255,6 +258,7 @@ $instance['v3/taxi-invoice/cards']->postAsync([
       ],],
       'remark'             => '备注',
     ],
+    'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -321,6 +325,7 @@ $response = $instance->v3->taxiInvoice->cards->post([
       ],],
       'remark'             => '备注',
     ],
+    'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -384,6 +389,7 @@ $response = $instance->chain('v3/taxi-invoice/cards')->post([
       ],],
       'remark'             => '备注',
     ],
+    'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -447,6 +453,7 @@ $response = $instance['v3/taxi-invoice/cards']->post([
       ],],
       'remark'             => '备注',
     ],
+    'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

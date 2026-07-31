@@ -16,7 +16,7 @@ description: 商户调用该接口申请免确认收款授权，用户需在24�
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID<br/>`1000` \| `1002` \| `1004` \| `1005` \| `1009` \| `1010` \| `1011` \| `1013` 枚举值之一
 | user_display_name {data-required data-indent=1} | string | 用户展示名称
 | user_recv_perception {data-indent=1} | string | 用户收款感知
-| authorization_notify_url {data-required data-indent=1} | string | 授权结果通知地址
+| notify_url {data-required data-indent=1} | string | 授权结果通知地址
 
 {.im-table #request}
 
@@ -25,13 +25,13 @@ description: 商户调用该接口申请免确认收款授权，用户需在24�
 ```php [异步纯链式]
 $instance->v3->fundApp->mchTransfer->partner->userConfirmAuthorizations->postAsync([
   'json' => [
-    'out_authorization_no'     => 'plfk2020042013',
-    'appid'                    => '102022609',
-    'openid'                   => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'transfer_scene_id'        => '1000',
-    'user_display_name'        => 'wx_123456',
-    'user_recv_perception'     => '现金奖励',
-    'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_authorization_no' => 'plfk2020042013',
+    'appid'                => '102022609',
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'transfer_scene_id'    => '1000',
+    'user_display_name'    => 'wx_123456',
+    'user_recv_perception' => '现金奖励',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,13 +43,13 @@ $instance->v3->fundApp->mchTransfer->partner->userConfirmAuthorizations->postAsy
 ```php [异步声明式]
 $instance->chain('v3/fund-app/mch-transfer/partner/user-confirm-authorizations')->postAsync([
   'json' => [
-    'out_authorization_no'     => 'plfk2020042013',
-    'appid'                    => '102022609',
-    'openid'                   => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'transfer_scene_id'        => '1000',
-    'user_display_name'        => 'wx_123456',
-    'user_recv_perception'     => '现金奖励',
-    'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_authorization_no' => 'plfk2020042013',
+    'appid'                => '102022609',
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'transfer_scene_id'    => '1000',
+    'user_display_name'    => 'wx_123456',
+    'user_recv_perception' => '现金奖励',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,13 +61,13 @@ $instance->chain('v3/fund-app/mch-transfer/partner/user-confirm-authorizations')
 ```php [异步属性式]
 $instance['v3/fund-app/mch-transfer/partner/user-confirm-authorizations']->postAsync([
   'json' => [
-    'out_authorization_no'     => 'plfk2020042013',
-    'appid'                    => '102022609',
-    'openid'                   => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'transfer_scene_id'        => '1000',
-    'user_display_name'        => 'wx_123456',
-    'user_recv_perception'     => '现金奖励',
-    'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_authorization_no' => 'plfk2020042013',
+    'appid'                => '102022609',
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'transfer_scene_id'    => '1000',
+    'user_display_name'    => 'wx_123456',
+    'user_recv_perception' => '现金奖励',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,13 +79,13 @@ $instance['v3/fund-app/mch-transfer/partner/user-confirm-authorizations']->postA
 ```php [同步纯链式]
 $response = $instance->v3->fundApp->mchTransfer->partner->userConfirmAuthorizations->post([
   'json' => [
-    'out_authorization_no'     => 'plfk2020042013',
-    'appid'                    => '102022609',
-    'openid'                   => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'transfer_scene_id'        => '1000',
-    'user_display_name'        => 'wx_123456',
-    'user_recv_perception'     => '现金奖励',
-    'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_authorization_no' => 'plfk2020042013',
+    'appid'                => '102022609',
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'transfer_scene_id'    => '1000',
+    'user_display_name'    => 'wx_123456',
+    'user_recv_perception' => '现金奖励',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,13 +94,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/fund-app/mch-transfer/partner/user-confirm-authorizations')->post([
   'json' => [
-    'out_authorization_no'     => 'plfk2020042013',
-    'appid'                    => '102022609',
-    'openid'                   => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'transfer_scene_id'        => '1000',
-    'user_display_name'        => 'wx_123456',
-    'user_recv_perception'     => '现金奖励',
-    'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_authorization_no' => 'plfk2020042013',
+    'appid'                => '102022609',
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'transfer_scene_id'    => '1000',
+    'user_display_name'    => 'wx_123456',
+    'user_recv_perception' => '现金奖励',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,13 +109,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/fund-app/mch-transfer/partner/user-confirm-authorizations']->post([
   'json' => [
-    'out_authorization_no'     => 'plfk2020042013',
-    'appid'                    => '102022609',
-    'openid'                   => 'o-MYE42l80oelYMDE34nYD456Xoy',
-    'transfer_scene_id'        => '1000',
-    'user_display_name'        => 'wx_123456',
-    'user_recv_perception'     => '现金奖励',
-    'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'out_authorization_no' => 'plfk2020042013',
+    'appid'                => '102022609',
+    'openid'               => 'o-MYE42l80oelYMDE34nYD456Xoy',
+    'transfer_scene_id'    => '1000',
+    'user_display_name'    => 'wx_123456',
+    'user_recv_perception' => '现金奖励',
+    'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -27,6 +27,7 @@ description: 申请个人收款批量结算
 | amount {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 金额
 | amount {data-required data-indent=4} | number | 金额
 | currency {data-indent=4} | string | 币种
+| receive_type_template_id {data-indent=1} | integer | 收款类型模板ID<br/>`1` \| `2` 枚举值之一
 
 {.im-table #request}
 
@@ -35,13 +36,13 @@ description: 申请个人收款批量结算
 ```php [异步纯链式]
 $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->postAsync([
   'json' => [
-    'appid'               => 'WXA12368855126622',
-    'out_settle_batch_no' => '1236698745558870',
-    'individual_auth_id'  => '256322110225',
-    'notify_url'          => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'description'         => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
-    'trade_scenario'      => 'RECOMMERCE',
-    'settle_info_list'    => [[
+    'appid'                    => 'WXA12368855126622',
+    'out_settle_batch_no'      => '1236698745558870',
+    'individual_auth_id'       => '256322110225',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'description'              => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
+    'trade_scenario'           => 'RECOMMERCE',
+    'settle_info_list'         => [[
       'out_settle_no'           => '12369666555136622',
       'transaction_id'          => '4207752501201407033233368018',
       'settle_detail_info_list' => [[
@@ -55,6 +56,7 @@ $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->postAsync([
         ],
       ],],
     ],],
+    'receive_type_template_id' => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -66,13 +68,13 @@ $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->postAsync([
   'json' => [
-    'appid'               => 'WXA12368855126622',
-    'out_settle_batch_no' => '1236698745558870',
-    'individual_auth_id'  => '256322110225',
-    'notify_url'          => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'description'         => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
-    'trade_scenario'      => 'RECOMMERCE',
-    'settle_info_list'    => [[
+    'appid'                    => 'WXA12368855126622',
+    'out_settle_batch_no'      => '1236698745558870',
+    'individual_auth_id'       => '256322110225',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'description'              => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
+    'trade_scenario'           => 'RECOMMERCE',
+    'settle_info_list'         => [[
       'out_settle_no'           => '12369666555136622',
       'transaction_id'          => '4207752501201407033233368018',
       'settle_detail_info_list' => [[
@@ -86,6 +88,7 @@ $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->postA
         ],
       ],],
     ],],
+    'receive_type_template_id' => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -97,13 +100,13 @@ $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->postA
 ```php [异步属性式]
 $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->postAsync([
   'json' => [
-    'appid'               => 'WXA12368855126622',
-    'out_settle_batch_no' => '1236698745558870',
-    'individual_auth_id'  => '256322110225',
-    'notify_url'          => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'description'         => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
-    'trade_scenario'      => 'RECOMMERCE',
-    'settle_info_list'    => [[
+    'appid'                    => 'WXA12368855126622',
+    'out_settle_batch_no'      => '1236698745558870',
+    'individual_auth_id'       => '256322110225',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'description'              => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
+    'trade_scenario'           => 'RECOMMERCE',
+    'settle_info_list'         => [[
       'out_settle_no'           => '12369666555136622',
       'transaction_id'          => '4207752501201407033233368018',
       'settle_detail_info_list' => [[
@@ -117,6 +120,7 @@ $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->postAsync([
         ],
       ],],
     ],],
+    'receive_type_template_id' => 0,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -128,13 +132,13 @@ $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->post([
   'json' => [
-    'appid'               => 'WXA12368855126622',
-    'out_settle_batch_no' => '1236698745558870',
-    'individual_auth_id'  => '256322110225',
-    'notify_url'          => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'description'         => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
-    'trade_scenario'      => 'RECOMMERCE',
-    'settle_info_list'    => [[
+    'appid'                    => 'WXA12368855126622',
+    'out_settle_batch_no'      => '1236698745558870',
+    'individual_auth_id'       => '256322110225',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'description'              => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
+    'trade_scenario'           => 'RECOMMERCE',
+    'settle_info_list'         => [[
       'out_settle_no'           => '12369666555136622',
       'transaction_id'          => '4207752501201407033233368018',
       'settle_detail_info_list' => [[
@@ -148,6 +152,7 @@ $response = $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->
         ],
       ],],
     ],],
+    'receive_type_template_id' => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -156,13 +161,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->post([
   'json' => [
-    'appid'               => 'WXA12368855126622',
-    'out_settle_batch_no' => '1236698745558870',
-    'individual_auth_id'  => '256322110225',
-    'notify_url'          => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'description'         => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
-    'trade_scenario'      => 'RECOMMERCE',
-    'settle_info_list'    => [[
+    'appid'                    => 'WXA12368855126622',
+    'out_settle_batch_no'      => '1236698745558870',
+    'individual_auth_id'       => '256322110225',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'description'              => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
+    'trade_scenario'           => 'RECOMMERCE',
+    'settle_info_list'         => [[
       'out_settle_no'           => '12369666555136622',
       'transaction_id'          => '4207752501201407033233368018',
       'settle_detail_info_list' => [[
@@ -176,6 +181,7 @@ $response = $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-ord
         ],
       ],],
     ],],
+    'receive_type_template_id' => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -184,13 +190,13 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->post([
   'json' => [
-    'appid'               => 'WXA12368855126622',
-    'out_settle_batch_no' => '1236698745558870',
-    'individual_auth_id'  => '256322110225',
-    'notify_url'          => 'https://www.weixin.qq.com/wxpay/pay.php',
-    'description'         => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
-    'trade_scenario'      => 'RECOMMERCE',
-    'settle_info_list'    => [[
+    'appid'                    => 'WXA12368855126622',
+    'out_settle_batch_no'      => '1236698745558870',
+    'individual_auth_id'       => '256322110225',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
+    'description'              => '共计2笔订单，订单金额xxx元，平台服务费xxx元，合计收款xxx元',
+    'trade_scenario'           => 'RECOMMERCE',
+    'settle_info_list'         => [[
       'out_settle_no'           => '12369666555136622',
       'transaction_id'          => '4207752501201407033233368018',
       'settle_detail_info_list' => [[
@@ -204,6 +210,7 @@ $response = $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->
         ],
       ],],
     ],],
+    'receive_type_template_id' => 0,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

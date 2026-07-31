@@ -16,6 +16,10 @@ description: 订单发送退款的时候，可以对补贴成功的补差单发�
 | refund_id {data-required data-indent=1} | string | 微信退款单号
 | amount {data-required data-indent=1} | integer | 补差回退金额
 | description {data-required data-indent=1} | string | 补差回退描述
+| subsidy_id {data-indent=1} | string | 微信补差单号
+| from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 回退出资账户及金额
+| account {data-indent=2} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
+| amount {data-indent=2} | integer | 出资金额
 
 {.im-table #request}
 
@@ -30,6 +34,11 @@ $instance->v3->ecommerce->subsidies->return->postAsync([
     'refund_id'      => '3008450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
+    'subsidy_id'     => '3008450740201411110007820472',
+    'from'           => [[
+      'account' => 'AVAILABLE',
+      'amount'  => 10,
+    ],],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,6 +56,11 @@ $instance->chain('v3/ecommerce/subsidies/return')->postAsync([
     'refund_id'      => '3008450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
+    'subsidy_id'     => '3008450740201411110007820472',
+    'from'           => [[
+      'account' => 'AVAILABLE',
+      'amount'  => 10,
+    ],],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,6 +78,11 @@ $instance['v3/ecommerce/subsidies/return']->postAsync([
     'refund_id'      => '3008450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
+    'subsidy_id'     => '3008450740201411110007820472',
+    'from'           => [[
+      'account' => 'AVAILABLE',
+      'amount'  => 10,
+    ],],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,6 +100,11 @@ $response = $instance->v3->ecommerce->subsidies->return->post([
     'refund_id'      => '3008450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
+    'subsidy_id'     => '3008450740201411110007820472',
+    'from'           => [[
+      'account' => 'AVAILABLE',
+      'amount'  => 10,
+    ],],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -95,6 +119,11 @@ $response = $instance->chain('v3/ecommerce/subsidies/return')->post([
     'refund_id'      => '3008450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
+    'subsidy_id'     => '3008450740201411110007820472',
+    'from'           => [[
+      'account' => 'AVAILABLE',
+      'amount'  => 10,
+    ],],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,6 +138,11 @@ $response = $instance['v3/ecommerce/subsidies/return']->post([
     'refund_id'      => '3008450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
+    'subsidy_id'     => '3008450740201411110007820472',
+    'from'           => [[
+      'account' => 'AVAILABLE',
+      'amount'  => 10,
+    ],],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

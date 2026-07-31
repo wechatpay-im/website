@@ -29,6 +29,11 @@ description: 商户发起资金出境请求，需要传微信支付单号，商�
 | express_company_name {data-required data-indent=2} | string | 物流商名称
 | payee_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款人信息
 | payee_id {data-required data-indent=2} | string | 收款人识别号
+| presale_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 预售信息
+| type {data-required data-indent=2} | string | 订单类型<br/>`DEPOSIT` \| `BALANCE` 枚举值之一
+| total_amount {data-required data-indent=2} | integer | 预售订单总金额
+| deposit_transaction_id {data-indent=2} | string | 关联定金订单号
+| balance_transaction_id {data-indent=2} | string | 关联尾款订单号
 
 {.im-table #request}
 
@@ -59,6 +64,12 @@ $instance->v3->fundsToOversea->orders->postAsync([
     ],
     'payee_info'       => [
       'payee_id' => 'ID123112312',
+    ],
+    'presale_info'     => [
+      'type'                   => 'DEPOSIT',
+      'total_amount'           => 10,
+      'deposit_transaction_id' => '4208450740201411110007820472',
+      'balance_transaction_id' => '4208450740201411110007820472',
     ],
   ],
 ])
@@ -94,6 +105,12 @@ $instance->chain('v3/funds-to-oversea/orders')->postAsync([
     'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
+    'presale_info'     => [
+      'type'                   => 'DEPOSIT',
+      'total_amount'           => 10,
+      'deposit_transaction_id' => '4208450740201411110007820472',
+      'balance_transaction_id' => '4208450740201411110007820472',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -127,6 +144,12 @@ $instance['v3/funds-to-oversea/orders']->postAsync([
     ],
     'payee_info'       => [
       'payee_id' => 'ID123112312',
+    ],
+    'presale_info'     => [
+      'type'                   => 'DEPOSIT',
+      'total_amount'           => 10,
+      'deposit_transaction_id' => '4208450740201411110007820472',
+      'balance_transaction_id' => '4208450740201411110007820472',
     ],
   ],
 ])
@@ -162,6 +185,12 @@ $response = $instance->v3->fundsToOversea->orders->post([
     'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
+    'presale_info'     => [
+      'type'                   => 'DEPOSIT',
+      'total_amount'           => 10,
+      'deposit_transaction_id' => '4208450740201411110007820472',
+      'balance_transaction_id' => '4208450740201411110007820472',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -193,6 +222,12 @@ $response = $instance->chain('v3/funds-to-oversea/orders')->post([
     'payee_info'       => [
       'payee_id' => 'ID123112312',
     ],
+    'presale_info'     => [
+      'type'                   => 'DEPOSIT',
+      'total_amount'           => 10,
+      'deposit_transaction_id' => '4208450740201411110007820472',
+      'balance_transaction_id' => '4208450740201411110007820472',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -223,6 +258,12 @@ $response = $instance['v3/funds-to-oversea/orders']->post([
     ],
     'payee_info'       => [
       'payee_id' => 'ID123112312',
+    ],
+    'presale_info'     => [
+      'type'                   => 'DEPOSIT',
+      'total_amount'           => 10,
+      'deposit_transaction_id' => '4208450740201411110007820472',
+      'balance_transaction_id' => '4208450740201411110007820472',
     ],
   ],
 ]);

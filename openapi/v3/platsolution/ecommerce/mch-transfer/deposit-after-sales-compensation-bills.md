@@ -17,6 +17,8 @@ description: 商户可调用该接口从保证金账户赔付给用户。注：�
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
 | type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
+| user_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方用户
+| sp_openid {data-indent=3} | string | 转账接收方用户 openid
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | amount {data-indent=1} | number | 赔付金额
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
@@ -38,6 +40,9 @@ $instance->v3->platsolution->ecommerce->mchTransfer->depositAfterSalesCompensati
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
         'type'           => 'WXPAY',
+      ],
+      'user_info'        => [
+        'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -65,6 +70,9 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-com
         'transaction_id' => '1217752501201407033233368018',
         'type'           => 'WXPAY',
       ],
+      'user_info'        => [
+        'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      ],
     ],
     'out_bill_no'          => 'plfk2020042013',
     'amount'               => 10000,
@@ -90,6 +98,9 @@ $instance['v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-compensati
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
         'type'           => 'WXPAY',
+      ],
+      'user_info'        => [
+        'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',
@@ -117,6 +128,9 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->depositAfterSal
         'transaction_id' => '1217752501201407033233368018',
         'type'           => 'WXPAY',
       ],
+      'user_info'        => [
+        'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      ],
     ],
     'out_bill_no'          => 'plfk2020042013',
     'amount'               => 10000,
@@ -140,6 +154,9 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-aft
         'transaction_id' => '1217752501201407033233368018',
         'type'           => 'WXPAY',
       ],
+      'user_info'        => [
+        'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      ],
     ],
     'out_bill_no'          => 'plfk2020042013',
     'amount'               => 10000,
@@ -162,6 +179,9 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/deposit-after-sale
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
         'type'           => 'WXPAY',
+      ],
+      'user_info'        => [
+        'sp_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       ],
     ],
     'out_bill_no'          => 'plfk2020042013',

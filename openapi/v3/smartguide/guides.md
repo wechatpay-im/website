@@ -15,6 +15,7 @@
 | mobile {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | qr_code {data-required data-indent=1} | string | 员工个人二维码
 | avatar {data-required data-indent=1} | string | 头像URL
+| group_qrcode {data-indent=1} | string | 群二维码URL
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -25,14 +26,15 @@
 ```php [异步纯链式]
 $instance->v3->smartguide->guides->postAsync([
   'json' => [
-    'sub_mchid' => '',
-    'corpid'    => '',
-    'store_id'  => 0,
-    'userid'    => '',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '',
+    'corpid'       => '',
+    'store_id'     => 0,
+    'userid'       => '',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -47,14 +49,15 @@ $instance->v3->smartguide->guides->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/smartguide/guides')->postAsync([
   'json' => [
-    'sub_mchid' => '',
-    'corpid'    => '',
-    'store_id'  => 0,
-    'userid'    => '',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '',
+    'corpid'       => '',
+    'store_id'     => 0,
+    'userid'       => '',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -69,14 +72,15 @@ $instance->chain('v3/smartguide/guides')->postAsync([
 ```php [异步属性式]
 $instance['v3/smartguide/guides']->postAsync([
   'json' => [
-    'sub_mchid' => '',
-    'corpid'    => '',
-    'store_id'  => 0,
-    'userid'    => '',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '',
+    'corpid'       => '',
+    'store_id'     => 0,
+    'userid'       => '',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -91,14 +95,15 @@ $instance['v3/smartguide/guides']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->smartguide->guides->post([
   'json' => [
-    'sub_mchid' => '',
-    'corpid'    => '',
-    'store_id'  => 0,
-    'userid'    => '',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '',
+    'corpid'       => '',
+    'store_id'     => 0,
+    'userid'       => '',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -110,14 +115,15 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/smartguide/guides')->post([
   'json' => [
-    'sub_mchid' => '',
-    'corpid'    => '',
-    'store_id'  => 0,
-    'userid'    => '',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '',
+    'corpid'       => '',
+    'store_id'     => 0,
+    'userid'       => '',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -129,14 +135,15 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/smartguide/guides']->post([
   'json' => [
-    'sub_mchid' => '',
-    'corpid'    => '',
-    'store_id'  => 0,
-    'userid'    => '',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '',
+    'corpid'       => '',
+    'store_id'     => 0,
+    'userid'       => '',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

@@ -15,6 +15,7 @@ description: 服务商下单的时候带上补差标识，微信订单支付成�
 | amount {data-required data-indent=1} | integer | 补差金额
 | description {data-required data-indent=1} | string | 补差描述
 | refund_id {data-indent=1} | string | 微信退款单号
+| out_subsidy_no {data-indent=1} | string | 商户补差单号
 
 {.im-table #request}
 
@@ -28,6 +29,7 @@ $instance->v3->ecommerce->subsidies->create->postAsync([
     'amount'         => 10,
     'description'    => '测试备注',
     'refund_id'      => '3008450740201411110007820472',
+    'out_subsidy_no' => 'P20150806125347',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,6 +46,7 @@ $instance->chain('v3/ecommerce/subsidies/create')->postAsync([
     'amount'         => 10,
     'description'    => '测试备注',
     'refund_id'      => '3008450740201411110007820472',
+    'out_subsidy_no' => 'P20150806125347',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,6 +63,7 @@ $instance['v3/ecommerce/subsidies/create']->postAsync([
     'amount'         => 10,
     'description'    => '测试备注',
     'refund_id'      => '3008450740201411110007820472',
+    'out_subsidy_no' => 'P20150806125347',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +80,7 @@ $response = $instance->v3->ecommerce->subsidies->create->post([
     'amount'         => 10,
     'description'    => '测试备注',
     'refund_id'      => '3008450740201411110007820472',
+    'out_subsidy_no' => 'P20150806125347',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,6 +94,7 @@ $response = $instance->chain('v3/ecommerce/subsidies/create')->post([
     'amount'         => 10,
     'description'    => '测试备注',
     'refund_id'      => '3008450740201411110007820472',
+    'out_subsidy_no' => 'P20150806125347',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -102,6 +108,7 @@ $response = $instance['v3/ecommerce/subsidies/create']->post([
     'amount'         => 10,
     'description'    => '测试备注',
     'refund_id'      => '3008450740201411110007820472',
+    'out_subsidy_no' => 'P20150806125347',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

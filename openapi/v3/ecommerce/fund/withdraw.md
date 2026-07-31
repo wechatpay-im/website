@@ -16,6 +16,7 @@ description: 电商平台通过余额提现API帮助二级商户发起账户余�
 | remark {data-indent=1} | string | 提现备注
 | bank_memo {data-indent=1} | string | 银行附言
 | account_type {data-indent=1} | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
+| notify_url {data-indent=1} | string | 提现结果通知地址
 
 {.im-table #request}
 
@@ -30,6 +31,7 @@ $instance->v3->ecommerce->fund->withdraw->postAsync([
     'remark'         => '交易提现',
     'bank_memo'      => '微信支付提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => 'https://weixin.qq.com/a-fake-notify-url',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,6 +49,7 @@ $instance->chain('v3/ecommerce/fund/withdraw')->postAsync([
     'remark'         => '交易提现',
     'bank_memo'      => '微信支付提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => 'https://weixin.qq.com/a-fake-notify-url',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,6 +67,7 @@ $instance['v3/ecommerce/fund/withdraw']->postAsync([
     'remark'         => '交易提现',
     'bank_memo'      => '微信支付提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => 'https://weixin.qq.com/a-fake-notify-url',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,6 +85,7 @@ $response = $instance->v3->ecommerce->fund->withdraw->post([
     'remark'         => '交易提现',
     'bank_memo'      => '微信支付提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => 'https://weixin.qq.com/a-fake-notify-url',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -95,6 +100,7 @@ $response = $instance->chain('v3/ecommerce/fund/withdraw')->post([
     'remark'         => '交易提现',
     'bank_memo'      => '微信支付提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => 'https://weixin.qq.com/a-fake-notify-url',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,6 +115,7 @@ $response = $instance['v3/ecommerce/fund/withdraw']->post([
     'remark'         => '交易提现',
     'bank_memo'      => '微信支付提现',
     'account_type'   => 'BASIC',
+    'notify_url'     => 'https://weixin.qq.com/a-fake-notify-url',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

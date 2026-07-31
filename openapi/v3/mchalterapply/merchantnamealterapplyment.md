@@ -10,7 +10,7 @@ description: 服务商使用该接口提交商家的商户简称变更申请，�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| merchant_code {data-required data-indent=1} | string | 商户号
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 | out_request_no {data-required data-indent=1} | string | 业务申请编号
 | merchant_shortname {data-required data-indent=1} | string | 商户简称
 
@@ -21,9 +21,9 @@ description: 服务商使用该接口提交商家的商户简称变更申请，�
 ```php [异步纯链式]
 $instance->v3->mchalterapply->merchantnamealterapplyment->postAsync([
   'json' => [
-    'merchant_code'      => '2492185251',
+    'sub_mchid'          => '2492185251',
     'out_request_no'     => '1900013511_10000',
-    'merchant_shortname' => 'example_merchant_shortname',
+    'merchant_shortname' => '新疆大枣专卖店',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -35,9 +35,9 @@ $instance->v3->mchalterapply->merchantnamealterapplyment->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/mchalterapply/merchantnamealterapplyment')->postAsync([
   'json' => [
-    'merchant_code'      => '2492185251',
+    'sub_mchid'          => '2492185251',
     'out_request_no'     => '1900013511_10000',
-    'merchant_shortname' => 'example_merchant_shortname',
+    'merchant_shortname' => '新疆大枣专卖店',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -49,9 +49,9 @@ $instance->chain('v3/mchalterapply/merchantnamealterapplyment')->postAsync([
 ```php [异步属性式]
 $instance['v3/mchalterapply/merchantnamealterapplyment']->postAsync([
   'json' => [
-    'merchant_code'      => '2492185251',
+    'sub_mchid'          => '2492185251',
     'out_request_no'     => '1900013511_10000',
-    'merchant_shortname' => 'example_merchant_shortname',
+    'merchant_shortname' => '新疆大枣专卖店',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,9 +63,9 @@ $instance['v3/mchalterapply/merchantnamealterapplyment']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->mchalterapply->merchantnamealterapplyment->post([
   'json' => [
-    'merchant_code'      => '2492185251',
+    'sub_mchid'          => '2492185251',
     'out_request_no'     => '1900013511_10000',
-    'merchant_shortname' => 'example_merchant_shortname',
+    'merchant_shortname' => '新疆大枣专卖店',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -74,9 +74,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/mchalterapply/merchantnamealterapplyment')->post([
   'json' => [
-    'merchant_code'      => '2492185251',
+    'sub_mchid'          => '2492185251',
     'out_request_no'     => '1900013511_10000',
-    'merchant_shortname' => 'example_merchant_shortname',
+    'merchant_shortname' => '新疆大枣专卖店',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -85,9 +85,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/mchalterapply/merchantnamealterapplyment']->post([
   'json' => [
-    'merchant_code'      => '2492185251',
+    'sub_mchid'          => '2492185251',
     'out_request_no'     => '1900013511_10000',
-    'merchant_shortname' => 'example_merchant_shortname',
+    'merchant_shortname' => '新疆大枣专卖店',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

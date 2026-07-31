@@ -39,6 +39,15 @@ description: 还款下单，只能使用还款对应的查单、关单接口
 | miniprogram_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 小程序调起支付场景信息
 | combine_appid {data-required data-indent=2} | string | 还款服务商APPID
 | openid {data-required data-indent=2} | string | 用户标识
+| combine_payer_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者信息
+| identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付
+| type {data-required data-indent=3} | string | 类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` \| `TAIWAN_COMPATRIOT_PERMIT` 枚举值之一
+| number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
+| name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
+| wechat_web_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 微信内网页调起支付场景信息
+| combine_appid {data-indent=2} | string | 还款服务商APPID
+| openid {data-indent=2} | string | 用户标识
+| webview_url {data-indent=2} | string | 网页经营场景URL
 
 {.im-table #request}
 
@@ -81,6 +90,18 @@ $instance->v3->repayment->combineTransactions->partner->prepay->postAsync([
     'miniprogram_info'     => [
       'combine_appid' => 'wxd678efh567hg6787',
       'openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    ],
+    'combine_payer_info'   => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '',
+        'name'   => '',
+      ],
+    ],
+    'wechat_web_info'      => [
+      'combine_appid' => '',
+      'openid'        => '',
+      'webview_url'   => '',
     ],
   ],
 ])
@@ -128,6 +149,18 @@ $instance->chain('v3/repayment/combine-transactions/partner/prepay')->postAsync(
       'combine_appid' => 'wxd678efh567hg6787',
       'openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
+    'combine_payer_info'   => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '',
+        'name'   => '',
+      ],
+    ],
+    'wechat_web_info'      => [
+      'combine_appid' => '',
+      'openid'        => '',
+      'webview_url'   => '',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -173,6 +206,18 @@ $instance['v3/repayment/combine-transactions/partner/prepay']->postAsync([
     'miniprogram_info'     => [
       'combine_appid' => 'wxd678efh567hg6787',
       'openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    ],
+    'combine_payer_info'   => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '',
+        'name'   => '',
+      ],
+    ],
+    'wechat_web_info'      => [
+      'combine_appid' => '',
+      'openid'        => '',
+      'webview_url'   => '',
     ],
   ],
 ])
@@ -220,6 +265,18 @@ $response = $instance->v3->repayment->combineTransactions->partner->prepay->post
       'combine_appid' => 'wxd678efh567hg6787',
       'openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
+    'combine_payer_info'   => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '',
+        'name'   => '',
+      ],
+    ],
+    'wechat_web_info'      => [
+      'combine_appid' => '',
+      'openid'        => '',
+      'webview_url'   => '',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -263,6 +320,18 @@ $response = $instance->chain('v3/repayment/combine-transactions/partner/prepay')
       'combine_appid' => 'wxd678efh567hg6787',
       'openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
+    'combine_payer_info'   => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '',
+        'name'   => '',
+      ],
+    ],
+    'wechat_web_info'      => [
+      'combine_appid' => '',
+      'openid'        => '',
+      'webview_url'   => '',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -305,6 +374,18 @@ $response = $instance['v3/repayment/combine-transactions/partner/prepay']->post(
     'miniprogram_info'     => [
       'combine_appid' => 'wxd678efh567hg6787',
       'openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+    ],
+    'combine_payer_info'   => [
+      'identity' => [
+        'type'   => 'IDCARD',
+        'number' => '',
+        'name'   => '',
+      ],
+    ],
+    'wechat_web_info'      => [
+      'combine_appid' => '',
+      'openid'        => '',
+      'webview_url'   => '',
     ],
   ],
 ]);

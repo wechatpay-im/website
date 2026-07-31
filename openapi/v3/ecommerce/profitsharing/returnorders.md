@@ -14,6 +14,7 @@
 | return_mchid {data-required data-indent=1} | string | 回退商户号
 | amount {data-required data-indent=1} | integer | 回退金额
 | description {data-required data-indent=1} | string | 回退描述
+| transaction_id {data-indent=1} | string | 微信订单号
 
 {.im-table #request}
 
@@ -22,13 +23,14 @@
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->returnorders->postAsync([
   'json' => [
-    'sub_mchid'     => '1900000109',
-    'order_id'      => '3008450740201411110007820472',
-    'out_order_no'  => '',
-    'out_return_no' => 'R20190516001',
-    'return_mchid'  => '86693852',
-    'amount'        => 10,
-    'description'   => '分账回退',
+    'sub_mchid'      => '1900000109',
+    'order_id'       => '3008450740201411110007820472',
+    'out_order_no'   => '',
+    'out_return_no'  => 'R20190516001',
+    'return_mchid'   => '86693852',
+    'amount'         => 10,
+    'description'    => '分账回退',
+    'transaction_id' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,13 +42,14 @@ $instance->v3->ecommerce->profitsharing->returnorders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/returnorders')->postAsync([
   'json' => [
-    'sub_mchid'     => '1900000109',
-    'order_id'      => '3008450740201411110007820472',
-    'out_order_no'  => '',
-    'out_return_no' => 'R20190516001',
-    'return_mchid'  => '86693852',
-    'amount'        => 10,
-    'description'   => '分账回退',
+    'sub_mchid'      => '1900000109',
+    'order_id'       => '3008450740201411110007820472',
+    'out_order_no'   => '',
+    'out_return_no'  => 'R20190516001',
+    'return_mchid'   => '86693852',
+    'amount'         => 10,
+    'description'    => '分账回退',
+    'transaction_id' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,13 +61,14 @@ $instance->chain('v3/ecommerce/profitsharing/returnorders')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/returnorders']->postAsync([
   'json' => [
-    'sub_mchid'     => '1900000109',
-    'order_id'      => '3008450740201411110007820472',
-    'out_order_no'  => '',
-    'out_return_no' => 'R20190516001',
-    'return_mchid'  => '86693852',
-    'amount'        => 10,
-    'description'   => '分账回退',
+    'sub_mchid'      => '1900000109',
+    'order_id'       => '3008450740201411110007820472',
+    'out_order_no'   => '',
+    'out_return_no'  => 'R20190516001',
+    'return_mchid'   => '86693852',
+    'amount'         => 10,
+    'description'    => '分账回退',
+    'transaction_id' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,13 +80,14 @@ $instance['v3/ecommerce/profitsharing/returnorders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->returnorders->post([
   'json' => [
-    'sub_mchid'     => '1900000109',
-    'order_id'      => '3008450740201411110007820472',
-    'out_order_no'  => '',
-    'out_return_no' => 'R20190516001',
-    'return_mchid'  => '86693852',
-    'amount'        => 10,
-    'description'   => '分账回退',
+    'sub_mchid'      => '1900000109',
+    'order_id'       => '3008450740201411110007820472',
+    'out_order_no'   => '',
+    'out_return_no'  => 'R20190516001',
+    'return_mchid'   => '86693852',
+    'amount'         => 10,
+    'description'    => '分账回退',
+    'transaction_id' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -91,13 +96,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/returnorders')->post([
   'json' => [
-    'sub_mchid'     => '1900000109',
-    'order_id'      => '3008450740201411110007820472',
-    'out_order_no'  => '',
-    'out_return_no' => 'R20190516001',
-    'return_mchid'  => '86693852',
-    'amount'        => 10,
-    'description'   => '分账回退',
+    'sub_mchid'      => '1900000109',
+    'order_id'       => '3008450740201411110007820472',
+    'out_order_no'   => '',
+    'out_return_no'  => 'R20190516001',
+    'return_mchid'   => '86693852',
+    'amount'         => 10,
+    'description'    => '分账回退',
+    'transaction_id' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -106,13 +112,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/returnorders']->post([
   'json' => [
-    'sub_mchid'     => '1900000109',
-    'order_id'      => '3008450740201411110007820472',
-    'out_order_no'  => '',
-    'out_return_no' => 'R20190516001',
-    'return_mchid'  => '86693852',
-    'amount'        => 10,
-    'description'   => '分账回退',
+    'sub_mchid'      => '1900000109',
+    'order_id'       => '3008450740201411110007820472',
+    'out_order_no'   => '',
+    'out_return_no'  => 'R20190516001',
+    'return_mchid'   => '86693852',
+    'amount'         => 10,
+    'description'    => '分账回退',
+    'transaction_id' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

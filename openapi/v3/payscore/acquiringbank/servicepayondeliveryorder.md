@@ -56,6 +56,7 @@ description: 创建微信支付分先用后付订单
 | picture {data-indent=3} | string | 商品图片链接
 | amount {data-indent=3} | integer | 商品单价金额
 | count {data-indent=3} | integer | 商品数量
+| category_id {data-indent=3} | string[] | 商品品类ID
 
 {.im-table #request}
 
@@ -112,10 +113,11 @@ $instance->v3->payscore->acquiringbank->servicepayondeliveryorder->postAsync([
         'path'           => '',
       ],
       'goods'               => [[
-        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount'  => 40000,
-        'count'   => 4,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 40000,
+        'count'       => 4,
+        'category_id' => ['6032'],
       ],],
     ],
   ],
@@ -177,10 +179,11 @@ $instance->chain('v3/payscore/acquiringbank/servicepayondeliveryorder')->postAsy
         'path'           => '',
       ],
       'goods'               => [[
-        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount'  => 40000,
-        'count'   => 4,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 40000,
+        'count'       => 4,
+        'category_id' => ['6032'],
       ],],
     ],
   ],
@@ -242,10 +245,11 @@ $instance['v3/payscore/acquiringbank/servicepayondeliveryorder']->postAsync([
         'path'           => '',
       ],
       'goods'               => [[
-        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount'  => 40000,
-        'count'   => 4,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 40000,
+        'count'       => 4,
+        'category_id' => ['6032'],
       ],],
     ],
   ],
@@ -307,10 +311,11 @@ $response = $instance->v3->payscore->acquiringbank->servicepayondeliveryorder->p
         'path'           => '',
       ],
       'goods'               => [[
-        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount'  => 40000,
-        'count'   => 4,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 40000,
+        'count'       => 4,
+        'category_id' => ['6032'],
       ],],
     ],
   ],
@@ -369,10 +374,11 @@ $response = $instance->chain('v3/payscore/acquiringbank/servicepayondeliveryorde
         'path'           => '',
       ],
       'goods'               => [[
-        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount'  => 40000,
-        'count'   => 4,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 40000,
+        'count'       => 4,
+        'category_id' => ['6032'],
       ],],
     ],
   ],
@@ -431,10 +437,11 @@ $response = $instance['v3/payscore/acquiringbank/servicepayondeliveryorder']->po
         'path'           => '',
       ],
       'goods'               => [[
-        'name'    => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
-        'picture' => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
-        'amount'  => 40000,
-        'count'   => 4,
+        'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
+        'picture'     => 'http://mmbiz.qpic.cn/mmbiz_png/ldTw9dg46zkjOrzyTkbQAvQkysliaiblZhdthZWewgQMyqLZwStaNEsJrYmjwh2MlK7G4wibAFOEuISQKplSnxMWA/640?wx_fmt=png&wxfrom=200',
+        'amount'      => 40000,
+        'count'       => 4,
+        'category_id' => ['6032'],
       ],],
     ],
   ],

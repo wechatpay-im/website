@@ -19,6 +19,7 @@ description: 本接口用于商户号注销、商户号注销及提现。当平�
 | account_name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 开户名称
 | account_bank {data-required data-indent=3} | string | 开户银行
 | bank_branch_id {data-indent=3} | string | 开户银行联行号
+| bank_branch_name {data-indent=3} | string | 开户银行全称（含支行）
 | bank_name {data-indent=3} | string | 开户银行全称（含支行）
 | account_number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行账号
 | identity_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 收款人账号对应的证件信息
@@ -46,11 +47,12 @@ $instance->v3->ecommerce->account->applyCancelWithdraw->postAsync([
     'payee_info'           => [
       'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank'   => '工商银行',
-        'bank_branch_id' => '402713354941',
-        'bank_name'      => '402713354941',
-        'account_number' => 'd+xT+MQCvrLHeorwC+w==',
+        'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'     => '工商银行',
+        'bank_branch_id'   => '402713354941',
+        'bank_branch_name' => '',
+        'bank_name'        => '402713354941',
+        'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
         'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
@@ -84,11 +86,12 @@ $instance->chain('v3/ecommerce/account/apply-cancel-withdraw')->postAsync([
     'payee_info'           => [
       'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank'   => '工商银行',
-        'bank_branch_id' => '402713354941',
-        'bank_name'      => '402713354941',
-        'account_number' => 'd+xT+MQCvrLHeorwC+w==',
+        'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'     => '工商银行',
+        'bank_branch_id'   => '402713354941',
+        'bank_branch_name' => '',
+        'bank_name'        => '402713354941',
+        'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
         'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
@@ -122,11 +125,12 @@ $instance['v3/ecommerce/account/apply-cancel-withdraw']->postAsync([
     'payee_info'           => [
       'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank'   => '工商银行',
-        'bank_branch_id' => '402713354941',
-        'bank_name'      => '402713354941',
-        'account_number' => 'd+xT+MQCvrLHeorwC+w==',
+        'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'     => '工商银行',
+        'bank_branch_id'   => '402713354941',
+        'bank_branch_name' => '',
+        'bank_name'        => '402713354941',
+        'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
         'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
@@ -160,11 +164,12 @@ $response = $instance->v3->ecommerce->account->applyCancelWithdraw->post([
     'payee_info'           => [
       'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank'   => '工商银行',
-        'bank_branch_id' => '402713354941',
-        'bank_name'      => '402713354941',
-        'account_number' => 'd+xT+MQCvrLHeorwC+w==',
+        'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'     => '工商银行',
+        'bank_branch_id'   => '402713354941',
+        'bank_branch_name' => '',
+        'bank_name'        => '402713354941',
+        'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
         'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
@@ -195,11 +200,12 @@ $response = $instance->chain('v3/ecommerce/account/apply-cancel-withdraw')->post
     'payee_info'           => [
       'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank'   => '工商银行',
-        'bank_branch_id' => '402713354941',
-        'bank_name'      => '402713354941',
-        'account_number' => 'd+xT+MQCvrLHeorwC+w==',
+        'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'     => '工商银行',
+        'bank_branch_id'   => '402713354941',
+        'bank_branch_name' => '',
+        'bank_name'        => '402713354941',
+        'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
         'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
@@ -230,11 +236,12 @@ $response = $instance['v3/ecommerce/account/apply-cancel-withdraw']->post([
     'payee_info'           => [
       'account_type'      => 'ACCOUNT_TYPE_CORPORATE',
       'bank_account_info' => [
-        'account_name'   => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
-        'account_bank'   => '工商银行',
-        'bank_branch_id' => '402713354941',
-        'bank_name'      => '402713354941',
-        'account_number' => 'd+xT+MQCvrLHeorwC+w==',
+        'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
+        'account_bank'     => '工商银行',
+        'bank_branch_id'   => '402713354941',
+        'bank_branch_name' => '',
+        'bank_name'        => '402713354941',
+        'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
         'id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',

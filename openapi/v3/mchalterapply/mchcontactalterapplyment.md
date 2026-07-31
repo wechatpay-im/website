@@ -13,15 +13,15 @@ description: 服务商使用该接口提交商家超级管理员变更申请，�
 | merchant_code {data-required data-indent=1} | string | 商户号
 | out_request_no {data-required data-indent=1} | string | 业务申请编号
 | contact_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 超级管理员信息
-| contact_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员姓名
-| contact_id_doc_type {data-indent=2} | string | 超级管理员证件类型<br/>`IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
-| contact_id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员身份证件号码
-| contact_id_doc_copy {data-indent=2} | string | 超级管理员证件正面照片
+| contact_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员姓名
+| contact_id_doc_type {data-required data-indent=2} | string | 超级管理员证件类型<br/>`IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
+| contact_id_card_number {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员身份证件号码
+| contact_id_doc_copy {data-required data-indent=2} | string | 超级管理员证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 超级管理员证件反面照片
-| contact_period_begin {data-indent=2} | string | 超级管理员证件有效期开始时间
-| contact_period_end {data-indent=2} | string | 超级管理员证件有效期结束时间
+| contact_id_doc_period_begin {data-required data-indent=2} | string | 超级管理员证件有效期开始时间
+| contact_id_doc_period_end {data-required data-indent=2} | string | 超级管理员证件有效期结束时间
 | business_authorization_letter {data-indent=2} | string | 业务办理授权函
-| mobile_phone {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员手机
+| mobile_phone {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员手机
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -40,8 +40,8 @@ $instance->v3->mchalterapply->mchcontactalterapplyment->postAsync([
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => '',
       'contact_id_doc_copy_back'      => '',
-      'contact_period_begin'          => '',
-      'contact_period_end'            => '',
+      'contact_id_doc_period_begin'   => '2019-06-06',
+      'contact_id_doc_period_end'     => '2026-06-06',
       'business_authorization_letter' => '',
       'mobile_phone'                  => 'pVd1HJ6zyvPedzGaV+X3qtmrq9bb9tPROvwia4ibL+F6mfjbzQIzfb3HHLEjZ4YiNWWNeespQO/0kjiwfqdfg==',
     ],
@@ -67,8 +67,8 @@ $instance->chain('v3/mchalterapply/mchcontactalterapplyment')->postAsync([
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => '',
       'contact_id_doc_copy_back'      => '',
-      'contact_period_begin'          => '',
-      'contact_period_end'            => '',
+      'contact_id_doc_period_begin'   => '2019-06-06',
+      'contact_id_doc_period_end'     => '2026-06-06',
       'business_authorization_letter' => '',
       'mobile_phone'                  => 'pVd1HJ6zyvPedzGaV+X3qtmrq9bb9tPROvwia4ibL+F6mfjbzQIzfb3HHLEjZ4YiNWWNeespQO/0kjiwfqdfg==',
     ],
@@ -94,8 +94,8 @@ $instance['v3/mchalterapply/mchcontactalterapplyment']->postAsync([
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => '',
       'contact_id_doc_copy_back'      => '',
-      'contact_period_begin'          => '',
-      'contact_period_end'            => '',
+      'contact_id_doc_period_begin'   => '2019-06-06',
+      'contact_id_doc_period_end'     => '2026-06-06',
       'business_authorization_letter' => '',
       'mobile_phone'                  => 'pVd1HJ6zyvPedzGaV+X3qtmrq9bb9tPROvwia4ibL+F6mfjbzQIzfb3HHLEjZ4YiNWWNeespQO/0kjiwfqdfg==',
     ],
@@ -121,8 +121,8 @@ $response = $instance->v3->mchalterapply->mchcontactalterapplyment->post([
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => '',
       'contact_id_doc_copy_back'      => '',
-      'contact_period_begin'          => '',
-      'contact_period_end'            => '',
+      'contact_id_doc_period_begin'   => '2019-06-06',
+      'contact_id_doc_period_end'     => '2026-06-06',
       'business_authorization_letter' => '',
       'mobile_phone'                  => 'pVd1HJ6zyvPedzGaV+X3qtmrq9bb9tPROvwia4ibL+F6mfjbzQIzfb3HHLEjZ4YiNWWNeespQO/0kjiwfqdfg==',
     ],
@@ -145,8 +145,8 @@ $response = $instance->chain('v3/mchalterapply/mchcontactalterapplyment')->post(
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => '',
       'contact_id_doc_copy_back'      => '',
-      'contact_period_begin'          => '',
-      'contact_period_end'            => '',
+      'contact_id_doc_period_begin'   => '2019-06-06',
+      'contact_id_doc_period_end'     => '2026-06-06',
       'business_authorization_letter' => '',
       'mobile_phone'                  => 'pVd1HJ6zyvPedzGaV+X3qtmrq9bb9tPROvwia4ibL+F6mfjbzQIzfb3HHLEjZ4YiNWWNeespQO/0kjiwfqdfg==',
     ],
@@ -169,8 +169,8 @@ $response = $instance['v3/mchalterapply/mchcontactalterapplyment']->post([
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => '',
       'contact_id_doc_copy_back'      => '',
-      'contact_period_begin'          => '',
-      'contact_period_end'            => '',
+      'contact_id_doc_period_begin'   => '2019-06-06',
+      'contact_id_doc_period_end'     => '2026-06-06',
       'business_authorization_letter' => '',
       'mobile_phone'                  => 'pVd1HJ6zyvPedzGaV+X3qtmrq9bb9tPROvwia4ibL+F6mfjbzQIzfb3HHLEjZ4YiNWWNeespQO/0kjiwfqdfg==',
     ],

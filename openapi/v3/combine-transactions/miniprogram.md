@@ -20,6 +20,7 @@ description: 使用个人收款交易接口，可支持为个人收款方在微�
 | payer_client_ip {data-required data-indent=2} | string | 用户终端IP
 | sub_orders {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品单信息
 | mchid {data-required data-indent=2} | string | 商品单发起商户号
+| order_service_type {data-indent=2} | string | 商品服务类型<br/>`INDIVIDUALTRADE` 枚举值
 | individual_auth_id {data-required data-indent=2} | string | 商品单个人收款方受理授权ID
 | individual_name {data-indent=2} | string | 商品单个人收款方平台昵称
 | out_trade_no {data-required data-indent=2} | string | 商品单商户订单号
@@ -51,6 +52,7 @@ $instance->v3->combineTransactions->miniprogram->postAsync([
     ],
     'sub_orders'           => [[
       'mchid'              => '1230000109',
+      'order_service_type' => 'INDIVIDUALTRADE',
       'individual_auth_id' => '1900000109',
       'individual_name'    => '哈哈哈小店',
       'out_trade_no'       => '20150806125346',
@@ -87,6 +89,7 @@ $instance->chain('v3/combine-transactions/miniprogram')->postAsync([
     ],
     'sub_orders'           => [[
       'mchid'              => '1230000109',
+      'order_service_type' => 'INDIVIDUALTRADE',
       'individual_auth_id' => '1900000109',
       'individual_name'    => '哈哈哈小店',
       'out_trade_no'       => '20150806125346',
@@ -123,6 +126,7 @@ $instance['v3/combine-transactions/miniprogram']->postAsync([
     ],
     'sub_orders'           => [[
       'mchid'              => '1230000109',
+      'order_service_type' => 'INDIVIDUALTRADE',
       'individual_auth_id' => '1900000109',
       'individual_name'    => '哈哈哈小店',
       'out_trade_no'       => '20150806125346',
@@ -159,6 +163,7 @@ $response = $instance->v3->combineTransactions->miniprogram->post([
     ],
     'sub_orders'           => [[
       'mchid'              => '1230000109',
+      'order_service_type' => 'INDIVIDUALTRADE',
       'individual_auth_id' => '1900000109',
       'individual_name'    => '哈哈哈小店',
       'out_trade_no'       => '20150806125346',
@@ -192,6 +197,7 @@ $response = $instance->chain('v3/combine-transactions/miniprogram')->post([
     ],
     'sub_orders'           => [[
       'mchid'              => '1230000109',
+      'order_service_type' => 'INDIVIDUALTRADE',
       'individual_auth_id' => '1900000109',
       'individual_name'    => '哈哈哈小店',
       'out_trade_no'       => '20150806125346',
@@ -225,6 +231,7 @@ $response = $instance['v3/combine-transactions/miniprogram']->post([
     ],
     'sub_orders'           => [[
       'mchid'              => '1230000109',
+      'order_service_type' => 'INDIVIDUALTRADE',
       'individual_auth_id' => '1900000109',
       'individual_name'    => '哈哈哈小店',
       'out_trade_no'       => '20150806125346',

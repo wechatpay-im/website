@@ -33,6 +33,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | profit_sharing {data-indent=3} | boolean | 是否指定分账
 | subsidy_amount {data-indent=3} | integer | 补差金额
 | sub_appid {data-indent=2} | string | 子商户应用ID
+| profit_sharing {data-indent=2} | boolean | 是否指定分账(settle_info.profit_sharing高权重)
 | combine_payer_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付(需单独申请权限)
 | type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
@@ -93,6 +94,7 @@ $instance->v3->combineTransactions->app->postAsync([
         'subsidy_amount' => 10,
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
+      'profit_sharing'     => true,
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -164,6 +166,7 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
         'subsidy_amount' => 10,
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
+      'profit_sharing'     => true,
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -235,6 +238,7 @@ $instance['v3/combine-transactions/app']->postAsync([
         'subsidy_amount' => 10,
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
+      'profit_sharing'     => true,
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -306,6 +310,7 @@ $response = $instance->v3->combineTransactions->app->post([
         'subsidy_amount' => 10,
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
+      'profit_sharing'     => true,
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -374,6 +379,7 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
         'subsidy_amount' => 10,
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
+      'profit_sharing'     => true,
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -442,6 +448,7 @@ $response = $instance['v3/combine-transactions/app']->post([
         'subsidy_amount' => 10,
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
+      'profit_sharing'     => true,
     ],],
     'combine_payer_info'   => [
       'identity' => [

@@ -1,6 +1,6 @@
 ---
 title: 从业机构登记微信支付分扣款信息
-description: 前置条件：服务订单状态为“进行中”且订单状态说明需为"商户完结(MCH_COMPLETE)"
+description: 支付分订单完结成功后，调用本接口登记商户扣款单号，登记后调用清算机构(银联/网联)委托代扣接口进行扣款。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -16,6 +16,7 @@ description: 前置条件：服务订单状态为“进行中”且订单状态�
 | sub_mchid {data-required data-indent=1} | string | 子商户号
 | channel_id {data-required data-indent=1} | string | 渠道商商户号
 | out_trade_no {data-indent=1} | string | 商户系统内部扣款单号。
+| sub_appid {data-indent=1} | string | 子商户公众账号ID
 
 {.im-table #request}
 
@@ -30,6 +31,7 @@ $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->registerde
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
+    'sub_appid'    => 'wxd678efh567hg6999',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -47,6 +49,7 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/register
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
+    'sub_appid'    => 'wxd678efh567hg6999',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,6 +67,7 @@ $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/registerdeducti
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
+    'sub_appid'    => 'wxd678efh567hg6999',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,6 +85,7 @@ $response = $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
+    'sub_appid'    => 'wxd678efh567hg6999',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -95,6 +100,7 @@ $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
+    'sub_appid'    => 'wxd678efh567hg6999',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -109,6 +115,7 @@ $response = $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/reg
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_trade_no' => '1234323JKHDFE1243252',
+    'sub_appid'    => 'wxd678efh567hg6999',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

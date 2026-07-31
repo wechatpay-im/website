@@ -19,6 +19,7 @@ description: 企业商户为员工下发企业支付额度卡。该接口允许�
 | out_card_no {data-required data-indent=1} | string | 商户卡号
 | effective_end_time {data-required data-indent=1} | string | 卡片有效期
 | card_remark {data-indent=1} | string | 卡片备注
+| avail_mch_range_id {data-indent=1} | string | 可用商户范围ID
 
 {.im-table #request}
 
@@ -36,6 +37,7 @@ $instance->v3->webizpay->employees->_employee_id_->quotaCards->postAsync([
     'out_card_no'        => 'mch_card_123456',
     'effective_end_time' => '2023-12-31T23:59:59+08:00',
     'card_remark'        => '2023年1月差旅报销',
+    'avail_mch_range_id' => 'range_12345678',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,6 +58,7 @@ $instance->chain('v3/webizpay/employees/{employee_id}/quota-cards')->postAsync([
     'out_card_no'        => 'mch_card_123456',
     'effective_end_time' => '2023-12-31T23:59:59+08:00',
     'card_remark'        => '2023年1月差旅报销',
+    'avail_mch_range_id' => 'range_12345678',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +79,7 @@ $instance['v3/webizpay/employees/{employee_id}/quota-cards']->postAsync([
     'out_card_no'        => 'mch_card_123456',
     'effective_end_time' => '2023-12-31T23:59:59+08:00',
     'card_remark'        => '2023年1月差旅报销',
+    'avail_mch_range_id' => 'range_12345678',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -96,6 +100,7 @@ $response = $instance->v3->webizpay->employees->_employee_id_->quotaCards->post(
     'out_card_no'        => 'mch_card_123456',
     'effective_end_time' => '2023-12-31T23:59:59+08:00',
     'card_remark'        => '2023年1月差旅报销',
+    'avail_mch_range_id' => 'range_12345678',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -113,6 +118,7 @@ $response = $instance->chain('v3/webizpay/employees/{employee_id}/quota-cards')-
     'out_card_no'        => 'mch_card_123456',
     'effective_end_time' => '2023-12-31T23:59:59+08:00',
     'card_remark'        => '2023年1月差旅报销',
+    'avail_mch_range_id' => 'range_12345678',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -130,6 +136,7 @@ $response = $instance['v3/webizpay/employees/{employee_id}/quota-cards']->post([
     'out_card_no'        => 'mch_card_123456',
     'effective_end_time' => '2023-12-31T23:59:59+08:00',
     'card_remark'        => '2023年1月差旅报销',
+    'avail_mch_range_id' => 'range_12345678',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

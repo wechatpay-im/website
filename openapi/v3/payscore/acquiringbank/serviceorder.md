@@ -2,7 +2,7 @@
 
 ## 从业机构创建微信支付分订单 {#post}
 
-用户申请使用服务时，从业机构可通过此接口申请创建微信支付分订单。
+当用户申请使用服务时，从业机构可通过此接口为子商户申请创建微信支付分订单，创单成功后，订单状态state为DOING进行中。
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
@@ -23,6 +23,7 @@
 | name {data-required data-indent=2} | string | 优惠名称
 | description {data-required data-indent=2} | string | 优惠说明
 | count {data-indent=2} | integer | 优惠数量
+| amount {data-indent=2} | integer | 付费金额
 | risk_fund {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单风险金
 | name {data-required data-indent=2} | string | 风险金名称
 | amount {data-required data-indent=2} | integer | 风险金额
@@ -65,6 +66,7 @@ $instance->v3->payscore->acquiringbank->serviceorder->postAsync([
       'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
       'count'       => 2,
+      'amount'      => 40000,
     ],],
     'risk_fund'            => [
       'name'        => 'DEPOSIT',
@@ -114,6 +116,7 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder')->postAsync([
       'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
       'count'       => 2,
+      'amount'      => 40000,
     ],],
     'risk_fund'            => [
       'name'        => 'DEPOSIT',
@@ -163,6 +166,7 @@ $instance['v3/payscore/acquiringbank/serviceorder']->postAsync([
       'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
       'count'       => 2,
+      'amount'      => 40000,
     ],],
     'risk_fund'            => [
       'name'        => 'DEPOSIT',
@@ -212,6 +216,7 @@ $response = $instance->v3->payscore->acquiringbank->serviceorder->post([
       'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
       'count'       => 2,
+      'amount'      => 40000,
     ],],
     'risk_fund'            => [
       'name'        => 'DEPOSIT',
@@ -258,6 +263,7 @@ $response = $instance->chain('v3/payscore/acquiringbank/serviceorder')->post([
       'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
       'count'       => 2,
+      'amount'      => 40000,
     ],],
     'risk_fund'            => [
       'name'        => 'DEPOSIT',
@@ -304,6 +310,7 @@ $response = $instance['v3/payscore/acquiringbank/serviceorder']->post([
       'name'        => '满20减1元',
       'description' => '不与其他优惠叠加',
       'count'       => 2,
+      'amount'      => 40000,
     ],],
     'risk_fund'            => [
       'name'        => 'DEPOSIT',
@@ -376,7 +383,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ## 从业机构查询微信支付分订单 {#get}
 
-前置条件：商户已创建支付分服务订单
+当商户创建支付分订单成功后，可以通过该接口查询订单状态
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---

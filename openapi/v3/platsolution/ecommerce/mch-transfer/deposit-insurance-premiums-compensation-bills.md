@@ -18,6 +18,7 @@ description: 商户可调用该接口从保证金账户赔付保司保费。注�
 | mchid {data-indent=3} | string | 商户号
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 赔付单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
+| type {data-required data-indent=3} | string | 赔付单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
 | out_bill_no {data-required data-indent=1} | string | 商户单号
 | amount {data-indent=1} | number | 赔付金额
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
@@ -38,6 +39,7 @@ $instance->v3->platsolution->ecommerce->mchTransfer->depositInsurancePremiumsCom
       ],
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -63,6 +65,7 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premi
       ],
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -88,6 +91,7 @@ $instance['v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-com
       ],
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -113,6 +117,7 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->depositInsuranc
       ],
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -135,6 +140,7 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-ins
       ],
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',
@@ -157,6 +163,7 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/deposit-insurance-
       ],
       'transaction_info' => [
         'transaction_id' => '1217752501201407033233368018',
+        'type'           => 'WXPAY',
       ],
     ],
     'out_bill_no'     => 'plfk2020042013',

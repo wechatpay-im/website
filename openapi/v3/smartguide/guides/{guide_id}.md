@@ -16,6 +16,7 @@ description: 用于服务商/用于服务商/商户开发者为商户更新门�
 | mobile {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 手机号码
 | qr_code {data-indent=1} | string | 员工个人二维码
 | avatar {data-indent=1} | string | 头像URL
+| group_qrcode {data-indent=1} | string | 群二维码URL
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -27,11 +28,12 @@ description: 用于服务商/用于服务商/商户开发者为商户更新门�
 $instance->v3->smartguide->guides->_guide_id_->patchAsync([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
-    'sub_mchid' => '1234567890',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '1234567890',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -47,11 +49,12 @@ $instance->v3->smartguide->guides->_guide_id_->patchAsync([
 $instance->chain('v3/smartguide/guides/{guide_id}')->patchAsync([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
-    'sub_mchid' => '1234567890',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '1234567890',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -67,11 +70,12 @@ $instance->chain('v3/smartguide/guides/{guide_id}')->patchAsync([
 $instance['v3/smartguide/guides/{guide_id}']->patchAsync([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
-    'sub_mchid' => '1234567890',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '1234567890',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -87,11 +91,12 @@ $instance['v3/smartguide/guides/{guide_id}']->patchAsync([
 $response = $instance->v3->smartguide->guides->_guide_id_->patch([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
-    'sub_mchid' => '1234567890',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '1234567890',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -104,11 +109,12 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/smartguide/guides/{guide_id}')->patch([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
-    'sub_mchid' => '1234567890',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '1234567890',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -121,11 +127,12 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/smartguide/guides/{guide_id}']->patch([
   'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
-    'sub_mchid' => '1234567890',
-    'name'      => '',
-    'mobile'    => '',
-    'qr_code'   => '',
-    'avatar'    => '',
+    'sub_mchid'    => '1234567890',
+    'name'         => '',
+    'mobile'       => '',
+    'qr_code'      => '',
+    'avatar'       => '',
+    'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
