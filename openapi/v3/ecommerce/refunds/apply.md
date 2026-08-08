@@ -30,7 +30,7 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 | currency {data-indent=2} | string | 退款币种
 | notify_url {data-indent=1} | string | 退款结果回调url
 | refund_account {data-indent=1} | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一
-| funds_account {data-required data-indent=1} | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` 枚举值之一
+| funds_account {data-required data-indent=1} | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` \| `PREPAID` 枚举值之一
 
 {.im-table #request}
 

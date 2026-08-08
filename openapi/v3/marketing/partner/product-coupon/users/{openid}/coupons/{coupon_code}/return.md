@@ -138,7 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | valid_end_time {data-required} | string | 有效期结束时间
 | receive_time {data-required} | string | 领券时间
 | send_request_no {data-required} | string | 发券请求单号
-| send_channel {data-required} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MERCHANT_CARD` \| `MEMBER` \| `SMALL_ACTIVITY` 枚举值之一
+| send_channel {data-required} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MERCHANT_CARD` \| `MEMBER` \| `SMALL_ACTIVITY` \| `RECEIVE_COMPONENT` 枚举值之一
 | confirm_request_no | string | 确认请求单号
 | confirm_time | string | 确认发放时间
 | deactivate_request_no | string | 失效请求单号

@@ -190,6 +190,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-required data-indent=1} | string | 分账接收方类型
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
 | detail_id {data-required data-indent=1} | string | 分账明细单号
+| abnormal_status {data-indent=1} | string | 异常处理状态<br/>`ABNORMAL_PENDING` \| `ABNORMAL_FINISHED` \| `ABNORMAL_CLOSED` 枚举值之一
+| funds_abnormal_closed_reason {data-indent=1} | string | 异常处理关单原因<br/>`CLOSED_REASON_TIMEOUT` \| `CLOSED_REASON_RESTRICT_TRANSFER` 枚举值之一
+| funds_abnormal_redirect_id {data-indent=1} | string | 微信支付在途异常资金付款单号
+| funds_abnormal_receivers {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 平台接收异常资金商户号或运营主体列表
+| mchid {data-indent=2} | string | 平台接收异常资金商户号
 
 {.im-table #response}
 
@@ -305,6 +310,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
 | detail_id {data-required data-indent=1} | string | 分账明细单号
 | close_reason | string | 关单原因描述，当分账单状态status为CLOSED（处理失败，已关单）时，返回该字段。
+| abnormal_status | string | 异常处理状态<br/>`ABNORMAL_PENDING` \| `ABNORMAL_FINISHED` \| `ABNORMAL_CLOSED` 枚举值之一
+| funds_abnormal_closed_reason | string | 异常处理关单原因<br/>`CLOSED_REASON_TIMEOUT` \| `CLOSED_REASON_RESTRICT_TRANSFER` 枚举值之一
+| funds_abnormal_redirect_id | string | 微信支付在途异常资金付款单号
+| funds_abnormal_receivers | object[] {data-tooltip="对应PHP的array"} | 平台接收异常资金商户号或运营主体列表
+| mchid {data-indent=1} | string | 平台接收异常资金商户号
 | finish_amount | integer | 分账完结的分账金额，单位为分， 仅当查询分账完结的执行结果时，存在本字段。
 | finish_description | string | 分账完结的原因描述，仅当查询分账完结的执行结果时，存在本字段。
 

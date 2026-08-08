@@ -100,6 +100,7 @@ next:
 | [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL#PARKING) {colspan=2}
 | [停车服务用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#PARKING) {colspan=2}
 | JSON {rowspan=1} | | [ETC授权签约状态变化通知](/webhook/v3/VEHICLE.USER_STATE_CHANGE)
+| JSON {rowspan=1} | [停车缴费服务-商户查费回调](/webhook/v3/PARKING_FEE.QUERY_TRANS_INFO)
 | JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}
 | [支付分服务用户解除授权通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE) {colspan=2}
 | [支付分服务用户确认成功通知](/webhook/v3/PAYSCORE.USER_CONFIRM) {colspan=2}
