@@ -2907,6 +2907,13 @@ function webhookSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '停车缴费服务',
+          collapsed: true,
+          items: [
+            ['商户查费回调', '/webhook/v3/PARKING_FEE.QUERY_TRANS_INFO'],
+          ].map(transArrayItem),
+        },
+        {
           text: '委托代扣',
           collapsed: true,
           items: [
@@ -2962,12 +2969,6 @@ function webhookSidebar() {
             collapsed: true,
             items: [
               ['签约状态变化通知', '/webhook/v3/VEHICLE.USER_STATE_CHANGE'],
-            ].map(transArrayItem),
-          }).concat({
-            text: '停车缴费服务',
-            collapsed: true,
-            items: [
-              ['商户查费回调', '/webhook/v3/PARKING_FEE.QUERY_TRANS_INFO'],
             ].map(transArrayItem),
           }),
         },
