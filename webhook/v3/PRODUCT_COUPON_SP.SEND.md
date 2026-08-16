@@ -46,7 +46,7 @@ description: 用户商品券发放成功后，微信支付会将相关领券结�
 | unionid {data-required data-indent=3} | string | 用户UnionID
 | receive_time {data-required data-indent=3} | string | 领券时间
 | send_request_no {data-required data-indent=3} | string | 发券请求单号
-| send_channel {data-required data-indent=3} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `RECEIVE_COMPONENT` 枚举值之一
+| send_channel {data-required data-indent=3} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `RECEIVE_COMPONENT` \| `MEMBER` 枚举值之一
 | valid_begin_time {data-required data-indent=3} | string | 有效期开始时间
 | valid_end_time {data-required data-indent=3} | string | 有效期结束时间
 | phone_number {data-indent=3} | string | 领券手机号。

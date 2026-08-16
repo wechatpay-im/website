@@ -38,6 +38,9 @@ description: 在用户完成授权后（商户可通过授权完成回调通知�
 | first_period_amount {data-indent=1} | integer | 首期保费金额
 | subsequent_period_amount {data-indent=1} | integer | 后续每期保费金额
 | coverage_term_type {data-indent=1} | string | 保障期限类型<br/>`COVERAGE_TERM_TYPE_FIXED_DATE` \| `COVERAGE_TERM_TYPE_LIFETIME` 枚举值之一
+| payee_mchid {data-indent=1} | string | 收款方商户号
+| payee_appid {data-indent=1} | string | 收款方公众账号ID
+| payee_openid {data-indent=1} | string | 收款方用户标识
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -76,6 +79,9 @@ $instance->v3->inspolicymgr->deduct->policies->postAsync([
     'first_period_amount'      => 8000,
     'subsequent_period_amount' => 5000,
     'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
+    'payee_mchid'              => '1900000109',
+    'payee_appid'              => 'wx7f3f0032b6e6f0cc',
+    'payee_openid'             => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -118,6 +124,9 @@ $instance->chain('v3/inspolicymgr/deduct/policies')->postAsync([
     'first_period_amount'      => 8000,
     'subsequent_period_amount' => 5000,
     'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
+    'payee_mchid'              => '1900000109',
+    'payee_appid'              => 'wx7f3f0032b6e6f0cc',
+    'payee_openid'             => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -160,6 +169,9 @@ $instance['v3/inspolicymgr/deduct/policies']->postAsync([
     'first_period_amount'      => 8000,
     'subsequent_period_amount' => 5000,
     'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
+    'payee_mchid'              => '1900000109',
+    'payee_appid'              => 'wx7f3f0032b6e6f0cc',
+    'payee_openid'             => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -202,6 +214,9 @@ $response = $instance->v3->inspolicymgr->deduct->policies->post([
     'first_period_amount'      => 8000,
     'subsequent_period_amount' => 5000,
     'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
+    'payee_mchid'              => '1900000109',
+    'payee_appid'              => 'wx7f3f0032b6e6f0cc',
+    'payee_openid'             => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -241,6 +256,9 @@ $response = $instance->chain('v3/inspolicymgr/deduct/policies')->post([
     'first_period_amount'      => 8000,
     'subsequent_period_amount' => 5000,
     'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
+    'payee_mchid'              => '1900000109',
+    'payee_appid'              => 'wx7f3f0032b6e6f0cc',
+    'payee_openid'             => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -280,6 +298,9 @@ $response = $instance['v3/inspolicymgr/deduct/policies']->post([
     'first_period_amount'      => 8000,
     'subsequent_period_amount' => 5000,
     'coverage_term_type'       => 'COVERAGE_TERM_TYPE_FIXED_DATE',
+    'payee_mchid'              => '1900000109',
+    'payee_appid'              => 'wx7f3f0032b6e6f0cc',
+    'payee_openid'             => 'oYobu0MVnQfWpSMOYJz2AHPG_gQw',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

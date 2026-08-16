@@ -15,6 +15,8 @@ description: 保险代扣预签约时，商户通过此接口预先请求用户�
 | plan_id {data-required data-indent=1} | string | 保险代扣模板ID
 | out_contract_code {data-required data-indent=1} | string | 商户签约协议号
 | insurance_name {data-required data-indent=1} | string | 保险名称
+| payee_mchid {data-indent=1} | string | 收款方商户号
+| payee_appid {data-indent=1} | string | 收款方公众账号ID
 
 {.im-table #request}
 
@@ -28,6 +30,8 @@ $instance->v3->inspolicymgr->deduct->authorizations->postAsync([
     'plan_id'           => '12535',
     'out_contract_code' => 'wxwtdk20200910100000',
     'insurance_name'    => '微医保·百万医疗险',
+    'payee_mchid'       => '1900000109',
+    'payee_appid'       => 'wx7f3f0032b6e6f0cc',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -44,6 +48,8 @@ $instance->chain('v3/inspolicymgr/deduct/authorizations')->postAsync([
     'plan_id'           => '12535',
     'out_contract_code' => 'wxwtdk20200910100000',
     'insurance_name'    => '微医保·百万医疗险',
+    'payee_mchid'       => '1900000109',
+    'payee_appid'       => 'wx7f3f0032b6e6f0cc',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,6 +66,8 @@ $instance['v3/inspolicymgr/deduct/authorizations']->postAsync([
     'plan_id'           => '12535',
     'out_contract_code' => 'wxwtdk20200910100000',
     'insurance_name'    => '微医保·百万医疗险',
+    'payee_mchid'       => '1900000109',
+    'payee_appid'       => 'wx7f3f0032b6e6f0cc',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +84,8 @@ $response = $instance->v3->inspolicymgr->deduct->authorizations->post([
     'plan_id'           => '12535',
     'out_contract_code' => 'wxwtdk20200910100000',
     'insurance_name'    => '微医保·百万医疗险',
+    'payee_mchid'       => '1900000109',
+    'payee_appid'       => 'wx7f3f0032b6e6f0cc',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,6 +99,8 @@ $response = $instance->chain('v3/inspolicymgr/deduct/authorizations')->post([
     'plan_id'           => '12535',
     'out_contract_code' => 'wxwtdk20200910100000',
     'insurance_name'    => '微医保·百万医疗险',
+    'payee_mchid'       => '1900000109',
+    'payee_appid'       => 'wx7f3f0032b6e6f0cc',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -102,6 +114,8 @@ $response = $instance['v3/inspolicymgr/deduct/authorizations']->post([
     'plan_id'           => '12535',
     'out_contract_code' => 'wxwtdk20200910100000',
     'insurance_name'    => '微医保·百万医疗险',
+    'payee_mchid'       => '1900000109',
+    'payee_appid'       => 'wx7f3f0032b6e6f0cc',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
