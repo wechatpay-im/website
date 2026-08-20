@@ -1402,6 +1402,7 @@ function openapiSidebar() {
                 ['查询销提单状态(微信单号)', '/openapi/v3/ecommerce/account/apply-cancel-withdraw/applyment-id/{applyment_id}'],
                 ['平台代商户确认注销', '/openapi/v3/ecommerce/account/apply-cancel-withdraw/confirm'],
                 ['商户注销资格校验', '/openapi/v3/ecommerce/account/apply-cancel-withdraw/validate-cancel/{sub_mchid}'],
+                ['查询指定主体子商户列表', '/openapi/v3/ecommerce/subject-sub-merchants'],
                 ['申请销户号余额提现', '/openapi/v3/mch_operate/risk/withdrawl-apply'],
                 ['查询提现状态(商户单号)', '/openapi/v3/mch_operate/risk/withdrawl-apply/out-request-no/{out_request_no}'],
                 ['查询提现状态(平台单号)', '/openapi/v3/mch_operate/risk/withdrawl-apply/applyment-id/{applyment_id}'],

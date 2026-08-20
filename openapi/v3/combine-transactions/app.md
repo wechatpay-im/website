@@ -36,7 +36,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | profit_sharing {data-indent=2} | boolean | 是否指定分账(settle_info.profit_sharing高权重)
 | combine_payer_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付(需单独申请权限)
-| type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` 枚举值
+| type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` \| `PHONE_NUMBER` 枚举值之一
 | number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
 | time_start {data-indent=1} | string | 交易起始时间

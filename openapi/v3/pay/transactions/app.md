@@ -42,7 +42,7 @@ description: 商户系统先调用该接口在微信支付服务后台生成预�
 | address {data-required data-indent=3} | string | 详细地址
 | payer {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付(需单独申请权限)
-| type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` 枚举值之一
+| type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` \| `PHONE_NUMBER` 枚举值之一
 | number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
 | settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 结算信息
