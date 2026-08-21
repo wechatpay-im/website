@@ -11,7 +11,7 @@ description: 接口适用场景：收付通（平台）服务商可通过本接�
 | --- | --- | ---
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | organization_type {data-required data-indent=1} | string | 主体类型<br/>`SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` \| `SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_MICRO` 枚举值之一
-| cert_number {data-required data-indent=1} | string | 证件号码
+| cert_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
 | limit {data-indent=1} | integer | 分页大小
 | offset {data-indent=1} | integer | 分页偏移
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
