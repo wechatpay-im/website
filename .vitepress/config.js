@@ -195,6 +195,7 @@ export default defineConfig({
       '/openapi/v3/payscore/acquiringbank/': acquiringBankMixedSidebar(),
       '/openapi/v3/pay/acquiring-bank/': acquiringBankMixedSidebar(),
       '/webhook/v3/PAYSCORE.MCH_PREPAY': acquiringBankMixedSidebar(),
+      '/webhook/v3/CROSS_BORDER_PAY': acquiringBankMixedSidebar(),
       '/openapi/v3/combine-transactions/miniprogram': personalCollectionsSidebar(),
       '/openapi/v3/combine-transactions/app#INDIVIDUAL': personalCollectionsSidebar(),
       '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close#INDIVIDUAL': personalCollectionsSidebar(),
@@ -2534,6 +2535,14 @@ function acquiringBankMixedSidebar() {
           collapsed: false,
           items: [
             ['支付方式前置曝光查询', '/openapi/v3/pay/acquiring-bank/transactions/exposure'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '外包内用(从业机构模式)',
+          collapsed: true,
+          items: [
+            ['推送订单信息回调', '/webhook/v3/CROSS_BORDER_PAY.PUSH_ORDER_INFO'],
+            ['查询收款二维码信息回调', '/webhook/v3/CROSS_BORDER_PAY.GET_MCH_INFO'],
           ].map(transArrayItem),
         },
       ],
