@@ -8,13 +8,13 @@
   },
   "overrides": {
     "vite": "6.4.3",
-    "esbuild": "0.26.0"
+    "esbuild": "0.25.12"
   },
   "dependencies": {
     "vitepress": "^1.6.4"
   },
   "allowScripts": {
-    "esbuild@0.26.0": true,
+    "esbuild@0.25.12": true,
     "fsevents@2.3.3": true
   }
 }
