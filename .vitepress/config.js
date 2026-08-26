@@ -2059,7 +2059,7 @@ function openapiSidebar() {
                 ['进件子商户', '/openapi/v3/global/merchants'],
                 ['查询子商户', '/openapi/v3/global/merchants/{sub_mchid}#get'],
                 ['修改子商户', '/openapi/v3/global/merchants/{sub_mchid}#patch'],
-                ['文件上传', '/openapi/v3/merchant/media/upload#global'],
+                ['文件上传', '/openapi/v3/global/merchant/media/upload'],
               ].map(transArrayItem),
             },
             {
