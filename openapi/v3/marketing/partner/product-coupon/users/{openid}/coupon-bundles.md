@@ -18,7 +18,7 @@ description: 服务商可以通过本接口向用户发放指定商品券批次�
 | send_request_no {data-required data-indent=1} | string | 发券请求单号
 | attach {data-indent=1} | string | 自定义附加信息
 | coupon_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
-| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表
+| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` \| `MEMBER_ACTIVITY` 枚举值之一
 | member_tag_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 会员标签信息
 | member_card_id {data-required data-indent=3} | string | 会员卡模板ID
 
@@ -309,7 +309,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | attach {data-indent=1} | string | 自定义附加信息
 | channel_custom_info {data-indent=1} | string | 渠道自定义信息
 | coupon_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
-| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` 枚举值
+| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` \| `MEMBER_ACTIVITY` 枚举值之一
 | member_tag_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 会员标签信息
 | member_card_id {data-required data-indent=3} | string | 会员卡模板ID
 | brand_id {data-required data-indent=1} | string | 品牌ID

@@ -16,7 +16,7 @@
 | send_request_no {data-required data-indent=1} | string | 发券请求单号
 | attach {data-indent=1} | string | 自定义附加信息
 | coupon_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
-| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` 枚举值
+| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` \| `MEMBER_ACTIVITY` 枚举值之一
 | member_tag_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 会员标签信息
 | member_card_id {data-indent=3} | string | 会员卡模板ID
 

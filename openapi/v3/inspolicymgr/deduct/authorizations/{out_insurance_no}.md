@@ -77,6 +77,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | insurance_name {data-required} | string | 保险名称
 | auth_state {data-required} | string | 授权状态<br/>`AUTH_STATE_INIT` \| `AUTH_STATE_PENDING` \| `AUTH_STATE_GRANTED` \| `AUTH_STATE_DENIED` \| `AUTH_STATE_EXPIRED` 枚举值之一
 | user_auth_time | string | 用户授权时间
+| feedback_reason | string | 保单反馈原因<br/>`FEEDBACK_REASON_UPLOADED` \| `FEEDBACK_REASON_NOT_COMPLETED_INSURED` \| `FEEDBACK_REASON_POLICY_HOLDER_CHANGED` \| `FEEDBACK_REASON_TEST_POLICY` \| `FEEDBACK_REASON_PENDING_INVESTIGATION` 枚举值之一
 
 {.im-table #response}
 
