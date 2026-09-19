@@ -47,6 +47,7 @@ description: 已授权“商圈会员积分服务”的用户在商圈内门店�
 | refund_amount {data-required data-indent=3} | number | 用户退款金额，单位（分）
 | transaction_id {data-required data-indent=3} | string | 微信支付订单号
 | refund_id {data-required data-indent=3} | string | 微信支付退款单号
+| code {data-indent=3} | string | 用户在商圈会员卡card_id下的唯一标志，用户领取会员卡后获得的code
 
 {.im-table #request}
 

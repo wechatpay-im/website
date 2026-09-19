@@ -46,6 +46,7 @@ description: 已授权“商圈会员积分服务”的用户在商圈内门店�
 | amount {data-required data-indent=3} | number | 用户实际消费金额，单位（分）
 | transaction_id {data-required data-indent=3} | string | 微信支付订单号
 | commit_tag {data-indent=3} | string | 手动提交积分标记，自动提交时无该字段，用于区分用户手动申请后推送的积分数据
+| code {data-indent=3} | string | 用户在商圈会员卡card_id下的唯一标志，用户领取会员卡后获得的code
 
 {.im-table #request}
 
