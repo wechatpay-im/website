@@ -50,6 +50,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` \| `PHONE_NUMBER` 枚举值之一
 | number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
+| is_encrypted {data-indent=3} | boolean | 身份信息是否加密
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -103,9 +104,10 @@ $instance->v3->pay->partner->transactions->native->postAsync([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
   ],
@@ -165,9 +167,10 @@ $instance->chain('v3/pay/partner/transactions/native')->postAsync([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
   ],
@@ -227,9 +230,10 @@ $instance['v3/pay/partner/transactions/native']->postAsync([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
   ],
@@ -289,9 +293,10 @@ $response = $instance->v3->pay->partner->transactions->native->post([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
   ],
@@ -348,9 +353,10 @@ $response = $instance->chain('v3/pay/partner/transactions/native')->post([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
   ],
@@ -407,9 +413,10 @@ $response = $instance['v3/pay/partner/transactions/native']->post([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
   ],

@@ -50,6 +50,7 @@ description: 商户系统先调用该接口在微信支付服务后台生成预�
 | type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` \| `PHONE_NUMBER` 枚举值之一
 | number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
+| is_encrypted {data-indent=3} | boolean | 身份信息是否加密
 | subsidy_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 贴息信息(微信分付)
 | subsidy_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 贴息详情列表
 | subsidy_period_type {data-required data-indent=3} | string | 贴息方案类型<br/>`DAILY` \| `PERIOD` 枚举值之一
@@ -109,9 +110,10 @@ $instance->v3->pay->partner->transactions->app->postAsync([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
     'subsidy_info'   => [
@@ -180,9 +182,10 @@ $instance->chain('v3/pay/partner/transactions/app')->postAsync([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
     'subsidy_info'   => [
@@ -251,9 +254,10 @@ $instance['v3/pay/partner/transactions/app']->postAsync([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
     'subsidy_info'   => [
@@ -322,9 +326,10 @@ $response = $instance->v3->pay->partner->transactions->app->post([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
     'subsidy_info'   => [
@@ -390,9 +395,10 @@ $response = $instance->chain('v3/pay/partner/transactions/app')->post([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
     'subsidy_info'   => [
@@ -458,9 +464,10 @@ $response = $instance['v3/pay/partner/transactions/app']->post([
     ],
     'payer'          => [
       'identity' => [
-        'type'   => 'IDCARD',
-        'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
-        'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'type'         => 'IDCARD',
+        'number'       => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'name'         => '6B46824C852FA29AAC3DCE6BFD852E27',
+        'is_encrypted' => true,
       ],
     ],
     'subsidy_info'   => [
