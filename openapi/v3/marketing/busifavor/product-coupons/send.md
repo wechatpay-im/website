@@ -125,9 +125,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| stock_id {data-required} | string | 批次号
-| coupon_code {data-required} | string | 券code
-| out_request_no {data-required} | string | 发券凭证
+| send_coupon_result | object {data-tooltip="对应PHP的array"} | 发券结果
+| stock_id {data-required data-indent=1} | string | 批次号
+| out_request_no {data-required data-indent=1} | string | 发券凭证
+| coupon_code {data-required data-indent=1} | string | 券code
 
 {.im-table #response}
 

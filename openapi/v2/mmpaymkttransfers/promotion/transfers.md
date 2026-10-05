@@ -16,7 +16,7 @@ description: 目前支持向指定微信用户的openid付款。
 | device_info {data-indent=1} | string | 设备号
 | partner_trade_no {data-required data-indent=1} | string | 商户订单号
 | openid {data-required data-indent=1} | string | 用户openid
-| check_name {data-required data-indent=1} | string | 校验用户姓名选项
+| check_name {data-required data-indent=1} | string | 校验用户姓名选项<br/>`NO_CHECK` \| `FORCE_CHECK` 枚举值之一
 | re_user_name {data-indent=1} | string | 收款用户姓名
 | amount {data-required data-indent=1} | integer | 金额
 | desc {data-required data-indent=1} | string | 企业付款备注

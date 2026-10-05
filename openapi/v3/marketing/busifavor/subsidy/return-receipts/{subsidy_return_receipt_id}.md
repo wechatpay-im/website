@@ -79,8 +79,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | payee_merchant {data-required} | string | 原营销补差入账商户号
 | amount {data-required} | integer | 补差回退金额
 | description {data-required} | string | 补差回退描述
-| status {data-required} | string | 补差回退单据状态
-| fail_reason | string | 补差回退失败原因
+| status {data-required} | string | 补差回退单据状态<br/>`RETURN_RECEIPT_ACCEPTED` \| `RETURN_RECEIPT_SUCCESS` \| `RETURN_RECEIPT_FAIL` 枚举值之一
+| fail_reason | string | 补差回退失败原因<br/>`RETURN_RECEIPT_INSUFFICIENT_BALANCE` \| `RETURN_RECEIPT_OTHER` 枚举值之一
 | return_done_time | string | 补差回退完成时间
 | subsidy_receipt_id {data-required} | string | 补差付款单号
 | out_subsidy_return_no {data-required} | string | 业务请求唯一单号

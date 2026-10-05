@@ -19,6 +19,8 @@ description: 在用户满足优惠门槛后，商户可通过该接口核销用�
 | out_trade_no {data-indent=1} | string | 商户订单号
 | mch_id {data-indent=1} | string | 下单商户号
 | transaction_id {data-indent=1} | string | 微信支付订单号
+| saved_amount {data-indent=1} | integer | 优惠金额
+| sub_mch_id {data-indent=1} | string | 下单子商户号
 
 {.im-table #request}
 
@@ -36,6 +38,8 @@ $instance->v3->marketing->busifavor->coupons->use->postAsync([
     'out_trade_no'   => '190000001',
     'mch_id'         => '190000001',
     'transaction_id' => '4200000001856498491',
+    'saved_amount'   => 0,
+    'sub_mch_id'     => '190000002',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,6 +60,8 @@ $instance->chain('v3/marketing/busifavor/coupons/use')->postAsync([
     'out_trade_no'   => '190000001',
     'mch_id'         => '190000001',
     'transaction_id' => '4200000001856498491',
+    'saved_amount'   => 0,
+    'sub_mch_id'     => '190000002',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +82,8 @@ $instance['v3/marketing/busifavor/coupons/use']->postAsync([
     'out_trade_no'   => '190000001',
     'mch_id'         => '190000001',
     'transaction_id' => '4200000001856498491',
+    'saved_amount'   => 0,
+    'sub_mch_id'     => '190000002',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -96,6 +104,8 @@ $response = $instance->v3->marketing->busifavor->coupons->use->post([
     'out_trade_no'   => '190000001',
     'mch_id'         => '190000001',
     'transaction_id' => '4200000001856498491',
+    'saved_amount'   => 0,
+    'sub_mch_id'     => '190000002',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -113,6 +123,8 @@ $response = $instance->chain('v3/marketing/busifavor/coupons/use')->post([
     'out_trade_no'   => '190000001',
     'mch_id'         => '190000001',
     'transaction_id' => '4200000001856498491',
+    'saved_amount'   => 0,
+    'sub_mch_id'     => '190000002',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -130,6 +142,8 @@ $response = $instance['v3/marketing/busifavor/coupons/use']->post([
     'out_trade_no'   => '190000001',
     'mch_id'         => '190000001',
     'transaction_id' => '4200000001856498491',
+    'saved_amount'   => 0,
+    'sub_mch_id'     => '190000002',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -93,7 +93,7 @@ $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->postAsync([
       'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
-        'bank_abbreviation' => '',
+        'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
     ],
     'award_send_rule'    => [
@@ -154,7 +154,7 @@ $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->post
       'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
-        'bank_abbreviation' => '',
+        'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
     ],
     'award_send_rule'    => [
@@ -215,7 +215,7 @@ $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->postAsync([
       'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
-        'bank_abbreviation' => '',
+        'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
     ],
     'award_send_rule'    => [
@@ -276,7 +276,7 @@ $response = $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->
       'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
-        'bank_abbreviation' => '',
+        'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
     ],
     'award_send_rule'    => [
@@ -334,7 +334,7 @@ $response = $instance->chain('v3/marketing/paygiftactivity/unique-threshold-acti
       'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
-        'bank_abbreviation' => '',
+        'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
     ],
     'award_send_rule'    => [
@@ -392,7 +392,7 @@ $response = $instance['v3/marketing/paygiftactivity/unique-threshold-activity']-
       'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
-        'bank_abbreviation' => '',
+        'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
     ],
     'award_send_rule'    => [

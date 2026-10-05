@@ -17,19 +17,19 @@ description: 可根据用户当前的服务状态和信息，调用该接口更�
 | state_setting {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务状态设置
 | state_id {data-required data-indent=2} | string | 状态ID
 | content_template_data {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 内容模板设置
-| field_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 服务内容列表
-| field_id {data-required data-indent=4} | string | 内容字段ID
-| field_value {data-required data-indent=4} | string | 内容字段值
-| action_setting {data-indent=3} | object {data-tooltip="对应PHP的array"} | 操作设置
-| action_name {data-required data-indent=4} | string | 操作名称
-| jump_miniprogram {data-required data-indent=4} | object {data-tooltip="对应PHP的array"} | 跳转小程序
-| appid {data-required data-indent=5} | string | 小程序appid
-| path {data-required data-indent=5} | string | 小程序path
-| message_template_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 消息模板设置
-| message_template_id {data-required data-indent=3} | string | 模板消息ID
-| field_list {data-required data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 服务内容列表
-| field_id {data-required data-indent=4} | string | 内容字段ID
-| field_value {data-required data-indent=4} | string | 内容字段值
+| field_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 服务内容列表
+| field_id {data-required data-indent=2} | string | 内容字段ID
+| field_value {data-required data-indent=2} | string | 内容字段值
+| action_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 操作设置
+| action_name {data-required data-indent=3} | string | 操作名称
+| jump_miniprogram {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 跳转小程序
+| appid {data-required data-indent=4} | string | 小程序appid
+| path {data-required data-indent=4} | string | 小程序path
+| message_template_setting {data-indent=4} | object {data-tooltip="对应PHP的array"} | 消息模板设置
+| message_template_id {data-required data-indent=5} | string | 模板消息ID
+| field_list {data-required data-indent=5} | object[] {data-tooltip="对应PHP的array"} | 模板消息字段列表
+| field_id {data-required data-indent=6} | string | 消息字段ID
+| field_value {data-required data-indent=6} | string | 消息字段的值
 
 {.im-table #request}
 
@@ -43,28 +43,28 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_code_->setSe
     'out_request_no'    => '100002322019090134234sfdf',
     'service_module_id' => '666',
     'state_setting'     => [
-      'state_id'                 => 'CHECKED_IN',
-      'content_template_data'    => [
-        'field_list'     => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-        'action_setting' => [
-          'action_name'      => '一键开锁',
-          'jump_miniprogram' => [
-            'appid' => 'wx37178d097a6851d8',
-            'path'  => 'pages/index/index',
+      'state_id'              => 'CHECKED_IN',
+      'content_template_data' => [
+      ],
+    ],
+    'field_list'        => [[
+      'field_id'       => 'hotel_name',
+      'field_value'    => '深圳市南山区滨海路700号',
+      'action_setting' => [
+        'action_name'      => '一键开锁',
+        'jump_miniprogram' => [
+          'appid'                    => 'wx37178d097a6851d8',
+          'path'                     => 'pages/index/index',
+          'message_template_setting' => [
+            'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
+            'field_list'          => [[
+              'field_id'    => 'keyword1',
+              'field_value' => '深圳市南山区滨海路700号',
+            ],],
           ],
         ],
       ],
-      'message_template_setting' => [
-        'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
-        'field_list'          => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-      ],
-    ],
+    ],],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,28 +81,28 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes/{code}/set-
     'out_request_no'    => '100002322019090134234sfdf',
     'service_module_id' => '666',
     'state_setting'     => [
-      'state_id'                 => 'CHECKED_IN',
-      'content_template_data'    => [
-        'field_list'     => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-        'action_setting' => [
-          'action_name'      => '一键开锁',
-          'jump_miniprogram' => [
-            'appid' => 'wx37178d097a6851d8',
-            'path'  => 'pages/index/index',
+      'state_id'              => 'CHECKED_IN',
+      'content_template_data' => [
+      ],
+    ],
+    'field_list'        => [[
+      'field_id'       => 'hotel_name',
+      'field_value'    => '深圳市南山区滨海路700号',
+      'action_setting' => [
+        'action_name'      => '一键开锁',
+        'jump_miniprogram' => [
+          'appid'                    => 'wx37178d097a6851d8',
+          'path'                     => 'pages/index/index',
+          'message_template_setting' => [
+            'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
+            'field_list'          => [[
+              'field_id'    => 'keyword1',
+              'field_value' => '深圳市南山区滨海路700号',
+            ],],
           ],
         ],
       ],
-      'message_template_setting' => [
-        'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
-        'field_list'          => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-      ],
-    ],
+    ],],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -119,28 +119,28 @@ $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}/set-service
     'out_request_no'    => '100002322019090134234sfdf',
     'service_module_id' => '666',
     'state_setting'     => [
-      'state_id'                 => 'CHECKED_IN',
-      'content_template_data'    => [
-        'field_list'     => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-        'action_setting' => [
-          'action_name'      => '一键开锁',
-          'jump_miniprogram' => [
-            'appid' => 'wx37178d097a6851d8',
-            'path'  => 'pages/index/index',
+      'state_id'              => 'CHECKED_IN',
+      'content_template_data' => [
+      ],
+    ],
+    'field_list'        => [[
+      'field_id'       => 'hotel_name',
+      'field_value'    => '深圳市南山区滨海路700号',
+      'action_setting' => [
+        'action_name'      => '一键开锁',
+        'jump_miniprogram' => [
+          'appid'                    => 'wx37178d097a6851d8',
+          'path'                     => 'pages/index/index',
+          'message_template_setting' => [
+            'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
+            'field_list'          => [[
+              'field_id'    => 'keyword1',
+              'field_value' => '深圳市南山区滨海路700号',
+            ],],
           ],
         ],
       ],
-      'message_template_setting' => [
-        'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
-        'field_list'          => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-      ],
-    ],
+    ],],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -157,28 +157,28 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->codes->_
     'out_request_no'    => '100002322019090134234sfdf',
     'service_module_id' => '666',
     'state_setting'     => [
-      'state_id'                 => 'CHECKED_IN',
-      'content_template_data'    => [
-        'field_list'     => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-        'action_setting' => [
-          'action_name'      => '一键开锁',
-          'jump_miniprogram' => [
-            'appid' => 'wx37178d097a6851d8',
-            'path'  => 'pages/index/index',
+      'state_id'              => 'CHECKED_IN',
+      'content_template_data' => [
+      ],
+    ],
+    'field_list'        => [[
+      'field_id'       => 'hotel_name',
+      'field_value'    => '深圳市南山区滨海路700号',
+      'action_setting' => [
+        'action_name'      => '一键开锁',
+        'jump_miniprogram' => [
+          'appid'                    => 'wx37178d097a6851d8',
+          'path'                     => 'pages/index/index',
+          'message_template_setting' => [
+            'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
+            'field_list'          => [[
+              'field_id'    => 'keyword1',
+              'field_value' => '深圳市南山区滨海路700号',
+            ],],
           ],
         ],
       ],
-      'message_template_setting' => [
-        'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
-        'field_list'          => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-      ],
-    ],
+    ],],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -192,28 +192,28 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}/codes
     'out_request_no'    => '100002322019090134234sfdf',
     'service_module_id' => '666',
     'state_setting'     => [
-      'state_id'                 => 'CHECKED_IN',
-      'content_template_data'    => [
-        'field_list'     => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-        'action_setting' => [
-          'action_name'      => '一键开锁',
-          'jump_miniprogram' => [
-            'appid' => 'wx37178d097a6851d8',
-            'path'  => 'pages/index/index',
+      'state_id'              => 'CHECKED_IN',
+      'content_template_data' => [
+      ],
+    ],
+    'field_list'        => [[
+      'field_id'       => 'hotel_name',
+      'field_value'    => '深圳市南山区滨海路700号',
+      'action_setting' => [
+        'action_name'      => '一键开锁',
+        'jump_miniprogram' => [
+          'appid'                    => 'wx37178d097a6851d8',
+          'path'                     => 'pages/index/index',
+          'message_template_setting' => [
+            'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
+            'field_list'          => [[
+              'field_id'    => 'keyword1',
+              'field_value' => '深圳市南山区滨海路700号',
+            ],],
           ],
         ],
       ],
-      'message_template_setting' => [
-        'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
-        'field_list'          => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-      ],
-    ],
+    ],],
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -227,28 +227,28 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}/codes/{code}
     'out_request_no'    => '100002322019090134234sfdf',
     'service_module_id' => '666',
     'state_setting'     => [
-      'state_id'                 => 'CHECKED_IN',
-      'content_template_data'    => [
-        'field_list'     => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-        'action_setting' => [
-          'action_name'      => '一键开锁',
-          'jump_miniprogram' => [
-            'appid' => 'wx37178d097a6851d8',
-            'path'  => 'pages/index/index',
+      'state_id'              => 'CHECKED_IN',
+      'content_template_data' => [
+      ],
+    ],
+    'field_list'        => [[
+      'field_id'       => 'hotel_name',
+      'field_value'    => '深圳市南山区滨海路700号',
+      'action_setting' => [
+        'action_name'      => '一键开锁',
+        'jump_miniprogram' => [
+          'appid'                    => 'wx37178d097a6851d8',
+          'path'                     => 'pages/index/index',
+          'message_template_setting' => [
+            'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
+            'field_list'          => [[
+              'field_id'    => 'keyword1',
+              'field_value' => '深圳市南山区滨海路700号',
+            ],],
           ],
         ],
       ],
-      'message_template_setting' => [
-        'message_template_id' => '9bJgRNz9XG248XZ-a0nDKH3Vt_vaTp32fRP1LWvxjzI',
-        'field_list'          => [[
-          'field_id'    => 'hotel_name',
-          'field_value' => '深圳市南山区滨海路700号',
-        ],],
-      ],
-    ],
+    ],],
   ],
 ]);
 print_r($response->getStatusCode() === 204);

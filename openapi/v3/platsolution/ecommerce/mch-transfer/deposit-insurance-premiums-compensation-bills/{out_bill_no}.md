@@ -10,6 +10,8 @@ description: 查询保证金赔付保司保费结果。注：接口频率限制�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | out_bill_no {data-required} | string | 商户单号
+| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mchid {data-required data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -18,6 +20,9 @@ description: 查询保证金赔付保司保费结果。注：接口频率限制�
 ```php [异步纯链式]
 $instance->v3->platsolution->ecommerce->mchTransfer->depositInsurancePremiumsCompensationBills->_out_bill_no_->getAsync([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001109',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -28,6 +33,9 @@ $instance->v3->platsolution->ecommerce->mchTransfer->depositInsurancePremiumsCom
 ```php [异步声明式]
 $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills/{out_bill_no}')->getAsync([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001109',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -38,6 +46,9 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premi
 ```php [异步属性式]
 $instance['v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills/{out_bill_no}']->getAsync([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001109',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -48,6 +59,9 @@ $instance['v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-com
 ```php [同步纯链式]
 $response = $instance->v3->platsolution->ecommerce->mchTransfer->depositInsurancePremiumsCompensationBills->_out_bill_no_->get([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001109',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -55,6 +69,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills/{out_bill_no}')->get([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001109',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -62,6 +79,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/platsolution/ecommerce/mch-transfer/deposit-insurance-premiums-compensation-bills/{out_bill_no}']->get([
   'out_bill_no' => 'plfk2020042013',
+  'query' => [
+    'sub_mchid' => '1900001109',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

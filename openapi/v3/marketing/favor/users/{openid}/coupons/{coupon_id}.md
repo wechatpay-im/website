@@ -20,10 +20,10 @@ description: 通过此接口可查询代金券信息，包括代金券的基础�
 
 ```php [异步纯链式]
 $instance->v3->marketing->favor->users->_openid_->coupons->_coupon_id_->getAsync([
-  'openid' => '',
-  'coupon_id' => '',
+  'openid' => 'Openid_example',
+  'coupon_id' => '9856888',
   'query' => [
-    'appid' => '',
+    'appid' => 'appid_example',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,10 +34,10 @@ $instance->v3->marketing->favor->users->_openid_->coupons->_coupon_id_->getAsync
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/users/{openid}/coupons/{coupon_id}')->getAsync([
-  'openid' => '',
-  'coupon_id' => '',
+  'openid' => 'Openid_example',
+  'coupon_id' => '9856888',
   'query' => [
-    'appid' => '',
+    'appid' => 'appid_example',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,10 +48,10 @@ $instance->chain('v3/marketing/favor/users/{openid}/coupons/{coupon_id}')->getAs
 
 ```php [异步属性式]
 $instance['v3/marketing/favor/users/{openid}/coupons/{coupon_id}']->getAsync([
-  'openid' => '',
-  'coupon_id' => '',
+  'openid' => 'Openid_example',
+  'coupon_id' => '9856888',
   'query' => [
-    'appid' => '',
+    'appid' => 'appid_example',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,10 +62,10 @@ $instance['v3/marketing/favor/users/{openid}/coupons/{coupon_id}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->users->_openid_->coupons->_coupon_id_->get([
-  'openid' => '',
-  'coupon_id' => '',
+  'openid' => 'Openid_example',
+  'coupon_id' => '9856888',
   'query' => [
-    'appid' => '',
+    'appid' => 'appid_example',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -73,10 +73,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/users/{openid}/coupons/{coupon_id}')->get([
-  'openid' => '',
-  'coupon_id' => '',
+  'openid' => 'Openid_example',
+  'coupon_id' => '9856888',
   'query' => [
-    'appid' => '',
+    'appid' => 'appid_example',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,10 +84,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/users/{openid}/coupons/{coupon_id}']->get([
-  'openid' => '',
-  'coupon_id' => '',
+  'openid' => 'Openid_example',
+  'coupon_id' => '9856888',
   'query' => [
-    'appid' => '',
+    'appid' => 'appid_example',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -127,6 +127,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_amount {data-indent=2} | integer | 商品优惠金额
 | available_balance | number | 剩余金额
 | business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
+| no_cash {data-required} | boolean | 是否无资金流
+| out_request_no | string | 商户单据号
+| discount_msg | object {data-tooltip="对应PHP的array"} | 折扣券信息
+| discount_amount_max {data-required data-indent=1} | integer | 最高折扣金额
+| discount_percent {data-required data-indent=1} | integer | 折扣百分比
+| transaction_minimum {data-indent=1} | integer | 门槛
 
 {.im-table #response}
 

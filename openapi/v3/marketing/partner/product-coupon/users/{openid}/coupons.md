@@ -38,7 +38,7 @@ $instance->v3->marketing->partner->productCoupon->users->_openid_->coupons->post
     'coupon_tag_info'   => [
       'coupon_tag_list' => ['MEMBER'],
       'member_tag_info' => [
-        'member_card_id' => '',
+        'member_card_id' => 'MemberCardId_1234567890',
       ],
     ],
   ],
@@ -63,7 +63,7 @@ $instance->chain('v3/marketing/partner/product-coupon/users/{openid}/coupons')->
     'coupon_tag_info'   => [
       'coupon_tag_list' => ['MEMBER'],
       'member_tag_info' => [
-        'member_card_id' => '',
+        'member_card_id' => 'MemberCardId_1234567890',
       ],
     ],
   ],
@@ -88,7 +88,7 @@ $instance['v3/marketing/partner/product-coupon/users/{openid}/coupons']->postAsy
     'coupon_tag_info'   => [
       'coupon_tag_list' => ['MEMBER'],
       'member_tag_info' => [
-        'member_card_id' => '',
+        'member_card_id' => 'MemberCardId_1234567890',
       ],
     ],
   ],
@@ -113,7 +113,7 @@ $response = $instance->v3->marketing->partner->productCoupon->users->_openid_->c
     'coupon_tag_info'   => [
       'coupon_tag_list' => ['MEMBER'],
       'member_tag_info' => [
-        'member_card_id' => '',
+        'member_card_id' => 'MemberCardId_1234567890',
       ],
     ],
   ],
@@ -135,7 +135,7 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/users/{openid}
     'coupon_tag_info'   => [
       'coupon_tag_list' => ['MEMBER'],
       'member_tag_info' => [
-        'member_card_id' => '',
+        'member_card_id' => 'MemberCardId_1234567890',
       ],
     ],
   ],
@@ -157,7 +157,7 @@ $response = $instance['v3/marketing/partner/product-coupon/users/{openid}/coupon
     'coupon_tag_info'   => [
       'coupon_tag_list' => ['MEMBER'],
       'member_tag_info' => [
-        'member_card_id' => '',
+        'member_card_id' => 'MemberCardId_1234567890',
       ],
     ],
   ],
@@ -191,30 +191,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-indent=2} | string | 子商户号
 | return_request_no {data-indent=1} | string | 退券请求单号
 | return_time {data-indent=1} | string | 退券时间
-| sequential_usage_detail | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
-| total_count {data-indent=1} | integer | 总可使用次数
-| used_count {data-indent=1} | integer | 已使用次数
-| detail_item_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 轮次使用详情列表
-| detail_state {data-indent=2} | string | 轮次使用详情状态<br/>`PENDING` \| `EFFECTIVE` \| `USED` \| `EXPIRED` \| `DELETED` \| `DEACTIVATED` 枚举值之一
-| valid_begin_time {data-indent=2} | string | 有效期开始时间
-| valid_end_time {data-indent=2} | string | 有效期结束时间
-| use_request_no {data-indent=2} | string | 核销请求单号
-| use_time {data-indent=2} | string | 核销时间
-| associated_order_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 关联微信支付订单信息
-| transaction_id {data-indent=3} | string | 微信支付单号
-| out_trade_no {data-indent=3} | string | 商户订单号
-| mchid {data-indent=3} | string | 商户号
-| sub_mchid {data-indent=3} | string | 子商户号
-| return_request_no {data-indent=2} | string | 退券请求单号
-| return_time {data-indent=2} | string | 退券时间
-| delete_time {data-indent=2} | string | 删除时间
+| associated_pay_score_order_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 券核销的关联微信支付分订单信息
+| order_id {data-indent=2} | string | 微信支付服务订单号
+| out_order_no {data-indent=2} | string | 商户服务订单号
+| mchid {data-indent=2} | string | 商户号
+| sub_mchid {data-indent=2} | string | 子商户号
+| saved_amount {data-indent=1} | integer | 优惠金额
 | product_coupon {data-required} | object {data-tooltip="对应PHP的array"} | 商品券信息
 | product_coupon_id {data-required data-indent=1} | string | 商品券ID
 | state {data-required data-indent=1} | string | 商品券状态<br/>`AUDITING` \| `EFFECTIVE` \| `DEACTIVATED` 枚举值之一
 | brand_id {data-required data-indent=1} | string | 品牌ID
 | scope {data-required data-indent=1} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required data-indent=1} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required data-indent=1} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` 枚举值之一
+| usage_mode {data-required data-indent=1} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
@@ -222,11 +211,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | percent_off {data-required data-indent=3} | integer | 固定减免百分比
-| sequential_usage_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
-| type {data-required data-indent=2} | string | 多次优惠规则类型<br/>`INCREMENTAL` \| `EQUAL` 枚举值之一
-| count {data-required data-indent=2} | integer | 可使用次数
-| available_days {data-required data-indent=2} | integer | 多次优惠有效天数
-| interval_days {data-indent=2} | integer | 多次优惠使用间隔天数
 | display_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 展示信息
 | name {data-required data-indent=2} | string | 商品券名称
 | image_url {data-required data-indent=2} | string | 商品券图片
@@ -247,6 +231,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_request_no {data-indent=1} | string | 失效请求单号
 | deactivate_time {data-indent=1} | string | 失效时间
 | deactivate_reason {data-indent=1} | string | 失效原因
+| progressive_bundle_usage_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
+| count {data-required data-indent=2} | integer | 可使用次数
+| interval_days {data-indent=2} | integer | 多次优惠使用间隔天数
 | stock {data-required} | object {data-tooltip="对应PHP的array"} | 批次信息
 | product_coupon_id {data-required data-indent=1} | string | 商品券ID
 | stock_id {data-required data-indent=1} | string | 批次ID
@@ -283,30 +270,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | exchange_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | exchange_price {data-required data-indent=3} | integer | 固定兑换价格
-| sequential_usage_rule {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
-| coupon_available_period {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
-| available_begin_time {data-required data-indent=3} | string | 开始时间
-| available_end_time {data-required data-indent=3} | string | 结束时间
-| wait_days_after_receive {data-indent=3} | integer | 领取后N天开始生效
-| weekly_available_period {data-indent=3} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
-| day_list {data-indent=4} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
-| day_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
-| begin_time {data-required data-indent=5} | integer | 当天可用开始时间
-| end_time {data-required data-indent=5} | integer | 当天可用结束时间
-| irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
-| begin_time {data-required data-indent=4} | string | 开始时间
-| end_time {data-required data-indent=4} | string | 结束时间
-| available_seconds {data-indent=3} | integer | 领取后N秒内有效
-| normal_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
-| threshold {data-required data-indent=3} | integer | 门槛金额
-| discount_amount {data-required data-indent=3} | integer | 固定减免金额
-| discount_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 折扣券使用规则列表
-| threshold {data-required data-indent=3} | integer | 门槛金额
-| percent_off {data-required data-indent=3} | integer | 固定减免百分比
-| exchange_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 兑换券使用规则列表
-| threshold {data-required data-indent=3} | integer | 门槛金额
-| exchange_price {data-required data-indent=3} | integer | 固定兑换价格
-| special_first {data-indent=2} | boolean | 多次优惠是否提供首笔特惠
 | usage_rule_display_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 券使用规则展示信息
 | coupon_usage_method_list {data-required data-indent=2} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=2} | string | 小程序AppID
@@ -346,7 +309,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required data-indent=1} | string | 品牌ID
 | attach | string | 自定义附加信息
 | channel_custom_info | string | 渠道自定义信息
-| brand_id {data-required} | string | 品牌ID
+| coupon_tag_info | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
+| coupon_tag_list {data-indent=1} | string[] | 用户商品券标签列表<br/>`MEMBER` 枚举值
+| member_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员标签信息
+| member_card_id {data-indent=2} | string | 会员卡模板ID
 
 {.im-table #response}
 
@@ -367,6 +333,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | page_size {data-indent=1} | integer | 分页大小
 | page_token {data-indent=1} | string | 分页Token
 | brand_id {data-required data-indent=1} | string | 品牌ID
+| user_coupon_bundle_id {data-indent=1} | string | 用户券组ID
 
 {.im-table #request}
 
@@ -376,13 +343,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->partner->productCoupon->users->_openid_->coupons->getAsync([
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'query' => [
-    'product_coupon_id' => '1000000013',
-    'stock_id'          => '1000000013001',
-    'appid'             => 'wx233544546545989',
-    'coupon_state'      => 'CONFIRMING',
-    'page_size'         => 20,
-    'page_token'        => 'MTIzMjUK',
-    'brand_id'          => '120344',
+    'product_coupon_id'     => '1000000013',
+    'stock_id'              => '1000000013001',
+    'appid'                 => 'wx233544546545989',
+    'coupon_state'          => 'CONFIRMING',
+    'page_size'             => 20,
+    'page_token'            => 'MTIzMjUK',
+    'brand_id'              => '120344',
+    'user_coupon_bundle_id' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -395,13 +363,14 @@ $instance->v3->marketing->partner->productCoupon->users->_openid_->coupons->getA
 $instance->chain('v3/marketing/partner/product-coupon/users/{openid}/coupons')->getAsync([
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'query' => [
-    'product_coupon_id' => '1000000013',
-    'stock_id'          => '1000000013001',
-    'appid'             => 'wx233544546545989',
-    'coupon_state'      => 'CONFIRMING',
-    'page_size'         => 20,
-    'page_token'        => 'MTIzMjUK',
-    'brand_id'          => '120344',
+    'product_coupon_id'     => '1000000013',
+    'stock_id'              => '1000000013001',
+    'appid'                 => 'wx233544546545989',
+    'coupon_state'          => 'CONFIRMING',
+    'page_size'             => 20,
+    'page_token'            => 'MTIzMjUK',
+    'brand_id'              => '120344',
+    'user_coupon_bundle_id' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -414,13 +383,14 @@ $instance->chain('v3/marketing/partner/product-coupon/users/{openid}/coupons')->
 $instance['v3/marketing/partner/product-coupon/users/{openid}/coupons']->getAsync([
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'query' => [
-    'product_coupon_id' => '1000000013',
-    'stock_id'          => '1000000013001',
-    'appid'             => 'wx233544546545989',
-    'coupon_state'      => 'CONFIRMING',
-    'page_size'         => 20,
-    'page_token'        => 'MTIzMjUK',
-    'brand_id'          => '120344',
+    'product_coupon_id'     => '1000000013',
+    'stock_id'              => '1000000013001',
+    'appid'                 => 'wx233544546545989',
+    'coupon_state'          => 'CONFIRMING',
+    'page_size'             => 20,
+    'page_token'            => 'MTIzMjUK',
+    'brand_id'              => '120344',
+    'user_coupon_bundle_id' => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -433,13 +403,14 @@ $instance['v3/marketing/partner/product-coupon/users/{openid}/coupons']->getAsyn
 $response = $instance->v3->marketing->partner->productCoupon->users->_openid_->coupons->get([
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'query' => [
-    'product_coupon_id' => '1000000013',
-    'stock_id'          => '1000000013001',
-    'appid'             => 'wx233544546545989',
-    'coupon_state'      => 'CONFIRMING',
-    'page_size'         => 20,
-    'page_token'        => 'MTIzMjUK',
-    'brand_id'          => '120344',
+    'product_coupon_id'     => '1000000013',
+    'stock_id'              => '1000000013001',
+    'appid'                 => 'wx233544546545989',
+    'coupon_state'          => 'CONFIRMING',
+    'page_size'             => 20,
+    'page_token'            => 'MTIzMjUK',
+    'brand_id'              => '120344',
+    'user_coupon_bundle_id' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -449,13 +420,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/partner/product-coupon/users/{openid}/coupons')->get([
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'query' => [
-    'product_coupon_id' => '1000000013',
-    'stock_id'          => '1000000013001',
-    'appid'             => 'wx233544546545989',
-    'coupon_state'      => 'CONFIRMING',
-    'page_size'         => 20,
-    'page_token'        => 'MTIzMjUK',
-    'brand_id'          => '120344',
+    'product_coupon_id'     => '1000000013',
+    'stock_id'              => '1000000013001',
+    'appid'                 => 'wx233544546545989',
+    'coupon_state'          => 'CONFIRMING',
+    'page_size'             => 20,
+    'page_token'            => 'MTIzMjUK',
+    'brand_id'              => '120344',
+    'user_coupon_bundle_id' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -465,13 +437,14 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/partner/product-coupon/users/{openid}/coupons']->get([
   'openid' => 'oh-394z-6CGkNoJrsDLTTUKiAnp4',
   'query' => [
-    'product_coupon_id' => '1000000013',
-    'stock_id'          => '1000000013001',
-    'appid'             => 'wx233544546545989',
-    'coupon_state'      => 'CONFIRMING',
-    'page_size'         => 20,
-    'page_token'        => 'MTIzMjUK',
-    'brand_id'          => '120344',
+    'product_coupon_id'     => '1000000013',
+    'stock_id'              => '1000000013001',
+    'appid'                 => 'wx233544546545989',
+    'coupon_state'          => 'CONFIRMING',
+    'page_size'             => 20,
+    'page_token'            => 'MTIzMjUK',
+    'brand_id'              => '120344',
+    'user_coupon_bundle_id' => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -506,30 +479,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-indent=3} | string | 子商户号
 | return_request_no {data-indent=2} | string | 退券请求单号
 | return_time {data-indent=2} | string | 退券时间
-| sequential_usage_detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
-| total_count {data-indent=2} | integer | 总可使用次数
-| used_count {data-indent=2} | integer | 已使用次数
-| detail_item_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 轮次使用详情列表
-| detail_state {data-indent=3} | string | 轮次使用详情状态<br/>`PENDING` \| `EFFECTIVE` \| `USED` \| `EXPIRED` \| `DELETED` \| `DEACTIVATED` 枚举值之一
-| valid_begin_time {data-indent=3} | string | 有效期开始时间
-| valid_end_time {data-indent=3} | string | 有效期结束时间
-| use_request_no {data-indent=3} | string | 核销请求单号
-| use_time {data-indent=3} | string | 核销时间
-| associated_order_info {data-indent=3} | object {data-tooltip="对应PHP的array"} | 关联微信支付订单信息
-| transaction_id {data-indent=4} | string | 微信支付单号
-| out_trade_no {data-indent=4} | string | 商户订单号
-| mchid {data-indent=4} | string | 商户号
-| sub_mchid {data-indent=4} | string | 子商户号
-| return_request_no {data-indent=3} | string | 退券请求单号
-| return_time {data-indent=3} | string | 退券时间
-| delete_time {data-indent=3} | string | 删除时间
+| associated_pay_score_order_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 券核销的关联微信支付分订单信息
+| order_id {data-indent=3} | string | 微信支付服务订单号
+| out_order_no {data-indent=3} | string | 商户服务订单号
+| mchid {data-indent=3} | string | 商户号
+| sub_mchid {data-indent=3} | string | 子商户号
+| saved_amount {data-indent=2} | integer | 优惠金额
 | product_coupon {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 商品券信息
 | product_coupon_id {data-required data-indent=2} | string | 商品券ID
 | state {data-required data-indent=2} | string | 商品券状态<br/>`AUDITING` \| `EFFECTIVE` \| `DEACTIVATED` 枚举值之一
 | brand_id {data-required data-indent=2} | string | 品牌ID
 | scope {data-required data-indent=2} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required data-indent=2} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required data-indent=2} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` 枚举值之一
+| usage_mode {data-required data-indent=2} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
@@ -537,11 +499,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | percent_off {data-required data-indent=4} | integer | 固定减免百分比
-| sequential_usage_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
-| type {data-required data-indent=3} | string | 多次优惠规则类型<br/>`INCREMENTAL` \| `EQUAL` 枚举值之一
-| count {data-required data-indent=3} | integer | 可使用次数
-| available_days {data-required data-indent=3} | integer | 多次优惠有效天数
-| interval_days {data-indent=3} | integer | 多次优惠使用间隔天数
 | display_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 展示信息
 | name {data-required data-indent=3} | string | 商品券名称
 | image_url {data-required data-indent=3} | string | 商品券图片
@@ -562,6 +519,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_request_no {data-indent=2} | string | 失效请求单号
 | deactivate_time {data-indent=2} | string | 失效时间
 | deactivate_reason {data-indent=2} | string | 失效原因
+| progressive_bundle_usage_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
+| count {data-required data-indent=3} | integer | 可使用次数
+| interval_days {data-indent=3} | integer | 多次优惠使用间隔天数
 | stock {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 批次信息
 | product_coupon_id {data-required data-indent=2} | string | 商品券ID
 | stock_id {data-required data-indent=2} | string | 批次ID
@@ -598,30 +558,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | exchange_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | exchange_price {data-required data-indent=4} | integer | 固定兑换价格
-| sequential_usage_rule {data-indent=2} | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
-| coupon_available_period {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 券可核销时间
-| available_begin_time {data-required data-indent=4} | string | 开始时间
-| available_end_time {data-required data-indent=4} | string | 结束时间
-| wait_days_after_receive {data-indent=4} | integer | 领取后N天开始生效
-| weekly_available_period {data-indent=4} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
-| day_list {data-indent=5} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
-| day_period_list {data-indent=5} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
-| begin_time {data-required data-indent=6} | integer | 当天可用开始时间
-| end_time {data-required data-indent=6} | integer | 当天可用结束时间
-| irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
-| begin_time {data-required data-indent=5} | string | 开始时间
-| end_time {data-required data-indent=5} | string | 结束时间
-| available_seconds {data-indent=4} | integer | 领取后N秒内有效
-| normal_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
-| threshold {data-required data-indent=4} | integer | 门槛金额
-| discount_amount {data-required data-indent=4} | integer | 固定减免金额
-| discount_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 折扣券使用规则列表
-| threshold {data-required data-indent=4} | integer | 门槛金额
-| percent_off {data-required data-indent=4} | integer | 固定减免百分比
-| exchange_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 兑换券使用规则列表
-| threshold {data-required data-indent=4} | integer | 门槛金额
-| exchange_price {data-required data-indent=4} | integer | 固定兑换价格
-| special_first {data-indent=3} | boolean | 多次优惠是否提供首笔特惠
 | usage_rule_display_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券使用规则展示信息
 | coupon_usage_method_list {data-required data-indent=3} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=3} | string | 小程序AppID
@@ -659,9 +595,61 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_time {data-indent=2} | string | 失效时间
 | deactivate_reason {data-indent=2} | string | 失效原因
 | brand_id {data-required data-indent=2} | string | 品牌ID
+| progressive_bundle_usage_rule {data-indent=2} | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
+| coupon_available_period {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 券可核销时间
+| available_begin_time {data-required data-indent=4} | string | 批次开始时间
+| available_end_time {data-required data-indent=4} | string | 批次结束时间
+| available_days {data-indent=4} | integer | 券生效后N天内可用
+| wait_days_after_receive {data-indent=4} | integer | 领券后需等待N天才生效
+| weekly_available_period {data-indent=4} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
+| day_list {data-required data-indent=5} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
+| day_period_list {data-indent=5} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
+| begin_time {data-required data-indent=6} | integer | 当天可用开始时间
+| end_time {data-required data-indent=6} | integer | 当天可用结束时间
+| irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 指定可用时间段
+| begin_time {data-required data-indent=5} | string | 开始时间
+| end_time {data-required data-indent=5} | string | 结束时间
+| available_seconds {data-indent=4} | integer | 领取后N秒内有效
+| normal_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
+| threshold {data-required data-indent=4} | integer | 门槛金额
+| discount_amount {data-required data-indent=4} | integer | 固定减免金额
+| discount_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
+| threshold {data-required data-indent=4} | integer | 门槛金额
+| percent_off {data-required data-indent=4} | integer | 固定减免百分比
+| exchange_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
+| threshold {data-required data-indent=4} | integer | 门槛金额
+| exchange_price {data-required data-indent=4} | integer | 固定兑换价格
+| stock_bundle_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 批次组信息
+| stock_bundle_id {data-required data-indent=3} | string | 批次所属批次组ID
+| stock_bundle_index {data-required data-indent=3} | integer | 批次在批次组内的次序
 | attach {data-indent=1} | string | 自定义附加信息
 | channel_custom_info {data-indent=1} | string | 渠道自定义信息
 | brand_id {data-required data-indent=1} | string | 品牌ID
+| progressive_bundle_usage_detail {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
+| use_request_no {data-indent=2} | string | 券核销请求单号
+| use_time {data-indent=2} | string | 券核销时间
+| return_request_no {data-indent=2} | string | 退券请求单号
+| return_time {data-indent=2} | string | 退券时间
+| associated_order_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 券核销的微信支付订单信息
+| transaction_id {data-indent=3} | string | 微信支付单号
+| out_trade_no {data-indent=3} | string | 商户订单号
+| mchid {data-indent=3} | string | 商户号
+| sub_mchid {data-indent=3} | string | 子商户号
+| associated_pay_score_order_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 券核销的关联微信支付分订单信息
+| order_id {data-indent=3} | string | 微信支付服务订单号
+| out_order_no {data-indent=3} | string | 商户服务订单号
+| mchid {data-indent=3} | string | 商户号
+| sub_mchid {data-indent=3} | string | 子商户号
+| saved_amount {data-indent=2} | integer | 优惠金额
+| user_product_coupon_bundle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户券组信息
+| user_coupon_bundle_id {data-required data-indent=2} | string | 用户券组ID
+| user_coupon_bundle_index {data-required data-indent=2} | integer | 用户券组内索引
+| total_count {data-required data-indent=2} | integer | 总可使用次数
+| used_count {data-required data-indent=2} | integer | 已使用次数
+| coupon_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
+| coupon_tag_list {data-indent=2} | string[] | 用户商品券标签列表<br/>`MEMBER` 枚举值
+| member_tag_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 会员标签信息
+| member_card_id {data-indent=3} | string | 会员卡模板ID
 
 {.im-table #response}
 

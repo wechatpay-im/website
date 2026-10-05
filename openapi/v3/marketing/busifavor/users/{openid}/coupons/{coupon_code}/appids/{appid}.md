@@ -145,6 +145,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | expire_time {data-required} | string | 券过期时间
 | receive_time {data-required} | string | 券领券时间
 | use_time | string | 券核销时间
+| associate_out_trade_no | string | 关联的商户订单号
+| return_request_no | string | 回退请求单号
+| return_time | string | 券回退时间
+| deactivate_request_no | string | 失效请求单号
+| deactivate_time | string | 券失效时间
+| deactivate_reason | string | 失效原因
+| associate_mch_id | string | 关联的下单商户号
+| associate_transaction_id | string | 关联的微信支付订单号
+| associate_sub_mch_id | string | 关联的下单子商户号
 
 {.im-table #response}
 

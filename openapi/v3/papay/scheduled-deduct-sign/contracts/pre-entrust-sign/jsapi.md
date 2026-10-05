@@ -21,7 +21,7 @@ description: 商户可调用本接口预先指定签约信息，生成预签约�
 | estimated_deduct_date {data-required data-indent=2} | string | 预计扣费的日期
 | estimated_deduct_amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 预计的扣费金额
 | total {data-required data-indent=3} | number | 金额
-| currency {data-indent=3} | string | 货币类型
+| currency {data-indent=3} | string | 货币类型<br/>`CNY` 枚举值
 | description {data-required data-indent=2} | string | 商品描述
 
 {.im-table #request}

@@ -24,12 +24,12 @@ description: 通过此接口可查询多个批次的信息，包括批次的配�
 ```php [异步纯链式]
 $instance->v3->marketing->favor->stocks->getAsync([
   'query' => [
-    'offset'              => 0,
-    'limit'               => 0,
-    'stock_creator_mchid' => '',
+    'offset'              => 1,
+    'limit'               => 8,
+    'stock_creator_mchid' => '9856888',
     'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
     'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
-    'status'              => 'unactivated',
+    'status'              => 'paused',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,12 +41,12 @@ $instance->v3->marketing->favor->stocks->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/stocks')->getAsync([
   'query' => [
-    'offset'              => 0,
-    'limit'               => 0,
-    'stock_creator_mchid' => '',
+    'offset'              => 1,
+    'limit'               => 8,
+    'stock_creator_mchid' => '9856888',
     'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
     'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
-    'status'              => 'unactivated',
+    'status'              => 'paused',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,12 +58,12 @@ $instance->chain('v3/marketing/favor/stocks')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/favor/stocks']->getAsync([
   'query' => [
-    'offset'              => 0,
-    'limit'               => 0,
-    'stock_creator_mchid' => '',
+    'offset'              => 1,
+    'limit'               => 8,
+    'stock_creator_mchid' => '9856888',
     'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
     'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
-    'status'              => 'unactivated',
+    'status'              => 'paused',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,12 +75,12 @@ $instance['v3/marketing/favor/stocks']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->stocks->get([
   'query' => [
-    'offset'              => 0,
-    'limit'               => 0,
-    'stock_creator_mchid' => '',
+    'offset'              => 1,
+    'limit'               => 8,
+    'stock_creator_mchid' => '9856888',
     'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
     'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
-    'status'              => 'unactivated',
+    'status'              => 'paused',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -89,12 +89,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/stocks')->get([
   'query' => [
-    'offset'              => 0,
-    'limit'               => 0,
-    'stock_creator_mchid' => '',
+    'offset'              => 1,
+    'limit'               => 8,
+    'stock_creator_mchid' => '9856888',
     'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
     'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
-    'status'              => 'unactivated',
+    'status'              => 'paused',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -103,12 +103,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/stocks']->get([
   'query' => [
-    'offset'              => 0,
-    'limit'               => 0,
-    'stock_creator_mchid' => '',
+    'offset'              => 1,
+    'limit'               => 8,
+    'stock_creator_mchid' => '9856888',
     'create_start_time'   => '2015-05-20T13:29:35.120+08:00',
     'create_end_time'     => '2015-05-20T13:29:35.120+08:00',
-    'status'              => 'unactivated',
+    'status'              => 'paused',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -148,12 +148,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | distributed_coupons {data-indent=1} | integer | 已发券数量
 | business_type {data-indent=1} | string | 业务类型<br/>`MULTIUSE` 枚举值
 | available_region_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 消费金可用地域
-| type {data-indent=2} | string | 类型
+| type {data-indent=2} | string | 类型<br/>`PROVINCE` \| `CITY` \| `DISTRICT` \| `COUNTRY` 枚举值之一
 | province {data-indent=2} | string | 省
 | city {data-indent=2} | string | 市
 | district {data-indent=2} | string | 区
 | country {data-indent=2} | string | 国家
 | available_industry_list {data-indent=1} | string[] | 消费金可用行业
+| card_id {data-indent=1} | string | 卡包ID
 
 {.im-table #response}
 

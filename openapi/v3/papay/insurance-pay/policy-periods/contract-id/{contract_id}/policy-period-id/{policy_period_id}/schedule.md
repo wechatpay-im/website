@@ -15,7 +15,7 @@ description: 保险行业商户再进行委托代扣费前，需要提前在微�
 | appid {data-required data-indent=1} | string | 应用ID
 | scheduled_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 预约扣费金额信息
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 
 {.im-table #request}
 

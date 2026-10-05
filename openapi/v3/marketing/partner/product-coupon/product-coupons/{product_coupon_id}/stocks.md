@@ -41,29 +41,6 @@
 | exchange_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | exchange_price {data-required data-indent=4} | integer | 固定兑换价格
-| sequential_usage_rule {data-indent=2} | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
-| coupon_available_period {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 券可核销时间
-| available_begin_time {data-required data-indent=4} | string | 开始时间
-| available_end_time {data-required data-indent=4} | string | 结束时间
-| wait_days_after_receive {data-indent=4} | integer | 领取后N天开始生效
-| weekly_available_period {data-indent=4} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
-| day_list {data-indent=5} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
-| day_period_list {data-indent=5} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
-| begin_time {data-required data-indent=6} | integer | 当天可用开始时间
-| end_time {data-required data-indent=6} | integer | 当天可用结束时间
-| irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
-| begin_time {data-required data-indent=5} | string | 开始时间
-| end_time {data-required data-indent=5} | string | 结束时间
-| normal_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
-| threshold {data-required data-indent=4} | integer | 门槛金额
-| discount_amount {data-required data-indent=4} | integer | 固定减免金额
-| discount_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 折扣券使用规则列表
-| threshold {data-required data-indent=4} | integer | 门槛金额
-| percent_off {data-required data-indent=4} | integer | 固定减免百分比
-| exchange_coupon_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 兑换券使用规则列表
-| threshold {data-required data-indent=4} | integer | 门槛金额
-| exchange_price {data-required data-indent=4} | integer | 固定兑换价格
-| special_first {data-indent=3} | boolean | 多次优惠是否提供首笔特惠
 | usage_rule_display_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券使用规则展示信息
 | coupon_usage_method_list {data-required data-indent=3} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=3} | string | 小程序AppID
@@ -86,10 +63,6 @@
 | guidance_wording {data-required data-indent=4} | string | 引导文案
 | entrance_official_account {data-indent=3} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=4} | string | 公众号AppID
-| entrance_finder {data-indent=3} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=4} | string | 视频号ID
-| finder_video_id {data-required data-indent=4} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=4} | string | 视频号封面图
 | notify_config {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=3} | string | 事件通知appid
 | store_scope {data-required data-indent=2} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -144,37 +117,6 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
           'exchange_price' => 20,
         ],
       ],
-      'sequential_usage_rule'   => [
-        'coupon_available_period' => [
-          'available_begin_time'            => '2025-08-01T00:00:00+08:00',
-          'available_end_time'              => '2025-08-31T23:59:59+08:00',
-          'wait_days_after_receive'         => 1,
-          'weekly_available_period'         => [
-            'day_list'        => ['MONDAY'],
-            'day_period_list' => [[
-              'begin_time' => 60,
-              'end_time'   => 86399,
-            ],],
-          ],
-          'irregular_available_period_list' => [[
-            'begin_time' => '2025-08-01T00:00:00+08:00',
-            'end_time'   => '2025-08-31T23:59:59+08:00',
-          ],],
-        ],
-        'normal_coupon_list'      => [[
-          'threshold'       => 10000,
-          'discount_amount' => 1,
-        ],],
-        'discount_coupon_list'    => [[
-          'threshold'   => 10000,
-          'percent_off' => 20,
-        ],],
-        'exchange_coupon_list'    => [[
-          'threshold'      => 10000,
-          'exchange_price' => 20,
-        ],],
-        'special_first'           => true,
-      ],
       'usage_rule_display_info' => [
         'coupon_usage_method_list'    => ['OFFLINE'],
         'mini_program_appid'          => 'wx1234567890',
@@ -200,11 +142,6 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
         ],
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
-        ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
         ],
       ],
       'notify_config'           => [
@@ -266,37 +203,6 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
           'exchange_price' => 20,
         ],
       ],
-      'sequential_usage_rule'   => [
-        'coupon_available_period' => [
-          'available_begin_time'            => '2025-08-01T00:00:00+08:00',
-          'available_end_time'              => '2025-08-31T23:59:59+08:00',
-          'wait_days_after_receive'         => 1,
-          'weekly_available_period'         => [
-            'day_list'        => ['MONDAY'],
-            'day_period_list' => [[
-              'begin_time' => 60,
-              'end_time'   => 86399,
-            ],],
-          ],
-          'irregular_available_period_list' => [[
-            'begin_time' => '2025-08-01T00:00:00+08:00',
-            'end_time'   => '2025-08-31T23:59:59+08:00',
-          ],],
-        ],
-        'normal_coupon_list'      => [[
-          'threshold'       => 10000,
-          'discount_amount' => 1,
-        ],],
-        'discount_coupon_list'    => [[
-          'threshold'   => 10000,
-          'percent_off' => 20,
-        ],],
-        'exchange_coupon_list'    => [[
-          'threshold'      => 10000,
-          'exchange_price' => 20,
-        ],],
-        'special_first'           => true,
-      ],
       'usage_rule_display_info' => [
         'coupon_usage_method_list'    => ['OFFLINE'],
         'mini_program_appid'          => 'wx1234567890',
@@ -322,11 +228,6 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
         ],
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
-        ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
         ],
       ],
       'notify_config'           => [
@@ -388,37 +289,6 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
           'exchange_price' => 20,
         ],
       ],
-      'sequential_usage_rule'   => [
-        'coupon_available_period' => [
-          'available_begin_time'            => '2025-08-01T00:00:00+08:00',
-          'available_end_time'              => '2025-08-31T23:59:59+08:00',
-          'wait_days_after_receive'         => 1,
-          'weekly_available_period'         => [
-            'day_list'        => ['MONDAY'],
-            'day_period_list' => [[
-              'begin_time' => 60,
-              'end_time'   => 86399,
-            ],],
-          ],
-          'irregular_available_period_list' => [[
-            'begin_time' => '2025-08-01T00:00:00+08:00',
-            'end_time'   => '2025-08-31T23:59:59+08:00',
-          ],],
-        ],
-        'normal_coupon_list'      => [[
-          'threshold'       => 10000,
-          'discount_amount' => 1,
-        ],],
-        'discount_coupon_list'    => [[
-          'threshold'   => 10000,
-          'percent_off' => 20,
-        ],],
-        'exchange_coupon_list'    => [[
-          'threshold'      => 10000,
-          'exchange_price' => 20,
-        ],],
-        'special_first'           => true,
-      ],
       'usage_rule_display_info' => [
         'coupon_usage_method_list'    => ['OFFLINE'],
         'mini_program_appid'          => 'wx1234567890',
@@ -444,11 +314,6 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
         ],
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
-        ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
         ],
       ],
       'notify_config'           => [
@@ -510,37 +375,6 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_p
           'exchange_price' => 20,
         ],
       ],
-      'sequential_usage_rule'   => [
-        'coupon_available_period' => [
-          'available_begin_time'            => '2025-08-01T00:00:00+08:00',
-          'available_end_time'              => '2025-08-31T23:59:59+08:00',
-          'wait_days_after_receive'         => 1,
-          'weekly_available_period'         => [
-            'day_list'        => ['MONDAY'],
-            'day_period_list' => [[
-              'begin_time' => 60,
-              'end_time'   => 86399,
-            ],],
-          ],
-          'irregular_available_period_list' => [[
-            'begin_time' => '2025-08-01T00:00:00+08:00',
-            'end_time'   => '2025-08-31T23:59:59+08:00',
-          ],],
-        ],
-        'normal_coupon_list'      => [[
-          'threshold'       => 10000,
-          'discount_amount' => 1,
-        ],],
-        'discount_coupon_list'    => [[
-          'threshold'   => 10000,
-          'percent_off' => 20,
-        ],],
-        'exchange_coupon_list'    => [[
-          'threshold'      => 10000,
-          'exchange_price' => 20,
-        ],],
-        'special_first'           => true,
-      ],
       'usage_rule_display_info' => [
         'coupon_usage_method_list'    => ['OFFLINE'],
         'mini_program_appid'          => 'wx1234567890',
@@ -566,11 +400,6 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_p
         ],
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
-        ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
         ],
       ],
       'notify_config'           => [
@@ -629,37 +458,6 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
           'exchange_price' => 20,
         ],
       ],
-      'sequential_usage_rule'   => [
-        'coupon_available_period' => [
-          'available_begin_time'            => '2025-08-01T00:00:00+08:00',
-          'available_end_time'              => '2025-08-31T23:59:59+08:00',
-          'wait_days_after_receive'         => 1,
-          'weekly_available_period'         => [
-            'day_list'        => ['MONDAY'],
-            'day_period_list' => [[
-              'begin_time' => 60,
-              'end_time'   => 86399,
-            ],],
-          ],
-          'irregular_available_period_list' => [[
-            'begin_time' => '2025-08-01T00:00:00+08:00',
-            'end_time'   => '2025-08-31T23:59:59+08:00',
-          ],],
-        ],
-        'normal_coupon_list'      => [[
-          'threshold'       => 10000,
-          'discount_amount' => 1,
-        ],],
-        'discount_coupon_list'    => [[
-          'threshold'   => 10000,
-          'percent_off' => 20,
-        ],],
-        'exchange_coupon_list'    => [[
-          'threshold'      => 10000,
-          'exchange_price' => 20,
-        ],],
-        'special_first'           => true,
-      ],
       'usage_rule_display_info' => [
         'coupon_usage_method_list'    => ['OFFLINE'],
         'mini_program_appid'          => 'wx1234567890',
@@ -685,11 +483,6 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
         ],
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
-        ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
         ],
       ],
       'notify_config'           => [
@@ -748,37 +541,6 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{prod
           'exchange_price' => 20,
         ],
       ],
-      'sequential_usage_rule'   => [
-        'coupon_available_period' => [
-          'available_begin_time'            => '2025-08-01T00:00:00+08:00',
-          'available_end_time'              => '2025-08-31T23:59:59+08:00',
-          'wait_days_after_receive'         => 1,
-          'weekly_available_period'         => [
-            'day_list'        => ['MONDAY'],
-            'day_period_list' => [[
-              'begin_time' => 60,
-              'end_time'   => 86399,
-            ],],
-          ],
-          'irregular_available_period_list' => [[
-            'begin_time' => '2025-08-01T00:00:00+08:00',
-            'end_time'   => '2025-08-31T23:59:59+08:00',
-          ],],
-        ],
-        'normal_coupon_list'      => [[
-          'threshold'       => 10000,
-          'discount_amount' => 1,
-        ],],
-        'discount_coupon_list'    => [[
-          'threshold'   => 10000,
-          'percent_off' => 20,
-        ],],
-        'exchange_coupon_list'    => [[
-          'threshold'      => 10000,
-          'exchange_price' => 20,
-        ],],
-        'special_first'           => true,
-      ],
       'usage_rule_display_info' => [
         'coupon_usage_method_list'    => ['OFFLINE'],
         'mini_program_appid'          => 'wx1234567890',
@@ -804,11 +566,6 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{prod
         ],
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
-        ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
         ],
       ],
       'notify_config'           => [
@@ -850,6 +607,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=3} | string | 开始时间
 | end_time {data-required data-indent=3} | string | 结束时间
+| available_seconds {data-indent=2} | integer | 领取后N秒内有效
 | normal_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
 | discount_amount {data-required data-indent=2} | integer | 固定减免金额
@@ -859,29 +617,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | exchange_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
 | exchange_price {data-required data-indent=2} | integer | 固定兑换价格
-| sequential_usage_rule | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
-| coupon_available_period {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 券可核销时间
-| available_begin_time {data-required data-indent=2} | string | 开始时间
-| available_end_time {data-required data-indent=2} | string | 结束时间
-| wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
-| weekly_available_period {data-indent=2} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
-| day_list {data-indent=3} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
-| day_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
-| begin_time {data-required data-indent=4} | integer | 当天可用开始时间
-| end_time {data-required data-indent=4} | integer | 当天可用结束时间
-| irregular_available_period_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
-| begin_time {data-required data-indent=3} | string | 开始时间
-| end_time {data-required data-indent=3} | string | 结束时间
-| normal_coupon_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
-| threshold {data-required data-indent=2} | integer | 门槛金额
-| discount_amount {data-required data-indent=2} | integer | 固定减免金额
-| discount_coupon_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 折扣券使用规则列表
-| threshold {data-required data-indent=2} | integer | 门槛金额
-| percent_off {data-required data-indent=2} | integer | 固定减免百分比
-| exchange_coupon_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 兑换券使用规则列表
-| threshold {data-required data-indent=2} | integer | 门槛金额
-| exchange_price {data-required data-indent=2} | integer | 固定兑换价格
-| special_first {data-indent=1} | boolean | 多次优惠是否提供首笔特惠
 | usage_rule_display_info {data-required} | object {data-tooltip="对应PHP的array"} | 券使用规则展示信息
 | coupon_usage_method_list {data-required data-indent=1} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=1} | string | 小程序AppID
@@ -892,6 +627,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-required data-indent=2} | string | 券可用门店描述
 | mini_program_appid {data-indent=2} | string | 小程序AppID
 | mini_program_path {data-indent=2} | string | 小程序跳转路径
+| app_jump_type {data-indent=1} | string | APP跳转类型<br/>`H5` \| `PASSCODE_LINK` \| `USAGE_GUIDE` 枚举值之一
+| passcode_link {data-indent=1} | string | 口令链接
 | coupon_display_info {data-required} | object {data-tooltip="对应PHP的array"} | 用户商品券展示信息
 | code_display_mode {data-indent=1} | string | 用户商品券Code展示模式<br/>`INVISIBLE` \| `BARCODE` \| `QRCODE` 枚举值之一
 | background_color {data-indent=1} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
@@ -902,10 +639,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-required data-indent=2} | string | 引导文案
 | entrance_official_account {data-indent=1} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=2} | string | 公众号AppID
-| entrance_finder {data-indent=1} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=2} | string | 视频号ID
-| finder_video_id {data-required data-indent=2} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=2} | string | 视频号封面图
 | notify_config {data-required} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=1} | string | 事件通知appid
 | store_scope {data-required} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -934,6 +667,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | page_size {data-indent=1} | integer | 分页大小
 | page_token {data-indent=1} | string | 分页Token
 | brand_id {data-required data-indent=1} | string | 品牌ID
+| stock_bundle_id {data-indent=1} | string | 批次组ID
 
 {.im-table #request}
 
@@ -943,10 +677,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupon_id_->stocks->getAsync([
   'product_coupon_id' => '1000000013',
   'query' => [
-    'state'      => 'AUDITING',
-    'page_size'  => 20,
-    'page_token' => 'MTIzMjUK',
-    'brand_id'   => '120344',
+    'state'           => 'DEACTIVATED',
+    'page_size'       => 20,
+    'page_token'      => 'MTIzMjUK',
+    'brand_id'        => '120344',
+    'stock_bundle_id' => '712315129419284901',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -959,10 +694,11 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
 $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks')->getAsync([
   'product_coupon_id' => '1000000013',
   'query' => [
-    'state'      => 'AUDITING',
-    'page_size'  => 20,
-    'page_token' => 'MTIzMjUK',
-    'brand_id'   => '120344',
+    'state'           => 'DEACTIVATED',
+    'page_size'       => 20,
+    'page_token'      => 'MTIzMjUK',
+    'brand_id'        => '120344',
+    'stock_bundle_id' => '712315129419284901',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -975,10 +711,11 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
 $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks']->getAsync([
   'product_coupon_id' => '1000000013',
   'query' => [
-    'state'      => 'AUDITING',
-    'page_size'  => 20,
-    'page_token' => 'MTIzMjUK',
-    'brand_id'   => '120344',
+    'state'           => 'DEACTIVATED',
+    'page_size'       => 20,
+    'page_token'      => 'MTIzMjUK',
+    'brand_id'        => '120344',
+    'stock_bundle_id' => '712315129419284901',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -991,10 +728,11 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
 $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupon_id_->stocks->get([
   'product_coupon_id' => '1000000013',
   'query' => [
-    'state'      => 'AUDITING',
-    'page_size'  => 20,
-    'page_token' => 'MTIzMjUK',
-    'brand_id'   => '120344',
+    'state'           => 'DEACTIVATED',
+    'page_size'       => 20,
+    'page_token'      => 'MTIzMjUK',
+    'brand_id'        => '120344',
+    'stock_bundle_id' => '712315129419284901',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1004,10 +742,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks')->get([
   'product_coupon_id' => '1000000013',
   'query' => [
-    'state'      => 'AUDITING',
-    'page_size'  => 20,
-    'page_token' => 'MTIzMjUK',
-    'brand_id'   => '120344',
+    'state'           => 'DEACTIVATED',
+    'page_size'       => 20,
+    'page_token'      => 'MTIzMjUK',
+    'brand_id'        => '120344',
+    'stock_bundle_id' => '712315129419284901',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1017,10 +756,11 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}/stocks']->get([
   'product_coupon_id' => '1000000013',
   'query' => [
-    'state'      => 'AUDITING',
-    'page_size'  => 20,
-    'page_token' => 'MTIzMjUK',
-    'brand_id'   => '120344',
+    'state'           => 'DEACTIVATED',
+    'page_size'       => 20,
+    'page_token'      => 'MTIzMjUK',
+    'brand_id'        => '120344',
+    'stock_bundle_id' => '712315129419284901',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1058,6 +798,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=4} | string | 开始时间
 | end_time {data-required data-indent=4} | string | 结束时间
+| available_seconds {data-indent=3} | integer | 领取后N秒内有效
 | normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | discount_amount {data-required data-indent=3} | integer | 固定减免金额
@@ -1067,29 +808,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | exchange_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | exchange_price {data-required data-indent=3} | integer | 固定兑换价格
-| sequential_usage_rule {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
-| coupon_available_period {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
-| available_begin_time {data-required data-indent=3} | string | 开始时间
-| available_end_time {data-required data-indent=3} | string | 结束时间
-| wait_days_after_receive {data-indent=3} | integer | 领取后N天开始生效
-| weekly_available_period {data-indent=3} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
-| day_list {data-indent=4} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
-| day_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
-| begin_time {data-required data-indent=5} | integer | 当天可用开始时间
-| end_time {data-required data-indent=5} | integer | 当天可用结束时间
-| irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
-| begin_time {data-required data-indent=4} | string | 开始时间
-| end_time {data-required data-indent=4} | string | 结束时间
-| normal_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 满减券使用规则
-| threshold {data-required data-indent=3} | integer | 门槛金额
-| discount_amount {data-required data-indent=3} | integer | 固定减免金额
-| discount_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 折扣券使用规则列表
-| threshold {data-required data-indent=3} | integer | 门槛金额
-| percent_off {data-required data-indent=3} | integer | 固定减免百分比
-| exchange_coupon_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 兑换券使用规则列表
-| threshold {data-required data-indent=3} | integer | 门槛金额
-| exchange_price {data-required data-indent=3} | integer | 固定兑换价格
-| special_first {data-indent=2} | boolean | 多次优惠是否提供首笔特惠
 | usage_rule_display_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 券使用规则展示信息
 | coupon_usage_method_list {data-required data-indent=2} | string[] | 券使用方式列表<br/>`OFFLINE` \| `MINI_PROGRAM` \| `APP` \| `PAYMENT_CODE` 枚举值之一
 | mini_program_appid {data-indent=2} | string | 小程序AppID
@@ -1112,10 +830,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-required data-indent=3} | string | 引导文案
 | entrance_official_account {data-indent=2} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=3} | string | 公众号AppID
-| entrance_finder {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=3} | string | 视频号ID
-| finder_video_id {data-required data-indent=3} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=3} | string | 视频号封面图
 | notify_config {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=2} | string | 事件通知appid
 | store_scope {data-required data-indent=1} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -1127,6 +841,33 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_time {data-indent=1} | string | 失效时间
 | deactivate_reason {data-indent=1} | string | 失效原因
 | brand_id {data-required data-indent=1} | string | 品牌ID
+| progressive_bundle_usage_rule {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠使用规则
+| coupon_available_period {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
+| available_begin_time {data-required data-indent=3} | string | 批次开始时间
+| available_end_time {data-required data-indent=3} | string | 批次结束时间
+| available_days {data-indent=3} | integer | 券生效后N天内可用
+| wait_days_after_receive {data-indent=3} | integer | 领券后需等待N天才生效
+| weekly_available_period {data-indent=3} | object {data-tooltip="对应PHP的array"} | 每周固定可用时间
+| day_list {data-required data-indent=4} | string[] | 每周可用星期数<br/>`MONDAY` \| `TUESDAY` \| `WEDNESDAY` \| `THURSDAY` \| `FRIDAY` \| `SATURDAY` \| `SUNDAY` 枚举值之一
+| day_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
+| begin_time {data-required data-indent=5} | integer | 当天可用开始时间
+| end_time {data-required data-indent=5} | integer | 当天可用结束时间
+| irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 指定可用时间段
+| begin_time {data-required data-indent=4} | string | 开始时间
+| end_time {data-required data-indent=4} | string | 结束时间
+| available_seconds {data-indent=3} | integer | 领取后N秒内有效
+| normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
+| threshold {data-required data-indent=3} | integer | 门槛金额
+| discount_amount {data-required data-indent=3} | integer | 固定减免金额
+| discount_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
+| threshold {data-required data-indent=3} | integer | 门槛金额
+| percent_off {data-required data-indent=3} | integer | 固定减免百分比
+| exchange_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 兑换券使用规则
+| threshold {data-required data-indent=3} | integer | 门槛金额
+| exchange_price {data-required data-indent=3} | integer | 固定兑换价格
+| stock_bundle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 批次组信息
+| stock_bundle_id {data-required data-indent=2} | string | 批次所属批次组ID
+| stock_bundle_index {data-required data-indent=2} | integer | 批次在批次组内的次序
 
 {.im-table #response}
 

@@ -14,7 +14,7 @@ description: 在停车场、高速、加油等场景下，商户需获取用户�
 | mch_id {data-required data-indent=1} | string | 商户号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 | trade_scene {data-required data-indent=1} | string | 交易场景<br/>`PARKING` \| `PARKING SPACE` \| `GAS` \| `HIGHWAY` \| `BRIDGE` 枚举值之一
-| jump_scene {data-indent=1} | string | 跳转场景
+| jump_scene {data-indent=1} | string | 跳转场景<br/>`APP` \| `H5` 枚举值之一
 | openid {data-required data-indent=1} | string | 用户标识
 | version {data-required data-indent=1} | string | 版本号<br/>`3.0` 枚举值
 

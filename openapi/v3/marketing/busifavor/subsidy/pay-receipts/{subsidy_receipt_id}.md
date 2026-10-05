@@ -78,8 +78,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | payee_merchant {data-required} | string | 营销补差入账商户号
 | amount {data-required} | integer | 补差付款金额
 | description {data-required} | string | 补差付款描述
-| status {data-required} | string | 补差付款单据状态
-| fail_reason | string | 补差付款失败原因
+| status {data-required} | string | 补差付款单据状态<br/>`ACCEPTED` \| `SUCCESS` \| `FAIL` \| `RETURNING` \| `PARTIAL_RETURN` \| `FULL_RETURN` 枚举值之一
+| fail_reason | string | 补差付款失败原因<br/>`INSUFFICIENT_BALANCE` \| `NOT_INCOMESPLIT_ORDER` \| `EXCEED_SUBSIDY_AMOUNT_QUOTA` \| `EXCEED_SUBSIDY_COUNT_QUOTA` \| `OTHER` 枚举值之一
 | success_time | string | 补差付款完成时间
 | out_subsidy_no {data-required} | string | 业务请求唯一单号
 | create_time | string | 补差付款发起时间

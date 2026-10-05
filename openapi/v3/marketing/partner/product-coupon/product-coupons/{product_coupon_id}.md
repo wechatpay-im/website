@@ -229,7 +229,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required} | string | 品牌ID
 | scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` 枚举值之一
+| usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
@@ -237,11 +237,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
 | percent_off {data-required data-indent=2} | integer | 固定减免百分比
-| sequential_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
-| type {data-required data-indent=1} | string | 多次优惠规则类型<br/>`INCREMENTAL` \| `EQUAL` 枚举值之一
-| count {data-required data-indent=1} | integer | 可使用次数
-| available_days {data-required data-indent=1} | integer | 多次优惠有效天数
-| interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
 | display_info {data-required} | object {data-tooltip="对应PHP的array"} | 展示信息
 | name {data-required data-indent=1} | string | 商品券名称
 | image_url {data-required data-indent=1} | string | 商品券图片
@@ -262,6 +257,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_request_no | string | 失效请求单号
 | deactivate_time | string | 失效时间
 | deactivate_reason | string | 失效原因
+| progressive_bundle_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
+| count {data-required data-indent=1} | integer | 可使用次数
+| interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
 
 {.im-table #response}
 
@@ -359,7 +357,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required} | string | 品牌ID
 | scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` 枚举值之一
+| usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
@@ -367,11 +365,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
 | percent_off {data-required data-indent=2} | integer | 固定减免百分比
-| sequential_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
-| type {data-required data-indent=1} | string | 多次优惠规则类型<br/>`INCREMENTAL` \| `EQUAL` 枚举值之一
-| count {data-required data-indent=1} | integer | 可使用次数
-| available_days {data-required data-indent=1} | integer | 多次优惠有效天数
-| interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
 | display_info {data-required} | object {data-tooltip="对应PHP的array"} | 展示信息
 | name {data-required data-indent=1} | string | 商品券名称
 | image_url {data-required data-indent=1} | string | 商品券图片
@@ -392,6 +385,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_request_no | string | 失效请求单号
 | deactivate_time | string | 失效时间
 | deactivate_reason | string | 失效原因
+| progressive_bundle_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
+| count {data-required data-indent=1} | integer | 可使用次数
+| interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
 
 {.im-table #response}
 

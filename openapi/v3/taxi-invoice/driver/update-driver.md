@@ -20,7 +20,7 @@ description: 新增、更新司机信息，司机需有实名认证的微信号�
 | driver_photo {data-indent=1} | object {data-tooltip="对应PHP的array"} | 司机头像
 | photo_type {data-indent=2} | string | 照片类型
 | photo_digest {data-indent=2} | object {data-tooltip="对应PHP的array"} | 司机头像摘要
-| hash_type {data-indent=3} | string | 哈希类型
+| hash_type {data-indent=3} | string | 哈希类型<br/>`MD5` 枚举值
 | hash_value {data-indent=3} | string | 哈希值
 | photo_url {data-indent=2} | string | 头像url
 | photo_icon {data-indent=2} | string | 头像icon

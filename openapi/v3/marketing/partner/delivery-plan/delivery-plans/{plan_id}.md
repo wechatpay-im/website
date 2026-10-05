@@ -36,7 +36,7 @@ $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->_plan_id_->patch
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
-    'out_request_no' => '',
+    'out_request_no' => 'abcd-1234-1000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,7 +57,7 @@ $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}')-
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
-    'out_request_no' => '',
+    'out_request_no' => 'abcd-1234-1000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -78,7 +78,7 @@ $instance['v3/marketing/partner/delivery-plan/delivery-plans/{plan_id}']->patchA
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
-    'out_request_no' => '',
+    'out_request_no' => 'abcd-1234-1000',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -99,7 +99,7 @@ $response = $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->_pla
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
-    'out_request_no' => '',
+    'out_request_no' => 'abcd-1234-1000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -117,7 +117,7 @@ $response = $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans/
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
-    'out_request_no' => '',
+    'out_request_no' => 'abcd-1234-1000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -135,7 +135,7 @@ $response = $instance['v3/marketing/partner/delivery-plan/delivery-plans/{plan_i
       'daily_limit'       => 1,
       'recommend_word'    => '天天有惊喜',
     ],
-    'out_request_no' => '',
+    'out_request_no' => 'abcd-1234-1000',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -148,16 +148,20 @@ print_r(json_decode((string) $response->getBody(), true));
 | plan {data-required} | object {data-tooltip="对应PHP的array"} | 投放计划详情
 | plan_id {data-required data-indent=1} | string | 投放计划ID
 | plan_name {data-required data-indent=1} | string | 投放计划名称
-| plan_state {data-required data-indent=1} | string | 投放计划状态<br/>`PLAN_CREATING` \| `PLAN_CREATED` \| `PLAN_TERMINATING` \| `PLAN_TERMINATED` \| `PLAN_EXPIRED` \| `PLAN_DELIVERING` \| `PLAN_PAUSED` 枚举值之一
+| plan_state {data-required data-indent=1} | string | 投放计划状态<br/>`CREATED` \| `TERMINATED` \| `EXPIRED` \| `DELIVERING` \| `PAUSED` 枚举值之一
 | delivery_start_time {data-indent=1} | string | 开始可用时间
 | delivery_end_time {data-indent=1} | string | 结束可用时间
 | stock_id {data-required data-indent=1} | string | 批次ID
+| stock_bundle_id {data-indent=1} | string | 投放批次组ID
 | product_coupon_id {data-required data-indent=1} | string | 商品券ID
+| usage_mode {data-indent=1} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | recommend_word {data-indent=1} | string | 营销标签
 | brand_id {data-required data-indent=1} | string | 品牌ID
 | total_count {data-indent=1} | integer | 总库存
 | user_limit {data-indent=1} | integer | 单用户限领
 | daily_limit {data-indent=1} | integer | 单日限领
+| reuse_coupon_config {data-indent=1} | boolean | 是否复用商品券和批次信息
+| exclude_expired_coupon_from_limit {data-indent=1} | boolean | 过期券不占用领取次数
 
 {.im-table #response}
 

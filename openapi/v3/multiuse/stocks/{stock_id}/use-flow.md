@@ -10,6 +10,9 @@ description: 可获取到某批次的核销明细数据，包括订单号、单�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | stock_id {data-required} | string | 批次号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| begin_date {data-indent=1} | string | 账单开始时间
+| end_date {data-indent=1} | string | 账单结束时间
 
 {.im-table #request}
 
@@ -18,6 +21,10 @@ description: 可获取到某批次的核销明细数据，包括订单号、单�
 ```php [异步纯链式]
 $instance->v3->multiuse->stocks->_stock_id_->useFlow->getAsync([
   'stock_id' => '9856888',
+  'query' => [
+    'begin_date' => '20250601',
+    'end_date'   => '20250605',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -28,6 +35,10 @@ $instance->v3->multiuse->stocks->_stock_id_->useFlow->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/multiuse/stocks/{stock_id}/use-flow')->getAsync([
   'stock_id' => '9856888',
+  'query' => [
+    'begin_date' => '20250601',
+    'end_date'   => '20250605',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -38,6 +49,10 @@ $instance->chain('v3/multiuse/stocks/{stock_id}/use-flow')->getAsync([
 ```php [异步属性式]
 $instance['v3/multiuse/stocks/{stock_id}/use-flow']->getAsync([
   'stock_id' => '9856888',
+  'query' => [
+    'begin_date' => '20250601',
+    'end_date'   => '20250605',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -48,6 +63,10 @@ $instance['v3/multiuse/stocks/{stock_id}/use-flow']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->multiuse->stocks->_stock_id_->useFlow->get([
   'stock_id' => '9856888',
+  'query' => [
+    'begin_date' => '20250601',
+    'end_date'   => '20250605',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -55,6 +74,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/multiuse/stocks/{stock_id}/use-flow')->get([
   'stock_id' => '9856888',
+  'query' => [
+    'begin_date' => '20250601',
+    'end_date'   => '20250605',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -62,6 +85,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/multiuse/stocks/{stock_id}/use-flow']->get([
   'stock_id' => '9856888',
+  'query' => [
+    'begin_date' => '20250601',
+    'end_date'   => '20250605',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

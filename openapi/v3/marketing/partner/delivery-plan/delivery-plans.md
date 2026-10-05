@@ -24,6 +24,7 @@ description: 创建投放计划
 | reuse_coupon_config {data-indent=1} | boolean | 是否复用商品券和批次信息
 | usage_mode {data-indent=1} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | stock_bundle_id {data-indent=1} | string | 投放批次组ID
+| exclude_expired_coupon_from_limit {data-indent=1} | boolean | 过期券不占用领取次数
 
 {.im-table #request}
 
@@ -32,20 +33,21 @@ description: 创建投放计划
 ```php [异步纯链式]
 $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->postAsync([
   'json' => [
-    'out_request_no'      => 'asdf-1234-40016',
-    'brand_id'            => '40016',
-    'product_coupon_id'   => '701146876221757924829193824428',
-    'stock_id'            => '701246876221757924829194755312',
-    'plan_name'           => '冬季饮料投放',
-    'total_count'         => 1,
-    'user_limit'          => 1,
-    'daily_limit'         => 1,
-    'delivery_start_time' => '2025-01-01T00:00:00+08:00',
-    'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
-    'recommend_word'      => '天天有惊喜',
-    'reuse_coupon_config' => true,
-    'usage_mode'          => 'SINGLE',
-    'stock_bundle_id'     => '',
+    'out_request_no'                    => 'asdf-1234-40016',
+    'brand_id'                          => '40016',
+    'product_coupon_id'                 => '701146876221757924829193824428',
+    'stock_id'                          => '701246876221757924829194755312',
+    'plan_name'                         => '冬季饮料投放',
+    'total_count'                       => 1,
+    'user_limit'                        => 1,
+    'daily_limit'                       => 1,
+    'delivery_start_time'               => '2025-01-01T00:00:00+08:00',
+    'delivery_end_time'                 => '2025-01-01T00:00:00+08:00',
+    'recommend_word'                    => '天天有惊喜',
+    'reuse_coupon_config'               => true,
+    'usage_mode'                        => 'SINGLE',
+    'stock_bundle_id'                   => '123456789',
+    'exclude_expired_coupon_from_limit' => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,20 +59,21 @@ $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans')->postAsync([
   'json' => [
-    'out_request_no'      => 'asdf-1234-40016',
-    'brand_id'            => '40016',
-    'product_coupon_id'   => '701146876221757924829193824428',
-    'stock_id'            => '701246876221757924829194755312',
-    'plan_name'           => '冬季饮料投放',
-    'total_count'         => 1,
-    'user_limit'          => 1,
-    'daily_limit'         => 1,
-    'delivery_start_time' => '2025-01-01T00:00:00+08:00',
-    'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
-    'recommend_word'      => '天天有惊喜',
-    'reuse_coupon_config' => true,
-    'usage_mode'          => 'SINGLE',
-    'stock_bundle_id'     => '',
+    'out_request_no'                    => 'asdf-1234-40016',
+    'brand_id'                          => '40016',
+    'product_coupon_id'                 => '701146876221757924829193824428',
+    'stock_id'                          => '701246876221757924829194755312',
+    'plan_name'                         => '冬季饮料投放',
+    'total_count'                       => 1,
+    'user_limit'                        => 1,
+    'daily_limit'                       => 1,
+    'delivery_start_time'               => '2025-01-01T00:00:00+08:00',
+    'delivery_end_time'                 => '2025-01-01T00:00:00+08:00',
+    'recommend_word'                    => '天天有惊喜',
+    'reuse_coupon_config'               => true,
+    'usage_mode'                        => 'SINGLE',
+    'stock_bundle_id'                   => '123456789',
+    'exclude_expired_coupon_from_limit' => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -82,20 +85,21 @@ $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans')->postAsync
 ```php [异步属性式]
 $instance['v3/marketing/partner/delivery-plan/delivery-plans']->postAsync([
   'json' => [
-    'out_request_no'      => 'asdf-1234-40016',
-    'brand_id'            => '40016',
-    'product_coupon_id'   => '701146876221757924829193824428',
-    'stock_id'            => '701246876221757924829194755312',
-    'plan_name'           => '冬季饮料投放',
-    'total_count'         => 1,
-    'user_limit'          => 1,
-    'daily_limit'         => 1,
-    'delivery_start_time' => '2025-01-01T00:00:00+08:00',
-    'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
-    'recommend_word'      => '天天有惊喜',
-    'reuse_coupon_config' => true,
-    'usage_mode'          => 'SINGLE',
-    'stock_bundle_id'     => '',
+    'out_request_no'                    => 'asdf-1234-40016',
+    'brand_id'                          => '40016',
+    'product_coupon_id'                 => '701146876221757924829193824428',
+    'stock_id'                          => '701246876221757924829194755312',
+    'plan_name'                         => '冬季饮料投放',
+    'total_count'                       => 1,
+    'user_limit'                        => 1,
+    'daily_limit'                       => 1,
+    'delivery_start_time'               => '2025-01-01T00:00:00+08:00',
+    'delivery_end_time'                 => '2025-01-01T00:00:00+08:00',
+    'recommend_word'                    => '天天有惊喜',
+    'reuse_coupon_config'               => true,
+    'usage_mode'                        => 'SINGLE',
+    'stock_bundle_id'                   => '123456789',
+    'exclude_expired_coupon_from_limit' => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -107,20 +111,21 @@ $instance['v3/marketing/partner/delivery-plan/delivery-plans']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->partner->deliveryPlan->deliveryPlans->post([
   'json' => [
-    'out_request_no'      => 'asdf-1234-40016',
-    'brand_id'            => '40016',
-    'product_coupon_id'   => '701146876221757924829193824428',
-    'stock_id'            => '701246876221757924829194755312',
-    'plan_name'           => '冬季饮料投放',
-    'total_count'         => 1,
-    'user_limit'          => 1,
-    'daily_limit'         => 1,
-    'delivery_start_time' => '2025-01-01T00:00:00+08:00',
-    'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
-    'recommend_word'      => '天天有惊喜',
-    'reuse_coupon_config' => true,
-    'usage_mode'          => 'SINGLE',
-    'stock_bundle_id'     => '',
+    'out_request_no'                    => 'asdf-1234-40016',
+    'brand_id'                          => '40016',
+    'product_coupon_id'                 => '701146876221757924829193824428',
+    'stock_id'                          => '701246876221757924829194755312',
+    'plan_name'                         => '冬季饮料投放',
+    'total_count'                       => 1,
+    'user_limit'                        => 1,
+    'daily_limit'                       => 1,
+    'delivery_start_time'               => '2025-01-01T00:00:00+08:00',
+    'delivery_end_time'                 => '2025-01-01T00:00:00+08:00',
+    'recommend_word'                    => '天天有惊喜',
+    'reuse_coupon_config'               => true,
+    'usage_mode'                        => 'SINGLE',
+    'stock_bundle_id'                   => '123456789',
+    'exclude_expired_coupon_from_limit' => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -129,20 +134,21 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/partner/delivery-plan/delivery-plans')->post([
   'json' => [
-    'out_request_no'      => 'asdf-1234-40016',
-    'brand_id'            => '40016',
-    'product_coupon_id'   => '701146876221757924829193824428',
-    'stock_id'            => '701246876221757924829194755312',
-    'plan_name'           => '冬季饮料投放',
-    'total_count'         => 1,
-    'user_limit'          => 1,
-    'daily_limit'         => 1,
-    'delivery_start_time' => '2025-01-01T00:00:00+08:00',
-    'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
-    'recommend_word'      => '天天有惊喜',
-    'reuse_coupon_config' => true,
-    'usage_mode'          => 'SINGLE',
-    'stock_bundle_id'     => '',
+    'out_request_no'                    => 'asdf-1234-40016',
+    'brand_id'                          => '40016',
+    'product_coupon_id'                 => '701146876221757924829193824428',
+    'stock_id'                          => '701246876221757924829194755312',
+    'plan_name'                         => '冬季饮料投放',
+    'total_count'                       => 1,
+    'user_limit'                        => 1,
+    'daily_limit'                       => 1,
+    'delivery_start_time'               => '2025-01-01T00:00:00+08:00',
+    'delivery_end_time'                 => '2025-01-01T00:00:00+08:00',
+    'recommend_word'                    => '天天有惊喜',
+    'reuse_coupon_config'               => true,
+    'usage_mode'                        => 'SINGLE',
+    'stock_bundle_id'                   => '123456789',
+    'exclude_expired_coupon_from_limit' => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -151,20 +157,21 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/partner/delivery-plan/delivery-plans']->post([
   'json' => [
-    'out_request_no'      => 'asdf-1234-40016',
-    'brand_id'            => '40016',
-    'product_coupon_id'   => '701146876221757924829193824428',
-    'stock_id'            => '701246876221757924829194755312',
-    'plan_name'           => '冬季饮料投放',
-    'total_count'         => 1,
-    'user_limit'          => 1,
-    'daily_limit'         => 1,
-    'delivery_start_time' => '2025-01-01T00:00:00+08:00',
-    'delivery_end_time'   => '2025-01-01T00:00:00+08:00',
-    'recommend_word'      => '天天有惊喜',
-    'reuse_coupon_config' => true,
-    'usage_mode'          => 'SINGLE',
-    'stock_bundle_id'     => '',
+    'out_request_no'                    => 'asdf-1234-40016',
+    'brand_id'                          => '40016',
+    'product_coupon_id'                 => '701146876221757924829193824428',
+    'stock_id'                          => '701246876221757924829194755312',
+    'plan_name'                         => '冬季饮料投放',
+    'total_count'                       => 1,
+    'user_limit'                        => 1,
+    'daily_limit'                       => 1,
+    'delivery_start_time'               => '2025-01-01T00:00:00+08:00',
+    'delivery_end_time'                 => '2025-01-01T00:00:00+08:00',
+    'recommend_word'                    => '天天有惊喜',
+    'reuse_coupon_config'               => true,
+    'usage_mode'                        => 'SINGLE',
+    'stock_bundle_id'                   => '123456789',
+    'exclude_expired_coupon_from_limit' => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -177,16 +184,20 @@ print_r(json_decode((string) $response->getBody(), true));
 | plan {data-required} | object {data-tooltip="对应PHP的array"} | 投放计划详情
 | plan_id {data-required data-indent=1} | string | 投放计划ID
 | plan_name {data-required data-indent=1} | string | 投放计划名称
-| plan_state {data-required data-indent=1} | string | 投放计划状态<br/>`PLAN_CREATING` \| `PLAN_CREATED` \| `PLAN_TERMINATING` \| `PLAN_TERMINATED` \| `PLAN_EXPIRED` \| `PLAN_DELIVERING` \| `PLAN_PAUSED` 枚举值之一
+| plan_state {data-required data-indent=1} | string | 投放计划状态<br/>`CREATED` \| `TERMINATED` \| `EXPIRED` \| `DELIVERING` \| `PAUSED` 枚举值之一
 | delivery_start_time {data-indent=1} | string | 开始可用时间
 | delivery_end_time {data-indent=1} | string | 结束可用时间
 | stock_id {data-required data-indent=1} | string | 批次ID
+| stock_bundle_id {data-indent=1} | string | 投放批次组ID
 | product_coupon_id {data-required data-indent=1} | string | 商品券ID
+| usage_mode {data-indent=1} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | recommend_word {data-indent=1} | string | 营销标签
 | brand_id {data-required data-indent=1} | string | 品牌ID
 | total_count {data-indent=1} | integer | 总库存
 | user_limit {data-indent=1} | integer | 单用户限领
 | daily_limit {data-indent=1} | integer | 单日限领
+| reuse_coupon_config {data-indent=1} | boolean | 是否复用商品券和批次信息
+| exclude_expired_coupon_from_limit {data-indent=1} | boolean | 过期券不占用领取次数
 
 {.im-table #response}
 

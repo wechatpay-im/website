@@ -21,8 +21,8 @@ description: 服务商可以通过该接口，批量向用户零钱或务工卡�
 | attach_remark {data-indent=1} | string | 附加信息
 | total_amount {data-required data-indent=1} | integer | 转账总金额
 | total_count {data-required data-indent=1} | integer | 转账总笔数
-| transfer_scene {data-required data-indent=1} | string | 转账场景
-| transfer_purpose {data-required data-indent=1} | string | 批量转账用途
+| transfer_scene {data-required data-indent=1} | string | 转账场景<br/>`ORDINARY_TRANSFER` \| `PAYROLL_CARD_TRANSFER` 枚举值之一
+| transfer_purpose {data-required data-indent=1} | string | 批量转账用途<br/>`GOODSPAYMENT` \| `COMMISSION` \| `REFUND` \| `REIMBURSEMENT` \| `FREIGHT` \| `OTHERS` 枚举值之一
 | transfer_detail_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账明细列表
 | out_detail_no {data-required data-indent=2} | string | 银行明细单号
 | transfer_amount {data-required data-indent=2} | integer | 转账金额

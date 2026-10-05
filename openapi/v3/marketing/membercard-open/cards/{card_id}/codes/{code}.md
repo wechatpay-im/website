@@ -93,6 +93,32 @@ print_r(json_decode((string) $response->getBody(), true));
 | value {data-indent=2} | string | 字段值
 | value_list {data-indent=2} | string[] | 字段值列表
 | bonus_value | integer | 用户当前积分
+| service_modules | object[] {data-tooltip="对应PHP的array"} | 用户当前服务项
+| service_module_id {data-required data-indent=1} | string | 会员服务项id
+| state_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 服务状态设置
+| state_id {data-required data-indent=2} | string | 状态id
+| content_template_data {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 内容模版设置
+| field_list {data-required data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 服务内容列表
+| field_id {data-required data-indent=4} | string | 内容字段id
+| field_value {data-required data-indent=4} | string | 内容字段值
+| action_setting {data-indent=3} | object {data-tooltip="对应PHP的array"} | 操作设置
+| action_name {data-required data-indent=4} | string | 操作名称
+| jump_miniprogram {data-required data-indent=4} | object {data-tooltip="对应PHP的array"} | 跳转小程序
+| appid {data-required data-indent=5} | string | 小程序AppID
+| path {data-required data-indent=5} | string | 小程序path
+| message_template_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 消息模版设置
+| message_template_id {data-required data-indent=3} | string | 模版消息id
+| field_list {data-required data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 模板消息字段列表
+| field_id {data-required data-indent=4} | string | 消息字段id
+| field_value {data-required data-indent=4} | string | 消息字段的值
+| member_price_word | string | 会员专享价文案
+| fapiao_jump_word | string | 发票跳转文案
+| guide | object {data-tooltip="对应PHP的array"} | 客服联系信息
+| staff_name {data-required data-indent=1} | string | 联系人名字
+| head_image_url {data-required data-indent=1} | string | 联系人头像
+| contact_information_name {data-indent=1} | string | 联系方式
+| contact_information_value {data-indent=1} | string | 联系信息值
+| phone_number {data-indent=1} | string | 联系电话
 
 {.im-table #response}
 

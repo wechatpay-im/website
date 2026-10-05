@@ -108,6 +108,37 @@ print_r(json_decode((string) $response->getBody(), true));
 | url {data-indent=1} | string | 跳转url
 | appid {data-indent=1} | string | 跳转小程序appid
 | path {data-indent=1} | string | 跳转小程序path
+| bonus | object {data-tooltip="对应PHP的array"} | 会员积分
+| init_bonus {data-required data-indent=1} | integer | 会员初始积分值
+| bonus_value_word {data-required data-indent=1} | string | 积分值文案
+| bonus_cost_title {data-indent=1} | string | 积分价值项标题
+| bonus_cost_word {data-required data-indent=1} | string | 积分价值项文案
+| bonus_jump_word {data-indent=1} | string | 积分跳转文案
+| bonus_jump_appid {data-indent=1} | string | 积分跳转AppID
+| bonus_jump_path {data-indent=1} | string | 积分跳转path
+| bonus_support_appid {data-indent=1} | string | 自助积分跳转AppID
+| bonus_support_path {data-indent=1} | string | 自助积分跳转path
+| favor | object {data-tooltip="对应PHP的array"} | 会员优惠
+| show_coupon {data-required data-indent=1} | boolean | 是否展示优惠券
+| member_price_word {data-indent=1} | string | 会员专享价文案
+| member_price_appid {data-indent=1} | string | 会员专享价跳转AppID
+| member_price_path {data-indent=1} | string | 会员专享价跳转path
+| service_modules | object[] {data-tooltip="对应PHP的array"} | 会员服务项
+| service_module_id {data-required data-indent=1} | string | 会员服务项id
+| jump_miniprogram {data-indent=1} | object {data-tooltip="对应PHP的array"} | 跳转小程序
+| appid {data-required data-indent=2} | string | 小程序AppID
+| path {data-required data-indent=2} | string | 小程序path
+| fapiao | object {data-tooltip="对应PHP的array"} | 会员发票
+| fapiao_jump_word {data-indent=1} | string | 发票跳转文案
+| fapiao_jump_appid {data-indent=1} | string | 发票跳转AppID
+| fapiao_jump_path {data-indent=1} | string | 发票跳转path
+| guide | object {data-tooltip="对应PHP的array"} | 客服信息
+| staff_name {data-required data-indent=1} | string | 联系人名字
+| head_image_url {data-required data-indent=1} | string | 联系人头像
+| contact_information_name {data-indent=1} | string | 联系方式
+| contact_information_value {data-indent=1} | string | 联系信息值
+| phone_number {data-indent=1} | string | 联系电话
+| need_dynamic_code | boolean | 是否启用动态码
 
 {.im-table #response}
 
@@ -134,7 +165,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
 | wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
 | available_begin_time {data-indent=2} | string | 有效期开始时间
-| need_display_level {data-indent=1} | boolean | 是否展示会员等级
 | init_level {data-indent=1} | string | 会员初始等级
 | balance_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 储值信息
 | need_balance {data-indent=2} | boolean | 是否支持储值
@@ -179,7 +209,6 @@ $instance->v3->marketing->membercardOpen->cards->_card_id_->patchAsync([
       'wait_days_after_receive'     => 2,
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
-    'need_display_level'     => true,
     'init_level'             => '白银会员',
     'balance_information'    => [
       'need_balance'  => true,
@@ -231,7 +260,6 @@ $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->patchAsync([
       'wait_days_after_receive'     => 2,
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
-    'need_display_level'     => true,
     'init_level'             => '白银会员',
     'balance_information'    => [
       'need_balance'  => true,
@@ -283,7 +311,6 @@ $instance['v3/marketing/membercard-open/cards/{card_id}']->patchAsync([
       'wait_days_after_receive'     => 2,
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
-    'need_display_level'     => true,
     'init_level'             => '白银会员',
     'balance_information'    => [
       'need_balance'  => true,
@@ -335,7 +362,6 @@ $response = $instance->v3->marketing->membercardOpen->cards->_card_id_->patch([
       'wait_days_after_receive'     => 2,
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
-    'need_display_level'     => true,
     'init_level'             => '白银会员',
     'balance_information'    => [
       'need_balance'  => true,
@@ -384,7 +410,6 @@ $response = $instance->chain('v3/marketing/membercard-open/cards/{card_id}')->pa
       'wait_days_after_receive'     => 2,
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
-    'need_display_level'     => true,
     'init_level'             => '白银会员',
     'balance_information'    => [
       'need_balance'  => true,
@@ -433,7 +458,6 @@ $response = $instance['v3/marketing/membercard-open/cards/{card_id}']->patch([
       'wait_days_after_receive'     => 2,
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
     ],
-    'need_display_level'     => true,
     'init_level'             => '白银会员',
     'balance_information'    => [
       'need_balance'  => true,

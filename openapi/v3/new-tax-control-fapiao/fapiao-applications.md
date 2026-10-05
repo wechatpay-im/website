@@ -11,10 +11,10 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-indent=1} | string | 子商户号
-| scene {data-required data-indent=1} | string | 开票场景
+| scene {data-required data-indent=1} | string | 开票场景<br/>`WITH_WECHATPAY` \| `WITHOUT_WECHATPAY` 枚举值之一
 | fapiao_apply_id {data-required data-indent=1} | string | 发票申请单号
 | buyer_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 购买方信息
-| type {data-required data-indent=2} | string | 购买方类型
+| type {data-required data-indent=2} | string | 购买方类型<br/>`INDIVIDUAL` \| `ORGANIZATION` 枚举值之一
 | name {data-required data-indent=2} | string | 名称
 | taxpayer_id {data-indent=2} | string | 纳税人识别号
 | address {data-indent=2} | string | 地址
@@ -38,7 +38,7 @@ description: 商户完成收款后，调用本接口开具电子发票并插入�
 | quantity {data-required data-indent=3} | integer | 数量
 | total_amount {data-required data-indent=3} | integer | 单行金额合计
 | tax_rate {data-indent=3} | number | 税率
-| tax_prefer_mark {data-indent=3} | string | 税收优惠政策标识
+| tax_prefer_mark {data-indent=3} | string | 税收优惠政策标识<br/>`NO_FAVORABLE` \| `OUTSIDE_VAT` \| `VAT_EXEMPT` \| `NORMAL_ZERO_RATED` \| `EXPORT_ZERO_RATED` 枚举值之一
 | discount {data-required data-indent=3} | boolean | 是否折扣行
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号

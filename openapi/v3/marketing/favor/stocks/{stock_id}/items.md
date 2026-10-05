@@ -21,11 +21,11 @@ description: 通过此接口可查询批次的可用商品编码，判断券是�
 
 ```php [异步纯链式]
 $instance->v3->marketing->favor->stocks->_stock_id_->items->getAsync([
-  'stock_id' => '',
+  'stock_id' => '9865000',
   'query' => [
-    'stock_creator_mchid' => '',
-    'offset'              => 0,
-    'limit'               => '',
+    'stock_creator_mchid' => '9865000',
+    'offset'              => 10,
+    'limit'               => '10',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -36,11 +36,11 @@ $instance->v3->marketing->favor->stocks->_stock_id_->items->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/stocks/{stock_id}/items')->getAsync([
-  'stock_id' => '',
+  'stock_id' => '9865000',
   'query' => [
-    'stock_creator_mchid' => '',
-    'offset'              => 0,
-    'limit'               => '',
+    'stock_creator_mchid' => '9865000',
+    'offset'              => 10,
+    'limit'               => '10',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,11 +51,11 @@ $instance->chain('v3/marketing/favor/stocks/{stock_id}/items')->getAsync([
 
 ```php [异步属性式]
 $instance['v3/marketing/favor/stocks/{stock_id}/items']->getAsync([
-  'stock_id' => '',
+  'stock_id' => '9865000',
   'query' => [
-    'stock_creator_mchid' => '',
-    'offset'              => 0,
-    'limit'               => '',
+    'stock_creator_mchid' => '9865000',
+    'offset'              => 10,
+    'limit'               => '10',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -66,11 +66,11 @@ $instance['v3/marketing/favor/stocks/{stock_id}/items']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->stocks->_stock_id_->items->get([
-  'stock_id' => '',
+  'stock_id' => '9865000',
   'query' => [
-    'stock_creator_mchid' => '',
-    'offset'              => 0,
-    'limit'               => '',
+    'stock_creator_mchid' => '9865000',
+    'offset'              => 10,
+    'limit'               => '10',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -78,11 +78,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/stocks/{stock_id}/items')->get([
-  'stock_id' => '',
+  'stock_id' => '9865000',
   'query' => [
-    'stock_creator_mchid' => '',
-    'offset'              => 0,
-    'limit'               => '',
+    'stock_creator_mchid' => '9865000',
+    'offset'              => 10,
+    'limit'               => '10',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -90,11 +90,11 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/stocks/{stock_id}/items']->get([
-  'stock_id' => '',
+  'stock_id' => '9865000',
   'query' => [
-    'stock_creator_mchid' => '',
-    'offset'              => 0,
-    'limit'               => '',
+    'stock_creator_mchid' => '9865000',
+    'offset'              => 10,
+    'limit'               => '10',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

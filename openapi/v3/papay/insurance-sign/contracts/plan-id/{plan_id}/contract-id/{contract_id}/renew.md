@@ -18,7 +18,7 @@ description: 商户可通过本接口续期保险自动续费协议。前置条�
 | estimated_deduct_date {data-required data-indent=2} | string | 预计扣费的日期
 | estimated_deduct_amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 预计扣费金额
 | total {data-required data-indent=3} | number | 金额
-| currency {data-indent=3} | string | 货币类型
+| currency {data-indent=3} | string | 货币类型<br/>`CNY` 枚举值
 
 {.im-table #request}
 

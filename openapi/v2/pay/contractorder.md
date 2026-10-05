@@ -37,6 +37,7 @@ description: 支付的同时完成代扣协议的签约。用户完成支付，�
 | request_serial {data-required data-indent=1} | integer | 请求序列号
 | contract_display_account {data-required data-indent=1} | string | 用户账户展示名称
 | contract_notify_url {data-required data-indent=1} | string | 签约信息通知url
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
 
 {.im-table #request}
 
@@ -72,6 +73,7 @@ $instance->v2->pay->contractorder->postAsync([
     'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
+    'sign_type'                => 'MD5',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -110,6 +112,7 @@ $instance->chain('v2/pay/contractorder')->postAsync([
     'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
+    'sign_type'                => 'MD5',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -148,6 +151,7 @@ $instance['v2/pay/contractorder']->postAsync([
     'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
+    'sign_type'                => 'MD5',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -186,6 +190,7 @@ $response = $instance->v2->pay->contractorder->post([
     'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
+    'sign_type'                => 'MD5',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -221,6 +226,7 @@ $response = $instance->chain('v2/pay/contractorder')->post([
     'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
+    'sign_type'                => 'MD5',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -256,6 +262,7 @@ $response = $instance['v2/pay/contractorder']->post([
     'request_serial'           => '1695',
     'contract_display_account' => '123',
     'contract_notify_url'      => 'http://yoursite.com',
+    'sign_type'                => 'MD5',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

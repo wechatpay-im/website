@@ -14,6 +14,8 @@ description: 该接口仅提供微信代扣订单的查询，商户可以通过�
 | mch_id {data-required data-indent=1} | string | 商户号
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
+| contract_id {data-indent=1} | string | 委托代扣协议id
+| version {data-indent=1} | string | 接口版本号
 
 {.im-table #request}
 
@@ -26,6 +28,8 @@ $instance->v2->transit->queryorder->postAsync([
     'mch_id'         => '10000098',
     'transaction_id' => '1009660380201506130728806387',
     'sign_type'      => 'HMAC-SHA256',
+    'contract_id'    => 'Wx15463511252015071056489715',
+    'version'        => '2.0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,6 +45,8 @@ $instance->chain('v2/transit/queryorder')->postAsync([
     'mch_id'         => '10000098',
     'transaction_id' => '1009660380201506130728806387',
     'sign_type'      => 'HMAC-SHA256',
+    'contract_id'    => 'Wx15463511252015071056489715',
+    'version'        => '2.0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,6 +62,8 @@ $instance['v2/transit/queryorder']->postAsync([
     'mch_id'         => '10000098',
     'transaction_id' => '1009660380201506130728806387',
     'sign_type'      => 'HMAC-SHA256',
+    'contract_id'    => 'Wx15463511252015071056489715',
+    'version'        => '2.0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,6 +79,8 @@ $response = $instance->v2->transit->queryorder->post([
     'mch_id'         => '10000098',
     'transaction_id' => '1009660380201506130728806387',
     'sign_type'      => 'HMAC-SHA256',
+    'contract_id'    => 'Wx15463511252015071056489715',
+    'version'        => '2.0',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -83,6 +93,8 @@ $response = $instance->chain('v2/transit/queryorder')->post([
     'mch_id'         => '10000098',
     'transaction_id' => '1009660380201506130728806387',
     'sign_type'      => 'HMAC-SHA256',
+    'contract_id'    => 'Wx15463511252015071056489715',
+    'version'        => '2.0',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -95,6 +107,8 @@ $response = $instance['v2/transit/queryorder']->post([
     'mch_id'         => '10000098',
     'transaction_id' => '1009660380201506130728806387',
     'sign_type'      => 'HMAC-SHA256',
+    'contract_id'    => 'Wx15463511252015071056489715',
+    'version'        => '2.0',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

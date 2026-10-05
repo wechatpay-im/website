@@ -17,7 +17,7 @@ description: 商户可通过该接口停止支付有礼活动。
 
 ```php [异步纯链式]
 $instance->v3->marketing->paygiftactivity->activities->_activity_id_->terminate->postAsync([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -27,7 +27,7 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->terminate-
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/terminate')->postAsync([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/terminat
 
 ```php [异步属性式]
 $instance['v3/marketing/paygiftactivity/activities/{activity_id}/terminate']->postAsync([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -47,21 +47,21 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}/terminate']->po
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_->terminate->post([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/terminate')->post([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}/terminate']->post([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

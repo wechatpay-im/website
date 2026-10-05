@@ -14,7 +14,7 @@ description: 服务商可以凭“凭证”查询对应的“乘客行程单”�
 | openid {data-required data-indent=1} | string | 用户标识
 | appid {data-required data-indent=1} | string | 应用ID
 | region_id {data-indent=1} | integer | 行政区划代码
-| auth_mode {data-indent=1} | string | 授权模式
+| auth_mode {data-indent=1} | string | 授权模式<br/>`ORDER_AUTH` \| `PROTOCOL_AUTH` 枚举值之一
 
 {.im-table #request}
 

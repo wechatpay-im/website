@@ -31,6 +31,7 @@ description: 现金红包发放后会以公众号消息的形式触达用户，�
 | act_name {data-required data-indent=1} | string | 活动名称
 | remark {data-required data-indent=1} | string | 备注
 | scene_id {data-indent=1} | string | 场景id<br/>`PRODUCT_1` \| `PRODUCT_2` \| `PRODUCT_3` \| `PRODUCT_4` \| `PRODUCT_5` \| `PRODUCT_6` \| `PRODUCT_7` \| `PRODUCT_8` 枚举值之一
+| notify_way {data-indent=1} | string | 通知用户形式
 | risk_info {data-indent=1} | string {data-tooltip=使用urlencode后的字符串 data-encoded=by-urlencode} | 活动信息
 | {colspan=3 .im-table-line}
 | posttime {data-indent=2} | number | 用户操作的时间戳
@@ -60,6 +61,7 @@ $instance->v2->mmpaymkttransfers->sendredpack->postAsync([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
+    'notify_way'   => 'MINI_PROGRAM_JSAPI',
     'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
       'posttime'      => 1717171199,
       'mobile'        => '122344545',
@@ -92,6 +94,7 @@ $instance->chain('v2/mmpaymkttransfers/sendredpack')->postAsync([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
+    'notify_way'   => 'MINI_PROGRAM_JSAPI',
     'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
       'posttime'      => 1717171199,
       'mobile'        => '122344545',
@@ -124,6 +127,7 @@ $instance['v2/mmpaymkttransfers/sendredpack']->postAsync([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
+    'notify_way'   => 'MINI_PROGRAM_JSAPI',
     'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
       'posttime'      => 1717171199,
       'mobile'        => '122344545',
@@ -156,6 +160,7 @@ $response = $instance->v2->mmpaymkttransfers->sendredpack->post([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
+    'notify_way'   => 'MINI_PROGRAM_JSAPI',
     'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
       'posttime'      => 1717171199,
       'mobile'        => '122344545',
@@ -185,6 +190,7 @@ $response = $instance->chain('v2/mmpaymkttransfers/sendredpack')->post([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
+    'notify_way'   => 'MINI_PROGRAM_JSAPI',
     'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
       'posttime'      => 1717171199,
       'mobile'        => '122344545',
@@ -214,6 +220,7 @@ $response = $instance['v2/mmpaymkttransfers/sendredpack']->post([
     'act_name'     => '猜灯谜抢红包活动',
     'remark'       => '猜越多得越多，快来抢！',
     'scene_id'     => 'PRODUCT_8',
+    'notify_way'   => 'MINI_PROGRAM_JSAPI',
     'risk_info'    => \urlencode(\WeChatPay\Formatter::queryStringLike([
       'posttime'      => 1717171199,
       'mobile'        => '122344545',

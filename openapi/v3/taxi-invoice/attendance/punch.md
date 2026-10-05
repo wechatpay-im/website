@@ -13,7 +13,7 @@ description: 签到签退数据主要用于控制微信支付凭证是否包含�
 | plate_number {data-required data-indent=1} | string | 车牌号
 | driver_license {data-required data-indent=1} | string | 营运资格证号
 | event_time {data-required data-indent=1} | string | 事件发生时间
-| event_type {data-required data-indent=1} | string | 事件类型
+| event_type {data-required data-indent=1} | string | 事件类型<br/>`SIGN_IN` \| `SIGN_OUT` 枚举值之一
 | region_id {data-required data-indent=1} | integer | 行政区划ID
 
 {.im-table #request}

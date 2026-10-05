@@ -16,11 +16,11 @@ description: 商户调用该接口可获取预签约码（presign_token），预
 | user_id {data-required data-indent=1} | string | 用户账号
 | school_id {data-required data-indent=1} | string | 学校编号
 | out_contract_code {data-required data-indent=1} | string | 外部签约号
-| contract_mode {data-indent=1} | string | 签约模式
+| contract_mode {data-indent=1} | string | 签约模式<br/>`DEFAULT` \| `LIMIT_BANK_CARD` \| `PRIORITY_BANK_CARD` 枚举值之一
 | downgrade_default_contract {data-indent=1} | boolean | 允许降级为普通签约模式
 | identity {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实名信息
 | real_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 姓名
-| credential_type {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件类型
+| credential_type {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件类型<br/>`IDENTITY_CARD` 枚举值
 | id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 身份证号
 | bank_card {data-indent=1} | object {data-tooltip="对应PHP的array"} | 签约银行卡
 | bank_card_no {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 签约银行卡号

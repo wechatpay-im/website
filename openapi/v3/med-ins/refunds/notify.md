@@ -17,6 +17,9 @@ description: 从业机构调用该接口向微信医保后台通知医保订单�
 | med_refund__other_fee {data-required data-indent=1} | integer | 医保其他退款金额
 | refund_time {data-required data-indent=1} | string | 医保退款成功时间
 | out_refund_no {data-required data-indent=1} | string | 从业机构退款单号
+| med_refund_gov_fee {data-required data-indent=1} | integer | 医保统筹退款金额
+| med_refund_self_fee {data-required data-indent=1} | integer | 医保个账退款金额
+| med_refund_other_fee {data-required data-indent=1} | integer | 医保其他退款金额
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | mix_trade_no {data-required data-indent=1} | string | 医保自费混合订单号
 
@@ -34,6 +37,9 @@ $instance->v3->medIns->refunds->notify->postAsync([
     'med_refund__other_fee' => 45000,
     'refund_time'           => '2018-06-08T10:34:56+08:00',
     'out_refund_no'         => 'R202204022005169952975171534816',
+    'med_refund_gov_fee'    => 0,
+    'med_refund_self_fee'   => 0,
+    'med_refund_other_fee'  => 0,
   ],
   'query' => [
     'mix_trade_no' => '1217752501201407033233368318',
@@ -55,6 +61,9 @@ $instance->chain('v3/med-ins/refunds/notify')->postAsync([
     'med_refund__other_fee' => 45000,
     'refund_time'           => '2018-06-08T10:34:56+08:00',
     'out_refund_no'         => 'R202204022005169952975171534816',
+    'med_refund_gov_fee'    => 0,
+    'med_refund_self_fee'   => 0,
+    'med_refund_other_fee'  => 0,
   ],
   'query' => [
     'mix_trade_no' => '1217752501201407033233368318',
@@ -76,6 +85,9 @@ $instance['v3/med-ins/refunds/notify']->postAsync([
     'med_refund__other_fee' => 45000,
     'refund_time'           => '2018-06-08T10:34:56+08:00',
     'out_refund_no'         => 'R202204022005169952975171534816',
+    'med_refund_gov_fee'    => 0,
+    'med_refund_self_fee'   => 0,
+    'med_refund_other_fee'  => 0,
   ],
   'query' => [
     'mix_trade_no' => '1217752501201407033233368318',
@@ -97,6 +109,9 @@ $response = $instance->v3->medIns->refunds->notify->post([
     'med_refund__other_fee' => 45000,
     'refund_time'           => '2018-06-08T10:34:56+08:00',
     'out_refund_no'         => 'R202204022005169952975171534816',
+    'med_refund_gov_fee'    => 0,
+    'med_refund_self_fee'   => 0,
+    'med_refund_other_fee'  => 0,
   ],
   'query' => [
     'mix_trade_no' => '1217752501201407033233368318',
@@ -115,6 +130,9 @@ $response = $instance->chain('v3/med-ins/refunds/notify')->post([
     'med_refund__other_fee' => 45000,
     'refund_time'           => '2018-06-08T10:34:56+08:00',
     'out_refund_no'         => 'R202204022005169952975171534816',
+    'med_refund_gov_fee'    => 0,
+    'med_refund_self_fee'   => 0,
+    'med_refund_other_fee'  => 0,
   ],
   'query' => [
     'mix_trade_no' => '1217752501201407033233368318',
@@ -133,6 +151,9 @@ $response = $instance['v3/med-ins/refunds/notify']->post([
     'med_refund__other_fee' => 45000,
     'refund_time'           => '2018-06-08T10:34:56+08:00',
     'out_refund_no'         => 'R202204022005169952975171534816',
+    'med_refund_gov_fee'    => 0,
+    'med_refund_self_fee'   => 0,
+    'med_refund_other_fee'  => 0,
   ],
   'query' => [
     'mix_trade_no' => '1217752501201407033233368318',

@@ -86,6 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | begin_time {data-indent=3} | string | 开始时间
 | end_time {data-indent=3} | string | 结束时间
 | wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
+| available_second_after_receive {data-indent=2} | integer | 领取后N秒内有效
 | fixed_normal_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
 | discount_amount {data-required data-indent=2} | integer | 优惠金额
 | transaction_minimum {data-required data-indent=2} | integer | 消费门槛

@@ -16,14 +16,16 @@ description: 当交易发生之后一年内，由于买家或者卖家的原因�
 | out_refund_no {data-required data-indent=1} | string | 商户退款单号
 | reason {data-indent=1} | string | 退款原因
 | notify_url {data-indent=1} | string | 退款结果回调url
-| funds_account {data-indent=1} | string | 退款资金来源
+| funds_account {data-indent=1} | string | 退款资金来源<br/>`AVAILABLE` \| `UNSETTLED` \| `PREPAID` 枚举值之一
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 金额信息
 | refund {data-required data-indent=2} | integer | 退款金额
 | from {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
-| account {data-required data-indent=3} | string | 出资账户类型
+| account {data-required data-indent=3} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
 | amount {data-required data-indent=3} | integer | 出资金额
 | total {data-required data-indent=2} | integer | 原订单金额
 | currency {data-required data-indent=2} | string | 退款币种
+| account {data-indent=2} | string | 出资账户类型
+| amount {data-indent=2} | integer | 出资金额
 | goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款商品
 | merchant_goods_id {data-required data-indent=2} | string | 商户侧商品编码
 | wechatpay_goods_id {data-indent=2} | string | 微信侧商品编码
@@ -54,6 +56,8 @@ $instance->v3->refund->domestic->refunds->postAsync([
       ],],
       'total'    => 888,
       'currency' => 'CNY',
+      'account'  => '',
+      'amount'   => 0,
     ],
     'goods_detail'   => [[
       'merchant_goods_id'  => '1217752501201407033233368018',
@@ -89,6 +93,8 @@ $instance->chain('v3/refund/domestic/refunds')->postAsync([
       ],],
       'total'    => 888,
       'currency' => 'CNY',
+      'account'  => '',
+      'amount'   => 0,
     ],
     'goods_detail'   => [[
       'merchant_goods_id'  => '1217752501201407033233368018',
@@ -124,6 +130,8 @@ $instance['v3/refund/domestic/refunds']->postAsync([
       ],],
       'total'    => 888,
       'currency' => 'CNY',
+      'account'  => '',
+      'amount'   => 0,
     ],
     'goods_detail'   => [[
       'merchant_goods_id'  => '1217752501201407033233368018',
@@ -159,6 +167,8 @@ $response = $instance->v3->refund->domestic->refunds->post([
       ],],
       'total'    => 888,
       'currency' => 'CNY',
+      'account'  => '',
+      'amount'   => 0,
     ],
     'goods_detail'   => [[
       'merchant_goods_id'  => '1217752501201407033233368018',
@@ -191,6 +201,8 @@ $response = $instance->chain('v3/refund/domestic/refunds')->post([
       ],],
       'total'    => 888,
       'currency' => 'CNY',
+      'account'  => '',
+      'amount'   => 0,
     ],
     'goods_detail'   => [[
       'merchant_goods_id'  => '1217752501201407033233368018',
@@ -223,6 +235,8 @@ $response = $instance['v3/refund/domestic/refunds']->post([
       ],],
       'total'    => 888,
       'currency' => 'CNY',
+      'account'  => '',
+      'amount'   => 0,
     ],
     'goods_detail'   => [[
       'merchant_goods_id'  => '1217752501201407033233368018',

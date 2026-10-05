@@ -21,7 +21,7 @@
 
 ```php [异步纯链式]
 $instance->v3->marketing->favor->users->_openid_->coupons->postAsync([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'json' => [
     'stock_id'            => '9856000',
     'out_request_no'      => '89560002019101000121',
@@ -39,7 +39,7 @@ $instance->v3->marketing->favor->users->_openid_->coupons->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/users/{openid}/coupons')->postAsync([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'json' => [
     'stock_id'            => '9856000',
     'out_request_no'      => '89560002019101000121',
@@ -57,7 +57,7 @@ $instance->chain('v3/marketing/favor/users/{openid}/coupons')->postAsync([
 
 ```php [异步属性式]
 $instance['v3/marketing/favor/users/{openid}/coupons']->postAsync([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'json' => [
     'stock_id'            => '9856000',
     'out_request_no'      => '89560002019101000121',
@@ -75,7 +75,7 @@ $instance['v3/marketing/favor/users/{openid}/coupons']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->users->_openid_->coupons->post([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'json' => [
     'stock_id'            => '9856000',
     'out_request_no'      => '89560002019101000121',
@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/users/{openid}/coupons')->post([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'json' => [
     'stock_id'            => '9856000',
     'out_request_no'      => '89560002019101000121',
@@ -105,7 +105,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/users/{openid}/coupons']->post([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'json' => [
     'stock_id'            => '9856000',
     'out_request_no'      => '89560002019101000121',
@@ -140,7 +140,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | stock_id {data-indent=1} | string | 批次号
 | status {data-indent=1} | string | 券或消费金状态<br/>`SENDED` \| `USED` 枚举值之一
 | creator_mchid {data-indent=1} | string | 创建批次的商户号
-| sender_mchid {data-indent=1} | string | 批次发放商户号
 | available_mchid {data-indent=1} | string | 可用商户号
 | offset {data-indent=1} | integer | 分页页码
 | limit {data-indent=1} | integer | 分页大小
@@ -152,14 +151,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [异步纯链式]
 $instance->v3->marketing->favor->users->_openid_->coupons->getAsync([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'query' => [
-    'appid'           => '',
-    'stock_id'        => '',
-    'status'          => 'SENDED',
-    'creator_mchid'   => '',
-    'sender_mchid'    => '',
-    'available_mchid' => '',
+    'appid'           => 'appid_example',
+    'stock_id'        => '9865000',
+    'status'          => 'USED',
+    'creator_mchid'   => '9865002',
+    'available_mchid' => '9865000',
     'offset'          => 0,
     'limit'           => 20,
     'business_type'   => 'MULTIUSE',
@@ -173,14 +171,13 @@ $instance->v3->marketing->favor->users->_openid_->coupons->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/users/{openid}/coupons')->getAsync([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'query' => [
-    'appid'           => '',
-    'stock_id'        => '',
-    'status'          => 'SENDED',
-    'creator_mchid'   => '',
-    'sender_mchid'    => '',
-    'available_mchid' => '',
+    'appid'           => 'appid_example',
+    'stock_id'        => '9865000',
+    'status'          => 'USED',
+    'creator_mchid'   => '9865002',
+    'available_mchid' => '9865000',
     'offset'          => 0,
     'limit'           => 20,
     'business_type'   => 'MULTIUSE',
@@ -194,14 +191,13 @@ $instance->chain('v3/marketing/favor/users/{openid}/coupons')->getAsync([
 
 ```php [异步属性式]
 $instance['v3/marketing/favor/users/{openid}/coupons']->getAsync([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'query' => [
-    'appid'           => '',
-    'stock_id'        => '',
-    'status'          => 'SENDED',
-    'creator_mchid'   => '',
-    'sender_mchid'    => '',
-    'available_mchid' => '',
+    'appid'           => 'appid_example',
+    'stock_id'        => '9865000',
+    'status'          => 'USED',
+    'creator_mchid'   => '9865002',
+    'available_mchid' => '9865000',
     'offset'          => 0,
     'limit'           => 20,
     'business_type'   => 'MULTIUSE',
@@ -215,14 +211,13 @@ $instance['v3/marketing/favor/users/{openid}/coupons']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->users->_openid_->coupons->get([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'query' => [
-    'appid'           => '',
-    'stock_id'        => '',
-    'status'          => 'SENDED',
-    'creator_mchid'   => '',
-    'sender_mchid'    => '',
-    'available_mchid' => '',
+    'appid'           => 'appid_example',
+    'stock_id'        => '9865000',
+    'status'          => 'USED',
+    'creator_mchid'   => '9865002',
+    'available_mchid' => '9865000',
     'offset'          => 0,
     'limit'           => 20,
     'business_type'   => 'MULTIUSE',
@@ -233,14 +228,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/users/{openid}/coupons')->get([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'query' => [
-    'appid'           => '',
-    'stock_id'        => '',
-    'status'          => 'SENDED',
-    'creator_mchid'   => '',
-    'sender_mchid'    => '',
-    'available_mchid' => '',
+    'appid'           => 'appid_example',
+    'stock_id'        => '9865000',
+    'status'          => 'USED',
+    'creator_mchid'   => '9865002',
+    'available_mchid' => '9865000',
     'offset'          => 0,
     'limit'           => 20,
     'business_type'   => 'MULTIUSE',
@@ -251,14 +245,13 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/users/{openid}/coupons']->get([
-  'openid' => '',
+  'openid' => 'Openid_example',
   'query' => [
-    'appid'           => '',
-    'stock_id'        => '',
-    'status'          => 'SENDED',
-    'creator_mchid'   => '',
-    'sender_mchid'    => '',
-    'available_mchid' => '',
+    'appid'           => 'appid_example',
+    'stock_id'        => '9865000',
+    'status'          => 'USED',
+    'creator_mchid'   => '9865002',
+    'available_mchid' => '9865000',
     'offset'          => 0,
     'limit'           => 20,
     'business_type'   => 'MULTIUSE',
@@ -305,6 +298,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_amount {data-indent=3} | integer | 商品优惠金额
 | available_balance {data-indent=1} | number | 剩余金额
 | business_type {data-indent=1} | string | 业务类型<br/>`MULTIUSE` 枚举值
+| no_cash {data-required data-indent=1} | boolean | 是否无资金流
+| out_request_no {data-indent=1} | string | 商户单据号
+| discount_msg {data-indent=1} | object {data-tooltip="对应PHP的array"} | 折扣券信息
+| discount_amount_max {data-required data-indent=2} | integer | 最高折扣金额
+| discount_percent {data-required data-indent=2} | integer | 折扣百分比
+| transaction_minimum {data-indent=2} | integer | 门槛
 
 {.im-table #response}
 

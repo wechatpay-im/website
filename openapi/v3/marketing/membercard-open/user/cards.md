@@ -25,7 +25,7 @@ $instance->v3->marketing->membercardOpen->user->cards->getAsync([
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -40,7 +40,7 @@ $instance->chain('v3/marketing/membercard-open/user/cards')->getAsync([
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -55,7 +55,7 @@ $instance['v3/marketing/membercard-open/user/cards']->getAsync([
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,7 +70,7 @@ $response = $instance->v3->marketing->membercardOpen->user->cards->get([
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -82,7 +82,7 @@ $response = $instance->chain('v3/marketing/membercard-open/user/cards')->get([
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,7 +94,7 @@ $response = $instance['v3/marketing/membercard-open/user/cards']->get([
     'openid' => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'appid'  => 'wxea9c30890f48d5ae',
     'offset' => 0,
-    'limit'  => 0,
+    'limit'  => 20,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

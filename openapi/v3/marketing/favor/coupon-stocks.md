@@ -95,8 +95,8 @@ $instance->v3->marketing->favor->couponStocks->postAsync([
       'background_color'   => 'Color010',
       'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
-      'mini_program_appid' => '',
-      'mini_program_path'  => '',
+      'mini_program_appid' => 'wx23232232323',
+      'mini_program_path'  => '/path/index/index',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -170,8 +170,8 @@ $instance->chain('v3/marketing/favor/coupon-stocks')->postAsync([
       'background_color'   => 'Color010',
       'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
-      'mini_program_appid' => '',
-      'mini_program_path'  => '',
+      'mini_program_appid' => 'wx23232232323',
+      'mini_program_path'  => '/path/index/index',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -245,8 +245,8 @@ $instance['v3/marketing/favor/coupon-stocks']->postAsync([
       'background_color'   => 'Color010',
       'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
-      'mini_program_appid' => '',
-      'mini_program_path'  => '',
+      'mini_program_appid' => 'wx23232232323',
+      'mini_program_path'  => '/path/index/index',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -320,8 +320,8 @@ $response = $instance->v3->marketing->favor->couponStocks->post([
       'background_color'   => 'Color010',
       'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
-      'mini_program_appid' => '',
-      'mini_program_path'  => '',
+      'mini_program_appid' => 'wx23232232323',
+      'mini_program_path'  => '/path/index/index',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -392,8 +392,8 @@ $response = $instance->chain('v3/marketing/favor/coupon-stocks')->post([
       'background_color'   => 'Color010',
       'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
-      'mini_program_appid' => '',
-      'mini_program_path'  => '',
+      'mini_program_appid' => 'wx23232232323',
+      'mini_program_path'  => '/path/index/index',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [
@@ -464,8 +464,8 @@ $response = $instance['v3/marketing/favor/coupon-stocks']->post([
       'background_color'   => 'Color010',
       'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
-      'mini_program_appid' => '',
-      'mini_program_path'  => '',
+      'mini_program_appid' => 'wx23232232323',
+      'mini_program_path'  => '/path/index/index',
     ],
     'coupon_use_rule'      => [
       'coupon_available_time' => [

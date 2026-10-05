@@ -22,12 +22,12 @@ description: 商户通过调用本接口向用户发放消费卡，用户领到�
 
 ```php [异步纯链式]
 $instance->v3->marketing->busifavor->coupons->_card_id_->send->postAsync([
-  'card_id' => '',
+  'card_id' => 'pIJMr5MMiIkO_93VtPyIiEk2DZ4w',
   'json' => [
-    'appid'          => '',
-    'openid'         => '',
-    'out_request_no' => '',
-    'send_time'      => '',
+    'appid'          => 'wxc0b84a53ed8e8d29',
+    'openid'         => 'obLatjhnqgy2syxrXVM3MJirbkdI',
+    'out_request_no' => 'oTYhjfdsahnssddj_0136',
+    'send_time'      => '2019-12-31T13:29:35.120+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -38,12 +38,12 @@ $instance->v3->marketing->busifavor->coupons->_card_id_->send->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/busifavor/coupons/{card_id}/send')->postAsync([
-  'card_id' => '',
+  'card_id' => 'pIJMr5MMiIkO_93VtPyIiEk2DZ4w',
   'json' => [
-    'appid'          => '',
-    'openid'         => '',
-    'out_request_no' => '',
-    'send_time'      => '',
+    'appid'          => 'wxc0b84a53ed8e8d29',
+    'openid'         => 'obLatjhnqgy2syxrXVM3MJirbkdI',
+    'out_request_no' => 'oTYhjfdsahnssddj_0136',
+    'send_time'      => '2019-12-31T13:29:35.120+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -54,12 +54,12 @@ $instance->chain('v3/marketing/busifavor/coupons/{card_id}/send')->postAsync([
 
 ```php [异步属性式]
 $instance['v3/marketing/busifavor/coupons/{card_id}/send']->postAsync([
-  'card_id' => '',
+  'card_id' => 'pIJMr5MMiIkO_93VtPyIiEk2DZ4w',
   'json' => [
-    'appid'          => '',
-    'openid'         => '',
-    'out_request_no' => '',
-    'send_time'      => '',
+    'appid'          => 'wxc0b84a53ed8e8d29',
+    'openid'         => 'obLatjhnqgy2syxrXVM3MJirbkdI',
+    'out_request_no' => 'oTYhjfdsahnssddj_0136',
+    'send_time'      => '2019-12-31T13:29:35.120+08:00',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -70,12 +70,12 @@ $instance['v3/marketing/busifavor/coupons/{card_id}/send']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->busifavor->coupons->_card_id_->send->post([
-  'card_id' => '',
+  'card_id' => 'pIJMr5MMiIkO_93VtPyIiEk2DZ4w',
   'json' => [
-    'appid'          => '',
-    'openid'         => '',
-    'out_request_no' => '',
-    'send_time'      => '',
+    'appid'          => 'wxc0b84a53ed8e8d29',
+    'openid'         => 'obLatjhnqgy2syxrXVM3MJirbkdI',
+    'out_request_no' => 'oTYhjfdsahnssddj_0136',
+    'send_time'      => '2019-12-31T13:29:35.120+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -83,12 +83,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/busifavor/coupons/{card_id}/send')->post([
-  'card_id' => '',
+  'card_id' => 'pIJMr5MMiIkO_93VtPyIiEk2DZ4w',
   'json' => [
-    'appid'          => '',
-    'openid'         => '',
-    'out_request_no' => '',
-    'send_time'      => '',
+    'appid'          => 'wxc0b84a53ed8e8d29',
+    'openid'         => 'obLatjhnqgy2syxrXVM3MJirbkdI',
+    'out_request_no' => 'oTYhjfdsahnssddj_0136',
+    'send_time'      => '2019-12-31T13:29:35.120+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -96,12 +96,12 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/busifavor/coupons/{card_id}/send']->post([
-  'card_id' => '',
+  'card_id' => 'pIJMr5MMiIkO_93VtPyIiEk2DZ4w',
   'json' => [
-    'appid'          => '',
-    'openid'         => '',
-    'out_request_no' => '',
-    'send_time'      => '',
+    'appid'          => 'wxc0b84a53ed8e8d29',
+    'openid'         => 'obLatjhnqgy2syxrXVM3MJirbkdI',
+    'out_request_no' => 'oTYhjfdsahnssddj_0136',
+    'send_time'      => '2019-12-31T13:29:35.120+08:00',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

@@ -416,6 +416,19 @@ print_r(json_decode((string) $response->getBody(), true));
 | url {data-indent=1} | string | 跳转url
 | appid {data-indent=1} | string | 跳转小程序appid
 | path {data-indent=1} | string | 跳转小程序path
+| favor | object {data-tooltip="对应PHP的array"} | 会员优惠
+| show_coupon {data-required data-indent=1} | boolean | 是否展示优惠券
+| member_price_word {data-indent=1} | string | 会员专享价文案
+| member_price_appid {data-indent=1} | string | 会员专享价跳转AppID
+| member_price_path {data-indent=1} | string | 会员专享价跳转path
+| member_price_title {data-indent=1} | string | 会员专享价标题
+| favor_module_title {data-indent=1} | string | 会员优惠栏目名称
+| service_modules | object[] {data-tooltip="对应PHP的array"} | 会员服务项
+| service_module_id {data-required data-indent=1} | string | 会员服务项id
+| jump_miniprogram {data-indent=1} | object {data-tooltip="对应PHP的array"} | 跳转小程序
+| appid {data-required data-indent=2} | string | 小程序AppID
+| path {data-required data-indent=2} | string | 小程序path
+| need_dynamic_code | boolean | 是否启用动态码
 
 {.im-table #response}
 

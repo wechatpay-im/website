@@ -17,7 +17,7 @@ description: 商户创建活动后，可以通过该接口查询支付有礼的�
 
 ```php [异步纯链式]
 $instance->v3->marketing->paygiftactivity->activities->_activity_id_->getAsync([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -27,7 +27,7 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}')->getAsync([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -37,7 +37,7 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}')->getAs
 
 ```php [异步属性式]
 $instance['v3/marketing/paygiftactivity/activities/{activity_id}']->getAsync([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -47,21 +47,21 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_->get([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}')->get([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}']->get([
-  'activity_id' => '',
+  'activity_id' => '10028001',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

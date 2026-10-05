@@ -19,9 +19,9 @@ description: 通过此接口可查询批次信息，包括批次的配置信息�
 
 ```php [异步纯链式]
 $instance->v3->marketing->favor->stocks->_stock_id_->getAsync([
-  'stock_id' => '',
+  'stock_id' => '9856888',
   'query' => [
-    'stock_creator_mchid' => '',
+    'stock_creator_mchid' => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -32,9 +32,9 @@ $instance->v3->marketing->favor->stocks->_stock_id_->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/favor/stocks/{stock_id}')->getAsync([
-  'stock_id' => '',
+  'stock_id' => '9856888',
   'query' => [
-    'stock_creator_mchid' => '',
+    'stock_creator_mchid' => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,9 +45,9 @@ $instance->chain('v3/marketing/favor/stocks/{stock_id}')->getAsync([
 
 ```php [异步属性式]
 $instance['v3/marketing/favor/stocks/{stock_id}']->getAsync([
-  'stock_id' => '',
+  'stock_id' => '9856888',
   'query' => [
-    'stock_creator_mchid' => '',
+    'stock_creator_mchid' => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -58,9 +58,9 @@ $instance['v3/marketing/favor/stocks/{stock_id}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->favor->stocks->_stock_id_->get([
-  'stock_id' => '',
+  'stock_id' => '9856888',
   'query' => [
-    'stock_creator_mchid' => '',
+    'stock_creator_mchid' => '123456',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -68,9 +68,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/favor/stocks/{stock_id}')->get([
-  'stock_id' => '',
+  'stock_id' => '9856888',
   'query' => [
-    'stock_creator_mchid' => '',
+    'stock_creator_mchid' => '123456',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -78,9 +78,9 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/favor/stocks/{stock_id}']->get([
-  'stock_id' => '',
+  'stock_id' => '9856888',
   'query' => [
-    'stock_creator_mchid' => '',
+    'stock_creator_mchid' => '123456',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -116,12 +116,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | distributed_coupons | integer | 已发券数量
 | business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
 | available_region_list | object[] {data-tooltip="对应PHP的array"} | 消费金可用地域
-| type {data-indent=1} | string | 类型
+| type {data-indent=1} | string | 类型<br/>`PROVINCE` \| `CITY` \| `DISTRICT` \| `COUNTRY` 枚举值之一
 | province {data-indent=1} | string | 省
 | city {data-indent=1} | string | 市
 | district {data-indent=1} | string | 区
 | country {data-indent=1} | string | 国家
 | available_industry_list | string[] | 消费金可用行业
+| card_id | string | 卡包ID
 
 {.im-table #response}
 

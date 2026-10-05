@@ -20,7 +20,7 @@ description: 商户创建活动后，可以通过该接口删除支付有礼的�
 
 ```php [异步纯链式]
 $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants->delete->postAsync([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list'  => ['100123456'],
     'delete_request_no' => '100002322019090134234sfdf',
@@ -34,7 +34,7 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants-
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete')->postAsync([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list'  => ['100123456'],
     'delete_request_no' => '100002322019090134234sfdf',
@@ -48,7 +48,7 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchant
 
 ```php [异步属性式]
 $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete']->postAsync([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list'  => ['100123456'],
     'delete_request_no' => '100002322019090134234sfdf',
@@ -62,7 +62,7 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delet
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants->delete->post([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list'  => ['100123456'],
     'delete_request_no' => '100002322019090134234sfdf',
@@ -73,7 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete')->post([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list'  => ['100123456'],
     'delete_request_no' => '100002322019090134234sfdf',
@@ -84,7 +84,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete']->post([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list'  => ['100123456'],
     'delete_request_no' => '100002322019090134234sfdf',

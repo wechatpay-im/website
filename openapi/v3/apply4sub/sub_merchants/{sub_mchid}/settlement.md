@@ -10,6 +10,8 @@ description: 普通服务商（支付机构、银行不可用），可使用本�
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required} | string | 特约商户/二级商户号
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| account_number_rule {data-indent=1} | string | 银行账号展示规则<br/>`ACCOUNT_NUMBER_RULE_MASK_V1` \| `ACCOUNT_NUMBER_RULE_MASK_V2` 枚举值之一
 
 {.im-table #request}
 
@@ -18,6 +20,9 @@ description: 普通服务商（支付机构、银行不可用），可使用本�
 ```php [异步纯链式]
 $instance->v3->apply4sub->sub_merchants->_sub_mchid_->settlement->getAsync([
   'sub_mchid' => '1900006491',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -28,6 +33,9 @@ $instance->v3->apply4sub->sub_merchants->_sub_mchid_->settlement->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/settlement')->getAsync([
   'sub_mchid' => '1900006491',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -38,6 +46,9 @@ $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/settlement')->getAsync(
 ```php [异步属性式]
 $instance['v3/apply4sub/sub_merchants/{sub_mchid}/settlement']->getAsync([
   'sub_mchid' => '1900006491',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -48,6 +59,9 @@ $instance['v3/apply4sub/sub_merchants/{sub_mchid}/settlement']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->apply4sub->sub_merchants->_sub_mchid_->settlement->get([
   'sub_mchid' => '1900006491',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -55,6 +69,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/settlement')->get([
   'sub_mchid' => '1900006491',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
@@ -62,6 +79,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/apply4sub/sub_merchants/{sub_mchid}/settlement']->get([
   'sub_mchid' => '1900006491',
+  'query' => [
+    'account_number_rule' => 'ACCOUNT_NUMBER_RULE_MASK_V1',
+  ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

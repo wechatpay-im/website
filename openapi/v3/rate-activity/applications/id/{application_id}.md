@@ -88,7 +88,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | activity_detail_modification {data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动报名修改信息
 | activity_rate {data-indent=2} | string | 活动费率
 | activity_apply_information {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 活动报名材料
-| apply_material_id {data-indent=3} | string | 材料ID
+| apply_material_id {data-indent=3} | string | 材料ID<br/>`SCHOOL_QUALIFICATION_PROOF` \| `COOPERATION_QUALIFICATION_PROOF` \| `ACTIVITY_RATE_COMMITMENT` \| `CANTEEN_ENVIRONMENT_PHOTO` \| `CANTEEN_FRONT_PHOTO` \| `SCHOOL_LICENSE_PROOF` \| `QUALIFICATION_PROOF` \| `STORE_TENANCY_PROOF` \| `STORE_DOOR_PHOTO` \| `FOOD_QUALIFICATION_PROOF` \| `PARKING_QUALIFICATION_PROOF` \| `PARKINGAREA_PHOTO` \| `MEDICAL_INSTITUTION_PRATICE_LICENSE` \| `HOSPITAL_FRONTDOOR_PHOTO` \| `TRADE_QUALIFICATION_PROOF` 枚举值之一
 | apply_material_information {data-indent=3} | string[] | 材料内容
 | additional_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充信息
 | additional_message {data-indent=2} | string | 补充说明

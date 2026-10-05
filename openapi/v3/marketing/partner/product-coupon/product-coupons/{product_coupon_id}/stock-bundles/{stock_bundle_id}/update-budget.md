@@ -166,6 +166,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=4} | string | 开始时间
 | end_time {data-required data-indent=4} | string | 结束时间
+| available_seconds {data-indent=3} | integer | 领取后N秒内有效
 | normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
 | discount_amount {data-required data-indent=3} | integer | 固定减免金额
@@ -200,10 +201,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-required data-indent=3} | string | 引导文案
 | entrance_official_account {data-indent=2} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=3} | string | 公众号AppID
-| entrance_finder {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=3} | string | 视频号ID
-| finder_video_id {data-required data-indent=3} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=3} | string | 视频号封面图
 | notify_config {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=2} | string | 事件通知appid
 | store_scope {data-required data-indent=1} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一

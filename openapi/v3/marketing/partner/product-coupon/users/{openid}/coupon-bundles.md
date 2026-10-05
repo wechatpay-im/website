@@ -189,6 +189,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-indent=3} | string | 子商户号
 | return_request_no {data-indent=2} | string | 退券请求单号
 | return_time {data-indent=2} | string | 退券时间
+| associated_pay_score_order_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 券核销的关联微信支付分订单信息
+| order_id {data-indent=3} | string | 微信支付服务订单号
+| out_order_no {data-indent=3} | string | 商户服务订单号
+| mchid {data-indent=3} | string | 商户号
+| sub_mchid {data-indent=3} | string | 子商户号
+| saved_amount {data-indent=2} | integer | 优惠金额
 | user_product_coupon_bundle_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户券组信息
 | user_coupon_bundle_id {data-required data-indent=2} | string | 用户券组ID
 | user_coupon_bundle_index {data-required data-indent=2} | integer | 用户券组内索引
@@ -257,6 +263,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | irregular_available_period_list {data-indent=4} | object[] {data-tooltip="对应PHP的array"} | 无规律的可用时间段
 | begin_time {data-required data-indent=5} | string | 开始时间
 | end_time {data-required data-indent=5} | string | 结束时间
+| available_seconds {data-indent=4} | integer | 领取后N秒内有效
 | normal_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
 | discount_amount {data-required data-indent=4} | integer | 固定减免金额

@@ -204,6 +204,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | expire_time {data-required data-indent=1} | string | 券过期时间
 | receive_time {data-required data-indent=1} | string | 券领券时间
 | use_time {data-indent=1} | string | 券核销时间
+| associate_out_trade_no {data-indent=1} | string | 关联的商户订单号
+| return_request_no {data-indent=1} | string | 回退请求单号
+| return_time {data-indent=1} | string | 券回退时间
+| deactivate_request_no {data-indent=1} | string | 失效请求单号
+| deactivate_time {data-indent=1} | string | 券失效时间
+| deactivate_reason {data-indent=1} | string | 失效原因
 
 {.im-table #response}
 

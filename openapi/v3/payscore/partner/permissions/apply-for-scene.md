@@ -16,7 +16,7 @@ description: 服务商场景中预授权
 | sub_mchid {data-required data-indent=1} | string | 子商户的商户号
 | authorization_code {data-required data-indent=1} | string | 授权协议号
 | notify_url {data-indent=1} | string | 通知地址
-| scene {data-required data-indent=1} | string | 授权场景
+| scene {data-required data-indent=1} | string | 授权场景<br/>`TRANSACTION` 枚举值
 | transaction_scene_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 微信支付交易中授权附带的参数
 | mchid {data-required data-indent=2} | string | 支付下单的商户号
 | sub_mchid {data-required data-indent=2} | string | 支付下单的子商户号

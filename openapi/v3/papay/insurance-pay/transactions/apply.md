@@ -18,7 +18,7 @@ description: 商户调用「预约保险自动续费」接口预约成功后，�
 | policy_period_id {data-required data-indent=1} | number | 保单的扣费周期编号
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 扣费金额信息
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | attach {data-indent=1} | string | 附加数据
 

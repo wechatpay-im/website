@@ -38,8 +38,8 @@ $instance->v3->marketing->partnerships->getAsync([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 50,
-    'offset'          => 0,
+    'limit'           => 5,
+    'offset'          => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -60,8 +60,8 @@ $instance->chain('v3/marketing/partnerships')->getAsync([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 50,
-    'offset'          => 0,
+    'limit'           => 5,
+    'offset'          => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -82,8 +82,8 @@ $instance['v3/marketing/partnerships']->getAsync([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 50,
-    'offset'          => 0,
+    'limit'           => 5,
+    'offset'          => 10,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -104,8 +104,8 @@ $response = $instance->v3->marketing->partnerships->get([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 50,
-    'offset'          => 0,
+    'limit'           => 5,
+    'offset'          => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -123,8 +123,8 @@ $response = $instance->chain('v3/marketing/partnerships')->get([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 50,
-    'offset'          => 0,
+    'limit'           => 5,
+    'offset'          => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -142,8 +142,8 @@ $response = $instance['v3/marketing/partnerships']->get([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 50,
-    'offset'          => 0,
+    'limit'           => 5,
+    'offset'          => 10,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -155,11 +155,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | data | object[] {data-tooltip="对应PHP的array"} | 合作关系结果集
 | partner {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 合作方信息
-| type {data-required data-indent=2} | string | 合作方类别
+| type {data-required data-indent=2} | string | 合作方类别<br/>`APPID` \| `MERCHANT` 枚举值之一
 | appid {data-indent=2} | string | 合作方APPID
 | merchant_id {data-indent=2} | string | 合作方商户ID
 | authorized_data {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 被授权数据
-| business_type {data-required data-indent=2} | string | 授权业务类别
+| business_type {data-required data-indent=2} | string | 授权业务类别<br/>`FAVOR_STOCK` \| `BUSIFAVOR_STOCK` 枚举值之一
 | stock_id {data-indent=2} | string | 授权批次ID
 | build_time {data-required data-indent=1} | string | 建立合作关系时间
 | terminate_time {data-indent=1} | string | 终止合作关系时间

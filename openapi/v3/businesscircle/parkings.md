@@ -15,7 +15,7 @@ description: 通过此API，商圈商户/服务商可将会员的停车状态同
 | appid {data-required data-indent=1} | string | 应用ID
 | openid {data-required data-indent=1} | string | 用户标识
 | plate_number {data-required data-indent=1} | string | 车牌号
-| state {data-required data-indent=1} | string | 状态
+| state {data-required data-indent=1} | string | 状态<br/>`IN` \| `OUT` 枚举值之一
 | time {data-required data-indent=1} | string | 时间
 
 {.im-table #request}

@@ -33,7 +33,7 @@ description: 商户完成收款后，调用本接口开具成品油行业电子�
 | tax_code {data-required data-indent=3} | string | 税局侧规定的货物或应税劳务、服务税收分类编码
 | goods_name {data-required data-indent=3} | string | 货物或应税劳务、服务名称
 | specification {data-indent=3} | string | 规格型号
-| unit {data-indent=3} | string | 成品油单位<br/>`TON` \| `LETER` 枚举值之一
+| unit {data-indent=3} | string | 成品油单位<br/>`TON` \| `LETER` \| `LITER` 枚举值之一
 | quantity {data-indent=3} | integer | 数量
 | total_amount {data-required data-indent=3} | integer | 单行金额合计
 | tax_rate {data-required data-indent=3} | number | 税率

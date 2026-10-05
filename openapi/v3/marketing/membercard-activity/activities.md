@@ -34,14 +34,14 @@
 | activity_second_title {data-required data-indent=2} | string | 支付结果页活动副标题
 | mchid_list {data-indent=2} | string[] | 活动曝光商户号
 | activate_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 激活方式设置
-| activate_type {data-required data-indent=3} | string | 激活类型
+| activate_type {data-required data-indent=3} | string | 激活类型<br/>`AUTO_ACTIVATE` \| `JUMP_ACTIVATE` 枚举值之一
 | activate_url {data-indent=3} | string | 跳转激活的url
 | activate_miniprogram {data-indent=3} | object {data-tooltip="对应PHP的array"} | 跳转激活的小程序
 | activate_appid {data-required data-indent=4} | string | 跳转激活的appid
 | activate_path {data-required data-indent=4} | string | 跳转激活的path
 | payment_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付设置
 | payment_mode {data-indent=3} | object {data-tooltip="对应PHP的array"} | 支付模式
-| payment_scene_list {data-indent=4} | string[] | 支付场景列表
+| payment_scene_list {data-indent=4} | string[] | 支付场景列表<br/>`APP` \| `MICROPAY` \| `PAP` \| `MINIPROGRAM` \| `FACEPAY` 枚举值之一
 | limit_bank {data-indent=3} | string | 指定银行的简称
 | goods_tags {data-indent=3} | string[] | 订单优惠标记
 | miniprogram_activity_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付前会员活动设置
@@ -453,12 +453,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | activity_id {data-required} | string | 活动ID
-| activity_status | string | 活动的当前状态
+| activity_status | string | 活动的当前状态<br/>`CREATED` \| `ONGOING` \| `TERMINATED` \| `OVER_TIME` 枚举值之一
 | create_time | string | 创建时间
 | update_time | string | 更新时间
 | card_id | string | 会员卡ID
 | activity_name | string | 活动名称
-| activity_type | string | 活动类型
+| activity_type | string | 活动类型<br/>`NON_MEMBER_AFTERPAY` \| `MEMBER_AFTERPAY` \| `NON_MEMBER_MINIPROGRAM` \| `MEMBER_MINIPROGRAM` 枚举值之一
 | begin_time | string | 活动开始时间
 | end_time | string | 活动结束时间
 | award_send_period | object {data-tooltip="对应PHP的array"} | 发放时间段
@@ -483,7 +483,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | activity_second_title {data-required data-indent=1} | string | 支付结果页活动副标题
 | mchid_list {data-indent=1} | string[] | 活动曝光商户号
 | activate_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 激活方式设置
-| activate_type {data-required data-indent=2} | string | 激活类型
+| activate_type {data-required data-indent=2} | string | 激活类型<br/>`AUTO_ACTIVATE` \| `JUMP_ACTIVATE` 枚举值之一
 | activate_url {data-indent=2} | string | 跳转激活的url
 | activate_miniprogram {data-indent=2} | object {data-tooltip="对应PHP的array"} | 跳转激活的小程序
 | activate_appid {data-required data-indent=3} | string | 跳转激活的appid
@@ -614,12 +614,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | data | object[] {data-tooltip="对应PHP的array"} | 活动详情
 | activity_id {data-required data-indent=1} | string | 活动ID
-| activity_status {data-indent=1} | string | 活动的当前状态
+| activity_status {data-indent=1} | string | 活动的当前状态<br/>`CREATED` \| `ONGOING` \| `TERMINATED` \| `OVER_TIME` 枚举值之一
 | create_time {data-indent=1} | string | 创建时间
 | update_time {data-indent=1} | string | 更新时间
 | card_id {data-indent=1} | string | 会员卡ID
 | activity_name {data-indent=1} | string | 活动名称
-| activity_type {data-indent=1} | string | 活动类型
+| activity_type {data-indent=1} | string | 活动类型<br/>`NON_MEMBER_AFTERPAY` \| `MEMBER_AFTERPAY` \| `NON_MEMBER_MINIPROGRAM` \| `MEMBER_MINIPROGRAM` 枚举值之一
 | begin_time {data-indent=1} | string | 活动开始时间
 | end_time {data-indent=1} | string | 活动结束时间
 | award_send_period {data-indent=1} | object {data-tooltip="对应PHP的array"} | 发放时间段
@@ -644,7 +644,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | activity_second_title {data-required data-indent=2} | string | 支付结果页活动副标题
 | mchid_list {data-indent=2} | string[] | 活动曝光商户号
 | activate_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 激活方式设置
-| activate_type {data-required data-indent=3} | string | 激活类型
+| activate_type {data-required data-indent=3} | string | 激活类型<br/>`AUTO_ACTIVATE` \| `JUMP_ACTIVATE` 枚举值之一
 | activate_url {data-indent=3} | string | 跳转激活的url
 | activate_miniprogram {data-indent=3} | object {data-tooltip="对应PHP的array"} | 跳转激活的小程序
 | activate_appid {data-required data-indent=4} | string | 跳转激活的appid

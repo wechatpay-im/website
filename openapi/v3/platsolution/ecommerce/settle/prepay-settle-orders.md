@@ -15,14 +15,14 @@ description: 申请个人收款批量结算
 | individual_auth_id {data-required data-indent=1} | string | 商品单个人收款方受理授权ID
 | notify_url {data-required data-indent=1} | string | 通知地址
 | description {data-required data-indent=1} | string | 收款方描述
-| trade_scenario {data-required data-indent=1} | string | 交易场景<br/>`RECOMMERCE` 枚举值
+| trade_scenario {data-required data-indent=1} | string | 交易场景<br/>`RECOMMERCE` \| `INDIVIDUALTRADE` 枚举值之一
 | settle_info_list {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 结算信息列表
 | out_settle_no {data-required data-indent=2} | string | 商户结算单号
 | transaction_id {data-required data-indent=2} | string | 微信支付订单号
 | settle_detail_info_list {data-required data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 结算明细单列表
 | out_settle_detail_no {data-required data-indent=3} | string | 商户结算明细单号
-| settle_type {data-required data-indent=3} | string | 结算类型
-| receiver_type {data-required data-indent=3} | string | 接收方类型
+| settle_type {data-required data-indent=3} | string | 结算类型<br/>`RECEIVE` \| `DEDUCTION` 枚举值之一
+| receiver_type {data-required data-indent=3} | string | 接收方类型<br/>`MERCHANT` \| `USER` 枚举值之一
 | receiver_account {data-required data-indent=3} | string | 接收方账号
 | amount {data-required data-indent=3} | object {data-tooltip="对应PHP的array"} | 金额
 | amount {data-required data-indent=4} | number | 金额

@@ -34,11 +34,13 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | subsidy_amount {data-indent=3} | integer | 补差金额
 | sub_appid {data-indent=2} | string | 子商户应用ID
 | profit_sharing {data-indent=2} | boolean | 是否指定分账(settle_info.profit_sharing高权重)
+| order_service_type {data-indent=2} | string | 商品服务类型
 | combine_payer_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | identity {data-indent=2} | object {data-tooltip="对应PHP的array"} | 实名支付(需单独申请权限)
 | type {data-required data-indent=3} | string | 证件类型<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` \| `PHONE_NUMBER` 枚举值之一
 | number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的证件号
 | name {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 加密后的姓名
+| openid {data-indent=2} | string | 用户标识
 | time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | prepay_id {data-indent=1} | string | 预支付交易会话标识
@@ -95,6 +97,7 @@ $instance->v3->combineTransactions->app->postAsync([
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
       'profit_sharing'     => true,
+      'order_service_type' => 'INDIVIDUALTRADE',
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -102,6 +105,7 @@ $instance->v3->combineTransactions->app->postAsync([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+      'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
@@ -167,6 +171,7 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
       'profit_sharing'     => true,
+      'order_service_type' => 'INDIVIDUALTRADE',
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -174,6 +179,7 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+      'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
@@ -239,6 +245,7 @@ $instance['v3/combine-transactions/app']->postAsync([
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
       'profit_sharing'     => true,
+      'order_service_type' => 'INDIVIDUALTRADE',
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -246,6 +253,7 @@ $instance['v3/combine-transactions/app']->postAsync([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+      'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
@@ -311,6 +319,7 @@ $response = $instance->v3->combineTransactions->app->post([
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
       'profit_sharing'     => true,
+      'order_service_type' => 'INDIVIDUALTRADE',
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -318,6 +327,7 @@ $response = $instance->v3->combineTransactions->app->post([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+      'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
@@ -380,6 +390,7 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
       'profit_sharing'     => true,
+      'order_service_type' => 'INDIVIDUALTRADE',
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -387,6 +398,7 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+      'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
@@ -449,6 +461,7 @@ $response = $instance['v3/combine-transactions/app']->post([
       ],
       'sub_appid'          => 'wxd678efh567hg6999',
       'profit_sharing'     => true,
+      'order_service_type' => 'INDIVIDUALTRADE',
     ],],
     'combine_payer_info'   => [
       'identity' => [
@@ -456,6 +469,7 @@ $response = $instance['v3/combine-transactions/app']->post([
         'number' => '6B46824C852FA29AAC3DCE6BFD852E27',
         'name'   => '6B46824C852FA29AAC3DCE6BFD852E27',
       ],
+      'openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
     'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',

@@ -13,7 +13,7 @@ description: 商户根据一定过滤条件，查询已创建的支付有礼活�
 | offset {data-required data-indent=1} | integer | 分页页码
 | limit {data-required data-indent=1} | integer | 分页大小
 | activity_name {data-indent=1} | string | 活动名称
-| activity_status {data-indent=1} | string | 活动状态<br/>`CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
+| activity_status {data-indent=1} | string | 活动状态<br/>`ACT_STATUS_UNKNOWN` \| `CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` \| `CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
 | award_type {data-indent=1} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 
 {.im-table #request}
@@ -23,10 +23,10 @@ description: 商户根据一定过滤条件，查询已创建的支付有礼活�
 ```php [异步纯链式]
 $instance->v3->marketing->paygiftactivity->activities->getAsync([
   'query' => [
-    'offset'          => 0,
-    'limit'           => 0,
-    'activity_name'   => '',
-    'activity_status' => 'CREATE_ACT_STATUS',
+    'offset'          => 1,
+    'limit'           => 20,
+    'activity_name'   => '良品铺子回馈活动',
+    'activity_status' => 'ACT_STATUS_UNKNOWN',
     'award_type'      => 'BUSIFAVOR',
   ],
 ])
@@ -39,10 +39,10 @@ $instance->v3->marketing->paygiftactivity->activities->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/paygiftactivity/activities')->getAsync([
   'query' => [
-    'offset'          => 0,
-    'limit'           => 0,
-    'activity_name'   => '',
-    'activity_status' => 'CREATE_ACT_STATUS',
+    'offset'          => 1,
+    'limit'           => 20,
+    'activity_name'   => '良品铺子回馈活动',
+    'activity_status' => 'ACT_STATUS_UNKNOWN',
     'award_type'      => 'BUSIFAVOR',
   ],
 ])
@@ -55,10 +55,10 @@ $instance->chain('v3/marketing/paygiftactivity/activities')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/paygiftactivity/activities']->getAsync([
   'query' => [
-    'offset'          => 0,
-    'limit'           => 0,
-    'activity_name'   => '',
-    'activity_status' => 'CREATE_ACT_STATUS',
+    'offset'          => 1,
+    'limit'           => 20,
+    'activity_name'   => '良品铺子回馈活动',
+    'activity_status' => 'ACT_STATUS_UNKNOWN',
     'award_type'      => 'BUSIFAVOR',
   ],
 ])
@@ -71,10 +71,10 @@ $instance['v3/marketing/paygiftactivity/activities']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->paygiftactivity->activities->get([
   'query' => [
-    'offset'          => 0,
-    'limit'           => 0,
-    'activity_name'   => '',
-    'activity_status' => 'CREATE_ACT_STATUS',
+    'offset'          => 1,
+    'limit'           => 20,
+    'activity_name'   => '良品铺子回馈活动',
+    'activity_status' => 'ACT_STATUS_UNKNOWN',
     'award_type'      => 'BUSIFAVOR',
   ],
 ]);
@@ -84,10 +84,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/paygiftactivity/activities')->get([
   'query' => [
-    'offset'          => 0,
-    'limit'           => 0,
-    'activity_name'   => '',
-    'activity_status' => 'CREATE_ACT_STATUS',
+    'offset'          => 1,
+    'limit'           => 20,
+    'activity_name'   => '良品铺子回馈活动',
+    'activity_status' => 'ACT_STATUS_UNKNOWN',
     'award_type'      => 'BUSIFAVOR',
   ],
 ]);
@@ -97,10 +97,10 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/paygiftactivity/activities']->get([
   'query' => [
-    'offset'          => 0,
-    'limit'           => 0,
-    'activity_name'   => '',
-    'activity_status' => 'CREATE_ACT_STATUS',
+    'offset'          => 1,
+    'limit'           => 20,
+    'activity_name'   => '良品铺子回馈活动',
+    'activity_status' => 'ACT_STATUS_UNKNOWN',
     'award_type'      => 'BUSIFAVOR',
   ],
 ]);
@@ -154,9 +154,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | original_image_url {data-indent=4} | string | 奖品原始图（大图）
 | thumbnail_url {data-indent=4} | string | 奖品缩略图（小图）
 | merchant_id_list {data-indent=3} | string[] | 发券商户号列表
-| step_send_rule {data-indent=2} | object {data-tooltip="对应PHP的array"} | 阶梯送发放规则
-| award_type {data-required data-indent=3} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
-| merchant_option {data-required data-indent=3} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一
+| activity_type {data-indent=1} | string | 活动类型<br/>`FULL_SEND_ACT_TYPE` \| `STEP_SEND_ACT_TYPE` \| `SPECIFIC_SEND_ACT_TYPE` 枚举值之一
+| activity_status {data-indent=1} | string | 活动状态<br/>`ACT_STATUS_UNKNOWN` \| `CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
+| creator_merchant_id {data-indent=1} | string | 创建商户号
+| belong_merchant_id {data-indent=1} | string | 所属商户号
+| create_time {data-indent=1} | string | 活动创建时间
+| update_time {data-indent=1} | string | 活动更新时间
 
 {.im-table #response}
 

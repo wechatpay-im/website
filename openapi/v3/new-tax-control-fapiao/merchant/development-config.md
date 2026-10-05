@@ -115,13 +115,19 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
+| sub_mch_code {data-indent=1} | string | 子商户号
 
 {.im-table #request}
 
 ::: code-group
 
 ```php [异步纯链式]
-$instance->v3->newTaxControlFapiao->merchant->developmentConfig->getAsync([])
+$instance->v3->newTaxControlFapiao->merchant->developmentConfig->getAsync([
+  'query' => [
+    'sub_mch_code' => '1900000109',
+  ],
+])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
 })
@@ -129,7 +135,11 @@ $instance->v3->newTaxControlFapiao->merchant->developmentConfig->getAsync([])
 ```
 
 ```php [异步声明式]
-$instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->getAsync([])
+$instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->getAsync([
+  'query' => [
+    'sub_mch_code' => '1900000109',
+  ],
+])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
 })
@@ -137,7 +147,11 @@ $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->getAs
 ```
 
 ```php [异步属性式]
-$instance['v3/new-tax-control-fapiao/merchant/development-config']->getAsync([])
+$instance['v3/new-tax-control-fapiao/merchant/development-config']->getAsync([
+  'query' => [
+    'sub_mch_code' => '1900000109',
+  ],
+])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
 })
@@ -145,17 +159,29 @@ $instance['v3/new-tax-control-fapiao/merchant/development-config']->getAsync([])
 ```
 
 ```php [同步纯链式]
-$response = $instance->v3->newTaxControlFapiao->merchant->developmentConfig->get([]);
+$response = $instance->v3->newTaxControlFapiao->merchant->developmentConfig->get([
+  'query' => [
+    'sub_mch_code' => '1900000109',
+  ],
+]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
-$response = $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->get([]);
+$response = $instance->chain('v3/new-tax-control-fapiao/merchant/development-config')->get([
+  'query' => [
+    'sub_mch_code' => '1900000109',
+  ],
+]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
-$response = $instance['v3/new-tax-control-fapiao/merchant/development-config']->get([]);
+$response = $instance['v3/new-tax-control-fapiao/merchant/development-config']->get([
+  'query' => [
+    'sub_mch_code' => '1900000109',
+  ],
+]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 

@@ -12,7 +12,7 @@ description: 商户可以调用此接口获取对账单文件的下载链接，�
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | bill_date {data-required data-indent=1} | string | 账单日期
 | tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
-| encryption_algorithm {data-required data-indent=1} | string | 加密算法
+| encryption_algorithm {data-required data-indent=1} | string | 加密算法<br/>`AEAD_AES_256_GCM` 枚举值
 | service_id {data-required data-indent=1} | string | 服务ID
 
 {.im-table #request}

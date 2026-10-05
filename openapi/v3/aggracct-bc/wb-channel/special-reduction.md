@@ -13,7 +13,7 @@ description: 接口限频：单特殊减额目标商户号100qps。接口幂等�
 | mchid {data-required data-indent=1} | string | 微信支付商户号
 | bal_account_no {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 额度台账号
 | out_request_no {data-required data-indent=1} | string | 特殊减额单号
-| reduction_type {data-required data-indent=1} | string | 特殊减额类型<br/>`FINANCIAL_PENALTY` \| `JUDICIAL_DEDUCTION` 枚举值之一
+| reduction_type {data-required data-indent=1} | string | 特殊减额类型<br/>`FINANCIAL_PENALTY` \| `JUDICIAL_DEDUCTION` \| `REDUCTION_TYPE_UNKNOWN` 枚举值之一
 | amount {data-required data-indent=1} | integer | 减额金额
 | reason {data-indent=1} | string | 特殊减额原因
 | card_no {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 卡号

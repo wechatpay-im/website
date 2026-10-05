@@ -20,10 +20,10 @@ description: 商户创建活动后，可以通过该接口增加支付有礼的�
 
 ```php [异步纯链式]
 $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants->add->postAsync([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no'   => '',
+    'add_request_no'   => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -34,10 +34,10 @@ $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants-
 
 ```php [异步声明式]
 $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add')->postAsync([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no'   => '',
+    'add_request_no'   => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,10 +48,10 @@ $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchant
 
 ```php [异步属性式]
 $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add']->postAsync([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no'   => '',
+    'add_request_no'   => '100002322019090134234sfdf',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -62,10 +62,10 @@ $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add']
 
 ```php [同步纯链式]
 $response = $instance->v3->marketing->paygiftactivity->activities->_activity_id_->merchants->add->post([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no'   => '',
+    'add_request_no'   => '100002322019090134234sfdf',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -73,10 +73,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add')->post([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no'   => '',
+    'add_request_no'   => '100002322019090134234sfdf',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -84,10 +84,10 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add']->post([
-  'activity_id' => '',
+  'activity_id' => '126002309',
   'json' => [
     'merchant_id_list' => ['string'],
-    'add_request_no'   => '',
+    'add_request_no'   => '100002322019090134234sfdf',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

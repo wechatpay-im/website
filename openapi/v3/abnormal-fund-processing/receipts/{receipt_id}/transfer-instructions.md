@@ -12,7 +12,7 @@ description: 商户有在途异常资金时，可以通过该接口发起在途�
 | receipt_id {data-required} | string | 微信支付在途异常资金付款单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | out_instruction_no {data-required data-indent=1} | string | 商户侧指令编号
-| transfer_mode {data-required data-indent=1} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` \| `TRANSFER_MODE_TO_ORIGINAL_RECEIVE_MERCHANT` \| `TRANSFER_MODE_TO_SPECIFIED_RECEIVE_MERCHANT` 枚举值之一
+| transfer_mode {data-required data-indent=1} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` \| `TRANSFER_MODE_TO_ORIGINAL_RECEIVE_MERCHANT` \| `TRANSFER_MODE_TO_SPECIFIED_RECEIVE_MERCHANT` \| `TRANSFER_TO_ORIGINAL_RECEIVE_MERCHANT` \| `TRANSFER_TO_SPECIFIED_RECEIVE_MERCHANT` 枚举值之一
 | receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款方
 | openid {data-indent=2} | string | 入账用户OpenID
 | appid {data-indent=2} | string | 商户AppID

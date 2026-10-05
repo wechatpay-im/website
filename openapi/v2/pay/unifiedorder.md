@@ -55,6 +55,9 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | user_type {data-indent=1} | string | 证件类型(指定身份支付)<br/>`IDCARD` \| `HONGKONG_MACAO` \| `HONGKONG_MACAO_RESIDENT` \| `TAIWAN_RESIDENT` \| `FOREIGN_RESIDENT` \| `OVERSEA_PASSPORT` 枚举值之一
 | user_creid {data-indent=1} | string | 证件号(指定身份支付)
 | user_truename {data-indent=1} | string | 姓名(指定身份支付)
+| sub_appid {data-indent=1} | string | 子商户公众账号ID
+| sub_mch_id {data-indent=1} | string | 子商户号
+| sub_openid {data-indent=1} | string | 用户子标识
 
 {.im-table #request}
 
@@ -110,6 +113,9 @@ $instance->v2->pay->unifiedorder->postAsync([
     'user_type'        => 'IDCARD',
     'user_creid'       => '43102119910910512X',
     'user_truename'    => '周星星',
+    'sub_appid'        => 'wx8888888888888888',
+    'sub_mch_id'       => '1900000109',
+    'sub_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -168,6 +174,9 @@ $instance->chain('v2/pay/unifiedorder')->postAsync([
     'user_type'        => 'IDCARD',
     'user_creid'       => '43102119910910512X',
     'user_truename'    => '周星星',
+    'sub_appid'        => 'wx8888888888888888',
+    'sub_mch_id'       => '1900000109',
+    'sub_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -226,6 +235,9 @@ $instance['v2/pay/unifiedorder']->postAsync([
     'user_type'        => 'IDCARD',
     'user_creid'       => '43102119910910512X',
     'user_truename'    => '周星星',
+    'sub_appid'        => 'wx8888888888888888',
+    'sub_mch_id'       => '1900000109',
+    'sub_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -284,6 +296,9 @@ $response = $instance->v2->pay->unifiedorder->post([
     'user_type'        => 'IDCARD',
     'user_creid'       => '43102119910910512X',
     'user_truename'    => '周星星',
+    'sub_appid'        => 'wx8888888888888888',
+    'sub_mch_id'       => '1900000109',
+    'sub_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -339,6 +354,9 @@ $response = $instance->chain('v2/pay/unifiedorder')->post([
     'user_type'        => 'IDCARD',
     'user_creid'       => '43102119910910512X',
     'user_truename'    => '周星星',
+    'sub_appid'        => 'wx8888888888888888',
+    'sub_mch_id'       => '1900000109',
+    'sub_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -394,6 +412,9 @@ $response = $instance['v2/pay/unifiedorder']->post([
     'user_type'        => 'IDCARD',
     'user_creid'       => '43102119910910512X',
     'user_truename'    => '周星星',
+    'sub_appid'        => 'wx8888888888888888',
+    'sub_mch_id'       => '1900000109',
+    'sub_openid'       => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

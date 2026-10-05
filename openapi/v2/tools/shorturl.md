@@ -14,6 +14,8 @@ description: 该接口主要用于Native支付模式一中的二维码链接转�
 | mch_id {data-required data-indent=1} | string | 商户号
 | long_url {data-required data-indent=1} | string | URL链接
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
+| sub_appid {data-indent=1} | string | 子商户公众账号ID
+| sub_mch_id {data-indent=1} | string | 子商户号
 
 {.im-table #request}
 
@@ -22,10 +24,12 @@ description: 该接口主要用于Native支付模式一中的二维码链接转�
 ```php [异步纯链式]
 $instance->v2->tools->shorturl->postAsync([
   'xml' => [
-    'appid'     => 'wx8888888888888888',
-    'mch_id'    => '1900000109',
-    'long_url'  => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
-    'sign_type' => 'HMAC-SHA256',
+    'appid'      => 'wx8888888888888888',
+    'mch_id'     => '1900000109',
+    'long_url'   => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
+    'sign_type'  => 'HMAC-SHA256',
+    'sub_appid'  => 'wx8888888888888888',
+    'sub_mch_id' => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -37,10 +41,12 @@ $instance->v2->tools->shorturl->postAsync([
 ```php [异步声明式]
 $instance->chain('v2/tools/shorturl')->postAsync([
   'xml' => [
-    'appid'     => 'wx8888888888888888',
-    'mch_id'    => '1900000109',
-    'long_url'  => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
-    'sign_type' => 'HMAC-SHA256',
+    'appid'      => 'wx8888888888888888',
+    'mch_id'     => '1900000109',
+    'long_url'   => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
+    'sign_type'  => 'HMAC-SHA256',
+    'sub_appid'  => 'wx8888888888888888',
+    'sub_mch_id' => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -52,10 +58,12 @@ $instance->chain('v2/tools/shorturl')->postAsync([
 ```php [异步属性式]
 $instance['v2/tools/shorturl']->postAsync([
   'xml' => [
-    'appid'     => 'wx8888888888888888',
-    'mch_id'    => '1900000109',
-    'long_url'  => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
-    'sign_type' => 'HMAC-SHA256',
+    'appid'      => 'wx8888888888888888',
+    'mch_id'     => '1900000109',
+    'long_url'   => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
+    'sign_type'  => 'HMAC-SHA256',
+    'sub_appid'  => 'wx8888888888888888',
+    'sub_mch_id' => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -67,10 +75,12 @@ $instance['v2/tools/shorturl']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v2->tools->shorturl->post([
   'xml' => [
-    'appid'     => 'wx8888888888888888',
-    'mch_id'    => '1900000109',
-    'long_url'  => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
-    'sign_type' => 'HMAC-SHA256',
+    'appid'      => 'wx8888888888888888',
+    'mch_id'     => '1900000109',
+    'long_url'   => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
+    'sign_type'  => 'HMAC-SHA256',
+    'sub_appid'  => 'wx8888888888888888',
+    'sub_mch_id' => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -79,10 +89,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步声明式]
 $response = $instance->chain('v2/tools/shorturl')->post([
   'xml' => [
-    'appid'     => 'wx8888888888888888',
-    'mch_id'    => '1900000109',
-    'long_url'  => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
-    'sign_type' => 'HMAC-SHA256',
+    'appid'      => 'wx8888888888888888',
+    'mch_id'     => '1900000109',
+    'long_url'   => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
+    'sign_type'  => 'HMAC-SHA256',
+    'sub_appid'  => 'wx8888888888888888',
+    'sub_mch_id' => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -91,10 +103,12 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 ```php [同步属性式]
 $response = $instance['v2/tools/shorturl']->post([
   'xml' => [
-    'appid'     => 'wx8888888888888888',
-    'mch_id'    => '1900000109',
-    'long_url'  => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
-    'sign_type' => 'HMAC-SHA256',
+    'appid'      => 'wx8888888888888888',
+    'mch_id'     => '1900000109',
+    'long_url'   => 'weixin：//wxpay/bizpayurl?sign=XXXXX&appid=XXXXX&mch_id=XXXXX&product_id=XXXXXX&time_stamp=XXXXXX&nonce_str=XXXXX',
+    'sign_type'  => 'HMAC-SHA256',
+    'sub_appid'  => 'wx8888888888888888',
+    'sub_mch_id' => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

@@ -26,7 +26,7 @@ description: 使用签约协议号发起扣款，本接口支持两种模式，�
 | scene_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 场景信息
 | start_time {data-required data-indent=2} | string | 消费时间
 | school_id {data-required data-indent=2} | string | 学校编号
-| scene_type {data-required data-indent=2} | string | 消费场景类型
+| scene_type {data-required data-indent=2} | string | 消费场景类型<br/>`CANTEEN` \| `SHOP` \| `INFIRMARY` \| `TRAFFIC` \| `OTHERS` \| `LARGE` 枚举值之一
 | device_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 设备信息
 | device_id {data-indent=2} | string | 设备号
 | device_ip {data-required data-indent=2} | string | 商户端设备ip

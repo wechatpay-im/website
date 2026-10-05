@@ -72,6 +72,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | activity_id {data-required} | string | 活动ID
 | terminate_time | string | 终止时间
+| creterminate_timeate_time | string | 终止时间
 
 {.im-table #response}
 

@@ -28,7 +28,7 @@ description: 服务商开具出租车电子发票后，调用本接口将发票�
 | tax_amount {data-required data-indent=2} | integer | 总税额
 | amount {data-required data-indent=2} | integer | 总金额
 | buyer_information {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 购买方信息
-| type {data-required data-indent=3} | string | 购买方类型
+| type {data-required data-indent=3} | string | 购买方类型<br/>`CORPORATION` \| `INDIVIDUAL` 枚举值之一
 | name {data-required data-indent=3} | string | 名称
 | taxpayer_id {data-indent=3} | string | 纳税人识别号
 | address {data-indent=3} | string | 地址
@@ -57,7 +57,7 @@ description: 服务商开具出租车电子发票后，调用本接口将发票�
 | tax_amount {data-required data-indent=3} | integer | 单行税额
 | total_amount {data-required data-indent=3} | integer | 单行金额合计
 | tax_rate {data-required data-indent=3} | integer | 税率
-| tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识
+| tax_prefer_mark {data-required data-indent=3} | string | 税收优惠政策标识<br/>`NO_FAVORABLE` \| `OUTSIDE_VAT` \| `VAT_EXEMPT` \| `NORMAL_ZERO_RATED` \| `EXPORT_ZERO_RATED` 枚举值之一
 | discount {data-required data-indent=3} | boolean | 是否折扣行
 | remark {data-indent=2} | string | 备注信息
 | token {data-indent=1} | string | 获取乘客行程单详情的凭证

@@ -23,7 +23,7 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 | estimated_deduct_date {data-required data-indent=2} | string | 预计扣费的日期
 | estimated_deduct_amount {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 预计扣费金额
 | total {data-required data-indent=3} | number | 金额
-| currency {data-indent=3} | string | 货币类型
+| currency {data-indent=3} | string | 货币类型<br/>`CNY` 枚举值
 | policy_coverage_detail {data-indent=2} | object {data-tooltip="对应PHP的array"} | 保障详情
 | policy_amount {data-indent=3} | string | 保单额度
 | policy_clauses {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 保险条款列表
@@ -31,7 +31,7 @@ description: 商户可调用本接口预先指定签约及交易信息（交易�
 | clause_quota {data-indent=4} | string | 条款额度
 | amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 扣费金额信息
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | out_trade_no {data-indent=1} | string | 商户订单号
 | description {data-indent=1} | string | 商品描述
 | transaction_notify_url {data-indent=1} | string | 支付结果通知地址

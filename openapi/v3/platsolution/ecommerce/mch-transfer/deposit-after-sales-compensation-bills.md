@@ -13,7 +13,7 @@ description: 商户可调用该接口从保证金账户赔付给用户。注：�
 | sub_mchid {data-indent=1} | string | 二级商户号
 | sp_appid {data-indent=1} | string | 公众账号ID
 | receiver {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款方信息
-| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
+| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` \| `WXPAY_USER` 枚举值之一
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
 | type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一

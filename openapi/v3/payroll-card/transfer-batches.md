@@ -12,7 +12,7 @@ description: 服务商可以通过该接口，批量向用户选择的收款账�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sub_mchid {data-required data-indent=1} | string | 特约商户号
 | sub_appid {data-indent=1} | string | 特约商户AppID
-| authorization_type {data-required data-indent=1} | string | 特约商户授权类型
+| authorization_type {data-required data-indent=1} | string | 特约商户授权类型<br/>`INFORMATION_AUTHORIZATION_TYPE` \| `FUND_AUTHORIZATION_TYPE` \| `INFORMATION_AND_FUND_AUTHORIZATION_TYPE` 枚举值之一
 | out_batch_no {data-required data-indent=1} | string | 商家批次单号
 | batch_name {data-required data-indent=1} | string | 批次名称
 | batch_remark {data-required data-indent=1} | string | 批次备注
@@ -25,8 +25,8 @@ description: 服务商可以通过该接口，批量向用户选择的收款账�
 | openid {data-required data-indent=2} | string | 收款用户OpenID
 | user_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | sp_appid {data-indent=1} | string | 服务商的AppID
-| employment_type {data-required data-indent=1} | string | 用工类型
-| employment_scene {data-required data-indent=1} | string | 用工场景
+| employment_type {data-required data-indent=1} | string | 用工类型<br/>`LONG_TERM_EMPLOYMENT` \| `SHORT_TERM_EMPLOYMENT` \| `COOPERATION_EMPLOYMENT` 枚举值之一
+| employment_scene {data-required data-indent=1} | string | 用工场景<br/>`LOGISTICS` \| `MANUFACTURING` \| `HOTEL` \| `CATERING` \| `EVENT` \| `RETAIL` \| `OTHERS` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 

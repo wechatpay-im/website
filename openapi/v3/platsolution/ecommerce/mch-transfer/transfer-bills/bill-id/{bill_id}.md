@@ -12,6 +12,7 @@ description: 微信支付单号查询商户付款记录。 注：接口频率限
 | bill_id {data-required} | string | 微信支付单号
 | query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | business_type {data-indent=1} | string | 业务类型<br/>`DEPOSIT_COMPENSATION` \| `PLATFORM_AFTER_SALES_COMPENSATION` \| `INSURANCE_CLAIM` \| `DEPOSIT_AFTER_SALES_COMPENSATION` 枚举值之一
+| sub_mchid {data-indent=1} | string | 二级商户号
 
 {.im-table #request}
 
@@ -22,6 +23,7 @@ $instance->v3->platsolution->ecommerce->mchTransfer->transferBills->billId->_bil
   'bill_id' => '1330000071100999991182020050700019480001',
   'query' => [
     'business_type' => 'DEPOSIT_COMPENSATION',
+    'sub_mchid'     => '1900001109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -35,6 +37,7 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/
   'bill_id' => '1330000071100999991182020050700019480001',
   'query' => [
     'business_type' => 'DEPOSIT_COMPENSATION',
+    'sub_mchid'     => '1900001109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -48,6 +51,7 @@ $instance['v3/platsolution/ecommerce/mch-transfer/transfer-bills/bill-id/{bill_i
   'bill_id' => '1330000071100999991182020050700019480001',
   'query' => [
     'business_type' => 'DEPOSIT_COMPENSATION',
+    'sub_mchid'     => '1900001109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -61,6 +65,7 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->transferBills->
   'bill_id' => '1330000071100999991182020050700019480001',
   'query' => [
     'business_type' => 'DEPOSIT_COMPENSATION',
+    'sub_mchid'     => '1900001109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -71,6 +76,7 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/transfer-bi
   'bill_id' => '1330000071100999991182020050700019480001',
   'query' => [
     'business_type' => 'DEPOSIT_COMPENSATION',
+    'sub_mchid'     => '1900001109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -81,6 +87,7 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/transfer-bills/bil
   'bill_id' => '1330000071100999991182020050700019480001',
   'query' => [
     'business_type' => 'DEPOSIT_COMPENSATION',
+    'sub_mchid'     => '1900001109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
