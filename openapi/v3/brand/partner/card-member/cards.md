@@ -46,6 +46,10 @@
 | type {data-indent=3} | string | 商户自定义的开卡信息字段类型<br/>`CHECK_BOX` \| `RADIO` 枚举值之一
 | name {data-indent=3} | string | 字段名称
 | values {data-indent=3} | string[] | 字段值
+| out_request_no {data-required data-indent=1} | string | 商家请求单号
+| member_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员中心信息
+| jump_appid {data-required data-indent=2} | string | 会员中心跳转AppID
+| jump_path {data-required data-indent=2} | string | 会员中心跳转路径
 
 {.im-table #request}
 
@@ -99,6 +103,11 @@ $instance->v3->brand->partner->cardMember->cards->postAsync([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'out_request_no'         => '100002322019090134234sfdf',
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ])
@@ -157,6 +166,11 @@ $instance->chain('v3/brand/partner/card-member/cards')->postAsync([
         'values' => ['篮球'],
       ],],
     ],
+    'out_request_no'         => '100002322019090134234sfdf',
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
+    ],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -213,6 +227,11 @@ $instance['v3/brand/partner/card-member/cards']->postAsync([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'out_request_no'         => '100002322019090134234sfdf',
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ])
@@ -271,6 +290,11 @@ $response = $instance->v3->brand->partner->cardMember->cards->post([
         'values' => ['篮球'],
       ],],
     ],
+    'out_request_no'         => '100002322019090134234sfdf',
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -324,6 +348,11 @@ $response = $instance->chain('v3/brand/partner/card-member/cards')->post([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'out_request_no'         => '100002322019090134234sfdf',
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ]);
@@ -379,6 +408,11 @@ $response = $instance['v3/brand/partner/card-member/cards']->post([
         'values' => ['篮球'],
       ],],
     ],
+    'out_request_no'         => '100002322019090134234sfdf',
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
+    ],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -428,6 +462,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-indent=2} | string | 商户自定义的开卡信息字段类型<br/>`CHECK_BOX` \| `RADIO` 枚举值之一
 | name {data-indent=2} | string | 字段名称
 | values {data-indent=2} | string[] | 字段值
+| out_request_no {data-required} | string | 商家请求单号
+| member_information {data-required} | object {data-tooltip="对应PHP的array"} | 会员中心信息
+| jump_appid {data-required data-indent=1} | string | 会员中心跳转AppID
+| jump_path {data-required data-indent=1} | string | 会员中心跳转路径
+| state {data-required} | string | 状态<br/>`CARD_EFFECTIVE` \| `CARD_INVALID` 枚举值之一
+| create_time {data-required} | string | 创建时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 
@@ -578,6 +619,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-indent=3} | string | 商户自定义的开卡信息字段类型<br/>`CHECK_BOX` \| `RADIO` 枚举值之一
 | name {data-indent=3} | string | 字段名称
 | values {data-indent=3} | string[] | 字段值
+| out_request_no {data-required data-indent=1} | string | 商家请求单号
+| member_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员中心信息
+| jump_appid {data-required data-indent=2} | string | 会员中心跳转AppID
+| jump_path {data-required data-indent=2} | string | 会员中心跳转路径
+| state {data-required data-indent=1} | string | 状态<br/>`CARD_EFFECTIVE` \| `CARD_INVALID` 枚举值之一
+| create_time {data-required data-indent=1} | string | 创建时间
+| modify_time {data-required data-indent=1} | string | 更新时间
 
 {.im-table #response}
 

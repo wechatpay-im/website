@@ -16,9 +16,8 @@ description: 当用户触发积分兑券后，微信支付将通过用户积分�
 | card_id {data-required data-indent=1} | string | 会员卡模板ID
 | openid {data-required data-indent=1} | string | 用户标识
 | user_card_code {data-required data-indent=1} | string | 会员卡code
-| state {data-required data-indent=1} | string | 积分兑券状态<br/>`POINT_EXCHANGE_COUPON_SUCCESS` \| `POINT_EXCHANGE_COUPON_FAIL` 枚举值之一
-| coupon_code {data-indent=1} | string | 兑券成功的券code
-| fail_reason {data-indent=1} | string | 兑券失败原因
+| result {data-required data-indent=1} | string | 积分兑券结果<br/>`POINT_EXCHANGE_COUPON_ALLOW` \| `POINT_EXCHANGE_COUPON_REJECT` 枚举值之一
+| reject_reason {data-indent=1} | string | 拒绝兑券原因
 
 {.im-table #request}
 
@@ -33,9 +32,8 @@ $instance->v3->brand->partner->cardMember->userPoints->exchangeCoupon->confirm->
     'card_id'                     => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'openid'                      => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'user_card_code'              => '478515832665',
-    'state'                       => 'POINT_EXCHANGE_COUPON_SUCCESS',
-    'coupon_code'                 => '123446565767',
-    'fail_reason'                 => '积分不足',
+    'result'                      => 'POINT_EXCHANGE_COUPON_ALLOW',
+    'reject_reason'               => '积分不足',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,9 +51,8 @@ $instance->chain('v3/brand/partner/card-member/user-points/exchange-coupon/confi
     'card_id'                     => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'openid'                      => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'user_card_code'              => '478515832665',
-    'state'                       => 'POINT_EXCHANGE_COUPON_SUCCESS',
-    'coupon_code'                 => '123446565767',
-    'fail_reason'                 => '积分不足',
+    'result'                      => 'POINT_EXCHANGE_COUPON_ALLOW',
+    'reject_reason'               => '积分不足',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -73,9 +70,8 @@ $instance['v3/brand/partner/card-member/user-points/exchange-coupon/confirm']->p
     'card_id'                     => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'openid'                      => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'user_card_code'              => '478515832665',
-    'state'                       => 'POINT_EXCHANGE_COUPON_SUCCESS',
-    'coupon_code'                 => '123446565767',
-    'fail_reason'                 => '积分不足',
+    'result'                      => 'POINT_EXCHANGE_COUPON_ALLOW',
+    'reject_reason'               => '积分不足',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -93,9 +89,8 @@ $response = $instance->v3->brand->partner->cardMember->userPoints->exchangeCoupo
     'card_id'                     => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'openid'                      => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'user_card_code'              => '478515832665',
-    'state'                       => 'POINT_EXCHANGE_COUPON_SUCCESS',
-    'coupon_code'                 => '123446565767',
-    'fail_reason'                 => '积分不足',
+    'result'                      => 'POINT_EXCHANGE_COUPON_ALLOW',
+    'reject_reason'               => '积分不足',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -110,9 +105,8 @@ $response = $instance->chain('v3/brand/partner/card-member/user-points/exchange-
     'card_id'                     => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'openid'                      => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'user_card_code'              => '478515832665',
-    'state'                       => 'POINT_EXCHANGE_COUPON_SUCCESS',
-    'coupon_code'                 => '123446565767',
-    'fail_reason'                 => '积分不足',
+    'result'                      => 'POINT_EXCHANGE_COUPON_ALLOW',
+    'reject_reason'               => '积分不足',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -127,9 +121,8 @@ $response = $instance['v3/brand/partner/card-member/user-points/exchange-coupon/
     'card_id'                     => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
     'openid'                      => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'user_card_code'              => '478515832665',
-    'state'                       => 'POINT_EXCHANGE_COUPON_SUCCESS',
-    'coupon_code'                 => '123446565767',
-    'fail_reason'                 => '积分不足',
+    'result'                      => 'POINT_EXCHANGE_COUPON_ALLOW',
+    'reject_reason'               => '积分不足',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -147,7 +140,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_code {data-required} | string | 会员卡code
 | state {data-required} | string | 积分兑券状态<br/>`POINT_EXCHANGE_COUPON_SUCCESS` \| `POINT_EXCHANGE_COUPON_FAIL` 枚举值之一
 | coupon_code | string | 兑券成功的券code
-| fail_reason | string | 兑券失败原因
+| product_coupon_id {data-required} | string | 商品券ID
+| product_coupon_stock_type {data-required} | string | 商品券批次类型<br/>`PRODUCT_COUPON_STOCK_TYPE_BUSI_FAVOR` \| `PRODUCT_COUPON_STOCK_TYPE_CASH_FAVOR` \| `PRODUCT_COUPON_STOCK_TYPE_BRAND_FAVOR` 枚举值之一
+| stock_id {data-required} | string | 批次ID
+| reject_reason | string | 拒绝兑券原因
 
 {.im-table #response}
 

@@ -136,7 +136,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | values {data-indent=2} | string[] | 字段值
 | state {data-required} | string | 状态<br/>`CARD_EFFECTIVE` \| `CARD_INVALID` 枚举值之一
 | create_time {data-required} | string | 创建时间
-| update_time {data-required} | string | 更新时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 

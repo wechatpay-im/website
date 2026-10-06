@@ -30,9 +30,8 @@ description: 所有会员卡新开卡，我们回调给商家，商家还需要�
 | name {data-indent=3} | string | 字段名称
 | user_chosen_values {data-indent=3} | string[] | 加密的用户选择的字段值列表
 | attach {data-indent=1} | string | 商家数据包
-| user_card_confirm_state {data-required data-indent=1} | string | 会员开卡状态<br/>`CREATE_CARD_SUCCESS` \| `CREATE_CARD_FAIL` 枚举值之一
-| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| card_id {data-required data-indent=1} | string | 会员卡模版ID
+| user_card_confirm_state {data-required data-indent=1} | string | 会员开卡状态<br/>`CREATE_CARD_SUCCESS` \| `CREATE_CARD_FAIL` \| `CREATE_CARD_ALREADY_EXISTS` 枚举值之一
+| card_id {data-required data-indent=1} | string | 会员卡模板ID
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -68,9 +67,7 @@ $instance->v3->brand->partner->cardMember->userCards->_user_card_code_->confirm-
     ],
     'attach'                  => '自定义数据说明',
     'user_card_confirm_state' => 'CREATE_CARD_SUCCESS',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                 => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -110,9 +107,7 @@ $instance->chain('v3/brand/partner/card-member/user-cards/{user_card_code}/confi
     ],
     'attach'                  => '自定义数据说明',
     'user_card_confirm_state' => 'CREATE_CARD_SUCCESS',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                 => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -152,9 +147,7 @@ $instance['v3/brand/partner/card-member/user-cards/{user_card_code}/confirm']->p
     ],
     'attach'                  => '自定义数据说明',
     'user_card_confirm_state' => 'CREATE_CARD_SUCCESS',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                 => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -194,9 +187,7 @@ $response = $instance->v3->brand->partner->cardMember->userCards->_user_card_cod
     ],
     'attach'                  => '自定义数据说明',
     'user_card_confirm_state' => 'CREATE_CARD_SUCCESS',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                 => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -233,9 +224,7 @@ $response = $instance->chain('v3/brand/partner/card-member/user-cards/{user_card
     ],
     'attach'                  => '自定义数据说明',
     'user_card_confirm_state' => 'CREATE_CARD_SUCCESS',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                 => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -272,9 +261,7 @@ $response = $instance['v3/brand/partner/card-member/user-cards/{user_card_code}/
     ],
     'attach'                  => '自定义数据说明',
     'user_card_confirm_state' => 'CREATE_CARD_SUCCESS',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                 => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -313,6 +300,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_state {data-required} | string | 用户会员卡状态<br/>`UNACTIVATED` \| `EFFECTIVE` \| `EXPIRED` \| `INVALID` 枚举值之一
 | invalid_reason | string | 作废原因
 | invalid_time | string | 作废时间
+| create_time {data-required} | string | 创建时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 

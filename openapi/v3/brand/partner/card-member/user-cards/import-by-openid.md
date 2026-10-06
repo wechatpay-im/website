@@ -22,12 +22,15 @@ description: 对于经营会员生意的商户来说，存量会员的注册渠�
 | custom_field_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 商户自定义的开卡信息字段
 | name {data-indent=3} | string | 字段名称
 | user_chosen_values {data-indent=3} | string[] | 加密的用户选择的字段值列表
-| date_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员卡有效期
-| type {data-required data-indent=2} | string | 有效期类型<br/>`FIX_TIME_RANGE` \| `FIX_TERM` \| `PERMANENT` 枚举值之一
+| pickup_time {data-required data-indent=1} | string | 领取时间
+| card_color {data-indent=1} | string | 卡背景颜色
+| card_picture_url {data-indent=1} | string | 卡图片
+| level {data-indent=1} | string | 等级
+| valid_date_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员卡有效期
+| type {data-indent=2} | string | 有效期类型<br/>`FIX_TIME_RANGE` \| `FIX_TERM` \| `PERMANENT` 枚举值之一
 | available_begin_time {data-indent=2} | string | 有效期开始时间
 | available_end_time {data-indent=2} | string | 有效期结束时间
-| available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
-| pickup_time {data-required data-indent=1} | string | 领取时间
+| available_day_after_receive {data-indent=2} | integer | 领取后N天内有效
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -38,12 +41,12 @@ description: 对于经营会员生意的商户来说，存量会员的注册渠�
 ```php [异步纯链式]
 $instance->v3->brand->partner->cardMember->userCards->importByOpenid->postAsync([
   'json' => [
-    'brand_id'         => '1004',
-    'card_id'          => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'openid'           => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'user_card_code'   => '478515832665',
-    'phone_number'     => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
-    'user_information' => [
+    'brand_id'               => '1004',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'openid'                 => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'user_card_code'         => '478515832665',
+    'phone_number'           => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
+    'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
         'value' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
@@ -53,13 +56,16 @@ $instance->v3->brand->partner->cardMember->userCards->importByOpenid->postAsync(
         'user_chosen_values' => ['vvysDQeEaH3I+wRh14St0abIkvQyFgh/'],
       ],],
     ],
-    'date_information' => [
+    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
+    'card_color'             => '#FFFF00',
+    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/PiajxSqBRaEIPAeia7Imvtsn7sYGNcEj33YzVvJF88ECQ19LXId8ZL2Q/0',
+    'level'                  => '钻石会员',
+    'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
-      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
-      'available_day_after_receive' => 200,
+      'available_end_time'          => '2020-05-20T13:29:35.120+08:00',
+      'available_day_after_receive' => 30,
     ],
-    'pickup_time'      => '2020-05-20T13:29:35.120+08:00',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -74,12 +80,12 @@ $instance->v3->brand->partner->cardMember->userCards->importByOpenid->postAsync(
 ```php [异步声明式]
 $instance->chain('v3/brand/partner/card-member/user-cards/import-by-openid')->postAsync([
   'json' => [
-    'brand_id'         => '1004',
-    'card_id'          => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'openid'           => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'user_card_code'   => '478515832665',
-    'phone_number'     => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
-    'user_information' => [
+    'brand_id'               => '1004',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'openid'                 => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'user_card_code'         => '478515832665',
+    'phone_number'           => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
+    'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
         'value' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
@@ -89,13 +95,16 @@ $instance->chain('v3/brand/partner/card-member/user-cards/import-by-openid')->po
         'user_chosen_values' => ['vvysDQeEaH3I+wRh14St0abIkvQyFgh/'],
       ],],
     ],
-    'date_information' => [
+    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
+    'card_color'             => '#FFFF00',
+    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/PiajxSqBRaEIPAeia7Imvtsn7sYGNcEj33YzVvJF88ECQ19LXId8ZL2Q/0',
+    'level'                  => '钻石会员',
+    'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
-      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
-      'available_day_after_receive' => 200,
+      'available_end_time'          => '2020-05-20T13:29:35.120+08:00',
+      'available_day_after_receive' => 30,
     ],
-    'pickup_time'      => '2020-05-20T13:29:35.120+08:00',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -110,12 +119,12 @@ $instance->chain('v3/brand/partner/card-member/user-cards/import-by-openid')->po
 ```php [异步属性式]
 $instance['v3/brand/partner/card-member/user-cards/import-by-openid']->postAsync([
   'json' => [
-    'brand_id'         => '1004',
-    'card_id'          => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'openid'           => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'user_card_code'   => '478515832665',
-    'phone_number'     => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
-    'user_information' => [
+    'brand_id'               => '1004',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'openid'                 => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'user_card_code'         => '478515832665',
+    'phone_number'           => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
+    'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
         'value' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
@@ -125,13 +134,16 @@ $instance['v3/brand/partner/card-member/user-cards/import-by-openid']->postAsync
         'user_chosen_values' => ['vvysDQeEaH3I+wRh14St0abIkvQyFgh/'],
       ],],
     ],
-    'date_information' => [
+    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
+    'card_color'             => '#FFFF00',
+    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/PiajxSqBRaEIPAeia7Imvtsn7sYGNcEj33YzVvJF88ECQ19LXId8ZL2Q/0',
+    'level'                  => '钻石会员',
+    'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
-      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
-      'available_day_after_receive' => 200,
+      'available_end_time'          => '2020-05-20T13:29:35.120+08:00',
+      'available_day_after_receive' => 30,
     ],
-    'pickup_time'      => '2020-05-20T13:29:35.120+08:00',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -146,12 +158,12 @@ $instance['v3/brand/partner/card-member/user-cards/import-by-openid']->postAsync
 ```php [同步纯链式]
 $response = $instance->v3->brand->partner->cardMember->userCards->importByOpenid->post([
   'json' => [
-    'brand_id'         => '1004',
-    'card_id'          => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'openid'           => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'user_card_code'   => '478515832665',
-    'phone_number'     => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
-    'user_information' => [
+    'brand_id'               => '1004',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'openid'                 => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'user_card_code'         => '478515832665',
+    'phone_number'           => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
+    'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
         'value' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
@@ -161,13 +173,16 @@ $response = $instance->v3->brand->partner->cardMember->userCards->importByOpenid
         'user_chosen_values' => ['vvysDQeEaH3I+wRh14St0abIkvQyFgh/'],
       ],],
     ],
-    'date_information' => [
+    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
+    'card_color'             => '#FFFF00',
+    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/PiajxSqBRaEIPAeia7Imvtsn7sYGNcEj33YzVvJF88ECQ19LXId8ZL2Q/0',
+    'level'                  => '钻石会员',
+    'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
-      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
-      'available_day_after_receive' => 200,
+      'available_end_time'          => '2020-05-20T13:29:35.120+08:00',
+      'available_day_after_receive' => 30,
     ],
-    'pickup_time'      => '2020-05-20T13:29:35.120+08:00',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -179,12 +194,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/brand/partner/card-member/user-cards/import-by-openid')->post([
   'json' => [
-    'brand_id'         => '1004',
-    'card_id'          => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'openid'           => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'user_card_code'   => '478515832665',
-    'phone_number'     => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
-    'user_information' => [
+    'brand_id'               => '1004',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'openid'                 => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'user_card_code'         => '478515832665',
+    'phone_number'           => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
+    'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
         'value' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
@@ -194,13 +209,16 @@ $response = $instance->chain('v3/brand/partner/card-member/user-cards/import-by-
         'user_chosen_values' => ['vvysDQeEaH3I+wRh14St0abIkvQyFgh/'],
       ],],
     ],
-    'date_information' => [
+    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
+    'card_color'             => '#FFFF00',
+    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/PiajxSqBRaEIPAeia7Imvtsn7sYGNcEj33YzVvJF88ECQ19LXId8ZL2Q/0',
+    'level'                  => '钻石会员',
+    'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
-      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
-      'available_day_after_receive' => 200,
+      'available_end_time'          => '2020-05-20T13:29:35.120+08:00',
+      'available_day_after_receive' => 30,
     ],
-    'pickup_time'      => '2020-05-20T13:29:35.120+08:00',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -212,12 +230,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/brand/partner/card-member/user-cards/import-by-openid']->post([
   'json' => [
-    'brand_id'         => '1004',
-    'card_id'          => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
-    'openid'           => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
-    'user_card_code'   => '478515832665',
-    'phone_number'     => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
-    'user_information' => [
+    'brand_id'               => '1004',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'openid'                 => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
+    'user_card_code'         => '478515832665',
+    'phone_number'           => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
+    'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
         'value' => 'vvysDQeEaH3I+wRh14St0abIkvQyFgh/fbWY==',
@@ -227,13 +245,16 @@ $response = $instance['v3/brand/partner/card-member/user-cards/import-by-openid'
         'user_chosen_values' => ['vvysDQeEaH3I+wRh14St0abIkvQyFgh/'],
       ],],
     ],
-    'date_information' => [
+    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
+    'card_color'             => '#FFFF00',
+    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/PiajxSqBRaEIPAeia7Imvtsn7sYGNcEj33YzVvJF88ECQ19LXId8ZL2Q/0',
+    'level'                  => '钻石会员',
+    'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
-      'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
-      'available_day_after_receive' => 200,
+      'available_end_time'          => '2020-05-20T13:29:35.120+08:00',
+      'available_day_after_receive' => 30,
     ],
-    'pickup_time'      => '2020-05-20T13:29:35.120+08:00',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -272,6 +293,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_state {data-required} | string | 用户会员卡状态<br/>`UNACTIVATED` \| `EFFECTIVE` \| `EXPIRED` \| `INVALID` 枚举值之一
 | invalid_reason | string | 作废原因
 | invalid_time | string | 作废时间
+| create_time {data-required} | string | 创建时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 

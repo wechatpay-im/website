@@ -18,8 +18,9 @@
 | brand_mini_program_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 品牌小程序信息
 | appid {data-required data-indent=2} | string | 公众账号ID
 | default_jump_path {data-indent=2} | string | 小程序默认跳转路径
+| button_text {data-indent=2} | string | 小程序跳转按钮文案
 | brand_customer_service {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 品牌客服信息
-| customer_service_type {data-required data-indent=2} | string | 客服类型<br/>`MINI_PROGRAM` \| `CUSTOMIZE_WEB` \| `CUSTOMIZE_MP` \| `SERVICE_PHONE` 枚举值之一
+| customer_service_type {data-required data-indent=2} | string | 客服类型<br/>`MINI_PROGRAM` \| `CUSTOMIZE_WEB` \| `CUSTOMIZE_MP` \| `SERVICE_PHONE` \| `WECOM` 枚举值之一
 | customer_service_phone {data-indent=2} | string | 客服电话
 | customer_service_path {data-indent=2} | string | 客服路径
 | appid {data-indent=2} | string | 公众账号ID
@@ -42,6 +43,7 @@ $instance->v3->brand->card->cardConfigs->postAsync([
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
       'default_jump_path' => 'pages/shop/index',
+      'button_text'       => '前往小程序',
     ],
     'brand_customer_service'  => [
       'customer_service_type'  => 'MINI_PROGRAM',
@@ -72,6 +74,7 @@ $instance->chain('v3/brand/card/card-configs')->postAsync([
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
       'default_jump_path' => 'pages/shop/index',
+      'button_text'       => '前往小程序',
     ],
     'brand_customer_service'  => [
       'customer_service_type'  => 'MINI_PROGRAM',
@@ -102,6 +105,7 @@ $instance['v3/brand/card/card-configs']->postAsync([
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
       'default_jump_path' => 'pages/shop/index',
+      'button_text'       => '前往小程序',
     ],
     'brand_customer_service'  => [
       'customer_service_type'  => 'MINI_PROGRAM',
@@ -132,6 +136,7 @@ $response = $instance->v3->brand->card->cardConfigs->post([
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
       'default_jump_path' => 'pages/shop/index',
+      'button_text'       => '前往小程序',
     ],
     'brand_customer_service'  => [
       'customer_service_type'  => 'MINI_PROGRAM',
@@ -159,6 +164,7 @@ $response = $instance->chain('v3/brand/card/card-configs')->post([
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
       'default_jump_path' => 'pages/shop/index',
+      'button_text'       => '前往小程序',
     ],
     'brand_customer_service'  => [
       'customer_service_type'  => 'MINI_PROGRAM',
@@ -186,6 +192,7 @@ $response = $instance['v3/brand/card/card-configs']->post([
     'brand_mini_program_info' => [
       'appid'             => 'wx1234567890abcdef',
       'default_jump_path' => 'pages/shop/index',
+      'button_text'       => '前往小程序',
     ],
     'brand_customer_service'  => [
       'customer_service_type'  => 'MINI_PROGRAM',
@@ -213,6 +220,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required} | string | 品牌ID
 | applyment_id {data-required} | string | 微信支付申请单号
 | card_preview_url {data-required} | string | 商家名片预览二维码链接
+| url_expired_time {data-required} | string | 预览二维码链接过期时间
 
 {.im-table #response}
 

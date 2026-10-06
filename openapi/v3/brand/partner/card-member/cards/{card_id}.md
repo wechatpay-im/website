@@ -129,7 +129,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | values {data-indent=2} | string[] | 字段值
 | state {data-required} | string | 状态<br/>`CARD_EFFECTIVE` \| `CARD_INVALID` 枚举值之一
 | create_time {data-required} | string | 创建时间
-| update_time {data-required} | string | 更新时间
+| out_request_no {data-required} | string | 商家请求单号
+| member_information {data-required} | object {data-tooltip="对应PHP的array"} | 会员中心信息
+| jump_appid {data-required data-indent=1} | string | 会员中心跳转AppID
+| jump_path {data-required data-indent=1} | string | 会员中心跳转路径
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 
@@ -154,9 +158,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | notify_url {data-indent=1} | string | 回调地址
 | need_pinned {data-indent=1} | boolean | 是否置顶
 | need_display_level {data-indent=1} | boolean | 是否展示会员等级
-| init_level {data-indent=1} | string | 会员初始等级
 | service_phone {data-indent=1} | string | 服务电话
-| legal_agreement {data-indent=1} | string | 商家法务协议
 | valid_date_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员卡有效期
 | type {data-required data-indent=2} | string | 有效期类型<br/>`FIX_TIME_RANGE` \| `FIX_TERM` \| `PERMANENT` 枚举值之一
 | available_begin_time {data-indent=2} | string | 有效期开始时间
@@ -178,6 +180,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-indent=3} | string | 商户自定义的开卡信息字段类型<br/>`CHECK_BOX` \| `RADIO` 枚举值之一
 | name {data-indent=3} | string | 字段名称
 | values {data-indent=3} | string[] | 字段值
+| member_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员中心信息
+| jump_appid {data-required data-indent=2} | string | 会员中心跳转AppID
+| jump_path {data-required data-indent=2} | string | 会员中心跳转路径
 
 {.im-table #request}
 
@@ -199,9 +204,7 @@ $instance->v3->brand->partner->cardMember->cards->_card_id_->patchAsync([
     'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
     'need_pinned'            => true,
     'need_display_level'     => true,
-    'init_level'             => '白银会员',
     'service_phone'          => '010-8877xxxx',
-    'legal_agreement'        => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
     'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
@@ -228,6 +231,10 @@ $instance->v3->brand->partner->cardMember->cards->_card_id_->patchAsync([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ])
@@ -253,9 +260,7 @@ $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->patchAsync([
     'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
     'need_pinned'            => true,
     'need_display_level'     => true,
-    'init_level'             => '白银会员',
     'service_phone'          => '010-8877xxxx',
-    'legal_agreement'        => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
     'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
@@ -282,6 +287,10 @@ $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->patchAsync([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ])
@@ -307,9 +316,7 @@ $instance['v3/brand/partner/card-member/cards/{card_id}']->patchAsync([
     'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
     'need_pinned'            => true,
     'need_display_level'     => true,
-    'init_level'             => '白银会员',
     'service_phone'          => '010-8877xxxx',
-    'legal_agreement'        => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
     'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
@@ -336,6 +343,10 @@ $instance['v3/brand/partner/card-member/cards/{card_id}']->patchAsync([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ])
@@ -361,9 +372,7 @@ $response = $instance->v3->brand->partner->cardMember->cards->_card_id_->patch([
     'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
     'need_pinned'            => true,
     'need_display_level'     => true,
-    'init_level'             => '白银会员',
     'service_phone'          => '010-8877xxxx',
-    'legal_agreement'        => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
     'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
@@ -390,6 +399,10 @@ $response = $instance->v3->brand->partner->cardMember->cards->_card_id_->patch([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ]);
@@ -412,9 +425,7 @@ $response = $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->pa
     'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
     'need_pinned'            => true,
     'need_display_level'     => true,
-    'init_level'             => '白银会员',
     'service_phone'          => '010-8877xxxx',
-    'legal_agreement'        => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
     'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
@@ -441,6 +452,10 @@ $response = $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->pa
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ]);
@@ -463,9 +478,7 @@ $response = $instance['v3/brand/partner/card-member/cards/{card_id}']->patch([
     'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
     'need_pinned'            => true,
     'need_display_level'     => true,
-    'init_level'             => '白银会员',
     'service_phone'          => '010-8877xxxx',
-    'legal_agreement'        => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
     'valid_date_information' => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
@@ -492,6 +505,10 @@ $response = $instance['v3/brand/partner/card-member/cards/{card_id}']->patch([
         'name'   => '喜欢的运动',
         'values' => ['篮球'],
       ],],
+    ],
+    'member_information'     => [
+      'jump_appid' => 'wxea9c30a90fs8d3fe',
+      'jump_path'  => '/pages/points/points',
     ],
   ],
 ]);
@@ -544,7 +561,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | values {data-indent=2} | string[] | 字段值
 | state {data-required} | string | 状态<br/>`CARD_EFFECTIVE` \| `CARD_INVALID` 枚举值之一
 | create_time {data-required} | string | 创建时间
-| update_time {data-required} | string | 更新时间
+| out_request_no {data-required} | string | 商家请求单号
+| member_information {data-required} | object {data-tooltip="对应PHP的array"} | 会员中心信息
+| jump_appid {data-required data-indent=1} | string | 会员中心跳转AppID
+| jump_path {data-required data-indent=1} | string | 会员中心跳转路径
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 

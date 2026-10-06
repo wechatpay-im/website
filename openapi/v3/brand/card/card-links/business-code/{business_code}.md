@@ -96,7 +96,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid | string | 公众账号ID
 | card_link_mchid | string | 商户号
 | service_id | string | 服务ID
-| configuration_state {data-required} | string | 交易连接名片配置状态<br/>`WAITING_AUDIT` \| `AUDIT_REJECT` \| `WAITING_CONFIRMATION` \| `MERCHANT_ADMIN_REJECT` \| `IN_EFFECT` 枚举值之一
+| configuration_state {data-required} | string | 交易连接名片配置状态<br/>`WAITING_AUDIT` \| `AUDIT_REJECT` \| `WAITING_CONFIRMATION` \| `MERCHANT_ADMIN_REJECT` \| `IN_EFFECT` \| `STATE_UNKNOWN` \| `CANCELED` 枚举值之一
 | reject_reason | string | 驳回原因
 
 {.im-table #response}

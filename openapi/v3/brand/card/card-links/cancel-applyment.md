@@ -91,6 +91,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | business_code {data-required} | string | 业务申请编号
+| brand_id {data-required} | string | 品牌ID
 
 {.im-table #response}
 

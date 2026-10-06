@@ -141,6 +141,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_state {data-required data-indent=1} | string | 用户会员卡状态<br/>`UNACTIVATED` \| `EFFECTIVE` \| `EXPIRED` \| `INVALID` 枚举值之一
 | invalid_reason {data-indent=1} | string | 作废原因
 | invalid_time {data-indent=1} | string | 作废时间
+| create_time {data-required data-indent=1} | string | 创建时间
+| modify_time {data-required data-indent=1} | string | 更新时间
 
 {.im-table #response}
 

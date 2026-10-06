@@ -127,6 +127,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_state {data-required} | string | 用户会员卡状态<br/>`UNACTIVATED` \| `EFFECTIVE` \| `EXPIRED` \| `INVALID` 枚举值之一
 | invalid_reason | string | 作废原因
 | invalid_time | string | 作废时间
+| create_time {data-required} | string | 创建时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 
@@ -151,7 +153,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_begin_time {data-indent=2} | string | 有效期开始时间
 | available_end_time {data-indent=2} | string | 有效期结束时间
 | available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
-| pickup_time {data-indent=1} | string | 领取时间
 | user_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户开卡时填写的个人信息
 | common_field_list {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 平台提供的通用开卡信息字段
 | name {data-indent=3} | string | 平台提供的通用开卡信息字段<br/>`USER_FORM_FLAG_SEX` \| `USER_FORM_FLAG_NAME` \| `USER_FORM_FLAG_BIRTHDAY` \| `USER_FORM_FLAG_ADDRESS` \| `USER_FORM_FLAG_EMAIL` \| `USER_FORM_FLAG_CITY` 枚举值之一
@@ -160,7 +161,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | name {data-indent=3} | string | 字段名称
 | user_chosen_values {data-indent=3} | string[] | 加密的用户选择的字段值列表
 | attach {data-indent=1} | string | 商家数据包
-| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | card_id {data-required data-indent=1} | string | 会员卡模板ID
 
 {.im-table #request}
@@ -183,7 +183,6 @@ $instance->v3->brand->partner->cardMember->userCards->_user_card_code_->patchAsy
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
     'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
@@ -195,9 +194,7 @@ $instance->v3->brand->partner->cardMember->userCards->_user_card_code_->patchAsy
       ],],
     ],
     'attach'                 => '自定义数据说明',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -222,7 +219,6 @@ $instance->chain('v3/brand/partner/card-member/user-cards/{user_card_code}')->pa
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
     'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
@@ -234,9 +230,7 @@ $instance->chain('v3/brand/partner/card-member/user-cards/{user_card_code}')->pa
       ],],
     ],
     'attach'                 => '自定义数据说明',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -261,7 +255,6 @@ $instance['v3/brand/partner/card-member/user-cards/{user_card_code}']->patchAsyn
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
     'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
@@ -273,9 +266,7 @@ $instance['v3/brand/partner/card-member/user-cards/{user_card_code}']->patchAsyn
       ],],
     ],
     'attach'                 => '自定义数据说明',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -300,7 +291,6 @@ $response = $instance->v3->brand->partner->cardMember->userCards->_user_card_cod
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
     'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
@@ -312,9 +302,7 @@ $response = $instance->v3->brand->partner->cardMember->userCards->_user_card_cod
       ],],
     ],
     'attach'                 => '自定义数据说明',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -336,7 +324,6 @@ $response = $instance->chain('v3/brand/partner/card-member/user-cards/{user_card
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
     'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
@@ -348,9 +335,7 @@ $response = $instance->chain('v3/brand/partner/card-member/user-cards/{user_card
       ],],
     ],
     'attach'                 => '自定义数据说明',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -372,7 +357,6 @@ $response = $instance['v3/brand/partner/card-member/user-cards/{user_card_code}'
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'pickup_time'            => '2020-05-20T13:29:35.120+08:00',
     'user_information'       => [
       'common_field_list' => [[
         'name'  => 'USER_FORM_FLAG_SEX',
@@ -384,9 +368,7 @@ $response = $instance['v3/brand/partner/card-member/user-cards/{user_card_code}'
       ],],
     ],
     'attach'                 => '自定义数据说明',
-  ],
-  'query' => [
-    'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'card_id'                => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -422,6 +404,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_state {data-required} | string | 用户会员卡状态<br/>`UNACTIVATED` \| `EFFECTIVE` \| `EXPIRED` \| `INVALID` 枚举值之一
 | invalid_reason | string | 作废原因
 | invalid_time | string | 作废时间
+| create_time {data-required} | string | 创建时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 

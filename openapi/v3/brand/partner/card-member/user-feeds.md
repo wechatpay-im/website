@@ -15,7 +15,7 @@ description: 通过此接口同步非微信支付渠道的会员动态信息到�
 | user_card_code {data-required data-indent=1} | string | 会员卡code
 | openid {data-required data-indent=1} | string | 用户标识
 | out_request_no {data-required data-indent=1} | string | 商家请求单号
-| cell_message {data-required data-indent=1} | string | 会员动态内容
+| cell {data-required data-indent=1} | string | 会员动态内容
 
 {.im-table #request}
 
@@ -29,7 +29,7 @@ $instance->v3->brand->partner->cardMember->userFeeds->postAsync([
     'user_card_code' => '478515832665',
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'out_request_no' => '100002322019090134234sfdf',
-    'cell_message'   => '15_1200_1',
+    'cell'           => '15_1200_1',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -46,7 +46,7 @@ $instance->chain('v3/brand/partner/card-member/user-feeds')->postAsync([
     'user_card_code' => '478515832665',
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'out_request_no' => '100002322019090134234sfdf',
-    'cell_message'   => '15_1200_1',
+    'cell'           => '15_1200_1',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,7 +63,7 @@ $instance['v3/brand/partner/card-member/user-feeds']->postAsync([
     'user_card_code' => '478515832665',
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'out_request_no' => '100002322019090134234sfdf',
-    'cell_message'   => '15_1200_1',
+    'cell'           => '15_1200_1',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,7 +80,7 @@ $response = $instance->v3->brand->partner->cardMember->userFeeds->post([
     'user_card_code' => '478515832665',
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'out_request_no' => '100002322019090134234sfdf',
-    'cell_message'   => '15_1200_1',
+    'cell'           => '15_1200_1',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,7 +94,7 @@ $response = $instance->chain('v3/brand/partner/card-member/user-feeds')->post([
     'user_card_code' => '478515832665',
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'out_request_no' => '100002322019090134234sfdf',
-    'cell_message'   => '15_1200_1',
+    'cell'           => '15_1200_1',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -108,7 +108,7 @@ $response = $instance['v3/brand/partner/card-member/user-feeds']->post([
     'user_card_code' => '478515832665',
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'out_request_no' => '100002322019090134234sfdf',
-    'cell_message'   => '15_1200_1',
+    'cell'           => '15_1200_1',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -121,9 +121,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required} | string | 品牌ID
 | card_id {data-required} | string | 会员卡模板ID
 | user_card_code {data-required} | string | 会员卡code
-| openid {data-required} | string | 用户标识
 | out_request_no {data-required} | string | 商家请求单号
-| cell_message {data-required} | string | 会员动态内容
+| cell {data-required} | string | 会员动态内容
 
 {.im-table #response}
 

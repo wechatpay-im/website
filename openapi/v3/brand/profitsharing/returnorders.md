@@ -159,7 +159,7 @@ $instance->v3->brand->profitsharing->returnorders->getAsync([
     'sub_mchid'     => '1900000109',
     'out_return_no' => 'R20190516001',
     'order_id'      => '4208450740201411110007820472',
-    'out_order_no'  => '',
+    'out_order_no'  => 'P20190806125346',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -174,7 +174,7 @@ $instance->chain('v3/brand/profitsharing/returnorders')->getAsync([
     'sub_mchid'     => '1900000109',
     'out_return_no' => 'R20190516001',
     'order_id'      => '4208450740201411110007820472',
-    'out_order_no'  => '',
+    'out_order_no'  => 'P20190806125346',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -189,7 +189,7 @@ $instance['v3/brand/profitsharing/returnorders']->getAsync([
     'sub_mchid'     => '1900000109',
     'out_return_no' => 'R20190516001',
     'order_id'      => '4208450740201411110007820472',
-    'out_order_no'  => '',
+    'out_order_no'  => 'P20190806125346',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -204,7 +204,7 @@ $response = $instance->v3->brand->profitsharing->returnorders->get([
     'sub_mchid'     => '1900000109',
     'out_return_no' => 'R20190516001',
     'order_id'      => '4208450740201411110007820472',
-    'out_order_no'  => '',
+    'out_order_no'  => 'P20190806125346',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -216,7 +216,7 @@ $response = $instance->chain('v3/brand/profitsharing/returnorders')->get([
     'sub_mchid'     => '1900000109',
     'out_return_no' => 'R20190516001',
     'order_id'      => '4208450740201411110007820472',
-    'out_order_no'  => '',
+    'out_order_no'  => 'P20190806125346',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -228,7 +228,7 @@ $response = $instance['v3/brand/profitsharing/returnorders']->get([
     'sub_mchid'     => '1900000109',
     'out_return_no' => 'R20190516001',
     'order_id'      => '4208450740201411110007820472',
-    'out_order_no'  => '',
+    'out_order_no'  => 'P20190806125346',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

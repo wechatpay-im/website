@@ -13,9 +13,8 @@ description: 将用户的会员卡设置为失效状态。注意：1.设置卡�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | openid {data-required data-indent=1} | string | 用户标识
 | invalid_reason {data-indent=1} | string | 作废原因
-| query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| brand_id {data-required data-indent=1} | string | 品牌id
-| card_id {data-required data-indent=1} | string | 会员卡模版ID
+| brand_id {data-required data-indent=1} | string | 品牌ID
+| card_id {data-required data-indent=1} | string | 会员卡模板ID
 
 {.im-table #request}
 
@@ -27,10 +26,8 @@ $instance->v3->brand->partner->cardMember->userCards->_user_card_code_->invalida
   'json' => [
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'invalid_reason' => '传入的自定义作废原因',
-  ],
-  'query' => [
-    'brand_id' => '1004',
-    'card_id'  => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'brand_id'       => '1004',
+    'card_id'        => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -45,10 +42,8 @@ $instance->chain('v3/brand/partner/card-member/user-cards/{user_card_code}/inval
   'json' => [
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'invalid_reason' => '传入的自定义作废原因',
-  ],
-  'query' => [
-    'brand_id' => '1004',
-    'card_id'  => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'brand_id'       => '1004',
+    'card_id'        => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,10 +58,8 @@ $instance['v3/brand/partner/card-member/user-cards/{user_card_code}/invalidate']
   'json' => [
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'invalid_reason' => '传入的自定义作废原因',
-  ],
-  'query' => [
-    'brand_id' => '1004',
-    'card_id'  => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'brand_id'       => '1004',
+    'card_id'        => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -81,10 +74,8 @@ $response = $instance->v3->brand->partner->cardMember->userCards->_user_card_cod
   'json' => [
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'invalid_reason' => '传入的自定义作废原因',
-  ],
-  'query' => [
-    'brand_id' => '1004',
-    'card_id'  => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'brand_id'       => '1004',
+    'card_id'        => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -96,10 +87,8 @@ $response = $instance->chain('v3/brand/partner/card-member/user-cards/{user_card
   'json' => [
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'invalid_reason' => '传入的自定义作废原因',
-  ],
-  'query' => [
-    'brand_id' => '1004',
-    'card_id'  => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'brand_id'       => '1004',
+    'card_id'        => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -111,10 +100,8 @@ $response = $instance['v3/brand/partner/card-member/user-cards/{user_card_code}/
   'json' => [
     'openid'         => 'obLatjnx9gnqzS4myYGmLZ7LgLBA',
     'invalid_reason' => '传入的自定义作废原因',
-  ],
-  'query' => [
-    'brand_id' => '1004',
-    'card_id'  => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
+    'brand_id'       => '1004',
+    'card_id'        => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -150,6 +137,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_card_state {data-required} | string | 用户会员卡状态<br/>`UNACTIVATED` \| `EFFECTIVE` \| `EXPIRED` \| `INVALID` 枚举值之一
 | invalid_reason | string | 作废原因
 | invalid_time | string | 作废时间
+| create_time {data-required} | string | 创建时间
+| modify_time {data-required} | string | 更新时间
 
 {.im-table #response}
 
