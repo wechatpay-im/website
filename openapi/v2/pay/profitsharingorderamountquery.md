@@ -104,6 +104,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | unsplit_amount | integer | 订单剩余待分金额
 | nonce_str | string | 随机字符串
 | sign | string | 签名
+| error_code | string | 错误代码
+| error_msg | string | 返回信息
 
 {.im-table #response}
 

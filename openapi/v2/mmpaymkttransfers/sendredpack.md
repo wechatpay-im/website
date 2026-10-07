@@ -247,6 +247,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | re_openid {data-required} | string | 用户openid
 | total_amount {data-required} | integer | 付款金额
 | send_listid {data-required} | string | 微信单号
+| package | string | Jsapi的入参
 
 {.im-table #response}
 

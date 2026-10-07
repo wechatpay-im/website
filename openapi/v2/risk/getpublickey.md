@@ -111,6 +111,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | mch_id | string | 商户号
 | pub_key | string | RSA公钥
+| err_code | string | 错误代码
+| err_code_des | string | 错误代码描述
 
 {.im-table #response}
 

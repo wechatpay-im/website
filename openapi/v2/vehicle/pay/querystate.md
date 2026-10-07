@@ -16,7 +16,7 @@ description: 在停车场、高速、加油等场景下，商户需获取用户�
 | trade_scene {data-required data-indent=1} | string | 交易场景<br/>`PARKING` \| `PARKING SPACE` \| `GAS` \| `HIGHWAY` \| `BRIDGE` 枚举值之一
 | jump_scene {data-indent=1} | string | 跳转场景<br/>`APP` \| `H5` 枚举值之一
 | openid {data-required data-indent=1} | string | 用户标识
-| version {data-required data-indent=1} | string | 版本号<br/>`3.0` 枚举值
+| version {data-required data-indent=1} | string | 版本号<br/>`3.0` \| `2.0` 枚举值之一
 
 {.im-table #request}
 
@@ -142,7 +142,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | {colspan=3 .im-table-line}
 | plate_number_info {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 车牌信息列表
 | plate_number {data-indent=2} | string | 车牌号
-| channel_type {data-indent=2} | string | 车牌通道标识
+| channel_type {data-indent=2} | string | 车牌通道标识<br/>`MTC` \| `ETC` \| `ETC;MTC` 枚举值之一
 | common_use_flag {data-indent=2} | string | 常用车牌标志<br/>`COMMON_USE` 枚举值
 
 {.im-table #response}

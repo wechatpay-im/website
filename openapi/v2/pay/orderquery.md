@@ -149,7 +149,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_openid | string | 用户子标识
 | sub_is_subscribe | string | 是否关注子公众账号<br/>`Y` \| `N` 枚举值之一
 | trade_type {data-required} | string | 交易类型
-| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` 枚举值之一
+| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` \| `PAY_FAIL` \| `SETTLING` \| `CONSUMED` 枚举值之一
 | bank_type {data-required} | string | 付款银行
 | total_fee {data-required} | integer | 标价金额
 | settlement_total_fee | integer | 应结订单金额
@@ -184,6 +184,14 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | quantity {data-required data-indent=2} | number | 商品数量
 | price {data-required data-indent=2} | number | 商品单价
 | consume_fee | integer | 押金消费金额
+| detail | string {data-tooltip=使用json_encode后的字符串 data-encoded=by-json_encode} | 商品详情
+| {colspan=3 .im-table-line}
+| goods_detail {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品列表
+| goods_id {data-indent=2} | string | 商品编码
+| wxpay_goods_id {data-indent=2} | string | 微信支付商品编码
+| goods_name {data-indent=2} | string | 商品名称
+| quantity {data-required data-indent=2} | number | 商品数量
+| price {data-required data-indent=2} | number | 商品单价
 
 {.im-table #response}
 

@@ -427,6 +427,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | goods_name {data-indent=2} | string | 商品名称
 | quantity {data-required data-indent=2} | number | 商品数量
 | price {data-required data-indent=2} | number | 商品单价
+| sub_openid | string | 用户子标识
+| sub_is_subscribe | string | 该字段已废弃
 
 {.im-table #response}
 

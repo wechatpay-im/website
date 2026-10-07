@@ -139,9 +139,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | act_name | string | 活动名称
 | hblist | object {data-tooltip="对应PHP的array"} | 红包领取记录
 | hbinfo {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 裂变红包领取列表
-| openid {data-indent=2} | string | 领取红包的Openid
-| amount {data-indent=2} | integer | 金额
-| rcv_time {data-indent=2} | string | 接收时间
+| openid {data-required data-indent=2} | string | 领取红包的Openid
+| amount {data-required data-indent=2} | integer | 金额
+| rcv_time {data-required data-indent=2} | string | 接收时间
 
 {.im-table #response}
 

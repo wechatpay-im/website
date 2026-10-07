@@ -125,8 +125,10 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | nonce_str {data-required} | string | 随机字符串
 | sign {data-required} | string | 签名
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
-| err_code | string | 错误代码
+| err_code | string | 错误代码<br/>`SYSTEMERROR` \| `URLFORMATERROR` 枚举值之一
 | short_url {data-required} | string | URL链接
+| sub_appid | string | 子商户公众账号ID
+| sub_mch_id | string | 子商户号
 
 {.im-table #response}
 

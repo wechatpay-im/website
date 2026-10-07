@@ -214,7 +214,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| user_state {data-required} | string | 用户状态<br/>`NORMAL` \| `BLOCK` 枚举值之一
+| user_state {data-required} | string | 用户状态<br/>`NORMAL` \| `BLOCK` \| `BLOCKED` 枚举值之一
 | deduct_mode | string | 发起扣费方式<br/>`PROACTIVE` \| `AUTOPAY` 枚举值之一
 
 {.im-table #response}

@@ -204,7 +204,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
-| state {data-required} | string | 状态码<br/>`NDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` 枚举值之一
+| state {data-required} | string | 状态码<br/>`NDECLARED` \| `SUBMITTED` \| `PROCESSING` \| `SUCCESS` \| `FAIL` \| `EXCEPT` \| `UNDECLARED` 枚举值之一
 | transaction_id {data-required} | string | 微信支付订单号
 | out_trade_no {data-required} | string | 商户订单号
 | sub_order_no | string | 商户子订单号

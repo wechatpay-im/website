@@ -99,6 +99,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_code {data-required} | string | 返回状态码<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | mch_id {data-required} | string | 商户号
 | certificates {data-required} | string | 平台证书信息
+| err_code | string | 错误代码
+| err_code_des | string | 错误代码描述
 
 {.im-table #response}
 

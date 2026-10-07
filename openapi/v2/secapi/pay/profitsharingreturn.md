@@ -190,6 +190,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result | string | 回退结果<br/>`SUCCESS` \| `PROCESSING` \| `FAILED` 枚举值之一
 | fail_reason | string | 失败原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | finish_time | string | 完成时间
+| error_code | string | 错误代码
+| error_msg | string | 返回信息
 
 {.im-table #response}
 

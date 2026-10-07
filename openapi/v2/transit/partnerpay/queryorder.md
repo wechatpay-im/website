@@ -148,7 +148,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sub_openid | string | 用户子标识
 | is_subscribe | string | 是否关注公众账号<br/>`Y` \| `N` 枚举值之一
 | trade_type {data-required} | string | 交易类型<br/>`PAP` 枚举值
-| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` 枚举值之一
+| trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` \| `PAY_FAIL` 枚举值之一
 | bank_type {data-required} | string | 付款银行
 | total_fee {data-required} | integer | 总金额
 | fee_type | string | 货币种类
@@ -165,6 +165,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | attach | string | 附加数据
 | time_end {data-required} | string | 支付完成时间
 | trade_state_desc | string | 交易状态描述
+| user_repaid | string | ⽤户是否已还款
+| contract_id | string | 委托代扣协议id
 
 {.im-table #response}
 
