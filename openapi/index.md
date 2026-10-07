@@ -150,11 +150,10 @@ next:
 | [商家明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-out-batches/{out_batch_no}/out-details/{out_detail_no})
 | [微信支付批次单号查询批次单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no})
 | [微信支付明细单号查询明细单](/openapi/v3/fund-app/brand-redpacket/brand-merchant-batches/{batch_no}/details/{detail_no})
-| 商家名片会员 {data-protocol=v3 rowspan=18} | | [创建会员卡模板](/openapi/v3/brand/partner/card-member/cards#post)
+| 商家名片会员 {data-protocol=v3 rowspan=17} | | [创建会员卡模板](/openapi/v3/brand/partner/card-member/cards#post)
 | | [查询会员卡模板列表](/openapi/v3/brand/partner/card-member/cards#get)
 | | [查询会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#get)
 | | [修改会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#patch)
-| | [删除会员卡模板信息](/openapi/v3/brand/partner/card-member/cards/{card_id}#delete)
 | | [作废会员卡模板](/openapi/v3/brand/partner/card-member/cards/{card_id}/invalidate)
 | | [查询品牌用户的所有会员卡](/openapi/v3/brand/partner/card-member/user-cards)
 | | [查询品牌用户会员卡信息](/openapi/v3/brand/partner/card-member/user-cards/{user_card_code}#get)
@@ -205,7 +204,7 @@ next:
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
 | [下载账单文件](/openapi/v3/billdownload/file) {colspan=2}
-| 会员卡 {data-protocol=v3 rowspan=34} | [设置回调地址](/openapi/v3/marketing/membercard-open/callback#patch) {colspan=2}
+| 会员卡 {data-protocol=v3 rowspan=35} | [设置回调地址](/openapi/v3/marketing/membercard-open/callback#patch) {colspan=2}
 | [查询回调地址](/openapi/v3/marketing/membercard-open/callback#get) {colspan=2}
 | [创建会员卡模板](/openapi/v3/marketing/membercard-open/cards#post) {colspan=2}
 | [查询会员卡模板列表](/openapi/v3/marketing/membercard-open/cards#get) {colspan=2}
@@ -227,6 +226,7 @@ next:
 | [获取用户信息(跳转型激活)](/openapi/v3/marketing/membercard-open/activate-informations/{activate_ticket}) {colspan=2}
 | [查询用户会员卡信息](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}#get) {colspan=2}
 | [修改用户会员卡信息](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}#patch) {colspan=2}
+| [确认用户入会](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/confirm) {colspan=2}
 | [作废用户会员卡](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/unavailable) {colspan=2}
 | [设置会员权益](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/rights) {colspan=2}
 | [支付结果页展示会员积分](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/prepare) {colspan=2}
