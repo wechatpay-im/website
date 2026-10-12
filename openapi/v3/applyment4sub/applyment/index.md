@@ -71,7 +71,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 | org_period_end {data-required data-indent=3} | string | 组织机构代码证有效期结束日期
 | certificate_letter_copy {data-indent=2} | string | 单位证明函照片
 | finance_institution_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 金融机构许可证信息
-| finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
+| finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `SMALL_LOAN` \| `OTHER` 枚举值之一
 | finance_license_pics {data-indent=3} | string[] | 金融机构许可证图片
 | identity_info {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 经营者/法人身份证件
 | id_holder_type {data-indent=3} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一

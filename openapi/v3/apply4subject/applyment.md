@@ -53,7 +53,7 @@
 | category_id {data-required data-indent=3} | integer | 行业ID<br/>`44` \| `33` \| `22` \| `41` \| `42` \| `49` \| `50` \| `51` \| `36` \| `54` \| `55` \| `32` \| `52` 枚举值之一
 | store_indoor_copy {data-indent=3} | string[] | 店内环境照片
 | finance_institution_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 金融机构许可证信息
-| finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `OTHER` 枚举值之一
+| finance_type {data-indent=3} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `SMALL_LOAN` \| `OTHER` 枚举值之一
 | finance_license_pics {data-indent=3} | string[] | 金融机构许可证图片
 | identification_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 法人身份信息
 | id_holder_type {data-indent=2} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
