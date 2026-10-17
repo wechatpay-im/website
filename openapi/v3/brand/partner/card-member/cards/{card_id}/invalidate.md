@@ -137,6 +137,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | state {data-required} | string | 状态<br/>`CARD_EFFECTIVE` \| `CARD_INVALID` 枚举值之一
 | create_time {data-required} | string | 创建时间
 | modify_time {data-required} | string | 更新时间
+| support_user_active_join | boolean | 是否支持用户主动入会
+| purchase_membership | boolean | 是否为付费会员
 
 {.im-table #response}
 

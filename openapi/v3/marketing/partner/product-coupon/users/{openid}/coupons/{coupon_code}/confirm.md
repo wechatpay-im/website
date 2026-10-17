@@ -153,6 +153,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | saved_amount {data-indent=1} | number | 优惠金额
 | return_request_no {data-indent=1} | string | 退券请求单号
 | return_time {data-indent=1} | string | 退券时间
+| use_product_no_list {data-indent=1} | string[] | 核销商品编码列表
 | progressive_bundle_usage_detail | object {data-tooltip="对应PHP的array"} | 多次优惠使用详情
 | use_request_no {data-indent=1} | string | 券核销请求单号
 | use_time {data-indent=1} | string | 券核销时间
@@ -169,6 +170,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-indent=2} | string | 商户号
 | sub_mchid {data-indent=2} | string | 子商户号
 | saved_amount {data-indent=1} | integer | 优惠金额
+| use_product_no_list {data-indent=1} | string[] | 核销商品编码列表
 | product_coupon {data-required} | object {data-tooltip="对应PHP的array"} | 商品券信息
 | product_coupon_id {data-required data-indent=1} | string | 商品券ID
 | state {data-required data-indent=1} | string | 商品券状态<br/>`AUDITING` \| `EFFECTIVE` \| `DEACTIVATED` 枚举值之一
@@ -206,6 +208,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | progressive_bundle_usage_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
 | count {data-required data-indent=2} | integer | 可使用次数
 | interval_days {data-indent=2} | integer | 多次优惠使用间隔天数
+| show_as_exchange {data-indent=1} | boolean | 是否展示兑换价
+| available_product_no_list {data-indent=1} | string[] | 可用商品编码列表
 | stock {data-required} | object {data-tooltip="对应PHP的array"} | 批次信息
 | product_coupon_id {data-required data-indent=1} | string | 商品券ID
 | stock_id {data-required data-indent=1} | string | 批次ID
@@ -264,10 +268,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-required data-indent=3} | string | 引导文案
 | entrance_official_account {data-indent=2} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=3} | string | 公众号AppID
-| entrance_finder {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=3} | string | 视频号ID
-| finder_video_id {data-required data-indent=3} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=3} | string | 视频号封面图
 | notify_config {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=2} | string | 事件通知appid
 | store_scope {data-required data-indent=1} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -314,7 +314,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | total_count {data-required data-indent=1} | integer | 总可使用次数
 | used_count {data-required data-indent=1} | integer | 已使用次数
 | coupon_tag_info | object {data-tooltip="对应PHP的array"} | 用户商品券标签信息
-| coupon_tag_list {data-indent=1} | string[] | 用户商品券标签列表<br/>`MEMBER` 枚举值
+| coupon_tag_list {data-indent=1} | string[] | 用户商品券标签列表<br/>`MEMBER` \| `MEMBER_ACTIVITY` 枚举值之一
 | member_tag_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员标签信息
 | member_card_id {data-indent=2} | string | 会员卡模板ID
 

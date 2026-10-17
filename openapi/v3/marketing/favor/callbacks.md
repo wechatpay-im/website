@@ -82,6 +82,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | mchid {data-required} | string | 商户号
 | notify_url {data-required} | string | 通知地址
+| appid | string | 公众账号ID
 
 {.im-table #response}
 
@@ -97,6 +98,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-required data-indent=1} | string | 商户号
 | notify_url {data-required data-indent=1} | string | 通知url地址
 | switch {data-indent=1} | boolean | 回调开关
+| appid {data-indent=1} | string | 公众账号ID
 
 {.im-table #request}
 
@@ -108,6 +110,7 @@ $instance->v3->marketing->favor->callbacks->postAsync([
     'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
     'switch'     => true,
+    'appid'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -122,6 +125,7 @@ $instance->chain('v3/marketing/favor/callbacks')->postAsync([
     'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
     'switch'     => true,
+    'appid'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -136,6 +140,7 @@ $instance['v3/marketing/favor/callbacks']->postAsync([
     'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
     'switch'     => true,
+    'appid'      => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -150,6 +155,7 @@ $response = $instance->v3->marketing->favor->callbacks->post([
     'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
     'switch'     => true,
+    'appid'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -161,6 +167,7 @@ $response = $instance->chain('v3/marketing/favor/callbacks')->post([
     'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
     'switch'     => true,
+    'appid'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -172,6 +179,7 @@ $response = $instance['v3/marketing/favor/callbacks']->post([
     'mchid'      => '9856888',
     'notify_url' => 'https://pay.weixin.qq.com',
     'switch'     => true,
+    'appid'      => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -183,6 +191,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | update_time {data-required} | string | 修改时间
 | notify_url {data-required} | string | 通知地址
+| appid | string | 公众账号ID
 
 {.im-table #response}
 

@@ -26,6 +26,7 @@
 | image_url {data-indent=4} | string | 单品图片
 | mini_program_appid {data-indent=4} | string | 单品跳转小程序AppID
 | mini_program_path {data-indent=4} | string | 单品跳转小程序路径
+| available_product_no_list {data-indent=1} | string[] | 可用商品编码列表
 
 {.im-table #request}
 
@@ -35,9 +36,9 @@
 $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupon_id_->patchAsync([
   'product_coupon_id' => '1000000013',
   'json' => [
-    'brand_id'       => '120344',
-    'out_request_no' => '34657_20250101_123456',
-    'display_info'   => [
+    'brand_id'                  => '120344',
+    'out_request_no'            => '34657_20250101_123456',
+    'display_info'              => [
       'name'                  => '全场满100立打8折',
       'image_url'             => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
       'background_url'        => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
@@ -56,6 +57,7 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
         ],],
       ],],
     ],
+    'available_product_no_list' => ['string'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -68,9 +70,9 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupo
 $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}')->patchAsync([
   'product_coupon_id' => '1000000013',
   'json' => [
-    'brand_id'       => '120344',
-    'out_request_no' => '34657_20250101_123456',
-    'display_info'   => [
+    'brand_id'                  => '120344',
+    'out_request_no'            => '34657_20250101_123456',
+    'display_info'              => [
       'name'                  => '全场满100立打8折',
       'image_url'             => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
       'background_url'        => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
@@ -89,6 +91,7 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
         ],],
       ],],
     ],
+    'available_product_no_list' => ['string'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -101,9 +104,9 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_c
 $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}']->patchAsync([
   'product_coupon_id' => '1000000013',
   'json' => [
-    'brand_id'       => '120344',
-    'out_request_no' => '34657_20250101_123456',
-    'display_info'   => [
+    'brand_id'                  => '120344',
+    'out_request_no'            => '34657_20250101_123456',
+    'display_info'              => [
       'name'                  => '全场满100立打8折',
       'image_url'             => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
       'background_url'        => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
@@ -122,6 +125,7 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
         ],],
       ],],
     ],
+    'available_product_no_list' => ['string'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -134,9 +138,9 @@ $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_i
 $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_product_coupon_id_->patch([
   'product_coupon_id' => '1000000013',
   'json' => [
-    'brand_id'       => '120344',
-    'out_request_no' => '34657_20250101_123456',
-    'display_info'   => [
+    'brand_id'                  => '120344',
+    'out_request_no'            => '34657_20250101_123456',
+    'display_info'              => [
       'name'                  => '全场满100立打8折',
       'image_url'             => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
       'background_url'        => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
@@ -155,6 +159,7 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->_p
         ],],
       ],],
     ],
+    'available_product_no_list' => ['string'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -164,9 +169,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}')->patch([
   'product_coupon_id' => '1000000013',
   'json' => [
-    'brand_id'       => '120344',
-    'out_request_no' => '34657_20250101_123456',
-    'display_info'   => [
+    'brand_id'                  => '120344',
+    'out_request_no'            => '34657_20250101_123456',
+    'display_info'              => [
       'name'                  => '全场满100立打8折',
       'image_url'             => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
       'background_url'        => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
@@ -185,6 +190,7 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
         ],],
       ],],
     ],
+    'available_product_no_list' => ['string'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -194,9 +200,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{product_coupon_id}']->patch([
   'product_coupon_id' => '1000000013',
   'json' => [
-    'brand_id'       => '120344',
-    'out_request_no' => '34657_20250101_123456',
-    'display_info'   => [
+    'brand_id'                  => '120344',
+    'out_request_no'            => '34657_20250101_123456',
+    'display_info'              => [
       'name'                  => '全场满100立打8折',
       'image_url'             => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
       'background_url'        => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
@@ -215,6 +221,7 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons/{prod
         ],],
       ],],
     ],
+    'available_product_no_list' => ['string'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -260,6 +267,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | progressive_bundle_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
 | count {data-required data-indent=1} | integer | 可使用次数
 | interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
+| show_as_exchange | boolean | 是否展示兑换价
+| available_product_no_list | string[] | 可用商品编码列表
 
 {.im-table #response}
 
@@ -388,6 +397,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | progressive_bundle_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
 | count {data-required data-indent=1} | integer | 可使用次数
 | interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
+| show_as_exchange | boolean | 是否展示兑换价
+| available_product_no_list | string[] | 可用商品编码列表
 
 {.im-table #response}
 

@@ -134,6 +134,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | jump_appid {data-required data-indent=1} | string | 会员中心跳转AppID
 | jump_path {data-required data-indent=1} | string | 会员中心跳转路径
 | modify_time {data-required} | string | 更新时间
+| support_user_active_join | boolean | 是否支持用户主动入会
+| purchase_membership | boolean | 是否为付费会员
 
 {.im-table #response}
 
@@ -183,6 +185,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | member_information {data-indent=1} | object {data-tooltip="对应PHP的array"} | 会员中心信息
 | jump_appid {data-required data-indent=2} | string | 会员中心跳转AppID
 | jump_path {data-required data-indent=2} | string | 会员中心跳转路径
+| legal_agreement {data-indent=1} | string | 商家法务协议
+| init_level {data-indent=1} | string | 会员初始等级
+| support_user_active_join {data-indent=1} | boolean | 是否支持用户主动入会
+| purchase_membership {data-indent=1} | boolean | 是否为付费会员
 
 {.im-table #request}
 
@@ -192,39 +198,39 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->brand->partner->cardMember->cards->_card_id_->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'brand_id'               => '1004',
-    'card_title'             => '测试卡',
-    'card_color'             => '#FFFF00',
-    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'code_jump_information'  => [
+    'brand_id'                 => '1004',
+    'card_title'               => '测试卡',
+    'card_color'               => '#FFFF00',
+    'card_picture_url'         => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'code_jump_information'    => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/code/code',
     ],
-    'benefits'               => '会员折扣、专属价',
-    'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
-    'need_pinned'            => true,
-    'need_display_level'     => true,
-    'service_phone'          => '010-8877xxxx',
-    'valid_date_information' => [
+    'benefits'                 => '会员折扣、专属价',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/notify.php',
+    'need_pinned'              => true,
+    'need_display_level'       => true,
+    'service_phone'            => '010-8877xxxx',
+    'valid_date_information'   => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'points_information'     => [
+    'points_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
-    'balance_information'    => [
+    'balance_information'      => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/balance/balance',
     ],
-    'purchase_information'   => [
+    'purchase_information'     => [
       'price'      => 100,
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/purchase/purchase',
     ],
-    'user_information'       => [
+    'user_information'         => [
       'common_field_list' => ['USER_FORM_FLAG_SEX'],
       'custom_field_list' => [[
         'type'   => 'CHECK_BOX',
@@ -232,10 +238,14 @@ $instance->v3->brand->partner->cardMember->cards->_card_id_->patchAsync([
         'values' => ['篮球'],
       ],],
     ],
-    'member_information'     => [
+    'member_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
+    'legal_agreement'          => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
+    'init_level'               => '白银会员',
+    'support_user_active_join' => true,
+    'purchase_membership'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -248,39 +258,39 @@ $instance->v3->brand->partner->cardMember->cards->_card_id_->patchAsync([
 $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'brand_id'               => '1004',
-    'card_title'             => '测试卡',
-    'card_color'             => '#FFFF00',
-    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'code_jump_information'  => [
+    'brand_id'                 => '1004',
+    'card_title'               => '测试卡',
+    'card_color'               => '#FFFF00',
+    'card_picture_url'         => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'code_jump_information'    => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/code/code',
     ],
-    'benefits'               => '会员折扣、专属价',
-    'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
-    'need_pinned'            => true,
-    'need_display_level'     => true,
-    'service_phone'          => '010-8877xxxx',
-    'valid_date_information' => [
+    'benefits'                 => '会员折扣、专属价',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/notify.php',
+    'need_pinned'              => true,
+    'need_display_level'       => true,
+    'service_phone'            => '010-8877xxxx',
+    'valid_date_information'   => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'points_information'     => [
+    'points_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
-    'balance_information'    => [
+    'balance_information'      => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/balance/balance',
     ],
-    'purchase_information'   => [
+    'purchase_information'     => [
       'price'      => 100,
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/purchase/purchase',
     ],
-    'user_information'       => [
+    'user_information'         => [
       'common_field_list' => ['USER_FORM_FLAG_SEX'],
       'custom_field_list' => [[
         'type'   => 'CHECK_BOX',
@@ -288,10 +298,14 @@ $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->patchAsync([
         'values' => ['篮球'],
       ],],
     ],
-    'member_information'     => [
+    'member_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
+    'legal_agreement'          => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
+    'init_level'               => '白银会员',
+    'support_user_active_join' => true,
+    'purchase_membership'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -304,39 +318,39 @@ $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->patchAsync([
 $instance['v3/brand/partner/card-member/cards/{card_id}']->patchAsync([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'brand_id'               => '1004',
-    'card_title'             => '测试卡',
-    'card_color'             => '#FFFF00',
-    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'code_jump_information'  => [
+    'brand_id'                 => '1004',
+    'card_title'               => '测试卡',
+    'card_color'               => '#FFFF00',
+    'card_picture_url'         => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'code_jump_information'    => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/code/code',
     ],
-    'benefits'               => '会员折扣、专属价',
-    'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
-    'need_pinned'            => true,
-    'need_display_level'     => true,
-    'service_phone'          => '010-8877xxxx',
-    'valid_date_information' => [
+    'benefits'                 => '会员折扣、专属价',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/notify.php',
+    'need_pinned'              => true,
+    'need_display_level'       => true,
+    'service_phone'            => '010-8877xxxx',
+    'valid_date_information'   => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'points_information'     => [
+    'points_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
-    'balance_information'    => [
+    'balance_information'      => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/balance/balance',
     ],
-    'purchase_information'   => [
+    'purchase_information'     => [
       'price'      => 100,
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/purchase/purchase',
     ],
-    'user_information'       => [
+    'user_information'         => [
       'common_field_list' => ['USER_FORM_FLAG_SEX'],
       'custom_field_list' => [[
         'type'   => 'CHECK_BOX',
@@ -344,10 +358,14 @@ $instance['v3/brand/partner/card-member/cards/{card_id}']->patchAsync([
         'values' => ['篮球'],
       ],],
     ],
-    'member_information'     => [
+    'member_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
+    'legal_agreement'          => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
+    'init_level'               => '白银会员',
+    'support_user_active_join' => true,
+    'purchase_membership'      => true,
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -360,39 +378,39 @@ $instance['v3/brand/partner/card-member/cards/{card_id}']->patchAsync([
 $response = $instance->v3->brand->partner->cardMember->cards->_card_id_->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'brand_id'               => '1004',
-    'card_title'             => '测试卡',
-    'card_color'             => '#FFFF00',
-    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'code_jump_information'  => [
+    'brand_id'                 => '1004',
+    'card_title'               => '测试卡',
+    'card_color'               => '#FFFF00',
+    'card_picture_url'         => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'code_jump_information'    => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/code/code',
     ],
-    'benefits'               => '会员折扣、专属价',
-    'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
-    'need_pinned'            => true,
-    'need_display_level'     => true,
-    'service_phone'          => '010-8877xxxx',
-    'valid_date_information' => [
+    'benefits'                 => '会员折扣、专属价',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/notify.php',
+    'need_pinned'              => true,
+    'need_display_level'       => true,
+    'service_phone'            => '010-8877xxxx',
+    'valid_date_information'   => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'points_information'     => [
+    'points_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
-    'balance_information'    => [
+    'balance_information'      => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/balance/balance',
     ],
-    'purchase_information'   => [
+    'purchase_information'     => [
       'price'      => 100,
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/purchase/purchase',
     ],
-    'user_information'       => [
+    'user_information'         => [
       'common_field_list' => ['USER_FORM_FLAG_SEX'],
       'custom_field_list' => [[
         'type'   => 'CHECK_BOX',
@@ -400,10 +418,14 @@ $response = $instance->v3->brand->partner->cardMember->cards->_card_id_->patch([
         'values' => ['篮球'],
       ],],
     ],
-    'member_information'     => [
+    'member_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
+    'legal_agreement'          => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
+    'init_level'               => '白银会员',
+    'support_user_active_join' => true,
+    'purchase_membership'      => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -413,39 +435,39 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'brand_id'               => '1004',
-    'card_title'             => '测试卡',
-    'card_color'             => '#FFFF00',
-    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'code_jump_information'  => [
+    'brand_id'                 => '1004',
+    'card_title'               => '测试卡',
+    'card_color'               => '#FFFF00',
+    'card_picture_url'         => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'code_jump_information'    => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/code/code',
     ],
-    'benefits'               => '会员折扣、专属价',
-    'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
-    'need_pinned'            => true,
-    'need_display_level'     => true,
-    'service_phone'          => '010-8877xxxx',
-    'valid_date_information' => [
+    'benefits'                 => '会员折扣、专属价',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/notify.php',
+    'need_pinned'              => true,
+    'need_display_level'       => true,
+    'service_phone'            => '010-8877xxxx',
+    'valid_date_information'   => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'points_information'     => [
+    'points_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
-    'balance_information'    => [
+    'balance_information'      => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/balance/balance',
     ],
-    'purchase_information'   => [
+    'purchase_information'     => [
       'price'      => 100,
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/purchase/purchase',
     ],
-    'user_information'       => [
+    'user_information'         => [
       'common_field_list' => ['USER_FORM_FLAG_SEX'],
       'custom_field_list' => [[
         'type'   => 'CHECK_BOX',
@@ -453,10 +475,14 @@ $response = $instance->chain('v3/brand/partner/card-member/cards/{card_id}')->pa
         'values' => ['篮球'],
       ],],
     ],
-    'member_information'     => [
+    'member_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
+    'legal_agreement'          => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
+    'init_level'               => '白银会员',
+    'support_user_active_join' => true,
+    'purchase_membership'      => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -466,39 +492,39 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/brand/partner/card-member/cards/{card_id}']->patch([
   'card_id' => 'pbLatjvWOibDc5-TBnbUk1pD12o0',
   'json' => [
-    'brand_id'               => '1004',
-    'card_title'             => '测试卡',
-    'card_color'             => '#FFFF00',
-    'card_picture_url'       => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
-    'code_jump_information'  => [
+    'brand_id'                 => '1004',
+    'card_title'               => '测试卡',
+    'card_color'               => '#FFFF00',
+    'card_picture_url'         => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/0',
+    'code_jump_information'    => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/code/code',
     ],
-    'benefits'               => '会员折扣、专属价',
-    'notify_url'             => 'https://www.weixin.qq.com/wxpay/notify.php',
-    'need_pinned'            => true,
-    'need_display_level'     => true,
-    'service_phone'          => '010-8877xxxx',
-    'valid_date_information' => [
+    'benefits'                 => '会员折扣、专属价',
+    'notify_url'               => 'https://www.weixin.qq.com/wxpay/notify.php',
+    'need_pinned'              => true,
+    'need_display_level'       => true,
+    'service_phone'            => '010-8877xxxx',
+    'valid_date_information'   => [
       'type'                        => 'FIX_TIME_RANGE',
       'available_begin_time'        => '2020-05-20T13:29:35.120+08:00',
       'available_end_time'          => '2030-05-20T13:29:35.120+08:00',
       'available_day_after_receive' => 200,
     ],
-    'points_information'     => [
+    'points_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
-    'balance_information'    => [
+    'balance_information'      => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/balance/balance',
     ],
-    'purchase_information'   => [
+    'purchase_information'     => [
       'price'      => 100,
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/purchase/purchase',
     ],
-    'user_information'       => [
+    'user_information'         => [
       'common_field_list' => ['USER_FORM_FLAG_SEX'],
       'custom_field_list' => [[
         'type'   => 'CHECK_BOX',
@@ -506,10 +532,14 @@ $response = $instance['v3/brand/partner/card-member/cards/{card_id}']->patch([
         'values' => ['篮球'],
       ],],
     ],
-    'member_information'     => [
+    'member_information'       => [
       'jump_appid' => 'wxea9c30a90fs8d3fe',
       'jump_path'  => '/pages/points/points',
     ],
+    'legal_agreement'          => '商家需在 48 小时内发货，若商品存在质量问题，用户可在 7 天内申请退货。',
+    'init_level'               => '白银会员',
+    'support_user_active_join' => true,
+    'purchase_membership'      => true,
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -566,6 +596,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | jump_appid {data-required data-indent=1} | string | 会员中心跳转AppID
 | jump_path {data-required data-indent=1} | string | 会员中心跳转路径
 | modify_time {data-required} | string | 更新时间
+| support_user_active_join | boolean | 是否支持用户主动入会
+| purchase_membership | boolean | 是否为付费会员
 
 {.im-table #response}
 

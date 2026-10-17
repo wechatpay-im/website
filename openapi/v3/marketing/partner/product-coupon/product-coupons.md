@@ -92,10 +92,6 @@ description: 品牌方可以通过该接口创建商品券和批次。微信支�
 | guidance_wording {data-indent=4} | string | 引导文案
 | entrance_official_account {data-indent=3} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=4} | string | 公众号AppID
-| entrance_finder {data-indent=3} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=4} | string | 视频号ID
-| finder_video_id {data-required data-indent=4} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=4} | string | 视频号封面图
 | notify_config {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=3} | string | 事件通知appid
 | store_scope {data-required data-indent=2} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -155,13 +151,11 @@ description: 品牌方可以通过该接口创建商品券和批次。微信支�
 | guidance_wording {data-indent=4} | string | 引导文案
 | entrance_official_account {data-indent=3} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-indent=4} | string | 公众号AppID
-| entrance_finder {data-indent=3} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-indent=4} | string | 视频号ID
-| finder_video_id {data-indent=4} | string | 视频号视频ID
-| finder_video_cover_image_url {data-indent=4} | string | 视频号封面图
 | notify_config {data-indent=2} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=3} | string | 事件通知AppID
 | store_scope {data-indent=2} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
+| show_as_exchange {data-indent=1} | boolean | 是否展示兑换价
+| available_product_no_list {data-indent=1} | string[] | 可用商品编码列表
 
 {.im-table #request}
 
@@ -271,11 +265,6 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->postAsync([
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'           => [
         'notify_appid' => 'wx23232232323',
@@ -352,17 +341,14 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->postAsync([
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'                 => [
         'notify_appid' => 'wx4fd12345678',
       ],
       'store_scope'                   => 'NONE',
     ],
+    'show_as_exchange'              => true,
+    'available_product_no_list'     => ['string'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -475,11 +461,6 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons')->postAsy
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'           => [
         'notify_appid' => 'wx23232232323',
@@ -556,17 +537,14 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons')->postAsy
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'                 => [
         'notify_appid' => 'wx4fd12345678',
       ],
       'store_scope'                   => 'NONE',
     ],
+    'show_as_exchange'              => true,
+    'available_product_no_list'     => ['string'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -679,11 +657,6 @@ $instance['v3/marketing/partner/product-coupon/product-coupons']->postAsync([
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'           => [
         'notify_appid' => 'wx23232232323',
@@ -760,17 +733,14 @@ $instance['v3/marketing/partner/product-coupon/product-coupons']->postAsync([
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'                 => [
         'notify_appid' => 'wx4fd12345678',
       ],
       'store_scope'                   => 'NONE',
     ],
+    'show_as_exchange'              => true,
+    'available_product_no_list'     => ['string'],
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -883,11 +853,6 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->po
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'           => [
         'notify_appid' => 'wx23232232323',
@@ -964,17 +929,14 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->po
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'                 => [
         'notify_appid' => 'wx4fd12345678',
       ],
       'store_scope'                   => 'NONE',
     ],
+    'show_as_exchange'              => true,
+    'available_product_no_list'     => ['string'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1084,11 +1046,6 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'           => [
         'notify_appid' => 'wx23232232323',
@@ -1165,17 +1122,14 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'                 => [
         'notify_appid' => 'wx4fd12345678',
       ],
       'store_scope'                   => 'NONE',
     ],
+    'show_as_exchange'              => true,
+    'available_product_no_list'     => ['string'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1285,11 +1239,6 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons']->po
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'           => [
         'notify_appid' => 'wx23232232323',
@@ -1366,17 +1315,14 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons']->po
         'entrance_official_account' => [
           'appid' => 'wx1234567890',
         ],
-        'entrance_finder'           => [
-          'finder_id'                    => 'gh_12345678',
-          'finder_video_id'              => 'UDFsdf24df34dD456Hdf34',
-          'finder_video_cover_image_url' => 'https://wxpaylogo.qpic.cn/wxpaylogo/xxxxx/xxx',
-        ],
       ],
       'notify_config'                 => [
         'notify_appid' => 'wx4fd12345678',
       ],
       'store_scope'                   => 'NONE',
     ],
+    'show_as_exchange'              => true,
+    'available_product_no_list'     => ['string'],
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1471,10 +1417,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-required data-indent=3} | string | 引导文案
 | entrance_official_account {data-indent=2} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=3} | string | 公众号AppID
-| entrance_finder {data-indent=2} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=3} | string | 视频号ID
-| finder_video_id {data-required data-indent=3} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=3} | string | 视频号封面图
 | notify_config {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=2} | string | 事件通知appid
 | store_scope {data-required data-indent=1} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -1555,10 +1497,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-indent=4} | string | 引导文案
 | entrance_official_account {data-indent=3} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-indent=4} | string | 公众号AppID
-| entrance_finder {data-indent=3} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-indent=4} | string | 视频号ID
-| finder_video_id {data-indent=4} | string | 视频号视频ID
-| finder_video_cover_image_url {data-indent=4} | string | 视频号封面图
 | notify_config {data-indent=2} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=3} | string | 事件通知AppID
 | store_scope {data-indent=2} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
@@ -1570,6 +1508,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_time {data-indent=2} | string | 失效时间
 | deactivate_reason {data-indent=2} | string | 失效原因
 | brand_id {data-indent=2} | string | 品牌ID
+| show_as_exchange | boolean | 是否展示兑换价
+| available_product_no_list | string[] | 可用商品编码列表
 
 {.im-table #response}
 

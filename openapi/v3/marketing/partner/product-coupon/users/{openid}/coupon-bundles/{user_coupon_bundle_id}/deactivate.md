@@ -162,6 +162,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-indent=3} | string | 商户号
 | sub_mchid {data-indent=3} | string | 子商户号
 | saved_amount {data-indent=2} | integer | 优惠金额
+| use_product_no_list {data-indent=2} | string[] | 核销商品编码列表
 | user_product_coupon_bundle_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户券组信息
 | user_coupon_bundle_id {data-required data-indent=2} | string | 用户券组ID
 | user_coupon_bundle_index {data-required data-indent=2} | integer | 用户券组内索引
@@ -204,6 +205,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_request_no {data-indent=2} | string | 失效请求单号
 | deactivate_time {data-indent=2} | string | 失效时间
 | deactivate_reason {data-indent=2} | string | 失效原因
+| show_as_exchange {data-indent=2} | boolean | 是否展示兑换价
+| available_product_no_list {data-indent=2} | string[] | 可用商品编码列表
 | stock {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 批次信息
 | product_coupon_id {data-required data-indent=2} | string | 商品券ID
 | stock_id {data-required data-indent=2} | string | 批次ID
@@ -265,10 +268,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | guidance_wording {data-required data-indent=4} | string | 引导文案
 | entrance_official_account {data-indent=3} | object {data-tooltip="对应PHP的array"} | 公众号入口
 | appid {data-required data-indent=4} | string | 公众号AppID
-| entrance_finder {data-indent=3} | object {data-tooltip="对应PHP的array"} | 视频号入口
-| finder_id {data-required data-indent=4} | string | 视频号ID
-| finder_video_id {data-required data-indent=4} | string | 视频号视频ID
-| finder_video_cover_image_url {data-required data-indent=4} | string | 视频号封面图
 | notify_config {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 事件通知配置
 | notify_appid {data-indent=3} | string | 事件通知appid
 | store_scope {data-required data-indent=2} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一

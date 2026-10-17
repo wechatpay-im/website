@@ -67,6 +67,7 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 | price {data-required data-indent=5} | number | 单品单价
 | discount_amount {data-required data-indent=5} | number | 优惠金额
 | business_type {data-indent=3} | string | 细分业务类型<br/>`MULTIUSE` 枚举值
+| openid {data-indent=3} | string | 核销用户openid
 
 {.im-table #request}
 
