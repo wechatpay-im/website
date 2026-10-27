@@ -109,7 +109,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | goods_category {data-indent=1} | string | 税局侧规定的货物或应税劳务、服务分类名称
 | tax_code {data-required data-indent=1} | string | 货物或应税劳务、服务编码
 | tax_rate {data-required data-indent=1} | integer | 税率
-| tax_prefer_mark {data-required data-indent=1} | string | 税收优惠政策标识
+| tax_prefer_mark {data-required data-indent=1} | string | 税收优惠政策标识<br/>`NO_FAVORABLE` \| `OUTSIDE_VAT` \| `VAT_EXEMPT` \| `NORMAL_ZERO_RATED` \| `EXPORT_ZERO_RATED` 枚举值之一
 | total_count {data-required} | integer | 总记录数
 
 {.im-table #response}

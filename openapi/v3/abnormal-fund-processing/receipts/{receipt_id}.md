@@ -83,10 +83,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | commander {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 在途异常资金付款指令的发起方
 | operator {data-required data-indent=2} | string | 发起在途异常资金付款请求的角色<br/>`MERCHANT` 枚举值
 | mchid {data-required data-indent=2} | string | 微信支付商户号
-| transfer_mode {data-required data-indent=1} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` 枚举值
+| transfer_mode {data-required data-indent=1} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` \| `TRANSFER_TO_ORIGINAL_RECEIVE_MERCHANT` \| `TRANSFER_TO_SPECIFIED_RECEIVE_MERCHANT` 枚举值之一
 | success_time {data-indent=1} | string | 入账成功时间
-| appid {data-required data-indent=1} | string[] | 商户AppID
 | notify_url {data-required data-indent=1} | string | 回调通知地址
+| receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款方
+| account_type {data-indent=2} | string | 入账账户类型
+| openid {data-indent=2} | string | 入账用户OpenID
+| appid {data-indent=2} | string | 商户AppID
+| mchid {data-indent=2} | string | 入账商户号
+| instruction_state {data-required data-indent=1} | string | 在途异常资金付款指令状态<br/>`INSTRUCTION_STATE_PENDING` \| `INSTRUCTION_STATE_IN_PROGRESS` \| `INSTRUCTION_STATE_CLOSED` \| `INSTRUCTION_STATE_SUCCESS` 枚举值之一
+| create_time {data-indent=1} | string | 在途异常资金付款指令创建时间
+| instruction_instance_id {data-indent=1} | string | 微信支付在途异常资金付款指令执行流水号
 
 {.im-table #response}
 

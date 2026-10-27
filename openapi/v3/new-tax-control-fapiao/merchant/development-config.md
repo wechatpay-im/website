@@ -191,7 +191,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | callback_url {data-required} | string | 商户回调地址
 | show_fapiao_cell | boolean | 全部账单展示开发票入口开关
-| support_vat_fapiao | boolean | 商户是否支持开电子专票
 
 {.im-table #response}
 

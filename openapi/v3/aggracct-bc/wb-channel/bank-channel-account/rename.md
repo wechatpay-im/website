@@ -145,7 +145,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | new_account_name {data-required} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 目标账户名
 | application_state {data-required} | string | 申请单状态<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
 | finish_time | string | 完成时间
-| fail_code | string | 失败错误码
+| fail_code | string | 失败错误码<br/>`AUDIT_REJECT` 枚举值
 | fail_msg | string | 失败原因
 
 {.im-table #response}

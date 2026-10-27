@@ -132,14 +132,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | sponsor_mchid {data-required} | string | 出资商户号
 | activity_name {data-required} | string | 活动名称
 | activity_remark {data-required} | string | 活动说明
-| state | string | 预算单状态<br/>`PENDING` \| `LOCKED` \| `FINISHED` \| `CLOSED` 枚举值之一
+| state | string | 预算单状态<br/>`PENDING` \| `LOCKED` \| `FINISHED` \| `CLOSED` \| `UNLOCKING` 枚举值之一
 | confirm_url | string | 确认出资页面地址
-| super_admin_wxid_mask | string | 商户号超管微信号掩码
 | remain_amount | number | 剩余预算金额
 | unlock_remark | string | 撤销说明
 | locked_time | string | 资金锁定时间
 | finished_time | string | 完成时间
 | closed_time | string | 关闭时间
+| unlocked_amount | integer | 解锁金额
+| closed_reason | string | 预算关闭原因<br/>`MCH_OVERDUE_UNCONFIRMED` \| `CLOSE_VIA_MCH_API` 枚举值之一
 
 {.im-table #response}
 

@@ -73,15 +73,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid | string | 商户号
 | out_bill_no {data-required} | string | 商户单号
 | transfer_bill_no {data-required} | string | 微信转账单号
-| appid | string | QQ互联开放平台AppID
-| state {data-required} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
-| transfer_amount | number | 转账金额
-| transfer_remark | string | 转账备注
-| fail_reason | string | 失败原因
-| openid | string | 收款用户OpenID
-| user_qq | string | 收款用户QQ号
-| user_name | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
-| create_time | string | 单据创建时间
+| state {data-required} | string | 单据状态<br/>`CANCELING` \| `CANCELLED` 枚举值之一
 | update_time {data-required} | string | 最后一次状态变更时间
 
 {.im-table #response}

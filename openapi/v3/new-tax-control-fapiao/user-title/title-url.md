@@ -153,7 +153,6 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| title_url | string | 抬头填写链接
 | miniprogram_appid | string | 抬头填写小程序AppID
 | miniprogram_path | string | 抬头填写小程序页面路径
 | miniprogram_user_name | string | 抬头填写小程序的用户名

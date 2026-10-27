@@ -79,7 +79,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | authorize_time {data-required} | string | 用户确认授权的时间
 | close_info | object {data-tooltip="对应PHP的array"} | 自动收款授权的关闭信息
 | close_time {data-required data-indent=1} | string | 关闭时间
-| close_reason {data-required data-indent=1} | string | 自动收款授权的原因<br/>`CLOSE_VIA_MCH_API` \| `USER_CLOSE` 枚举值之一
+| close_reason {data-required data-indent=1} | string | 自动收款授权的原因<br/>`CLOSE_VIA_MCH_API` \| `USER_CLOSE` \| `USER_OVERDUE_UNCONFIRMED` \| `TRANSFER_RISK` \| `USER_ACCOUNT_ABNORMAL` 枚举值之一
 | transfer_scene_id | string | 转账场景ID<br/>`1000` \| `1002` \| `1004` \| `1005` \| `1009` \| `1010` \| `1011` \| `1013` 枚举值之一
 | user_recv_perception | string | 用户收款感知
 | create_time | string | 单据创建时间

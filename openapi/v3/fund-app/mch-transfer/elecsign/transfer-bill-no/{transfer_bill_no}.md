@@ -76,7 +76,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | hash_type | string | 回单文件摘要类型<br/>`SHA256` \| `SM3` 枚举值之一
 | hash_value | string | 回单文件摘要值
 | download_url | string | 回单文件下载地址
-| fail_reason | string | 失败原因
 
 {.im-table #response}
 

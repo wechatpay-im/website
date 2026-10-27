@@ -141,14 +141,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid | string | 微信支付商户号
 | bal_account_no | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 额度台账号
 | out_request_no | string | 特殊减额单号
-| reduction_type | string | 特殊减额类型<br/>`FINANCIAL_PENALTY` \| `JUDICIAL_DEDUCTION` 枚举值之一
+| reduction_type | string | 特殊减额类型<br/>`FINANCIAL_PENALTY` \| `JUDICIAL_DEDUCTION` \| `REDUCTION_TYPE_UNKNOWN` 枚举值之一
 | amount | integer | 减额金额
-| state | string | 处理结果<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` 枚举值之一
+| state | string | 处理结果<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` \| `STATE_UNKNOWN` 枚举值之一
 | reason | string | 特殊减额原因
 | quota_change_no | string | 微信支付额度变更单号
 | success_time | string | 成功时间
 | fail_time | string | 失败时间
-| fail_reason | string | 失败原因<br/>`BALANCE_NOT_ENOUGH` \| `RECEIPT_NOT_EXIST_CLOSED` \| `TIME_OUT_CLOSED` 枚举值之一
+| fail_reason | string | 失败原因<br/>`BALANCE_NOT_ENOUGH` \| `RECEIPT_NOT_EXIST_CLOSED` \| `TIME_OUT_CLOSED` \| `FAIL_REASON_UNKNOWN` \| `RECEIPT_NOT_EXIST` 枚举值之一
+| card_no | string | 卡号
+| sgn_no | string | 商户子账户协议号
 
 {.im-table #response}
 

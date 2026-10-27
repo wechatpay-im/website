@@ -35,7 +35,7 @@ $instance->v3->newTaxControlFapiao->fapiaomerchant->getspinviteurl->getAsync([
     'operate_user'             => 'mI7HGEJ4Q2B91IGjHZu/Gthm',
     'invite_code'              => 'code_20200101_123',
     'sub_mchid'                => '1900000109',
-    'taxpayer_id'              => '',
+    'taxpayer_id'              => '202003261233701778',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -57,7 +57,7 @@ $instance->chain('v3/new-tax-control-fapiao/fapiaomerchant/getspinviteurl')->get
     'operate_user'             => 'mI7HGEJ4Q2B91IGjHZu/Gthm',
     'invite_code'              => 'code_20200101_123',
     'sub_mchid'                => '1900000109',
-    'taxpayer_id'              => '',
+    'taxpayer_id'              => '202003261233701778',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -79,7 +79,7 @@ $instance['v3/new-tax-control-fapiao/fapiaomerchant/getspinviteurl']->getAsync([
     'operate_user'             => 'mI7HGEJ4Q2B91IGjHZu/Gthm',
     'invite_code'              => 'code_20200101_123',
     'sub_mchid'                => '1900000109',
-    'taxpayer_id'              => '',
+    'taxpayer_id'              => '202003261233701778',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -101,7 +101,7 @@ $response = $instance->v3->newTaxControlFapiao->fapiaomerchant->getspinviteurl->
     'operate_user'             => 'mI7HGEJ4Q2B91IGjHZu/Gthm',
     'invite_code'              => 'code_20200101_123',
     'sub_mchid'                => '1900000109',
-    'taxpayer_id'              => '',
+    'taxpayer_id'              => '202003261233701778',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -120,7 +120,7 @@ $response = $instance->chain('v3/new-tax-control-fapiao/fapiaomerchant/getspinvi
     'operate_user'             => 'mI7HGEJ4Q2B91IGjHZu/Gthm',
     'invite_code'              => 'code_20200101_123',
     'sub_mchid'                => '1900000109',
-    'taxpayer_id'              => '',
+    'taxpayer_id'              => '202003261233701778',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -139,7 +139,7 @@ $response = $instance['v3/new-tax-control-fapiao/fapiaomerchant/getspinviteurl']
     'operate_user'             => 'mI7HGEJ4Q2B91IGjHZu/Gthm',
     'invite_code'              => 'code_20200101_123',
     'sub_mchid'                => '1900000109',
-    'taxpayer_id'              => '',
+    'taxpayer_id'              => '202003261233701778',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

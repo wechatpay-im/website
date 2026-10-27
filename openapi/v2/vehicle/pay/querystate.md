@@ -144,6 +144,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | plate_number {data-indent=2} | string | 车牌号
 | channel_type {data-indent=2} | string | 车牌通道标识<br/>`MTC` \| `ETC` \| `ETC;MTC` 枚举值之一
 | common_use_flag {data-indent=2} | string | 常用车牌标志<br/>`COMMON_USE` 枚举值
+| common_use_flag | string | 常用车牌标志
 
 {.im-table #response}
 

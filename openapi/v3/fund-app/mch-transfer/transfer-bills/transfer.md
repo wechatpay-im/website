@@ -15,14 +15,12 @@ description: 商户可调用该接口转账给自动收款授权对应的用户�
 | user_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | transfer_amount {data-required data-indent=1} | number | 转账金额
 | transfer_remark {data-required data-indent=1} | string | 转账备注
-| notify_url {data-indent=1} | string | 通知地址
 | user_recv_perception {data-indent=1} | string | 用户收款感知
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID<br/>`1000` \| `1002` \| `1004` \| `1005` \| `1009` \| `1010` \| `1011` \| `1013` 枚举值之一
 | transfer_scene_report_infos {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 转账场景报备信息
 | info_type {data-required data-indent=2} | string | 信息类型
 | info_content {data-required data-indent=2} | string | 信息内容
 | authorization_id {data-indent=1} | string | 微信免确认收款授权单号
-| sponsor_mchid {data-indent=1} | string | 出资商户号
 | out_authorization_no {data-indent=1} | string | 商户侧授权单号
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
@@ -39,7 +37,6 @@ $instance->v3->fundApp->mchTransfer->transferBills->transfer->postAsync([
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
-    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
     'user_recv_perception'        => '现金奖励',
     'transfer_scene_id'           => '1000',
     'transfer_scene_report_infos' => [[
@@ -47,7 +44,6 @@ $instance->v3->fundApp->mchTransfer->transferBills->transfer->postAsync([
       'info_content' => '注册会员有礼',
     ],],
     'authorization_id'            => '201202504101000123456789012',
-    'sponsor_mchid'               => '1900001109',
     'out_authorization_no'        => 'plfk2020042013',
   ],
   'headers' => [
@@ -68,7 +64,6 @@ $instance->chain('v3/fund-app/mch-transfer/transfer-bills/transfer')->postAsync(
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
-    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
     'user_recv_perception'        => '现金奖励',
     'transfer_scene_id'           => '1000',
     'transfer_scene_report_infos' => [[
@@ -76,7 +71,6 @@ $instance->chain('v3/fund-app/mch-transfer/transfer-bills/transfer')->postAsync(
       'info_content' => '注册会员有礼',
     ],],
     'authorization_id'            => '201202504101000123456789012',
-    'sponsor_mchid'               => '1900001109',
     'out_authorization_no'        => 'plfk2020042013',
   ],
   'headers' => [
@@ -97,7 +91,6 @@ $instance['v3/fund-app/mch-transfer/transfer-bills/transfer']->postAsync([
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
-    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
     'user_recv_perception'        => '现金奖励',
     'transfer_scene_id'           => '1000',
     'transfer_scene_report_infos' => [[
@@ -105,7 +98,6 @@ $instance['v3/fund-app/mch-transfer/transfer-bills/transfer']->postAsync([
       'info_content' => '注册会员有礼',
     ],],
     'authorization_id'            => '201202504101000123456789012',
-    'sponsor_mchid'               => '1900001109',
     'out_authorization_no'        => 'plfk2020042013',
   ],
   'headers' => [
@@ -126,7 +118,6 @@ $response = $instance->v3->fundApp->mchTransfer->transferBills->transfer->post([
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
-    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
     'user_recv_perception'        => '现金奖励',
     'transfer_scene_id'           => '1000',
     'transfer_scene_report_infos' => [[
@@ -134,7 +125,6 @@ $response = $instance->v3->fundApp->mchTransfer->transferBills->transfer->post([
       'info_content' => '注册会员有礼',
     ],],
     'authorization_id'            => '201202504101000123456789012',
-    'sponsor_mchid'               => '1900001109',
     'out_authorization_no'        => 'plfk2020042013',
   ],
   'headers' => [
@@ -152,7 +142,6 @@ $response = $instance->chain('v3/fund-app/mch-transfer/transfer-bills/transfer')
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
-    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
     'user_recv_perception'        => '现金奖励',
     'transfer_scene_id'           => '1000',
     'transfer_scene_report_infos' => [[
@@ -160,7 +149,6 @@ $response = $instance->chain('v3/fund-app/mch-transfer/transfer-bills/transfer')
       'info_content' => '注册会员有礼',
     ],],
     'authorization_id'            => '201202504101000123456789012',
-    'sponsor_mchid'               => '1900001109',
     'out_authorization_no'        => 'plfk2020042013',
   ],
   'headers' => [
@@ -178,7 +166,6 @@ $response = $instance['v3/fund-app/mch-transfer/transfer-bills/transfer']->post(
     'user_name'                   => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
     'transfer_amount'             => 400000,
     'transfer_remark'             => '2020年4月报销',
-    'notify_url'                  => 'https://www.weixin.qq.com/wxpay/pay.php',
     'user_recv_perception'        => '现金奖励',
     'transfer_scene_id'           => '1000',
     'transfer_scene_report_infos' => [[
@@ -186,7 +173,6 @@ $response = $instance['v3/fund-app/mch-transfer/transfer-bills/transfer']->post(
       'info_content' => '注册会员有礼',
     ],],
     'authorization_id'            => '201202504101000123456789012',
-    'sponsor_mchid'               => '1900001109',
     'out_authorization_no'        => 'plfk2020042013',
   ],
   'headers' => [

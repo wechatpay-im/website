@@ -101,6 +101,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_name | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | create_time | string | 单据创建时间
 | update_time {data-required} | string | 最后一次单据状态变更时间
+| mchid {data-required} | string | 商户号
+| appid {data-required} | string | 商户AppID
 
 {.im-table #response}
 

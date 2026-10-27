@@ -142,6 +142,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | openid {data-required data-indent=2} | string | 领取红包的Openid
 | amount {data-required data-indent=2} | integer | 金额
 | rcv_time {data-required data-indent=2} | string | 接收时间
+| openid {data-required} | string | 领取红包的Openid
+| amount {data-required} | integer | 金额
+| rcv_time {data-required} | string | 接收时间
 
 {.im-table #response}
 

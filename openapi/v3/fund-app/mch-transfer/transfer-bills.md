@@ -317,7 +317,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | transfer_bill_no {data-required} | string | 微信转账单号
 | create_time {data-required} | string | 单据创建时间
 | state {data-required} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
-| fail_reason | string | 失败原因
 | package_info | string | 跳转领取页面的package信息
 
 {.im-table #response}

@@ -26,7 +26,6 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 | user_display_name {data-required data-indent=2} | string | 用户展示名称
 | out_authorization_no {data-required data-indent=2} | string | 商户侧授权单号
 | authorization_notify_url {data-required data-indent=2} | string | 自动收款授权结果通知地址
-| sponsor_mchid {data-indent=1} | string | 出资商户号
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -55,7 +54,6 @@ $instance->v3->fundApp->mchTransfer->transferBills->preTransferWithAuthorization
       'out_authorization_no'     => 'plfk2020042013',
       'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
     ],
-    'sponsor_mchid'               => '1900001109',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -88,7 +86,6 @@ $instance->chain('v3/fund-app/mch-transfer/transfer-bills/pre-transfer-with-auth
       'out_authorization_no'     => 'plfk2020042013',
       'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
     ],
-    'sponsor_mchid'               => '1900001109',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -121,7 +118,6 @@ $instance['v3/fund-app/mch-transfer/transfer-bills/pre-transfer-with-authorizati
       'out_authorization_no'     => 'plfk2020042013',
       'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
     ],
-    'sponsor_mchid'               => '1900001109',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -154,7 +150,6 @@ $response = $instance->v3->fundApp->mchTransfer->transferBills->preTransferWithA
       'out_authorization_no'     => 'plfk2020042013',
       'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
     ],
-    'sponsor_mchid'               => '1900001109',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -184,7 +179,6 @@ $response = $instance->chain('v3/fund-app/mch-transfer/transfer-bills/pre-transf
       'out_authorization_no'     => 'plfk2020042013',
       'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
     ],
-    'sponsor_mchid'               => '1900001109',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -214,7 +208,6 @@ $response = $instance['v3/fund-app/mch-transfer/transfer-bills/pre-transfer-with
       'out_authorization_no'     => 'plfk2020042013',
       'authorization_notify_url' => 'https://www.weixin.qq.com/wxpay/pay.php',
     ],
-    'sponsor_mchid'               => '1900001109',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

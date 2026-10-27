@@ -113,11 +113,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | end_date {data-required} | string | 结束日期
 | sponsor_mchid {data-required} | string | 出资商户号
 | receiver_mchid | string | 收款商户号
-| receipt_state {data-required} | string | 电子回单状态<br/>`ACCEPTED` \| `FINISHED` 枚举值之一
+| receipt_state {data-required} | string | 电子回单状态<br/>`ACCEPTED` \| `FINISHED` \| `FAILED` 枚举值之一
 | accept_id {data-required} | string | 受理凭证
 | hash_type | string | 电子回单文件的hash方法<br/>`SHA256` \| `SM3` 枚举值之一
 | hash_value | string | 电子回单文件的hash值
 | download_url | string | 电子回单下载地址
+| fail_reason | string | 失败原因
 
 {.im-table #response}
 
@@ -215,11 +216,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | end_date {data-required} | string | 结束日期
 | sponsor_mchid {data-required} | string | 出资商户号
 | receiver_mchid | string | 收款商户号
-| receipt_state {data-required} | string | 电子回单状态<br/>`ACCEPTED` \| `FINISHED` 枚举值之一
+| receipt_state {data-required} | string | 电子回单状态<br/>`ACCEPTED` \| `FINISHED` \| `FAILED` 枚举值之一
 | accept_id {data-required} | string | 受理凭证
 | hash_type | string | 电子回单文件的hash方法<br/>`SHA256` \| `SM3` 枚举值之一
 | hash_value | string | 电子回单文件的hash值
 | download_url | string | 电子回单下载地址
+| fail_reason | string | 失败原因
 
 {.im-table #response}
 

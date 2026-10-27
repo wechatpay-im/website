@@ -12,7 +12,6 @@ description: 解锁公益捐赠预算 注：单个商户的接口频率限制为
 | out_budget_no {data-required} | string | 商户预算单号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | sponsor_mchid {data-required data-indent=1} | string | 出资商户号
-| activity_remark {data-required data-indent=1} | string | 解锁备注
 
 {.im-table #request}
 
@@ -22,8 +21,7 @@ description: 解锁公益捐赠预算 注：单个商户的接口频率限制为
 $instance->v3->fundApp->mchTransfer->partner->charityBudget->_out_budget_no_->unlock->postAsync([
   'out_budget_no' => 'budget202506300102',
   'json' => [
-    'sponsor_mchid'   => '1900001109',
-    'activity_remark' => '公益活动结束，解锁资金',
+    'sponsor_mchid' => '1900001109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -36,8 +34,7 @@ $instance->v3->fundApp->mchTransfer->partner->charityBudget->_out_budget_no_->un
 $instance->chain('v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unlock')->postAsync([
   'out_budget_no' => 'budget202506300102',
   'json' => [
-    'sponsor_mchid'   => '1900001109',
-    'activity_remark' => '公益活动结束，解锁资金',
+    'sponsor_mchid' => '1900001109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,8 +47,7 @@ $instance->chain('v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no
 $instance['v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unlock']->postAsync([
   'out_budget_no' => 'budget202506300102',
   'json' => [
-    'sponsor_mchid'   => '1900001109',
-    'activity_remark' => '公益活动结束，解锁资金',
+    'sponsor_mchid' => '1900001109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -64,8 +60,7 @@ $instance['v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unloc
 $response = $instance->v3->fundApp->mchTransfer->partner->charityBudget->_out_budget_no_->unlock->post([
   'out_budget_no' => 'budget202506300102',
   'json' => [
-    'sponsor_mchid'   => '1900001109',
-    'activity_remark' => '公益活动结束，解锁资金',
+    'sponsor_mchid' => '1900001109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -75,8 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unlock')->post([
   'out_budget_no' => 'budget202506300102',
   'json' => [
-    'sponsor_mchid'   => '1900001109',
-    'activity_remark' => '公益活动结束，解锁资金',
+    'sponsor_mchid' => '1900001109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -86,8 +80,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/fund-app/mch-transfer/partner/charity-budget/{out_budget_no}/unlock']->post([
   'out_budget_no' => 'budget202506300102',
   'json' => [
-    'sponsor_mchid'   => '1900001109',
-    'activity_remark' => '公益活动结束，解锁资金',
+    'sponsor_mchid' => '1900001109',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -104,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sponsor_mchid {data-required} | string | 出资商户号
 | activity_name {data-required} | string | 活动名称
 | activity_remark {data-required} | string | 活动说明
-| state {data-required} | string | 预算单状态<br/>`FINISHED` 枚举值
+| state {data-required} | string | 预算单状态<br/>`FINISHED` \| `UNLOCKING` 枚举值之一
 | unlock_remark {data-required} | string | 撤销说明
 | locked_time {data-required} | string | 资金锁定时间
 | finished_time {data-required} | string | 完成时间

@@ -81,7 +81,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | commander {data-required} | object {data-tooltip="对应PHP的array"} | 在途异常资金付款指令的发起方
 | operator {data-required data-indent=1} | string | 发起在途异常资金付款请求的角色<br/>`MERCHANT` 枚举值
 | mchid {data-indent=1} | string | 微信支付商户号
-| transfer_mode {data-required} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` \| `TRANSFER_MODE_TO_ORIGINAL_RECEIVE_MERCHANT` \| `TRANSFER_MODE_TO_SPECIFIED_RECEIVE_MERCHANT` 枚举值之一
+| transfer_mode {data-required} | string | 付款方式<br/>`TRANSFER_TO_ORIGINAL_RECEIVE_USER` \| `TRANSFER_TO_ORIGINAL_RECEIVE_MERCHANT` \| `TRANSFER_TO_SPECIFIED_RECEIVE_MERCHANT` 枚举值之一
 | receiver | object {data-tooltip="对应PHP的array"} | 收款方
 | account_type {data-indent=1} | string | 入账账户类型
 | openid {data-indent=1} | string | 入账用户OpenID
@@ -93,6 +93,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | close_time | string | 在途异常资金付款指令关闭时间
 | notify_url {data-required} | string | 回调通知地址
 | instruction_instance_id | string | 微信支付在途异常资金付款指令执行流水号
+| close_reason | string | 在途异常资金付款指令关闭原因
 
 {.im-table #response}
 
