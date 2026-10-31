@@ -14,7 +14,6 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 | type {data-required data-indent=1} | string | 接收方类型
 | account {data-required data-indent=1} | string | 接收方账号
 | name {data-indent=1} | string | 接收方名称
-| encrypted_name {data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 接收方名称的密文
 | relation_type {data-required data-indent=1} | string | 与分账方的关系类型
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
@@ -26,12 +25,11 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->receivers->add->postAsync([
   'json' => [
-    'appid'          => 'wx8888888888888888',
-    'type'           => 'MERCHANT_ID',
-    'account'        => '190001001',
-    'name'           => '张三网络公司',
-    'encrypted_name' => 'hu89ohu89ohu89o',
-    'relation_type'  => 'SUPPLIER',
+    'appid'         => 'wx8888888888888888',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '190001001',
+    'name'          => '张三网络公司',
+    'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -46,12 +44,11 @@ $instance->v3->ecommerce->profitsharing->receivers->add->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/receivers/add')->postAsync([
   'json' => [
-    'appid'          => 'wx8888888888888888',
-    'type'           => 'MERCHANT_ID',
-    'account'        => '190001001',
-    'name'           => '张三网络公司',
-    'encrypted_name' => 'hu89ohu89ohu89o',
-    'relation_type'  => 'SUPPLIER',
+    'appid'         => 'wx8888888888888888',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '190001001',
+    'name'          => '张三网络公司',
+    'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -66,12 +63,11 @@ $instance->chain('v3/ecommerce/profitsharing/receivers/add')->postAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/receivers/add']->postAsync([
   'json' => [
-    'appid'          => 'wx8888888888888888',
-    'type'           => 'MERCHANT_ID',
-    'account'        => '190001001',
-    'name'           => '张三网络公司',
-    'encrypted_name' => 'hu89ohu89ohu89o',
-    'relation_type'  => 'SUPPLIER',
+    'appid'         => 'wx8888888888888888',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '190001001',
+    'name'          => '张三网络公司',
+    'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -86,12 +82,11 @@ $instance['v3/ecommerce/profitsharing/receivers/add']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->receivers->add->post([
   'json' => [
-    'appid'          => 'wx8888888888888888',
-    'type'           => 'MERCHANT_ID',
-    'account'        => '190001001',
-    'name'           => '张三网络公司',
-    'encrypted_name' => 'hu89ohu89ohu89o',
-    'relation_type'  => 'SUPPLIER',
+    'appid'         => 'wx8888888888888888',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '190001001',
+    'name'          => '张三网络公司',
+    'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -103,12 +98,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/receivers/add')->post([
   'json' => [
-    'appid'          => 'wx8888888888888888',
-    'type'           => 'MERCHANT_ID',
-    'account'        => '190001001',
-    'name'           => '张三网络公司',
-    'encrypted_name' => 'hu89ohu89ohu89o',
-    'relation_type'  => 'SUPPLIER',
+    'appid'         => 'wx8888888888888888',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '190001001',
+    'name'          => '张三网络公司',
+    'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -120,12 +114,11 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/receivers/add']->post([
   'json' => [
-    'appid'          => 'wx8888888888888888',
-    'type'           => 'MERCHANT_ID',
-    'account'        => '190001001',
-    'name'           => '张三网络公司',
-    'encrypted_name' => 'hu89ohu89ohu89o',
-    'relation_type'  => 'SUPPLIER',
+    'appid'         => 'wx8888888888888888',
+    'type'          => 'MERCHANT_ID',
+    'account'       => '190001001',
+    'name'          => '张三网络公司',
+    'relation_type' => 'SUPPLIER',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

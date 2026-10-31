@@ -129,6 +129,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-required} | string | 商户号
 | plan_id {data-required} | integer | 委托代扣协议模板Id
 | out_contract_code {data-required} | string | 商户签约协议号
+| miniprogram_username | string | 跳转签约小程序的username
+| miniprogram_path | string | 跳转签约小程序的path
 
 {.im-table #response}
 

@@ -98,7 +98,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | openid {data-required} | string | 顾客openid
-| authorize_state {data-required} | string | 授权状态
+| authorize_state {data-required} | string | 授权状态<br/>`UNAUTHORIZED` \| `AUTHORIZED` \| `DEAUTHORIZED` 枚举值之一
 | authorize_time | string | 授权时间
 | deauthorize_time | string | 取消授权时间
 

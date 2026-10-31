@@ -207,6 +207,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_reason {data-indent=2} | string | 失效原因
 | show_as_exchange {data-indent=2} | boolean | 是否展示兑换价
 | available_product_no_list {data-indent=2} | string[] | 可用商品编码列表
+| business_mode {data-required data-indent=2} | string | 业务模式<br/>`FREE` 枚举值
 | stock {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 批次信息
 | product_coupon_id {data-required data-indent=2} | string | 商品券ID
 | stock_id {data-required data-indent=2} | string | 批次ID

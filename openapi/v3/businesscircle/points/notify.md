@@ -19,6 +19,9 @@ description: 通过积分通知回调API，商圈商户/服务商可针对微信
 | points_update_time {data-required data-indent=1} | string | 积分更新时间
 | no_points_remarks {data-indent=1} | string | 未获得积分的备注信息
 | total_points {data-indent=1} | integer | 顾客积分总额
+| shop_name {data-indent=1} | string | 门店名称
+| point_type {data-indent=1} | string | 积分类型<br/>`WECHATPAY_POINTS` \| `UNIFIED_MCH_POINTS` 枚举值之一
+| shop_number {data-indent=1} | string | 门店编号
 
 {.im-table #request}
 
@@ -36,6 +39,9 @@ $instance->v3->businesscircle->points->notify->postAsync([
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
     'no_points_remarks'  => '商品不参与积分活动',
     'total_points'       => 888888,
+    'shop_name'          => '微信支付旗舰店',
+    'point_type'         => 'WECHATPAY_POINTS',
+    'shop_number'        => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,6 +62,9 @@ $instance->chain('v3/businesscircle/points/notify')->postAsync([
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
     'no_points_remarks'  => '商品不参与积分活动',
     'total_points'       => 888888,
+    'shop_name'          => '微信支付旗舰店',
+    'point_type'         => 'WECHATPAY_POINTS',
+    'shop_number'        => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -76,6 +85,9 @@ $instance['v3/businesscircle/points/notify']->postAsync([
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
     'no_points_remarks'  => '商品不参与积分活动',
     'total_points'       => 888888,
+    'shop_name'          => '微信支付旗舰店',
+    'point_type'         => 'WECHATPAY_POINTS',
+    'shop_number'        => '123456',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -96,6 +108,9 @@ $response = $instance->v3->businesscircle->points->notify->post([
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
     'no_points_remarks'  => '商品不参与积分活动',
     'total_points'       => 888888,
+    'shop_name'          => '微信支付旗舰店',
+    'point_type'         => 'WECHATPAY_POINTS',
+    'shop_number'        => '123456',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -113,6 +128,9 @@ $response = $instance->chain('v3/businesscircle/points/notify')->post([
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
     'no_points_remarks'  => '商品不参与积分活动',
     'total_points'       => 888888,
+    'shop_name'          => '微信支付旗舰店',
+    'point_type'         => 'WECHATPAY_POINTS',
+    'shop_number'        => '123456',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -130,6 +148,9 @@ $response = $instance['v3/businesscircle/points/notify']->post([
     'points_update_time' => '2020-05-20T13:29:35.120+08:00',
     'no_points_remarks'  => '商品不参与积分活动',
     'total_points'       => 888888,
+    'shop_name'          => '微信支付旗舰店',
+    'point_type'         => 'WECHATPAY_POINTS',
+    'shop_number'        => '123456',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

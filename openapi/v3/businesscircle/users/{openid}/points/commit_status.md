@@ -29,7 +29,7 @@ $instance->v3->businesscircle->users->_openid_->points->commit_status->getAsync(
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r($response->getStatusCode() === 204);
+  print_r(json_decode((string) $response->getBody(), true));
 })
 ->wait();
 ```
@@ -44,7 +44,7 @@ $instance->chain('v3/businesscircle/users/{openid}/points/commit_status')->getAs
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r($response->getStatusCode() === 204);
+  print_r(json_decode((string) $response->getBody(), true));
 })
 ->wait();
 ```
@@ -59,7 +59,7 @@ $instance['v3/businesscircle/users/{openid}/points/commit_status']->getAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r($response->getStatusCode() === 204);
+  print_r(json_decode((string) $response->getBody(), true));
 })
 ->wait();
 ```
@@ -73,7 +73,7 @@ $response = $instance->v3->businesscircle->users->_openid_->points->commit_statu
     'appid'     => 'wx931386123456789e',
   ],
 ]);
-print_r($response->getStatusCode() === 204);
+print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
@@ -85,7 +85,7 @@ $response = $instance->chain('v3/businesscircle/users/{openid}/points/commit_sta
     'appid'     => 'wx931386123456789e',
   ],
 ]);
-print_r($response->getStatusCode() === 204);
+print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
@@ -97,14 +97,14 @@ $response = $instance['v3/businesscircle/users/{openid}/points/commit_status']->
     'appid'     => 'wx931386123456789e',
   ],
 ]);
-print_r($response->getStatusCode() === 204);
+print_r(json_decode((string) $response->getBody(), true));
 ```
 
 :::
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| 空字符串(无返回内容) {align=center colspan=3}
+| points_commit_status | string | 商圈会员待积分状态<br/>`PENDING` \| `FINISHED` 枚举值之一
 
 {.im-table #response}
 

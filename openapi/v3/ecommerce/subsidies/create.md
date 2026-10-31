@@ -14,7 +14,6 @@ description: 服务商下单的时候带上补差标识，微信订单支付成�
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | amount {data-required data-indent=1} | integer | 补差金额
 | description {data-required data-indent=1} | string | 补差描述
-| refund_id {data-indent=1} | string | 微信退款单号
 | out_subsidy_no {data-indent=1} | string | 商户补差单号
 
 {.im-table #request}
@@ -28,7 +27,6 @@ $instance->v3->ecommerce->subsidies->create->postAsync([
     'transaction_id' => '4208450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
-    'refund_id'      => '3008450740201411110007820472',
     'out_subsidy_no' => 'P20150806125347',
   ],
 ])
@@ -45,7 +43,6 @@ $instance->chain('v3/ecommerce/subsidies/create')->postAsync([
     'transaction_id' => '4208450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
-    'refund_id'      => '3008450740201411110007820472',
     'out_subsidy_no' => 'P20150806125347',
   ],
 ])
@@ -62,7 +59,6 @@ $instance['v3/ecommerce/subsidies/create']->postAsync([
     'transaction_id' => '4208450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
-    'refund_id'      => '3008450740201411110007820472',
     'out_subsidy_no' => 'P20150806125347',
   ],
 ])
@@ -79,7 +75,6 @@ $response = $instance->v3->ecommerce->subsidies->create->post([
     'transaction_id' => '4208450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
-    'refund_id'      => '3008450740201411110007820472',
     'out_subsidy_no' => 'P20150806125347',
   ],
 ]);
@@ -93,7 +88,6 @@ $response = $instance->chain('v3/ecommerce/subsidies/create')->post([
     'transaction_id' => '4208450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
-    'refund_id'      => '3008450740201411110007820472',
     'out_subsidy_no' => 'P20150806125347',
   ],
 ]);
@@ -107,7 +101,6 @@ $response = $instance['v3/ecommerce/subsidies/create']->post([
     'transaction_id' => '4208450740201411110007820472',
     'amount'         => 10,
     'description'    => '测试备注',
-    'refund_id'      => '3008450740201411110007820472',
     'out_subsidy_no' => 'P20150806125347',
   ],
 ]);
@@ -125,6 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | amount {data-required} | integer | 补差金额
 | result {data-required} | string | 补差单结果
 | success_time {data-required} | string | 补差完成时间
+| out_subsidy_no | string | 商户补差单号
 
 {.im-table #response}
 

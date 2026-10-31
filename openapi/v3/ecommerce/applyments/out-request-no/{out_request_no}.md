@@ -75,8 +75,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | sign_url | string | 签约链接
 | sub_mchid | string | 电商平台二级商户号
 | account_validation | object {data-tooltip="对应PHP的array"} | 汇款账户验证信息
-| account_name {data-indent=1} | string | 付款户名
-| account_no {data-indent=1} | string | 付款卡号
+| account_name {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 付款户名
+| account_no {data-indent=1} | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 付款卡号
 | pay_amount {data-indent=1} | number | 汇款金额
 | destination_account_number {data-indent=1} | string | 收款卡号
 | destination_account_name {data-indent=1} | string | 收款户名
@@ -91,6 +91,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_request_no {data-required} | string | 业务申请编号
 | applyment_id {data-required} | number | 微信支付申请单号
 | sign_state | string | 签约状态<br/>`UNSIGNED` \| `SIGNED` \| `NOT_SIGNABLE` 枚举值之一
+| wxpay_sign_required | boolean | 是否要求走微信支付签约模式
 
 {.im-table #response}
 

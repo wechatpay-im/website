@@ -128,7 +128,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-required} | string | 特约商户号
 | withdraw_id {data-required} | string | 微信支付提现单号
 | out_request_no {data-required} | string | 商户提现单号
-| account_type | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 
 {.im-table #response}
 

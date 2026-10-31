@@ -170,20 +170,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | payer_refund {data-required data-indent=1} | number | 用户退款金额
 | discount_refund {data-required data-indent=1} | number | 优惠退款金额
 | currency {data-required data-indent=1} | string | 退款币种
-| refund_fee {data-indent=1} | number | 手续费退款金额
+| advance {data-indent=1} | integer | 垫付金额
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠退款信息
 | promotion_id {data-required data-indent=1} | string | 券ID
 | scope {data-required data-indent=1} | string | 优惠范围
 | type {data-required data-indent=1} | string | 优惠类型
 | amount {data-required data-indent=1} | number | 优惠券面额
 | refund_amount {data-required data-indent=1} | number | 优惠退款金额
-| goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品列表
-| merchant_goods_id {data-required data-indent=2} | string | 商户侧商品编码
-| wechatpay_goods_id {data-indent=2} | string | 微信侧商品编码
-| goods_name {data-indent=2} | string | 商品名称
-| unit_price {data-required data-indent=2} | number | 商品单价
-| refund_amount {data-required data-indent=2} | number | 商品退款金额
-| refund_quantity {data-required data-indent=2} | number | 商品退货数量
 | refund_account | string | 退款出资商户<br/>`REFUND_SOURCE_PARTNER_ADVANCE` \| `REFUND_SOURCE_SUB_MERCHANT` 枚举值之一
 
 {.im-table #response}

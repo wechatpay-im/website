@@ -269,6 +269,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
 | show_as_exchange | boolean | 是否展示兑换价
 | available_product_no_list | string[] | 可用商品编码列表
+| business_mode {data-required} | string | 业务模式<br/>`FREE` 枚举值
 
 {.im-table #response}
 
@@ -399,6 +400,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
 | show_as_exchange | boolean | 是否展示兑换价
 | available_product_no_list | string[] | 可用商品编码列表
+| business_mode {data-required} | string | 业务模式<br/>`FREE` 枚举值
 
 {.im-table #response}
 

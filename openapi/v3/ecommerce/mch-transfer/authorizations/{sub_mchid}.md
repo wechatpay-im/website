@@ -71,7 +71,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required} | string | 二级商户号
-| authorization_state {data-required} | string | 授权状态
+| authorization_state {data-required} | string | 授权状态<br/>`AUTHORIZE_PROCESSING` \| `AUTHORIZED` \| `UNAUTHORIZED` 枚举值之一
 | authorize_time | string | 授权时间
 
 {.im-table #response}

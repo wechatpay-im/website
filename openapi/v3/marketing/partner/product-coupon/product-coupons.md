@@ -156,6 +156,7 @@ description: 品牌方可以通过该接口创建商品券和批次。微信支�
 | store_scope {data-indent=2} | string | 可用门店范围<br/>`NONE` \| `ALL` \| `SPECIFIC` 枚举值之一
 | show_as_exchange {data-indent=1} | boolean | 是否展示兑换价
 | available_product_no_list {data-indent=1} | string[] | 可用商品编码列表
+| business_mode {data-indent=1} | string | 业务模式<br/>`FREE` 枚举值
 
 {.im-table #request}
 
@@ -349,6 +350,7 @@ $instance->v3->marketing->partner->productCoupon->productCoupons->postAsync([
     ],
     'show_as_exchange'              => true,
     'available_product_no_list'     => ['string'],
+    'business_mode'                 => 'FREE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -545,6 +547,7 @@ $instance->chain('v3/marketing/partner/product-coupon/product-coupons')->postAsy
     ],
     'show_as_exchange'              => true,
     'available_product_no_list'     => ['string'],
+    'business_mode'                 => 'FREE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -741,6 +744,7 @@ $instance['v3/marketing/partner/product-coupon/product-coupons']->postAsync([
     ],
     'show_as_exchange'              => true,
     'available_product_no_list'     => ['string'],
+    'business_mode'                 => 'FREE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -937,6 +941,7 @@ $response = $instance->v3->marketing->partner->productCoupon->productCoupons->po
     ],
     'show_as_exchange'              => true,
     'available_product_no_list'     => ['string'],
+    'business_mode'                 => 'FREE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1130,6 +1135,7 @@ $response = $instance->chain('v3/marketing/partner/product-coupon/product-coupon
     ],
     'show_as_exchange'              => true,
     'available_product_no_list'     => ['string'],
+    'business_mode'                 => 'FREE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1323,6 +1329,7 @@ $response = $instance['v3/marketing/partner/product-coupon/product-coupons']->po
     ],
     'show_as_exchange'              => true,
     'available_product_no_list'     => ['string'],
+    'business_mode'                 => 'FREE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -1510,6 +1517,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-indent=2} | string | 品牌ID
 | show_as_exchange | boolean | 是否展示兑换价
 | available_product_no_list | string[] | 可用商品编码列表
+| business_mode {data-required} | string | 业务模式<br/>`FREE` 枚举值
 
 {.im-table #response}
 

@@ -20,7 +20,6 @@ description: 本接口用于商户号注销、商户号注销及提现。当平�
 | account_bank {data-required data-indent=3} | string | 开户银行
 | bank_branch_id {data-indent=3} | string | 开户银行联行号
 | bank_branch_name {data-indent=3} | string | 开户银行全称（含支行）
-| bank_name {data-indent=3} | string | 开户银行全称（含支行）
 | account_number {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行账号
 | identity_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 收款人账号对应的证件信息
 | id_doc_type {data-indent=3} | string | 证件类型<br/>`IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_ID_CARD` 枚举值之一
@@ -50,8 +49,7 @@ $instance->v3->ecommerce->account->applyCancelWithdraw->postAsync([
         'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
         'account_bank'     => '工商银行',
         'bank_branch_id'   => '402713354941',
-        'bank_branch_name' => '',
-        'bank_name'        => '402713354941',
+        'bank_branch_name' => '施秉县农村信用合作联社城关信用社',
         'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
@@ -89,8 +87,7 @@ $instance->chain('v3/ecommerce/account/apply-cancel-withdraw')->postAsync([
         'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
         'account_bank'     => '工商银行',
         'bank_branch_id'   => '402713354941',
-        'bank_branch_name' => '',
-        'bank_name'        => '402713354941',
+        'bank_branch_name' => '施秉县农村信用合作联社城关信用社',
         'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
@@ -128,8 +125,7 @@ $instance['v3/ecommerce/account/apply-cancel-withdraw']->postAsync([
         'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
         'account_bank'     => '工商银行',
         'bank_branch_id'   => '402713354941',
-        'bank_branch_name' => '',
-        'bank_name'        => '402713354941',
+        'bank_branch_name' => '施秉县农村信用合作联社城关信用社',
         'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
@@ -167,8 +163,7 @@ $response = $instance->v3->ecommerce->account->applyCancelWithdraw->post([
         'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
         'account_bank'     => '工商银行',
         'bank_branch_id'   => '402713354941',
-        'bank_branch_name' => '',
-        'bank_name'        => '402713354941',
+        'bank_branch_name' => '施秉县农村信用合作联社城关信用社',
         'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
@@ -203,8 +198,7 @@ $response = $instance->chain('v3/ecommerce/account/apply-cancel-withdraw')->post
         'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
         'account_bank'     => '工商银行',
         'bank_branch_id'   => '402713354941',
-        'bank_branch_name' => '',
-        'bank_name'        => '402713354941',
+        'bank_branch_name' => '施秉县农村信用合作联社城关信用社',
         'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [
@@ -239,8 +233,7 @@ $response = $instance['v3/ecommerce/account/apply-cancel-withdraw']->post([
         'account_name'     => 'AOZdYGISxo4y44/UgZ69b0zZXkw==',
         'account_bank'     => '工商银行',
         'bank_branch_id'   => '402713354941',
-        'bank_branch_name' => '',
-        'bank_name'        => '402713354941',
+        'bank_branch_name' => '施秉县农村信用合作联社城关信用社',
         'account_number'   => 'd+xT+MQCvrLHeorwC+w==',
       ],
       'identity_info'     => [

@@ -48,6 +48,7 @@ description: 还款下单，只能使用还款对应的查单、关单接口
 | combine_appid {data-indent=2} | string | 还款服务商APPID
 | openid {data-indent=2} | string | 用户标识
 | webview_url {data-indent=2} | string | 网页经营场景URL
+| combine_description {data-indent=1} | string | 订单描述
 
 {.im-table #request}
 
@@ -103,6 +104,7 @@ $instance->v3->repayment->combineTransactions->partner->prepay->postAsync([
       'openid'        => '',
       'webview_url'   => '',
     ],
+    'combine_description'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -161,6 +163,7 @@ $instance->chain('v3/repayment/combine-transactions/partner/prepay')->postAsync(
       'openid'        => '',
       'webview_url'   => '',
     ],
+    'combine_description'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -219,6 +222,7 @@ $instance['v3/repayment/combine-transactions/partner/prepay']->postAsync([
       'openid'        => '',
       'webview_url'   => '',
     ],
+    'combine_description'  => '',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -277,6 +281,7 @@ $response = $instance->v3->repayment->combineTransactions->partner->prepay->post
       'openid'        => '',
       'webview_url'   => '',
     ],
+    'combine_description'  => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -332,6 +337,7 @@ $response = $instance->chain('v3/repayment/combine-transactions/partner/prepay')
       'openid'        => '',
       'webview_url'   => '',
     ],
+    'combine_description'  => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -387,6 +393,7 @@ $response = $instance['v3/repayment/combine-transactions/partner/prepay']->post(
       'openid'        => '',
       'webview_url'   => '',
     ],
+    'combine_description'  => '',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

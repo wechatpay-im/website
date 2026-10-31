@@ -27,7 +27,7 @@ $instance->v3->ecommerce->account->cancelApplications->postAsync([
     'out_apply_no'     => '2019061122222222122',
     'application_info' => [[
       'application_type'     => 'SP_CANCEL_ACCOUNT_APPLICATION',
-      'application_media_id' => '',
+      'application_media_id' => 'abc123456',
     ],],
   ],
 ])
@@ -44,7 +44,7 @@ $instance->chain('v3/ecommerce/account/cancel-applications')->postAsync([
     'out_apply_no'     => '2019061122222222122',
     'application_info' => [[
       'application_type'     => 'SP_CANCEL_ACCOUNT_APPLICATION',
-      'application_media_id' => '',
+      'application_media_id' => 'abc123456',
     ],],
   ],
 ])
@@ -61,7 +61,7 @@ $instance['v3/ecommerce/account/cancel-applications']->postAsync([
     'out_apply_no'     => '2019061122222222122',
     'application_info' => [[
       'application_type'     => 'SP_CANCEL_ACCOUNT_APPLICATION',
-      'application_media_id' => '',
+      'application_media_id' => 'abc123456',
     ],],
   ],
 ])
@@ -78,7 +78,7 @@ $response = $instance->v3->ecommerce->account->cancelApplications->post([
     'out_apply_no'     => '2019061122222222122',
     'application_info' => [[
       'application_type'     => 'SP_CANCEL_ACCOUNT_APPLICATION',
-      'application_media_id' => '',
+      'application_media_id' => 'abc123456',
     ],],
   ],
 ]);
@@ -92,7 +92,7 @@ $response = $instance->chain('v3/ecommerce/account/cancel-applications')->post([
     'out_apply_no'     => '2019061122222222122',
     'application_info' => [[
       'application_type'     => 'SP_CANCEL_ACCOUNT_APPLICATION',
-      'application_media_id' => '',
+      'application_media_id' => 'abc123456',
     ],],
   ],
 ]);
@@ -106,7 +106,7 @@ $response = $instance['v3/ecommerce/account/cancel-applications']->post([
     'out_apply_no'     => '2019061122222222122',
     'application_info' => [[
       'application_type'     => 'SP_CANCEL_ACCOUNT_APPLICATION',
-      'application_media_id' => '',
+      'application_media_id' => 'abc123456',
     ],],
   ],
 ]);

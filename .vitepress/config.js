@@ -191,6 +191,7 @@ export default defineConfig({
       '/openapi/v3/bank-': bankTransferSidebar(),
       '/openapi/v3/rate-activity/': acquiringBankMixedSidebar(),
       '/openapi/v3/marketing/bank/': acquiringBankMixedSidebar(),
+      '/openapi/v3/marketing/bank-points/': acquiringBankMixedSidebar(),
       '/openapi/v3/merchant-settlement/': acquiringBankMixedSidebar(),
       '/openapi/v3/payscore/acquiringbank/': acquiringBankMixedSidebar(),
       '/openapi/v3/pay/acquiring-bank/': acquiringBankMixedSidebar(),
@@ -2489,6 +2490,13 @@ function acquiringBankMixedSidebar() {
           items: [
             ['导入定向用户协议号', '/openapi/v3/marketing/bank/packages/{package_id}/tasks#post'],
             ['查询上传任务列表', '/openapi/v3/marketing/bank/packages/{package_id}/tasks#get'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '积分兑换立减金',
+          collapsed: true,
+          items: [
+            ['移除活动目标人群', '/openapi/v3/marketing/bank-points/activity/{activity_id}/users/remove'],
           ].map(transArrayItem),
         },
         {

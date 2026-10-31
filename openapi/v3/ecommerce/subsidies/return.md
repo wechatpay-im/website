@@ -161,6 +161,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-required} | string | 补差回退描述
 | result {data-required} | string | 补差回退结果
 | success_time {data-required} | string | 补差回退完成时间
+| subsidy_id | string | 微信补差单号
+| from | object[] {data-tooltip="对应PHP的array"} | 回退出资账户及金额
+| account {data-indent=1} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
+| amount {data-indent=1} | integer | 出资金额
 
 {.im-table #response}
 

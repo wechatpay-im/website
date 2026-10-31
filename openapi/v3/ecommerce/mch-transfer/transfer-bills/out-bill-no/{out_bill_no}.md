@@ -96,7 +96,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | transfer_bill_no {data-required} | string | 微信转账单号
 | appid {data-required} | string | 服务商AppID
 | transfer_scene_id {data-required} | string | 转账场景ID
-| state {data-required} | string | 单据状态
+| state {data-required} | string | 单据状态<br/>`ACCEPTED` \| `PROCESSING` \| `WAIT_USER_CONFIRM` \| `TRANSFERING` \| `SUCCESS` \| `FAIL` \| `CANCELING` \| `CANCELLED` 枚举值之一
 | transfer_amount {data-required} | number | 转账金额
 | transfer_remark {data-required} | string | 转账备注
 | fail_reason | string | 失败原因

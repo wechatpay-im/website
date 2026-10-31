@@ -190,11 +190,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-required data-indent=1} | string | 分账接收方类型
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
 | detail_id {data-required data-indent=1} | string | 分账明细单号
-| abnormal_status {data-indent=1} | string | 异常处理状态<br/>`ABNORMAL_PENDING` \| `ABNORMAL_FINISHED` \| `ABNORMAL_CLOSED` 枚举值之一
-| funds_abnormal_closed_reason {data-indent=1} | string | 异常处理关单原因<br/>`CLOSED_REASON_TIMEOUT` \| `CLOSED_REASON_RESTRICT_TRANSFER` 枚举值之一
-| funds_abnormal_redirect_id {data-indent=1} | string | 微信支付在途异常资金付款单号
-| funds_abnormal_receivers {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 平台接收异常资金商户号或运营主体列表
-| mchid {data-indent=2} | string | 平台接收异常资金商户号
 
 {.im-table #response}
 
@@ -218,9 +213,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->ecommerce->profitsharing->orders->getAsync([
   'query' => [
-    'sub_mchid'      => '',
-    'transaction_id' => '',
-    'out_order_no'   => '',
+    'sub_mchid'      => '1900000109',
+    'transaction_id' => '4208450740201411110007820472',
+    'out_order_no'   => 'P20150806125346',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -232,9 +227,9 @@ $instance->v3->ecommerce->profitsharing->orders->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/ecommerce/profitsharing/orders')->getAsync([
   'query' => [
-    'sub_mchid'      => '',
-    'transaction_id' => '',
-    'out_order_no'   => '',
+    'sub_mchid'      => '1900000109',
+    'transaction_id' => '4208450740201411110007820472',
+    'out_order_no'   => 'P20150806125346',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -246,9 +241,9 @@ $instance->chain('v3/ecommerce/profitsharing/orders')->getAsync([
 ```php [异步属性式]
 $instance['v3/ecommerce/profitsharing/orders']->getAsync([
   'query' => [
-    'sub_mchid'      => '',
-    'transaction_id' => '',
-    'out_order_no'   => '',
+    'sub_mchid'      => '1900000109',
+    'transaction_id' => '4208450740201411110007820472',
+    'out_order_no'   => 'P20150806125346',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -260,9 +255,9 @@ $instance['v3/ecommerce/profitsharing/orders']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->ecommerce->profitsharing->orders->get([
   'query' => [
-    'sub_mchid'      => '',
-    'transaction_id' => '',
-    'out_order_no'   => '',
+    'sub_mchid'      => '1900000109',
+    'transaction_id' => '4208450740201411110007820472',
+    'out_order_no'   => 'P20150806125346',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -271,9 +266,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/ecommerce/profitsharing/orders')->get([
   'query' => [
-    'sub_mchid'      => '',
-    'transaction_id' => '',
-    'out_order_no'   => '',
+    'sub_mchid'      => '1900000109',
+    'transaction_id' => '4208450740201411110007820472',
+    'out_order_no'   => 'P20150806125346',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -282,9 +277,9 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/ecommerce/profitsharing/orders']->get([
   'query' => [
-    'sub_mchid'      => '',
-    'transaction_id' => '',
-    'out_order_no'   => '',
+    'sub_mchid'      => '1900000109',
+    'transaction_id' => '4208450740201411110007820472',
+    'out_order_no'   => 'P20150806125346',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -300,7 +295,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | order_id {data-required} | string | 微信分账单号
 | status | string | 分账单状态
 | receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
-| receiver_mchid {data-indent=1} | string | 分账接收商户号
 | amount {data-required data-indent=1} | integer | 分账金额
 | description {data-required data-indent=1} | string | 分账描述
 | result {data-indent=1} | string | 分账结果
@@ -309,12 +303,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-required data-indent=1} | string | 分账接收方类型
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
 | detail_id {data-required data-indent=1} | string | 分账明细单号
-| close_reason | string | 关单原因描述，当分账单状态status为CLOSED（处理失败，已关单）时，返回该字段。
-| abnormal_status | string | 异常处理状态<br/>`ABNORMAL_PENDING` \| `ABNORMAL_FINISHED` \| `ABNORMAL_CLOSED` 枚举值之一
-| funds_abnormal_closed_reason | string | 异常处理关单原因<br/>`CLOSED_REASON_TIMEOUT` \| `CLOSED_REASON_RESTRICT_TRANSFER` 枚举值之一
-| funds_abnormal_redirect_id | string | 微信支付在途异常资金付款单号
-| funds_abnormal_receivers | object[] {data-tooltip="对应PHP的array"} | 平台接收异常资金商户号或运营主体列表
-| mchid {data-indent=1} | string | 平台接收异常资金商户号
 | finish_amount | integer | 分账完结的分账金额，单位为分， 仅当查询分账完结的执行结果时，存在本字段。
 | finish_description | string | 分账完结的原因描述，仅当查询分账完结的执行结果时，存在本字段。
 
