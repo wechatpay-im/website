@@ -490,7 +490,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | activate_path {data-required data-indent=3} | string | 跳转激活的path
 | payment_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付设置
 | payment_mode {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付模式
-| payment_scene_list {data-indent=3} | string[] | 支付场景列表
+| payment_scene_list {data-indent=3} | string[] | 支付场景列表<br/>`APP` \| `MICROPAY` \| `PAP` \| `MINIPROGRAM` \| `FACEPAY` 枚举值之一
 | limit_bank {data-indent=2} | string | 指定银行的简称
 | goods_tags {data-indent=2} | string[] | 订单优惠标记
 | miniprogram_activity_setting | object {data-tooltip="对应PHP的array"} | 支付前会员活动设置
@@ -651,7 +651,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | activate_path {data-required data-indent=4} | string | 跳转激活的path
 | payment_setting {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付设置
 | payment_mode {data-indent=3} | object {data-tooltip="对应PHP的array"} | 支付模式
-| payment_scene_list {data-indent=4} | string[] | 支付场景列表
+| payment_scene_list {data-indent=4} | string[] | 支付场景列表<br/>`APP` \| `MICROPAY` \| `PAP` \| `MINIPROGRAM` \| `FACEPAY` 枚举值之一
 | limit_bank {data-indent=3} | string | 指定银行的简称
 | goods_tags {data-indent=3} | string[] | 订单优惠标记
 | miniprogram_activity_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付前会员活动设置

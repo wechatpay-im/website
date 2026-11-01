@@ -15,7 +15,7 @@ description: 获取微信分付曝光建议
 | sub_appid {data-required data-indent=1} | string | 子商户/二级商户应用ID
 | sub_mchid {data-indent=1} | string | 子商户号/二级商户号
 | user_id {data-indent=1} | object {data-tooltip="对应PHP的array"} | 用户ID
-| user_id_type {data-indent=2} | string | 用户ID的类型<br/>`UNKNOWN_USER_ID_TYPE` \| `OPENID` \| `PHONE_NO` \| `SP_OPENID` \| `SUB_OPENID` 枚举值之一
+| user_id_type {data-indent=2} | string | 用户ID的类型<br/>`UNKNOWN_USER_ID_TYPE` \| `OPENID` \| `SP_OPENID` \| `SUB_OPENID` 枚举值之一
 | sp_openid {data-indent=2} | string | 用户服务标识
 | sub_openid {data-indent=2} | string | 用户子标识
 

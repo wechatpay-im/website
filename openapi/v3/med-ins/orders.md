@@ -10,7 +10,7 @@ description: 商户调用该接口向微信医保后台下单
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| mix_pay_type {data-required data-indent=1} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` 枚举值之一
+| mix_pay_type {data-required data-indent=1} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
 | order_type {data-required data-indent=1} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required data-indent=1} | string | 从业机构的公众号ID
 | sub_appid {data-indent=1} | string | 医疗机构的公众号ID
@@ -466,7 +466,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | payAuthNo {data-indent=1} | string | 
 | payOrdId {data-indent=1} | string | 
 | setlLatlnt {data-indent=1} | string | 
-| mix_pay_type {data-required} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` 枚举值之一
+| mix_pay_type {data-required} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
 | order_type {data-required} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required} | string | 从业机构的公众号ID
 | sub_appid | string | 医疗机构的公众号ID

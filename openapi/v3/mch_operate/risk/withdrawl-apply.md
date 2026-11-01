@@ -30,7 +30,7 @@ description: 针对被微信支付平台不收不付管控的电商子商户，�
 | identification_no {data-required data-indent=3} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 证件号码
 | proof_media_list {data-indent=1} | object {data-tooltip="对应PHP的array"} | 付款申请证明材料
 | proof_payee_media {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 申请证明材料
-| proof_media_type {data-required data-indent=3} | string | 申请证明材料类型<br/>`BASIC_TRANSACTION_INFORMATION` \| `LEGAL_ID_CARD` \| `ID_CARD` \| `BUSINESS_LICENSE_PHOTO` \| `PAYEE_ID_CARD` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_6` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_7` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_8` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_1` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_2` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_3` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_4` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_5` \| `MISSING_OFFICIAL_SEAL_LETTER` \| `CERTIFICATE_OF_ACCOUNT_CANCELLATION` \| `INDUSTRIAL_AND_COMMERCIAL_CANCELLATION_CERTIFICATE` 枚举值之一
+| proof_media_type {data-required data-indent=3} | string | 申请证明材料类型<br/>`BASIC_TRANSACTION_INFORMATION` \| `LEGAL_ID_CARD` \| `ID_CARD` \| `BUSINESS_LICENSE_PHOTO` \| `PAYEE_ID_CARD` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_6` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_7` \| `WECHAT_PAY_WITHDRAWAL_APPLICATION_TYPE_8` 枚举值之一
 | proof_media {data-required data-indent=3} | string | 证明材料照片
 | additional_materials {data-indent=1} | object {data-tooltip="对应PHP的array"} | 补充材料
 | additional_media {data-indent=2} | string[] | 补充材料照片列表，最多10张

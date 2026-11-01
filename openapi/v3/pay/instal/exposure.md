@@ -12,7 +12,7 @@ description: 获取微信分付曝光建议
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | mchid {data-required data-indent=1} | string | 直连商户号
 | appid {data-required data-indent=1} | string | 应用AppID
-| user_id_type {data-required data-indent=1} | string | 用户ID的类型<br/>`UNKNOWN_USER_ID_TYPE` \| `OPENID` \| `PHONE_NO` \| `SP_OPENID` \| `SUB_OPENID` 枚举值之一
+| user_id_type {data-required data-indent=1} | string | 用户ID的类型<br/>`UNKNOWN_USER_ID_TYPE` \| `OPENID` \| `SP_OPENID` \| `SUB_OPENID` 枚举值之一
 | openid {data-indent=1} | string | 用户标识
 
 {.im-table #request}

@@ -14,7 +14,7 @@ description: 商户可调用该接口付款给商户。注：接口频率限制�
 | sp_appid {data-indent=1} | string | 公众账号ID
 | business_type {data-required data-indent=1} | string | 业务类型<br/>`DEPOSIT_COMPENSATION` \| `PLATFORM_AFTER_SALES_COMPENSATION` \| `INSURANCE_CLAIM` \| `DEPOSIT_AFTER_SALES_COMPENSATION` 枚举值之一
 | receiver {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 收款方信息
-| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
+| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` 枚举值
 | mch_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方商户信息
 | mchid {data-indent=3} | string | 商户号
 | out_bill_no {data-required data-indent=1} | string | 商户单号

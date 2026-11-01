@@ -20,7 +20,7 @@
 | contact_period_end {data-indent=2} | string | 联系人证件有效期结束时间
 | mobile {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 联系人手机号
 | subject_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 主体信息
-| subject_type {data-required data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_INSTITUTIONS` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
+| subject_type {data-required data-indent=2} | string | 主体类型<br/>`SUBJECT_TYPE_INDIVIDUAL` \| `SUBJECT_TYPE_ENTERPRISE` \| `SUBJECT_TYPE_OTHERS` \| `SUBJECT_TYPE_MICRO` \| `SUBJECT_TYPE_GOVERNMENT` \| `SUBJECT_TYPE_INSTITUTIONS_CLONED` 枚举值之一
 | is_finance_institution {data-indent=2} | boolean | 是否金融机构
 | certificate_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 登记证书
 | cert_type {data-required data-indent=3} | string | 登记证书类型<br/>`CERTIFICATE_TYPE_2388` \| `CERTIFICATE_TYPE_2389` \| `CERTIFICATE_TYPE_2390` \| `CERTIFICATE_TYPE_2391` \| `CERTIFICATE_TYPE_2392` \| `CERTIFICATE_TYPE_2393` \| `CERTIFICATE_TYPE_2394` \| `CERTIFICATE_TYPE_2395` \| `CERTIFICATE_TYPE_2396` \| `CERTIFICATE_TYPE_2399` \| `CERTIFICATE_TYPE_2400` \| `CERTIFICATE_TYPE_2520` \| `CERTIFICATE_TYPE_2521` \| `CERTIFICATE_TYPE_2522` 枚举值之一

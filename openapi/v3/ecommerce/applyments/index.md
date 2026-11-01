@@ -27,7 +27,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | finance_type {data-indent=2} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `SMALL_LOAN` \| `OTHER` 枚举值之一
 | finance_license_pics {data-indent=2} | string[] | 金融机构许可证图片
 | id_holder_type {data-indent=1} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
-| id_doc_type {data-indent=1} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
+| id_doc_type {data-indent=1} | string | `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
 | authorize_letter_copy {data-indent=1} | string | 法定代表人说明函
 | id_card_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 经营者/法人身份证信息
 | id_card_copy {data-indent=2} | string | 身份证人像面照片
@@ -45,7 +45,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | doc_period_end {data-indent=2} | string | 证件有效期结束时间
 | owner {data-indent=1} | boolean | 经营者/法人是否为受益人
 | ubo_info_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 最终受益人信息列表
-| ubo_id_doc_type {data-required data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
+| ubo_id_doc_type {data-required data-indent=2} | string | `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
 | ubo_id_doc_copy {data-required data-indent=2} | string | 证件正面照片
 | ubo_id_doc_copy_back {data-required data-indent=2} | string | 证件反面照片
 | ubo_id_doc_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 受益人姓名
@@ -64,7 +64,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 | contact_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 超级管理员信息
 | contact_type {data-indent=2} | string | 超级管理员类型<br/>`65` \| `66` 枚举值之一
 | contact_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员姓名
-| contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
+| contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
 | contact_id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员身份证件号码
 | contact_id_doc_copy {data-indent=2} | string | 超级管理员证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 超级管理员证件反面照片
@@ -114,7 +114,7 @@ $instance->v3->ecommerce->applyments->_empty_->postAsync([
       'finance_license_pics' => ['MediaId'],
     ],
     'id_holder_type'           => 'LEGAL',
-    'id_doc_type'              => 'IDENTIFICATION_TYPE_IDCARD',
+    'id_doc_type'              => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
     'authorize_letter_copy'    => '47ZC6GC-vnrbEny_Ie_An5-tCpqxucuxi-vByf3Gjm7KEIUv0OF4wFNIO4kqg05InE4d2I6_H7I4',
     'id_card_info'             => [
       'id_card_copy'             => 'xpnFuAxhBTEO_PvWkfSCJ3zVIn001D8daLC-ehEuo0BJqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -134,7 +134,7 @@ $instance->v3->ecommerce->applyments->_empty_->postAsync([
     ],
     'owner'                    => true,
     'ubo_info_list'            => [[
-      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
+      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'ubo_id_doc_copy'         => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_copy_back'    => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_name'         => '',
@@ -155,7 +155,7 @@ $instance->v3->ecommerce->applyments->_empty_->postAsync([
     'contact_info'             => [
       'contact_type'                  => '65',
       'contact_name'                  => 'pVd1HJ6zyvPedzGaV+X3IdGdbDnuC4Eelw/wDa4SzfeespQO/0kjiwfqdfg==',
-      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_IDCARD',
+      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'contact_id_doc_copy_back'      => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -212,7 +212,7 @@ $instance->chain('v3/ecommerce/applyments/{empty}')->postAsync([
       'finance_license_pics' => ['MediaId'],
     ],
     'id_holder_type'           => 'LEGAL',
-    'id_doc_type'              => 'IDENTIFICATION_TYPE_IDCARD',
+    'id_doc_type'              => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
     'authorize_letter_copy'    => '47ZC6GC-vnrbEny_Ie_An5-tCpqxucuxi-vByf3Gjm7KEIUv0OF4wFNIO4kqg05InE4d2I6_H7I4',
     'id_card_info'             => [
       'id_card_copy'             => 'xpnFuAxhBTEO_PvWkfSCJ3zVIn001D8daLC-ehEuo0BJqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -232,7 +232,7 @@ $instance->chain('v3/ecommerce/applyments/{empty}')->postAsync([
     ],
     'owner'                    => true,
     'ubo_info_list'            => [[
-      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
+      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'ubo_id_doc_copy'         => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_copy_back'    => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_name'         => '',
@@ -253,7 +253,7 @@ $instance->chain('v3/ecommerce/applyments/{empty}')->postAsync([
     'contact_info'             => [
       'contact_type'                  => '65',
       'contact_name'                  => 'pVd1HJ6zyvPedzGaV+X3IdGdbDnuC4Eelw/wDa4SzfeespQO/0kjiwfqdfg==',
-      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_IDCARD',
+      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'contact_id_doc_copy_back'      => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -310,7 +310,7 @@ $instance['v3/ecommerce/applyments/{empty}']->postAsync([
       'finance_license_pics' => ['MediaId'],
     ],
     'id_holder_type'           => 'LEGAL',
-    'id_doc_type'              => 'IDENTIFICATION_TYPE_IDCARD',
+    'id_doc_type'              => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
     'authorize_letter_copy'    => '47ZC6GC-vnrbEny_Ie_An5-tCpqxucuxi-vByf3Gjm7KEIUv0OF4wFNIO4kqg05InE4d2I6_H7I4',
     'id_card_info'             => [
       'id_card_copy'             => 'xpnFuAxhBTEO_PvWkfSCJ3zVIn001D8daLC-ehEuo0BJqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -330,7 +330,7 @@ $instance['v3/ecommerce/applyments/{empty}']->postAsync([
     ],
     'owner'                    => true,
     'ubo_info_list'            => [[
-      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
+      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'ubo_id_doc_copy'         => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_copy_back'    => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_name'         => '',
@@ -351,7 +351,7 @@ $instance['v3/ecommerce/applyments/{empty}']->postAsync([
     'contact_info'             => [
       'contact_type'                  => '65',
       'contact_name'                  => 'pVd1HJ6zyvPedzGaV+X3IdGdbDnuC4Eelw/wDa4SzfeespQO/0kjiwfqdfg==',
-      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_IDCARD',
+      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'contact_id_doc_copy_back'      => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -408,7 +408,7 @@ $response = $instance->v3->ecommerce->applyments->_empty_->post([
       'finance_license_pics' => ['MediaId'],
     ],
     'id_holder_type'           => 'LEGAL',
-    'id_doc_type'              => 'IDENTIFICATION_TYPE_IDCARD',
+    'id_doc_type'              => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
     'authorize_letter_copy'    => '47ZC6GC-vnrbEny_Ie_An5-tCpqxucuxi-vByf3Gjm7KEIUv0OF4wFNIO4kqg05InE4d2I6_H7I4',
     'id_card_info'             => [
       'id_card_copy'             => 'xpnFuAxhBTEO_PvWkfSCJ3zVIn001D8daLC-ehEuo0BJqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -428,7 +428,7 @@ $response = $instance->v3->ecommerce->applyments->_empty_->post([
     ],
     'owner'                    => true,
     'ubo_info_list'            => [[
-      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
+      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'ubo_id_doc_copy'         => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_copy_back'    => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_name'         => '',
@@ -449,7 +449,7 @@ $response = $instance->v3->ecommerce->applyments->_empty_->post([
     'contact_info'             => [
       'contact_type'                  => '65',
       'contact_name'                  => 'pVd1HJ6zyvPedzGaV+X3IdGdbDnuC4Eelw/wDa4SzfeespQO/0kjiwfqdfg==',
-      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_IDCARD',
+      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'contact_id_doc_copy_back'      => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -503,7 +503,7 @@ $response = $instance->chain('v3/ecommerce/applyments/{empty}')->post([
       'finance_license_pics' => ['MediaId'],
     ],
     'id_holder_type'           => 'LEGAL',
-    'id_doc_type'              => 'IDENTIFICATION_TYPE_IDCARD',
+    'id_doc_type'              => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
     'authorize_letter_copy'    => '47ZC6GC-vnrbEny_Ie_An5-tCpqxucuxi-vByf3Gjm7KEIUv0OF4wFNIO4kqg05InE4d2I6_H7I4',
     'id_card_info'             => [
       'id_card_copy'             => 'xpnFuAxhBTEO_PvWkfSCJ3zVIn001D8daLC-ehEuo0BJqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -523,7 +523,7 @@ $response = $instance->chain('v3/ecommerce/applyments/{empty}')->post([
     ],
     'owner'                    => true,
     'ubo_info_list'            => [[
-      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
+      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'ubo_id_doc_copy'         => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_copy_back'    => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_name'         => '',
@@ -544,7 +544,7 @@ $response = $instance->chain('v3/ecommerce/applyments/{empty}')->post([
     'contact_info'             => [
       'contact_type'                  => '65',
       'contact_name'                  => 'pVd1HJ6zyvPedzGaV+X3IdGdbDnuC4Eelw/wDa4SzfeespQO/0kjiwfqdfg==',
-      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_IDCARD',
+      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'contact_id_doc_copy_back'      => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -598,7 +598,7 @@ $response = $instance['v3/ecommerce/applyments/{empty}']->post([
       'finance_license_pics' => ['MediaId'],
     ],
     'id_holder_type'           => 'LEGAL',
-    'id_doc_type'              => 'IDENTIFICATION_TYPE_IDCARD',
+    'id_doc_type'              => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
     'authorize_letter_copy'    => '47ZC6GC-vnrbEny_Ie_An5-tCpqxucuxi-vByf3Gjm7KEIUv0OF4wFNIO4kqg05InE4d2I6_H7I4',
     'id_card_info'             => [
       'id_card_copy'             => 'xpnFuAxhBTEO_PvWkfSCJ3zVIn001D8daLC-ehEuo0BJqRTvDujqhThn4ReFxikqJ5YW6zFQ',
@@ -618,7 +618,7 @@ $response = $instance['v3/ecommerce/applyments/{empty}']->post([
     ],
     'owner'                    => true,
     'ubo_info_list'            => [[
-      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_IDCARD',
+      'ubo_id_doc_type'         => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'ubo_id_doc_copy'         => 'jTpGmxUXqRTvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_copy_back'    => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'ubo_id_doc_name'         => '',
@@ -639,7 +639,7 @@ $response = $instance['v3/ecommerce/applyments/{empty}']->post([
     'contact_info'             => [
       'contact_type'                  => '65',
       'contact_name'                  => 'pVd1HJ6zyvPedzGaV+X3IdGdbDnuC4Eelw/wDa4SzfeespQO/0kjiwfqdfg==',
-      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_IDCARD',
+      'contact_id_doc_type'           => 'IDENTIFICATION_TYPE_OVERSEA_PASSPORT',
       'contact_id_card_number'        => 'pVd1HJ6zmty7/mYNxLMpRSvMRtelw/wDa4SzfeespQO/0kjiwfqdfg==',
       'contact_id_doc_copy'           => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
       'contact_id_doc_copy_back'      => 'jTpGmxUX3FBWVQ5NJTZvvDujqhThn4ReFxikqJ5YW6zFQ',
