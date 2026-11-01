@@ -178,7 +178,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | return_msg | string | 返回信息
 | result_code {data-required} | string | 业务结果<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | mch_id {data-required} | string | 服务商号
-| risk_level {data-required} | string | 风险级别
+| risk_level {data-required} | string | 风险级别<br/>`UNKNOW` \| `NORMAL` \| `MEDIUM` \| `HIGH` \| `LOW` \| `FORBIDDEN` 枚举值之一
 | risk_level_desc {data-required} | string | 风险描述
 
 {.im-table #response}

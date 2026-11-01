@@ -23,7 +23,7 @@ description: 一笔退款失败后重新提交，请不要更换退款单号，�
 | refund_fee {data-required data-indent=1} | integer | 退款金额
 | refund_fee_type {data-indent=1} | string | 退款货币种类
 | refund_desc {data-indent=1} | string | 退款原因
-| refund_account {data-indent=1} | string | 退款资金来源
+| refund_account {data-indent=1} | string | 退款资金来源<br/>`REFUND_SOURCE_UNSETTLED_FUNDS` \| `REFUND_SOURCE_RECHARGE_FUNDS` 枚举值之一
 | notify_url {data-indent=1} | string | 退款结果通知url
 
 {.im-table #request}

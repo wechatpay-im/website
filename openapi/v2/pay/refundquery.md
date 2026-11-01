@@ -179,6 +179,9 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | refund_account_$n | string | 退款资金来源
 | refund_recv_accout_$n {data-required} | string | 退款入账账户
 | refund_success_time_$n | string | 退款成功时间
+| refund_fee | integer | 退款总金额
+| coupon_refund_fee | integer | 代金券退款总金额
+| cash_refund_fee | integer | 用户退款金额
 
 {.im-table #response}
 

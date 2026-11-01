@@ -160,6 +160,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | err_code_des {data-required} | string | 错误代码描述
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
+| sub_openid | string | 用户子标识
 
 {.im-table #response}
 

@@ -112,8 +112,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | mch_id {data-required} | string | 服务商号
 | sub_mch_id {data-required} | string | 子商户号
 | channel_id {data-required} | string | 渠道号
-| audit_status {data-required} | string | 审核状态
-| audit_comment {data-required} | string | 审核备注
+| audit_status {data-required} | string | 审核状态<br/>`AUDITING` \| `PASSED` \| `REJECTED` 枚举值之一
+| audit_comment {data-required} | string | 审核备注<br/>`RISK_NO_ENTRY` \| `COMPANYNAME_NO_RESULT` \| `RISK_DELAY_ENTRY` \| `CHANNEL_NEED_MERCHANT_COMFIRM` \| `SUBJECT_NEED_MERCHANT_COMFIRM` \| `TRADE_NEED_MERCHANT_COMFIRM` \| `RISK_NEED_MERCHANT_COMFIRM` \| `INCOM_NUMBER_ABNORMAL` 枚举值之一
 | nonce_str {data-required} | string | 随机字符串
 | sign {data-required} | string | 签名
 | sign_type | string | 签名类型<br/>`HMAC-SHA256` 枚举值

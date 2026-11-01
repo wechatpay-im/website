@@ -24,8 +24,8 @@ description: 商户收到微信发送的商户风险交易推送后，调用该�
 | store_address {data-indent=1} | string | 门店地址
 | store_longitude {data-indent=1} | string | 门店经度
 | store_latitude {data-indent=1} | string | 门店纬度
-| risk_type {data-required data-indent=1} | string | 风险类型
-| punish_type {data-required data-indent=1} | string | 处罚方式
+| risk_type {data-required data-indent=1} | string | 风险类型<br/>`GAMBLING` \| `SEXY` \| `CHEAT` \| `TRANSACTION_DISPUTES` \| `ONE_YUAN_BUY` \| `MULTILEVEL_DISTRIBUTION_REBATE` \| `OTHER` \| `NO_ABNORMALITIES` 枚举值之一
+| punish_type {data-required data-indent=1} | string | 处罚方式<br/>`CLOSE_PAY_PERMISSION` \| `EXTEND_SETTLEMENT_CYCLE` \| `CLOSE_WITHDRAW_CASH` \| `CLEAN_UP` \| `OTHER` 枚举值之一
 | sign_type {data-required data-indent=1} | string | 签名类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}

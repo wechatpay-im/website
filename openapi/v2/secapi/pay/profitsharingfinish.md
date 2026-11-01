@@ -18,6 +18,7 @@ description: 1、不需要进行分账的订单，可直接调用本接口将订
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
 | description {data-required data-indent=1} | string | 分账完结描述
+| brand_mch_id {data-indent=1} | string | 品牌主商户号
 
 {.im-table #request}
 
@@ -34,6 +35,7 @@ $instance->v2->secapi->pay->profitsharingfinish->postAsync([
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
     'description'    => '分账已完成',
+    'brand_mch_id'   => '1900000108',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -53,6 +55,7 @@ $instance->chain('v2/secapi/pay/profitsharingfinish')->postAsync([
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
     'description'    => '分账已完成',
+    'brand_mch_id'   => '1900000108',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -72,6 +75,7 @@ $instance['v2/secapi/pay/profitsharingfinish']->postAsync([
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
     'description'    => '分账已完成',
+    'brand_mch_id'   => '1900000108',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -91,6 +95,7 @@ $response = $instance->v2->secapi->pay->profitsharingfinish->post([
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
     'description'    => '分账已完成',
+    'brand_mch_id'   => '1900000108',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -107,6 +112,7 @@ $response = $instance->chain('v2/secapi/pay/profitsharingfinish')->post([
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
     'description'    => '分账已完成',
+    'brand_mch_id'   => '1900000108',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -123,6 +129,7 @@ $response = $instance['v2/secapi/pay/profitsharingfinish']->post([
     'transaction_id' => '4208450740201411110007820472',
     'out_order_no'   => 'P20150806125346',
     'description'    => '分账已完成',
+    'brand_mch_id'   => '1900000108',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -146,6 +153,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | transaction_id {data-required} | string | 微信订单号
 | out_order_no {data-required} | string | 商户分账单号
 | order_id {data-required} | string | 微信分账单号
+| brand_mch_id | string | 品牌主商户号
 
 {.im-table #response}
 

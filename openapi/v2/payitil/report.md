@@ -23,6 +23,12 @@ description: 商户在调用微信支付提供的相关接口时，会得到微�
 | end_time {data-required data-indent=3} | string | 交易完成时间
 | state {data-required data-indent=3} | string | 交易结果<br/>`OK` \| `FAIL` \| `CANCLE` 枚举值之一
 | err_msg {data-indent=3} | string | 自定义的错误描述信息
+| sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
+| execute_time_ {data-indent=1} | integer | 接口耗时
+| out_trade_no {data-indent=1} | string | 商户订单号
+| time {data-indent=1} | string | 商户上报时间
+| sub_appid {data-indent=1} | string | 子商户公众账号ID
+| sub_mch_id {data-indent=1} | string | 子商户号
 
 {.im-table #request}
 
@@ -43,6 +49,12 @@ $instance->v2->payitil->report->postAsync([
       'state'        => 'OK',
       'err_msg'      => '',
     ],]),
+    'sign_type'     => 'HMAC-SHA256',
+    'execute_time_' => '1000',
+    'out_trade_no'  => '1217752501201407033233368018',
+    'time'          => '20091227091010',
+    'sub_appid'     => 'wx8888888888888888',
+    'sub_mch_id'    => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -66,6 +78,12 @@ $instance->chain('v2/payitil/report')->postAsync([
       'state'        => 'OK',
       'err_msg'      => '',
     ],]),
+    'sign_type'     => 'HMAC-SHA256',
+    'execute_time_' => '1000',
+    'out_trade_no'  => '1217752501201407033233368018',
+    'time'          => '20091227091010',
+    'sub_appid'     => 'wx8888888888888888',
+    'sub_mch_id'    => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -89,6 +107,12 @@ $instance['v2/payitil/report']->postAsync([
       'state'        => 'OK',
       'err_msg'      => '',
     ],]),
+    'sign_type'     => 'HMAC-SHA256',
+    'execute_time_' => '1000',
+    'out_trade_no'  => '1217752501201407033233368018',
+    'time'          => '20091227091010',
+    'sub_appid'     => 'wx8888888888888888',
+    'sub_mch_id'    => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -112,6 +136,12 @@ $response = $instance->v2->payitil->report->post([
       'state'        => 'OK',
       'err_msg'      => '',
     ],]),
+    'sign_type'     => 'HMAC-SHA256',
+    'execute_time_' => '1000',
+    'out_trade_no'  => '1217752501201407033233368018',
+    'time'          => '20091227091010',
+    'sub_appid'     => 'wx8888888888888888',
+    'sub_mch_id'    => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -132,6 +162,12 @@ $response = $instance->chain('v2/payitil/report')->post([
       'state'        => 'OK',
       'err_msg'      => '',
     ],]),
+    'sign_type'     => 'HMAC-SHA256',
+    'execute_time_' => '1000',
+    'out_trade_no'  => '1217752501201407033233368018',
+    'time'          => '20091227091010',
+    'sub_appid'     => 'wx8888888888888888',
+    'sub_mch_id'    => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -152,6 +188,12 @@ $response = $instance['v2/payitil/report']->post([
       'state'        => 'OK',
       'err_msg'      => '',
     ],]),
+    'sign_type'     => 'HMAC-SHA256',
+    'execute_time_' => '1000',
+    'out_trade_no'  => '1217752501201407033233368018',
+    'time'          => '20091227091010',
+    'sub_appid'     => 'wx8888888888888888',
+    'sub_mch_id'    => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

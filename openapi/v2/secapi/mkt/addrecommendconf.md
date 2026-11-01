@@ -21,6 +21,8 @@ description: 注意：API只支持新增配置，配置后隔30天才能重新�
 | sub_mch_id {data-required data-indent=1} | string | 子商户号
 | sub_appid {data-required data-indent=1} | string | 特约商户APPID
 | subscribe_appid {data-required data-indent=1} | string | 推荐关注APPID
+| receipt_appid {data-indent=1} | string | 支付凭证推荐小程序appid
+| sign_type {data-required data-indent=1} | string | 签名算法类型<br/>`HMAC-SHA256` 枚举值
 
 {.im-table #request}
 
@@ -34,6 +36,8 @@ $instance->v2->secapi->mkt->addrecommendconf->postAsync([
     'sub_mch_id'      => '1900000100',
     'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
+    'receipt_appid'   => 'wx931386123456789e',
+    'sign_type'       => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -50,6 +54,8 @@ $instance->chain('v2/secapi/mkt/addrecommendconf')->postAsync([
     'sub_mch_id'      => '1900000100',
     'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
+    'receipt_appid'   => 'wx931386123456789e',
+    'sign_type'       => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -66,6 +72,8 @@ $instance['v2/secapi/mkt/addrecommendconf']->postAsync([
     'sub_mch_id'      => '1900000100',
     'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
+    'receipt_appid'   => 'wx931386123456789e',
+    'sign_type'       => 'HMAC-SHA256',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -82,6 +90,8 @@ $response = $instance->v2->secapi->mkt->addrecommendconf->post([
     'sub_mch_id'      => '1900000100',
     'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
+    'receipt_appid'   => 'wx931386123456789e',
+    'sign_type'       => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -95,6 +105,8 @@ $response = $instance->chain('v2/secapi/mkt/addrecommendconf')->post([
     'sub_mch_id'      => '1900000100',
     'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
+    'receipt_appid'   => 'wx931386123456789e',
+    'sign_type'       => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -108,6 +120,8 @@ $response = $instance['v2/secapi/mkt/addrecommendconf']->post([
     'sub_mch_id'      => '1900000100',
     'sub_appid'       => 'wx8888888888888888',
     'subscribe_appid' => 'wx931386123456789e',
+    'receipt_appid'   => 'wx931386123456789e',
+    'sign_type'       => 'HMAC-SHA256',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));

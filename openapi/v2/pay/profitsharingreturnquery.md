@@ -156,6 +156,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | finish_time | string | 完成时间
 | error_code | string | 错误代码
 | error_msg | string | 返回信息
+| err_msg | string | 返回信息
 
 {.im-table #response}
 

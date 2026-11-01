@@ -14,6 +14,8 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 | mch_id {data-required data-indent=1} | string | 商户号
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | sign_type {data-indent=1} | string | 签名类型<br/>`MD5` \| `HMAC-SHA256` 枚举值之一
+| sub_appid {data-indent=1} | string | 子商户公众账号ID
+| sub_mch_id {data-indent=1} | string | 子商户号
 
 {.im-table #request}
 
@@ -26,6 +28,8 @@ $instance->v2->pay->closeorder->postAsync([
     'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
     'sign_type'    => 'HMAC-SHA256',
+    'sub_appid'    => 'wx8888888888888888',
+    'sub_mch_id'   => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -41,6 +45,8 @@ $instance->chain('v2/pay/closeorder')->postAsync([
     'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
     'sign_type'    => 'HMAC-SHA256',
+    'sub_appid'    => 'wx8888888888888888',
+    'sub_mch_id'   => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -56,6 +62,8 @@ $instance['v2/pay/closeorder']->postAsync([
     'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
     'sign_type'    => 'HMAC-SHA256',
+    'sub_appid'    => 'wx8888888888888888',
+    'sub_mch_id'   => '1900000109',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,6 +79,8 @@ $response = $instance->v2->pay->closeorder->post([
     'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
     'sign_type'    => 'HMAC-SHA256',
+    'sub_appid'    => 'wx8888888888888888',
+    'sub_mch_id'   => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -83,6 +93,8 @@ $response = $instance->chain('v2/pay/closeorder')->post([
     'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
     'sign_type'    => 'HMAC-SHA256',
+    'sub_appid'    => 'wx8888888888888888',
+    'sub_mch_id'   => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -95,6 +107,8 @@ $response = $instance['v2/pay/closeorder']->post([
     'mch_id'       => '1900000109',
     'out_trade_no' => '1217752501201407033233368018',
     'sign_type'    => 'HMAC-SHA256',
+    'sub_appid'    => 'wx8888888888888888',
+    'sub_mch_id'   => '1900000109',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -114,6 +128,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | result_msg {data-required} | string | 业务结果描述
 | err_code | string | 错误代码
 | err_code_des | string | 错误代码描述
+| sub_appid | string | 子商户公众账号ID
+| sub_mch_id | string | 子商户号
 
 {.im-table #response}
 

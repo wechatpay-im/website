@@ -148,6 +148,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | punish_time {data-required data-indent=2} | string | 处罚时间
 | sub_mch_id {data-required data-indent=2} | string | 违规子商户号
 | deadline {data-indent=2} | string | 最后处理时间
+| err_code | string | 错误代码
+| err_code_des | string | 错误代码描述
 
 {.im-table #response}
 

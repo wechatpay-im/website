@@ -112,6 +112,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | max_ratio {data-required} | integer | 最大分账比例
 | nonce_str {data-required} | string | 随机字符串
 | sign {data-required} | string | 签名
+| err_code | string | 错误代码
+| err_msg | string | 返回信息
 
 {.im-table #response}
 

@@ -106,6 +106,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | sign | string | 签名
 | error_code | string | 错误代码
 | error_msg | string | 返回信息
+| err_code | string | 错误代码
+| err_msg | string | 返回信息
 
 {.im-table #response}
 

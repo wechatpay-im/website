@@ -26,6 +26,7 @@ description: 微信订单支付成功后，服务商代子商户发起分账请�
 | amount {data-required data-indent=3} | number | 分账金额
 | description {data-required data-indent=3} | string | 分账描述
 | name {data-indent=3} | string | 分账个人接收方姓名
+| brand_mch_id {data-indent=1} | string | 品牌主商户号
 
 {.im-table #request}
 
@@ -49,6 +50,7 @@ $instance->v2->secapi->pay->multiprofitsharing->postAsync([
       'description' => '分到商户',
       'name'        => '分到个人',
     ],]),
+    'brand_mch_id'   => '1900000108',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -75,6 +77,7 @@ $instance->chain('v2/secapi/pay/multiprofitsharing')->postAsync([
       'description' => '分到商户',
       'name'        => '分到个人',
     ],]),
+    'brand_mch_id'   => '1900000108',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -101,6 +104,7 @@ $instance['v2/secapi/pay/multiprofitsharing']->postAsync([
       'description' => '分到商户',
       'name'        => '分到个人',
     ],]),
+    'brand_mch_id'   => '1900000108',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -127,6 +131,7 @@ $response = $instance->v2->secapi->pay->multiprofitsharing->post([
       'description' => '分到商户',
       'name'        => '分到个人',
     ],]),
+    'brand_mch_id'   => '1900000108',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -150,6 +155,7 @@ $response = $instance->chain('v2/secapi/pay/multiprofitsharing')->post([
       'description' => '分到商户',
       'name'        => '分到个人',
     ],]),
+    'brand_mch_id'   => '1900000108',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -173,6 +179,7 @@ $response = $instance['v2/secapi/pay/multiprofitsharing']->post([
       'description' => '分到商户',
       'name'        => '分到个人',
     ],]),
+    'brand_mch_id'   => '1900000108',
   ],
 ]);
 print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
@@ -207,6 +214,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | receiver_account {data-required data-indent=2} | string | 分账接收方账号
 | receiver_mchid {data-required data-indent=2} | string | 分账接收商户号
 | result {data-required data-indent=2} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
+| status {data-required} | string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
+| brand_mch_id | string | 品牌主商户号
 
 {.im-table #response}
 

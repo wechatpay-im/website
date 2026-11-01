@@ -17,6 +17,16 @@ description: 银行服务商接入微信支付前需要将下属特约商户基�
 | sub_mch_id {data-indent=1} | string | 商户识别码
 | page_index {data-required data-indent=1} | string | 页码
 | page_size {data-indent=1} | string | 展示资料个数
+| merchant_shortname {data-required data-indent=1} | string | 商户简称
+| service_phone {data-required data-indent=1} | string | 客服电话
+| contact {data-indent=1} | string | 联系人
+| contact_phone {data-indent=1} | string | 联系电话
+| contact_email {data-indent=1} | string | 联系邮箱
+| channel_id {data-required data-indent=1} | string | 渠道号
+| business {data-required data-indent=1} | string | 经营类目
+| contact_wechatid_type {data-indent=1} | string | 联系人微信账号类型
+| contact_wechatid {data-indent=1} | string | 联系人微信账号
+| merchant_remark {data-required data-indent=1} | string | 商户备注
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | action {data-required data-indent=1} | string | `add` \| `query` 枚举值之一
 
@@ -28,12 +38,22 @@ description: 银行服务商接入微信支付前需要将下属特约商户基�
 $instance->v2->secapi->mch->submchmanage->postAsync([
   'security' => true,
   'xml' => [
-    'appid'         => 'wxd678efh567hg6787',
-    'mch_id'        => '1230000109',
-    'merchant_name' => '商户名称',
-    'sub_mch_id'    => '1230000109',
-    'page_index'    => '1',
-    'page_size'     => '10',
+    'appid'                 => 'wxd678efh567hg6787',
+    'mch_id'                => '1230000109',
+    'merchant_name'         => '商户名称',
+    'sub_mch_id'            => '1230000109',
+    'page_index'            => '1',
+    'page_size'             => '10',
+    'merchant_shortname'    => '商户简称',
+    'service_phone'         => '075586010000',
+    'contact'               => '联系人',
+    'contact_phone'         => '13000000000',
+    'contact_email'         => 'test@test.com',
+    'channel_id'            => '10100000',
+    'business'              => '101',
+    'contact_wechatid_type' => 'type_openid',
+    'contact_wechatid'      => 'OPENID_012312321',
+    'merchant_remark'       => '商户的唯一备注',
   ],
   'query' => [
     'action' => 'add',
@@ -49,12 +69,22 @@ $instance->v2->secapi->mch->submchmanage->postAsync([
 $instance->chain('v2/secapi/mch/submchmanage')->postAsync([
   'security' => true,
   'xml' => [
-    'appid'         => 'wxd678efh567hg6787',
-    'mch_id'        => '1230000109',
-    'merchant_name' => '商户名称',
-    'sub_mch_id'    => '1230000109',
-    'page_index'    => '1',
-    'page_size'     => '10',
+    'appid'                 => 'wxd678efh567hg6787',
+    'mch_id'                => '1230000109',
+    'merchant_name'         => '商户名称',
+    'sub_mch_id'            => '1230000109',
+    'page_index'            => '1',
+    'page_size'             => '10',
+    'merchant_shortname'    => '商户简称',
+    'service_phone'         => '075586010000',
+    'contact'               => '联系人',
+    'contact_phone'         => '13000000000',
+    'contact_email'         => 'test@test.com',
+    'channel_id'            => '10100000',
+    'business'              => '101',
+    'contact_wechatid_type' => 'type_openid',
+    'contact_wechatid'      => 'OPENID_012312321',
+    'merchant_remark'       => '商户的唯一备注',
   ],
   'query' => [
     'action' => 'add',
@@ -70,12 +100,22 @@ $instance->chain('v2/secapi/mch/submchmanage')->postAsync([
 $instance['v2/secapi/mch/submchmanage']->postAsync([
   'security' => true,
   'xml' => [
-    'appid'         => 'wxd678efh567hg6787',
-    'mch_id'        => '1230000109',
-    'merchant_name' => '商户名称',
-    'sub_mch_id'    => '1230000109',
-    'page_index'    => '1',
-    'page_size'     => '10',
+    'appid'                 => 'wxd678efh567hg6787',
+    'mch_id'                => '1230000109',
+    'merchant_name'         => '商户名称',
+    'sub_mch_id'            => '1230000109',
+    'page_index'            => '1',
+    'page_size'             => '10',
+    'merchant_shortname'    => '商户简称',
+    'service_phone'         => '075586010000',
+    'contact'               => '联系人',
+    'contact_phone'         => '13000000000',
+    'contact_email'         => 'test@test.com',
+    'channel_id'            => '10100000',
+    'business'              => '101',
+    'contact_wechatid_type' => 'type_openid',
+    'contact_wechatid'      => 'OPENID_012312321',
+    'merchant_remark'       => '商户的唯一备注',
   ],
   'query' => [
     'action' => 'add',
@@ -91,12 +131,22 @@ $instance['v2/secapi/mch/submchmanage']->postAsync([
 $response = $instance->v2->secapi->mch->submchmanage->post([
   'security' => true,
   'xml' => [
-    'appid'         => 'wxd678efh567hg6787',
-    'mch_id'        => '1230000109',
-    'merchant_name' => '商户名称',
-    'sub_mch_id'    => '1230000109',
-    'page_index'    => '1',
-    'page_size'     => '10',
+    'appid'                 => 'wxd678efh567hg6787',
+    'mch_id'                => '1230000109',
+    'merchant_name'         => '商户名称',
+    'sub_mch_id'            => '1230000109',
+    'page_index'            => '1',
+    'page_size'             => '10',
+    'merchant_shortname'    => '商户简称',
+    'service_phone'         => '075586010000',
+    'contact'               => '联系人',
+    'contact_phone'         => '13000000000',
+    'contact_email'         => 'test@test.com',
+    'channel_id'            => '10100000',
+    'business'              => '101',
+    'contact_wechatid_type' => 'type_openid',
+    'contact_wechatid'      => 'OPENID_012312321',
+    'merchant_remark'       => '商户的唯一备注',
   ],
   'query' => [
     'action' => 'add',
@@ -109,12 +159,22 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 $response = $instance->chain('v2/secapi/mch/submchmanage')->post([
   'security' => true,
   'xml' => [
-    'appid'         => 'wxd678efh567hg6787',
-    'mch_id'        => '1230000109',
-    'merchant_name' => '商户名称',
-    'sub_mch_id'    => '1230000109',
-    'page_index'    => '1',
-    'page_size'     => '10',
+    'appid'                 => 'wxd678efh567hg6787',
+    'mch_id'                => '1230000109',
+    'merchant_name'         => '商户名称',
+    'sub_mch_id'            => '1230000109',
+    'page_index'            => '1',
+    'page_size'             => '10',
+    'merchant_shortname'    => '商户简称',
+    'service_phone'         => '075586010000',
+    'contact'               => '联系人',
+    'contact_phone'         => '13000000000',
+    'contact_email'         => 'test@test.com',
+    'channel_id'            => '10100000',
+    'business'              => '101',
+    'contact_wechatid_type' => 'type_openid',
+    'contact_wechatid'      => 'OPENID_012312321',
+    'merchant_remark'       => '商户的唯一备注',
   ],
   'query' => [
     'action' => 'add',
@@ -127,12 +187,22 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 $response = $instance['v2/secapi/mch/submchmanage']->post([
   'security' => true,
   'xml' => [
-    'appid'         => 'wxd678efh567hg6787',
-    'mch_id'        => '1230000109',
-    'merchant_name' => '商户名称',
-    'sub_mch_id'    => '1230000109',
-    'page_index'    => '1',
-    'page_size'     => '10',
+    'appid'                 => 'wxd678efh567hg6787',
+    'mch_id'                => '1230000109',
+    'merchant_name'         => '商户名称',
+    'sub_mch_id'            => '1230000109',
+    'page_index'            => '1',
+    'page_size'             => '10',
+    'merchant_shortname'    => '商户简称',
+    'service_phone'         => '075586010000',
+    'contact'               => '联系人',
+    'contact_phone'         => '13000000000',
+    'contact_email'         => 'test@test.com',
+    'channel_id'            => '10100000',
+    'business'              => '101',
+    'contact_wechatid_type' => 'type_openid',
+    'contact_wechatid'      => 'OPENID_012312321',
+    'merchant_remark'       => '商户的唯一备注',
   ],
   'query' => [
     'action' => 'add',
@@ -162,6 +232,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | business {data-required data-indent=1} | string | 经营类目
 | channel_id {data-required data-indent=1} | string | 渠道商商户号
 | channel_name {data-required data-indent=1} | string | 渠道商名称
+| mch_id {data-required} | string | 商户号
+| sub_mch_id {data-required} | string | 商户识别码
 
 {.im-table #response}
 
