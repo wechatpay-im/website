@@ -155,6 +155,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | recharge_id {data-required} | string | 微信支付充值单号
 | out_recharge_no {data-required} | string | 商户充值单号
 | recharge_url {data-required} | string | 充值链接
+| package_info | string | 跳转充值到商户账户页面的package信息
 
 {.im-table #response}
 

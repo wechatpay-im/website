@@ -103,7 +103,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 转账接收者信息
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
 | mch_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方商户信息
-| mch_id {data-indent=3} | string | 商户号
+| mchid {data-indent=3} | string | 商户号，接收方类型为MERCHANT时，接收方账号为商户号
 | out_bill_no {data-required} | string | 商户单号
 | amount | number | 赔付金额
 | transfer_remark | string | 赔付原因

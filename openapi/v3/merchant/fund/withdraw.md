@@ -29,7 +29,7 @@ $instance->v3->merchant->fund->withdraw->postAsync([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
-    'notify_url'     => '',
+    'notify_url'     => 'https://yourapp.com/notify',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -46,7 +46,7 @@ $instance->chain('v3/merchant/fund/withdraw')->postAsync([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
-    'notify_url'     => '',
+    'notify_url'     => 'https://yourapp.com/notify',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -63,7 +63,7 @@ $instance['v3/merchant/fund/withdraw']->postAsync([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
-    'notify_url'     => '',
+    'notify_url'     => 'https://yourapp.com/notify',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -80,7 +80,7 @@ $response = $instance->v3->merchant->fund->withdraw->post([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
-    'notify_url'     => '',
+    'notify_url'     => 'https://yourapp.com/notify',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -94,7 +94,7 @@ $response = $instance->chain('v3/merchant/fund/withdraw')->post([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
-    'notify_url'     => '',
+    'notify_url'     => 'https://yourapp.com/notify',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -108,7 +108,7 @@ $response = $instance['v3/merchant/fund/withdraw']->post([
     'remark'         => '交易体现',
     'bank_memo'      => 'xx平台提现',
     'account_type'   => 'BASIC',
-    'notify_url'     => '',
+    'notify_url'     => 'https://yourapp.com/notify',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

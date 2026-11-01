@@ -100,6 +100,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | parking_order_mini_prog_path | string | 停车订单小程序path
 | enabled_state | string | 启用状态，停车场启用状态<br/>`ENABLED_STATE_UNKNOWN` \| `ENABLED_STATE_NOT_ENABLED` \| `ENABLED_STATE_ENABLED` \| `ENABLED_STATE_OFFLINE` 枚举值之一
 | reason | string | 原因
+| code | string | 响应码
+| message | string | 返回信息
 
 {.im-table #response}
 

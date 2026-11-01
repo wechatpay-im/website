@@ -25,7 +25,7 @@ $instance->v3->parking->reminders->application->withdraw->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r($response->getStatusCode() === 204);
+  print_r(json_decode((string) $response->getBody(), true));
 })
 ->wait();
 ```
@@ -38,7 +38,7 @@ $instance->chain('v3/parking/reminders/application/withdraw')->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r($response->getStatusCode() === 204);
+  print_r(json_decode((string) $response->getBody(), true));
 })
 ->wait();
 ```
@@ -51,7 +51,7 @@ $instance['v3/parking/reminders/application/withdraw']->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r($response->getStatusCode() === 204);
+  print_r(json_decode((string) $response->getBody(), true));
 })
 ->wait();
 ```
@@ -63,7 +63,7 @@ $response = $instance->v3->parking->reminders->application->withdraw->post([
     'out_parking_lot_id'   => 'lot_sz_tencent_001',
   ],
 ]);
-print_r($response->getStatusCode() === 204);
+print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
@@ -73,7 +73,7 @@ $response = $instance->chain('v3/parking/reminders/application/withdraw')->post(
     'out_parking_lot_id'   => 'lot_sz_tencent_001',
   ],
 ]);
-print_r($response->getStatusCode() === 204);
+print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
@@ -83,14 +83,15 @@ $response = $instance['v3/parking/reminders/application/withdraw']->post([
     'out_parking_lot_id'   => 'lot_sz_tencent_001',
   ],
 ]);
-print_r($response->getStatusCode() === 204);
+print_r(json_decode((string) $response->getBody(), true));
 ```
 
 :::
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| 空字符串(无返回内容) {align=center colspan=3}
+| code | string | 响应码
+| message | string | 返回信息
 
 {.im-table #response}
 

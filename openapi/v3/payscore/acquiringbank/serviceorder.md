@@ -360,6 +360,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | name {data-required data-indent=1} | string | 优惠名称
 | description {data-required data-indent=1} | string | 优惠说明
 | count {data-indent=1} | integer | 优惠数量
+| amount {data-indent=1} | integer | 优惠金额
 | risk_fund | object {data-tooltip="对应PHP的array"} | 订单风险金
 | name {data-required data-indent=1} | string | 风险金名称
 | amount {data-required data-indent=1} | integer | 风险金额
@@ -405,7 +406,7 @@ $instance->v3->payscore->acquiringbank->serviceorder->getAsync([
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -421,7 +422,7 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder')->getAsync([
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -437,7 +438,7 @@ $instance['v3/payscore/acquiringbank/serviceorder']->getAsync([
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -453,7 +454,7 @@ $response = $instance->v3->payscore->acquiringbank->serviceorder->get([
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -466,7 +467,7 @@ $response = $instance->chain('v3/payscore/acquiringbank/serviceorder')->get([
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -479,7 +480,7 @@ $response = $instance['v3/payscore/acquiringbank/serviceorder']->get([
     'sub_mchid'    => '1900000109',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

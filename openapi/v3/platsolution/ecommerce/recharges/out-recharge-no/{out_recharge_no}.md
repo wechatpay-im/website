@@ -112,7 +112,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_account_name {data-indent=1} | string | 银行账户名称
 | qr_recharge_info | object {data-tooltip="对应PHP的array"} | 扫码充值的付款信息
 | openid {data-indent=1} | string | 用户OpenID
-| employee_type {data-indent=1} | string | 员工类型<br/>`ADMIN` \| `STAFF` 枚举值之一
+| employee_type {data-indent=1} | string | 员工类型<br/>`ADMIN` \| `STAFF` \| `LEGAL_PERSON` 枚举值之一
+| transaction_id {data-indent=1} | string | 微信支付订单号
 | online_bank_recharge_info | object {data-tooltip="对应PHP的array"} | 网银充值的付款信息
 | bill_no {data-indent=1} | string | 银行交易订单号
 | return_time {data-indent=1} | string | 网银充值退回时间

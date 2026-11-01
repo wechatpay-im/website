@@ -259,17 +259,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_refund_no {data-required} | string | 商户退款单号
 | transaction_id {data-required} | string | 微信支付订单号
 | out_trade_no {data-required} | string | 商户订单号
-| channel {data-required} | string | 退款渠道
+| channel {data-required} | string | 退款渠道<br/>`ORIGINAL` \| `BALANCE` \| `OTHER_BALANCE` \| `OTHER_BANKCARD` 枚举值之一
 | user_received_account {data-required} | string | 退款入账账户
 | success_time | string | 退款成功时间
 | create_time {data-required} | string | 退款创建时间
-| status {data-required} | string | 退款状态
-| funds_account | string | 资金账户
+| status {data-required} | string | 退款状态<br/>`SUCCESS` \| `CLOSED` \| `PROCESSING` \| `ABNORMAL` 枚举值之一
+| funds_account | string | 资金账户<br/>`UNSETTLED` \| `AVAILABLE` \| `UNAVAILABLE` \| `OPERATION` \| `BASIC` \| `ECNY_BASIC` 枚举值之一
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 金额信息
 | total {data-required data-indent=1} | integer | 订单金额
 | refund {data-required data-indent=1} | integer | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
-| account {data-required data-indent=2} | string | 出资账户类型
+| account {data-required data-indent=2} | string | 出资账户类型<br/>`AVAILABLE` \| `UNAVAILABLE` 枚举值之一
 | amount {data-required data-indent=2} | integer | 出资金额
 | payer_total {data-required data-indent=1} | integer | 用户支付金额
 | payer_refund {data-required data-indent=1} | integer | 用户退款金额
@@ -278,10 +278,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | discount_refund {data-required data-indent=1} | integer | 优惠退款金额
 | currency {data-required data-indent=1} | string | 退款币种
 | refund_fee {data-indent=1} | number | 手续费退款金额
+| account {data-indent=1} | string | 出资账户类型
+| amount {data-indent=1} | integer | 出资金额
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠退款信息
 | promotion_id {data-required data-indent=1} | string | 券ID
-| scope {data-required data-indent=1} | string | 优惠范围
-| type {data-required data-indent=1} | string | 优惠类型
+| scope {data-required data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-required data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | refund_amount {data-required data-indent=1} | integer | 优惠退款金额
 | goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品列表
@@ -291,6 +293,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | unit_price {data-required data-indent=2} | integer | 商品单价
 | refund_amount {data-required data-indent=2} | integer | 商品退款金额
 | refund_quantity {data-required data-indent=2} | integer | 商品退货数量
+| wechatpay_goods_id {data-indent=1} | string | 微信侧商品编码
+| goods_name {data-indent=1} | string | 商品名称
+| unit_price {data-indent=1} | integer | 商品单价
+| refund_quantity {data-indent=1} | integer | 商品退货数量
+| merchant_goods_id {data-indent=1} | string | 商户侧商品编码
 
 {.im-table #response}
 

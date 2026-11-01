@@ -10,7 +10,6 @@ description: 申请个人收款批量结算
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| appid {data-required data-indent=1} | string | 发起方AppID
 | out_settle_batch_no {data-required data-indent=1} | string | 商户结算批次单号
 | individual_auth_id {data-required data-indent=1} | string | 商品单个人收款方受理授权ID
 | notify_url {data-required data-indent=1} | string | 通知地址
@@ -36,7 +35,6 @@ description: 申请个人收款批量结算
 ```php [异步纯链式]
 $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->postAsync([
   'json' => [
-    'appid'                    => 'WXA12368855126622',
     'out_settle_batch_no'      => '1236698745558870',
     'individual_auth_id'       => '256322110225',
     'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -68,7 +66,6 @@ $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->postAsync([
   'json' => [
-    'appid'                    => 'WXA12368855126622',
     'out_settle_batch_no'      => '1236698745558870',
     'individual_auth_id'       => '256322110225',
     'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -100,7 +97,6 @@ $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->postA
 ```php [异步属性式]
 $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->postAsync([
   'json' => [
-    'appid'                    => 'WXA12368855126622',
     'out_settle_batch_no'      => '1236698745558870',
     'individual_auth_id'       => '256322110225',
     'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -132,7 +128,6 @@ $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->platsolution->ecommerce->settle->prepaySettleOrders->post([
   'json' => [
-    'appid'                    => 'WXA12368855126622',
     'out_settle_batch_no'      => '1236698745558870',
     'individual_auth_id'       => '256322110225',
     'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -161,7 +156,6 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/platsolution/ecommerce/settle/prepay-settle-orders')->post([
   'json' => [
-    'appid'                    => 'WXA12368855126622',
     'out_settle_batch_no'      => '1236698745558870',
     'individual_auth_id'       => '256322110225',
     'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -190,7 +184,6 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/platsolution/ecommerce/settle/prepay-settle-orders']->post([
   'json' => [
-    'appid'                    => 'WXA12368855126622',
     'out_settle_batch_no'      => '1236698745558870',
     'individual_auth_id'       => '256322110225',
     'notify_url'               => 'https://www.weixin.qq.com/wxpay/pay.php',

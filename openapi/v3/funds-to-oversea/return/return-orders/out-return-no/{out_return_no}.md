@@ -95,12 +95,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_id {data-required} | string | 微信出境退回单号
 | out_order_id {data-required} | string | 商户出境单号
 | transaction_id {data-required} | string | 微信订单号
-| refund_id {data-required} | string | 微信退款单号
 | amount {data-required} | integer | 退回金额
 | state {data-required} | string | 出境退回状态<br/>`PROCESSING` \| `SUCCESS` \| `FAILED` 枚举值之一
 | create_time {data-required} | string | 创建时间
 | success_time | string | 成功时间
-| fail_reason | string | 失败原因
+| fail_reason | string | 失败原因<br/>`RETURN_AMOUNT_NOT_ENOUGH` 枚举值
+| supplement_info {data-required} | string | 退回凭证补充信息
 
 {.im-table #response}
 

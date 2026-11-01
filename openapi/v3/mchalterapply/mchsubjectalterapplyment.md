@@ -33,7 +33,7 @@ description: 服务商使用该接口提交商家主体资料变更申请，帮�
 | cert_period_begin {data-required data-indent=2} | string | 有效期开始时间
 | cert_period_end {data-required data-indent=2} | string | 有效期结束时间
 | finance_institution_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 金融机构许可证
-| finance_type {data-required data-indent=2} | string | 金融机构类型<br/>`FINANCE_TYPE_BANK_AGENT` \| `FINANCE_TYPE_PAYMENT_AGENT` \| `FINANCE_TYPE_INSURANCE` \| `FINANCE_TYPE_TRADE_AND_SETTLE` \| `FINANCE_TYPE_OTHER` 枚举值之一
+| finance_type {data-required data-indent=2} | string | 金融机构类型<br/>`FINANCE_TYPE_BANK_AGENT` \| `FINANCE_TYPE_PAYMENT_AGENT` \| `FINANCE_TYPE_INSURANCE` \| `FINANCE_TYPE_TRADE_AND_SETTLE` \| `FINANCE_TYPE_OTHER` \| `FINANCE_TYPE_SMALL_LOAN` 枚举值之一
 | finance_license_pics {data-required data-indent=2} | string[] | 金融机构许可证图片
 | legal_person_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 法人身份信息
 | id_holder_type {data-required data-indent=2} | string | 证件持有人类型<br/>`LEGAL` \| `SUPER` 枚举值之一

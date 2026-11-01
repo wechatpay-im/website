@@ -110,6 +110,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | authorize_state {data-required} | string | 授权状态<br/>`UNAUTHORIZED` \| `AUTHORIZED` \| `DEAUTHORIZED` 枚举值之一
 | authorize_time | string | 授权时间
 | deauthorize_time | string | 取消授权时间
+| register_state {data-required} | string | 开通状态<br/>`UNDEFINED` \| `UNREGISTERED` \| `REGISTERED` \| `CLOSED` 枚举值之一
+| register_time | string | 开通时间
+| close_time | string | 关闭时间
 
 {.im-table #response}
 

@@ -106,8 +106,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | accept_time {data-required} | string | 受理时间
 | success_time | string | 成功时间
 | close_info | object {data-tooltip="对应PHP的array"} | 关单信息
-| accept_time {data-indent=1} | string | 关单时间
 | close_reason {data-indent=1} | string | 关单原因
+| close_time {data-indent=1} | string | 关单时间
 | sponsor_mchid | string | 出资商户号
 
 {.im-table #response}

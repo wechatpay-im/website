@@ -11,7 +11,7 @@ description: 服务商通过此接口可以查询特约商户账户余额信息�
 | --- | --- | ---
 | sub_mchid {data-required} | string | 二级商户号
 | query | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| account_type {data-indent=1} | string | 资金账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` \| `DEPOSIT` 枚举值之一
+| account_type {data-indent=1} | string | 账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` \| `DEPOSIT` 枚举值之一
 
 {.im-table #request}
 

@@ -31,7 +31,6 @@ description: 使用个人收款交易接口，可支持为个人收款方在微�
 | description {data-required data-indent=2} | string | 商品描述
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-indent=1} | string | 通知地址
-| trade_scenario {data-indent=1} | string | 交易场景<br/>`RECOMMERCE` 枚举值
 
 {.im-table #request}
 
@@ -65,7 +64,6 @@ $instance->v3->combineTransactions->miniprogram->postAsync([
     ],],
     'time_expire'          => '2018-06-08T10:34:56+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -102,7 +100,6 @@ $instance->chain('v3/combine-transactions/miniprogram')->postAsync([
     ],],
     'time_expire'          => '2018-06-08T10:34:56+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -139,7 +136,6 @@ $instance['v3/combine-transactions/miniprogram']->postAsync([
     ],],
     'time_expire'          => '2018-06-08T10:34:56+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -176,7 +172,6 @@ $response = $instance->v3->combineTransactions->miniprogram->post([
     ],],
     'time_expire'          => '2018-06-08T10:34:56+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -210,7 +205,6 @@ $response = $instance->chain('v3/combine-transactions/miniprogram')->post([
     ],],
     'time_expire'          => '2018-06-08T10:34:56+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -244,7 +238,6 @@ $response = $instance['v3/combine-transactions/miniprogram']->post([
     ],],
     'time_expire'          => '2018-06-08T10:34:56+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

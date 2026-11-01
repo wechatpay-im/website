@@ -44,7 +44,7 @@ description: 完结微信支付分订单。用户使用服务完成后，商户�
 
 ```php [异步纯链式]
 $instance->v3->payscore->serviceorder->_out_order_no_->complete->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'appid'          => 'wxd678efh567hg6787',
     'service_id'     => '2002000000000558128851361561536',
@@ -87,7 +87,7 @@ $instance->v3->payscore->serviceorder->_out_order_no_->complete->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'appid'          => 'wxd678efh567hg6787',
     'service_id'     => '2002000000000558128851361561536',
@@ -130,7 +130,7 @@ $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->postAsync(
 
 ```php [异步属性式]
 $instance['v3/payscore/serviceorder/{out_order_no}/complete']->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'appid'          => 'wxd678efh567hg6787',
     'service_id'     => '2002000000000558128851361561536',
@@ -173,7 +173,7 @@ $instance['v3/payscore/serviceorder/{out_order_no}/complete']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->serviceorder->_out_order_no_->complete->post([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'appid'          => 'wxd678efh567hg6787',
     'service_id'     => '2002000000000558128851361561536',
@@ -213,7 +213,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/serviceorder/{out_order_no}/complete')->post([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'appid'          => 'wxd678efh567hg6787',
     'service_id'     => '2002000000000558128851361561536',
@@ -253,7 +253,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/serviceorder/{out_order_no}/complete']->post([
-  'out_order_no' => '',
+  'out_order_no' => '1234323JKHDFE1243252',
   'json' => [
     'appid'          => 'wxd678efh567hg6787',
     'service_id'     => '2002000000000558128851361561536',

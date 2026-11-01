@@ -116,7 +116,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | bill_sequence {data-required data-indent=1} | integer | 账单文件序号
 | download_url {data-required data-indent=1} | string | 下载地址
 | encrypt_key {data-required data-indent=1} | string | 加密密钥
-| hash_type {data-required data-indent=1} | string | 哈希类型
+| hash_type {data-required data-indent=1} | string | 哈希类型<br/>`SHA1` 枚举值
 | hash_value {data-required data-indent=1} | string | 哈希值
 | nonce {data-required data-indent=1} | string | 随机字符串
 

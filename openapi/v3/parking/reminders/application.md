@@ -541,6 +541,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | parking_lot_audit_no | string | 停车场进件审核单号
+| code | string | 响应码
+| message | string | 返回信息
 
 {.im-table #response}
 

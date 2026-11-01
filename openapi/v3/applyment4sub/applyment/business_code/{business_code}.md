@@ -17,7 +17,7 @@ description: 通过业务申请编号查询申请状态
 
 ```php [异步纯链式]
 $instance->v3->applyment4sub->applyment->business_code->_business_code_->getAsync([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -27,7 +27,7 @@ $instance->v3->applyment4sub->applyment->business_code->_business_code_->getAsyn
 
 ```php [异步声明式]
 $instance->chain('v3/applyment4sub/applyment/business_code/{business_code}')->getAsync([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -37,7 +37,7 @@ $instance->chain('v3/applyment4sub/applyment/business_code/{business_code}')->ge
 
 ```php [异步属性式]
 $instance['v3/applyment4sub/applyment/business_code/{business_code}']->getAsync([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -47,21 +47,21 @@ $instance['v3/applyment4sub/applyment/business_code/{business_code}']->getAsync(
 
 ```php [同步纯链式]
 $response = $instance->v3->applyment4sub->applyment->business_code->_business_code_->get([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/applyment4sub/applyment/business_code/{business_code}')->get([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/applyment4sub/applyment/business_code/{business_code}']->get([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

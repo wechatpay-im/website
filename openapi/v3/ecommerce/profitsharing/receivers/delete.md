@@ -11,7 +11,7 @@ description: 电商平台发起删除分账接收方请求。删除后，不支�
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-required data-indent=1} | string | 公众账号ID
-| type {data-required data-indent=1} | string | 接收方类型
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 接收方账号
 
 {.im-table #request}
@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type {data-required} | string | 接收方类型
+| type {data-required} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | account {data-required} | string | 接收方账号
 
 {.im-table #response}

@@ -22,7 +22,6 @@ description: 商户可以通过该接口同时向多个用户微信零钱进行�
 | transfer_remark {data-required data-indent=2} | string | 转账备注
 | openid {data-required data-indent=2} | string | 用户在直连商户应用下的用户标示
 | user_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
-| user_id_card {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户身份证
 | transfer_scene_id {data-required data-indent=1} | string | 转账场景ID
 | notify_url {data-indent=1} | string | 通知地址
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
@@ -47,7 +46,6 @@ $instance->v3->transfer->batches->postAsync([
       'transfer_remark' => '2020年4月报销',
       'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
       'user_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-      'user_id_card'    => '8609cb22e1774a50a930e414cc71eca06121bcd266335cda230d24a7886a8d9f',
     ],],
     'transfer_scene_id'    => '1001',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -77,7 +75,6 @@ $instance->chain('v3/transfer/batches')->postAsync([
       'transfer_remark' => '2020年4月报销',
       'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
       'user_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-      'user_id_card'    => '8609cb22e1774a50a930e414cc71eca06121bcd266335cda230d24a7886a8d9f',
     ],],
     'transfer_scene_id'    => '1001',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -107,7 +104,6 @@ $instance['v3/transfer/batches']->postAsync([
       'transfer_remark' => '2020年4月报销',
       'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
       'user_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-      'user_id_card'    => '8609cb22e1774a50a930e414cc71eca06121bcd266335cda230d24a7886a8d9f',
     ],],
     'transfer_scene_id'    => '1001',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -137,7 +133,6 @@ $response = $instance->v3->transfer->batches->post([
       'transfer_remark' => '2020年4月报销',
       'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
       'user_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-      'user_id_card'    => '8609cb22e1774a50a930e414cc71eca06121bcd266335cda230d24a7886a8d9f',
     ],],
     'transfer_scene_id'    => '1001',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -164,7 +159,6 @@ $response = $instance->chain('v3/transfer/batches')->post([
       'transfer_remark' => '2020年4月报销',
       'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
       'user_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-      'user_id_card'    => '8609cb22e1774a50a930e414cc71eca06121bcd266335cda230d24a7886a8d9f',
     ],],
     'transfer_scene_id'    => '1001',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
@@ -191,7 +185,6 @@ $response = $instance['v3/transfer/batches']->post([
       'transfer_remark' => '2020年4月报销',
       'openid'          => 'o-MYE42l80oelYMDE34nYD456Xoy',
       'user_name'       => '757b340b45ebef5467rter35gf464344v3542sdf4t6re4tb4f54ty45t4yyry45',
-      'user_id_card'    => '8609cb22e1774a50a930e414cc71eca06121bcd266335cda230d24a7886a8d9f',
     ],],
     'transfer_scene_id'    => '1001',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',

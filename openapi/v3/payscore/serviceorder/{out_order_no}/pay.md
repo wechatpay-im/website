@@ -98,7 +98,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | appid {data-required} | string | 公众账号ID
-| mchid | string | 商户号
 | out_order_no {data-required} | string | 商户服务订单号
 | service_id {data-required} | string | 服务ID
 | order_id {data-required} | string | 微信支付服务订单号

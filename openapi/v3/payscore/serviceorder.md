@@ -473,7 +473,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $instance->v3->payscore->serviceorder->getAsync([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
     'service_id'   => '2002000000000558128851361561536',
     'appid'        => 'wxd678efh567hg6787',
   ],
@@ -488,7 +488,7 @@ $instance->v3->payscore->serviceorder->getAsync([
 $instance->chain('v3/payscore/serviceorder')->getAsync([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
     'service_id'   => '2002000000000558128851361561536',
     'appid'        => 'wxd678efh567hg6787',
   ],
@@ -503,7 +503,7 @@ $instance->chain('v3/payscore/serviceorder')->getAsync([
 $instance['v3/payscore/serviceorder']->getAsync([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
     'service_id'   => '2002000000000558128851361561536',
     'appid'        => 'wxd678efh567hg6787',
   ],
@@ -518,7 +518,7 @@ $instance['v3/payscore/serviceorder']->getAsync([
 $response = $instance->v3->payscore->serviceorder->get([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
     'service_id'   => '2002000000000558128851361561536',
     'appid'        => 'wxd678efh567hg6787',
   ],
@@ -530,7 +530,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/serviceorder')->get([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
     'service_id'   => '2002000000000558128851361561536',
     'appid'        => 'wxd678efh567hg6787',
   ],
@@ -542,7 +542,7 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/serviceorder']->get([
   'query' => [
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
     'service_id'   => '2002000000000558128851361561536',
     'appid'        => 'wxd678efh567hg6787',
   ],
@@ -605,7 +605,27 @@ print_r(json_decode((string) $response->getBody(), true));
 | unit_price {data-indent=4} | number | 商品价格
 | discount_amount {data-indent=4} | number | 商品优惠金额
 | goods_remark {data-indent=4} | string | 商品备注
-| bank_type {data-indent=1} | string | 收款银行
+| seq {data-indent=1} | integer | 收款序号
+| amount {data-indent=1} | integer | 单笔收款金额
+| paid_type {data-indent=1} | string | 收款成功渠道
+| paid_time {data-indent=1} | string | 收款成功时间
+| transaction_id {data-indent=1} | string | 微信支付交易单号
+| promotion_detail {data-indent=1} | string[] | 优惠功能
+| coupon_id {data-indent=1} | string | 券ID
+| name {data-indent=1} | string | 优惠名称
+| scope {data-indent=1} | string | 优惠范围
+| type {data-indent=1} | string | 优惠类型
+| stock_id {data-indent=1} | string | 活动ID
+| wechatpay_contribute {data-indent=1} | integer | 微信出资
+| merchant_contribute {data-indent=1} | integer | 商户出资
+| other_contribute {data-indent=1} | integer | 其他出资
+| currency {data-indent=1} | string | 优惠币种
+| goods_detail {data-indent=1} | string[] | 单品列表
+| goods_id {data-indent=1} | string | 商品编码
+| quantity {data-indent=1} | integer | 商品数量
+| unit_price {data-indent=1} | integer | 商品价格
+| discount_amount {data-indent=1} | integer | 商品优惠金额
+| goods_remark {data-indent=1} | string | 商品备注
 | time_range | object {data-tooltip="对应PHP的array"} | 服务时间
 | start_time {data-indent=1} | string | 服务开始时间
 | end_time {data-indent=1} | string | 服务结束时间

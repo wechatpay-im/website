@@ -106,6 +106,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | next_raise_timestamp | integer | 下一次跳价时间
 | payable_amount | integer | 应付金额
 | paid_amount | integer | 已付金额
+| code | string | 响应码
+| message | string | 返回信息
 
 {.im-table #response}
 

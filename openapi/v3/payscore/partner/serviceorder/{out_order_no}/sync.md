@@ -15,9 +15,7 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 | sub_mchid {data-required data-indent=1} | string | 子商户号
 | type {data-required data-indent=1} | string | 场景类型
 | detail {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 内容信息详情
-| seq {data-indent=2} | integer | 收款序号
 | paid_time {data-required data-indent=2} | string | 收款成功时间
-| paid_amount {data-indent=2} | integer | 收款金额
 
 {.im-table #request}
 
@@ -31,9 +29,7 @@ $instance->v3->payscore->partner->serviceorder->_out_order_no_->sync->postAsync(
     'sub_mchid'  => '1900000109',
     'type'       => 'Order_Paid',
     'detail'     => [
-      'seq'         => 1,
-      'paid_time'   => '20091225091210',
-      'paid_amount' => 1,
+      'paid_time' => '20091225091210',
     ],
   ],
 ])
@@ -51,9 +47,7 @@ $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/sync')->postAs
     'sub_mchid'  => '1900000109',
     'type'       => 'Order_Paid',
     'detail'     => [
-      'seq'         => 1,
-      'paid_time'   => '20091225091210',
-      'paid_amount' => 1,
+      'paid_time' => '20091225091210',
     ],
   ],
 ])
@@ -71,9 +65,7 @@ $instance['v3/payscore/partner/serviceorder/{out_order_no}/sync']->postAsync([
     'sub_mchid'  => '1900000109',
     'type'       => 'Order_Paid',
     'detail'     => [
-      'seq'         => 1,
-      'paid_time'   => '20091225091210',
-      'paid_amount' => 1,
+      'paid_time' => '20091225091210',
     ],
   ],
 ])
@@ -91,9 +83,7 @@ $response = $instance->v3->payscore->partner->serviceorder->_out_order_no_->sync
     'sub_mchid'  => '1900000109',
     'type'       => 'Order_Paid',
     'detail'     => [
-      'seq'         => 1,
-      'paid_time'   => '20091225091210',
-      'paid_amount' => 1,
+      'paid_time' => '20091225091210',
     ],
   ],
 ]);
@@ -108,9 +98,7 @@ $response = $instance->chain('v3/payscore/partner/serviceorder/{out_order_no}/sy
     'sub_mchid'  => '1900000109',
     'type'       => 'Order_Paid',
     'detail'     => [
-      'seq'         => 1,
-      'paid_time'   => '20091225091210',
-      'paid_amount' => 1,
+      'paid_time' => '20091225091210',
     ],
   ],
 ]);
@@ -125,9 +113,7 @@ $response = $instance['v3/payscore/partner/serviceorder/{out_order_no}/sync']->p
     'sub_mchid'  => '1900000109',
     'type'       => 'Order_Paid',
     'detail'     => [
-      'seq'         => 1,
-      'paid_time'   => '20091225091210',
-      'paid_amount' => 1,
+      'paid_time' => '20091225091210',
     ],
   ],
 ]);

@@ -288,7 +288,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | departure_amount | integer | 真实出境人民币金额
 | fee | integer | 手续费人民币金额
 | charge_mchid | string | 手续费承担商户号
-| charge_account_type | string | 手续费承担账户
+| charge_account_type | string | 手续费承担账户<br/>`BASIC` \| `FEES` 枚举值之一
 
 {.im-table #response}
 

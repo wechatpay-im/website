@@ -115,7 +115,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | driver_license {data-required} | string | 营运资格证号
 | up_time {data-required} | string | 上车时间
 | region_id {data-required} | integer | 行政区划代码
-| source {data-required} | string | 乘客行程单来源
+| source {data-required} | string | 乘客行程单来源<br/>`SOURCE_PAY` \| `SOURCE_DEVICE` 枚举值之一
 | pay_time | string | 面对面付款时间
 | pay_amount | integer | 面对面付款金额
 

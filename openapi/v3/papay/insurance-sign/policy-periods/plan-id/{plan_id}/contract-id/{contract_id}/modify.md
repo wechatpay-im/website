@@ -163,7 +163,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | estimated_deduct_date {data-required data-indent=1} | string | 预计扣费的日期
 | estimated_deduct_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 预计扣费金额
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | cancel_scheduled_policy_period_id | integer | 发生了取消预约的扣费计划项编号
 
 {.im-table #response}

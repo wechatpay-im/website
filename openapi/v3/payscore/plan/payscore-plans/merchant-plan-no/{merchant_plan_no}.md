@@ -77,7 +77,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | merchant_plan_no {data-required} | string | 商户侧计划号
 | plan_name {data-required} | string | 支付分计划名称
 | plan_duration {data-required} | number | 支付分计划有效期(单位天)
-| plan_state {data-required} | string | 支付分计划状态
+| plan_state {data-required} | string | 支付分计划状态<br/>`NORMAL` \| `STOP` 枚举值之一
 | total_original_price {data-required} | number | 支付分计划原总金额(单位分)
 | deduction_quantity {data-required} | number | 支付分计划扣费次数
 | total_actual_price {data-required} | number | 支付分计划实际扣费总金额(单位分)

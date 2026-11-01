@@ -91,7 +91,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | sub_mchid {data-required} | string | 子商户ID
-| operation_type {data-required} | string | 操作类型<br/>`OPEN` \| `CLOSE` 枚举值之一
 
 {.im-table #response}
 

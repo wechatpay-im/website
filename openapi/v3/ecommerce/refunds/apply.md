@@ -249,8 +249,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | advance {data-indent=1} | number | 垫付金额
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 优惠退款详情
 | promotion_id {data-required data-indent=1} | string | 券ID
-| scope {data-required data-indent=1} | string | 优惠范围
-| type {data-required data-indent=1} | string | 优惠类型
+| scope {data-required data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-required data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | refund_amount {data-required data-indent=1} | integer | 优惠退款金额
 | refund_account | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一

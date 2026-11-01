@@ -94,7 +94,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_type {data-required} | string | 受理类型
+| accept_type {data-required} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
 | out_batch_no | string | 商家转账批次单号
 | out_detail_no {data-required} | string | 商家转账明细单号
 | signature_no {data-required} | string | 电子回单受理单号
@@ -201,7 +201,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| accept_type {data-required} | string | 受理类型
+| accept_type {data-required} | string | 受理类型<br/>`BATCH_TRANSFER` \| `TRANSFER_TO_POCKET` \| `TRANSFER_TO_BANK` 枚举值之一
 | out_batch_no | string | 商家转账批次单号
 | out_detail_no {data-required} | string | 商家转账明细单号
 | signature_no {data-required} | string | 电子回单受理单号

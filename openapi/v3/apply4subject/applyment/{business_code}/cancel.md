@@ -17,7 +17,7 @@ description: 服务商提交申请单后需要修改信息时，或者申请单�
 
 ```php [异步纯链式]
 $instance->v3->apply4subject->applyment->_business_code_->cancel->postAsync([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -27,7 +27,7 @@ $instance->v3->apply4subject->applyment->_business_code_->cancel->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/apply4subject/applyment/{business_code}/cancel')->postAsync([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -37,7 +37,7 @@ $instance->chain('v3/apply4subject/applyment/{business_code}/cancel')->postAsync
 
 ```php [异步属性式]
 $instance['v3/apply4subject/applyment/{business_code}/cancel']->postAsync([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -47,21 +47,21 @@ $instance['v3/apply4subject/applyment/{business_code}/cancel']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->apply4subject->applyment->_business_code_->cancel->post([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ]);
 print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/apply4subject/applyment/{business_code}/cancel')->post([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ]);
 print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/apply4subject/applyment/{business_code}/cancel']->post([
-  'business_code' => '',
+  'business_code' => '1900013511_10000',
 ]);
 print_r($response->getStatusCode() === 204);
 ```

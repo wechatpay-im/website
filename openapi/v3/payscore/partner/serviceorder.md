@@ -505,7 +505,7 @@ $instance->v3->payscore->partner->serviceorder->getAsync([
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -520,7 +520,7 @@ $instance->chain('v3/payscore/partner/serviceorder')->getAsync([
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -535,7 +535,7 @@ $instance['v3/payscore/partner/serviceorder']->getAsync([
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -550,7 +550,7 @@ $response = $instance->v3->payscore->partner->serviceorder->get([
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -562,7 +562,7 @@ $response = $instance->chain('v3/payscore/partner/serviceorder')->get([
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -574,7 +574,7 @@ $response = $instance['v3/payscore/partner/serviceorder']->get([
     'service_id'   => '2002000000000558128851361561536',
     'sub_mchid'    => '1900000109',
     'out_order_no' => '1234323JKHDFE1243252',
-    'query_id'     => '',
+    'query_id'     => '15646546545165651651',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -637,7 +637,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | unit_price {data-indent=4} | integer | 商品价格
 | discount_amount {data-indent=4} | integer | 商品优惠金额
 | goods_remark {data-indent=4} | string | 商品备注
-| bank_type {data-indent=1} | string | 收款银行
 | time_range | object {data-tooltip="对应PHP的array"} | 服务时间
 | start_time {data-indent=1} | string | 服务开始时间
 | start_time_remark {data-indent=1} | string | 服务开始时间备注

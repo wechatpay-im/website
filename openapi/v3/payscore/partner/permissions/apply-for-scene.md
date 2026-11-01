@@ -152,7 +152,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| scene {data-required} | string | 授权场景, 与输入中一致
+| scene {data-required} | string | 授权场景, 与输入中一致<br/>`TRANSACTION` 枚举值
 | transaction_permissions_token | string | 微信支付交易中授权token
 
 {.im-table #response}

@@ -86,7 +86,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | detail_status {data-required} | string | 明细状态
 | transfer_amount {data-required} | integer | 转账金额
 | transfer_remark {data-required} | string | 转账备注
-| fail_reason | string | 明细失败原因
+| fail_reason | string | 明细失败原因<br/>`ACCOUNT_FROZEN` \| `REAL_NAME_CHECK_FAIL` \| `NAME_NOT_CORRECT` \| `OPENID_INVALID` \| `TRANSFER_QUOTA_EXCEED` \| `DAY_RECEIVED_QUOTA_EXCEED` \| `MONTH_RECEIVED_QUOTA_EXCEED` \| `DAY_RECEIVED_COUNT_EXCEED` \| `PRODUCT_AUTH_CHECK_FAIL` \| `OVERDUE_CLOSE` \| `ID_CARD_NOT_CORRECT` \| `ACCOUNT_NOT_EXIST` \| `TRANSFER_RISK` \| `OTHER_FAIL_REASON_TYPE` \| `REALNAME_ACCOUNT_RECEIVED_QUOTA_EXCEED` \| `RECEIVE_ACCOUNT_NOT_PERMMIT` \| `PAYEE_ACCOUNT_ABNORMAL` \| `PAYER_ACCOUNT_ABNORMAL` \| `TRANSFER_SCENE_UNAVAILABLE` \| `TRANSFER_SCENE_INVALID` \| `TRANSFER_REMARK_SET_FAIL` \| `RECEIVE_ACCOUNT_NOT_CONFIGURE` \| `BLOCK_B2C_USERLIMITAMOUNT_BSRULE_MONTH` \| `BLOCK_B2C_USERLIMITAMOUNT_MONTH` \| `MERCHANT_REJECT` \| `MERCHANT_NOT_CONFIRM` 枚举值之一
 | openid {data-required} | string | 用户在直连商户应用下的用户标示
 | user_name {data-required} | string | 收款用户姓名
 | initiate_time {data-required} | string | 转账发起时间

@@ -17,7 +17,7 @@ description: 当服务商需要确认微信支付子商户号是否完成确认�
 
 ```php [异步纯链式]
 $instance->v3->apply4subject->applyment->merchants->_sub_mchid_->state->getAsync([
-  'sub_mchid' => '',
+  'sub_mchid' => '20001111',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -27,7 +27,7 @@ $instance->v3->apply4subject->applyment->merchants->_sub_mchid_->state->getAsync
 
 ```php [异步声明式]
 $instance->chain('v3/apply4subject/applyment/merchants/{sub_mchid}/state')->getAsync([
-  'sub_mchid' => '',
+  'sub_mchid' => '20001111',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -37,7 +37,7 @@ $instance->chain('v3/apply4subject/applyment/merchants/{sub_mchid}/state')->getA
 
 ```php [异步属性式]
 $instance['v3/apply4subject/applyment/merchants/{sub_mchid}/state']->getAsync([
-  'sub_mchid' => '',
+  'sub_mchid' => '20001111',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -47,21 +47,21 @@ $instance['v3/apply4subject/applyment/merchants/{sub_mchid}/state']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->apply4subject->applyment->merchants->_sub_mchid_->state->get([
-  'sub_mchid' => '',
+  'sub_mchid' => '20001111',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/apply4subject/applyment/merchants/{sub_mchid}/state')->get([
-  'sub_mchid' => '',
+  'sub_mchid' => '20001111',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/apply4subject/applyment/merchants/{sub_mchid}/state']->get([
-  'sub_mchid' => '',
+  'sub_mchid' => '20001111',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

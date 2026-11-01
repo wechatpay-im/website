@@ -45,8 +45,6 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | time_expire {data-indent=1} | string | 交易结束时间
 | prepay_id {data-indent=1} | string | 预支付交易会话标识
 | notify_url {data-required data-indent=1} | string | 通知地址
-| trade_scenario {data-indent=1} | string | 交易场景<br/>`RECOMMERCE` 枚举值
-| limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_debit` \| `balance_only` 枚举值之一
 | contract_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 预签约信息
 | mchid {data-required data-indent=2} | string | 签约商户号
 | appid {data-required data-indent=2} | string | 签约商户AppID
@@ -54,12 +52,6 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | plan_id {data-required data-indent=2} | number | 委托代扣协议模板ID
 | contract_display_account {data-required data-indent=2} | string | 用户账户展示名称
 | notify_url {data-required data-indent=2} | string | 回调通知地址
-| subsidy_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 贴息信息(微信分付)
-| subsidy_detail {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 贴息详情列表
-| subsidy_period_type {data-required data-indent=3} | string | 贴息方案类型<br/>`DAILY` \| `PERIOD` 枚举值之一
-| subsidy_plan {data-required data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 贴息方案列表
-| subsidy_installment_num {data-required data-indent=4} | integer | 贴息期数<br/>`3` \| `6` \| `12` 枚举值之一
-| subsidy_percent {data-required data-indent=4} | integer | 贴息比例<br/>`0` \| `100` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -111,8 +103,6 @@ $instance->v3->combineTransactions->app->postAsync([
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
-    'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
       'appid'                    => 'wxd678efh567hg6787',
@@ -120,15 +110,6 @@ $instance->v3->combineTransactions->app->postAsync([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
-    ],
-    'subsidy_info'         => [
-      'subsidy_detail' => [[
-        'subsidy_period_type' => 'PERIOD',
-        'subsidy_plan'        => [[
-          'subsidy_installment_num' => 3,
-          'subsidy_percent'         => 100,
-        ],],
-      ],],
     ],
   ],
   'headers' => [
@@ -185,8 +166,6 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
-    'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
       'appid'                    => 'wxd678efh567hg6787',
@@ -194,15 +173,6 @@ $instance->chain('v3/combine-transactions/app')->postAsync([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
-    ],
-    'subsidy_info'         => [
-      'subsidy_detail' => [[
-        'subsidy_period_type' => 'PERIOD',
-        'subsidy_plan'        => [[
-          'subsidy_installment_num' => 3,
-          'subsidy_percent'         => 100,
-        ],],
-      ],],
     ],
   ],
   'headers' => [
@@ -259,8 +229,6 @@ $instance['v3/combine-transactions/app']->postAsync([
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
-    'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
       'appid'                    => 'wxd678efh567hg6787',
@@ -268,15 +236,6 @@ $instance['v3/combine-transactions/app']->postAsync([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
-    ],
-    'subsidy_info'         => [
-      'subsidy_detail' => [[
-        'subsidy_period_type' => 'PERIOD',
-        'subsidy_plan'        => [[
-          'subsidy_installment_num' => 3,
-          'subsidy_percent'         => 100,
-        ],],
-      ],],
     ],
   ],
   'headers' => [
@@ -333,8 +292,6 @@ $response = $instance->v3->combineTransactions->app->post([
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
-    'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
       'appid'                    => 'wxd678efh567hg6787',
@@ -342,15 +299,6 @@ $response = $instance->v3->combineTransactions->app->post([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
-    ],
-    'subsidy_info'         => [
-      'subsidy_detail' => [[
-        'subsidy_period_type' => 'PERIOD',
-        'subsidy_plan'        => [[
-          'subsidy_installment_num' => 3,
-          'subsidy_percent'         => 100,
-        ],],
-      ],],
     ],
   ],
   'headers' => [
@@ -404,8 +352,6 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
-    'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
       'appid'                    => 'wxd678efh567hg6787',
@@ -413,15 +359,6 @@ $response = $instance->chain('v3/combine-transactions/app')->post([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
-    ],
-    'subsidy_info'         => [
-      'subsidy_detail' => [[
-        'subsidy_period_type' => 'PERIOD',
-        'subsidy_plan'        => [[
-          'subsidy_installment_num' => 3,
-          'subsidy_percent'         => 100,
-        ],],
-      ],],
     ],
   ],
   'headers' => [
@@ -475,8 +412,6 @@ $response = $instance['v3/combine-transactions/app']->post([
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'prepay_id'            => 'wx201410272009395522657a690389285100',
     'notify_url'           => 'https://yourapp.com/notify',
-    'trade_scenario'       => 'RECOMMERCE',
-    'limit_pay'            => ['no_balance'],
     'contract_info'        => [
       'mchid'                    => '1900000109',
       'appid'                    => 'wxd678efh567hg6787',
@@ -484,15 +419,6 @@ $response = $instance['v3/combine-transactions/app']->post([
       'plan_id'                  => 12535,
       'contract_display_account' => '微信代扣用户A',
       'notify_url'               => 'https://yourapp.com/notify',
-    ],
-    'subsidy_info'         => [
-      'subsidy_detail' => [[
-        'subsidy_period_type' => 'PERIOD',
-        'subsidy_plan'        => [[
-          'subsidy_installment_num' => 3,
-          'subsidy_percent'         => 100,
-        ],],
-      ],],
     ],
   ],
   'headers' => [

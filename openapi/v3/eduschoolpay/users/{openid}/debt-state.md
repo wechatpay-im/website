@@ -72,7 +72,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | appid {data-required} | string | 商户appid
 | openid {data-required} | string | 商户appid下的用户标识
-| state {data-required} | string | 用户状态
+| state {data-required} | string | 用户状态<br/>`NORMAL` \| `FORBIDDEN` 枚举值之一
 | debt_count {data-required} | integer | 当前用户欠款笔数
 | update_time {data-required} | string | 用户欠款状态更新时间
 

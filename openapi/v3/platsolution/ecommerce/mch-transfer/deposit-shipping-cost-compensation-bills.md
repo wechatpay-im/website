@@ -187,7 +187,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | sp_mchid {data-required} | string | 服务商商户号
 | sub_mchid | string | 二级商户号
-| sub_appid | string | 二级商户AppID
 | receiver_detail {data-required} | object {data-tooltip="对应PHP的array"} | 转账接收方信息
 | receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 转账接收者信息
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
@@ -203,6 +202,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | accept_time {data-required} | string | 受理时间
 | success_time | string | 成功时间
 | sponsor_mchid | string | 出资商户号
+| sp_appid | string | 公众账号ID
 
 {.im-table #response}
 

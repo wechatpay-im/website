@@ -109,14 +109,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | estimated_deduct_date {data-required data-indent=1} | string | 扣费周期预计的扣费的日期
 | estimated_deduct_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 扣费周期预计的扣费金额
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
-| policy_period_state {data-required data-indent=1} | string | 扣费周期预约状态
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
+| policy_period_state {data-required data-indent=1} | string | 扣费周期预约状态<br/>`NO_SCHEDULED` \| `SCHEDULED` \| `PAID` \| `EXPIRED` 枚举值之一
 | scheduled_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | deduct_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际扣费金额
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | deduct_date {data-indent=1} | string | 实际扣费的日期
 | limit {data-required} | number | 分页大小
 | offset {data-required} | number | 分页开始位置

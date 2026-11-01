@@ -99,7 +99,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | sub_mchid {data-required} | string | 二级商户号
 | transaction_id {data-required} | string | 微信订单号
-| result {data-required} | string | 取消补差结果
+| result {data-required} | string | 补差单状态<br/>`SUCCESS` \| `FAIL` 枚举值之一
 | description {data-required} | string | 取消补差描述
 
 {.im-table #response}

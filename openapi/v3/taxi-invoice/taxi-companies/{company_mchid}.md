@@ -91,7 +91,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | company_mchid {data-required} | string | 商户号
-| enterprise_type {data-required} | string | 企业类型
+| enterprise_type {data-required} | string | 企业类型<br/>`CORPORATION` \| `INDIVIDUAL` 枚举值之一
 | company_name {data-required} | string | 公司名称
 | short_name {data-required} | string | 公司简称
 | tax_id {data-required} | string | 税号
@@ -100,7 +100,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_name | string | 开户行
 | bank_account | string | 银行账号
 | legal_person {data-required} | string | 企业法人姓名
-| invoice_mode {data-required} | string | 开票渠道
+| invoice_mode {data-required} | string | 开票渠道<br/>`JIAOWEI` \| `NUONUO` 枚举值之一
 | region_id {data-required} | integer | 行政区划代码
 
 {.im-table #response}

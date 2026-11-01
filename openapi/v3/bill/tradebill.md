@@ -12,7 +12,7 @@ description: 微信支付按天提供交易账单文件，商户可以通过该�
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
 | bill_date {data-required data-indent=1} | string | 账单日期
 | sub_mchid {data-indent=1} | string | 二级商户号
-| bill_type {data-indent=1} | string | 账单类型<br/>`ALL` \| `SUCCESS` \| `REFUND` \| `RECHARGE_REFUND` \| `ALL_SPECIAL` \| `SUC_SPECIAL` \| `REF_SPECIAL` 枚举值之一
+| bill_type {data-indent=1} | string | 账单类型<br/>`ALL` \| `SUCCESS` \| `REFUND` 枚举值之一
 | tar_type {data-indent=1} | string | 压缩类型<br/>`GZIP` 枚举值
 
 {.im-table #request}

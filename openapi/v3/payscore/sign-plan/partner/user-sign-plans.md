@@ -179,9 +179,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | merchant_callback_url {data-required data-indent=1} | string | 商户回调地址
 | plan_id {data-required data-indent=1} | string | 签约所属计划ID
 | going_detail_no {data-required data-indent=1} | number | 目前用户进行到的计划详情序号
-| sign_state {data-required data-indent=1} | string | 计划签约状态
+| sign_state {data-required data-indent=1} | string | 计划签约状态<br/>`UNSIGNED` \| `SIGNED` \| `SIGN_PLAN_CANCEL` \| `COMPLETE` \| `EXPIRE` 枚举值之一
 | cancel_sign_time {data-indent=1} | string | 签约计划取消时间
-| cancel_sign_type {data-indent=1} | string | 签约计划取消类型
+| cancel_sign_type {data-indent=1} | string | 签约计划取消类型<br/>`NOT_CANCEL` \| `USER` \| `MERCHANT` \| `REVOKE_SERVICE` 枚举值之一
 | cancel_reason {data-indent=1} | string | 签约计划取消原因
 | plan_name {data-required data-indent=1} | string | 签约计划的名称
 | plan_over_time {data-required data-indent=1} | string | 签约计划的过期时间
@@ -193,7 +193,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | original_price {data-required data-indent=2} | number | 计划明细原支付金额（单位分）
 | plan_discount_description {data-indent=2} | string | 计划明细优惠说明
 | actual_price {data-required data-indent=2} | number | 计划明细实际支付金额（单位分）
-| plan_detail_state {data-required data-indent=2} | string | 计划明细状态
+| plan_detail_state {data-required data-indent=2} | string | 计划明细状态<br/>`NOT_USED` \| `USING` \| `USED` \| `SIGN_PLAN_DETAIL_CANCEL` 枚举值之一
 | order_id {data-indent=2} | string | 计划明细对应的支付分服务单号
 | merchant_plan_detail_no {data-required data-indent=2} | string | 商户侧计划明细使用订单号
 | plan_detail_name {data-required data-indent=2} | string | 计划详情名称

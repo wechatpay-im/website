@@ -127,7 +127,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | mini_program_jump_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=6} | string | 跳转小程序APPID
 | path {data-required data-indent=6} | string | 跳转小程序页面PATH
-| text {data-required data-indent=6} | string | 跳转小程序页面名称
 | message_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=6} | string | 回复的消息内容
 | custom_data {data-indent=6} | string | 自定义透传字段
@@ -145,7 +144,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | mini_program_jump_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=7} | string | 跳转小程序APPID
 | path {data-required data-indent=7} | string | 跳转小程序页面PATH
-| text {data-required data-indent=7} | string | 跳转小程序页面名称
 | message_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=7} | string | 回复的消息内容
 | custom_data {data-indent=7} | string | 自定义透传字段
@@ -158,7 +156,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | mini_program_jump_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=6} | string | 跳转小程序APPID
 | path {data-required data-indent=6} | string | 跳转小程序页面PATH
-| text {data-required data-indent=6} | string | 跳转小程序页面名称
 | message_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=6} | string | 回复的消息内容
 | custom_data {data-indent=6} | string | 自定义透传字段
@@ -175,14 +172,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | mini_program_jump_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=7} | string | 跳转小程序APPID
 | path {data-required data-indent=7} | string | 跳转小程序页面PATH
-| text {data-required data-indent=7} | string | 跳转小程序页面名称
 | message_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=7} | string | 回复的消息内容
 | custom_data {data-indent=7} | string | 自定义透传字段
 | action_id {data-indent=6} | string | 动作id
-| invalid_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 失效配置
-| expired_time {data-indent=6} | string | 过期时间
-| multi_clickable {data-indent=6} | boolean | 是否可以多次点击
 | button_layout {data-indent=4} | string | 按钮布局方式<br/>`LAYOUT_UNKNOWN` \| `LAYOUT_HORIZONTAL` \| `LAYOUT_VERTICAL` 枚举值之一
 | invalid_info {data-indent=4} | object {data-tooltip="对应PHP的array"} | 失效配置
 | expired_time {data-indent=5} | string | 过期时间

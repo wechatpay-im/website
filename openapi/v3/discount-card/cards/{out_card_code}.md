@@ -72,6 +72,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | card_id {data-required} | string | 先享卡ID
 | card_template_id {data-required} | string | 先享卡模板ID
+| openid {data-required} | string | 用户标识
 | out_card_code {data-required} | string | 商户领卡号
 | appid {data-required} | string | 公众账号ID
 | mchid {data-required} | string | 商户号

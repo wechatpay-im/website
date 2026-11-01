@@ -138,6 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | main_license {data-required} | string | 主班司机资格证号
 | deputy_license | string | 副班司机资格证号
 | region_id {data-required} | integer | 行政区划ID
+| taxi_state | string | 出租车状态<br/>`IN_OPERATION` \| `OUT_OPERATION` 枚举值之一
 
 {.im-table #response}
 

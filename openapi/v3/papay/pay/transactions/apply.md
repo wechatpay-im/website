@@ -155,7 +155,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_trade_no {data-required} | string | 商户订单号
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 扣费金额信息
 | total {data-required data-indent=1} | number | 金额
-| currency {data-indent=1} | string | 货币类型
+| currency {data-indent=1} | string | 货币类型<br/>`CNY` 枚举值
 
 {.im-table #response}
 

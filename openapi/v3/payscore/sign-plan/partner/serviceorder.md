@@ -235,8 +235,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_appid | string | 子商户公众号ID
 | sub_mchid {data-required} | string | 子商户商户号
 | service_introduction {data-required} | string | 服务信息
-| state {data-required} | string | 服务订单状态
-| state_description | string | 订单状态说明
+| state {data-required} | string | 服务订单状态<br/>`CREATED` \| `DOING` \| `DONE` \| `REVOKED` \| `EXPIRED` 枚举值之一
+| state_description | string | 订单状态说明<br/>`USER_CONFIRM` \| `MERCHANT_COMPLETE` 枚举值之一
 | post_payments | object[] {data-tooltip="对应PHP的array"} | 后付费项目
 | name {data-indent=1} | string | 付费名称
 | amount {data-indent=1} | number | 付费金额

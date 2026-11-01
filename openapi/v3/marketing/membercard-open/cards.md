@@ -396,6 +396,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_begin_time {data-indent=1} | string | 有效期开始时间
 | available_end_time {data-indent=1} | string | 有效期结束时间
 | available_day_after_receive {data-indent=1} | integer | 生效后N天内有效
+| wait_days_after_receive {data-indent=1} | integer | 领取后N天开始生效
 | code_mode {data-required} | string | 会员卡code分配类型<br/>`SYSTEM_ALLOCATE` \| `MERCHANT_DEPOSIT` \| `REAL_TIME` 枚举值之一
 | need_display_level | boolean | 是否展示会员等级
 | init_level | string | 会员初始等级
@@ -560,6 +561,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_begin_time {data-indent=2} | string | 有效期开始时间
 | available_end_time {data-indent=2} | string | 有效期结束时间
 | available_day_after_receive {data-indent=2} | integer | 生效后N天内有效
+| wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
 | code_mode {data-required data-indent=1} | string | 会员卡code分配类型<br/>`SYSTEM_ALLOCATE` \| `MERCHANT_DEPOSIT` \| `REAL_TIME` 枚举值之一
 | need_display_level {data-indent=1} | boolean | 是否展示会员等级
 | init_level {data-indent=1} | string | 会员初始等级
@@ -575,11 +577,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | type {data-indent=3} | string | 商户自定义的开卡信息字段类型<br/>`TEXT` \| `SELECT` \| `RADIO` \| `CHECK_BOX` 枚举值之一
 | name {data-indent=3} | string | 字段名称
 | values {data-indent=3} | string[] | 字段值
+| can_modify_after_activate {data-indent=2} | boolean | 是否允许修改
 | additional_statement {data-indent=1} | object {data-tooltip="对应PHP的array"} | 商户补充声明
 | title {data-indent=2} | string | 标题
 | url {data-indent=2} | string | 跳转url
 | appid {data-indent=2} | string | 跳转小程序appid
 | path {data-indent=2} | string | 跳转小程序path
+| need_dynamic_code {data-indent=1} | boolean | 是否启用动态码
 
 {.im-table #response}
 

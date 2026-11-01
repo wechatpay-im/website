@@ -108,7 +108,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | store_state | object {data-tooltip="对应PHP的array"} | 门店状态
 | store_state_message {data-indent=1} | string | 门店状态描述
 | address_failed_reason {data-indent=1} | string | 地址核实失败原因
-| store_state_value {data-indent=1} | string | STORE_STATE_VALID
+| store_state_value {data-indent=1} | string | STORE_STATE_VALID<br/>`STORE_STATE_VALID` \| `STORE_STATE_ADDRESS_VERIFYING` \| `STORE_STATE_ADDRESS_FAILED` \| `STORE_STATE_RECIPIENT_REFUSED` \| `STORE_STATE_CLOSED` \| `STORE_STATE_RECIPIENT_VERIFYING` 枚举值之一
 
 {.im-table #response}
 

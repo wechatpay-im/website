@@ -26,7 +26,7 @@ description: 通过openid，服务商帮子商户解除用户授权关系
 $instance->v3->payscore->partner->permissions->terminate->postAsync([
   'json' => [
     'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => '',
+    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'service_id' => '500001',
     'appid'      => 'wxd678efh567hg6787',
     'sub_appid'  => 'wxd678efh567hg6787',
@@ -44,7 +44,7 @@ $instance->v3->payscore->partner->permissions->terminate->postAsync([
 $instance->chain('v3/payscore/partner/permissions/terminate')->postAsync([
   'json' => [
     'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => '',
+    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'service_id' => '500001',
     'appid'      => 'wxd678efh567hg6787',
     'sub_appid'  => 'wxd678efh567hg6787',
@@ -62,7 +62,7 @@ $instance->chain('v3/payscore/partner/permissions/terminate')->postAsync([
 $instance['v3/payscore/partner/permissions/terminate']->postAsync([
   'json' => [
     'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => '',
+    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'service_id' => '500001',
     'appid'      => 'wxd678efh567hg6787',
     'sub_appid'  => 'wxd678efh567hg6787',
@@ -80,7 +80,7 @@ $instance['v3/payscore/partner/permissions/terminate']->postAsync([
 $response = $instance->v3->payscore->partner->permissions->terminate->post([
   'json' => [
     'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => '',
+    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'service_id' => '500001',
     'appid'      => 'wxd678efh567hg6787',
     'sub_appid'  => 'wxd678efh567hg6787',
@@ -95,7 +95,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance->chain('v3/payscore/partner/permissions/terminate')->post([
   'json' => [
     'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => '',
+    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'service_id' => '500001',
     'appid'      => 'wxd678efh567hg6787',
     'sub_appid'  => 'wxd678efh567hg6787',
@@ -110,7 +110,7 @@ print_r($response->getStatusCode() === 204);
 $response = $instance['v3/payscore/partner/permissions/terminate']->post([
   'json' => [
     'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-    'sub_openid' => '',
+    'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'service_id' => '500001',
     'appid'      => 'wxd678efh567hg6787',
     'sub_appid'  => 'wxd678efh567hg6787',

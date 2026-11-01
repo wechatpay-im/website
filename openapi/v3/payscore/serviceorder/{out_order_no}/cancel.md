@@ -21,7 +21,7 @@ description: 微信支付分订单创建之后，由于某些原因导致订单�
 
 ```php [异步纯链式]
 $instance->v3->payscore->serviceorder->_out_order_no_->cancel->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '2304203423948239423',
   'json' => [
     'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
@@ -36,7 +36,7 @@ $instance->v3->payscore->serviceorder->_out_order_no_->cancel->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/payscore/serviceorder/{out_order_no}/cancel')->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '2304203423948239423',
   'json' => [
     'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
@@ -51,7 +51,7 @@ $instance->chain('v3/payscore/serviceorder/{out_order_no}/cancel')->postAsync([
 
 ```php [异步属性式]
 $instance['v3/payscore/serviceorder/{out_order_no}/cancel']->postAsync([
-  'out_order_no' => '',
+  'out_order_no' => '2304203423948239423',
   'json' => [
     'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
@@ -66,7 +66,7 @@ $instance['v3/payscore/serviceorder/{out_order_no}/cancel']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->payscore->serviceorder->_out_order_no_->cancel->post([
-  'out_order_no' => '',
+  'out_order_no' => '2304203423948239423',
   'json' => [
     'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
@@ -78,7 +78,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/payscore/serviceorder/{out_order_no}/cancel')->post([
-  'out_order_no' => '',
+  'out_order_no' => '2304203423948239423',
   'json' => [
     'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',
@@ -90,7 +90,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/payscore/serviceorder/{out_order_no}/cancel']->post([
-  'out_order_no' => '',
+  'out_order_no' => '2304203423948239423',
   'json' => [
     'appid'      => 'wxd678efh567hg6787',
     'service_id' => '500001',

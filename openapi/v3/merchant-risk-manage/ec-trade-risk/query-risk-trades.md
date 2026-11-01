@@ -132,6 +132,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | risk_type {data-indent=1} | number | 风险类型<br/>`1` \| `2` \| `3` \| `4` 枚举值之一
 | risk_level {data-indent=1} | number | 风险等级<br/>`1` \| `2` \| `3` 枚举值之一
 | risk_discove_time {data-indent=1} | string | 投诉单状态
+| sp_mchid {data-indent=1} | string | 服务商商户号
 
 {.im-table #response}
 

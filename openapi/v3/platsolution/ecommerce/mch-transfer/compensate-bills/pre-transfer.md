@@ -20,7 +20,6 @@ description: 商户可调用该接口进行赔付预下单，并锁定商户资�
 | amount {data-indent=1} | number | 赔付金额
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
 | sponsor_mchid {data-indent=1} | string | 出资商户号
-| transfer_scene_id {data-indent=1} | string | 转账场景ID
 | user_recv_perception {data-indent=1} | string | 用户收款感知
 | notify_url {data-indent=1} | string | 商户回调地址
 
@@ -43,7 +42,6 @@ $instance->v3->platsolution->ecommerce->mchTransfer->compensateBills->preTransfe
     'amount'               => 10000,
     'transfer_remark'      => '直播违规扣罚',
     'sponsor_mchid'        => '1900001109',
-    'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
@@ -69,7 +67,6 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-bills/pre-tr
     'amount'               => 10000,
     'transfer_remark'      => '直播违规扣罚',
     'sponsor_mchid'        => '1900001109',
-    'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
@@ -95,7 +92,6 @@ $instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/pre-transfer'
     'amount'               => 10000,
     'transfer_remark'      => '直播违规扣罚',
     'sponsor_mchid'        => '1900001109',
-    'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
@@ -121,7 +117,6 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->compensateBills
     'amount'               => 10000,
     'transfer_remark'      => '直播违规扣罚',
     'sponsor_mchid'        => '1900001109',
-    'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
@@ -144,7 +139,6 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/compensate-
     'amount'               => 10000,
     'transfer_remark'      => '直播违规扣罚',
     'sponsor_mchid'        => '1900001109',
-    'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],
@@ -167,7 +161,6 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/compensate-bills/p
     'amount'               => 10000,
     'transfer_remark'      => '直播违规扣罚',
     'sponsor_mchid'        => '1900001109',
-    'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
     'notify_url'           => 'https://www.weixin.qq.com/wxpay/pay.php',
   ],

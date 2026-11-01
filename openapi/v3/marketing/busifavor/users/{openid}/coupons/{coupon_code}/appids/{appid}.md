@@ -94,14 +94,16 @@ print_r(json_decode((string) $response->getBody(), true));
 | available_begin_time {data-indent=2} | string | 开始时间
 | available_end_time {data-indent=2} | string | 结束时间
 | available_day_after_receive {data-indent=2} | integer | 领取后N天内有效
-| available_week {data-indent=1} | object {data-tooltip="对应PHP的array"} | 固定周期有效时间段
-| week_day {data-indent=2} | integer[] | 可用星期数(0代表周日，1代表周一，以此类推)<br/>`0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6` 枚举值之一
-| available_day_time {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
-| begin_time {data-indent=3} | integer | 当天可用开始时间
-| end_time {data-indent=3} | integer | 当天可用结束时间
-| irregulary_avaliable_time {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 无规律的有效时间段
-| begin_time {data-indent=2} | string | 开始时间
-| end_time {data-indent=2} | string | 结束时间
+| available_week {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定周期有效时间段
+| week_day {data-indent=3} | integer[] | 可用星期数
+| available_day_time {data-indent=3} | object[] {data-tooltip="对应PHP的array"} | 当天可用时间段
+| begin_time {data-indent=4} | integer | 当天可用开始时间
+| end_time {data-indent=4} | integer | 当天可用结束时间
+| irregulary_avaliable_time {data-indent=2} | object[] {data-tooltip="对应PHP的array"} | 无规律的有效时间段
+| begin_time {data-indent=3} | string | 开始时间
+| end_time {data-indent=3} | string | 结束时间
+| wait_days_after_receive {data-indent=2} | integer | 领取后N天开始生效
+| available_second_after_receive {data-indent=2} | integer | 领取后N秒内有效
 | fixed_normal_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
 | discount_amount {data-indent=2} | integer | 优惠金额
 | transaction_minimum {data-indent=2} | integer | 消费门槛
@@ -123,7 +125,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | appid {data-indent=1} | string | 商户公众号appid
 | hall_id {data-indent=1} | string | 更多优惠入口；[营销馆创建地址](https://pay.weixin.qq.com/index.php/xphp/cfav_market/hall#/pages/list/list)
 | store_id {data-indent=1} | string | 可用门店id
-| code_display_mode {data-indent=1} | string | code展示模式
+| code_display_mode {data-indent=1} | string | code展示模式<br/>`BARCODE` \| `QRCODE` \| `NOT_SHOW` 枚举值之一
 | display_pattern_info {data-required} | object {data-tooltip="对应PHP的array"} | 样式信息
 | description {data-indent=1} | string | 使用须知
 | merchant_logo_url {data-indent=1} | string | 商户logo

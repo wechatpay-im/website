@@ -109,8 +109,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-required} | string | 子商户号
 | sub_appid | string | 子商户应用ID
 | sub_openid | string | 子商户公众号下的用户标识
-| user_risk_level | number | 用户分层
-| risk_level_version | number | 分层版本
 
 {.im-table #response}
 

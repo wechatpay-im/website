@@ -123,6 +123,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | transaction_id | string | 卡片关联微信支付订单号
 | card_disabled_time | string | 卡片失效时间
 | card_remark | string | 卡片备注
+| avail_mch_range_id | string | 可用商户范围ID
 
 {.im-table #response}
 

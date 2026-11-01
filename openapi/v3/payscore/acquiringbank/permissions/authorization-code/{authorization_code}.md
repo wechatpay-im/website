@@ -117,6 +117,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid {data-required} | string | 子商户号
 | sub_appid | string | 子商户应用ID
 | channel_id | string | 渠道商商户号
+| user_label | string | 用户标签
 
 {.im-table #response}
 

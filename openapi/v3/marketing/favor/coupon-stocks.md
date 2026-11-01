@@ -24,45 +24,35 @@ description: 通过调用此接口可创建代金券批次，包括预充值&免
 | stock_type {data-required data-indent=1} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
 | comment {data-indent=1} | string | 批次备注
 | belong_merchant {data-required data-indent=1} | string | 归属商户号
-| pattern_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 样式信息
-| description {data-indent=2} | string | 使用说明
-| merchant_logo {data-indent=2} | string | 商户logo
-| merchant_name {data-indent=2} | string | 商户名称
-| background_color {data-indent=2} | string | 背景颜色<br/>`Color010` \| `Color020` \| `Color030` \| `Color040` \| `Color050` \| `Color060` \| `Color070` \| `Color080` \| `Color090` \| `Color100` 枚举值之一
-| coupon_image {data-indent=2} | string | 券详情图片
+| pattern_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | jump_target {data-indent=2} | string | 卡包跳转目标<br/>`PAYMENT_CODE` \| `MINI_PROGRAM` \| `DEFAULT_PAGE` 枚举值之一
 | mini_program_appid {data-indent=2} | string | 小程序appid
 | mini_program_path {data-indent=2} | string | 小程序path
-| coupon_use_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 核销规则
-| coupon_available_time {data-required data-indent=2} | object {data-tooltip="对应PHP的array"} | 券可核销时间
-| available_begin_time {data-indent=3} | string | 开始时间
-| available_end_time {data-indent=3} | string | 结束时间
+| description {data-required data-indent=2} | string | 使用说明
+| merchant_logo {data-indent=2} | string | 商户logo
+| merchant_name {data-indent=2} | string | 品牌名称
+| background_color {data-indent=2} | string | 背景颜色<br/>`COLOR010` \| `COLOR020` \| `COLOR030` \| `COLOR040` \| `COLOR050` \| `COLOR060` \| `COLOR070` \| `COLOR080` \| `COLOR081` \| `COLOR082` \| `COLOR090` \| `COLOR100` \| `COLOR101` \| `COLOR102` 枚举值之一
+| coupon_image {data-indent=2} | string | 券详情图片
+| coupon_use_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 
+| combine_use {data-indent=2} | boolean | 是否可叠加其他优惠
+| coupon_available_time {data-indent=2} | object {data-tooltip="对应PHP的array"} | 券生效时间
 | fix_available_time {data-indent=3} | object {data-tooltip="对应PHP的array"} | 固定时间段可用
-| available_week_day {data-indent=4} | integer[] | 可用星期数(0代表周日，1代表周一，以此类推)<br/>`0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6` 枚举值之一
-| begin_time {data-indent=4} | integer | 当天开始时间
+| available_week_day {data-required data-indent=4} | integer[] | 可用星期数<br/>`0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6` 枚举值之一
+| begin_time {data-required data-indent=4} | integer | 当天开始时间
 | end_time {data-indent=4} | integer | 当天结束时间
 | second_day_available {data-indent=3} | boolean | 领取第二天生效
 | available_time_after_receive {data-indent=3} | integer | 领取后有效时间
 | fixed_normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
 | coupon_amount {data-required data-indent=3} | integer | 面额
 | transaction_minimum {data-required data-indent=3} | integer | 门槛
-| discount_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 折扣券使用规则
-| discount_amount_max {data-indent=3} | integer | 最高折扣金额
-| discount_percent {data-indent=3} | integer | 折扣百分比
-| transaction_minimum {data-indent=3} | integer | 门槛
-| exchange_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 换购券使用规则
-| exchange_price {data-indent=3} | integer | 单品换购价
-| transaction_minimum {data-indent=3} | integer | 消费门槛
 | goods_tag {data-indent=2} | string[] | 订单优惠标记
-| limit_pay {data-indent=2} | string[] | 指定支付方式
-| limit_card {data-indent=2} | object {data-tooltip="对应PHP的array"} | 指定银行卡BIN
-| name {data-indent=3} | string | 银行卡名称
-| bin {data-indent=3} | string[] | 指定卡BIN
-| trade_type {data-indent=2} | string[] | 支付方式<br/>`MICROAPP` \| `APPPAY` \| `PPAY` \| `CARD` \| `FACE` \| `OTHER` 枚举值之一
+| trade_type {data-indent=2} | string[] | 指定支付模式<br/>`MICROAPP` \| `APPPAY` \| `PPAY` \| `CARD` \| `FACE` \| `OTHER` 枚举值之一
 | available_items {data-indent=2} | string[] | 可核销商品编码
 | unavailable_items {data-indent=2} | string[] | 不参与优惠商品编码
-| available_merchants {data-indent=2} | string[] | 可核销商户号
-| combine_use {data-indent=2} | boolean | 是否可叠加其他优惠
+| available_merchants {data-required data-indent=2} | string[] | 可核销商户号
+| limit_card {data-indent=2} | object {data-tooltip="对应PHP的array"} | 指定银行卡BIN
+| name {data-required data-indent=3} | string | 银行卡名字
+| bin {data-required data-indent=3} | string[] | 银行卡BIN
 | out_request_no {data-required data-indent=1} | string | 商户单据号
 | ext_info {data-indent=1} | string | 扩展属性
 
@@ -77,10 +67,10 @@ $instance->v3->marketing->favor->couponStocks->postAsync([
     'available_begin_time' => '2015-05-20T13:29:35.120+08:00',
     'available_end_time'   => '2015-05-20T13:29:35.120+08:00',
     'stock_use_rule'       => [
-      'max_coupons'          => 0,
-      'max_amount'           => 0,
-      'max_amount_by_day'    => 0,
-      'max_coupons_per_user' => 0,
+      'max_coupons'          => 100,
+      'max_amount'           => 5000,
+      'max_amount_by_day'    => 400,
+      'max_coupons_per_user' => 3,
       'natural_person_limit' => true,
       'prevent_api_abuse'    => true,
     ],
@@ -89,53 +79,41 @@ $instance->v3->marketing->favor->couponStocks->postAsync([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'        => '',
-      'merchant_logo'      => '',
-      'merchant_name'      => '',
-      'background_color'   => 'Color010',
-      'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
       'mini_program_appid' => 'wx23232232323',
       'mini_program_path'  => '/path/index/index',
+      'description'        => '微信支付营销代金券',
+      'merchant_logo'      => 'CDN地址',
+      'merchant_name'      => '微信支付',
+      'background_color'   => 'COLOR010',
+      'coupon_image'       => 'https://qpic.cn/xxx',
     ],
     'coupon_use_rule'      => [
+      'combine_use'           => true,
       'coupon_available_time' => [
-        'available_begin_time'         => '',
-        'available_end_time'           => '',
         'fix_available_time'           => [
           'available_week_day' => [0, 1, 2, 3, 4, 5, 6],
-          'begin_time'         => 3600,
-          'end_time'           => 86399,
+          'begin_time'         => 0,
+          'end_time'           => 3600,
         ],
         'second_day_available'         => true,
-        'available_time_after_receive' => 0,
+        'available_time_after_receive' => 7,
       ],
       'fixed_normal_coupon'   => [
-        'coupon_amount'       => 0,
-        'transaction_minimum' => 0,
+        'coupon_amount'       => 100,
+        'transaction_minimum' => 100,
       ],
-      'discount_coupon'       => [
-        'discount_amount_max' => 0,
-        'discount_percent'    => 0,
-        'transaction_minimum' => 0,
-      ],
-      'exchange_coupon'       => [
-        'exchange_price'      => 0,
-        'transaction_minimum' => 0,
-      ],
-      'goods_tag'             => ['123321'],
-      'limit_pay'             => ['ICBC_CREDIT'],
+      'goods_tag'             => ['string'],
+      'trade_type'            => ['MICROAPP'],
+      'available_items'       => ['string'],
+      'unavailable_items'     => ['string'],
+      'available_merchants'   => ['string'],
       'limit_card'            => [
         'name' => '精粹白金',
-        'bin'  => ['62123456'],
+        'bin'  => ['string'],
       ],
-      'trade_type'            => ['MICROAPP'],
-      'available_items'       => ['123321'],
-      'unavailable_items'     => ['789987'],
-      'available_merchants'   => ['9856000'],
-      'combine_use'           => true,
     ],
-    'out_request_no'       => '',
+    'out_request_no'       => 'example_out_request_no',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
   ],
 ])
@@ -152,10 +130,10 @@ $instance->chain('v3/marketing/favor/coupon-stocks')->postAsync([
     'available_begin_time' => '2015-05-20T13:29:35.120+08:00',
     'available_end_time'   => '2015-05-20T13:29:35.120+08:00',
     'stock_use_rule'       => [
-      'max_coupons'          => 0,
-      'max_amount'           => 0,
-      'max_amount_by_day'    => 0,
-      'max_coupons_per_user' => 0,
+      'max_coupons'          => 100,
+      'max_amount'           => 5000,
+      'max_amount_by_day'    => 400,
+      'max_coupons_per_user' => 3,
       'natural_person_limit' => true,
       'prevent_api_abuse'    => true,
     ],
@@ -164,53 +142,41 @@ $instance->chain('v3/marketing/favor/coupon-stocks')->postAsync([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'        => '',
-      'merchant_logo'      => '',
-      'merchant_name'      => '',
-      'background_color'   => 'Color010',
-      'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
       'mini_program_appid' => 'wx23232232323',
       'mini_program_path'  => '/path/index/index',
+      'description'        => '微信支付营销代金券',
+      'merchant_logo'      => 'CDN地址',
+      'merchant_name'      => '微信支付',
+      'background_color'   => 'COLOR010',
+      'coupon_image'       => 'https://qpic.cn/xxx',
     ],
     'coupon_use_rule'      => [
+      'combine_use'           => true,
       'coupon_available_time' => [
-        'available_begin_time'         => '',
-        'available_end_time'           => '',
         'fix_available_time'           => [
           'available_week_day' => [0, 1, 2, 3, 4, 5, 6],
-          'begin_time'         => 3600,
-          'end_time'           => 86399,
+          'begin_time'         => 0,
+          'end_time'           => 3600,
         ],
         'second_day_available'         => true,
-        'available_time_after_receive' => 0,
+        'available_time_after_receive' => 7,
       ],
       'fixed_normal_coupon'   => [
-        'coupon_amount'       => 0,
-        'transaction_minimum' => 0,
+        'coupon_amount'       => 100,
+        'transaction_minimum' => 100,
       ],
-      'discount_coupon'       => [
-        'discount_amount_max' => 0,
-        'discount_percent'    => 0,
-        'transaction_minimum' => 0,
-      ],
-      'exchange_coupon'       => [
-        'exchange_price'      => 0,
-        'transaction_minimum' => 0,
-      ],
-      'goods_tag'             => ['123321'],
-      'limit_pay'             => ['ICBC_CREDIT'],
+      'goods_tag'             => ['string'],
+      'trade_type'            => ['MICROAPP'],
+      'available_items'       => ['string'],
+      'unavailable_items'     => ['string'],
+      'available_merchants'   => ['string'],
       'limit_card'            => [
         'name' => '精粹白金',
-        'bin'  => ['62123456'],
+        'bin'  => ['string'],
       ],
-      'trade_type'            => ['MICROAPP'],
-      'available_items'       => ['123321'],
-      'unavailable_items'     => ['789987'],
-      'available_merchants'   => ['9856000'],
-      'combine_use'           => true,
     ],
-    'out_request_no'       => '',
+    'out_request_no'       => 'example_out_request_no',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
   ],
 ])
@@ -227,10 +193,10 @@ $instance['v3/marketing/favor/coupon-stocks']->postAsync([
     'available_begin_time' => '2015-05-20T13:29:35.120+08:00',
     'available_end_time'   => '2015-05-20T13:29:35.120+08:00',
     'stock_use_rule'       => [
-      'max_coupons'          => 0,
-      'max_amount'           => 0,
-      'max_amount_by_day'    => 0,
-      'max_coupons_per_user' => 0,
+      'max_coupons'          => 100,
+      'max_amount'           => 5000,
+      'max_amount_by_day'    => 400,
+      'max_coupons_per_user' => 3,
       'natural_person_limit' => true,
       'prevent_api_abuse'    => true,
     ],
@@ -239,53 +205,41 @@ $instance['v3/marketing/favor/coupon-stocks']->postAsync([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'        => '',
-      'merchant_logo'      => '',
-      'merchant_name'      => '',
-      'background_color'   => 'Color010',
-      'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
       'mini_program_appid' => 'wx23232232323',
       'mini_program_path'  => '/path/index/index',
+      'description'        => '微信支付营销代金券',
+      'merchant_logo'      => 'CDN地址',
+      'merchant_name'      => '微信支付',
+      'background_color'   => 'COLOR010',
+      'coupon_image'       => 'https://qpic.cn/xxx',
     ],
     'coupon_use_rule'      => [
+      'combine_use'           => true,
       'coupon_available_time' => [
-        'available_begin_time'         => '',
-        'available_end_time'           => '',
         'fix_available_time'           => [
           'available_week_day' => [0, 1, 2, 3, 4, 5, 6],
-          'begin_time'         => 3600,
-          'end_time'           => 86399,
+          'begin_time'         => 0,
+          'end_time'           => 3600,
         ],
         'second_day_available'         => true,
-        'available_time_after_receive' => 0,
+        'available_time_after_receive' => 7,
       ],
       'fixed_normal_coupon'   => [
-        'coupon_amount'       => 0,
-        'transaction_minimum' => 0,
+        'coupon_amount'       => 100,
+        'transaction_minimum' => 100,
       ],
-      'discount_coupon'       => [
-        'discount_amount_max' => 0,
-        'discount_percent'    => 0,
-        'transaction_minimum' => 0,
-      ],
-      'exchange_coupon'       => [
-        'exchange_price'      => 0,
-        'transaction_minimum' => 0,
-      ],
-      'goods_tag'             => ['123321'],
-      'limit_pay'             => ['ICBC_CREDIT'],
+      'goods_tag'             => ['string'],
+      'trade_type'            => ['MICROAPP'],
+      'available_items'       => ['string'],
+      'unavailable_items'     => ['string'],
+      'available_merchants'   => ['string'],
       'limit_card'            => [
         'name' => '精粹白金',
-        'bin'  => ['62123456'],
+        'bin'  => ['string'],
       ],
-      'trade_type'            => ['MICROAPP'],
-      'available_items'       => ['123321'],
-      'unavailable_items'     => ['789987'],
-      'available_merchants'   => ['9856000'],
-      'combine_use'           => true,
     ],
-    'out_request_no'       => '',
+    'out_request_no'       => 'example_out_request_no',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
   ],
 ])
@@ -302,10 +256,10 @@ $response = $instance->v3->marketing->favor->couponStocks->post([
     'available_begin_time' => '2015-05-20T13:29:35.120+08:00',
     'available_end_time'   => '2015-05-20T13:29:35.120+08:00',
     'stock_use_rule'       => [
-      'max_coupons'          => 0,
-      'max_amount'           => 0,
-      'max_amount_by_day'    => 0,
-      'max_coupons_per_user' => 0,
+      'max_coupons'          => 100,
+      'max_amount'           => 5000,
+      'max_amount_by_day'    => 400,
+      'max_coupons_per_user' => 3,
       'natural_person_limit' => true,
       'prevent_api_abuse'    => true,
     ],
@@ -314,53 +268,41 @@ $response = $instance->v3->marketing->favor->couponStocks->post([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'        => '',
-      'merchant_logo'      => '',
-      'merchant_name'      => '',
-      'background_color'   => 'Color010',
-      'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
       'mini_program_appid' => 'wx23232232323',
       'mini_program_path'  => '/path/index/index',
+      'description'        => '微信支付营销代金券',
+      'merchant_logo'      => 'CDN地址',
+      'merchant_name'      => '微信支付',
+      'background_color'   => 'COLOR010',
+      'coupon_image'       => 'https://qpic.cn/xxx',
     ],
     'coupon_use_rule'      => [
+      'combine_use'           => true,
       'coupon_available_time' => [
-        'available_begin_time'         => '',
-        'available_end_time'           => '',
         'fix_available_time'           => [
           'available_week_day' => [0, 1, 2, 3, 4, 5, 6],
-          'begin_time'         => 3600,
-          'end_time'           => 86399,
+          'begin_time'         => 0,
+          'end_time'           => 3600,
         ],
         'second_day_available'         => true,
-        'available_time_after_receive' => 0,
+        'available_time_after_receive' => 7,
       ],
       'fixed_normal_coupon'   => [
-        'coupon_amount'       => 0,
-        'transaction_minimum' => 0,
+        'coupon_amount'       => 100,
+        'transaction_minimum' => 100,
       ],
-      'discount_coupon'       => [
-        'discount_amount_max' => 0,
-        'discount_percent'    => 0,
-        'transaction_minimum' => 0,
-      ],
-      'exchange_coupon'       => [
-        'exchange_price'      => 0,
-        'transaction_minimum' => 0,
-      ],
-      'goods_tag'             => ['123321'],
-      'limit_pay'             => ['ICBC_CREDIT'],
+      'goods_tag'             => ['string'],
+      'trade_type'            => ['MICROAPP'],
+      'available_items'       => ['string'],
+      'unavailable_items'     => ['string'],
+      'available_merchants'   => ['string'],
       'limit_card'            => [
         'name' => '精粹白金',
-        'bin'  => ['62123456'],
+        'bin'  => ['string'],
       ],
-      'trade_type'            => ['MICROAPP'],
-      'available_items'       => ['123321'],
-      'unavailable_items'     => ['789987'],
-      'available_merchants'   => ['9856000'],
-      'combine_use'           => true,
     ],
-    'out_request_no'       => '',
+    'out_request_no'       => 'example_out_request_no',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
   ],
 ]);
@@ -374,10 +316,10 @@ $response = $instance->chain('v3/marketing/favor/coupon-stocks')->post([
     'available_begin_time' => '2015-05-20T13:29:35.120+08:00',
     'available_end_time'   => '2015-05-20T13:29:35.120+08:00',
     'stock_use_rule'       => [
-      'max_coupons'          => 0,
-      'max_amount'           => 0,
-      'max_amount_by_day'    => 0,
-      'max_coupons_per_user' => 0,
+      'max_coupons'          => 100,
+      'max_amount'           => 5000,
+      'max_amount_by_day'    => 400,
+      'max_coupons_per_user' => 3,
       'natural_person_limit' => true,
       'prevent_api_abuse'    => true,
     ],
@@ -386,53 +328,41 @@ $response = $instance->chain('v3/marketing/favor/coupon-stocks')->post([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'        => '',
-      'merchant_logo'      => '',
-      'merchant_name'      => '',
-      'background_color'   => 'Color010',
-      'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
       'mini_program_appid' => 'wx23232232323',
       'mini_program_path'  => '/path/index/index',
+      'description'        => '微信支付营销代金券',
+      'merchant_logo'      => 'CDN地址',
+      'merchant_name'      => '微信支付',
+      'background_color'   => 'COLOR010',
+      'coupon_image'       => 'https://qpic.cn/xxx',
     ],
     'coupon_use_rule'      => [
+      'combine_use'           => true,
       'coupon_available_time' => [
-        'available_begin_time'         => '',
-        'available_end_time'           => '',
         'fix_available_time'           => [
           'available_week_day' => [0, 1, 2, 3, 4, 5, 6],
-          'begin_time'         => 3600,
-          'end_time'           => 86399,
+          'begin_time'         => 0,
+          'end_time'           => 3600,
         ],
         'second_day_available'         => true,
-        'available_time_after_receive' => 0,
+        'available_time_after_receive' => 7,
       ],
       'fixed_normal_coupon'   => [
-        'coupon_amount'       => 0,
-        'transaction_minimum' => 0,
+        'coupon_amount'       => 100,
+        'transaction_minimum' => 100,
       ],
-      'discount_coupon'       => [
-        'discount_amount_max' => 0,
-        'discount_percent'    => 0,
-        'transaction_minimum' => 0,
-      ],
-      'exchange_coupon'       => [
-        'exchange_price'      => 0,
-        'transaction_minimum' => 0,
-      ],
-      'goods_tag'             => ['123321'],
-      'limit_pay'             => ['ICBC_CREDIT'],
+      'goods_tag'             => ['string'],
+      'trade_type'            => ['MICROAPP'],
+      'available_items'       => ['string'],
+      'unavailable_items'     => ['string'],
+      'available_merchants'   => ['string'],
       'limit_card'            => [
         'name' => '精粹白金',
-        'bin'  => ['62123456'],
+        'bin'  => ['string'],
       ],
-      'trade_type'            => ['MICROAPP'],
-      'available_items'       => ['123321'],
-      'unavailable_items'     => ['789987'],
-      'available_merchants'   => ['9856000'],
-      'combine_use'           => true,
     ],
-    'out_request_no'       => '',
+    'out_request_no'       => 'example_out_request_no',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
   ],
 ]);
@@ -446,10 +376,10 @@ $response = $instance['v3/marketing/favor/coupon-stocks']->post([
     'available_begin_time' => '2015-05-20T13:29:35.120+08:00',
     'available_end_time'   => '2015-05-20T13:29:35.120+08:00',
     'stock_use_rule'       => [
-      'max_coupons'          => 0,
-      'max_amount'           => 0,
-      'max_amount_by_day'    => 0,
-      'max_coupons_per_user' => 0,
+      'max_coupons'          => 100,
+      'max_amount'           => 5000,
+      'max_amount_by_day'    => 400,
+      'max_coupons_per_user' => 3,
       'natural_person_limit' => true,
       'prevent_api_abuse'    => true,
     ],
@@ -458,53 +388,41 @@ $response = $instance['v3/marketing/favor/coupon-stocks']->post([
     'comment'              => '零售批次',
     'belong_merchant'      => '98568865',
     'pattern_info'         => [
-      'description'        => '',
-      'merchant_logo'      => '',
-      'merchant_name'      => '',
-      'background_color'   => 'Color010',
-      'coupon_image'       => '',
       'jump_target'        => 'PAYMENT_CODE',
       'mini_program_appid' => 'wx23232232323',
       'mini_program_path'  => '/path/index/index',
+      'description'        => '微信支付营销代金券',
+      'merchant_logo'      => 'CDN地址',
+      'merchant_name'      => '微信支付',
+      'background_color'   => 'COLOR010',
+      'coupon_image'       => 'https://qpic.cn/xxx',
     ],
     'coupon_use_rule'      => [
+      'combine_use'           => true,
       'coupon_available_time' => [
-        'available_begin_time'         => '',
-        'available_end_time'           => '',
         'fix_available_time'           => [
           'available_week_day' => [0, 1, 2, 3, 4, 5, 6],
-          'begin_time'         => 3600,
-          'end_time'           => 86399,
+          'begin_time'         => 0,
+          'end_time'           => 3600,
         ],
         'second_day_available'         => true,
-        'available_time_after_receive' => 0,
+        'available_time_after_receive' => 7,
       ],
       'fixed_normal_coupon'   => [
-        'coupon_amount'       => 0,
-        'transaction_minimum' => 0,
+        'coupon_amount'       => 100,
+        'transaction_minimum' => 100,
       ],
-      'discount_coupon'       => [
-        'discount_amount_max' => 0,
-        'discount_percent'    => 0,
-        'transaction_minimum' => 0,
-      ],
-      'exchange_coupon'       => [
-        'exchange_price'      => 0,
-        'transaction_minimum' => 0,
-      ],
-      'goods_tag'             => ['123321'],
-      'limit_pay'             => ['ICBC_CREDIT'],
+      'goods_tag'             => ['string'],
+      'trade_type'            => ['MICROAPP'],
+      'available_items'       => ['string'],
+      'unavailable_items'     => ['string'],
+      'available_merchants'   => ['string'],
       'limit_card'            => [
         'name' => '精粹白金',
-        'bin'  => ['62123456'],
+        'bin'  => ['string'],
       ],
-      'trade_type'            => ['MICROAPP'],
-      'available_items'       => ['123321'],
-      'unavailable_items'     => ['789987'],
-      'available_merchants'   => ['9856000'],
-      'combine_use'           => true,
     ],
-    'out_request_no'       => '',
+    'out_request_no'       => 'example_out_request_no',
     'ext_info'             => '{"exinfo1":"1234","exinfo2":"3456"}',
   ],
 ]);

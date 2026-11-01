@@ -120,7 +120,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | batch_type {data-required data-indent=1} | string | 批次类型
 | batch_name {data-required data-indent=1} | string | 批次名称
 | batch_remark {data-required data-indent=1} | string | 批次备注
-| close_reason {data-indent=1} | string | 批次关闭原因
+| close_reason {data-indent=1} | string | 批次关闭原因<br/>`OVERDUE_CLOSE` \| `TRANSFER_SCENE_INVALID` \| `PAYER_ACCOUNT_ABNORMAL` 枚举值之一
 | total_amount {data-required data-indent=1} | integer | 转账总金额
 | total_num {data-required data-indent=1} | integer | 转账总笔数
 | create_time {data-indent=1} | string | 批次创建时间

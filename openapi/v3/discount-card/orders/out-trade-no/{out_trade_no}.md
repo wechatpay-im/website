@@ -92,7 +92,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | estimated_reward_amount {data-required} | integer | 预估奖励金额
 | online_instructions | string | 线上使用说明
 | offline_instructions | string | 线下使用说明
-| state {data-required} | string | 订单状态
+| state {data-required} | string | 订单状态<br/>`CREATED` \| `SETTLING` \| `CHARGING` \| `CHARGED` \| `NO_CHARGE` \| `REVOKED` 枚举值之一
 | total_amount | integer | 总金额
 | deduction_amount | integer | 扣除金额
 | settlement_amount | integer | 结算金额
@@ -104,7 +104,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | name {data-indent=1} | string | 目标名称
 | unit {data-indent=1} | string | 目标单位
 | performance_description {data-required data-indent=1} | string | 履约描述
-| performance_type {data-required data-indent=1} | string | 履约类型
+| performance_type {data-required data-indent=1} | string | 履约类型<br/>`INCREASE` \| `DECREASE` 枚举值之一
 | count {data-required data-indent=1} | integer | 目标数量
 | performance_time {data-required data-indent=1} | string | 履约时间
 | remark {data-indent=1} | string | 备注说明
@@ -114,7 +114,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | name {data-indent=1} | string | 奖励名称
 | unit {data-indent=1} | string | 奖励单位
 | description {data-required data-indent=1} | string | 奖励描述
-| reward_type {data-required data-indent=1} | string | 奖励类型
+| reward_type {data-required data-indent=1} | string | 奖励类型<br/>`INCREASE` \| `DECREASE` 枚举值之一
 | count {data-required data-indent=1} | integer | 奖励数量
 | amount {data-required data-indent=1} | integer | 奖励金额
 | reward_time {data-required data-indent=1} | string | 奖励时间

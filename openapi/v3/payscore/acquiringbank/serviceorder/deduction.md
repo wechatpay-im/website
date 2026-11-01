@@ -25,9 +25,9 @@ description: 前置条件：服务订单状态为“已完成”或者“进行�
 $instance->v3->payscore->acquiringbank->serviceorder->deduction->getAsync([
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
-    'appid'        => '',
+    'appid'        => 'wxd678efh567hg6787',
     'sub_mchid'    => '1900000109',
-    'sub_appid'    => '',
+    'sub_appid'    => 'wxd678efh567hg6999',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
   ],
@@ -42,9 +42,9 @@ $instance->v3->payscore->acquiringbank->serviceorder->deduction->getAsync([
 $instance->chain('v3/payscore/acquiringbank/serviceorder/deduction')->getAsync([
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
-    'appid'        => '',
+    'appid'        => 'wxd678efh567hg6787',
     'sub_mchid'    => '1900000109',
-    'sub_appid'    => '',
+    'sub_appid'    => 'wxd678efh567hg6999',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
   ],
@@ -59,9 +59,9 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/deduction')->getAsync([
 $instance['v3/payscore/acquiringbank/serviceorder/deduction']->getAsync([
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
-    'appid'        => '',
+    'appid'        => 'wxd678efh567hg6787',
     'sub_mchid'    => '1900000109',
-    'sub_appid'    => '',
+    'sub_appid'    => 'wxd678efh567hg6999',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
   ],
@@ -76,9 +76,9 @@ $instance['v3/payscore/acquiringbank/serviceorder/deduction']->getAsync([
 $response = $instance->v3->payscore->acquiringbank->serviceorder->deduction->get([
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
-    'appid'        => '',
+    'appid'        => 'wxd678efh567hg6787',
     'sub_mchid'    => '1900000109',
-    'sub_appid'    => '',
+    'sub_appid'    => 'wxd678efh567hg6999',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
   ],
@@ -90,9 +90,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/deduction')->get([
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
-    'appid'        => '',
+    'appid'        => 'wxd678efh567hg6787',
     'sub_mchid'    => '1900000109',
-    'sub_appid'    => '',
+    'sub_appid'    => 'wxd678efh567hg6999',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
   ],
@@ -104,9 +104,9 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/payscore/acquiringbank/serviceorder/deduction']->get([
   'query' => [
     'service_id'   => '2002000000000558128851361561536',
-    'appid'        => '',
+    'appid'        => 'wxd678efh567hg6787',
     'sub_mchid'    => '1900000109',
-    'sub_appid'    => '',
+    'sub_appid'    => 'wxd678efh567hg6999',
     'channel_id'   => '1230000109',
     'out_order_no' => '1234323JKHDFE1243252',
   ],

@@ -17,7 +17,7 @@ description: 服务商提交申请单后需要修改信息时，或者申请单�
 
 ```php [异步纯链式]
 $instance->v3->apply4subject->applyment->_applyment_id_->cancel->postAsync([
-  'applyment_id' => '',
+  'applyment_id' => '20000011111',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -27,7 +27,7 @@ $instance->v3->apply4subject->applyment->_applyment_id_->cancel->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/apply4subject/applyment/{applyment_id}/cancel')->postAsync([
-  'applyment_id' => '',
+  'applyment_id' => '20000011111',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -37,7 +37,7 @@ $instance->chain('v3/apply4subject/applyment/{applyment_id}/cancel')->postAsync(
 
 ```php [异步属性式]
 $instance['v3/apply4subject/applyment/{applyment_id}/cancel']->postAsync([
-  'applyment_id' => '',
+  'applyment_id' => '20000011111',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r($response->getStatusCode() === 204);
@@ -47,21 +47,21 @@ $instance['v3/apply4subject/applyment/{applyment_id}/cancel']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->apply4subject->applyment->_applyment_id_->cancel->post([
-  'applyment_id' => '',
+  'applyment_id' => '20000011111',
 ]);
 print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/apply4subject/applyment/{applyment_id}/cancel')->post([
-  'applyment_id' => '',
+  'applyment_id' => '20000011111',
 ]);
 print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/apply4subject/applyment/{applyment_id}/cancel']->post([
-  'applyment_id' => '',
+  'applyment_id' => '20000011111',
 ]);
 print_r($response->getStatusCode() === 204);
 ```

@@ -72,9 +72,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | apply_id {data-required} | string | 申请单号
 | out_request_no {data-required} | string | 业务申请编号
-| merchant_code {data-required} | string | 微信支付商户号
 | state {data-required} | string | 申请单状态<br/>`APPLYMENT_STATE_AUDITING` \| `APPLYMENT_STATE_REJECTED` \| `APPLYMENT_STATE_MODIFING` \| `APPLYMENT_STATE_FINISHED` \| `APPLYMENT_STATE_CANCELED` 枚举值之一
 | audit_reject_reason | string | 总体驳回原因
+| sub_mchid {data-required} | string | 二级商户号
 
 {.im-table #response}
 

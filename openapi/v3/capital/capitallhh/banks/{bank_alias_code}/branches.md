@@ -24,7 +24,7 @@ $instance->v3->capital->capitallhh->banks->_bank_alias_code_->branches->getAsync
   'bank_alias_code' => '1000006247',
   'query' => [
     'city_code' => 536,
-    'offset'    => 0,
+    'offset'    => 100,
     'limit'     => 200,
   ],
 ])
@@ -39,7 +39,7 @@ $instance->chain('v3/capital/capitallhh/banks/{bank_alias_code}/branches')->getA
   'bank_alias_code' => '1000006247',
   'query' => [
     'city_code' => 536,
-    'offset'    => 0,
+    'offset'    => 100,
     'limit'     => 200,
   ],
 ])
@@ -54,7 +54,7 @@ $instance['v3/capital/capitallhh/banks/{bank_alias_code}/branches']->getAsync([
   'bank_alias_code' => '1000006247',
   'query' => [
     'city_code' => 536,
-    'offset'    => 0,
+    'offset'    => 100,
     'limit'     => 200,
   ],
 ])
@@ -69,7 +69,7 @@ $response = $instance->v3->capital->capitallhh->banks->_bank_alias_code_->branch
   'bank_alias_code' => '1000006247',
   'query' => [
     'city_code' => 536,
-    'offset'    => 0,
+    'offset'    => 100,
     'limit'     => 200,
   ],
 ]);
@@ -81,7 +81,7 @@ $response = $instance->chain('v3/capital/capitallhh/banks/{bank_alias_code}/bran
   'bank_alias_code' => '1000006247',
   'query' => [
     'city_code' => 536,
-    'offset'    => 0,
+    'offset'    => 100,
     'limit'     => 200,
   ],
 ]);
@@ -93,7 +93,7 @@ $response = $instance['v3/capital/capitallhh/banks/{bank_alias_code}/branches']-
   'bank_alias_code' => '1000006247',
   'query' => [
     'city_code' => 536,
-    'offset'    => 0,
+    'offset'    => 100,
     'limit'     => 200,
   ],
 ]);

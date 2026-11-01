@@ -160,7 +160,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | user_received_account | string | 退款入账账户
 | success_time | string | 退款成功时间
 | create_time {data-required} | string | 退款创建时间
-| status {data-required} | string | 退款状态
+| status {data-required} | string | 退款状态<br/>`SUCCESS` \| `CLOSE` \| `PROCESSING` \| `ABNORMAL` 枚举值之一
 | funds_account | string | 资金账户<br/>`AVAILABLE` \| `UNSETTLED` 枚举值之一
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 金额信息
 | refund {data-required data-indent=1} | number | 退款金额

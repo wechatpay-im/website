@@ -12,7 +12,7 @@
 | transaction_id {data-required data-indent=1} | string | 微信订单号
 | out_order_no {data-required data-indent=1} | string | 商户分账单号
 | receivers {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
-| type {data-required data-indent=2} | string | 分账接收方类型
+| type {data-required data-indent=2} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | receiver_account {data-required data-indent=2} | string | 分账接收方账号
 | amount {data-required data-indent=2} | integer | 分账金额
 | description {data-required data-indent=2} | string | 分账描述
@@ -184,10 +184,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | receivers {data-required} | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | amount {data-required data-indent=1} | integer | 分账金额
 | description {data-required data-indent=1} | string | 分账描述
-| result {data-indent=1} | string | 分账结果
+| result {data-indent=1} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 | finish_time {data-required data-indent=1} | string | 完成时间
-| fail_reason {data-indent=1} | string | 分账失败原因
-| type {data-required data-indent=1} | string | 分账接收方类型
+| fail_reason {data-indent=1} | string | 分账失败原因<br/>`ACCOUNT_ABNORMAL` \| `NO_RELATION` \| `RECEIVER_HIGH_RISK` 枚举值之一
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
 | detail_id {data-required data-indent=1} | string | 分账明细单号
 
@@ -293,14 +293,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | transaction_id {data-required} | string | 微信订单号
 | out_order_no {data-required} | string | 商户分账单号
 | order_id {data-required} | string | 微信分账单号
-| status | string | 分账单状态
+| status | string | 分账单状态<br/>`PROCESSING` \| `FINISHED` 枚举值之一
 | receivers | object[] {data-tooltip="对应PHP的array"} | 分账接收方列表
 | amount {data-required data-indent=1} | integer | 分账金额
 | description {data-required data-indent=1} | string | 分账描述
-| result {data-indent=1} | string | 分账结果
+| result {data-indent=1} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 | finish_time {data-required data-indent=1} | string | 完成时间
-| fail_reason {data-indent=1} | string | 分账失败原因
-| type {data-required data-indent=1} | string | 分账接收方类型
+| fail_reason {data-indent=1} | string | 分账失败原因<br/>`ACCOUNT_ABNORMAL` \| `NO_RELATION` \| `RECEIVER_HIGH_RISK` 枚举值之一
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | receiver_account {data-required data-indent=1} | string | 分账接收方账号
 | detail_id {data-required data-indent=1} | string | 分账明细单号
 | finish_amount | integer | 分账完结的分账金额，单位为分， 仅当查询分账完结的执行结果时，存在本字段。

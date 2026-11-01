@@ -97,7 +97,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | deputy_license {data-required} | string | 副班司机资格证号
 | region_id {data-required} | integer | 行政区划代码
 | support_invoice {data-required} | boolean | 是否支持开票
-| taxi_state {data-required} | string | 出租车状态
+| taxi_state {data-required} | string | 出租车状态<br/>`IN_OPERATION` \| `OUT_OPERATION` 枚举值之一
 
 {.im-table #response}
 

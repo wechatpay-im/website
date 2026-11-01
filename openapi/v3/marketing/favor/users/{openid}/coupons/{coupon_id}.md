@@ -105,8 +105,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | description | string | 使用说明
 | create_time | string | 领券时间
 | coupon_type | string | 券类型<br/>`NORMAL` \| `CUT_TO` 枚举值之一
-| start_time | string | 激活批次的时间
-| stop_time | string | 终止批次的时间
 | singleitem | boolean | 是否单品优惠
 | cut_to_message | object {data-tooltip="对应PHP的array"} | 减至批次特定信息
 | single_price_max {data-indent=1} | integer | 可用优惠的商品最高单价
@@ -116,15 +114,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | normal_coupon_information | object {data-tooltip="对应PHP的array"} | 固定面额满减券使用规则
 | coupon_amount {data-required data-indent=1} | integer | 面额
 | transaction_minimum {data-required data-indent=1} | integer | 门槛
-| consume_information | object {data-tooltip="对应PHP的array"} | 已实扣代金券核销信息
-| consume_time {data-indent=1} | string | 核销时间
-| consume_mchid {data-indent=1} | string | 核销商户号
-| transaction_id {data-indent=1} | string | 核销商户号
-| goods_detail {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 单品信息
-| goods_id {data-indent=2} | string | 商品编码
-| quantity {data-indent=2} | integer | 商品数量
-| price {data-indent=2} | integer | 商品价格
-| discount_amount {data-indent=2} | integer | 商品优惠金额
 | available_balance | number | 剩余金额
 | business_type | string | 业务类型<br/>`MULTIUSE` 枚举值
 | no_cash {data-required} | boolean | 是否无资金流

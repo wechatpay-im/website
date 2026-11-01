@@ -67,7 +67,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| application_state {data-required} | string | 申请单状态
+| application_state {data-required} | string | 申请单状态<br/>`APPLICATION_STATE_AUDITING` \| `APPLICATION_STATE_PASSED` \| `APPLICATION_STATE_REJECTED` 枚举值之一
 | sub_mchid {data-required} | string | 从业机构特约商户号
 | reject_parameter | string | 驳回参数
 | reject_reason | string | 驳回原因

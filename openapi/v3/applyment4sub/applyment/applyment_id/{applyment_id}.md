@@ -17,7 +17,7 @@ description: 通过申请单号查询申请状态
 
 ```php [异步纯链式]
 $instance->v3->applyment4sub->applyment->applyment_id->_applyment_id_->getAsync([
-  'applyment_id' => '',
+  'applyment_id' => '2000001234567890',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -27,7 +27,7 @@ $instance->v3->applyment4sub->applyment->applyment_id->_applyment_id_->getAsync(
 
 ```php [异步声明式]
 $instance->chain('v3/applyment4sub/applyment/applyment_id/{applyment_id}')->getAsync([
-  'applyment_id' => '',
+  'applyment_id' => '2000001234567890',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -37,7 +37,7 @@ $instance->chain('v3/applyment4sub/applyment/applyment_id/{applyment_id}')->getA
 
 ```php [异步属性式]
 $instance['v3/applyment4sub/applyment/applyment_id/{applyment_id}']->getAsync([
-  'applyment_id' => '',
+  'applyment_id' => '2000001234567890',
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
   print_r(json_decode((string) $response->getBody(), true));
@@ -47,21 +47,21 @@ $instance['v3/applyment4sub/applyment/applyment_id/{applyment_id}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->applyment4sub->applyment->applyment_id->_applyment_id_->get([
-  'applyment_id' => '',
+  'applyment_id' => '2000001234567890',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/applyment4sub/applyment/applyment_id/{applyment_id}')->get([
-  'applyment_id' => '',
+  'applyment_id' => '2000001234567890',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/applyment4sub/applyment/applyment_id/{applyment_id}']->get([
-  'applyment_id' => '',
+  'applyment_id' => '2000001234567890',
 ]);
 print_r(json_decode((string) $response->getBody(), true));
 ```

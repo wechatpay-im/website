@@ -70,7 +70,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| applyment_state {data-required} | string | 申请状态
+| applyment_state {data-required} | string | 申请状态<br/>`CHECKING` \| `ACCOUNT_NEED_VERIFY` \| `AUDITING` \| `REJECTED` \| `NEED_SIGN` \| `FINISH` \| `FROZEN` 枚举值之一
 | applyment_state_desc {data-required} | string | 申请状态描述
 | sign_url | string | 签约链接
 | sub_mchid | string | 电商平台二级商户号

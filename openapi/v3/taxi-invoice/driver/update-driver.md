@@ -223,7 +223,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | driver_photo | object {data-tooltip="对应PHP的array"} | 司机头像
 | photo_type {data-indent=1} | string | 照片类型
 | photo_digest {data-indent=1} | object {data-tooltip="对应PHP的array"} | 司机头像摘要
-| hash_type {data-indent=2} | string | 哈希类型
+| hash_type {data-indent=2} | string | 哈希类型<br/>`MD5` 枚举值
 | hash_value {data-indent=2} | string | 哈希值
 | photo_url {data-indent=1} | string | 头像url
 | photo_icon {data-indent=1} | string | 头像icon

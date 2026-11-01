@@ -105,13 +105,13 @@ print_r(json_decode((string) $response->getBody(), true));
 | plan_id {data-required} | number | 委托代扣模板ID
 | out_contract_code {data-required} | string | 商户签约协议号
 | contract_display_account {data-required} | string | 用户账户展示名称
-| contract_state {data-required} | string | 委托代扣协议状态
+| contract_state {data-required} | string | 委托代扣协议状态<br/>`SIGNED` \| `TERMINATED` \| `SIGN_FAILED` \| `TO_BE_RENEWED` 枚举值之一
 | contract_signed_time | string | 协议签署时间
 | contract_expired_time | string | 协议到期时间
 | sp_openid {data-required} | string | 用户OpenID
 | sub_openid | string | 子商户AppID对应的用户OpenID
 | contract_terminate_info | object {data-tooltip="对应PHP的array"} | 协议解约信息
-| contract_termination_mode {data-required data-indent=1} | string | 协议解约方式
+| contract_termination_mode {data-required data-indent=1} | string | 协议解约方式<br/>`USER_TERMINATE` \| `MCH_API_TERMINATE` \| `WEPAY_WEB_TERMINATE` \| `CUSTOMER_SERVICE_TERMINATE` \| `SYSTEM_TERMINATE` 枚举值之一
 | contract_terminated_time {data-required data-indent=1} | string | 协议解约时间
 | contract_termination_remark {data-indent=1} | string | 解约备注
 | out_user_code | string | 商户侧用户标识
@@ -119,14 +119,14 @@ print_r(json_decode((string) $response->getBody(), true));
 | estimated_deduct_date {data-required data-indent=1} | string | 预计扣费的日期
 | estimated_deduct_amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 预计的扣费金额
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
-| schedule_state {data-required data-indent=1} | string | 扣费预约状态
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
+| schedule_state {data-required data-indent=1} | string | 扣费预约状态<br/>`NO_SCHEDULED` \| `SCHEDULED` \| `PAID` \| `EXPIRED` 枚举值之一
 | scheduled_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | deduct_amount {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际扣费金额
 | total {data-required data-indent=2} | number | 金额
-| currency {data-indent=2} | string | 货币类型
+| currency {data-indent=2} | string | 货币类型<br/>`CNY` 枚举值
 | deduct_date {data-indent=1} | string | 实际扣费的日期
 
 {.im-table #response}

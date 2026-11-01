@@ -30,10 +30,8 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 | profit_sharing {data-indent=3} | boolean | 是否指定分账
 | subsidy_amount {data-indent=3} | integer | 补差金额
 | sub_appid {data-indent=2} | string | 子商户应用ID
-| time_start {data-indent=1} | string | 交易起始时间
 | time_expire {data-indent=1} | string | 交易结束时间
 | notify_url {data-required data-indent=1} | string | 通知地址
-| limit_pay {data-indent=1} | string[] | 指定支付方式<br/>`no_balance` \| `no_debit` \| `balance_only` 枚举值之一
 | combine_payer_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付者
 | openid {data-indent=2} | string | 用户标识
 | sub_openid {data-indent=2} | string | 用户子标识
@@ -75,10 +73,8 @@ $instance->v3->combineTransactions->native->postAsync([
       ],
       'sub_appid'    => 'wxd678efh567hg6999',
     ],],
-    'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['no_balance'],
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -126,10 +122,8 @@ $instance->chain('v3/combine-transactions/native')->postAsync([
       ],
       'sub_appid'    => 'wxd678efh567hg6999',
     ],],
-    'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['no_balance'],
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -177,10 +171,8 @@ $instance['v3/combine-transactions/native']->postAsync([
       ],
       'sub_appid'    => 'wxd678efh567hg6999',
     ],],
-    'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['no_balance'],
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -228,10 +220,8 @@ $response = $instance->v3->combineTransactions->native->post([
       ],
       'sub_appid'    => 'wxd678efh567hg6999',
     ],],
-    'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['no_balance'],
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -276,10 +266,8 @@ $response = $instance->chain('v3/combine-transactions/native')->post([
       ],
       'sub_appid'    => 'wxd678efh567hg6999',
     ],],
-    'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['no_balance'],
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
@@ -324,10 +312,8 @@ $response = $instance['v3/combine-transactions/native']->post([
       ],
       'sub_appid'    => 'wxd678efh567hg6999',
     ],],
-    'time_start'           => '2019-12-31T15:59:60+08:00',
     'time_expire'          => '2019-12-31T15:59:60+08:00',
     'notify_url'           => 'https://yourapp.com/notify',
-    'limit_pay'            => ['no_balance'],
     'combine_payer_info'   => [
       'openid'     => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
       'sub_openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',

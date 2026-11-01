@@ -118,7 +118,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_appid | string | 特约商户appid
 | batch_status {data-required} | string | 批次状态
 | batch_type {data-required} | string | 批次类型
-| authorization_type {data-required} | string | 特约商户授权类型
+| authorization_type {data-required} | string | 特约商户授权类型<br/>`INFORMATION_AUTHORIZATION_TYPE` \| `FUND_AUTHORIZATION_TYPE` \| `INFORMATION_AND_FUND_AUTHORIZATION_TYPE` 枚举值之一
 | batch_name {data-required} | string | 批次名称
 | batch_remark {data-required} | string | 批次备注
 | close_reason | string | 批次关闭原因<br/>`MERCHANT_REVOCATION` \| `OVERDUE_CLOSE` \| `PAYER_ACCOUNT_ABNORMAL` 枚举值之一

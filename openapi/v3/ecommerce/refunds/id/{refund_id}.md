@@ -101,11 +101,11 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_refund_no {data-required} | string | 商户退款单号
 | transaction_id {data-required} | string | 微信订单号
 | out_trade_no {data-required} | string | 商户订单号
-| channel | string | 退款渠道
+| channel | string | 退款渠道<br/>`ORIGINAL` \| `BALANCE` \| `OTHER_BALANCE` \| `OTHER_BANKCARD` 枚举值之一
 | user_received_account | string | 退款入账账户
 | success_time | string | 退款成功时间
 | create_time {data-required} | string | 退款创建时间
-| status {data-required} | string | 退款状态
+| status {data-required} | string | 退款状态<br/>`SUCCESS` \| `CLOSE` \| `PROCESSING` \| `ABNORMAL` 枚举值之一
 | amount {data-required} | object {data-tooltip="对应PHP的array"} | 退款金额信息
 | refund {data-required data-indent=1} | integer | 退款金额
 | from {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 退款出资账户及金额
@@ -117,8 +117,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | advance {data-indent=1} | number | 垫付金额
 | promotion_detail | object[] {data-tooltip="对应PHP的array"} | 营销详情
 | promotion_id {data-required data-indent=1} | string | 券ID
-| scope {data-required data-indent=1} | string | 优惠范围
-| type {data-required data-indent=1} | string | 优惠类型
+| scope {data-required data-indent=1} | string | 优惠范围<br/>`GLOBAL` \| `SINGLE` 枚举值之一
+| type {data-required data-indent=1} | string | 优惠类型<br/>`COUPON` \| `DISCOUNT` 枚举值之一
 | amount {data-required data-indent=1} | integer | 优惠券面额
 | refund_amount {data-required data-indent=1} | integer | 优惠退款金额
 | refund_account | string | 退款出资商户<br/>`REFUND_SOURCE_SUB_MERCHANT` \| `REFUND_SOURCE_PARTNER_ADVANCE` 枚举值之一

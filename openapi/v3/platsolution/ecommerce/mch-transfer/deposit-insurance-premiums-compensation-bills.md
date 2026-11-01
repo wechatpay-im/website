@@ -180,7 +180,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | --- | --- | ---
 | sp_mchid {data-required} | string | 服务商商户号
 | sub_mchid | string | 二级商户号
-| sub_appid | string | 二级商户AppID
 | receiver_detail {data-required} | object {data-tooltip="对应PHP的array"} | 转账接收方信息
 | receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 转账接收者信息
 | type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` 枚举值
@@ -188,6 +187,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | mchid {data-indent=3} | string | 商户号
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 赔付单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
+| type {data-required data-indent=3} | string | 赔付单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
 | out_bill_no {data-required} | string | 商户单号
 | amount | number | 赔付金额
 | transfer_remark {data-required} | string | 赔付原因
@@ -196,6 +196,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | accept_time {data-required} | string | 受理时间
 | success_time | string | 成功时间
 | sponsor_mchid | string | 出资商户号
+| sp_appid | string | 公众账号ID
 
 {.im-table #response}
 

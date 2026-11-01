@@ -21,6 +21,11 @@ description: 该接口主要为商户提供合作关系列表的查询能力。
 | stock_id {data-indent=2} | string | 授权批次ID
 | limit {data-indent=1} | integer | 分页大小
 | offset {data-indent=1} | integer | 分页页码
+| partner.type {data-required data-indent=1} | string | 合作方类别<br/>`APPID` \| `MERCHANT` 枚举值之一
+| partner.appid {data-indent=1} | string | 合作方Appid
+| partner.merchant_id {data-indent=1} | string | 合作方商户ID
+| authorized_data.business_type {data-required data-indent=1} | string | 授权业务类别<br/>`FAVOR_STOCK` \| `BUSIFAVOR_STOCK` 枚举值之一
+| authorized_data.stock_id {data-indent=1} | string | 授权批次ID
 
 {.im-table #request}
 
@@ -29,17 +34,22 @@ description: 该接口主要为商户提供合作关系列表的查询能力。
 ```php [异步纯链式]
 $instance->v3->marketing->partnerships->getAsync([
   'query' => [
-    'partner'         => \json_encode([
+    'partner'                       => \json_encode([
       'type'        => 'APPID',
       'appid'       => 'wx4e1916a585d1f4e9',
       'merchant_id' => '2480029552',
     ]),
-    'authorized_data' => \json_encode([
+    'authorized_data'               => \json_encode([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 5,
-    'offset'          => 10,
+    'limit'                         => 5,
+    'offset'                        => 10,
+    'partner.type'                  => 'APPID',
+    'partner.appid'                 => 'wx4e1916a585d1f4e9',
+    'partner.merchant_id'           => '2480029552',
+    'authorized_data.business_type' => 'FAVOR_STOCK',
+    'authorized_data.stock_id'      => '2433405',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -51,17 +61,22 @@ $instance->v3->marketing->partnerships->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/marketing/partnerships')->getAsync([
   'query' => [
-    'partner'         => \json_encode([
+    'partner'                       => \json_encode([
       'type'        => 'APPID',
       'appid'       => 'wx4e1916a585d1f4e9',
       'merchant_id' => '2480029552',
     ]),
-    'authorized_data' => \json_encode([
+    'authorized_data'               => \json_encode([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 5,
-    'offset'          => 10,
+    'limit'                         => 5,
+    'offset'                        => 10,
+    'partner.type'                  => 'APPID',
+    'partner.appid'                 => 'wx4e1916a585d1f4e9',
+    'partner.merchant_id'           => '2480029552',
+    'authorized_data.business_type' => 'FAVOR_STOCK',
+    'authorized_data.stock_id'      => '2433405',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -73,17 +88,22 @@ $instance->chain('v3/marketing/partnerships')->getAsync([
 ```php [异步属性式]
 $instance['v3/marketing/partnerships']->getAsync([
   'query' => [
-    'partner'         => \json_encode([
+    'partner'                       => \json_encode([
       'type'        => 'APPID',
       'appid'       => 'wx4e1916a585d1f4e9',
       'merchant_id' => '2480029552',
     ]),
-    'authorized_data' => \json_encode([
+    'authorized_data'               => \json_encode([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 5,
-    'offset'          => 10,
+    'limit'                         => 5,
+    'offset'                        => 10,
+    'partner.type'                  => 'APPID',
+    'partner.appid'                 => 'wx4e1916a585d1f4e9',
+    'partner.merchant_id'           => '2480029552',
+    'authorized_data.business_type' => 'FAVOR_STOCK',
+    'authorized_data.stock_id'      => '2433405',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -95,17 +115,22 @@ $instance['v3/marketing/partnerships']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->marketing->partnerships->get([
   'query' => [
-    'partner'         => \json_encode([
+    'partner'                       => \json_encode([
       'type'        => 'APPID',
       'appid'       => 'wx4e1916a585d1f4e9',
       'merchant_id' => '2480029552',
     ]),
-    'authorized_data' => \json_encode([
+    'authorized_data'               => \json_encode([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 5,
-    'offset'          => 10,
+    'limit'                         => 5,
+    'offset'                        => 10,
+    'partner.type'                  => 'APPID',
+    'partner.appid'                 => 'wx4e1916a585d1f4e9',
+    'partner.merchant_id'           => '2480029552',
+    'authorized_data.business_type' => 'FAVOR_STOCK',
+    'authorized_data.stock_id'      => '2433405',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -114,17 +139,22 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/marketing/partnerships')->get([
   'query' => [
-    'partner'         => \json_encode([
+    'partner'                       => \json_encode([
       'type'        => 'APPID',
       'appid'       => 'wx4e1916a585d1f4e9',
       'merchant_id' => '2480029552',
     ]),
-    'authorized_data' => \json_encode([
+    'authorized_data'               => \json_encode([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 5,
-    'offset'          => 10,
+    'limit'                         => 5,
+    'offset'                        => 10,
+    'partner.type'                  => 'APPID',
+    'partner.appid'                 => 'wx4e1916a585d1f4e9',
+    'partner.merchant_id'           => '2480029552',
+    'authorized_data.business_type' => 'FAVOR_STOCK',
+    'authorized_data.stock_id'      => '2433405',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -133,17 +163,22 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/marketing/partnerships']->get([
   'query' => [
-    'partner'         => \json_encode([
+    'partner'                       => \json_encode([
       'type'        => 'APPID',
       'appid'       => 'wx4e1916a585d1f4e9',
       'merchant_id' => '2480029552',
     ]),
-    'authorized_data' => \json_encode([
+    'authorized_data'               => \json_encode([
       'business_type' => 'FAVOR_STOCK',
       'stock_id'      => '2433405',
     ]),
-    'limit'           => 5,
-    'offset'          => 10,
+    'limit'                         => 5,
+    'offset'                        => 10,
+    'partner.type'                  => 'APPID',
+    'partner.appid'                 => 'wx4e1916a585d1f4e9',
+    'partner.merchant_id'           => '2480029552',
+    'authorized_data.business_type' => 'FAVOR_STOCK',
+    'authorized_data.stock_id'      => '2433405',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

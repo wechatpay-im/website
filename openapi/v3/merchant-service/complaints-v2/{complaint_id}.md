@@ -87,7 +87,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | service_order_info | object[] {data-tooltip="对应PHP的array"} | 投诉单关联服务单信息
 | order_id {data-indent=1} | string | 微信支付服务订单号
 | out_order_no {data-indent=1} | string | 商户服务订单号
-| state {data-indent=1} | string | 支付分服务单状态
+| state {data-indent=1} | string | 支付分服务单状态<br/>`DOING` \| `REVOKED` \| `WAITPAY` \| `DONE` 枚举值之一
 | complaint_full_refunded {data-required} | boolean | 投诉单是否已全额退款
 | incoming_user_response {data-required} | boolean | 是否有待回复的用户留言
 | problem_description {data-required} | string | 问题描述

@@ -130,8 +130,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | max_amount {data-required data-indent=2} | integer | 总预算
 | max_amount_by_day {data-indent=2} | integer | 单天发放上限金额
 | max_coupons_per_user {data-required data-indent=2} | integer | 单个用户可领个数
-| natural_person_limit {data-required data-indent=2} | boolean | 是否开启自然人限制
-| prevent_api_abuse {data-required data-indent=2} | boolean | api发券防刷
+| fixed_normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定面额批次特定信息
+| coupon_amount {data-required data-indent=3} | integer | 面额
+| transaction_minimum {data-required data-indent=3} | integer | 门槛
+| coupon_type {data-indent=2} | string | 券或消费金类型
+| goods_tag {data-indent=2} | string[] | 订单优惠标记
+| trade_type {data-indent=2} | string[] | 指定支付模式<br/>`MICROAPP` \| `APPPAY` \| `PPAY` \| `CARD` \| `FACE` \| `OTHER` 枚举值之一
+| combine_use {data-indent=2} | boolean | 是否可叠加其他优惠
+| fixed_discount_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 固定折扣特定信息
+| discount_amount_max {data-required data-indent=3} | integer | 最高折扣金额
+| discount_percent {data-required data-indent=3} | integer | 折扣百分比
+| transaction_minimum {data-indent=3} | integer | 门槛
 | no_cash {data-required data-indent=1} | boolean | 是否无资金流
 | stock_type {data-required data-indent=1} | string | 批次类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHAHGE` \| `RANDOM` \| `DISCOUNT_CUT` 枚举值之一
 | stock_id {data-indent=1} | string | 批次号

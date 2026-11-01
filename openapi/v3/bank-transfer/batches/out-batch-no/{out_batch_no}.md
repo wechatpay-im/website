@@ -9,8 +9,8 @@ description: 批次单号查单接口。转账处理后延迟一段时间（异�
 
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
+| out_batch_no {data-required} | string | 银行批次单号
 | query {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的查询参数
-| out_batch_no {data-required data-indent=1} | string | 银行批次单号
 | need_query_detail {data-required data-indent=1} | boolean | 是否查询转账明细单
 | offset {data-indent=1} | integer | 请求资源起始位置
 | limit {data-indent=1} | integer | 最大资源条数
@@ -22,8 +22,8 @@ description: 批次单号查单接口。转账处理后延迟一段时间（异�
 
 ```php [异步纯链式]
 $instance->v3->bankTransfer->batches->outBatchNo->_out_batch_no_->getAsync([
+  'out_batch_no' => 'plfk2020042013',
   'query' => [
-    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
     'offset'            => 0,
     'limit'             => 20,
@@ -38,8 +38,8 @@ $instance->v3->bankTransfer->batches->outBatchNo->_out_batch_no_->getAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/bank-transfer/batches/out-batch-no/{out_batch_no}')->getAsync([
+  'out_batch_no' => 'plfk2020042013',
   'query' => [
-    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
     'offset'            => 0,
     'limit'             => 20,
@@ -54,8 +54,8 @@ $instance->chain('v3/bank-transfer/batches/out-batch-no/{out_batch_no}')->getAsy
 
 ```php [异步属性式]
 $instance['v3/bank-transfer/batches/out-batch-no/{out_batch_no}']->getAsync([
+  'out_batch_no' => 'plfk2020042013',
   'query' => [
-    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
     'offset'            => 0,
     'limit'             => 20,
@@ -70,8 +70,8 @@ $instance['v3/bank-transfer/batches/out-batch-no/{out_batch_no}']->getAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->bankTransfer->batches->outBatchNo->_out_batch_no_->get([
+  'out_batch_no' => 'plfk2020042013',
   'query' => [
-    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
     'offset'            => 0,
     'limit'             => 20,
@@ -83,8 +83,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步声明式]
 $response = $instance->chain('v3/bank-transfer/batches/out-batch-no/{out_batch_no}')->get([
+  'out_batch_no' => 'plfk2020042013',
   'query' => [
-    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
     'offset'            => 0,
     'limit'             => 20,
@@ -96,8 +96,8 @@ print_r(json_decode((string) $response->getBody(), true));
 
 ```php [同步属性式]
 $response = $instance['v3/bank-transfer/batches/out-batch-no/{out_batch_no}']->get([
+  'out_batch_no' => 'plfk2020042013',
   'query' => [
-    'out_batch_no'      => 'plfk2020042013',
     'need_query_detail' => true,
     'offset'            => 0,
     'limit'             => 20,
@@ -138,7 +138,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | detail_id {data-required data-indent=1} | string | 微信支付明细单号
 | out_detail_no {data-required data-indent=1} | string | 银行明细单号
 | detail_state {data-required data-indent=1} | string | 明细状态<br/>`PROCESSING` \| `SUCCESS` \| `REFUND` 枚举值之一
-| fail_reason {data-indent=1} | string | 明细失败原因<br/>`ACCOUNT_FROZEN` \| `REAL_NAME_CHECK_FAIL` \| `NAME_NOT_CORRECT` \| `OPENID_INVALID` \| `TRANSFER_QUOTA_EXCEED` \| `DAY_RECEIVED_QUOTA_EXCEED` \| `MONTH_RECEIVED_QUOTA_EXCEED` \| `DAY_RECEIVED_COUNT_EXCEED` \| `PRODUCT_AUTH_CHECK_FAIL` \| `OVERDUE_CLOSE` \| `ID_CARD_NOT_CORRECT` \| `ACCOUNT_NOT_EXIST` \| `TRANSFER_RISK` \| `PAYROLL_CARD_ALREADY_LOGOUT` \| `PAYROLL_CARD_ALREADY_FROZEN` \| `PAYROLL_CARD_UNAUTHORIZED` \| `PAYROLL_CARD_USER_NOT_OPEN` \| `PAYROLL_CARD_NAME_CARD_NOT_MATCH` \| `PAYROLL_CARD_ID_CARD_NOT_MATCH` \| `PAYROLL_CARD_BANKCARD_UNBUNDLING` \| `BANK_CARD_COLLECTIONS_ABOVE_QUOTA` \| `BANK_CARD_ACCOUNT_ABNORMAL` \| `BANK_CARD_STATUS_ABNORMAL` \| `BANK_CARD_BANK_INFO_WRONG` \| `BANK_CARD_CARD_INFO_WRONG` \| `OTHER_FAIL_REASON_TYPE` \| `REALNAME_ACCOUNT_RECEIVED_QUOTA_EXCEED` \| `TRANSFER_REMARK_SET_FAIL` 枚举值之一
+| fail_reason {data-indent=1} | string | 明细失败原因<br/>`ACCOUNT_FROZEN` \| `REAL_NAME_CHECK_FAIL` \| `NAME_NOT_CORRECT` \| `OPENID_INVALID` \| `TRANSFER_QUOTA_EXCEED` \| `DAY_RECEIVED_QUOTA_EXCEED` \| `MONTH_RECEIVED_QUOTA_EXCEED` \| `DAY_RECEIVED_COUNT_EXCEED` \| `PRODUCT_AUTH_CHECK_FAIL` \| `OVERDUE_CLOSE` \| `ID_CARD_NOT_CORRECT` \| `ACCOUNT_NOT_EXIST` \| `TRANSFER_RISK` \| `PAYROLL_CARD_ALREADY_LOGOUT` \| `PAYROLL_CARD_ALREADY_FROZEN` \| `PAYROLL_CARD_UNAUTHORIZED` \| `PAYROLL_CARD_USER_NOT_OPEN` \| `PAYROLL_CARD_NAME_CARD_NOT_MATCH` \| `PAYROLL_CARD_ID_CARD_NOT_MATCH` \| `PAYROLL_CARD_BANKCARD_UNBUNDLING` \| `BANK_CARD_COLLECTIONS_ABOVE_QUOTA` \| `BANK_CARD_ACCOUNT_ABNORMAL` \| `BANK_CARD_STATUS_ABNORMAL` \| `BANK_CARD_BANK_INFO_WRONG` \| `BANK_CARD_CARD_INFO_WRONG` \| `OTHER_FAIL_REASON_TYPE` \| `REALNAME_ACCOUNT_RECEIVED_QUOTA_EXCEED` \| `TRANSFER_REMARK_SET_FAIL` \| `RECEIVE_ACCOUNT_NOT_PERMMIT` \| `PAYEE_ACCOUNT_ABNORMAL` \| `PAYER_ACCOUNT_ABNORMAL` 枚举值之一
 
 {.im-table #response}
 

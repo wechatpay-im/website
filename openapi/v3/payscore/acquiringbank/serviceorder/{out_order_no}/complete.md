@@ -33,9 +33,7 @@ description: 前置条件：服务订单状态为“进行中”且订单状态�
 | location {data-indent=1} | object {data-tooltip="对应PHP的array"} | 实际服务位置
 | start_location {data-indent=2} | string | 服务开始地点
 | end_location {data-indent=2} | string | 服务结束地点
-| profit_sharing {data-indent=1} | boolean | 微信支付服务分账标记
 | complete_time {data-indent=1} | string | 完结服务时间
-| goods_tag {data-indent=1} | string | 订单优惠标记
 
 {.im-table #request}
 
@@ -71,9 +69,7 @@ $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_->complete->
       'start_location' => '嗨客时尚主题展餐厅',
       'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
-    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -112,9 +108,7 @@ $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete
       'start_location' => '嗨客时尚主题展餐厅',
       'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
-    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -153,9 +147,7 @@ $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/complete']->pos
       'start_location' => '嗨客时尚主题展餐厅',
       'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
-    'goods_tag'      => 'goods_tag',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -194,9 +186,7 @@ $response = $instance->v3->payscore->acquiringbank->serviceorder->_out_order_no_
       'start_location' => '嗨客时尚主题展餐厅',
       'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
-    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -232,9 +222,7 @@ $response = $instance->chain('v3/payscore/acquiringbank/serviceorder/{out_order_
       'start_location' => '嗨客时尚主题展餐厅',
       'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
-    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r($response->getStatusCode() === 204);
@@ -270,9 +258,7 @@ $response = $instance['v3/payscore/acquiringbank/serviceorder/{out_order_no}/com
       'start_location' => '嗨客时尚主题展餐厅',
       'end_location'   => '嗨客时尚主题展餐厅',
     ],
-    'profit_sharing' => true,
     'complete_time'  => '2019-11-11T16:24:05+08:00',
-    'goods_tag'      => 'goods_tag',
   ],
 ]);
 print_r($response->getStatusCode() === 204);

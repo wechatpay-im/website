@@ -10,7 +10,7 @@ description: 商户调用该接口向微信医保后台下单
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| mix_pay_type {data-required data-indent=1} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
+| mix_pay_type {data-required data-indent=1} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` 枚举值之一
 | order_type {data-required data-indent=1} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required data-indent=1} | string | 从业机构的公众号ID
 | sub_appid {data-indent=1} | string | 医疗机构的公众号ID
@@ -20,12 +20,12 @@ description: 商户调用该接口向微信医保后台下单
 | payer {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 支付人身份信息
 | name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 真实姓名
 | id_digest {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 个人身份ID摘要
-| card_type {data-required data-indent=2} | string | 证件类型<br/>`UNKNOWN_USER_CARD_TYPE` \| `ID_CARD` \| `HOUSEHOLD_REGISTRATION` \| `FOREIGNER_PASSPORT` \| `MAINLAND_TRAVEL_PERMIT_FOR_TW` \| `MAINLAND_TRAVEL_PERMIT_FOR_MO` \| `MAINLAND_TRAVEL_PERMIT_FOR_HK` \| `FOREIGN_PERMANENT_RESIDENT` 枚举值之一
+| card_type {data-required data-indent=2} | string | 证件类型<br/>`UNKNOWN_USER_CARD_TYPE` \| `ID_CARD` \| `HOUSEHOLD_REGISTRATION` \| `FOREIGNER_PASSPORT` \| `MAINLAND_TRAVEL_PERMIT_FOR_TW` \| `MAINLAND_TRAVEL_PERMIT_FOR_MO` \| `MAINLAND_TRAVEL_PERMIT_FOR_HK` \| `FOREIGN_PERMANENT_RESIDENT` \| `RESIDENCE_PERMIT_FOR_HK_MO` \| `RESIDENCE_PERMIT_FOR_TW` 枚举值之一
 | pay_for_relatives {data-indent=1} | boolean | 是否代亲属支付
 | relative {data-indent=1} | object {data-tooltip="对应PHP的array"} | 亲属身份信息
 | name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 真实姓名
 | id_digest {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 个人身份ID摘要
-| card_type {data-required data-indent=2} | string | 证件类型<br/>`UNKNOWN_USER_CARD_TYPE` \| `ID_CARD` \| `HOUSEHOLD_REGISTRATION` \| `FOREIGNER_PASSPORT` \| `MAINLAND_TRAVEL_PERMIT_FOR_TW` \| `MAINLAND_TRAVEL_PERMIT_FOR_MO` \| `MAINLAND_TRAVEL_PERMIT_FOR_HK` \| `FOREIGN_PERMANENT_RESIDENT` 枚举值之一
+| card_type {data-required data-indent=2} | string | 证件类型<br/>`UNKNOWN_USER_CARD_TYPE` \| `ID_CARD` \| `HOUSEHOLD_REGISTRATION` \| `FOREIGNER_PASSPORT` \| `MAINLAND_TRAVEL_PERMIT_FOR_TW` \| `MAINLAND_TRAVEL_PERMIT_FOR_MO` \| `MAINLAND_TRAVEL_PERMIT_FOR_HK` \| `FOREIGN_PERMANENT_RESIDENT` \| `RESIDENCE_PERMIT_FOR_HK_MO` \| `RESIDENCE_PERMIT_FOR_TW` 枚举值之一
 | out_trade_no {data-required data-indent=1} | string | 从业机构订单号
 | serial_no {data-required data-indent=1} | string | 医疗机构订单号
 | pay_order_id {data-indent=1} | string | 医保局返回的支付单ID
@@ -466,7 +466,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | payAuthNo {data-indent=1} | string | 
 | payOrdId {data-indent=1} | string | 
 | setlLatlnt {data-indent=1} | string | 
-| mix_pay_type {data-required} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` 枚举值之一
+| mix_pay_type {data-required} | string | 混合支付类型<br/>`UNKNOWN_MIX_PAY_TYPE` \| `CASH_ONLY` \| `INSURANCE_ONLY` \| `CASH_AND_INSURANCE` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` \| `med_ins_gov_fee` \| `wechat_pay_cash_fee` \| `cash_add_detail` 枚举值之一
 | order_type {data-required} | string | 订单类型<br/>`UNKNOWN_ORDER_TYPE` \| `REG_PAY` \| `DIAG_PAY` \| `COVID_EXAM_PAY` \| `IN_HOSP_PAY` \| `PHARMACY_PAY` \| `INSURANCE_PAY` \| `INT_REG_PAY` \| `INT_RE_DIAG_PAY` \| `INT_RX_PAY` \| `COVID_ANTIGEN_PAY` \| `MED_PAY` 枚举值之一
 | appid {data-required} | string | 从业机构的公众号ID
 | sub_appid | string | 医疗机构的公众号ID

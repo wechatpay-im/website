@@ -30,7 +30,6 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | mini_program_jump_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=6} | string | 跳转小程序APPID
 | path {data-indent=6} | string | 跳转小程序页面PATH
-| text {data-indent=6} | string | 跳转小程序页面名称
 | message_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=6} | string | 回复的消息内容
 | custom_data {data-indent=6} | string | 自定义透传字段
@@ -48,7 +47,6 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | mini_program_jump_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=7} | string | 跳转小程序APPID
 | path {data-indent=7} | string | 跳转小程序页面PATH
-| text {data-indent=7} | string | 跳转小程序页面名称
 | message_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=7} | string | 回复的消息内容
 | custom_data {data-indent=7} | string | 自定义透传字段
@@ -61,7 +59,6 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | mini_program_jump_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=6} | string | 跳转小程序APPID
 | path {data-indent=6} | string | 跳转小程序页面PATH
-| text {data-indent=6} | string | 跳转小程序页面名称
 | message_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=6} | string | 回复的消息内容
 | custom_data {data-indent=6} | string | 自定义透传字段
@@ -78,14 +75,10 @@ description: 商户可通过调用此接口，针对需要即时服务的投诉�
 | mini_program_jump_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 跳转小程序信息
 | appid {data-required data-indent=7} | string | 跳转小程序APPID
 | path {data-indent=7} | string | 跳转小程序页面PATH
-| text {data-indent=7} | string | 跳转小程序页面名称
 | message_info {data-indent=6} | object {data-tooltip="对应PHP的array"} | 回复消息内容
 | content {data-required data-indent=7} | string | 回复的消息内容
 | custom_data {data-indent=7} | string | 自定义透传字段
 | action_id {data-indent=6} | string | 动作id
-| invalid_info {data-indent=5} | object {data-tooltip="对应PHP的array"} | 失效配置
-| expired_time {data-indent=6} | string | 过期时间
-| multi_clickable {data-indent=6} | boolean | 是否可以多次点击
 | button_layout {data-indent=4} | string | 按钮布局方式<br/>`LAYOUT_UNKNOWN` \| `LAYOUT_HORIZONTAL` \| `LAYOUT_VERTICAL` 枚举值之一
 | invalid_info {data-indent=4} | object {data-tooltip="对应PHP的array"} | 失效配置
 | expired_time {data-indent=5} | string | 过期时间
@@ -123,7 +116,6 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->responseImmediateS
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -146,7 +138,6 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->responseImmediateS
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
@@ -164,7 +155,6 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->responseImmediateS
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -179,24 +169,19 @@ $instance->v3->merchantService->complaintsV2->_complaint_id_->responseImmediateS
         ],
         'button_group' => [
           'buttons'       => [[
-            'text'         => 'example_text',
-            'action'       => [
+            'text'   => 'example_text',
+            'action' => [
               'action_type'            => 'ACTION_TYPE_SEND_MESSAGE',
               'jump_url'               => 'example_jump_url',
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
                 'custom_data' => 'example_custom_data',
               ],
               'action_id'              => 'example_action_id',
-            ],
-            'invalid_info' => [
-              'expired_time'    => '2015-05-20T13:29:35+08:00',
-              'multi_clickable' => true,
             ],
           ],],
           'button_layout' => 'LAYOUT_HORIZONTAL',
@@ -243,7 +228,6 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response-imme
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -266,7 +250,6 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response-imme
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
@@ -284,7 +267,6 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response-imme
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -299,24 +281,19 @@ $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/response-imme
         ],
         'button_group' => [
           'buttons'       => [[
-            'text'         => 'example_text',
-            'action'       => [
+            'text'   => 'example_text',
+            'action' => [
               'action_type'            => 'ACTION_TYPE_SEND_MESSAGE',
               'jump_url'               => 'example_jump_url',
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
                 'custom_data' => 'example_custom_data',
               ],
               'action_id'              => 'example_action_id',
-            ],
-            'invalid_info' => [
-              'expired_time'    => '2015-05-20T13:29:35+08:00',
-              'multi_clickable' => true,
             ],
           ],],
           'button_layout' => 'LAYOUT_HORIZONTAL',
@@ -363,7 +340,6 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/response-immediate-s
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -386,7 +362,6 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/response-immediate-s
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
@@ -404,7 +379,6 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/response-immediate-s
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -419,24 +393,19 @@ $instance['v3/merchant-service/complaints-v2/{complaint_id}/response-immediate-s
         ],
         'button_group' => [
           'buttons'       => [[
-            'text'         => 'example_text',
-            'action'       => [
+            'text'   => 'example_text',
+            'action' => [
               'action_type'            => 'ACTION_TYPE_SEND_MESSAGE',
               'jump_url'               => 'example_jump_url',
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
                 'custom_data' => 'example_custom_data',
               ],
               'action_id'              => 'example_action_id',
-            ],
-            'invalid_info' => [
-              'expired_time'    => '2015-05-20T13:29:35+08:00',
-              'multi_clickable' => true,
             ],
           ],],
           'button_layout' => 'LAYOUT_HORIZONTAL',
@@ -483,7 +452,6 @@ $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->respon
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -506,7 +474,6 @@ $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->respon
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
@@ -524,7 +491,6 @@ $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->respon
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -539,24 +505,19 @@ $response = $instance->v3->merchantService->complaintsV2->_complaint_id_->respon
         ],
         'button_group' => [
           'buttons'       => [[
-            'text'         => 'example_text',
-            'action'       => [
+            'text'   => 'example_text',
+            'action' => [
               'action_type'            => 'ACTION_TYPE_SEND_MESSAGE',
               'jump_url'               => 'example_jump_url',
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
                 'custom_data' => 'example_custom_data',
               ],
               'action_id'              => 'example_action_id',
-            ],
-            'invalid_info' => [
-              'expired_time'    => '2015-05-20T13:29:35+08:00',
-              'multi_clickable' => true,
             ],
           ],],
           'button_layout' => 'LAYOUT_HORIZONTAL',
@@ -600,7 +561,6 @@ $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/r
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -623,7 +583,6 @@ $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/r
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
@@ -641,7 +600,6 @@ $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/r
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -656,24 +614,19 @@ $response = $instance->chain('v3/merchant-service/complaints-v2/{complaint_id}/r
         ],
         'button_group' => [
           'buttons'       => [[
-            'text'         => 'example_text',
-            'action'       => [
+            'text'   => 'example_text',
+            'action' => [
               'action_type'            => 'ACTION_TYPE_SEND_MESSAGE',
               'jump_url'               => 'example_jump_url',
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
                 'custom_data' => 'example_custom_data',
               ],
               'action_id'              => 'example_action_id',
-            ],
-            'invalid_info' => [
-              'expired_time'    => '2015-05-20T13:29:35+08:00',
-              'multi_clickable' => true,
             ],
           ],],
           'button_layout' => 'LAYOUT_HORIZONTAL',
@@ -717,7 +670,6 @@ $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/response
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -740,7 +692,6 @@ $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/response
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
@@ -758,7 +709,6 @@ $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/response
             'mini_program_jump_info' => [
               'appid' => 'example_appid',
               'path'  => 'example_path',
-              'text'  => 'example_text',
             ],
             'message_info'           => [
               'content'     => 'example_content',
@@ -773,24 +723,19 @@ $response = $instance['v3/merchant-service/complaints-v2/{complaint_id}/response
         ],
         'button_group' => [
           'buttons'       => [[
-            'text'         => 'example_text',
-            'action'       => [
+            'text'   => 'example_text',
+            'action' => [
               'action_type'            => 'ACTION_TYPE_SEND_MESSAGE',
               'jump_url'               => 'example_jump_url',
               'mini_program_jump_info' => [
                 'appid' => 'example_appid',
                 'path'  => 'example_path',
-                'text'  => 'example_text',
               ],
               'message_info'           => [
                 'content'     => 'example_content',
                 'custom_data' => 'example_custom_data',
               ],
               'action_id'              => 'example_action_id',
-            ],
-            'invalid_info' => [
-              'expired_time'    => '2015-05-20T13:29:35+08:00',
-              'multi_clickable' => true,
             ],
           ],],
           'button_layout' => 'LAYOUT_HORIZONTAL',

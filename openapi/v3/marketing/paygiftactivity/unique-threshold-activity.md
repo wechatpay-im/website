@@ -28,19 +28,16 @@ description: 商户可以创建满额送活动，用户支付后送全场券，�
 | delivery_purpose {data-required data-indent=2} | string | 投放目的<br/>`OFF_LINE_PAY` \| `JUMP_MINI_APP` 枚举值之一
 | mini_programs_appid {data-indent=2} | string | 商家小程序appid
 | mini_programs_path {data-indent=2} | string | 商家小程序path
-| advanced_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动高级设置
-| delivery_user_category {data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
-| merchant_member_appid {data-indent=2} | string | 商家会员appid
-| payment_mode {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付模式
-| payment_scene_list {data-indent=3} | string[] | 支付场景列表<br/>`APP_SCENE` 枚举值
-| payment_method_information {data-indent=3} | object {data-tooltip="对应PHP的array"} | 支付方式信息
-| payment_method {data-indent=4} | string | 支付方式<br/>`CFT` \| `SPECIFIC_BANK_CARD` 枚举值之一
-| bank_abbreviation {data-indent=4} | string | 银行简称
-| goods_tags {data-indent=2} | string[] | 订单优惠标记
+| advanced_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 
 | payment_method_information {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付方式信息
 | payment_method {data-indent=3} | string | 支付方式<br/>`CFT` \| `SPECIFIC_BANK_CARD` 枚举值之一
 | bank_abbreviation {data-indent=3} | string | 银行简称
-| award_send_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动奖品发放规则
+| delivery_user_category {data-indent=2} | string | 投放用户类别<br/>`DELIVERY_ALL_PERSON` \| `DELIVERY_MEMBER_PERSON` 枚举值之一
+| merchant_member_appid {data-indent=2} | string | 商家会员appid
+| payment_mode {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付模式
+| payment_scene_list {data-indent=3} | string[] | 支付场景列表<br/>`APP_SCENE` \| `SWING_CARD_SCENE` \| `NO_SECRET_SCENE` \| `MINIAPP_SCENE` \| `FACE_PAY_SCENE` \| `OTHER_SCENE` 枚举值之一
+| goods_tags {data-indent=2} | string[] | 订单优惠标记
+| award_send_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 阶梯送发放规则
 | award_type {data-required data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_option {data-required data-indent=2} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一
 | transaction_amount_minimum {data-required data-indent=2} | integer | 消费金额门槛
@@ -59,52 +56,48 @@ description: 商户可以创建满额送活动，用户支付后送全场券，�
 $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->postAsync([
   'json' => [
     'activity_base_info' => [
-      'activity_name'         => '',
-      'activity_second_title' => '',
-      'merchant_logo_url'     => '',
+      'activity_name'         => '良品铺子回馈活动',
+      'activity_second_title' => '海飞丝的券',
+      'merchant_logo_url'     => 'https://tool.oschina.net/regex.jpg',
       'background_color'      => 'Color010',
-      'begin_time'            => '',
-      'end_time'              => '',
+      'begin_time'            => '2015-05-20T13:29:35.120+08:00',
+      'end_time'              => '2015-05-20T13:29:35.120+08:00',
       'available_periods'     => [
         'available_time'     => [[
-          'begin_time' => '',
-          'end_time'   => '',
+          'begin_time' => '2015-05-20T00:00:00.000+08:00',
+          'end_time'   => '2015-05-20T23:59:59.000+08:00',
         ],],
         'available_day_time' => [[
-          'begin_day_time' => '',
-          'end_day_time'   => '',
+          'begin_day_time' => '110000',
+          'end_day_time'   => '135959',
         ],],
       ],
-      'out_request_no'        => '',
+      'out_request_no'        => '100002322019090134234sfdf',
       'delivery_purpose'      => 'OFF_LINE_PAY',
-      'mini_programs_appid'   => '',
-      'mini_programs_path'    => '',
+      'mini_programs_appid'   => 'wx23232232323',
+      'mini_programs_path'    => '/path/index/index',
     ],
     'advanced_setting'   => [
-      'delivery_user_category'     => 'BUSIFAVOR',
-      'merchant_member_appid'      => '',
-      'payment_mode'               => [
-        'payment_scene_list'         => ['APP_SCENE'],
-        'payment_method_information' => [
-          'payment_method'    => 'CFT',
-          'bank_abbreviation' => '',
-        ],
-      ],
-      'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
         'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
+      'delivery_user_category'     => 'DELIVERY_ALL_PERSON',
+      'merchant_member_appid'      => '34567890',
+      'payment_mode'               => [
+        'payment_scene_list' => ['APP_SCENE'],
+      ],
+      'goods_tags'                 => ['string'],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
       'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
-      'transaction_amount_minimum' => 0,
+      'transaction_amount_minimum' => 100,
       'send_content'               => 'SINGLE_COUPON',
       'award_list'                 => [[
-        'stock_id'           => '',
-        'original_image_url' => '',
-        'thumbnail_url'      => '',
+        'stock_id'           => '98065001',
+        'original_image_url' => 'https://tool.oschina.net/regex.jpg',
+        'thumbnail_url'      => 'https://tool.oschina.net/regex.jpg',
       ],],
       'merchant_id_list'           => ['string'],
     ],
@@ -120,52 +113,48 @@ $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->postAsync([
 $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->postAsync([
   'json' => [
     'activity_base_info' => [
-      'activity_name'         => '',
-      'activity_second_title' => '',
-      'merchant_logo_url'     => '',
+      'activity_name'         => '良品铺子回馈活动',
+      'activity_second_title' => '海飞丝的券',
+      'merchant_logo_url'     => 'https://tool.oschina.net/regex.jpg',
       'background_color'      => 'Color010',
-      'begin_time'            => '',
-      'end_time'              => '',
+      'begin_time'            => '2015-05-20T13:29:35.120+08:00',
+      'end_time'              => '2015-05-20T13:29:35.120+08:00',
       'available_periods'     => [
         'available_time'     => [[
-          'begin_time' => '',
-          'end_time'   => '',
+          'begin_time' => '2015-05-20T00:00:00.000+08:00',
+          'end_time'   => '2015-05-20T23:59:59.000+08:00',
         ],],
         'available_day_time' => [[
-          'begin_day_time' => '',
-          'end_day_time'   => '',
+          'begin_day_time' => '110000',
+          'end_day_time'   => '135959',
         ],],
       ],
-      'out_request_no'        => '',
+      'out_request_no'        => '100002322019090134234sfdf',
       'delivery_purpose'      => 'OFF_LINE_PAY',
-      'mini_programs_appid'   => '',
-      'mini_programs_path'    => '',
+      'mini_programs_appid'   => 'wx23232232323',
+      'mini_programs_path'    => '/path/index/index',
     ],
     'advanced_setting'   => [
-      'delivery_user_category'     => 'BUSIFAVOR',
-      'merchant_member_appid'      => '',
-      'payment_mode'               => [
-        'payment_scene_list'         => ['APP_SCENE'],
-        'payment_method_information' => [
-          'payment_method'    => 'CFT',
-          'bank_abbreviation' => '',
-        ],
-      ],
-      'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
         'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
+      'delivery_user_category'     => 'DELIVERY_ALL_PERSON',
+      'merchant_member_appid'      => '34567890',
+      'payment_mode'               => [
+        'payment_scene_list' => ['APP_SCENE'],
+      ],
+      'goods_tags'                 => ['string'],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
       'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
-      'transaction_amount_minimum' => 0,
+      'transaction_amount_minimum' => 100,
       'send_content'               => 'SINGLE_COUPON',
       'award_list'                 => [[
-        'stock_id'           => '',
-        'original_image_url' => '',
-        'thumbnail_url'      => '',
+        'stock_id'           => '98065001',
+        'original_image_url' => 'https://tool.oschina.net/regex.jpg',
+        'thumbnail_url'      => 'https://tool.oschina.net/regex.jpg',
       ],],
       'merchant_id_list'           => ['string'],
     ],
@@ -181,52 +170,48 @@ $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->post
 $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->postAsync([
   'json' => [
     'activity_base_info' => [
-      'activity_name'         => '',
-      'activity_second_title' => '',
-      'merchant_logo_url'     => '',
+      'activity_name'         => '良品铺子回馈活动',
+      'activity_second_title' => '海飞丝的券',
+      'merchant_logo_url'     => 'https://tool.oschina.net/regex.jpg',
       'background_color'      => 'Color010',
-      'begin_time'            => '',
-      'end_time'              => '',
+      'begin_time'            => '2015-05-20T13:29:35.120+08:00',
+      'end_time'              => '2015-05-20T13:29:35.120+08:00',
       'available_periods'     => [
         'available_time'     => [[
-          'begin_time' => '',
-          'end_time'   => '',
+          'begin_time' => '2015-05-20T00:00:00.000+08:00',
+          'end_time'   => '2015-05-20T23:59:59.000+08:00',
         ],],
         'available_day_time' => [[
-          'begin_day_time' => '',
-          'end_day_time'   => '',
+          'begin_day_time' => '110000',
+          'end_day_time'   => '135959',
         ],],
       ],
-      'out_request_no'        => '',
+      'out_request_no'        => '100002322019090134234sfdf',
       'delivery_purpose'      => 'OFF_LINE_PAY',
-      'mini_programs_appid'   => '',
-      'mini_programs_path'    => '',
+      'mini_programs_appid'   => 'wx23232232323',
+      'mini_programs_path'    => '/path/index/index',
     ],
     'advanced_setting'   => [
-      'delivery_user_category'     => 'BUSIFAVOR',
-      'merchant_member_appid'      => '',
-      'payment_mode'               => [
-        'payment_scene_list'         => ['APP_SCENE'],
-        'payment_method_information' => [
-          'payment_method'    => 'CFT',
-          'bank_abbreviation' => '',
-        ],
-      ],
-      'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
         'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
+      'delivery_user_category'     => 'DELIVERY_ALL_PERSON',
+      'merchant_member_appid'      => '34567890',
+      'payment_mode'               => [
+        'payment_scene_list' => ['APP_SCENE'],
+      ],
+      'goods_tags'                 => ['string'],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
       'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
-      'transaction_amount_minimum' => 0,
+      'transaction_amount_minimum' => 100,
       'send_content'               => 'SINGLE_COUPON',
       'award_list'                 => [[
-        'stock_id'           => '',
-        'original_image_url' => '',
-        'thumbnail_url'      => '',
+        'stock_id'           => '98065001',
+        'original_image_url' => 'https://tool.oschina.net/regex.jpg',
+        'thumbnail_url'      => 'https://tool.oschina.net/regex.jpg',
       ],],
       'merchant_id_list'           => ['string'],
     ],
@@ -242,52 +227,48 @@ $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->postAsync([
 $response = $instance->v3->marketing->paygiftactivity->uniqueThresholdActivity->post([
   'json' => [
     'activity_base_info' => [
-      'activity_name'         => '',
-      'activity_second_title' => '',
-      'merchant_logo_url'     => '',
+      'activity_name'         => '良品铺子回馈活动',
+      'activity_second_title' => '海飞丝的券',
+      'merchant_logo_url'     => 'https://tool.oschina.net/regex.jpg',
       'background_color'      => 'Color010',
-      'begin_time'            => '',
-      'end_time'              => '',
+      'begin_time'            => '2015-05-20T13:29:35.120+08:00',
+      'end_time'              => '2015-05-20T13:29:35.120+08:00',
       'available_periods'     => [
         'available_time'     => [[
-          'begin_time' => '',
-          'end_time'   => '',
+          'begin_time' => '2015-05-20T00:00:00.000+08:00',
+          'end_time'   => '2015-05-20T23:59:59.000+08:00',
         ],],
         'available_day_time' => [[
-          'begin_day_time' => '',
-          'end_day_time'   => '',
+          'begin_day_time' => '110000',
+          'end_day_time'   => '135959',
         ],],
       ],
-      'out_request_no'        => '',
+      'out_request_no'        => '100002322019090134234sfdf',
       'delivery_purpose'      => 'OFF_LINE_PAY',
-      'mini_programs_appid'   => '',
-      'mini_programs_path'    => '',
+      'mini_programs_appid'   => 'wx23232232323',
+      'mini_programs_path'    => '/path/index/index',
     ],
     'advanced_setting'   => [
-      'delivery_user_category'     => 'BUSIFAVOR',
-      'merchant_member_appid'      => '',
-      'payment_mode'               => [
-        'payment_scene_list'         => ['APP_SCENE'],
-        'payment_method_information' => [
-          'payment_method'    => 'CFT',
-          'bank_abbreviation' => '',
-        ],
-      ],
-      'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
         'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
+      'delivery_user_category'     => 'DELIVERY_ALL_PERSON',
+      'merchant_member_appid'      => '34567890',
+      'payment_mode'               => [
+        'payment_scene_list' => ['APP_SCENE'],
+      ],
+      'goods_tags'                 => ['string'],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
       'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
-      'transaction_amount_minimum' => 0,
+      'transaction_amount_minimum' => 100,
       'send_content'               => 'SINGLE_COUPON',
       'award_list'                 => [[
-        'stock_id'           => '',
-        'original_image_url' => '',
-        'thumbnail_url'      => '',
+        'stock_id'           => '98065001',
+        'original_image_url' => 'https://tool.oschina.net/regex.jpg',
+        'thumbnail_url'      => 'https://tool.oschina.net/regex.jpg',
       ],],
       'merchant_id_list'           => ['string'],
     ],
@@ -300,52 +281,48 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/marketing/paygiftactivity/unique-threshold-activity')->post([
   'json' => [
     'activity_base_info' => [
-      'activity_name'         => '',
-      'activity_second_title' => '',
-      'merchant_logo_url'     => '',
+      'activity_name'         => '良品铺子回馈活动',
+      'activity_second_title' => '海飞丝的券',
+      'merchant_logo_url'     => 'https://tool.oschina.net/regex.jpg',
       'background_color'      => 'Color010',
-      'begin_time'            => '',
-      'end_time'              => '',
+      'begin_time'            => '2015-05-20T13:29:35.120+08:00',
+      'end_time'              => '2015-05-20T13:29:35.120+08:00',
       'available_periods'     => [
         'available_time'     => [[
-          'begin_time' => '',
-          'end_time'   => '',
+          'begin_time' => '2015-05-20T00:00:00.000+08:00',
+          'end_time'   => '2015-05-20T23:59:59.000+08:00',
         ],],
         'available_day_time' => [[
-          'begin_day_time' => '',
-          'end_day_time'   => '',
+          'begin_day_time' => '110000',
+          'end_day_time'   => '135959',
         ],],
       ],
-      'out_request_no'        => '',
+      'out_request_no'        => '100002322019090134234sfdf',
       'delivery_purpose'      => 'OFF_LINE_PAY',
-      'mini_programs_appid'   => '',
-      'mini_programs_path'    => '',
+      'mini_programs_appid'   => 'wx23232232323',
+      'mini_programs_path'    => '/path/index/index',
     ],
     'advanced_setting'   => [
-      'delivery_user_category'     => 'BUSIFAVOR',
-      'merchant_member_appid'      => '',
-      'payment_mode'               => [
-        'payment_scene_list'         => ['APP_SCENE'],
-        'payment_method_information' => [
-          'payment_method'    => 'CFT',
-          'bank_abbreviation' => '',
-        ],
-      ],
-      'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
         'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
+      'delivery_user_category'     => 'DELIVERY_ALL_PERSON',
+      'merchant_member_appid'      => '34567890',
+      'payment_mode'               => [
+        'payment_scene_list' => ['APP_SCENE'],
+      ],
+      'goods_tags'                 => ['string'],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
       'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
-      'transaction_amount_minimum' => 0,
+      'transaction_amount_minimum' => 100,
       'send_content'               => 'SINGLE_COUPON',
       'award_list'                 => [[
-        'stock_id'           => '',
-        'original_image_url' => '',
-        'thumbnail_url'      => '',
+        'stock_id'           => '98065001',
+        'original_image_url' => 'https://tool.oschina.net/regex.jpg',
+        'thumbnail_url'      => 'https://tool.oschina.net/regex.jpg',
       ],],
       'merchant_id_list'           => ['string'],
     ],
@@ -358,52 +335,48 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/marketing/paygiftactivity/unique-threshold-activity']->post([
   'json' => [
     'activity_base_info' => [
-      'activity_name'         => '',
-      'activity_second_title' => '',
-      'merchant_logo_url'     => '',
+      'activity_name'         => '良品铺子回馈活动',
+      'activity_second_title' => '海飞丝的券',
+      'merchant_logo_url'     => 'https://tool.oschina.net/regex.jpg',
       'background_color'      => 'Color010',
-      'begin_time'            => '',
-      'end_time'              => '',
+      'begin_time'            => '2015-05-20T13:29:35.120+08:00',
+      'end_time'              => '2015-05-20T13:29:35.120+08:00',
       'available_periods'     => [
         'available_time'     => [[
-          'begin_time' => '',
-          'end_time'   => '',
+          'begin_time' => '2015-05-20T00:00:00.000+08:00',
+          'end_time'   => '2015-05-20T23:59:59.000+08:00',
         ],],
         'available_day_time' => [[
-          'begin_day_time' => '',
-          'end_day_time'   => '',
+          'begin_day_time' => '110000',
+          'end_day_time'   => '135959',
         ],],
       ],
-      'out_request_no'        => '',
+      'out_request_no'        => '100002322019090134234sfdf',
       'delivery_purpose'      => 'OFF_LINE_PAY',
-      'mini_programs_appid'   => '',
-      'mini_programs_path'    => '',
+      'mini_programs_appid'   => 'wx23232232323',
+      'mini_programs_path'    => '/path/index/index',
     ],
     'advanced_setting'   => [
-      'delivery_user_category'     => 'BUSIFAVOR',
-      'merchant_member_appid'      => '',
-      'payment_mode'               => [
-        'payment_scene_list'         => ['APP_SCENE'],
-        'payment_method_information' => [
-          'payment_method'    => 'CFT',
-          'bank_abbreviation' => '',
-        ],
-      ],
-      'goods_tags'                 => ['string'],
       'payment_method_information' => [
         'payment_method'    => 'CFT',
         'bank_abbreviation' => 'AHRCUB_CREDIT',
       ],
+      'delivery_user_category'     => 'DELIVERY_ALL_PERSON',
+      'merchant_member_appid'      => '34567890',
+      'payment_mode'               => [
+        'payment_scene_list' => ['APP_SCENE'],
+      ],
+      'goods_tags'                 => ['string'],
     ],
     'award_send_rule'    => [
       'award_type'                 => 'BUSIFAVOR',
       'merchant_option'            => 'IN_SEVICE_COUPON_MERCHANT',
-      'transaction_amount_minimum' => 0,
+      'transaction_amount_minimum' => 100,
       'send_content'               => 'SINGLE_COUPON',
       'award_list'                 => [[
-        'stock_id'           => '',
-        'original_image_url' => '',
-        'thumbnail_url'      => '',
+        'stock_id'           => '98065001',
+        'original_image_url' => 'https://tool.oschina.net/regex.jpg',
+        'thumbnail_url'      => 'https://tool.oschina.net/regex.jpg',
       ],],
       'merchant_id_list'           => ['string'],
     ],

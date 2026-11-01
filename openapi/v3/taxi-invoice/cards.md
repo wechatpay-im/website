@@ -11,12 +11,9 @@ description: 服务商开具出租车电子发票后，调用本接口将发票�
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | company_mchid {data-required data-indent=1} | string | 出租车经营主体商户号
-| trade_number {data-required data-indent=1} | string | 面对面付款单号
 | appid {data-indent=1} | string | 应用ID
 | openid {data-required data-indent=1} | string | 用户标识
 | region_id {data-required data-indent=1} | integer | 行政区划代码
-| driver_license {data-required data-indent=1} | string | 营运资格证号
-| plate_number {data-required data-indent=1} | string | 车牌号
 | fapiao_card_information {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 发票卡券信息
 | fapiao_media_id {data-required data-indent=2} | string | 电子发票文件ID
 | fapiao_number {data-required data-indent=2} | string | 发票号码
@@ -70,12 +67,9 @@ description: 服务商开具出租车电子发票后，调用本接口将发票�
 $instance->v3->taxiInvoice->cards->postAsync([
   'json' => [
     'company_mchid'           => '1900000109',
-    'trade_number'            => '10001071012021110600437180176110',
     'appid'                   => 'wxb1170446a4c0a5a2',
     'openid'                  => 'oUypO5aQ1oOCaSiNZUpT5kxxJHuc',
     'region_id'               => 310100,
-    'driver_license'          => '6298416',
-    'plate_number'            => '浙AD12345',
     'fapiao_card_information' => [
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
       'fapiao_number'      => '12897794',
@@ -128,7 +122,7 @@ $instance->v3->taxiInvoice->cards->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(json_decode((string) $response->getBody(), true));
+  print_r($response->getStatusCode() === 204);
 })
 ->wait();
 ```
@@ -137,12 +131,9 @@ $instance->v3->taxiInvoice->cards->postAsync([
 $instance->chain('v3/taxi-invoice/cards')->postAsync([
   'json' => [
     'company_mchid'           => '1900000109',
-    'trade_number'            => '10001071012021110600437180176110',
     'appid'                   => 'wxb1170446a4c0a5a2',
     'openid'                  => 'oUypO5aQ1oOCaSiNZUpT5kxxJHuc',
     'region_id'               => 310100,
-    'driver_license'          => '6298416',
-    'plate_number'            => '浙AD12345',
     'fapiao_card_information' => [
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
       'fapiao_number'      => '12897794',
@@ -195,7 +186,7 @@ $instance->chain('v3/taxi-invoice/cards')->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(json_decode((string) $response->getBody(), true));
+  print_r($response->getStatusCode() === 204);
 })
 ->wait();
 ```
@@ -204,12 +195,9 @@ $instance->chain('v3/taxi-invoice/cards')->postAsync([
 $instance['v3/taxi-invoice/cards']->postAsync([
   'json' => [
     'company_mchid'           => '1900000109',
-    'trade_number'            => '10001071012021110600437180176110',
     'appid'                   => 'wxb1170446a4c0a5a2',
     'openid'                  => 'oUypO5aQ1oOCaSiNZUpT5kxxJHuc',
     'region_id'               => 310100,
-    'driver_license'          => '6298416',
-    'plate_number'            => '浙AD12345',
     'fapiao_card_information' => [
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
       'fapiao_number'      => '12897794',
@@ -262,7 +250,7 @@ $instance['v3/taxi-invoice/cards']->postAsync([
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
-  print_r(json_decode((string) $response->getBody(), true));
+  print_r($response->getStatusCode() === 204);
 })
 ->wait();
 ```
@@ -271,12 +259,9 @@ $instance['v3/taxi-invoice/cards']->postAsync([
 $response = $instance->v3->taxiInvoice->cards->post([
   'json' => [
     'company_mchid'           => '1900000109',
-    'trade_number'            => '10001071012021110600437180176110',
     'appid'                   => 'wxb1170446a4c0a5a2',
     'openid'                  => 'oUypO5aQ1oOCaSiNZUpT5kxxJHuc',
     'region_id'               => 310100,
-    'driver_license'          => '6298416',
-    'plate_number'            => '浙AD12345',
     'fapiao_card_information' => [
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
       'fapiao_number'      => '12897794',
@@ -328,19 +313,16 @@ $response = $instance->v3->taxiInvoice->cards->post([
     'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ]);
-print_r(json_decode((string) $response->getBody(), true));
+print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步声明式]
 $response = $instance->chain('v3/taxi-invoice/cards')->post([
   'json' => [
     'company_mchid'           => '1900000109',
-    'trade_number'            => '10001071012021110600437180176110',
     'appid'                   => 'wxb1170446a4c0a5a2',
     'openid'                  => 'oUypO5aQ1oOCaSiNZUpT5kxxJHuc',
     'region_id'               => 310100,
-    'driver_license'          => '6298416',
-    'plate_number'            => '浙AD12345',
     'fapiao_card_information' => [
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
       'fapiao_number'      => '12897794',
@@ -392,19 +374,16 @@ $response = $instance->chain('v3/taxi-invoice/cards')->post([
     'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ]);
-print_r(json_decode((string) $response->getBody(), true));
+print_r($response->getStatusCode() === 204);
 ```
 
 ```php [同步属性式]
 $response = $instance['v3/taxi-invoice/cards']->post([
   'json' => [
     'company_mchid'           => '1900000109',
-    'trade_number'            => '10001071012021110600437180176110',
     'appid'                   => 'wxb1170446a4c0a5a2',
     'openid'                  => 'oUypO5aQ1oOCaSiNZUpT5kxxJHuc',
     'region_id'               => 310100,
-    'driver_license'          => '6298416',
-    'plate_number'            => '浙AD12345',
     'fapiao_card_information' => [
       'fapiao_media_id'    => 'ASNFZ4mrze/+3LqYdlQyEA==',
       'fapiao_number'      => '12897794',
@@ -456,17 +435,14 @@ $response = $instance['v3/taxi-invoice/cards']->post([
     'token'                   => 'ESvqG19gjw0qiiy1eeRA4VusLrOmIYQOMJ8rXX2V',
   ],
 ]);
-print_r(json_decode((string) $response->getBody(), true));
+print_r($response->getStatusCode() === 204);
 ```
 
 :::
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| card_appid {data-required} | string | 插入用户卡包的公众号AppID
-| card_openid {data-required} | string | 用户在插卡公众号下的OpenID
-| card_id {data-required} | string | 出租车电子发票卡券模板ID
-| card_code {data-required} | string | 出租车电子发票在卡包中的编码
+| 空字符串(无返回内容) {align=center colspan=3}
 
 {.im-table #response}
 

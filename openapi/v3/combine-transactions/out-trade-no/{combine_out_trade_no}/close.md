@@ -25,7 +25,7 @@ description: 合单支付订单只能使用此合单关单api完成关单。合�
 
 ```php [异步纯链式]
 $instance->v3->combineTransactions->outTradeNo->_combine_out_trade_no_->close->postAsync([
-  'combine_out_trade_no' => '',
+  'combine_out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
     'sub_orders'    => [[
@@ -45,7 +45,7 @@ $instance->v3->combineTransactions->outTradeNo->_combine_out_trade_no_->close->p
 
 ```php [异步声明式]
 $instance->chain('v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close')->postAsync([
-  'combine_out_trade_no' => '',
+  'combine_out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
     'sub_orders'    => [[
@@ -65,7 +65,7 @@ $instance->chain('v3/combine-transactions/out-trade-no/{combine_out_trade_no}/cl
 
 ```php [异步属性式]
 $instance['v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close']->postAsync([
-  'combine_out_trade_no' => '',
+  'combine_out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
     'sub_orders'    => [[
@@ -85,7 +85,7 @@ $instance['v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close']->
 
 ```php [同步纯链式]
 $response = $instance->v3->combineTransactions->outTradeNo->_combine_out_trade_no_->close->post([
-  'combine_out_trade_no' => '',
+  'combine_out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
     'sub_orders'    => [[
@@ -102,7 +102,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close')->post([
-  'combine_out_trade_no' => '',
+  'combine_out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
     'sub_orders'    => [[
@@ -119,7 +119,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close']->post([
-  'combine_out_trade_no' => '',
+  'combine_out_trade_no' => '1217752501201407033233368018',
   'json' => [
     'combine_appid' => 'wxd678efh567hg6787',
     'sub_orders'    => [[

@@ -169,6 +169,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | comment {data-indent=3} | string | 审核意见
 | recommendation {data-indent=2} | string | 改进建议
 | wx_parking_lot_id | string | 微信停车场ID
+| code | string | 响应码
+| message | string | 返回信息
 
 {.im-table #response}
 

@@ -81,6 +81,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | bank_memo {data-required} | string | 银行附言
 | account_type {data-required} | string | 出款账户类型<br/>`BASIC` \| `OPERATION` \| `FEES` 枚举值之一
 | solution {data-required} | string | 提现失败解决方案
+| account_number {data-required} | string | 入账银行账号后四位
+| account_bank {data-required} | string | 入账银行
+| bank_name | string | 入账银行全称（含支行）
 
 {.im-table #response}
 

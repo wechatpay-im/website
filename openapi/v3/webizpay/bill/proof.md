@@ -127,8 +127,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | entity_name {data-required} | string | 商户主体名称
 | proof_id {data-required} | string | 出资凭证申请单单号
 | download_url {data-required} | string | 凭证下载地址
-| create_time {data-required} | string | 凭证申请创建时间
 | updated_time {data-required} | string | 凭证状态更新时间
+| created_time {data-required} | string | 凭证申请创建时间
 
 {.im-table #response}
 

@@ -78,15 +78,15 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | policy_period_id {data-required} | number | 保单的扣费周期编号
-| policy_period_state {data-required} | string | 当前扣费周期的状态
+| policy_period_state {data-required} | string | 当前扣费周期的状态<br/>`NO_SCHEDULED` \| `SCHEDULED` \| `PAID` \| `EXPIRED` 枚举值之一
 | deduct_start_date | string | 可扣费开始日期
 | deduct_end_date | string | 可扣费结束日期
 | scheduled_amount | object {data-tooltip="对应PHP的array"} | 已预约的扣费金额信息
 | total {data-required data-indent=1} | number | 金额
-| currency {data-indent=1} | string | 货币类型
+| currency {data-indent=1} | string | 货币类型<br/>`CNY` 枚举值
 | deduct_amount | object {data-tooltip="对应PHP的array"} | 实际扣费金额
 | total {data-required data-indent=1} | number | 金额
-| currency {data-indent=1} | string | 货币类型
+| currency {data-indent=1} | string | 货币类型<br/>`CNY` 枚举值
 | deduct_date | string | 实际扣费的日期
 
 {.im-table #response}

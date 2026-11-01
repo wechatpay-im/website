@@ -159,7 +159,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | out_order_no {data-required} | string | 商户补差回退单号
 | amount {data-required} | integer | 补差回退金额
 | description {data-required} | string | 补差回退描述
-| result {data-required} | string | 补差回退结果
+| result {data-required} | string | 补差单状态<br/>`SUCCESS` \| `FAIL` \| `REFUND` 枚举值之一
 | success_time {data-required} | string | 补差回退完成时间
 | subsidy_id | string | 微信补差单号
 | from | object[] {data-tooltip="对应PHP的array"} | 回退出资账户及金额

@@ -101,8 +101,8 @@ $instance->v3->payscore->servicepayondeliveryorder->postAsync([
       'real_merchant_appid' => 'wxd678efh567hg6787',
       'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid'          => '',
-        'path'           => '',
+        'appid'          => 'wxd678efh567hg6787',
+        'path'           => '/page/order/orderid=PO213412451223',
       ],
       'goods'               => [[
         'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
@@ -163,8 +163,8 @@ $instance->chain('v3/payscore/servicepayondeliveryorder')->postAsync([
       'real_merchant_appid' => 'wxd678efh567hg6787',
       'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid'          => '',
-        'path'           => '',
+        'appid'          => 'wxd678efh567hg6787',
+        'path'           => '/page/order/orderid=PO213412451223',
       ],
       'goods'               => [[
         'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
@@ -225,8 +225,8 @@ $instance['v3/payscore/servicepayondeliveryorder']->postAsync([
       'real_merchant_appid' => 'wxd678efh567hg6787',
       'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid'          => '',
-        'path'           => '',
+        'appid'          => 'wxd678efh567hg6787',
+        'path'           => '/page/order/orderid=PO213412451223',
       ],
       'goods'               => [[
         'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
@@ -287,8 +287,8 @@ $response = $instance->v3->payscore->servicepayondeliveryorder->post([
       'real_merchant_appid' => 'wxd678efh567hg6787',
       'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid'          => '',
-        'path'           => '',
+        'appid'          => 'wxd678efh567hg6787',
+        'path'           => '/page/order/orderid=PO213412451223',
       ],
       'goods'               => [[
         'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
@@ -346,8 +346,8 @@ $response = $instance->chain('v3/payscore/servicepayondeliveryorder')->post([
       'real_merchant_appid' => 'wxd678efh567hg6787',
       'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid'          => '',
-        'path'           => '',
+        'appid'          => 'wxd678efh567hg6787',
+        'path'           => '/page/order/orderid=PO213412451223',
       ],
       'goods'               => [[
         'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
@@ -405,8 +405,8 @@ $response = $instance['v3/payscore/servicepayondeliveryorder']->post([
       'real_merchant_appid' => 'wxd678efh567hg6787',
       'jump_link'           => [
         'jump_link_type' => 'JUMP_LINK_MINI_PROGRAM',
-        'appid'          => '',
-        'path'           => '',
+        'appid'          => 'wxd678efh567hg6787',
+        'path'           => '/page/order/orderid=PO213412451223',
       ],
       'goods'               => [[
         'name'        => '森海塞尔 MOMENTUM 4 无线耳机大馒头4 头戴式蓝牙音乐耳机自适应降噪',
@@ -461,7 +461,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | shopping_info | object {data-tooltip="对应PHP的array"} | 先用后付购物详情
 | real_merchant_appid {data-indent=1} | string | 实际购物商家公众号ID
 | jump_link {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 单详跳转链接
-| jump_link_type {data-required data-indent=2} | string | 跳转链接类型
+| jump_link_type {data-required data-indent=2} | string | 跳转链接类型<br/>`JUMP_LINK_MINI_PROGRAM` 枚举值
 | appid {data-indent=2} | string | 小程序跳转AppID
 | path {data-indent=2} | string | 小程序跳转path
 | goods {data-required data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 商品列表

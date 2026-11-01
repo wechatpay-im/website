@@ -20,7 +20,7 @@ description: 用于服务商/商户开发者在顾客下单后为顾客分配服
 
 ```php [异步纯链式]
 $instance->v3->smartguide->guides->_guide_id_->assign->postAsync([
-  'guide_id' => '',
+  'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
@@ -34,7 +34,7 @@ $instance->v3->smartguide->guides->_guide_id_->assign->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/smartguide/guides/{guide_id}/assign')->postAsync([
-  'guide_id' => '',
+  'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
@@ -48,7 +48,7 @@ $instance->chain('v3/smartguide/guides/{guide_id}/assign')->postAsync([
 
 ```php [异步属性式]
 $instance['v3/smartguide/guides/{guide_id}/assign']->postAsync([
-  'guide_id' => '',
+  'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
@@ -62,7 +62,7 @@ $instance['v3/smartguide/guides/{guide_id}/assign']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->smartguide->guides->_guide_id_->assign->post([
-  'guide_id' => '',
+  'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
@@ -73,7 +73,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/smartguide/guides/{guide_id}/assign')->post([
-  'guide_id' => '',
+  'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',
@@ -84,7 +84,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/smartguide/guides/{guide_id}/assign']->post([
-  'guide_id' => '',
+  'guide_id' => 'LLA3WJ6DSZUfiaZDS79FH5Wm5m4X69TBic',
   'json' => [
     'sub_mchid'    => '1234567890',
     'out_trade_no' => '20150806125346',

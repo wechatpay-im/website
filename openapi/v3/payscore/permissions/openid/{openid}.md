@@ -105,8 +105,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | authorization_state {data-required} | string | 授权状态<br/>`UNAVAILABLE` \| `AVAILABLE` \| `UNBINDUSER` 枚举值之一
 | cancel_authorization_time | string | 最近一次解除授权时间
 | authorization_success_time | string | 最近一次授权成功时间
-| user_risk_level | number | 用户分层
-| risk_level_version | number | 分层版本
 
 {.im-table #response}
 

@@ -136,8 +136,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_mchid {data-required} | string | 回退商户号
 | amount {data-required} | integer | 回退金额
 | return_no {data-required} | string | 微信回退单号
-| result {data-required} | string | 回退结果
-| fail_reason | string | 失败原因
+| result {data-required} | string | 回退结果<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
+| fail_reason | string | 回退失败的原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` 枚举值之一
 | finish_time {data-required} | string | 完成时间
 | transaction_id {data-required} | string | 微信订单号
 
@@ -253,8 +253,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | return_mchid {data-required} | string | 回退商户号
 | amount {data-required} | integer | 回退金额
 | return_no {data-required} | string | 微信回退单号
-| result {data-required} | string | 回退结果
-| fail_reason | string | 失败原因
+| result {data-required} | string | 回退结果<br/>`PROCESSING` \| `SUCCESS` \| `FAIL` 枚举值之一
+| fail_reason | string | 回退失败的原因<br/>`ACCOUNT_ABNORMAL` \| `TIME_OUT_CLOSED` 枚举值之一
 | finish_time {data-required} | string | 完成时间
 | transaction_id {data-required} | string | 微信订单号
 

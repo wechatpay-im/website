@@ -26,7 +26,7 @@ description: 如：若需要在3号扣费，则需要在1号将通知下发给�
 
 ```php [异步纯链式]
 $instance->v3->papay->contracts->_contract_id_->notify->postAsync([
-  'contract_id' => '',
+  'contract_id' => '123124412412423431',
   'json' => [
     'mchid'            => '1230000109',
     'appid'            => 'wxd678efh567hg6787',
@@ -48,7 +48,7 @@ $instance->v3->papay->contracts->_contract_id_->notify->postAsync([
 
 ```php [异步声明式]
 $instance->chain('v3/papay/contracts/{contract_id}/notify')->postAsync([
-  'contract_id' => '',
+  'contract_id' => '123124412412423431',
   'json' => [
     'mchid'            => '1230000109',
     'appid'            => 'wxd678efh567hg6787',
@@ -70,7 +70,7 @@ $instance->chain('v3/papay/contracts/{contract_id}/notify')->postAsync([
 
 ```php [异步属性式]
 $instance['v3/papay/contracts/{contract_id}/notify']->postAsync([
-  'contract_id' => '',
+  'contract_id' => '123124412412423431',
   'json' => [
     'mchid'            => '1230000109',
     'appid'            => 'wxd678efh567hg6787',
@@ -92,7 +92,7 @@ $instance['v3/papay/contracts/{contract_id}/notify']->postAsync([
 
 ```php [同步纯链式]
 $response = $instance->v3->papay->contracts->_contract_id_->notify->post([
-  'contract_id' => '',
+  'contract_id' => '123124412412423431',
   'json' => [
     'mchid'            => '1230000109',
     'appid'            => 'wxd678efh567hg6787',
@@ -111,7 +111,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步声明式]
 $response = $instance->chain('v3/papay/contracts/{contract_id}/notify')->post([
-  'contract_id' => '',
+  'contract_id' => '123124412412423431',
   'json' => [
     'mchid'            => '1230000109',
     'appid'            => 'wxd678efh567hg6787',
@@ -130,7 +130,7 @@ print_r($response->getStatusCode() === 204);
 
 ```php [同步属性式]
 $response = $instance['v3/papay/contracts/{contract_id}/notify']->post([
-  'contract_id' => '',
+  'contract_id' => '123124412412423431',
   'json' => [
     'mchid'            => '1230000109',
     'appid'            => 'wxd678efh567hg6787',

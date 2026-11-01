@@ -26,14 +26,14 @@
 ```php [异步纯链式]
 $instance->v3->smartguide->guides->postAsync([
   'json' => [
-    'sub_mchid'    => '',
-    'corpid'       => '',
-    'store_id'     => 0,
-    'userid'       => '',
+    'sub_mchid'    => '1234567890',
+    'corpid'       => '1234567890',
+    'store_id'     => 1234,
+    'userid'       => 'robert',
     'name'         => '',
     'mobile'       => '',
-    'qr_code'      => '',
-    'avatar'       => '',
+    'qr_code'      => 'https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=xxx',
+    'avatar'       => 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0',
     'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
@@ -49,14 +49,14 @@ $instance->v3->smartguide->guides->postAsync([
 ```php [异步声明式]
 $instance->chain('v3/smartguide/guides')->postAsync([
   'json' => [
-    'sub_mchid'    => '',
-    'corpid'       => '',
-    'store_id'     => 0,
-    'userid'       => '',
+    'sub_mchid'    => '1234567890',
+    'corpid'       => '1234567890',
+    'store_id'     => 1234,
+    'userid'       => 'robert',
     'name'         => '',
     'mobile'       => '',
-    'qr_code'      => '',
-    'avatar'       => '',
+    'qr_code'      => 'https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=xxx',
+    'avatar'       => 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0',
     'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
@@ -72,14 +72,14 @@ $instance->chain('v3/smartguide/guides')->postAsync([
 ```php [异步属性式]
 $instance['v3/smartguide/guides']->postAsync([
   'json' => [
-    'sub_mchid'    => '',
-    'corpid'       => '',
-    'store_id'     => 0,
-    'userid'       => '',
+    'sub_mchid'    => '1234567890',
+    'corpid'       => '1234567890',
+    'store_id'     => 1234,
+    'userid'       => 'robert',
     'name'         => '',
     'mobile'       => '',
-    'qr_code'      => '',
-    'avatar'       => '',
+    'qr_code'      => 'https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=xxx',
+    'avatar'       => 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0',
     'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
@@ -95,14 +95,14 @@ $instance['v3/smartguide/guides']->postAsync([
 ```php [同步纯链式]
 $response = $instance->v3->smartguide->guides->post([
   'json' => [
-    'sub_mchid'    => '',
-    'corpid'       => '',
-    'store_id'     => 0,
-    'userid'       => '',
+    'sub_mchid'    => '1234567890',
+    'corpid'       => '1234567890',
+    'store_id'     => 1234,
+    'userid'       => 'robert',
     'name'         => '',
     'mobile'       => '',
-    'qr_code'      => '',
-    'avatar'       => '',
+    'qr_code'      => 'https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=xxx',
+    'avatar'       => 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0',
     'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
@@ -115,14 +115,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/smartguide/guides')->post([
   'json' => [
-    'sub_mchid'    => '',
-    'corpid'       => '',
-    'store_id'     => 0,
-    'userid'       => '',
+    'sub_mchid'    => '1234567890',
+    'corpid'       => '1234567890',
+    'store_id'     => 1234,
+    'userid'       => 'robert',
     'name'         => '',
     'mobile'       => '',
-    'qr_code'      => '',
-    'avatar'       => '',
+    'qr_code'      => 'https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=xxx',
+    'avatar'       => 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0',
     'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
@@ -135,14 +135,14 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/smartguide/guides']->post([
   'json' => [
-    'sub_mchid'    => '',
-    'corpid'       => '',
-    'store_id'     => 0,
-    'userid'       => '',
+    'sub_mchid'    => '1234567890',
+    'corpid'       => '1234567890',
+    'store_id'     => 1234,
+    'userid'       => 'robert',
     'name'         => '',
     'mobile'       => '',
-    'qr_code'      => '',
-    'avatar'       => '',
+    'qr_code'      => 'https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=xxx',
+    'avatar'       => 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLA3WJ6DSZUfiakYe37PKnQhBIeOQBO4czqrnZDS79FH5Wm5m4X69TBicnHFlhiafvDwklOpZeXYQQ2icg/0',
     'group_qrcode' => 'https://work.weixin.qq.com/xxxxxxx',
   ],
   'headers' => [
@@ -186,12 +186,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [异步纯链式]
 $instance->v3->smartguide->guides->getAsync([
   'query' => [
-    'sub_mchid' => '',
-    'store_id'  => 0,
-    'userid'    => '',
+    'sub_mchid' => '1234567890',
+    'store_id'  => 1234,
+    'userid'    => 'robert',
     'mobile'    => '',
-    'work_id'   => '',
-    'limit'     => 0,
+    'work_id'   => 'robert',
+    'limit'     => 5,
     'offset'    => 0,
   ],
   'headers' => [
@@ -207,12 +207,12 @@ $instance->v3->smartguide->guides->getAsync([
 ```php [异步声明式]
 $instance->chain('v3/smartguide/guides')->getAsync([
   'query' => [
-    'sub_mchid' => '',
-    'store_id'  => 0,
-    'userid'    => '',
+    'sub_mchid' => '1234567890',
+    'store_id'  => 1234,
+    'userid'    => 'robert',
     'mobile'    => '',
-    'work_id'   => '',
-    'limit'     => 0,
+    'work_id'   => 'robert',
+    'limit'     => 5,
     'offset'    => 0,
   ],
   'headers' => [
@@ -228,12 +228,12 @@ $instance->chain('v3/smartguide/guides')->getAsync([
 ```php [异步属性式]
 $instance['v3/smartguide/guides']->getAsync([
   'query' => [
-    'sub_mchid' => '',
-    'store_id'  => 0,
-    'userid'    => '',
+    'sub_mchid' => '1234567890',
+    'store_id'  => 1234,
+    'userid'    => 'robert',
     'mobile'    => '',
-    'work_id'   => '',
-    'limit'     => 0,
+    'work_id'   => 'robert',
+    'limit'     => 5,
     'offset'    => 0,
   ],
   'headers' => [
@@ -249,12 +249,12 @@ $instance['v3/smartguide/guides']->getAsync([
 ```php [同步纯链式]
 $response = $instance->v3->smartguide->guides->get([
   'query' => [
-    'sub_mchid' => '',
-    'store_id'  => 0,
-    'userid'    => '',
+    'sub_mchid' => '1234567890',
+    'store_id'  => 1234,
+    'userid'    => 'robert',
     'mobile'    => '',
-    'work_id'   => '',
-    'limit'     => 0,
+    'work_id'   => 'robert',
+    'limit'     => 5,
     'offset'    => 0,
   ],
   'headers' => [
@@ -267,12 +267,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步声明式]
 $response = $instance->chain('v3/smartguide/guides')->get([
   'query' => [
-    'sub_mchid' => '',
-    'store_id'  => 0,
-    'userid'    => '',
+    'sub_mchid' => '1234567890',
+    'store_id'  => 1234,
+    'userid'    => 'robert',
     'mobile'    => '',
-    'work_id'   => '',
-    'limit'     => 0,
+    'work_id'   => 'robert',
+    'limit'     => 5,
     'offset'    => 0,
   ],
   'headers' => [
@@ -285,12 +285,12 @@ print_r(json_decode((string) $response->getBody(), true));
 ```php [同步属性式]
 $response = $instance['v3/smartguide/guides']->get([
   'query' => [
-    'sub_mchid' => '',
-    'store_id'  => 0,
-    'userid'    => '',
+    'sub_mchid' => '1234567890',
+    'store_id'  => 1234,
+    'userid'    => 'robert',
     'mobile'    => '',
-    'work_id'   => '',
-    'limit'     => 0,
+    'work_id'   => 'robert',
+    'limit'     => 5,
     'offset'    => 0,
   ],
   'headers' => [

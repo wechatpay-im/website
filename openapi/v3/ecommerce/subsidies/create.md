@@ -116,7 +116,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | subsidy_id {data-required} | string | 微信补差单号
 | description {data-required} | string | 补差描述
 | amount {data-required} | integer | 补差金额
-| result {data-required} | string | 补差单结果
+| result {data-required} | string | 补差单状态<br/>`SUCCESS` \| `FAIL` \| `REFUND` 枚举值之一
 | success_time {data-required} | string | 补差完成时间
 | out_subsidy_no | string | 商户补差单号
 

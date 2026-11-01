@@ -109,6 +109,8 @@ print_r(json_decode((string) $response->getBody(), true));
 | date {data-required} | string | 账单日期
 | type {data-required} | string | 账单类型<br/>`QYZFALL` 枚举值
 | download_url {data-required} | string | 账单下载地址
+| hash_type {data-required} | string | 哈希类型
+| hash_value {data-required} | string | 哈希值
 
 {.im-table #response}
 

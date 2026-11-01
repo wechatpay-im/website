@@ -152,11 +152,10 @@ print_r(json_decode((string) $response->getBody(), true));
 | paying_amount {data-indent=1} | number | 待收金额
 | paid_amount {data-indent=1} | number | 已收金额
 | details {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 收款明细列表
-| amount {data-indent=2} | number | 单笔收款金额
-| paid_type {data-indent=2} | string | 收款成功渠道
-| paid_time {data-indent=2} | string | 收款成功时间
-| transaction_id {data-indent=2} | string | 微信支付交易单号
-| bank_type {data-indent=1} | string | 收款银行
+| amount {data-indent=1} | integer | 单笔收款金额
+| paid_type {data-indent=1} | string | 收款成功渠道
+| paid_time {data-indent=1} | string | 收款成功时间
+| transaction_id {data-indent=1} | string | 微信支付交易单号
 | time_range | object {data-tooltip="对应PHP的array"} | 服务时间
 | start_time {data-indent=1} | string | 服务开始时间
 | end_time {data-indent=1} | string | 服务结束时间

@@ -11,10 +11,8 @@ description: 修改结算帐号API
 | --- | --- | ---
 | sub_mchid {data-required} | string | 特约商户号
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
-| modify_mode {data-indent=1} | string | 修改模式<br/>`MODIFY_MODE_ASYNC` 枚举值
 | account_type {data-required data-indent=1} | string | 账户类型<br/>`ACCOUNT_TYPE_BUSINESS` \| `ACCOUNT_TYPE_PRIVATE` 枚举值之一
 | account_bank {data-required data-indent=1} | string | 开户银行
-| bank_address_code {data-required data-indent=1} | string | 开户银行省市编码
 | bank_name {data-indent=1} | string | 开户银行全称（含支行）
 | bank_branch_id {data-indent=1} | string | 开户银行联行号
 | account_number {data-required data-indent=1} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 银行账号
@@ -30,14 +28,12 @@ description: 修改结算帐号API
 $instance->v3->apply4sub->sub_merchants->_sub_mchid_->modifySettlement->postAsync([
   'sub_mchid' => '1900006491',
   'json' => [
-    'modify_mode'       => 'MODIFY_MODE_ASYNC',
-    'account_type'      => 'ACCOUNT_TYPE_BUSINESS',
-    'account_bank'      => '工商银行',
-    'bank_address_code' => '110000',
-    'bank_name'         => '中国工商银行股份有限公司北京市分行营业部',
-    'bank_branch_id'    => '402713354941',
-    'account_number'    => 'ciphertext',
-    'account_name'      => 'ciphertext',
+    'account_type'   => 'ACCOUNT_TYPE_BUSINESS',
+    'account_bank'   => '工商银行',
+    'bank_name'      => '中国工商银行股份有限公司北京市分行营业部',
+    'bank_branch_id' => '402713354941',
+    'account_number' => 'ciphertext',
+    'account_name'   => 'ciphertext',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -53,14 +49,12 @@ $instance->v3->apply4sub->sub_merchants->_sub_mchid_->modifySettlement->postAsyn
 $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement')->postAsync([
   'sub_mchid' => '1900006491',
   'json' => [
-    'modify_mode'       => 'MODIFY_MODE_ASYNC',
-    'account_type'      => 'ACCOUNT_TYPE_BUSINESS',
-    'account_bank'      => '工商银行',
-    'bank_address_code' => '110000',
-    'bank_name'         => '中国工商银行股份有限公司北京市分行营业部',
-    'bank_branch_id'    => '402713354941',
-    'account_number'    => 'ciphertext',
-    'account_name'      => 'ciphertext',
+    'account_type'   => 'ACCOUNT_TYPE_BUSINESS',
+    'account_bank'   => '工商银行',
+    'bank_name'      => '中国工商银行股份有限公司北京市分行营业部',
+    'bank_branch_id' => '402713354941',
+    'account_number' => 'ciphertext',
+    'account_name'   => 'ciphertext',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -76,14 +70,12 @@ $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement')->po
 $instance['v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement']->postAsync([
   'sub_mchid' => '1900006491',
   'json' => [
-    'modify_mode'       => 'MODIFY_MODE_ASYNC',
-    'account_type'      => 'ACCOUNT_TYPE_BUSINESS',
-    'account_bank'      => '工商银行',
-    'bank_address_code' => '110000',
-    'bank_name'         => '中国工商银行股份有限公司北京市分行营业部',
-    'bank_branch_id'    => '402713354941',
-    'account_number'    => 'ciphertext',
-    'account_name'      => 'ciphertext',
+    'account_type'   => 'ACCOUNT_TYPE_BUSINESS',
+    'account_bank'   => '工商银行',
+    'bank_name'      => '中国工商银行股份有限公司北京市分行营业部',
+    'bank_branch_id' => '402713354941',
+    'account_number' => 'ciphertext',
+    'account_name'   => 'ciphertext',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -99,14 +91,12 @@ $instance['v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement']->postAsync
 $response = $instance->v3->apply4sub->sub_merchants->_sub_mchid_->modifySettlement->post([
   'sub_mchid' => '1900006491',
   'json' => [
-    'modify_mode'       => 'MODIFY_MODE_ASYNC',
-    'account_type'      => 'ACCOUNT_TYPE_BUSINESS',
-    'account_bank'      => '工商银行',
-    'bank_address_code' => '110000',
-    'bank_name'         => '中国工商银行股份有限公司北京市分行营业部',
-    'bank_branch_id'    => '402713354941',
-    'account_number'    => 'ciphertext',
-    'account_name'      => 'ciphertext',
+    'account_type'   => 'ACCOUNT_TYPE_BUSINESS',
+    'account_bank'   => '工商银行',
+    'bank_name'      => '中国工商银行股份有限公司北京市分行营业部',
+    'bank_branch_id' => '402713354941',
+    'account_number' => 'ciphertext',
+    'account_name'   => 'ciphertext',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -119,14 +109,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance->chain('v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement')->post([
   'sub_mchid' => '1900006491',
   'json' => [
-    'modify_mode'       => 'MODIFY_MODE_ASYNC',
-    'account_type'      => 'ACCOUNT_TYPE_BUSINESS',
-    'account_bank'      => '工商银行',
-    'bank_address_code' => '110000',
-    'bank_name'         => '中国工商银行股份有限公司北京市分行营业部',
-    'bank_branch_id'    => '402713354941',
-    'account_number'    => 'ciphertext',
-    'account_name'      => 'ciphertext',
+    'account_type'   => 'ACCOUNT_TYPE_BUSINESS',
+    'account_bank'   => '工商银行',
+    'bank_name'      => '中国工商银行股份有限公司北京市分行营业部',
+    'bank_branch_id' => '402713354941',
+    'account_number' => 'ciphertext',
+    'account_name'   => 'ciphertext',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -139,14 +127,12 @@ print_r(json_decode((string) $response->getBody(), true));
 $response = $instance['v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement']->post([
   'sub_mchid' => '1900006491',
   'json' => [
-    'modify_mode'       => 'MODIFY_MODE_ASYNC',
-    'account_type'      => 'ACCOUNT_TYPE_BUSINESS',
-    'account_bank'      => '工商银行',
-    'bank_address_code' => '110000',
-    'bank_name'         => '中国工商银行股份有限公司北京市分行营业部',
-    'bank_branch_id'    => '402713354941',
-    'account_number'    => 'ciphertext',
-    'account_name'      => 'ciphertext',
+    'account_type'   => 'ACCOUNT_TYPE_BUSINESS',
+    'account_bank'   => '工商银行',
+    'bank_name'      => '中国工商银行股份有限公司北京市分行营业部',
+    'bank_branch_id' => '402713354941',
+    'account_number' => 'ciphertext',
+    'account_name'   => 'ciphertext',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',

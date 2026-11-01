@@ -27,7 +27,7 @@ description: 接口适用场景：电商平台，可使用该接口，帮助其�
 | finance_type {data-indent=2} | string | 金融机构类型<br/>`BANK_AGENT` \| `PAYMENT_AGENT` \| `INSURANCE` \| `TRADE_AND_SETTLE` \| `SMALL_LOAN` \| `OTHER` 枚举值之一
 | finance_license_pics {data-indent=2} | string[] | 金融机构许可证图片
 | id_holder_type {data-indent=1} | string | 超级管理员类型<br/>`LEGAL` \| `SUPER` 枚举值之一
-| id_doc_type {data-indent=1} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
+| id_doc_type {data-indent=1} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
 | authorize_letter_copy {data-indent=1} | string | 法定代表人说明函
 | id_card_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 经营者/法人身份证信息
 | id_card_copy {data-required data-indent=2} | string | 身份证人像面照片
@@ -44,7 +44,7 @@ description: 接口适用场景：电商平台，可使用该接口，帮助其�
 | doc_period_begin {data-required data-indent=2} | string | 证件有效期开始时间
 | doc_period_end {data-required data-indent=2} | string | 证件有效期结束时间
 | ubo_info_list {data-indent=1} | object[] {data-tooltip="对应PHP的array"} | 最终受益人信息列表
-| ubo_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
+| ubo_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
 | ubo_id_doc_copy {data-indent=2} | string | 证件正面照片
 | ubo_id_doc_copy_back {data-indent=2} | string | 证件反面照片
 | ubo_id_doc_name {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 受益人姓名
@@ -62,7 +62,7 @@ description: 接口适用场景：电商平台，可使用该接口，帮助其�
 | contact_info {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 超级管理员信息
 | contact_type {data-required data-indent=2} | string | 超级管理员类型<br/>`65` \| `66` 枚举值之一
 | contact_name {data-required data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员姓名
-| contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` 枚举值之一
+| contact_id_doc_type {data-indent=2} | string | `IDENTIFICATION_TYPE_IDCARD` \| `IDENTIFICATION_TYPE_OVERSEA_PASSPORT` \| `IDENTIFICATION_TYPE_HONGKONG_PASSPORT` \| `IDENTIFICATION_TYPE_MACAO_PASSPORT` \| `IDENTIFICATION_TYPE_TAIWAN_PASSPORT` \| `IDENTIFICATION_TYPE_FOREIGN_RESIDENT` \| `IDENTIFICATION_TYPE_HONGKONG_MACAO_RESIDENT` \| `IDENTIFICATION_TYPE_TAIWAN_RESIDENT` \| `IDENTIFICATION_TYPE_MAINLAND_IDCARD` \| `IDENTIFICATION_TYPE_HONGKONG` \| `IDENTIFICATION_TYPE_MACAO` \| `IDENTIFICATION_TYPE_TAIWAN` 枚举值之一
 | contact_id_card_number {data-indent=2} | string {data-tooltip=微信支付公钥/平台证书加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 超级管理员身份证件号码
 | contact_id_doc_copy {data-indent=2} | string | 超级管理员证件正面照片
 | contact_id_doc_copy_back {data-indent=2} | string | 超级管理员证件反面照片

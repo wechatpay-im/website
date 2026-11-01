@@ -86,12 +86,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | detail_status {data-required} | string | 明细状态
 | transfer_amount {data-required} | integer | 转账金额
 | transfer_remark {data-required} | string | 转账备注
-| fail_reason | string | 明细失败原因
+| fail_reason | string | 明细失败原因<br/>`ACCOUNT_FROZEN` \| `REAL_NAME_CHECK_FAIL` \| `NAME_NOT_CORRECT` \| `OPENID_INVALID` \| `TRANSFER_QUOTA_EXCEED` \| `DAY_RECEIVED_QUOTA_EXCEED` \| `MONTH_RECEIVED_QUOTA_EXCEED` \| `DAY_RECEIVED_COUNT_EXCEED` \| `PRODUCT_AUTH_CHECK_FAIL` \| `OVERDUE_CLOSE` \| `ID_CARD_NOT_CORRECT` \| `ACCOUNT_NOT_EXIST` \| `TRANSFER_RISK` \| `PAYROLL_CARD_ALREADY_LOGOUT` \| `PAYROLL_CARD_ALREADY_FROZEN` \| `PAYROLL_CARD_UNAUTHORIZED` \| `PAYROLL_CARD_USER_NOT_OPEN` \| `PAYROLL_CARD_NAME_CARD_NOT_MATCH` \| `PAYROLL_CARD_ID_CARD_NOT_MATCH` \| `PAYROLL_CARD_BANKCARD_UNBUNDLING` \| `BANK_CARD_COLLECTIONS_ABOVE_QUOTA` \| `BANK_CARD_ACCOUNT_ABNORMAL` \| `BANK_CARD_STATUS_ABNORMAL` \| `BANK_CARD_BANK_INFO_WRONG` \| `BANK_CARD_CARD_INFO_WRONG` \| `OTHER_FAIL_REASON_TYPE` \| `REALNAME_ACCOUNT_RECEIVED_QUOTA_EXCEED` \| `RECEIVE_ACCOUNT_NOT_PERMMIT` \| `PAYEE_ACCOUNT_ABNORMAL` \| `PAYER_ACCOUNT_ABNORMAL` \| `TRANSFER_REMARK_SET_FAIL` \| `TRANSFER_SCENE_INVALID` \| `TRANSFER_SCENE_UNAVAILABLE` \| `RECEIVE_ACCOUNT_NOT_CONFIGURE` \| `BLOCK_B2C_USERLIMITAMOUNT_BSRULE_MONTH` \| `BLOCK_B2C_USERLIMITAMOUNT_MONTH` \| `MERCHANT_REJECT` \| `MERCHANT_NOT_CONFIRM` \| `BANK_CARD_PARAM_ERROR` \| `BANK_CARD_TYPE_NOT_SUPPORTED` 枚举值之一
 | openid {data-required} | string | 收款用户openid
 | username {data-required} | string | 收款用户姓名
 | initiate_time {data-required} | string | 转账发起时间
 | update_time {data-required} | string | 明细更新时间
-| account_type | string | 收款账户类型
+| account_type | string | 收款账户类型<br/>`WECHATPAY_ACCOUNT` \| `BANK_ACCOUNT` 枚举值之一
 | bank_name | string | 银行名称
 | bank_card_number_tail | string | 银行卡尾号
 

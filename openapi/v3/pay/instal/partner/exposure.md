@@ -18,7 +18,6 @@ description: 获取微信分付曝光建议
 | user_id_type {data-indent=2} | string | 用户ID的类型<br/>`UNKNOWN_USER_ID_TYPE` \| `OPENID` \| `PHONE_NO` \| `SP_OPENID` \| `SUB_OPENID` 枚举值之一
 | sp_openid {data-indent=2} | string | 用户服务标识
 | sub_openid {data-indent=2} | string | 用户子标识
-| phone_number_hash {data-indent=2} | string | 用户手机号的哈希值
 
 {.im-table #request}
 
@@ -32,10 +31,9 @@ $instance->v3->pay->instal->partner->exposure->postAsync([
     'sub_appid' => 'wxd678efh567hg6999',
     'sub_mchid' => '1900000109',
     'user_id'   => [
-      'user_id_type'      => 'OPENID',
-      'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'phone_number_hash' => 'ABDEF3445546456B',
+      'user_id_type' => 'OPENID',
+      'sp_openid'    => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'sub_openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
   ],
 ])
@@ -53,10 +51,9 @@ $instance->chain('v3/pay/instal/partner/exposure')->postAsync([
     'sub_appid' => 'wxd678efh567hg6999',
     'sub_mchid' => '1900000109',
     'user_id'   => [
-      'user_id_type'      => 'OPENID',
-      'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'phone_number_hash' => 'ABDEF3445546456B',
+      'user_id_type' => 'OPENID',
+      'sp_openid'    => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'sub_openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
   ],
 ])
@@ -74,10 +71,9 @@ $instance['v3/pay/instal/partner/exposure']->postAsync([
     'sub_appid' => 'wxd678efh567hg6999',
     'sub_mchid' => '1900000109',
     'user_id'   => [
-      'user_id_type'      => 'OPENID',
-      'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'phone_number_hash' => 'ABDEF3445546456B',
+      'user_id_type' => 'OPENID',
+      'sp_openid'    => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'sub_openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
   ],
 ])
@@ -95,10 +91,9 @@ $response = $instance->v3->pay->instal->partner->exposure->post([
     'sub_appid' => 'wxd678efh567hg6999',
     'sub_mchid' => '1900000109',
     'user_id'   => [
-      'user_id_type'      => 'OPENID',
-      'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'phone_number_hash' => 'ABDEF3445546456B',
+      'user_id_type' => 'OPENID',
+      'sp_openid'    => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'sub_openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
   ],
 ]);
@@ -113,10 +108,9 @@ $response = $instance->chain('v3/pay/instal/partner/exposure')->post([
     'sub_appid' => 'wxd678efh567hg6999',
     'sub_mchid' => '1900000109',
     'user_id'   => [
-      'user_id_type'      => 'OPENID',
-      'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'phone_number_hash' => 'ABDEF3445546456B',
+      'user_id_type' => 'OPENID',
+      'sp_openid'    => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'sub_openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
   ],
 ]);
@@ -131,10 +125,9 @@ $response = $instance['v3/pay/instal/partner/exposure']->post([
     'sub_appid' => 'wxd678efh567hg6999',
     'sub_mchid' => '1900000109',
     'user_id'   => [
-      'user_id_type'      => 'OPENID',
-      'sp_openid'         => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'sub_openid'        => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-      'phone_number_hash' => 'ABDEF3445546456B',
+      'user_id_type' => 'OPENID',
+      'sp_openid'    => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+      'sub_openid'   => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     ],
   ],
 ]);
@@ -146,6 +139,9 @@ print_r(json_decode((string) $response->getBody(), true));
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | recommend_exposure {data-required} | boolean | 是否建议曝光微信分付
+| repayment_info | object[] {data-tooltip="对应PHP的array"} | 还款信息
+| repayment_type {data-required data-indent=1} | string | 还款方式<br/>`REPAYMENT_DAILY` \| `REPAYMENT_INSTALL_3` \| `REPAYMENT_INSTALL_6` \| `REPAYMENT_INSTALL_12` \| `REPAYMENT_INSTALL_24` 枚举值之一
+| exist_cash_off_coupon {data-required data-indent=1} | boolean | 是否存在平台优惠
 
 {.im-table #response}
 

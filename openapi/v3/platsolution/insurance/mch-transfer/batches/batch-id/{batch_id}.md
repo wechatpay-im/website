@@ -139,7 +139,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | data | object[] {data-tooltip="对应PHP的array"} | 转账明细单列表
 | detail_id {data-required data-indent=1} | string | 商家转账明细单号
 | out_detail_no {data-required data-indent=1} | string | 商家明细单号
-| detail_state {data-required data-indent=1} | string | 明细状态<br/>`INIT` \| `ALL` \| `WAIT_PAY` \| `SUCCESS` \| `FAIL` \| `BANK_REFUND` 枚举值之一
+| detail_state {data-required data-indent=1} | string | 明细状态<br/>`INIT` \| `ALL` \| `WAIT_PAY` \| `SUCCESS` \| `FAIL` \| `BANK_REFUND` \| `PROCESSING` 枚举值之一
 | offset | number | 请求资源起始位置
 | limit | number | 最大资源条数
 

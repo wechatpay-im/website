@@ -18,7 +18,6 @@ description: 模式一：在刷掌原生小程序完成开通刷掌服务后，�
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | openid {data-required data-indent=1} | string | OpenID
 | preauthorize_session_id {data-indent=1} | string | 预授权会话ID
-| organization_id {data-indent=1} | string | 机构ID
 
 {.im-table #request}
 
@@ -29,7 +28,6 @@ $instance->v3->palmservice->authorization->preauthorize->postAsync([
   'json' => [
     'openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'preauthorize_session_id' => '181167098309019291163',
-    'organization_id'         => '1004',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -43,7 +41,6 @@ $instance->chain('v3/palmservice/authorization/preauthorize')->postAsync([
   'json' => [
     'openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'preauthorize_session_id' => '181167098309019291163',
-    'organization_id'         => '1004',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -57,7 +54,6 @@ $instance['v3/palmservice/authorization/preauthorize']->postAsync([
   'json' => [
     'openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'preauthorize_session_id' => '181167098309019291163',
-    'organization_id'         => '1004',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -71,7 +67,6 @@ $response = $instance->v3->palmservice->authorization->preauthorize->post([
   'json' => [
     'openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'preauthorize_session_id' => '181167098309019291163',
-    'organization_id'         => '1004',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -82,7 +77,6 @@ $response = $instance->chain('v3/palmservice/authorization/preauthorize')->post(
   'json' => [
     'openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'preauthorize_session_id' => '181167098309019291163',
-    'organization_id'         => '1004',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -93,7 +87,6 @@ $response = $instance['v3/palmservice/authorization/preauthorize']->post([
   'json' => [
     'openid'                  => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
     'preauthorize_session_id' => '181167098309019291163',
-    'organization_id'         => '1004',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

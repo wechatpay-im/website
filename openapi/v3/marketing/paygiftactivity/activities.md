@@ -13,7 +13,7 @@ description: 商户根据一定过滤条件，查询已创建的支付有礼活�
 | offset {data-required data-indent=1} | integer | 分页页码
 | limit {data-required data-indent=1} | integer | 分页大小
 | activity_name {data-indent=1} | string | 活动名称
-| activity_status {data-indent=1} | string | 活动状态<br/>`ACT_STATUS_UNKNOWN` \| `CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` \| `CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
+| activity_status {data-indent=1} | string | 活动状态<br/>`ACT_STATUS_UNKNOWN` \| `CREATE_ACT_STATUS` \| `ONGOING_ACT_STATUS` \| `TERMINATE_ACT_STATUS` \| `STOP_ACT_STATUS` \| `OVER_TIME_ACT_STATUS` \| `CREATE_ACT_FAILED` 枚举值之一
 | award_type {data-indent=1} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 
 {.im-table #request}
@@ -134,17 +134,17 @@ print_r(json_decode((string) $response->getBody(), true));
 | mini_programs_appid {data-indent=2} | string | 商家小程序appid
 | mini_programs_path {data-indent=2} | string | 商家小程序path
 | advanced_setting {data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动高级设置
-| delivery_user_category {data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
+| delivery_user_category {data-indent=2} | string | 奖品类型<br/>`BUSIFAVOR` \| `DELIVERY_ALL_PERSON` \| `DELIVERY_MEMBER_PERSON` 枚举值之一
 | merchant_member_appid {data-indent=2} | string | 商家会员appid
 | payment_mode {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付模式
-| payment_scene_list {data-indent=3} | string[] | 支付场景列表<br/>`APP_SCENE` 枚举值
-| payment_method_information {data-indent=3} | object {data-tooltip="对应PHP的array"} | 支付方式信息
-| payment_method {data-indent=4} | string | 支付方式<br/>`CFT` \| `SPECIFIC_BANK_CARD` 枚举值之一
-| bank_abbreviation {data-indent=4} | string | 银行简称
+| payment_scene_list {data-indent=3} | string[] | 支付场景列表<br/>`APP_SCENE` \| `SWING_CARD_SCENE` \| `NO_SECRET_SCENE` \| `MINIAPP_SCENE` \| `FACE_PAY_SCENE` \| `OTHER_SCENE` 枚举值之一
 | goods_tags {data-indent=2} | string[] | 订单优惠标记
+| payment_method_information {data-indent=2} | object {data-tooltip="对应PHP的array"} | 支付方式信息
+| payment_method {data-required data-indent=3} | string | 支付方式<br/>`CFT` \| `SPECIFIC_BANK_CARD` 枚举值之一
+| bank_abbreviation {data-indent=3} | string | 银行简称
 | activity_id {data-indent=1} | string | 活动id
 | award_send_rule {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 活动奖品发放规则
-| full_send_rule {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满送活动奖品发放规则
+| full_send_rule {data-indent=2} | object {data-tooltip="对应PHP的array"} | 阶梯送发放规则
 | award_type {data-required data-indent=3} | string | 奖品类型<br/>`BUSIFAVOR` 枚举值
 | merchant_option {data-required data-indent=3} | string | 发券商户号选项<br/>`IN_SEVICE_COUPON_MERCHANT` \| `MANUAL_INPUT_MERCHANT` 枚举值之一
 | transaction_amount_minimum {data-required data-indent=3} | integer | 消费金额门槛

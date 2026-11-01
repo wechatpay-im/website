@@ -17,7 +17,6 @@ description: 使用签约协议号发起扣款，本接口支持两种模式，�
 | attach {data-indent=1} | string | 商户数据
 | out_trade_no {data-required data-indent=1} | string | 商户订单号
 | goods_tag {data-indent=1} | string | 订单优惠标记
-| notify_url {data-required data-indent=1} | string | 商户接收通知地址
 | contract_id {data-required data-indent=1} | string | 签约协议号
 | user_id {data-required data-indent=1} | string | 用户账号
 | amount {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 订单金额
@@ -32,7 +31,6 @@ description: 使用签约协议号发起扣款，本接口支持两种模式，�
 | device_ip {data-required data-indent=2} | string | 商户端设备ip
 | settle_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 分账结算信息
 | profit_sharing {data-indent=2} | boolean | 是否指定分账
-| payment_mode {data-indent=1} | string | 扣款模式
 
 {.im-table #request}
 
@@ -48,7 +46,6 @@ $instance->v3->eduschoolpay->transactions->postAsync([
     'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
     'goods_tag'    => 'test',
-    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
     'contract_id'  => '2045011120563805041758214605',
     'user_id'      => '20200330tony',
     'amount'       => [
@@ -67,7 +64,6 @@ $instance->v3->eduschoolpay->transactions->postAsync([
     'settle_info'  => [
       'profit_sharing' => true,
     ],
-    'payment_mode' => 'SYNC',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -86,7 +82,6 @@ $instance->chain('v3/eduschoolpay/transactions')->postAsync([
     'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
     'goods_tag'    => 'test',
-    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
     'contract_id'  => '2045011120563805041758214605',
     'user_id'      => '20200330tony',
     'amount'       => [
@@ -105,7 +100,6 @@ $instance->chain('v3/eduschoolpay/transactions')->postAsync([
     'settle_info'  => [
       'profit_sharing' => true,
     ],
-    'payment_mode' => 'SYNC',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -124,7 +118,6 @@ $instance['v3/eduschoolpay/transactions']->postAsync([
     'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
     'goods_tag'    => 'test',
-    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
     'contract_id'  => '2045011120563805041758214605',
     'user_id'      => '20200330tony',
     'amount'       => [
@@ -143,7 +136,6 @@ $instance['v3/eduschoolpay/transactions']->postAsync([
     'settle_info'  => [
       'profit_sharing' => true,
     ],
-    'payment_mode' => 'SYNC',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -162,7 +154,6 @@ $response = $instance->v3->eduschoolpay->transactions->post([
     'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
     'goods_tag'    => 'test',
-    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
     'contract_id'  => '2045011120563805041758214605',
     'user_id'      => '20200330tony',
     'amount'       => [
@@ -181,7 +172,6 @@ $response = $instance->v3->eduschoolpay->transactions->post([
     'settle_info'  => [
       'profit_sharing' => true,
     ],
-    'payment_mode' => 'SYNC',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -197,7 +187,6 @@ $response = $instance->chain('v3/eduschoolpay/transactions')->post([
     'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
     'goods_tag'    => 'test',
-    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
     'contract_id'  => '2045011120563805041758214605',
     'user_id'      => '20200330tony',
     'amount'       => [
@@ -216,7 +205,6 @@ $response = $instance->chain('v3/eduschoolpay/transactions')->post([
     'settle_info'  => [
       'profit_sharing' => true,
     ],
-    'payment_mode' => 'SYNC',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -232,7 +220,6 @@ $response = $instance['v3/eduschoolpay/transactions']->post([
     'attach'       => '自定义数据',
     'out_trade_no' => '121775250124070332',
     'goods_tag'    => 'test',
-    'notify_url'   => 'https://www.weixin.qq.com/wxpay/pay',
     'contract_id'  => '2045011120563805041758214605',
     'user_id'      => '20200330tony',
     'amount'       => [
@@ -251,7 +238,6 @@ $response = $instance['v3/eduschoolpay/transactions']->post([
     'settle_info'  => [
       'profit_sharing' => true,
     ],
-    'payment_mode' => 'SYNC',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));

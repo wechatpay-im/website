@@ -11,10 +11,10 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 | --- | --- | ---
 | json {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`JSON`数据结构
 | appid {data-required data-indent=1} | string | 公众账号ID
-| type {data-required data-indent=1} | string | 接收方类型
+| type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 接收方账号
 | name {data-indent=1} | string | 接收方名称
-| relation_type {data-required data-indent=1} | string | 与分账方的关系类型
+| relation_type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | headers {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的头参数
 | Wechatpay-Serial {data-required data-indent=1} | string | 微信支付公钥ID/平台证书序列号
 
@@ -29,7 +29,7 @@ $instance->v3->ecommerce->profitsharing->receivers->add->postAsync([
     'type'          => 'MERCHANT_ID',
     'account'       => '190001001',
     'name'          => '张三网络公司',
-    'relation_type' => 'SUPPLIER',
+    'relation_type' => 'MERCHANT_ID',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -48,7 +48,7 @@ $instance->chain('v3/ecommerce/profitsharing/receivers/add')->postAsync([
     'type'          => 'MERCHANT_ID',
     'account'       => '190001001',
     'name'          => '张三网络公司',
-    'relation_type' => 'SUPPLIER',
+    'relation_type' => 'MERCHANT_ID',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -67,7 +67,7 @@ $instance['v3/ecommerce/profitsharing/receivers/add']->postAsync([
     'type'          => 'MERCHANT_ID',
     'account'       => '190001001',
     'name'          => '张三网络公司',
-    'relation_type' => 'SUPPLIER',
+    'relation_type' => 'MERCHANT_ID',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -86,7 +86,7 @@ $response = $instance->v3->ecommerce->profitsharing->receivers->add->post([
     'type'          => 'MERCHANT_ID',
     'account'       => '190001001',
     'name'          => '张三网络公司',
-    'relation_type' => 'SUPPLIER',
+    'relation_type' => 'MERCHANT_ID',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -102,7 +102,7 @@ $response = $instance->chain('v3/ecommerce/profitsharing/receivers/add')->post([
     'type'          => 'MERCHANT_ID',
     'account'       => '190001001',
     'name'          => '张三网络公司',
-    'relation_type' => 'SUPPLIER',
+    'relation_type' => 'MERCHANT_ID',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -118,7 +118,7 @@ $response = $instance['v3/ecommerce/profitsharing/receivers/add']->post([
     'type'          => 'MERCHANT_ID',
     'account'       => '190001001',
     'name'          => '张三网络公司',
-    'relation_type' => 'SUPPLIER',
+    'relation_type' => 'MERCHANT_ID',
   ],
   'headers' => [
     'Wechatpay-Serial' => 'PUB_KEY_ID_0114232134912410000000000000',
@@ -131,7 +131,7 @@ print_r(json_decode((string) $response->getBody(), true));
 
 | 返回字典 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
-| type {data-required} | string | 接收方类型
+| type {data-required} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` 枚举值之一
 | account {data-required} | string | 接收方账号
 
 {.im-table #response}

@@ -95,7 +95,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | currency {data-required data-indent=2} | string | 标价币种
 | payer_currency {data-required data-indent=2} | string | 现金支付币种
 | settlement_rate {data-indent=2} | number | 结算汇率
-| trade_scenario | string | 交易场景<br/>`RECOMMERCE` 枚举值
 
 {.im-table #response}
 

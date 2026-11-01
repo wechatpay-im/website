@@ -24,7 +24,6 @@ description: 商户可调用该接口从保证金账户赔付给用户。注：�
 | transfer_remark {data-required data-indent=1} | string | 赔付原因
 | transfer_scene_id {data-indent=1} | string | 转账场景ID
 | user_recv_perception {data-indent=1} | string | 用户收款感知
-| sub_appid {data-indent=1} | string | 二级商户AppID
 
 {.im-table #request}
 
@@ -50,7 +49,6 @@ $instance->v3->platsolution->ecommerce->mchTransfer->depositAfterSalesCompensati
     'transfer_remark'      => '直播违规扣罚',
     'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
-    'sub_appid'            => 'wx8888888888888888',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -79,7 +77,6 @@ $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-com
     'transfer_remark'      => '直播违规扣罚',
     'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
-    'sub_appid'            => 'wx8888888888888888',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -108,7 +105,6 @@ $instance['v3/platsolution/ecommerce/mch-transfer/deposit-after-sales-compensati
     'transfer_remark'      => '直播违规扣罚',
     'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
-    'sub_appid'            => 'wx8888888888888888',
   ],
 ])
 ->then(static function(\Psr\Http\Message\ResponseInterface $response) {
@@ -137,7 +133,6 @@ $response = $instance->v3->platsolution->ecommerce->mchTransfer->depositAfterSal
     'transfer_remark'      => '直播违规扣罚',
     'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
-    'sub_appid'            => 'wx8888888888888888',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -163,7 +158,6 @@ $response = $instance->chain('v3/platsolution/ecommerce/mch-transfer/deposit-aft
     'transfer_remark'      => '直播违规扣罚',
     'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
-    'sub_appid'            => 'wx8888888888888888',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -189,7 +183,6 @@ $response = $instance['v3/platsolution/ecommerce/mch-transfer/deposit-after-sale
     'transfer_remark'      => '直播违规扣罚',
     'transfer_scene_id'    => '1001',
     'user_recv_perception' => '退货运费补偿',
-    'sub_appid'            => 'wx8888888888888888',
   ],
 ]);
 print_r(json_decode((string) $response->getBody(), true));
@@ -203,10 +196,12 @@ print_r(json_decode((string) $response->getBody(), true));
 | sub_mchid | string | 二级商户号
 | receiver_detail {data-required} | object {data-tooltip="对应PHP的array"} | 转账接收方信息
 | receiver {data-indent=1} | object {data-tooltip="对应PHP的array"} | 转账接收者信息
-| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` 枚举值之一
+| type {data-indent=2} | string | 转账接收方类型<br/>`MERCHANT` \| `TRANSACTION_USER` \| `WXPAY_USER` 枚举值之一
 | transaction_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方订单信息
 | transaction_id {data-required data-indent=3} | string | 交易订单号
 | type {data-indent=3} | string | 转账接收方订单类型<br/>`WXPAY` \| `WXVALUE` 枚举值之一
+| user_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 转账接收方用户
+| sp_openid {data-indent=3} | string | 转账接收方用户openid
 | out_bill_no {data-required} | string | 商户单号
 | amount | number | 赔付金额
 | transfer_remark {data-required} | string | 赔付原因
@@ -215,7 +210,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | accept_time {data-required} | string | 受理时间
 | success_time | string | 成功时间
 | sponsor_mchid | string | 出资商户号
-| sub_appid | string | 二级商户AppID
+| sp_appid | string | 公众账号ID
 
 {.im-table #response}
 

@@ -114,7 +114,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | description {data-required data-indent=1} | string | 分账描述
 | type {data-required data-indent=1} | string | 分账接收方类型<br/>`MERCHANT_ID` \| `PERSONAL_OPENID` \| `PERSONAL_SUB_OPENID` 枚举值之一
 | account {data-required data-indent=1} | string | 分账接收方帐号
-| result {data-required data-indent=1} | string | 分账结果
+| result {data-required data-indent=1} | string | 分账结果<br/>`PENDING` \| `SUCCESS` \| `CLOSED` 枚举值之一
 | fail_reason {data-required data-indent=1} | string | 分账失败原因<br/>`ACCOUNT_ABNORMAL` \| `NO_RELATION` \| `RECEIVER_HIGH_RISK` \| `RECEIVER_REAL_NAME_NOT_VERIFIED` \| `NO_AUTH` \| `RECEIVER_RECEIPT_LIMIT` \| `PAYER_ACCOUNT_ABNORMAL` \| `INVALID_REQUEST` 枚举值之一
 | detail_id {data-indent=1} | string | 分账明细单号
 | create_time {data-required data-indent=1} | string | 分账创建时间
