@@ -192,6 +192,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | goods_name {data-indent=2} | string | 商品名称
 | quantity {data-required data-indent=2} | number | 商品数量
 | price {data-required data-indent=2} | number | 商品单价
+| rate | string | 汇率
 
 {.im-table #response}
 

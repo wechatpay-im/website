@@ -129,6 +129,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | short_url {data-required} | string | URL链接
 | sub_appid | string | 子商户公众账号ID
 | sub_mch_id | string | 子商户号
+| long_url | string | URL链接
 
 {.im-table #response}
 

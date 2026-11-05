@@ -11,7 +11,7 @@ description: 通过此接口可以查询结算资金的明细。
 | --- | --- | ---
 | xml {data-required} | object {data-tooltip="对应PHP的array"} | 声明请求的`XML`数据结构
 | appid {data-required data-indent=1} | string | 公众账号ID
-| mchid {data-required data-indent=1} | string | 商户号
+| mch_id {data-required data-indent=1} | string | 商户号
 | sub_mch_id {data-indent=1} | string | 子商户号
 | usetag {data-required data-indent=1} | integer | 结算状态<br/>`1` \| `2` 枚举值之一
 | offset {data-required data-indent=1} | integer | 偏移量
@@ -28,7 +28,7 @@ description: 通过此接口可以查询结算资金的明细。
 $instance->v2->pay->settlementquery->postAsync([
   'xml' => [
     'appid'       => 'wxd678efh567hg6787',
-    'mchid'       => '1900000109',
+    'mch_id'      => '1900000109',
     'sub_mch_id'  => '1230000109',
     'usetag'      => '1',
     'offset'      => '0',
@@ -48,7 +48,7 @@ $instance->v2->pay->settlementquery->postAsync([
 $instance->chain('v2/pay/settlementquery')->postAsync([
   'xml' => [
     'appid'       => 'wxd678efh567hg6787',
-    'mchid'       => '1900000109',
+    'mch_id'      => '1900000109',
     'sub_mch_id'  => '1230000109',
     'usetag'      => '1',
     'offset'      => '0',
@@ -68,7 +68,7 @@ $instance->chain('v2/pay/settlementquery')->postAsync([
 $instance['v2/pay/settlementquery']->postAsync([
   'xml' => [
     'appid'       => 'wxd678efh567hg6787',
-    'mchid'       => '1900000109',
+    'mch_id'      => '1900000109',
     'sub_mch_id'  => '1230000109',
     'usetag'      => '1',
     'offset'      => '0',
@@ -88,7 +88,7 @@ $instance['v2/pay/settlementquery']->postAsync([
 $response = $instance->v2->pay->settlementquery->post([
   'xml' => [
     'appid'       => 'wxd678efh567hg6787',
-    'mchid'       => '1900000109',
+    'mch_id'      => '1900000109',
     'sub_mch_id'  => '1230000109',
     'usetag'      => '1',
     'offset'      => '0',
@@ -105,7 +105,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 $response = $instance->chain('v2/pay/settlementquery')->post([
   'xml' => [
     'appid'       => 'wxd678efh567hg6787',
-    'mchid'       => '1900000109',
+    'mch_id'      => '1900000109',
     'sub_mch_id'  => '1230000109',
     'usetag'      => '1',
     'offset'      => '0',
@@ -122,7 +122,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 $response = $instance['v2/pay/settlementquery']->post([
   'xml' => [
     'appid'       => 'wxd678efh567hg6787',
-    'mchid'       => '1900000109',
+    'mch_id'      => '1900000109',
     'sub_mch_id'  => '1230000109',
     'usetag'      => '1',
     'offset'      => '0',

@@ -429,6 +429,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | price {data-required data-indent=2} | number | 商品单价
 | sub_openid | string | 用户子标识
 | sub_is_subscribe | string | 该字段已废弃
+| rate | string | 汇率
 
 {.im-table #response}
 

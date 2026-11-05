@@ -182,6 +182,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | refund_fee | integer | 退款总金额
 | coupon_refund_fee | integer | 代金券退款总金额
 | cash_refund_fee | integer | 用户退款金额
+| rate | string | 汇率
 
 {.im-table #response}
 

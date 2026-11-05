@@ -209,6 +209,8 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | coupon_refund_fee_$n | integer | 单个代金券退款金额
 | coupon_refund_count | integer | 退款代金券使用数量
 | coupon_refund_id_$n | string | 退款代金券ID
+| refund_fee_type | string | 退款币种
+| cash_refund_fee_type | string | 现金退款币种
 
 {.im-table #response}
 

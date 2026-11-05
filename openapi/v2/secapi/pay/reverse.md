@@ -144,6 +144,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | err_code | string | 错误代码
 | err_code_des | string | 错误描述
 | recall {data-required} | string | 是否重调<br/>`Y` \| `N` 枚举值之一
+| rate | string | 汇率
 
 {.im-table #response}
 
