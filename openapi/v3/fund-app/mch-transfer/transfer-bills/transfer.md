@@ -301,7 +301,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | transfer_amount {data-required} | number | 转账金额
 | transfer_remark {data-required} | string | 转账备注
 | fail_reason | string | 失败原因
-| openid | string | 收款用户OpenID
 | user_name | string {data-tooltip=商户API证书对应的公钥加密后的BASE64字符串 data-encrypted=by-rsa-pubkey} | 收款用户姓名
 | create_time {data-required} | string | 单据创建时间
 | update_time | string | 最后一次状态变更时间
