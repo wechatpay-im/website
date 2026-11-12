@@ -7,6 +7,12 @@ description: 给品牌门店绑定收款商户号。绑定成功后，商户号�
 
 {{ $frontmatter.description }}
 
+::: danger :no_entry_sign: {.im-deprecated}
+
+本接口已于 `2026.11.11` (北京时间)标记下线，此文档仅做留存参考。
+
+:::
+
 | 请求参数 | 类型 {.type} | 描述 {.desc}
 | --- | --- | ---
 | store_id {data-required} | string | 品牌门店ID

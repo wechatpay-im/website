@@ -177,8 +177,8 @@ next:
 | | [管理门店](/openapi/v3/brand/partner/store/brandstores/{store_id})
 | | [暂停营业](/openapi/v3/brand/partner/store/brandstores/{store_id}/close)
 | | [恢复营业](/openapi/v3/brand/partner/store/brandstores/{store_id}/resume)
-| | [绑定收款商户号](/openapi/v3/brand/partner/store/brandstores/{store_id}/bindrecipient)
-| | [解绑收款商户号](/openapi/v3/brand/partner/store/brandstores/{store_id}/unbindrecipient)
+| | [~~绑定收款商户号~~](/openapi/v3/brand/partner/store/brandstores/{store_id}/bindrecipient) :no_entry_sign:
+| | [~~解绑收款商户号~~](/openapi/v3/brand/partner/store/brandstores/{store_id}/unbindrecipient) :no_entry_sign:
 | 摇优惠活动 {data-protocol=v3 rowspan=6} | | [查询摇优惠活动列表](/openapi/v3/brand/marketing/shake-activities/activities)
 | | [设置投放计划回调地址](/openapi/v3/marketing/partner/delivery-plan/{sp_mchid}/notify-url)
 | | [创建投放计划](/openapi/v3/marketing/partner/delivery-plan/delivery-plans)
