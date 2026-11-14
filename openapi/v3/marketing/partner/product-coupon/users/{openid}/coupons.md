@@ -175,7 +175,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | valid_end_time {data-required} | string | 有效期结束时间
 | receive_time {data-required} | string | 领券时间
 | send_request_no {data-required} | string | 发券请求单号
-| send_channel {data-required} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MERCHANT_CARD` \| `MEMBER` \| `SMALL_ACTIVITY` \| `RECEIVE_COMPONENT` \| `STICKER_GIFT` 枚举值之一
+| send_channel {data-required} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MEMBER` \| `RECEIVE_COMPONENT` \| `STICKER_GIFT` 枚举值之一
 | confirm_request_no | string | 确认请求单号
 | confirm_time | string | 确认发放时间
 | deactivate_request_no | string | 失效请求单号
@@ -204,7 +204,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required data-indent=1} | string | 品牌ID
 | scope {data-required data-indent=1} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required data-indent=1} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required data-indent=1} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
+| usage_mode {data-required data-indent=1} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=2} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=3} | integer | 门槛金额
@@ -235,7 +235,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | progressive_bundle_usage_info {data-indent=1} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
 | count {data-required data-indent=2} | integer | 可使用次数
 | interval_days {data-indent=2} | integer | 多次优惠使用间隔天数
-| show_as_exchange {data-indent=1} | boolean | 是否展示兑换价
 | available_product_no_list {data-indent=1} | string[] | 可用商品编码列表
 | business_mode {data-required data-indent=1} | string | 业务模式<br/>`FREE` 枚举值
 | stock {data-required} | object {data-tooltip="对应PHP的array"} | 批次信息
@@ -463,7 +462,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | valid_end_time {data-required data-indent=1} | string | 有效期结束时间
 | receive_time {data-required data-indent=1} | string | 领券时间
 | send_request_no {data-required data-indent=1} | string | 发券请求单号
-| send_channel {data-required data-indent=1} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MERCHANT_CARD` \| `MEMBER` \| `SMALL_ACTIVITY` \| `RECEIVE_COMPONENT` \| `STICKER_GIFT` 枚举值之一
+| send_channel {data-required data-indent=1} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MEMBER` \| `RECEIVE_COMPONENT` \| `STICKER_GIFT` 枚举值之一
 | confirm_request_no {data-indent=1} | string | 确认请求单号
 | confirm_time {data-indent=1} | string | 确认发放时间
 | deactivate_request_no {data-indent=1} | string | 失效请求单号
@@ -492,7 +491,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required data-indent=2} | string | 品牌ID
 | scope {data-required data-indent=2} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required data-indent=2} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required data-indent=2} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
+| usage_mode {data-required data-indent=2} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=3} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=4} | integer | 门槛金额
@@ -523,7 +522,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | progressive_bundle_usage_info {data-indent=2} | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
 | count {data-required data-indent=3} | integer | 可使用次数
 | interval_days {data-indent=3} | integer | 多次优惠使用间隔天数
-| show_as_exchange {data-indent=2} | boolean | 是否展示兑换价
 | available_product_no_list {data-indent=2} | string[] | 可用商品编码列表
 | business_mode {data-required data-indent=2} | string | 业务模式<br/>`FREE` 枚举值
 | stock {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 批次信息

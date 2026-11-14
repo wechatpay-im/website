@@ -109,7 +109,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | brand_id {data-required} | string | 品牌ID
 | scope {data-required} | string | 优惠范围<br/>`ALL` \| `SINGLE` \| `CATEGORY` 枚举值之一
 | type {data-required} | string | 商品券类型<br/>`NORMAL` \| `DISCOUNT` \| `EXCHANGE` 枚举值之一
-| usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `SEQUENTIAL` \| `PROGRESSIVE_BUNDLE` 枚举值之一
+| usage_mode {data-required} | string | 使用模式<br/>`SINGLE` \| `PROGRESSIVE_BUNDLE` 枚举值之一
 | single_usage_info | object {data-tooltip="对应PHP的array"} | 单券模式信息
 | normal_coupon {data-indent=1} | object {data-tooltip="对应PHP的array"} | 满减券使用规则
 | threshold {data-required data-indent=2} | integer | 门槛金额
@@ -140,7 +140,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | progressive_bundle_usage_info | object {data-tooltip="对应PHP的array"} | 多次优惠模式信息
 | count {data-required data-indent=1} | integer | 可使用次数
 | interval_days {data-indent=1} | integer | 多次优惠使用间隔天数
-| show_as_exchange | boolean | 是否展示兑换价
 | available_product_no_list | string[] | 可用商品编码列表
 | business_mode {data-required} | string | 业务模式<br/>`FREE` 枚举值
 

@@ -140,7 +140,7 @@ print_r(json_decode((string) $response->getBody(), true));
 | valid_end_time {data-required data-indent=1} | string | 有效期结束时间
 | receive_time {data-required data-indent=1} | string | 领券时间
 | send_request_no {data-required data-indent=1} | string | 发券请求单号
-| send_channel {data-required data-indent=1} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MERCHANT_CARD` \| `MEMBER` \| `SMALL_ACTIVITY` \| `RECEIVE_COMPONENT` \| `STICKER_GIFT` 枚举值之一
+| send_channel {data-required data-indent=1} | string | 发券渠道<br/>`API` \| `BRAND_MANAGE` \| `MEMBER` \| `RECEIVE_COMPONENT` \| `STICKER_GIFT` 枚举值之一
 | confirm_request_no {data-indent=1} | string | 确认请求单号
 | confirm_time {data-indent=1} | string | 确认发放时间
 | deactivate_request_no {data-indent=1} | string | 失效请求单号
@@ -205,7 +205,6 @@ print_r(json_decode((string) $response->getBody(), true));
 | deactivate_request_no {data-indent=2} | string | 失效请求单号
 | deactivate_time {data-indent=2} | string | 失效时间
 | deactivate_reason {data-indent=2} | string | 失效原因
-| show_as_exchange {data-indent=2} | boolean | 是否展示兑换价
 | available_product_no_list {data-indent=2} | string[] | 可用商品编码列表
 | business_mode {data-required data-indent=2} | string | 业务模式<br/>`FREE` 枚举值
 | stock {data-required data-indent=1} | object {data-tooltip="对应PHP的array"} | 批次信息
