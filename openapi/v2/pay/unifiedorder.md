@@ -40,7 +40,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 | time_expire {data-indent=1} | string | 交易结束时间
 | goods_tag {data-indent=1} | string | 订单优惠标记
 | notify_url {data-required data-indent=1} | string | 通知地址
-| trade_type {data-required data-indent=1} | string | 交易类型
+| trade_type {data-required data-indent=1} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` 枚举值之一
 | product_id {data-indent=1} | string | 商品ID
 | limit_pay {data-indent=1} | string | 指定支付方式
 | openid {data-indent=1} | string | 用户标识

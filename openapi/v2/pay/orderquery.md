@@ -148,7 +148,7 @@ print_r(\WeChatPay\Transformer::toArray((string) $response->getBody()));
 | is_subscribe {data-required} | string | 是否关注公众账号<br/>`N` 枚举值
 | sub_openid | string | 用户子标识
 | sub_is_subscribe | string | 是否关注子公众账号<br/>`Y` \| `N` 枚举值之一
-| trade_type {data-required} | string | 交易类型
+| trade_type {data-required} | string | 交易类型<br/>`JSAPI` \| `NATIVE` \| `APP` \| `MWEB` \| `PAP` 枚举值之一
 | trade_state {data-required} | string | 交易状态<br/>`SUCCESS` \| `REFUND` \| `NOTPAY` \| `CLOSED` \| `REVOKED` \| `USERPAYING` \| `PAYERROR` \| `ACCEPT` \| `PAY_FAIL` \| `SETTLING` \| `CONSUMED` 枚举值之一
 | bank_type {data-required} | string | 付款银行
 | total_fee {data-required} | integer | 标价金额
